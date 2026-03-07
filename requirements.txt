@@ -5,7 +5,8 @@ google-auth-oauthlib>=1.3.0
 google-auth-httplib2>=0.3.0
 httplib2>=0.31.2
 
-# Video generation (video_creator.py)
+# Video generation (video_creator.py / tech_video_creator.py)
+requests>=2.31.0
 moviepy>=1.0.3
 Pillow>=10.0.0
 gTTS>=2.3.0

@@ -42,6 +42,7 @@ Both channels use **different Google accounts**, so each has its own `client_sec
 | Secret | Channel | Description |
 |---|---|---|
 | `GEMINI_API_KEY` | Shared | Gemini API key from [aistudio.google.com](https://aistudio.google.com) |
+| `PEXELS_API_KEY` | Shared | Free image API key from [pexels.com/api](https://www.pexels.com/api/) |
 | `YOUTUBE_CLIENT_SECRETS_KIDS_B64` | Kids | Base64 of `client_secrets.json` for the Kids Google account |
 | `YOUTUBE_TOKEN_KIDS_B64` | Kids | Base64 of `youtube_token.json` for the Kids Google account |
 | `YOUTUBE_CLIENT_SECRETS_TECH_B64` | Tech | Base64 of `client_secrets.json` for the Tech Google account |

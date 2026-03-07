@@ -2,19 +2,16 @@
 """
 Tech Learning Video Creator
 Generates professional educational videos for AI/LLM/RAG/Database/MCP topics.
+Each slide shows a real Pexels photo on the left half and concept text on the right.
 
-Target audience: developers, students, professionals learning tech concepts.
-Style: dark, modern, terminal-inspired slides with TTS narration.
+Set PEXELS_API_KEY environment variable to enable images.
+Falls back to text-only dark slides when key is absent.
 
 Usage:
-    python tech_video_creator.py ai                  # Create one category video
-    python tech_video_creator.py all                 # Create all category videos
-    python tech_video_creator.py llm --items 5       # Quick test with 5 items
-    python tech_video_creator.py all --output-dir tech_videos
-
-Requirements:
-    pip install moviepy Pillow gTTS numpy
-    brew install ffmpeg  (macOS) or  apt install ffmpeg  (Linux)
+    python tech_video_creator.py ai
+    python tech_video_creator.py all
+    python tech_video_creator.py llm --items 5
+    python tech_video_creator.py all --no-images
 """
 
 import os
@@ -22,9 +19,11 @@ import json
 import argparse
 import textwrap
 import tempfile
-from pathlib import Path
+from io import BytesIO
+from typing import Optional
 
 import numpy as np
+import requests
 from PIL import Image, ImageDraw, ImageFont
 from gtts import gTTS
 
@@ -37,64 +36,113 @@ except (ImportError, ModuleNotFoundError):
 
 def _set_audio(clip, audio):
     try:
-        return clip.set_audio(audio)   # v1
+        return clip.set_audio(audio)
     except AttributeError:
-        return clip.with_audio(audio)  # v2
+        return clip.with_audio(audio)
 
 
 # ── VIDEO SETTINGS ────────────────────────────────────────────────────────────
 WIDTH, HEIGHT      = 1280, 720
 FPS                = 24
 PAUSE_AFTER_AUDIO  = 1.0
-MIN_SLIDE_DURATION = 5.0  # tech content benefits from slightly longer display
+MIN_SLIDE_DURATION = 5.0
 
-# ── PROFESSIONAL DARK THEMES ─────────────────────────────────────────────────
-# Each theme: bg (background), card (panel), accent (highlights),
-#             text (white), grid (subtle lines), muted (secondary text)
+# Split-screen: left = text panel, right = photo
+TEXT_W = 640       # left half width
+PHOTO_W = 640      # right half width
+BADGE_H = 70       # top badge bar height
+
+PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY", "")
+
+# Pexels search queries per tech item name
+TECH_IMAGE_QUERIES: dict = {
+    # AI
+    "Artificial Intelligence": "artificial intelligence robot futuristic",
+    "Machine Learning":        "data science machine learning graph",
+    "Neural Networks":         "brain neural connections network",
+    "Deep Learning":           "deep learning artificial intelligence",
+    "Computer Vision":         "computer vision camera technology",
+    "NLP":                     "natural language processing text technology",
+    "Reinforcement Learning":  "robot learning training technology",
+    "Generative AI":           "generative ai creative art technology",
+    "Transfer Learning":       "knowledge transfer education technology",
+    "AI Agents":               "autonomous robot agent technology",
+    # LLM
+    "Large Language Model":    "language AI chatbot interface",
+    "Transformer":             "transformer architecture circuit board",
+    "Tokens":                  "text tokenization word letters",
+    "Context Window":          "computer memory processing data",
+    "Prompt Engineering":      "prompt writing AI interface",
+    "Fine-tuning":             "optimization training machine learning",
+    "Embeddings":              "vector space mathematics abstract",
+    "Hallucination":           "confusion brain glitch technology",
+    "Temperature":             "control settings dashboard technology",
+    "System Prompt":           "system interface programming code",
+    # RAG
+    "RAG":                     "search retrieval database knowledge",
+    "Vector Database":         "database search server technology",
+    "Chunking":                "document text processing data",
+    "Semantic Search":         "search meaning technology interface",
+    "Re-ranking":              "ranking sorting list technology",
+    "Knowledge Base":          "knowledge library documents data",
+    "Document Loader":         "document loading server processing",
+    "Query Expansion":         "search query interface technology",
+    "Hybrid Search":           "hybrid search technology interface",
+    "Context Window RAG":      "context memory AI data",
+    # Database
+    "SQL":                     "sql database query code programming",
+    "NoSQL":                   "nosql database server technology",
+    "PostgreSQL":              "postgresql database server",
+    "MongoDB":                 "mongodb database documents server",
+    "Redis":                   "redis cache server memory",
+    "Vector DB":               "vector database AI server",
+    "ACID":                    "database reliability server technology",
+    "Indexing":                "database index search optimization",
+    "Graph Database":          "graph network nodes connections",
+    "Sharding":                "distributed server database technology",
+    # MCP
+    "MCP":                     "protocol connection API network",
+    "MCP Server":              "server API connection technology",
+    "MCP Client":              "client connection software interface",
+    "Tools":                   "AI tools software integration",
+    "Resources":               "database resources files server",
+    "Prompts":                 "text prompt interface AI",
+    "Sampling":                "sampling probability data statistics",
+    "Transport":               "network transport protocol connection",
+    "Claude Desktop":          "AI assistant desktop application",
+    "MCP SDK":                 "software development programming code",
+}
+
+# ── DARK PROFESSIONAL THEMES ──────────────────────────────────────────────────
 TECH_THEMES = {
     "ai": {
-        "bg":     (8,  10, 25),
-        "card":   (14, 20, 50),
-        "accent": (96, 165, 250),    # blue
-        "text":   (255, 255, 255),
-        "grid":   (18, 25, 58),
-        "muted":  (170, 195, 235),
+        "bg":     (8,  10, 25),   "card":   (14, 20, 50),
+        "accent": (96, 165, 250), "text":   (255, 255, 255),
+        "grid":   (18, 25, 58),   "muted":  (170, 195, 235),
         "badge":  "🤖  Artificial Intelligence",
     },
     "llm": {
-        "bg":     (12, 8,  28),
-        "card":   (22, 16, 56),
-        "accent": (167, 139, 250),   # purple
-        "text":   (255, 255, 255),
-        "grid":   (28, 20, 65),
-        "muted":  (200, 185, 240),
+        "bg":     (12,  8, 28),   "card":   (22, 16, 56),
+        "accent": (167, 139, 250),"text":   (255, 255, 255),
+        "grid":   (28, 20, 65),   "muted":  (200, 185, 240),
         "badge":  "💬  Large Language Models",
     },
     "rag": {
-        "bg":     (8,  22, 20),
-        "card":   (14, 44, 40),
-        "accent": (52, 211, 153),    # emerald green
-        "text":   (255, 255, 255),
-        "grid":   (18, 52, 48),
-        "muted":  (150, 220, 200),
+        "bg":     (8,  22, 20),   "card":   (14, 44, 40),
+        "accent": (52, 211, 153), "text":   (255, 255, 255),
+        "grid":   (18, 52, 48),   "muted":  (150, 220, 200),
         "badge":  "🔍  Retrieval Augmented Generation",
     },
     "database": {
-        "bg":     (25, 12, 5),
-        "card":   (50, 24, 10),
-        "accent": (251, 146, 60),    # orange
-        "text":   (255, 255, 255),
-        "grid":   (60, 30, 14),
-        "muted":  (235, 185, 140),
+        "bg":     (25, 12,  5),   "card":   (50, 24, 10),
+        "accent": (251, 146, 60), "text":   (255, 255, 255),
+        "grid":   (60, 30, 14),   "muted":  (235, 185, 140),
         "badge":  "🗄️   Database Systems",
     },
     "mcp": {
-        "bg":     (5,  25, 14),
-        "card":   (10, 50, 28),
-        "accent": (74, 222, 128),    # green
-        "text":   (255, 255, 255),
-        "grid":   (12, 58, 34),
-        "muted":  (155, 230, 185),
+        "bg":     (5,  25, 14),   "card":   (10, 50, 28),
+        "accent": (74, 222, 128), "text":   (255, 255, 255),
+        "grid":   (12, 58, 34),   "muted":  (155, 230, 185),
         "badge":  "🔌  Model Context Protocol",
     },
 }
@@ -106,7 +154,6 @@ DEFAULT_TECH_THEME = {
 
 # ── FONTS ─────────────────────────────────────────────────────────────────────
 _FONT_CACHE: dict = {}
-
 _FONT_PATHS = [
     "/Library/Fonts/Arial Bold.ttf",
     "/Library/Fonts/Arial.ttf",
@@ -141,31 +188,78 @@ def load_font(size: int) -> ImageFont.FreeTypeFont:
     return font
 
 
-def fit_text_font(draw, text: str, max_width: int, max_size: int = 80) -> ImageFont.FreeTypeFont:
-    """Return the largest font size that fits text within max_width."""
-    for size in range(max_size, 28, -4):
-        font = load_font(size)
-        bbox = draw.textbbox((0, 0), text, font=font)
+def fit_text_font(draw, text: str, max_width: int, max_size: int = 72) -> ImageFont.FreeTypeFont:
+    for size in range(max_size, 24, -4):
+        f = load_font(size)
+        bbox = draw.textbbox((0, 0), text, font=f)
         if (bbox[2] - bbox[0]) < max_width:
-            return font
-    return load_font(28)
+            return f
+    return load_font(24)
 
 
-def draw_centered(draw, text: str, font, y: int, fill, shadow=(0, 0, 0)):
+def draw_centered_in(draw, text: str, font, y: int, x_start: int, x_end: int, fill):
     bbox = draw.textbbox((0, 0), text, font=font)
     tw = bbox[2] - bbox[0]
-    x = (WIDTH - tw) // 2
-    draw.text((x + 2, y + 2), text, font=font, fill=shadow)
+    x = x_start + (x_end - x_start - tw) // 2
+    draw.text((x + 2, y + 2), text, font=font, fill=(0, 0, 0))  # shadow
     draw.text((x, y), text, font=font, fill=fill)
+
+
+# ── PEXELS IMAGE FETCH ────────────────────────────────────────────────────────
+_img_cache: dict = {}
+
+
+def fetch_pexels_image(query: str) -> Optional[Image.Image]:
+    if not PEXELS_API_KEY:
+        return None
+    if query in _img_cache:
+        return _img_cache[query]
+
+    try:
+        resp = requests.get(
+            "https://api.pexels.com/v1/search",
+            headers={"Authorization": PEXELS_API_KEY},
+            params={"query": query, "per_page": 3, "orientation": "landscape"},
+            timeout=10,
+        )
+        resp.raise_for_status()
+        photos = resp.json().get("photos", [])
+        if not photos:
+            _img_cache[query] = None
+            return None
+
+        src = photos[0]["src"]
+        url = src.get("large2x") or src.get("large")
+        img_resp = requests.get(url, timeout=15)
+        img_resp.raise_for_status()
+        img = Image.open(BytesIO(img_resp.content)).convert("RGB")
+        _img_cache[query] = img
+        return img
+
+    except Exception as e:
+        print(f"    ⚠️   Pexels fetch failed ({query}): {e}")
+        _img_cache[query] = None
+        return None
+
+
+def get_tech_image(term: str) -> Optional[Image.Image]:
+    query = TECH_IMAGE_QUERIES.get(term, f"{term} technology")
+    return fetch_pexels_image(query)
 
 
 # ── SLIDE CREATION ────────────────────────────────────────────────────────────
 
 def _draw_grid(draw, theme: dict):
-    """Subtle dot-grid background pattern."""
     for x in range(0, WIDTH, 48):
         for y in range(0, HEIGHT, 48):
             draw.ellipse([x - 2, y - 2, x + 2, y + 2], fill=theme["grid"])
+
+
+def _darken_image(img: Image.Image, factor: float = 0.55) -> Image.Image:
+    """Multiply pixel values by factor to darken the image."""
+    arr = np.array(img, dtype=np.float32)
+    arr = np.clip(arr * factor, 0, 255)
+    return Image.fromarray(arr.astype(np.uint8))
 
 
 def create_tech_slide(
@@ -173,72 +267,112 @@ def create_tech_slide(
     explanation: str,
     theme: dict,
     counter: str = "",
+    image: Optional[Image.Image] = None,
 ) -> np.ndarray:
-    """Create a professional dark-themed tech slide."""
-    img = Image.new("RGB", (WIDTH, HEIGHT), theme["bg"])
-    draw = ImageDraw.Draw(img)
 
-    # Subtle dot grid
-    _draw_grid(draw, theme)
+    base = Image.new("RGB", (WIDTH, HEIGHT), theme["bg"])
+    draw = ImageDraw.Draw(base)
 
-    # ── Top badge bar ──────────────────────────────────────────────────────
-    BAR_H = 72
-    draw.rectangle([0, 0, WIDTH, BAR_H], fill=theme["card"])
-    draw.line([(0, BAR_H), (WIDTH, BAR_H)], fill=theme["accent"], width=2)
+    if image is not None:
+        # ══ SPLIT-SCREEN: left = text panel, right = darkened photo ══════════
+        CONTENT_Y = BADGE_H   # content starts below badge bar
 
-    badge_font = load_font(30)
-    draw.text((30, 22), theme["badge"], font=badge_font, fill=theme["accent"])
+        # 1. Fill right half with the photo (cropped to fit)
+        photo_h = HEIGHT - CONTENT_Y
+        img_w, img_h = image.size
+        scale = max(PHOTO_W / img_w, photo_h / img_h)
+        nw, nh = int(img_w * scale), int(img_h * scale)
+        scaled = image.resize((nw, nh), Image.LANCZOS)
+        left = (nw - PHOTO_W) // 2
+        top  = (nh - photo_h) // 2
+        cropped = scaled.crop((left, top, left + PHOTO_W, top + photo_h))
+
+        # 2. Darken photo for readability contrast
+        darkened = _darken_image(cropped, factor=0.55)
+        base.paste(darkened, (TEXT_W, CONTENT_Y))
+
+        # 3. Subtle gradient on left edge of photo → dark panel blend
+        arr = np.array(base, dtype=np.float32)
+        bg_c = np.array(theme["card"], dtype=np.float32)
+        blend_w = 80
+        for x in range(blend_w):
+            alpha = 1 - (x / blend_w) ** 2
+            arr[CONTENT_Y:, TEXT_W + x] = (
+                arr[CONTENT_Y:, TEXT_W + x] * (1 - alpha) + bg_c * alpha
+            )
+        base = Image.fromarray(arr.astype(np.uint8))
+        draw = ImageDraw.Draw(base)
+
+        # 4. Left text panel background
+        draw.rectangle([0, CONTENT_Y, TEXT_W, HEIGHT], fill=theme["card"])
+
+    else:
+        # ══ TEXT-ONLY: grid + full-width card ════════════════════════════════
+        _draw_grid(draw, theme)
+        draw.rectangle([0, BADGE_H, WIDTH, HEIGHT], fill=theme["card"])
+
+    # ── Top badge bar (always) ──
+    draw.rectangle([0, 0, WIDTH, BADGE_H], fill=theme["bg"])
+    draw.line([(0, BADGE_H), (WIDTH, BADGE_H)], fill=theme["accent"], width=2)
+    draw.text((30, 22), theme["badge"], font=load_font(30), fill=theme["accent"])
 
     if counter:
-        small = load_font(26)
-        bbox = draw.textbbox((0, 0), counter, font=small)
+        cf = load_font(26)
+        bbox = draw.textbbox((0, 0), counter, font=cf)
         draw.text((WIDTH - (bbox[2] - bbox[0]) - 30, 24),
-                  counter, font=small, fill=theme["muted"])
+                  counter, font=cf, fill=theme["muted"])
 
-    # ── Accent left strip ──────────────────────────────────────────────────
-    draw.rectangle([0, BAR_H, 5, HEIGHT], fill=theme["accent"])
+    # ── Accent left strip ──
+    draw.rectangle([0, BADGE_H, 5, HEIGHT], fill=theme["accent"])
 
-    # ── Term name (auto-sized to fit) ──────────────────────────────────────
-    term_font = fit_text_font(draw, term, WIDTH - 120, max_size=84)
-    term_y = BAR_H + (HEIGHT - BAR_H) // 2 - 105
-    draw_centered(draw, term, term_font, term_y, theme["text"])
+    # ── Term name (auto-sized, left panel) ──
+    x_pad = 30
+    text_x_start = 5 + x_pad
+    text_x_end   = TEXT_W - x_pad if image else WIDTH - x_pad
+    term_font = fit_text_font(draw, term, text_x_end - text_x_start, max_size=72)
+    term_y    = BADGE_H + (HEIGHT - BADGE_H) // 2 - 110
+    draw_centered_in(draw, term, term_font, term_y, text_x_start, text_x_end, theme["text"])
 
-    # ── Divider ────────────────────────────────────────────────────────────
-    div_y = term_y + 100
-    draw.line([(80, div_y), (WIDTH - 80, div_y)], fill=theme["accent"], width=2)
+    # ── Divider ──
+    div_y = BADGE_H + (HEIGHT - BADGE_H) // 2 - 5
+    draw.line([(text_x_start, div_y), (text_x_end, div_y)], fill=theme["accent"], width=2)
 
-    # ── Explanation (wrapped) ──────────────────────────────────────────────
-    exp_font = load_font(38)
-    wrapped = textwrap.wrap(explanation, width=56)
-    y_pos = div_y + 22
+    # ── Explanation (wrapped, left panel) ──
+    exp_font = load_font(34)
+    max_exp_w = 32 if image else 56
+    wrapped = textwrap.wrap(explanation, width=max_exp_w)
+    y_pos = div_y + 18
     for line in wrapped[:3]:
         bbox = draw.textbbox((0, 0), line, font=exp_font)
         tw = bbox[2] - bbox[0]
-        draw.text(((WIDTH - tw) // 2, y_pos), line, font=exp_font, fill=theme["muted"])
-        y_pos += 52
+        x  = text_x_start + (text_x_end - text_x_start - tw) // 2
+        draw.text((x, y_pos), line, font=exp_font, fill=theme["muted"])
+        y_pos += 50
 
-    # ── Bottom watermark ───────────────────────────────────────────────────
-    wm_font = load_font(22)
-    wm_text = "Tech Learning  •  Subscribe for more"
-    bbox = draw.textbbox((0, 0), wm_text, font=wm_font)
-    tw = bbox[2] - bbox[0]
-    draw.text(((WIDTH - tw) // 2, HEIGHT - 36), wm_text, font=wm_font, fill=theme["grid"])
+    # ── Bottom watermark ──
+    wm = "Tech Learning  •  Subscribe for more"
+    wm_font = load_font(20)
+    bbox = draw.textbbox((0, 0), wm, font=wm_font)
+    draw.text(((text_x_start + text_x_end - (bbox[2] - bbox[0])) // 2, HEIGHT - 32),
+              wm, font=wm_font, fill=theme["grid"])
 
-    return np.array(img)
+    return np.array(base)
 
 
-def create_tech_intro(category: str, total: int, theme: dict) -> np.ndarray:
+def create_tech_intro(category: str, total: int, theme: dict,
+                      image: Optional[Image.Image] = None) -> np.ndarray:
     return create_tech_slide(
         term=f"Learn {category.upper()}",
         explanation=f"Explore {total} essential {category.upper()} concepts in this video",
         theme=theme,
+        image=image,
     )
 
 
 def create_tech_outro(category: str, theme: dict) -> np.ndarray:
     return create_tech_slide(
         term="That's a Wrap!",
-        explanation=f"You just leveled up your {category.upper()} knowledge. Like & Subscribe!",
+        explanation=f"You leveled up your {category.upper()} knowledge. Like & Subscribe!",
         theme=theme,
     )
 
@@ -246,8 +380,7 @@ def create_tech_outro(category: str, theme: dict) -> np.ndarray:
 # ── AUDIO ─────────────────────────────────────────────────────────────────────
 
 def create_tts(text: str, out_path: str, lang: str = "en") -> None:
-    tts = gTTS(text=text, lang=lang, slow=False)
-    tts.save(out_path)
+    gTTS(text=text, lang=lang, slow=False).save(out_path)
 
 
 # ── CLIP ASSEMBLY ─────────────────────────────────────────────────────────────
@@ -255,9 +388,7 @@ def create_tts(text: str, out_path: str, lang: str = "en") -> None:
 def make_clip(slide: np.ndarray, audio_path: str):
     audio = AudioFileClip(audio_path)
     duration = max(audio.duration + PAUSE_AFTER_AUDIO, MIN_SLIDE_DURATION)
-    clip = ImageClip(slide, duration=duration)
-    clip = _set_audio(clip, audio)
-    return clip
+    return _set_audio(ImageClip(slide, duration=duration), audio)
 
 
 # ── MAIN VIDEO BUILDER ────────────────────────────────────────────────────────
@@ -267,8 +398,8 @@ def create_tech_video(
     items: list,
     output_path: str,
     lang: str = "en",
+    use_images: bool = True,
 ) -> str:
-    """Build a complete tech learning video. Returns output_path."""
     theme = TECH_THEMES.get(category.lower(), DEFAULT_TECH_THEME)
     total = len(items)
     clips = []
@@ -277,36 +408,38 @@ def create_tech_video(
 
         # ── Intro ──
         print("  Creating intro...")
-        intro_slide = create_tech_intro(category, total, theme)
-        intro_mp3 = os.path.join(tmp, "intro.mp3")
-        create_tts(
-            f"Welcome! In this video you'll learn {total} key {category} concepts. Let's dive in!",
-            intro_mp3, lang,
-        )
+        intro_img = None
+        if use_images:
+            intro_img = fetch_pexels_image(f"{category} technology concept")
+        intro_slide = create_tech_intro(category, total, theme, image=intro_img)
+        intro_mp3   = os.path.join(tmp, "intro.mp3")
+        create_tts(f"Welcome! In this video you'll learn {total} key {category} concepts. Let's dive in!",
+                   intro_mp3, lang)
         clips.append(make_clip(intro_slide, intro_mp3))
 
         # ── Concept slides ──
         for i, item in enumerate(items, 1):
-            name = item["name"]
+            name        = item["name"]
             explanation = item.get("explanation", f"{name} is a key concept in tech.")
-            counter = f"{i} of {total}"
-            print(f"  [{i}/{total}] {name}")
+            counter     = f"{i} of {total}"
 
-            slide = create_tech_slide(
-                term=name,
-                explanation=explanation,
-                theme=theme,
-                counter=counter,
-            )
+            print(f"  [{i}/{total}] {name}", end="", flush=True)
+            item_img = None
+            if use_images:
+                item_img = get_tech_image(name)
+                print(f"  {'🖼️ ' if item_img else '📝 '}", end="")
+            print()
+
+            slide    = create_tech_slide(term=name, explanation=explanation,
+                                         theme=theme, counter=counter, image=item_img)
             mp3_path = os.path.join(tmp, f"item_{i}.mp3")
-            # Pause between term and explanation for clarity
             create_tts(f"{name}. {explanation}", mp3_path, lang)
             clips.append(make_clip(slide, mp3_path))
 
         # ── Outro ──
         print("  Creating outro...")
         outro_slide = create_tech_outro(category, theme)
-        outro_mp3 = os.path.join(tmp, "outro.mp3")
+        outro_mp3   = os.path.join(tmp, "outro.mp3")
         create_tts(
             f"Great work! You've learned {total} {category} concepts. "
             "If you found this helpful, please like and subscribe for more tech learning videos!",
@@ -318,16 +451,15 @@ def create_tech_video(
         print(f"\n  Rendering → {output_path}")
         final = concatenate_videoclips(clips, method="compose")
         os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
-
         try:
             final.write_videofile(output_path, fps=FPS, codec="libx264",
                                   audio_codec="aac", logger=None)
         except TypeError:
             final.write_videofile(output_path, fps=FPS, codec="libx264", audio_codec="aac")
 
-        for clip in clips:
+        for c in clips:
             try:
-                clip.close()
+                c.close()
             except Exception:
                 pass
         try:
@@ -342,28 +474,31 @@ def create_tech_video(
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Create tech learning videos (AI, LLM, RAG, Database, MCP)",
+        description="Create tech learning videos with Pexels images + TTS",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   python tech_video_creator.py ai
   python tech_video_creator.py all
   python tech_video_creator.py rag --items 5
-  python tech_video_creator.py all --output-dir tech_videos
+  python tech_video_creator.py all --no-images
         """,
     )
-    parser.add_argument(
-        "category",
-        nargs="?",
-        default="all",
-        choices=list(TECH_THEMES.keys()) + ["all"],
-        help="Category to generate (default: all)",
-    )
-    parser.add_argument("--config",      default="tech_content_config.json")
-    parser.add_argument("--output-dir",  default="tech_videos")
-    parser.add_argument("--lang",        default="en", help="gTTS language code")
-    parser.add_argument("--items",       type=int, default=0, help="Max items (0=all)")
+    parser.add_argument("category", nargs="?", default="all",
+                        choices=list(TECH_THEMES.keys()) + ["all"])
+    parser.add_argument("--config",     default="tech_content_config.json")
+    parser.add_argument("--output-dir", default="tech_videos")
+    parser.add_argument("--lang",       default="en")
+    parser.add_argument("--items",      type=int, default=0)
+    parser.add_argument("--no-images",  action="store_true",
+                        help="Disable Pexels image fetching (text-only slides)")
     args = parser.parse_args()
+
+    use_images = not args.no_images
+    if use_images and not PEXELS_API_KEY:
+        print("⚠️   PEXELS_API_KEY not set — using text-only slides.")
+        print("    Free key: https://www.pexels.com/api/\n")
+        use_images = False
 
     if not os.path.exists(args.config):
         print(f"❌  Config not found: {args.config}")
@@ -376,6 +511,7 @@ Examples:
 
     print("=" * 60)
     print("  💻  Tech Learning Video Creator")
+    print(f"  {'🖼️   Images: Pexels API ✅' if use_images else '📝  Images: text-only mode'}")
     print("=" * 60)
 
     os.makedirs(args.output_dir, exist_ok=True)
@@ -385,38 +521,26 @@ Examples:
         if cat not in config:
             print(f"⚠️   Unknown category: {cat}")
             continue
-
         items = config[cat]["items"]
         if args.items > 0:
             items = items[: args.items]
 
         output_path = os.path.join(args.output_dir, f"{cat}_learning.mp4")
-
         print(f"\n🎯  {cat.upper()} — {len(items)} concepts")
         print(f"📁  → {output_path}")
         print("-" * 40)
 
         try:
-            create_tech_video(
-                category=cat,
-                items=items,
-                output_path=output_path,
-                lang=args.lang,
-            )
+            create_tech_video(category=cat, items=items, output_path=output_path,
+                              lang=args.lang, use_images=use_images)
             print(f"✅  {cat}_learning.mp4 done!")
             created.append(output_path)
         except Exception as e:
             import traceback
-            print(f"❌  Failed to create {cat} video: {e}")
+            print(f"❌  Failed: {e}")
             traceback.print_exc()
 
     print(f"\n🎉  Done! {len(created)}/{len(categories)} videos created.")
-    if created:
-        print("\nNext step — upload to YouTube:")
-        print(f"  python youtube_auto.py {args.output_dir}/ \\")
-        print(f'      --niche "Technology and AI Education" \\')
-        print(f'      --tone "clear, professional and educational" \\')
-        print(f"      --category 28")
     print("=" * 60)
 
 

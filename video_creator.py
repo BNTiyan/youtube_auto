@@ -1,20 +1,17 @@
 #!/usr/bin/env python3
 """
 Kids' Learning Video Creator
-Generates educational slideshow videos with text-to-speech narration.
+Generates educational slideshow videos with real images + text-to-speech narration.
 
-Categories: animals, fruits, vegetables, cars, airplanes, brands
+Images are fetched from the Pexels API (free).
+Set PEXELS_API_KEY environment variable to enable images.
+Without the key, slides fall back to a clean coloured text-only design.
 
 Usage:
-    python video_creator.py animals                  # Create one category video
-    python video_creator.py all                      # Create all category videos
-    python video_creator.py fruits --items 5         # Use first 5 items only
-    python video_creator.py animals --lang en-uk     # British English TTS
-    python video_creator.py all --output-dir videos  # Custom output folder
-
-Requirements:
-    pip install moviepy Pillow gTTS numpy
-    brew install ffmpeg  (macOS) or  apt install ffmpeg  (Linux)
+    python video_creator.py animals                  # one category
+    python video_creator.py all                      # all 6 categories
+    python video_creator.py fruits --items 5         # first 5 items
+    python video_creator.py all --no-images          # skip image fetching
 """
 
 import os
@@ -22,36 +19,51 @@ import json
 import argparse
 import textwrap
 import tempfile
-from pathlib import Path
+from io import BytesIO
+from typing import Optional
 
 import numpy as np
+import requests
 from PIL import Image, ImageDraw, ImageFont
 from gtts import gTTS
 
 # ── moviepy v1 / v2 compat ────────────────────────────────────────────────────
 try:
     from moviepy.editor import ImageClip, AudioFileClip, concatenate_videoclips
-    _MOVIEPY_V1 = True
 except (ImportError, ModuleNotFoundError):
     from moviepy import ImageClip, AudioFileClip, concatenate_videoclips
-    _MOVIEPY_V1 = False
 
 
 def _set_audio(clip, audio):
-    """Attach audio to a clip, compatible with moviepy v1 and v2."""
     try:
-        return clip.set_audio(audio)   # v1
+        return clip.set_audio(audio)
     except AttributeError:
-        return clip.with_audio(audio)  # v2
+        return clip.with_audio(audio)
 
 
-# ── VIDEO SETTINGS ────────────────────────────────────────────────────────────
-WIDTH, HEIGHT     = 1280, 720
-FPS               = 24
-PAUSE_AFTER_AUDIO = 0.8   # seconds of silence after TTS narration ends
-MIN_SLIDE_DURATION = 4.0  # minimum clip length in seconds
+# ── CONFIG ────────────────────────────────────────────────────────────────────
+WIDTH, HEIGHT      = 1280, 720
+FPS                = 24
+PAUSE_AFTER_AUDIO  = 0.8
+MIN_SLIDE_DURATION = 4.0
 
-# ── COLOUR THEMES (bg, card, accent, text) ───────────────────────────────────
+IMAGE_H = 420          # photo occupies top IMAGE_H pixels
+TEXT_H  = HEIGHT - IMAGE_H   # = 300 px text band at bottom
+GRAD_H  = 90           # gradient blend zone at bottom of photo
+
+PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY", "")
+
+# Extra search words appended to item name per category
+CATEGORY_SEARCH_SUFFIX = {
+    "animals":    "animal wildlife nature",
+    "fruits":     "fruit fresh food",
+    "vegetables": "vegetable fresh food",
+    "cars":       "car automobile",
+    "airplanes":  "airplane aircraft aviation",
+    "brands":     "brand store logo",
+}
+
+# ── COLOUR THEMES ─────────────────────────────────────────────────────────────
 THEMES = {
     "animals":    {"bg": (22, 78, 22),   "card": (46, 120, 46),   "accent": (144, 238, 144), "text": (255, 255, 255)},
     "fruits":     {"bg": (180, 70,  0),  "card": (230, 110,  0),  "accent": (255, 224, 130), "text": (255, 255, 255)},
@@ -62,32 +74,18 @@ THEMES = {
 }
 DEFAULT_THEME = {"bg": (30, 30, 30), "card": (60, 60, 60), "accent": (200, 200, 200), "text": (255, 255, 255)}
 
-# ── EMOJI FALLBACK PER CATEGORY (added to top-right corner of card) ──────────
-CATEGORY_EMOJI = {
-    "animals": "🐾",
-    "fruits": "🍎",
-    "vegetables": "🥦",
-    "cars": "🚗",
-    "airplanes": "✈️",
-    "brands": "⭐",
-}
-
 # ── FONTS ─────────────────────────────────────────────────────────────────────
 _FONT_CACHE: dict = {}
-
 _FONT_PATHS = [
-    # macOS
     "/Library/Fonts/Arial Bold.ttf",
     "/Library/Fonts/Arial.ttf",
     "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
     "/System/Library/Fonts/Supplemental/Arial.ttf",
     "/System/Library/Fonts/Helvetica.ttc",
-    # Linux
     "/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
     "/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
     "/usr/share/fonts/truetype/ubuntu/Ubuntu-B.ttf",
     "/usr/share/fonts/truetype/freefont/FreeSansBold.ttf",
-    # WSL / Windows fonts
     "/mnt/c/Windows/Fonts/arialbd.ttf",
     "/mnt/c/Windows/Fonts/arial.ttf",
 ]
@@ -104,7 +102,6 @@ def load_font(size: int) -> ImageFont.FreeTypeFont:
                 return font
             except Exception:
                 continue
-    # Pillow built-in fallback
     try:
         font = ImageFont.load_default(size=size)
     except TypeError:
@@ -113,84 +110,192 @@ def load_font(size: int) -> ImageFont.FreeTypeFont:
     return font
 
 
-# ── SLIDE DRAWING ─────────────────────────────────────────────────────────────
-
-def _draw_text_centered(draw, text: str, font, y: int, color, shadow=(0, 0, 0)):
+def _draw_text_centered(draw, text: str, font, y: int, fill, shadow=(0, 0, 0)):
     bbox = draw.textbbox((0, 0), text, font=font)
     tw = bbox[2] - bbox[0]
     x = (WIDTH - tw) // 2
     draw.text((x + 2, y + 2), text, font=font, fill=shadow)
-    draw.text((x, y), text, font=font, fill=color)
+    draw.text((x, y), text, font=font, fill=fill)
+
+
+# ── PEXELS IMAGE FETCH ────────────────────────────────────────────────────────
+_img_cache: dict = {}
+
+
+def fetch_pexels_image(query: str) -> Optional[Image.Image]:
+    """
+    Search Pexels for `query` and return a PIL Image (landscape).
+    Returns None if API key missing, network error, or no results.
+    """
+    if not PEXELS_API_KEY:
+        return None
+    if query in _img_cache:
+        return _img_cache[query]
+
+    try:
+        resp = requests.get(
+            "https://api.pexels.com/v1/search",
+            headers={"Authorization": PEXELS_API_KEY},
+            params={"query": query, "per_page": 3, "orientation": "landscape"},
+            timeout=10,
+        )
+        resp.raise_for_status()
+        photos = resp.json().get("photos", [])
+        if not photos:
+            _img_cache[query] = None
+            return None
+
+        src = photos[0]["src"]
+        url = src.get("large2x") or src.get("large")
+        img_resp = requests.get(url, timeout=15)
+        img_resp.raise_for_status()
+        img = Image.open(BytesIO(img_resp.content)).convert("RGB")
+        _img_cache[query] = img
+        return img
+
+    except Exception as e:
+        print(f"    ⚠️   Pexels fetch failed ({query}): {e}")
+        _img_cache[query] = None
+        return None
+
+
+def get_item_image(name: str, category: str) -> Optional[Image.Image]:
+    suffix = CATEGORY_SEARCH_SUFFIX.get(category, "")
+    return fetch_pexels_image(f"{name} {suffix}".strip())
+
+
+# ── IMAGE + TEXT SLIDE COMPOSITING ────────────────────────────────────────────
+
+def _gradient_blend(base: Image.Image, start_y: int, end_y: int,
+                    target_rgb: tuple) -> Image.Image:
+    """Blend rows [start_y, end_y) smoothly from photo pixels → target_rgb."""
+    arr = np.array(base, dtype=np.float32)
+    tc  = np.array(target_rgb, dtype=np.float32)
+    h   = end_y - start_y
+    for i in range(h):
+        alpha   = (i / h) ** 1.4       # ease-in curve: slow start, fast end
+        arr[start_y + i] = arr[start_y + i] * (1 - alpha) + tc * alpha
+    return Image.fromarray(arr.astype(np.uint8))
 
 
 def _dot_pattern(draw, theme: dict):
-    """Draw a subtle dot grid on the background."""
     for x in range(0, WIDTH, 72):
         for y in range(0, HEIGHT, 72):
             draw.ellipse([x - 5, y - 5, x + 5, y + 5], fill=theme["card"])
 
+
+# ── SLIDE CREATION ────────────────────────────────────────────────────────────
 
 def create_slide(
     title: str,
     fact: str,
     theme: dict,
     counter: str = "",
+    image: Optional[Image.Image] = None,
 ) -> np.ndarray:
-    """Return a 1280×720 numpy array RGB slide."""
-    img = Image.new("RGB", (WIDTH, HEIGHT), theme["bg"])
-    draw = ImageDraw.Draw(img)
+    """Return a 1280×720 numpy array slide."""
 
-    # Background dot pattern
-    _dot_pattern(draw, theme)
+    base = Image.new("RGB", (WIDTH, HEIGHT), theme["bg"])
 
-    # Centre card
-    margin = 60
-    draw.rectangle([margin, margin, WIDTH - margin, HEIGHT - margin], fill=theme["card"])
-    draw.rectangle([margin, margin, WIDTH - margin, HEIGHT - margin],
-                   outline=theme["accent"], width=4)
+    if image is not None:
+        # ══ PHOTO + TEXT LAYOUT ══════════════════════════════════════════════
+        #   [  photo fills top IMAGE_H px, full width              ]
+        #   [ gradient blend to card colour at bottom of photo      ]
+        #   [  card-coloured text band (TEXT_H px)                  ]
+        #   [    large title + fact wrapped across 2 lines           ]
 
-    # Counter (top-right inside card)
-    if counter:
-        small_font = load_font(30)
-        bbox = draw.textbbox((0, 0), counter, font=small_font)
-        tw = bbox[2] - bbox[0]
-        draw.text((WIDTH - margin - tw - 20, margin + 18), counter,
-                  font=small_font, fill=theme["accent"])
+        # 1. Smart crop: fill width, keep centre of height
+        img_w, img_h = image.size
+        scale = max(WIDTH / img_w, IMAGE_H / img_h)
+        new_w, new_h = int(img_w * scale), int(img_h * scale)
+        img_scaled = image.resize((new_w, new_h), Image.LANCZOS)
+        left = (new_w - WIDTH) // 2
+        top  = (new_h - IMAGE_H) // 2
+        img_cropped = img_scaled.crop((left, top, left + WIDTH, top + IMAGE_H))
+        base.paste(img_cropped, (0, 0))
 
-    # Title
-    title_font = load_font(96)
-    _draw_text_centered(draw, title, title_font, HEIGHT // 2 - 115, theme["text"])
+        # 2. Gradient from photo → card colour in bottom GRAD_H rows of photo
+        base = _gradient_blend(base,
+                               start_y=IMAGE_H - GRAD_H,
+                               end_y=IMAGE_H,
+                               target_rgb=theme["card"])
 
-    # Divider
-    draw.line([margin + 80, HEIGHT // 2 - 8, WIDTH - margin - 80, HEIGHT // 2 - 8],
-              fill=theme["accent"], width=3)
+        draw = ImageDraw.Draw(base)
 
-    # Fact (wrapped)
-    fact_font = load_font(38)
-    wrapped = textwrap.wrap(fact, width=58)
-    y_pos = HEIGHT // 2 + 18
-    for line in wrapped[:3]:
-        bbox = draw.textbbox((0, 0), line, font=fact_font)
-        tw = bbox[2] - bbox[0]
-        x = (WIDTH - tw) // 2
-        draw.text((x, y_pos), line, font=fact_font, fill=theme["accent"])
-        y_pos += 50
+        # 3. Text area solid fill
+        draw.rectangle([0, IMAGE_H, WIDTH, HEIGHT], fill=theme["card"])
 
-    return np.array(img)
+        # 4. Accent separator line
+        draw.rectangle([0, IMAGE_H, WIDTH, IMAGE_H + 5], fill=theme["accent"])
+
+        # 5. Counter pill (top-right corner over the photo)
+        if counter:
+            cf = load_font(28)
+            bbox = draw.textbbox((0, 0), counter, font=cf)
+            tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+            pad = 10
+            rx1, ry1 = WIDTH - tw - pad * 2 - 18, 14
+            rx2, ry2 = rx1 + tw + pad * 2, ry1 + th + pad * 2
+            draw.rounded_rectangle([rx1, ry1, rx2, ry2], radius=16, fill=(0, 0, 0))
+            draw.text((rx1 + pad, ry1 + pad), counter, font=cf, fill=theme["accent"])
+
+        # 6. Title
+        title_font = load_font(80)
+        _draw_text_centered(draw, title, title_font, IMAGE_H + 18, theme["text"])
+
+        # 7. Fact (max 2 wrapped lines)
+        fact_font = load_font(36)
+        wrapped = textwrap.wrap(fact, width=60)
+        y_pos = IMAGE_H + 118
+        for line in wrapped[:2]:
+            bbox = draw.textbbox((0, 0), line, font=fact_font)
+            draw.text(((WIDTH - (bbox[2] - bbox[0])) // 2, y_pos),
+                      line, font=fact_font, fill=theme["accent"])
+            y_pos += 54
+
+    else:
+        # ══ TEXT-ONLY FALLBACK ═══════════════════════════════════════════════
+        draw = ImageDraw.Draw(base)
+        _dot_pattern(draw, theme)
+        margin = 60
+        draw.rectangle([margin, margin, WIDTH - margin, HEIGHT - margin], fill=theme["card"])
+        draw.rectangle([margin, margin, WIDTH - margin, HEIGHT - margin],
+                       outline=theme["accent"], width=4)
+
+        if counter:
+            sf = load_font(30)
+            bbox = draw.textbbox((0, 0), counter, font=sf)
+            draw.text((WIDTH - margin - (bbox[2] - bbox[0]) - 20, margin + 18),
+                      counter, font=sf, fill=theme["accent"])
+
+        _draw_text_centered(draw, title, load_font(96), HEIGHT // 2 - 115, theme["text"])
+        draw.line([margin + 80, HEIGHT // 2 - 8, WIDTH - margin - 80, HEIGHT // 2 - 8],
+                  fill=theme["accent"], width=3)
+
+        y_pos = HEIGHT // 2 + 18
+        for line in textwrap.wrap(fact, width=58)[:3]:
+            bbox = draw.textbbox((0, 0), line, font=load_font(38))
+            draw.text(((WIDTH - (bbox[2] - bbox[0])) // 2, y_pos),
+                      line, font=load_font(38), fill=theme["accent"])
+            y_pos += 50
+
+    return np.array(base)
 
 
-def create_intro_slide(category: str, total: int, theme: dict) -> np.ndarray:
+def create_intro_slide(category: str, total: int, theme: dict,
+                       image: Optional[Image.Image] = None) -> np.ndarray:
     return create_slide(
         title=f"Learn {category.capitalize()}!",
         fact=f"Discover {total} amazing {category} today",
         theme=theme,
+        image=image,
     )
 
 
 def create_outro_slide(category: str, theme: dict) -> np.ndarray:
-    return create_slide(
+    return create_slide(           # outro is always text-only
         title="Great Job! ⭐",
-        fact=f"You learned {category} today! Like & Subscribe for more!",
+        fact=f"You learned about {category}! Like & Subscribe for more!",
         theme=theme,
     )
 
@@ -198,9 +303,7 @@ def create_outro_slide(category: str, theme: dict) -> np.ndarray:
 # ── AUDIO ─────────────────────────────────────────────────────────────────────
 
 def create_tts(text: str, out_path: str, lang: str = "en") -> None:
-    """Save TTS audio from gTTS (requires internet)."""
-    tts = gTTS(text=text, lang=lang, slow=False)
-    tts.save(out_path)
+    gTTS(text=text, lang=lang, slow=False).save(out_path)
 
 
 # ── CLIP ASSEMBLY ─────────────────────────────────────────────────────────────
@@ -208,9 +311,7 @@ def create_tts(text: str, out_path: str, lang: str = "en") -> None:
 def make_clip(slide: np.ndarray, audio_path: str):
     audio = AudioFileClip(audio_path)
     duration = max(audio.duration + PAUSE_AFTER_AUDIO, MIN_SLIDE_DURATION)
-    clip = ImageClip(slide, duration=duration)
-    clip = _set_audio(clip, audio)
-    return clip
+    return _set_audio(ImageClip(slide, duration=duration), audio)
 
 
 # ── MAIN VIDEO BUILDER ────────────────────────────────────────────────────────
@@ -220,11 +321,8 @@ def create_kids_video(
     items: list,
     output_path: str,
     lang: str = "en",
+    use_images: bool = True,
 ) -> str:
-    """
-    Build a complete kids' learning video for a category.
-    Returns output_path on success.
-    """
     theme = THEMES.get(category.lower(), DEFAULT_THEME)
     total = len(items)
     clips = []
@@ -233,24 +331,30 @@ def create_kids_video(
 
         # ── Intro ──
         print("  Creating intro...")
-        intro_slide = create_intro_slide(category, total, theme)
-        intro_mp3 = os.path.join(tmp, "intro.mp3")
+        intro_img = None
+        if use_images:
+            suffix = CATEGORY_SEARCH_SUFFIX.get(category, "")
+            intro_img = fetch_pexels_image(f"{category} {suffix} collection")
+        intro_slide = create_intro_slide(category, total, theme, image=intro_img)
+        intro_mp3   = os.path.join(tmp, "intro.mp3")
         create_tts(f"Hello friends! Let's learn about {category}! Get ready!", intro_mp3, lang)
         clips.append(make_clip(intro_slide, intro_mp3))
 
         # ── Item slides ──
         for i, item in enumerate(items, 1):
-            name = item["name"]
-            fact = item.get("fact", f"{name} is really amazing!")
+            name    = item["name"]
+            fact    = item.get("fact", f"{name} is really amazing!")
             counter = f"{i} of {total}"
-            print(f"  [{i}/{total}] {name}")
 
-            slide = create_slide(
-                title=name,
-                fact=fact,
-                theme=theme,
-                counter=counter,
-            )
+            print(f"  [{i}/{total}] {name}", end="", flush=True)
+            item_img = None
+            if use_images:
+                item_img = get_item_image(name, category)
+                print(f"  {'🖼️ ' if item_img else '📝 '}", end="")
+            print()
+
+            slide    = create_slide(title=name, fact=fact, theme=theme,
+                                    counter=counter, image=item_img)
             mp3_path = os.path.join(tmp, f"item_{i}.mp3")
             create_tts(f"{name}. {fact}", mp3_path, lang)
             clips.append(make_clip(slide, mp3_path))
@@ -258,35 +362,27 @@ def create_kids_video(
         # ── Outro ──
         print("  Creating outro...")
         outro_slide = create_outro_slide(category, theme)
-        outro_mp3 = os.path.join(tmp, "outro.mp3")
+        outro_mp3   = os.path.join(tmp, "outro.mp3")
         create_tts(
-            f"Amazing work! You just learned about {total} {category}! "
-            "Don't forget to like this video and subscribe for more fun learning!",
+            f"Amazing work! You learned about {total} {category}! "
+            "Don't forget to like and subscribe for more fun learning videos!",
             outro_mp3, lang,
         )
         clips.append(make_clip(outro_slide, outro_mp3))
 
         # ── Render ──
-        print(f"\n  Rendering video → {output_path}")
+        print(f"\n  Rendering → {output_path}")
         final = concatenate_videoclips(clips, method="compose")
         os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
-
         try:
-            final.write_videofile(
-                output_path,
-                fps=FPS,
-                codec="libx264",
-                audio_codec="aac",
-                logger=None,
-            )
+            final.write_videofile(output_path, fps=FPS, codec="libx264",
+                                  audio_codec="aac", logger=None)
         except TypeError:
-            # Older moviepy may not accept logger=None
             final.write_videofile(output_path, fps=FPS, codec="libx264", audio_codec="aac")
 
-        # Cleanup
-        for clip in clips:
+        for c in clips:
             try:
-                clip.close()
+                c.close()
             except Exception:
                 pass
         try:
@@ -301,32 +397,34 @@ def create_kids_video(
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Create kids' learning videos for YouTube",
+        description="Create kids' learning videos with Pexels images + TTS",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
   python video_creator.py animals
   python video_creator.py all
   python video_creator.py fruits --items 5
-  python video_creator.py all --lang en-uk --output-dir my_videos
+  python video_creator.py all --no-images      # text-only, no Pexels key needed
         """,
     )
-    parser.add_argument(
-        "category",
-        nargs="?",
-        default="all",
-        choices=list(THEMES.keys()) + ["all"],
-        help="Category to generate (default: all)",
-    )
-    parser.add_argument("--config",     default="content_config.json", help="Path to content JSON")
-    parser.add_argument("--output-dir", default="videos",              help="Output folder (default: videos/)")
-    parser.add_argument("--lang",       default="en",                  help="gTTS language code (default: en)")
-    parser.add_argument("--items",      type=int, default=0,           help="Max items per video (0 = all)")
+    parser.add_argument("category", nargs="?", default="all",
+                        choices=list(THEMES.keys()) + ["all"])
+    parser.add_argument("--config",     default="content_config.json")
+    parser.add_argument("--output-dir", default="videos")
+    parser.add_argument("--lang",       default="en")
+    parser.add_argument("--items",      type=int, default=0)
+    parser.add_argument("--no-images",  action="store_true",
+                        help="Disable Pexels image fetching (text-only slides)")
     args = parser.parse_args()
+
+    use_images = not args.no_images
+    if use_images and not PEXELS_API_KEY:
+        print("⚠️   PEXELS_API_KEY not set — using text-only slides.")
+        print("    Free key: https://www.pexels.com/api/\n")
+        use_images = False
 
     if not os.path.exists(args.config):
         print(f"❌  Config not found: {args.config}")
-        print("    Expected: content_config.json in the current directory")
         return
 
     with open(args.config) as f:
@@ -336,6 +434,7 @@ Examples:
 
     print("=" * 60)
     print("  🎬  Kids' Learning Video Creator")
+    print(f"  {'🖼️   Images: Pexels API ✅' if use_images else '📝  Images: text-only mode'}")
     print("=" * 60)
 
     os.makedirs(args.output_dir, exist_ok=True)
@@ -343,40 +442,28 @@ Examples:
 
     for cat in categories:
         if cat not in config:
-            print(f"⚠️   Unknown category in config: {cat}")
+            print(f"⚠️   Unknown category: {cat}")
             continue
-
         items = config[cat]["items"]
         if args.items > 0:
             items = items[: args.items]
 
         output_path = os.path.join(args.output_dir, f"{cat}_learning.mp4")
-
         print(f"\n🎯  {cat.upper()} — {len(items)} items")
         print(f"📁  → {output_path}")
         print("-" * 40)
 
         try:
-            create_kids_video(
-                category=cat,
-                items=items,
-                output_path=output_path,
-                lang=args.lang,
-            )
+            create_kids_video(category=cat, items=items, output_path=output_path,
+                              lang=args.lang, use_images=use_images)
             print(f"✅  {cat}_learning.mp4 done!")
             created.append(output_path)
         except Exception as e:
             import traceback
-            print(f"❌  Failed to create {cat} video: {e}")
+            print(f"❌  Failed: {e}")
             traceback.print_exc()
 
     print(f"\n🎉  Done! {len(created)}/{len(categories)} videos created.")
-    if created:
-        print("\nNext step — upload to YouTube:")
-        print(f"  python youtube_auto.py {args.output_dir}/ \\")
-        print(f'      --niche "Kids Education" \\')
-        print(f'      --tone "fun and educational for children" \\')
-        print(f"      --category 27 --made-for-kids")
     print("=" * 60)
 
 

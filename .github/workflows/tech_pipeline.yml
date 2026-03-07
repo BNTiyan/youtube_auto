@@ -9,7 +9,7 @@ on:
   workflow_dispatch:          # also triggerable manually from GitHub UI
     inputs:
       category:
-        description: 'Override category (ai/llm/rag/database/mcp). Leave blank for auto.'
+        description: 'Limit to category (ai/llm/rag/database/mcp). Leave blank for auto rotation across all 50 concepts.'
         required: false
         default: ''
       dry_run:
@@ -62,54 +62,53 @@ jobs:
           echo '${{ secrets.YOUTUBE_CLIENT_SECRETS_TECH_B64 }}' | base64 -d > client_secrets.json
           echo '${{ secrets.YOUTUBE_TOKEN_TECH_B64 }}'           | base64 -d > youtube_token.json
 
-      # ── 6. Pick today's category ───────────────────────────────────────────
-      #   Rotates through all 5 tech categories using day-of-year.
-      - name: Select category
+      # ── 6. Pick today's single concept ──────────────────────────────────────
+      #   Rotates across all 50 tech concepts (5 categories × 10) by day-of-year.
+      #   Optional category override limits rotation to that category's 10 items.
+      #   Outputs: category, name, text, slug, index, total → used in later steps.
+      - name: Pick today's concept
         id: pick
         run: |
-          OVERRIDE="${{ github.event.inputs.category }}"
+          OVERRIDE_CAT="${{ github.event.inputs.category }}"
 
-          if [ -n "$OVERRIDE" ]; then
-            CATEGORY="$OVERRIDE"
-            echo "Category overridden to: $CATEGORY"
+          if [ -n "$OVERRIDE_CAT" ]; then
+            echo "Category filter: $OVERRIDE_CAT"
+            python pick_item.py \
+              --config   tech_content_config.json \
+              --field    explanation \
+              --category "$OVERRIDE_CAT"
           else
-            CATEGORIES=(ai llm rag database mcp)
-            DOY=$(date +%j | sed 's/^0*//')
-            INDEX=$(( (DOY - 1) % ${#CATEGORIES[@]} ))
-            CATEGORY="${CATEGORIES[$INDEX]}"
-            echo "Day $DOY → index $INDEX → category: $CATEGORY"
+            python pick_item.py \
+              --config tech_content_config.json \
+              --field  explanation
           fi
 
-          # Derive topic string for Gemini metadata generation
-          case "$CATEGORY" in
-            ai)       TOPIC="Artificial Intelligence Explained — Key AI Concepts for Beginners" ;;
-            llm)      TOPIC="Large Language Models Explained — How LLMs and ChatGPT Work" ;;
-            rag)      TOPIC="Retrieval Augmented Generation (RAG) Explained — AI + Search" ;;
-            database) TOPIC="Database Systems Explained — SQL NoSQL and Vector Databases" ;;
-            mcp)      TOPIC="Model Context Protocol (MCP) Explained — Connect AI to Any Tool" ;;
-            *)        TOPIC="${CATEGORY^^} Concepts Explained" ;;
-          esac
-
-          echo "category=$CATEGORY" >> "$GITHUB_OUTPUT"
-          echo "topic=$TOPIC"       >> "$GITHUB_OUTPUT"
-
-      # ── 7. Generate the video ──────────────────────────────────────────────
-      - name: Generate video — ${{ steps.pick.outputs.category }}
+      # ── 7. Generate the single-concept video ──────────────────────────────
+      - name: Generate video — ${{ steps.pick.outputs.name }}
+        env:
+          ITEM_NAME: ${{ steps.pick.outputs.name }}
+          ITEM_CAT:  ${{ steps.pick.outputs.category }}
         run: |
           mkdir -p tech_videos
-          python tech_video_creator.py "${{ steps.pick.outputs.category }}" \
-            --config tech_content_config.json \
+          python tech_video_creator.py \
+            --item       "$ITEM_NAME" \
+            --cat        "$ITEM_CAT"  \
+            --config     tech_content_config.json \
             --output-dir tech_videos
 
       # ── 8. Upload to YouTube ───────────────────────────────────────────────
       - name: Upload to YouTube
         if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          ITEM_NAME: ${{ steps.pick.outputs.name }}
+          ITEM_CAT:  ${{ steps.pick.outputs.category }}
+          ITEM_SLUG: ${{ steps.pick.outputs.slug }}
         run: |
-          CATEGORY="${{ steps.pick.outputs.category }}"
-          VIDEO="tech_videos/${CATEGORY}_learning.mp4"
+          VIDEO="tech_videos/${ITEM_SLUG}_learning.mp4"
+          ITEM_CAT_UPPER="${ITEM_CAT^^}"    # uppercase (bash 4+)
 
           python youtube_auto.py "$VIDEO" \
-            --topic    "${{ steps.pick.outputs.topic }}" \
+            --topic    "${ITEM_NAME} Explained — ${ITEM_CAT_UPPER} Concepts" \
             --niche    "Technology and AI Education" \
             --tone     "clear, professional and educational for developers and tech enthusiasts" \
             --category 28 \
@@ -123,11 +122,16 @@ jobs:
       # ── 10. Summary ────────────────────────────────────────────────────────
       - name: Write job summary
         if: always()
+        env:
+          ITEM_NAME: ${{ steps.pick.outputs.name }}
+          ITEM_CAT:  ${{ steps.pick.outputs.category }}
+          ITEM_SLUG: ${{ steps.pick.outputs.slug }}
         run: |
           echo "## Tech Learning Pipeline" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Field | Value |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Field    | Value |" >> "$GITHUB_STEP_SUMMARY"
           echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Category | \`${{ steps.pick.outputs.category }}\` |" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Topic    | ${{ steps.pick.outputs.topic }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Category | \`${ITEM_CAT}\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Concept  | ${ITEM_NAME} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| File     | \`${ITEM_SLUG}_learning.mp4\` |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Run date | $(date '+%Y-%m-%d %H:%M UTC') |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Dry run  | ${{ github.event.inputs.dry_run }} |" >> "$GITHUB_STEP_SUMMARY"

@@ -8,7 +8,7 @@ on:
   workflow_dispatch:          # also triggerable manually from GitHub UI
     inputs:
       category:
-        description: 'Override category (animals/fruits/vegetables/cars/airplanes/brands). Leave blank for auto.'
+        description: 'Limit to category (animals/fruits/vegetables/cars/airplanes/brands). Leave blank for auto rotation across all 60 items.'
         required: false
         default: ''
       dry_run:
@@ -61,56 +61,53 @@ jobs:
           echo '${{ secrets.YOUTUBE_CLIENT_SECRETS_KIDS_B64 }}' | base64 -d > client_secrets.json
           echo '${{ secrets.YOUTUBE_TOKEN_KIDS_B64 }}'           | base64 -d > youtube_token.json
 
-      # ── 6. Pick today's category ───────────────────────────────────────────
-      #   Rotates through all 6 kids categories using day-of-year.
-      #   Manual override available via workflow_dispatch input.
-      - name: Select category
+      # ── 6. Pick today's single item ─────────────────────────────────────────
+      #   Rotates across all 60 kids items (6 categories × 10) by day-of-year.
+      #   Optional category override limits rotation to that category's 10 items.
+      #   Outputs: category, name, text, slug, index, total → used in later steps.
+      - name: Pick today's item
         id: pick
         run: |
-          OVERRIDE="${{ github.event.inputs.category }}"
+          OVERRIDE_CAT="${{ github.event.inputs.category }}"
 
-          if [ -n "$OVERRIDE" ]; then
-            CATEGORY="$OVERRIDE"
-            echo "Category overridden to: $CATEGORY"
+          if [ -n "$OVERRIDE_CAT" ]; then
+            echo "Category filter: $OVERRIDE_CAT"
+            python pick_item.py \
+              --config   content_config.json \
+              --field    fact \
+              --category "$OVERRIDE_CAT"
           else
-            CATEGORIES=(animals fruits vegetables cars airplanes brands)
-            DOY=$(date +%j | sed 's/^0*//')          # day-of-year, no leading zeros
-            INDEX=$(( (DOY - 1) % ${#CATEGORIES[@]} ))
-            CATEGORY="${CATEGORIES[$INDEX]}"
-            echo "Day $DOY → index $INDEX → category: $CATEGORY"
+            python pick_item.py \
+              --config content_config.json \
+              --field  fact
           fi
 
-          # Derive a rich topic string for Gemini metadata generation
-          case "$CATEGORY" in
-            animals)    TOPIC="Amazing Animals for Kids — Learn Animal Names and Fun Facts" ;;
-            fruits)     TOPIC="Yummy Fruits for Kids — Learn Fruit Names and Fun Facts" ;;
-            vegetables) TOPIC="Healthy Vegetables for Kids — Learn Vegetable Names" ;;
-            cars)       TOPIC="Cool Cars for Kids — Famous Car Brands and Facts" ;;
-            airplanes)  TOPIC="Amazing Airplanes for Kids — Types of Aircraft" ;;
-            brands)     TOPIC="Famous Brands for Kids — Popular Logos and Companies" ;;
-            *)          TOPIC="${CATEGORY^} for Kids" ;;
-          esac
-
-          echo "category=$CATEGORY" >> "$GITHUB_OUTPUT"
-          echo "topic=$TOPIC"       >> "$GITHUB_OUTPUT"
-
-      # ── 7. Generate the video ──────────────────────────────────────────────
-      - name: Generate video — ${{ steps.pick.outputs.category }}
+      # ── 7. Generate the single-item video ──────────────────────────────────
+      - name: Generate video — ${{ steps.pick.outputs.name }}
+        env:
+          ITEM_NAME: ${{ steps.pick.outputs.name }}
+          ITEM_CAT:  ${{ steps.pick.outputs.category }}
         run: |
           mkdir -p videos
-          python video_creator.py "${{ steps.pick.outputs.category }}" \
-            --config content_config.json \
+          python video_creator.py \
+            --item       "$ITEM_NAME" \
+            --cat        "$ITEM_CAT"  \
+            --config     content_config.json \
             --output-dir videos
 
       # ── 8. Upload to YouTube ───────────────────────────────────────────────
       - name: Upload to YouTube
         if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          ITEM_NAME: ${{ steps.pick.outputs.name }}
+          ITEM_CAT:  ${{ steps.pick.outputs.category }}
+          ITEM_SLUG: ${{ steps.pick.outputs.slug }}
         run: |
-          CATEGORY="${{ steps.pick.outputs.category }}"
-          VIDEO="videos/${CATEGORY}_learning.mp4"
+          VIDEO="videos/${ITEM_SLUG}_learning.mp4"
+          CAT_TITLE="${ITEM_CAT^}"    # capitalise first letter (bash 4+)
 
           python youtube_auto.py "$VIDEO" \
-            --topic    "${{ steps.pick.outputs.topic }}" \
+            --topic    "${ITEM_NAME} for Kids — Learn about ${CAT_TITLE}" \
             --niche    "Kids Education" \
             --tone     "fun, friendly and educational for young children" \
             --category 27 \
@@ -125,11 +122,16 @@ jobs:
       # ── 10. Summary ────────────────────────────────────────────────────────
       - name: Write job summary
         if: always()
+        env:
+          ITEM_NAME: ${{ steps.pick.outputs.name }}
+          ITEM_CAT:  ${{ steps.pick.outputs.category }}
+          ITEM_SLUG: ${{ steps.pick.outputs.slug }}
         run: |
           echo "## Kids Learning Pipeline" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Field | Value |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Field    | Value |" >> "$GITHUB_STEP_SUMMARY"
           echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Category | \`${{ steps.pick.outputs.category }}\` |" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Topic    | ${{ steps.pick.outputs.topic }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Category | \`${ITEM_CAT}\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Item     | ${ITEM_NAME} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| File     | \`${ITEM_SLUG}_learning.mp4\` |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Run date | $(date '+%Y-%m-%d %H:%M UTC') |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Dry run  | ${{ github.event.inputs.dry_run }} |" >> "$GITHUB_STEP_SUMMARY"

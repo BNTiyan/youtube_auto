@@ -300,6 +300,90 @@ def create_outro_slide(category: str, theme: dict) -> np.ndarray:
     )
 
 
+# ── SINGLE-ITEM VIDEO ─────────────────────────────────────────────────────────
+
+def create_single_item_video(
+    category: str,
+    item: dict,
+    output_path: str,
+    lang: str = "en",
+    use_images: bool = True,
+) -> str:
+    """
+    Generate a short (~30-45 sec) video for ONE item only.
+    Structure: intro slide → main content slide → outro slide.
+    """
+    theme = THEMES.get(category.lower(), DEFAULT_THEME)
+    name  = item["name"]
+    fact  = item.get("fact", f"{name} is really amazing!")
+    clips = []
+
+    with tempfile.TemporaryDirectory() as tmp:
+
+        # Fetch image once and reuse across slides
+        item_img = None
+        if use_images:
+            print(f"  🖼️  Fetching image for {name}...")
+            item_img = get_item_image(name, category)
+
+        # ── Intro slide ──────────────────────────────────────────────────────
+        print("  Creating intro slide...")
+        intro_slide = create_slide(
+            title=f"Today: {name}!",
+            fact=f"A fun {category} fact just for you!",
+            theme=theme,
+            image=item_img,
+        )
+        intro_mp3 = os.path.join(tmp, "intro.mp3")
+        create_tts(f"Hello friends! Today we are going to learn about {name}!", intro_mp3, lang)
+        clips.append(make_clip(intro_slide, intro_mp3))
+
+        # ── Main content slide ────────────────────────────────────────────────
+        print("  Creating main slide...")
+        main_slide = create_slide(
+            title=name,
+            fact=fact,
+            theme=theme,
+            image=item_img,
+        )
+        main_mp3 = os.path.join(tmp, "main.mp3")
+        create_tts(f"{name}. {fact}", main_mp3, lang)
+        clips.append(make_clip(main_slide, main_mp3))
+
+        # ── Outro slide ───────────────────────────────────────────────────────
+        print("  Creating outro slide...")
+        outro_slide = create_outro_slide(category, theme)
+        outro_mp3   = os.path.join(tmp, "outro.mp3")
+        create_tts(
+            f"Great job! Now you know about {name}! "
+            "Don't forget to like and subscribe for more fun learning videos!",
+            outro_mp3, lang,
+        )
+        clips.append(make_clip(outro_slide, outro_mp3))
+
+        # ── Render ────────────────────────────────────────────────────────────
+        print(f"\n  Rendering → {output_path}")
+        final = concatenate_videoclips(clips, method="compose")
+        os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
+        try:
+            final.write_videofile(output_path, fps=FPS, codec="libx264",
+                                  audio_codec="aac", logger=None)
+        except TypeError:
+            final.write_videofile(output_path, fps=FPS, codec="libx264", audio_codec="aac")
+
+        for c in clips:
+            try:
+                c.close()
+            except Exception:
+                pass
+        try:
+            final.close()
+        except Exception:
+            pass
+
+    return output_path
+
+
 # ── AUDIO ─────────────────────────────────────────────────────────────────────
 
 def create_tts(text: str, out_path: str, lang: str = "en") -> None:
@@ -401,18 +485,30 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python video_creator.py animals
-  python video_creator.py all
-  python video_creator.py fruits --items 5
-  python video_creator.py all --no-images      # text-only, no Pexels key needed
+  python video_creator.py animals                  # whole category (10 slides)
+  python video_creator.py all                      # all 6 categories
+  python video_creator.py fruits --items 5         # first 5 items
+  python video_creator.py all --no-images          # text-only, no Pexels key needed
+
+  # ── Single-item mode (daily pipeline) ──────────────────────────────────────
+  python video_creator.py --item Lion    --cat animals   # one item, ~30-45 sec
+  python video_creator.py --item Ferrari --cat cars
         """,
     )
-    parser.add_argument("category", nargs="?", default="all",
-                        choices=list(THEMES.keys()) + ["all"])
+    # Positional (legacy whole-category mode)
+    parser.add_argument("category", nargs="?", default=None,
+                        help="Category name or 'all' — omit when using --item/--cat")
+    # Single-item mode
+    parser.add_argument("--item",       default=None,
+                        help="Single item name, e.g. 'Lion'  (enables single-item mode)")
+    parser.add_argument("--cat",        default=None,
+                        help="Category for --item, e.g. 'animals'")
+    # Common options
     parser.add_argument("--config",     default="content_config.json")
     parser.add_argument("--output-dir", default="videos")
     parser.add_argument("--lang",       default="en")
-    parser.add_argument("--items",      type=int, default=0)
+    parser.add_argument("--items",      type=int, default=0,
+                        help="Limit items per category (whole-category mode only)")
     parser.add_argument("--no-images",  action="store_true",
                         help="Disable Pexels image fetching (text-only slides)")
     args = parser.parse_args()
@@ -430,7 +526,57 @@ Examples:
     with open(args.config) as f:
         config = json.load(f)
 
-    categories = list(config.keys()) if args.category == "all" else [args.category]
+    # ── SINGLE-ITEM MODE ──────────────────────────────────────────────────────
+    if args.item:
+        if not args.cat:
+            print("❌  --cat CATEGORY is required when using --item")
+            return
+        cat = args.cat.lower()
+        if cat not in config:
+            print(f"❌  Unknown category: {cat!r}. Available: {list(config.keys())}")
+            return
+
+        # Look up the item by name (case-insensitive); create stub if not found
+        item_data = next(
+            (it for it in config[cat]["items"]
+             if it["name"].lower() == args.item.lower()),
+            None,
+        )
+        if item_data is None:
+            print(f"⚠️   Item {args.item!r} not found in '{cat}' config — using name only.")
+            item_data = {"name": args.item, "fact": f"{args.item} is amazing!"}
+
+        slug        = item_data["name"].lower().replace(" ", "_").replace("-", "_")
+        output_path = os.path.join(args.output_dir, f"{slug}_learning.mp4")
+
+        print("=" * 60)
+        print("  🎬  Kids' Learning Video Creator — Single Item")
+        print(f"  📂  Category : {cat}")
+        print(f"  🏷️   Item     : {item_data['name']}")
+        print(f"  {'🖼️   Images: Pexels API ✅' if use_images else '📝  Images: text-only mode'}")
+        print("=" * 60)
+
+        os.makedirs(args.output_dir, exist_ok=True)
+        try:
+            create_single_item_video(
+                category=cat, item=item_data, output_path=output_path,
+                lang=args.lang, use_images=use_images,
+            )
+            print(f"\n✅  Done: {output_path}")
+        except Exception as e:
+            import traceback
+            print(f"❌  Failed: {e}")
+            traceback.print_exc()
+        return
+
+    # ── WHOLE-CATEGORY MODE (original behaviour) ──────────────────────────────
+    cat_arg  = args.category or "all"
+    all_cats = list(config.keys()) + ["all"]
+    if cat_arg not in all_cats:
+        print(f"❌  Unknown category: {cat_arg!r}. Choose from: {all_cats}")
+        return
+
+    categories = list(config.keys()) if cat_arg == "all" else [cat_arg]
 
     print("=" * 60)
     print("  🎬  Kids' Learning Video Creator")

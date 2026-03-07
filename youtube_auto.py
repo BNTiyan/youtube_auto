@@ -18,7 +18,7 @@ import os
 import sys
 import json
 import argparse
-import google.generativeai as genai
+from google import genai
 import httplib2
 
 from googleapiclient.discovery import build
@@ -79,11 +79,8 @@ def generate_metadata_with_gemini(video_topic: str, niche: str, tone: str) -> di
         print("❌  GEMINI_API_KEY is not set. Export it or paste it in the script.")
         sys.exit(1)
 
-    genai.configure(api_key=GEMINI_API_KEY)
+    client = genai.Client(api_key=GEMINI_API_KEY)
     
-    # Use a modern Gemini model
-    model = genai.GenerativeModel('gemini-2.5-flash-lite')
-
     prompt = f"""You are an expert YouTube SEO strategist. Generate metadata for a YouTube video.
 
 Video Topic: {video_topic}
@@ -104,7 +101,10 @@ Rules:
 
     print("\n🤖  Generating metadata with Gemini AI...")
     
-    response = model.generate_content(prompt)
+    response = client.models.generate_content(
+        model='gemini-2.5-flash',
+        contents=prompt
+    )
     raw = response.text.strip()
 
     # Strip markdown fences if present

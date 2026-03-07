@@ -53,8 +53,8 @@ jobs:
 
       - name: Setup Credentials
         env:
-          CLIENT_SECRETS_B64: ${{ secrets.YOUTUBE_CLIENT_SECRETS_KIDS_B64 }}
-          YOUTUBE_TOKEN_B64: ${{ secrets.YOUTUBE_TOKEN_KIDS_B64 }}
+          CLIENT_SECRETS_B64: ${{ secrets.YOUTUBE_CLIENT_SECRETS_TECH_B64 }}
+          YOUTUBE_TOKEN_B64: ${{ secrets.YOUTUBE_TOKEN_TECH_B64 }}
         run: |
           echo "$CLIENT_SECRETS_B64" | base64 --decode > client_secrets.json
           echo "$YOUTUBE_TOKEN_B64" | base64 --decode > youtube_token.json

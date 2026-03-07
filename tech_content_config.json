@@ -1,72 +1,3638 @@
 {
   "ai": {
     "items": [
-      {"name": "Artificial Intelligence", "explanation": "AI teaches computers to think, learn, and make decisions like humans"},
-      {"name": "Machine Learning",        "explanation": "ML lets computers learn from data without being explicitly programmed for every task"},
-      {"name": "Neural Networks",         "explanation": "Neural networks are inspired by the brain and learn to recognize patterns in data"},
-      {"name": "Deep Learning",           "explanation": "Deep learning stacks many neural network layers to solve complex AI problems"},
-      {"name": "Computer Vision",         "explanation": "Computer vision lets machines see and understand images and video like humans do"},
-      {"name": "NLP",                     "explanation": "Natural Language Processing helps computers read, understand, and generate human language"},
-      {"name": "Reinforcement Learning",  "explanation": "RL trains AI by rewarding good decisions — like teaching a dog new tricks with treats"},
-      {"name": "Generative AI",           "explanation": "Generative AI creates new content: text, images, audio, code, and video from scratch"},
-      {"name": "Transfer Learning",       "explanation": "Transfer learning reuses knowledge from one AI task to speed up solving another"},
-      {"name": "AI Agents",               "explanation": "AI agents can reason, plan, and take actions autonomously to complete complex tasks"}
+      {
+        "name": "Artificial Intelligence",
+        "explanation": "AI teaches computers to think, learn, and make decisions like humans"
+      },
+      {
+        "name": "Machine Learning",
+        "explanation": "ML lets computers learn from data without being explicitly programmed for every task"
+      },
+      {
+        "name": "Neural Networks",
+        "explanation": "Neural networks are inspired by the brain and learn to recognize patterns in data"
+      },
+      {
+        "name": "Deep Learning",
+        "explanation": "Deep learning stacks many neural network layers to solve complex AI problems"
+      },
+      {
+        "name": "Computer Vision",
+        "explanation": "Computer vision lets machines see and understand images and video like humans do"
+      },
+      {
+        "name": "NLP",
+        "explanation": "Natural Language Processing helps computers read, understand, and generate human language"
+      },
+      {
+        "name": "Reinforcement Learning",
+        "explanation": "RL trains AI by rewarding good decisions like teaching a dog new tricks with treats"
+      },
+      {
+        "name": "Generative AI",
+        "explanation": "Generative AI creates new content: text, images, audio, code, and video from scratch"
+      },
+      {
+        "name": "Transfer Learning",
+        "explanation": "Transfer learning reuses knowledge from one AI task to speed up solving another"
+      },
+      {
+        "name": "AI Agents",
+        "explanation": "AI agents can reason, plan, and take actions autonomously to complete complex tasks"
+      },
+      {
+        "name": "Supervised Learning",
+        "explanation": "Supervised learning trains AI using labeled examples with known correct answers"
+      },
+      {
+        "name": "Unsupervised Learning",
+        "explanation": "Unsupervised learning finds hidden patterns in data without any labeled examples"
+      },
+      {
+        "name": "Semi-supervised Learning",
+        "explanation": "Semi-supervised learning uses a small amount of labeled data plus lots of unlabeled data"
+      },
+      {
+        "name": "Self-supervised Learning",
+        "explanation": "Self-supervised learning creates its own labels from raw data to train on"
+      },
+      {
+        "name": "Federated Learning",
+        "explanation": "Federated learning trains AI across many devices without sharing private data centrally"
+      },
+      {
+        "name": "Active Learning",
+        "explanation": "Active learning lets the AI ask for labels on the examples it finds most confusing"
+      },
+      {
+        "name": "Few-shot Learning",
+        "explanation": "Few-shot learning teaches AI to recognize new concepts from just a handful of examples"
+      },
+      {
+        "name": "Zero-shot Learning",
+        "explanation": "Zero-shot learning allows AI to handle tasks it was never explicitly trained on"
+      },
+      {
+        "name": "One-shot Learning",
+        "explanation": "One-shot learning trains a model to recognize something from a single example"
+      },
+      {
+        "name": "Meta-learning",
+        "explanation": "Meta-learning teaches AI how to learn new tasks faster — it learns to learn"
+      },
+      {
+        "name": "Explainable AI",
+        "explanation": "XAI makes AI decisions transparent and understandable to humans"
+      },
+      {
+        "name": "AI Safety",
+        "explanation": "AI safety research ensures powerful AI systems remain aligned with human values and goals"
+      },
+      {
+        "name": "AI Alignment",
+        "explanation": "Alignment ensures that what AI optimizes for matches what humans actually want"
+      },
+      {
+        "name": "AI Ethics",
+        "explanation": "AI ethics studies the moral implications of building and deploying AI systems"
+      },
+      {
+        "name": "Bias in AI",
+        "explanation": "AI bias happens when training data contains unfair patterns that the model learns and repeats"
+      },
+      {
+        "name": "AI Fairness",
+        "explanation": "AI fairness ensures models treat all groups of people equitably without discrimination"
+      },
+      {
+        "name": "Robustness",
+        "explanation": "Robust AI performs reliably even when inputs are noisy, unusual, or adversarial"
+      },
+      {
+        "name": "Adversarial Examples",
+        "explanation": "Adversarial examples are inputs carefully crafted to fool AI models into making mistakes"
+      },
+      {
+        "name": "Model Interpretability",
+        "explanation": "Interpretability explains why an AI model produced a specific output or prediction"
+      },
+      {
+        "name": "Feature Engineering",
+        "explanation": "Feature engineering transforms raw data into meaningful inputs that help AI learn better"
+      },
+      {
+        "name": "Overfitting",
+        "explanation": "Overfitting is when a model memorizes training data but fails to generalize to new examples"
+      },
+      {
+        "name": "Underfitting",
+        "explanation": "Underfitting happens when a model is too simple to capture patterns in the training data"
+      },
+      {
+        "name": "Regularization",
+        "explanation": "Regularization adds penalties to prevent AI models from becoming too complex and overfitting"
+      },
+      {
+        "name": "Cross-validation",
+        "explanation": "Cross-validation tests model performance across different subsets of the data for reliability"
+      },
+      {
+        "name": "Hyperparameter Tuning",
+        "explanation": "Hyperparameter tuning finds the best settings to maximize an AI model's performance"
+      },
+      {
+        "name": "Gradient Descent",
+        "explanation": "Gradient descent is the algorithm that iteratively adjusts model weights to minimize error"
+      },
+      {
+        "name": "Backpropagation",
+        "explanation": "Backpropagation calculates how much each weight contributed to an error and adjusts accordingly"
+      },
+      {
+        "name": "Epoch",
+        "explanation": "An epoch is one complete pass through the entire training dataset during model training"
+      },
+      {
+        "name": "Batch Size",
+        "explanation": "Batch size is how many training examples the model processes before updating its weights"
+      },
+      {
+        "name": "Learning Rate",
+        "explanation": "The learning rate controls how big each step is when updating model weights during training"
+      },
+      {
+        "name": "Dropout",
+        "explanation": "Dropout randomly deactivates neurons during training to prevent overfitting"
+      },
+      {
+        "name": "Attention Mechanism",
+        "explanation": "Attention lets AI models focus on the most relevant parts of input when producing output"
+      },
+      {
+        "name": "Convolutional Neural Net",
+        "explanation": "CNNs use filters to detect visual patterns making them ideal for image recognition tasks"
+      },
+      {
+        "name": "Recurrent Neural Net",
+        "explanation": "RNNs process sequences step by step and maintain memory across time"
+      },
+      {
+        "name": "LSTM",
+        "explanation": "Long Short-Term Memory networks solve the vanishing gradient problem in long sequences"
+      },
+      {
+        "name": "GAN",
+        "explanation": "Generative Adversarial Networks pit a generator against a discriminator to create realistic content"
+      },
+      {
+        "name": "Diffusion Model",
+        "explanation": "Diffusion models generate images by learning to reverse a gradual noising process"
+      },
+      {
+        "name": "Variational Autoencoder",
+        "explanation": "VAEs compress data into a latent space and generate new examples by sampling from it"
+      },
+      {
+        "name": "Encoder-Decoder",
+        "explanation": "Encoder-decoder architectures compress input then reconstruct or translate it into output"
+      },
+      {
+        "name": "Object Detection",
+        "explanation": "Object detection identifies and draws bounding boxes around multiple objects in images"
+      },
+      {
+        "name": "Image Segmentation",
+        "explanation": "Image segmentation labels every pixel in an image with a class it belongs to"
+      },
+      {
+        "name": "Speech Recognition",
+        "explanation": "Speech recognition converts spoken audio into text as accurately as a human transcriber"
+      },
+      {
+        "name": "Text-to-Speech",
+        "explanation": "TTS synthesizes natural-sounding speech audio from plain text input"
+      },
+      {
+        "name": "Sentiment Analysis",
+        "explanation": "Sentiment analysis detects whether text is positive, negative, or neutral in tone"
+      },
+      {
+        "name": "Named Entity Recognition",
+        "explanation": "NER identifies and classifies names, dates, places, and organizations in text"
+      },
+      {
+        "name": "Text Classification",
+        "explanation": "Text classification automatically assigns categories or labels to pieces of text"
+      },
+      {
+        "name": "Recommendation System",
+        "explanation": "Recommendation systems predict what a user will like based on their history and behavior"
+      },
+      {
+        "name": "Anomaly Detection",
+        "explanation": "Anomaly detection identifies unusual patterns that deviate from normal expected behavior"
+      },
+      {
+        "name": "Time Series Forecasting",
+        "explanation": "AI forecasting models predict future values based on patterns in historical time data"
+      },
+      {
+        "name": "Clustering",
+        "explanation": "Clustering groups similar data points together without using any predefined labels"
+      },
+      {
+        "name": "Principal Component Analysis",
+        "explanation": "PCA reduces data dimensions while preserving the most important patterns and variance"
+      },
+      {
+        "name": "Random Forest",
+        "explanation": "Random forests combine many decision trees to make more accurate and stable predictions"
+      },
+      {
+        "name": "Support Vector Machine",
+        "explanation": "SVMs find the best boundary to separate classes with the maximum possible margin"
+      },
+      {
+        "name": "Decision Tree",
+        "explanation": "Decision trees make predictions by asking a series of yes or no questions about the data"
+      },
+      {
+        "name": "Naive Bayes",
+        "explanation": "Naive Bayes is a simple probabilistic classifier based on Bayes theorem for fast predictions"
+      },
+      {
+        "name": "K-Nearest Neighbors",
+        "explanation": "KNN classifies new data points based on what category their closest neighbors belong to"
+      },
+      {
+        "name": "Logistic Regression",
+        "explanation": "Logistic regression predicts the probability of a binary outcome from input features"
+      },
+      {
+        "name": "Linear Regression",
+        "explanation": "Linear regression models the straight-line relationship between input variables and output"
+      },
+      {
+        "name": "Ensemble Learning",
+        "explanation": "Ensemble methods combine multiple models to achieve better performance than any single one"
+      },
+      {
+        "name": "Boosting",
+        "explanation": "Boosting trains models sequentially where each one corrects the errors of the previous"
+      },
+      {
+        "name": "Bagging",
+        "explanation": "Bagging trains multiple models on random subsets and averages their predictions"
+      },
+      {
+        "name": "Stacking",
+        "explanation": "Stacking trains a meta-model on the outputs of multiple base models for better accuracy"
+      },
+      {
+        "name": "Confusion Matrix",
+        "explanation": "A confusion matrix shows how many predictions were correct and which errors were made"
+      },
+      {
+        "name": "Precision and Recall",
+        "explanation": "Precision measures accuracy of positive predictions while recall measures how many were found"
+      },
+      {
+        "name": "F1 Score",
+        "explanation": "The F1 score balances precision and recall into a single model performance metric"
+      },
+      {
+        "name": "ROC Curve",
+        "explanation": "The ROC curve shows the tradeoff between true positive rate and false positive rate"
+      },
+      {
+        "name": "AUC",
+        "explanation": "AUC measures overall model quality — a perfect model scores 1.0 on the AUC scale"
+      },
+      {
+        "name": "Mean Squared Error",
+        "explanation": "MSE averages the squared differences between predictions and actual values"
+      },
+      {
+        "name": "Cross-entropy Loss",
+        "explanation": "Cross-entropy loss measures how different predicted probabilities are from true labels"
+      },
+      {
+        "name": "Reward Function",
+        "explanation": "A reward function tells a reinforcement learning agent how good or bad an action was"
+      },
+      {
+        "name": "Policy Gradient",
+        "explanation": "Policy gradient methods optimize the AI policy directly using gradient ascent"
+      },
+      {
+        "name": "Q-Learning",
+        "explanation": "Q-learning teaches agents the value of taking actions in states to maximize future reward"
+      },
+      {
+        "name": "Multi-agent Systems",
+        "explanation": "Multi-agent AI has multiple intelligent agents collaborating or competing in an environment"
+      },
+      {
+        "name": "Symbolic AI",
+        "explanation": "Symbolic AI uses explicit rules and logic rather than learning from data"
+      },
+      {
+        "name": "Neuro-symbolic AI",
+        "explanation": "Neuro-symbolic AI combines neural learning with logical reasoning for explainable intelligence"
+      },
+      {
+        "name": "Causal Inference",
+        "explanation": "Causal AI understands cause and effect rather than just correlations in data"
+      },
+      {
+        "name": "AutoML",
+        "explanation": "AutoML automatically selects and tunes the best machine learning pipeline for a task"
+      },
+      {
+        "name": "Neural Architecture Search",
+        "explanation": "NAS automatically discovers the optimal neural network structure for a problem"
+      },
+      {
+        "name": "Knowledge Graph",
+        "explanation": "Knowledge graphs store facts as interconnected entities and relationships for AI reasoning"
+      },
+      {
+        "name": "Ontology",
+        "explanation": "Ontologies define structured vocabularies of concepts and their relationships in a domain"
+      },
+      {
+        "name": "Data Augmentation",
+        "explanation": "Data augmentation creates additional training examples by transforming existing ones"
+      },
+      {
+        "name": "Synthetic Data",
+        "explanation": "Synthetic data is AI-generated training data that mimics real data without privacy risks"
+      },
+      {
+        "name": "Model Compression",
+        "explanation": "Model compression reduces AI model size for deployment on edge devices with limited resources"
+      },
+      {
+        "name": "Quantization",
+        "explanation": "Quantization reduces model weight precision from 32-bit to 8-bit or 4-bit for speed and size"
+      },
+      {
+        "name": "Pruning",
+        "explanation": "Pruning removes unimportant neurons or weights from a neural network to make it leaner"
+      },
+      {
+        "name": "Knowledge Distillation",
+        "explanation": "Distillation trains a small student model to mimic the behavior of a large teacher model"
+      },
+      {
+        "name": "Edge AI",
+        "explanation": "Edge AI runs machine learning models directly on devices rather than in the cloud"
+      },
+      {
+        "name": "Multimodal AI",
+        "explanation": "Multimodal AI understands and generates multiple types of data like text, images, and audio"
+      },
+      {
+        "name": "World Model",
+        "explanation": "World models let AI simulate and predict outcomes in an environment to plan ahead"
+      },
+      {
+        "name": "AI Benchmark",
+        "explanation": "Benchmarks are standardized tests to measure and compare AI model capabilities fairly"
+      }
     ]
   },
   "llm": {
     "items": [
-      {"name": "Large Language Model",  "explanation": "LLMs are AI trained on massive text data to understand and generate human language"},
-      {"name": "Transformer",           "explanation": "The Transformer architecture revolutionized AI with powerful self-attention mechanisms"},
-      {"name": "Tokens",                "explanation": "Tokens are the smallest text units LLMs process — roughly 0.75 words per token"},
-      {"name": "Context Window",        "explanation": "The context window is how much text an LLM can read and remember in one conversation"},
-      {"name": "Prompt Engineering",    "explanation": "Prompt engineering is crafting inputs to reliably get the best outputs from LLMs"},
-      {"name": "Fine-tuning",           "explanation": "Fine-tuning adapts a pre-trained LLM to a specific domain, task, or writing style"},
-      {"name": "Embeddings",            "explanation": "Embeddings are numerical vectors that capture the meaning of text for AI search and retrieval"},
-      {"name": "Hallucination",         "explanation": "LLM hallucination is when the model generates confident but factually incorrect answers"},
-      {"name": "Temperature",           "explanation": "Temperature controls how creative or random an LLM's output is — higher means more creative"},
-      {"name": "System Prompt",         "explanation": "A system prompt sets the AI assistant's role, persona, rules, and constraints upfront"}
+      {
+        "name": "Large Language Model",
+        "explanation": "LLMs are AI trained on massive text data to understand and generate human language"
+      },
+      {
+        "name": "Transformer",
+        "explanation": "The Transformer architecture revolutionized AI with powerful self-attention mechanisms"
+      },
+      {
+        "name": "Tokens",
+        "explanation": "Tokens are the smallest text units LLMs process — roughly 0.75 words per token"
+      },
+      {
+        "name": "Context Window",
+        "explanation": "The context window is how much text an LLM can read and remember in one conversation"
+      },
+      {
+        "name": "Prompt Engineering",
+        "explanation": "Prompt engineering is crafting inputs to reliably get the best outputs from LLMs"
+      },
+      {
+        "name": "Fine-tuning",
+        "explanation": "Fine-tuning adapts a pre-trained LLM to a specific domain, task, or writing style"
+      },
+      {
+        "name": "Embeddings",
+        "explanation": "Embeddings are numerical vectors that capture the meaning of text for AI search and retrieval"
+      },
+      {
+        "name": "Hallucination",
+        "explanation": "LLM hallucination is when the model generates confident but factually incorrect answers"
+      },
+      {
+        "name": "Temperature",
+        "explanation": "Temperature controls how creative or random an LLM's output is — higher means more creative"
+      },
+      {
+        "name": "System Prompt",
+        "explanation": "A system prompt sets the AI assistant's role, persona, rules, and constraints upfront"
+      },
+      {
+        "name": "Pre-training",
+        "explanation": "Pre-training is the initial phase where a model learns language patterns from massive text corpora"
+      },
+      {
+        "name": "RLHF",
+        "explanation": "Reinforcement Learning from Human Feedback aligns LLMs to human preferences and values"
+      },
+      {
+        "name": "RLAIF",
+        "explanation": "RLAIF uses AI feedback instead of human feedback to align language models at scale"
+      },
+      {
+        "name": "Constitutional AI",
+        "explanation": "Constitutional AI trains models using a set of principles to guide safe and helpful behavior"
+      },
+      {
+        "name": "Instruction Tuning",
+        "explanation": "Instruction tuning trains LLMs to follow natural language instructions reliably"
+      },
+      {
+        "name": "Chain-of-Thought",
+        "explanation": "Chain-of-thought prompting makes LLMs reason step by step for more accurate answers"
+      },
+      {
+        "name": "Few-shot Prompting",
+        "explanation": "Few-shot prompting gives the LLM several examples in the prompt to guide its responses"
+      },
+      {
+        "name": "Zero-shot Prompting",
+        "explanation": "Zero-shot prompting asks the LLM to complete a task with no examples given"
+      },
+      {
+        "name": "Top-p Sampling",
+        "explanation": "Top-p (nucleus) sampling limits word choices to the smallest set covering p probability mass"
+      },
+      {
+        "name": "Top-k Sampling",
+        "explanation": "Top-k sampling restricts the model to only choose from the k most likely next tokens"
+      },
+      {
+        "name": "Beam Search",
+        "explanation": "Beam search keeps multiple candidate sequences and picks the most probable final output"
+      },
+      {
+        "name": "Greedy Decoding",
+        "explanation": "Greedy decoding always picks the single most likely next token at every step"
+      },
+      {
+        "name": "Tokenizer",
+        "explanation": "A tokenizer converts text into numerical tokens that the model can process"
+      },
+      {
+        "name": "Vocabulary",
+        "explanation": "An LLM vocabulary is the complete set of tokens the model knows and can use"
+      },
+      {
+        "name": "Attention Head",
+        "explanation": "Attention heads each learn to focus on different relationships within the input text"
+      },
+      {
+        "name": "Multi-head Attention",
+        "explanation": "Multi-head attention runs several attention operations in parallel for richer representations"
+      },
+      {
+        "name": "Positional Encoding",
+        "explanation": "Positional encoding tells the Transformer where each token appears in the sequence"
+      },
+      {
+        "name": "Layer Normalization",
+        "explanation": "Layer normalization stabilizes training by normalizing activations within each layer"
+      },
+      {
+        "name": "Feed-forward Layer",
+        "explanation": "Feed-forward layers in Transformers process each token's representation independently"
+      },
+      {
+        "name": "Residual Connection",
+        "explanation": "Residual connections let information skip layers to prevent vanishing gradients in deep models"
+      },
+      {
+        "name": "Model Weights",
+        "explanation": "Model weights are billions of numerical parameters that store everything the LLM has learned"
+      },
+      {
+        "name": "Parameter Count",
+        "explanation": "Parameter count measures model size — larger models generally have greater capability"
+      },
+      {
+        "name": "Scaling Law",
+        "explanation": "Scaling laws predict how model performance improves with more data, compute, and parameters"
+      },
+      {
+        "name": "Emergent Abilities",
+        "explanation": "Emergent abilities are surprising capabilities that appear as LLMs scale up in size"
+      },
+      {
+        "name": "In-context Learning",
+        "explanation": "In-context learning lets LLMs learn new tasks from examples provided directly in the prompt"
+      },
+      {
+        "name": "Prompt Injection",
+        "explanation": "Prompt injection attacks try to hijack an AI's behavior using malicious input text"
+      },
+      {
+        "name": "Jailbreaking",
+        "explanation": "Jailbreaking tries to bypass an LLM's safety guidelines through clever prompting"
+      },
+      {
+        "name": "Guardrails",
+        "explanation": "Guardrails are safety checks that prevent LLMs from generating harmful or inappropriate content"
+      },
+      {
+        "name": "GGUF Format",
+        "explanation": "GGUF is a file format for storing quantized LLMs for efficient local deployment"
+      },
+      {
+        "name": "Mixture of Experts",
+        "explanation": "MoE architecture activates only a subset of model parameters per token for efficient scaling"
+      },
+      {
+        "name": "Sparse Attention",
+        "explanation": "Sparse attention computes only a subset of attention scores to handle very long contexts"
+      },
+      {
+        "name": "Flash Attention",
+        "explanation": "Flash Attention is a hardware-aware algorithm that makes Transformer training much faster"
+      },
+      {
+        "name": "KV Cache",
+        "explanation": "The KV cache stores computed attention keys and values to speed up text generation"
+      },
+      {
+        "name": "Speculative Decoding",
+        "explanation": "Speculative decoding uses a small draft model to speed up generation by the larger model"
+      },
+      {
+        "name": "Sliding Window Attention",
+        "explanation": "Sliding window attention lets models handle longer contexts by attending to nearby tokens"
+      },
+      {
+        "name": "Rotary Embeddings",
+        "explanation": "RoPE encodes position information in a way that generalizes to longer sequences"
+      },
+      {
+        "name": "Grouped Query Attention",
+        "explanation": "GQA reduces memory and computation by sharing key-value heads across query heads"
+      },
+      {
+        "name": "Perplexity",
+        "explanation": "Perplexity measures how well an LLM predicts text — lower means more confident and accurate"
+      },
+      {
+        "name": "BLEU Score",
+        "explanation": "BLEU score measures how closely AI-generated text matches human reference translations"
+      },
+      {
+        "name": "ROUGE Score",
+        "explanation": "ROUGE measures overlap between AI-generated summaries and human-written reference summaries"
+      },
+      {
+        "name": "BenchMark Evaluation",
+        "explanation": "Benchmarks like MMLU and HellaSwag measure LLM knowledge and reasoning across many subjects"
+      },
+      {
+        "name": "MMLU",
+        "explanation": "Massive Multitask Language Understanding tests LLMs across 57 academic subjects"
+      },
+      {
+        "name": "HumanEval",
+        "explanation": "HumanEval benchmarks LLM coding ability by asking them to write and pass real Python tests"
+      },
+      {
+        "name": "GSM8K",
+        "explanation": "GSM8K tests grade school math reasoning requiring multi-step problem solving"
+      },
+      {
+        "name": "TruthfulQA",
+        "explanation": "TruthfulQA tests whether LLMs give honest accurate answers instead of plausible-sounding falsehoods"
+      },
+      {
+        "name": "LoRA",
+        "explanation": "Low-Rank Adaptation fine-tunes LLMs efficiently by training only small adapter layers"
+      },
+      {
+        "name": "QLoRA",
+        "explanation": "QLoRA combines quantization and LoRA to fine-tune large models on consumer hardware"
+      },
+      {
+        "name": "PEFT",
+        "explanation": "Parameter-Efficient Fine-Tuning updates only a small fraction of model parameters to save compute"
+      },
+      {
+        "name": "Adapter Layers",
+        "explanation": "Adapter layers add small trainable modules between frozen pre-trained model layers"
+      },
+      {
+        "name": "Prefix Tuning",
+        "explanation": "Prefix tuning prepends trainable virtual tokens to the input instead of updating model weights"
+      },
+      {
+        "name": "Prompt Tuning",
+        "explanation": "Prompt tuning learns soft prompt embeddings while keeping the full model frozen"
+      },
+      {
+        "name": "Tokenization",
+        "explanation": "Tokenization splits text into subword pieces using algorithms like BPE or WordPiece"
+      },
+      {
+        "name": "BPE",
+        "explanation": "Byte Pair Encoding builds a vocabulary by iteratively merging the most frequent character pairs"
+      },
+      {
+        "name": "SentencePiece",
+        "explanation": "SentencePiece is a language-independent tokenization library used by many modern LLMs"
+      },
+      {
+        "name": "Padding",
+        "explanation": "Padding adds dummy tokens to make all sequences the same length in a batch"
+      },
+      {
+        "name": "Truncation",
+        "explanation": "Truncation cuts sequences that exceed the maximum context length of the model"
+      },
+      {
+        "name": "Logits",
+        "explanation": "Logits are raw unnormalized scores the model assigns to each possible next token"
+      },
+      {
+        "name": "Softmax",
+        "explanation": "Softmax converts logits into a probability distribution over the vocabulary"
+      },
+      {
+        "name": "Cross-attention",
+        "explanation": "Cross-attention lets the decoder attend to encoder representations in sequence-to-sequence tasks"
+      },
+      {
+        "name": "Causal Masking",
+        "explanation": "Causal masking prevents the model from attending to future tokens during training"
+      },
+      {
+        "name": "Inference",
+        "explanation": "Inference is the process of running a trained LLM to generate predictions or responses"
+      },
+      {
+        "name": "Quantization LLM",
+        "explanation": "Quantization reduces LLM weight precision to run large models on smaller hardware"
+      },
+      {
+        "name": "Tensor Parallelism",
+        "explanation": "Tensor parallelism splits model tensors across multiple GPUs to fit very large models"
+      },
+      {
+        "name": "Pipeline Parallelism",
+        "explanation": "Pipeline parallelism splits model layers across GPUs so each GPU handles different layers"
+      },
+      {
+        "name": "Model Serving",
+        "explanation": "Model serving hosts LLMs in production to handle real-time inference requests at scale"
+      },
+      {
+        "name": "vLLM",
+        "explanation": "vLLM is an efficient LLM inference engine using PagedAttention for high throughput serving"
+      },
+      {
+        "name": "Ollama",
+        "explanation": "Ollama lets you run open-source LLMs locally on your laptop with a simple command"
+      },
+      {
+        "name": "LLaMA",
+        "explanation": "Meta's LLaMA is an open-weight large language model series used by researchers worldwide"
+      },
+      {
+        "name": "GPT",
+        "explanation": "GPT (Generative Pre-trained Transformer) is OpenAI's family of influential language models"
+      },
+      {
+        "name": "Claude",
+        "explanation": "Claude is Anthropic's AI assistant family trained to be helpful, harmless, and honest"
+      },
+      {
+        "name": "Gemini",
+        "explanation": "Gemini is Google DeepMind's multimodal AI model family competing with GPT and Claude"
+      },
+      {
+        "name": "Mistral",
+        "explanation": "Mistral is a French AI startup making efficient high-quality open-weight language models"
+      },
+      {
+        "name": "Phi",
+        "explanation": "Microsoft's Phi models are surprisingly capable small language models trained on high-quality data"
+      },
+      {
+        "name": "Qwen",
+        "explanation": "Qwen is Alibaba's family of open-weight multilingual large language models"
+      },
+      {
+        "name": "DeepSeek",
+        "explanation": "DeepSeek is a Chinese LLM series that achieved GPT-4-level performance at far lower cost"
+      },
+      {
+        "name": "Reward Model",
+        "explanation": "A reward model scores LLM outputs for quality, helpfulness, and safety during RLHF training"
+      },
+      {
+        "name": "Constitutional Principles",
+        "explanation": "Constitutional principles are explicit rules an AI uses to critique and improve its own outputs"
+      },
+      {
+        "name": "Red-teaming",
+        "explanation": "Red-teaming adversarially tests LLMs to find safety failures before deployment"
+      },
+      {
+        "name": "Model Card",
+        "explanation": "A model card documents what an AI model can do, how it was trained, and known limitations"
+      },
+      {
+        "name": "System 2 Thinking",
+        "explanation": "System 2 AI mimics slow deliberate reasoning rather than fast instinctive responses"
+      },
+      {
+        "name": "Reasoning Model",
+        "explanation": "Reasoning models think step by step internally before producing a final answer"
+      },
+      {
+        "name": "Mixture of Experts Routing",
+        "explanation": "MoE routing gates select which expert sub-networks handle each input token dynamically"
+      },
+      {
+        "name": "Sliding Context",
+        "explanation": "Sliding context moves a fixed-size window across very long documents for extended processing"
+      },
+      {
+        "name": "Long Context LLM",
+        "explanation": "Long context models like Gemini 1.5 can process over a million tokens in one pass"
+      },
+      {
+        "name": "Prompt Caching",
+        "explanation": "Prompt caching stores computed activations for repeated prompt prefixes to save cost and latency"
+      },
+      {
+        "name": "Structured Output LLM",
+        "explanation": "Structured output forces LLMs to respond in valid JSON or a specified schema every time"
+      },
+      {
+        "name": "Function Calling",
+        "explanation": "Function calling lets LLMs invoke structured external functions based on natural language requests"
+      },
+      {
+        "name": "Tool Use",
+        "explanation": "Tool use enables LLMs to call external APIs, search the web, and run code during reasoning"
+      },
+      {
+        "name": "Multi-turn Conversation",
+        "explanation": "Multi-turn conversations maintain context across many message exchanges in a session"
+      },
+      {
+        "name": "Safety Training",
+        "explanation": "Safety training teaches LLMs to refuse harmful requests and add caveats to dangerous content"
+      }
     ]
   },
   "rag": {
     "items": [
-      {"name": "RAG",                 "explanation": "Retrieval Augmented Generation combines search with LLMs to give accurate, grounded answers"},
-      {"name": "Vector Database",     "explanation": "Vector databases store embeddings and enable lightning-fast semantic similarity search"},
-      {"name": "Chunking",            "explanation": "Chunking splits documents into smaller pieces for efficient storage and relevant retrieval"},
-      {"name": "Semantic Search",     "explanation": "Semantic search finds results by meaning, not just keyword matching — much smarter"},
-      {"name": "Re-ranking",          "explanation": "Re-ranking re-orders retrieved results to improve relevance before passing them to the LLM"},
-      {"name": "Knowledge Base",      "explanation": "A knowledge base is your collection of documents that RAG searches to answer questions"},
-      {"name": "Document Loader",     "explanation": "Document loaders parse PDFs, web pages, and files into clean text for RAG pipelines"},
-      {"name": "Query Expansion",     "explanation": "Query expansion rewrites user questions multiple ways to improve search recall and coverage"},
-      {"name": "Hybrid Search",       "explanation": "Hybrid search combines keyword and semantic search for better, more reliable results"},
-      {"name": "Context Window RAG",  "explanation": "RAG stuffs retrieved documents into the LLM's context so it can answer with real knowledge"}
+      {
+        "name": "RAG",
+        "explanation": "Retrieval Augmented Generation combines search with LLMs to give accurate grounded answers"
+      },
+      {
+        "name": "Vector Database",
+        "explanation": "Vector databases store embeddings and enable lightning-fast semantic similarity search"
+      },
+      {
+        "name": "Chunking",
+        "explanation": "Chunking splits documents into smaller pieces for efficient storage and relevant retrieval"
+      },
+      {
+        "name": "Semantic Search",
+        "explanation": "Semantic search finds results by meaning not just keyword matching — much smarter"
+      },
+      {
+        "name": "Re-ranking",
+        "explanation": "Re-ranking re-orders retrieved results to improve relevance before passing them to the LLM"
+      },
+      {
+        "name": "Knowledge Base",
+        "explanation": "A knowledge base is your collection of documents that RAG searches to answer questions"
+      },
+      {
+        "name": "Document Loader",
+        "explanation": "Document loaders parse PDFs, web pages, and files into clean text for RAG pipelines"
+      },
+      {
+        "name": "Query Expansion",
+        "explanation": "Query expansion rewrites user questions multiple ways to improve search recall and coverage"
+      },
+      {
+        "name": "Hybrid Search",
+        "explanation": "Hybrid search combines keyword and semantic search for better more reliable results"
+      },
+      {
+        "name": "Context Window RAG",
+        "explanation": "RAG stuffs retrieved documents into the LLM's context so it can answer with real knowledge"
+      },
+      {
+        "name": "Naive RAG",
+        "explanation": "Naive RAG indexes documents, retrieves top-k chunks, and feeds them to an LLM without optimization"
+      },
+      {
+        "name": "Advanced RAG",
+        "explanation": "Advanced RAG adds pre-retrieval and post-retrieval steps to dramatically improve answer quality"
+      },
+      {
+        "name": "Modular RAG",
+        "explanation": "Modular RAG is a flexible framework where each pipeline component can be swapped independently"
+      },
+      {
+        "name": "Agentic RAG",
+        "explanation": "Agentic RAG uses an AI agent that decides when and how to retrieve information dynamically"
+      },
+      {
+        "name": "Self-RAG",
+        "explanation": "Self-RAG trains the model to decide when to retrieve and to critique its own generated answers"
+      },
+      {
+        "name": "Corrective RAG",
+        "explanation": "Corrective RAG evaluates retrieved documents and web-searches for more if they are not relevant"
+      },
+      {
+        "name": "Sentence-window Retrieval",
+        "explanation": "Sentence-window retrieval stores small sentences but returns the surrounding context window"
+      },
+      {
+        "name": "Parent-child Chunking",
+        "explanation": "Parent-child chunking retrieves small child chunks but passes larger parent context to the LLM"
+      },
+      {
+        "name": "Recursive Chunking",
+        "explanation": "Recursive chunking splits text hierarchically using natural boundaries like paragraphs and sentences"
+      },
+      {
+        "name": "Semantic Chunking",
+        "explanation": "Semantic chunking splits documents at points where the topic meaningfully changes"
+      },
+      {
+        "name": "Fixed-size Chunking",
+        "explanation": "Fixed-size chunking splits documents into equal token or character length pieces"
+      },
+      {
+        "name": "Overlapping Chunks",
+        "explanation": "Overlapping chunks share text between adjacent pieces so context is never split abruptly"
+      },
+      {
+        "name": "Sparse Retrieval",
+        "explanation": "Sparse retrieval uses keyword signals like BM25 to find lexically matching documents"
+      },
+      {
+        "name": "Dense Retrieval",
+        "explanation": "Dense retrieval uses embedding similarity to find semantically relevant documents"
+      },
+      {
+        "name": "BM25",
+        "explanation": "BM25 is a classic keyword ranking algorithm that scores documents by term frequency"
+      },
+      {
+        "name": "FAISS",
+        "explanation": "FAISS is Meta's fast similarity search library for finding nearest vectors at scale"
+      },
+      {
+        "name": "Pinecone",
+        "explanation": "Pinecone is a managed vector database built for production AI applications"
+      },
+      {
+        "name": "Weaviate",
+        "explanation": "Weaviate is an open-source vector database with a built-in hybrid search capability"
+      },
+      {
+        "name": "Chroma",
+        "explanation": "Chroma is a lightweight open-source vector database popular for local RAG development"
+      },
+      {
+        "name": "Qdrant",
+        "explanation": "Qdrant is a high-performance vector database with advanced filtering capabilities"
+      },
+      {
+        "name": "Milvus",
+        "explanation": "Milvus is a scalable open-source vector database designed for enterprise AI workloads"
+      },
+      {
+        "name": "LanceDB",
+        "explanation": "LanceDB is a developer-friendly embedded vector database that runs locally"
+      },
+      {
+        "name": "Embedding Model",
+        "explanation": "Embedding models convert text into dense numerical vectors that capture semantic meaning"
+      },
+      {
+        "name": "Bi-encoder",
+        "explanation": "Bi-encoders create independent embeddings for queries and documents for fast retrieval"
+      },
+      {
+        "name": "Cross-encoder",
+        "explanation": "Cross-encoders compare query and document together for highly accurate re-ranking"
+      },
+      {
+        "name": "HNSW",
+        "explanation": "Hierarchical Navigable Small World is a fast graph algorithm for approximate nearest neighbor search"
+      },
+      {
+        "name": "ANN Search",
+        "explanation": "Approximate Nearest Neighbor search trades perfect accuracy for massive speed gains"
+      },
+      {
+        "name": "Cosine Similarity",
+        "explanation": "Cosine similarity measures the angle between two vectors to quantify how similar they are"
+      },
+      {
+        "name": "Dot Product",
+        "explanation": "Dot product similarity multiplies corresponding embedding dimensions and sums the results"
+      },
+      {
+        "name": "L2 Distance",
+        "explanation": "L2 or Euclidean distance measures the straight-line distance between two embedding vectors"
+      },
+      {
+        "name": "Namespace",
+        "explanation": "Namespaces partition a vector index so different users or tenants have isolated data"
+      },
+      {
+        "name": "Metadata Filtering",
+        "explanation": "Metadata filtering restricts vector search to documents matching specific tags or fields"
+      },
+      {
+        "name": "Multi-vector Retrieval",
+        "explanation": "Multi-vector retrieval represents each document with multiple embeddings for better coverage"
+      },
+      {
+        "name": "ColBERT",
+        "explanation": "ColBERT stores token-level embeddings per document enabling late interaction for accurate retrieval"
+      },
+      {
+        "name": "HyDE",
+        "explanation": "HyDE generates a hypothetical document answer and uses that embedding to search for real ones"
+      },
+      {
+        "name": "Query Routing",
+        "explanation": "Query routing directs different questions to the most appropriate retrieval pipeline"
+      },
+      {
+        "name": "Ensemble Retrieval",
+        "explanation": "Ensemble retrieval combines results from multiple retrievers and fuses their scores"
+      },
+      {
+        "name": "Reciprocal Rank Fusion",
+        "explanation": "RRF combines ranked lists from multiple retrievers into a single better-performing ranked list"
+      },
+      {
+        "name": "Contextual Compression",
+        "explanation": "Contextual compression extracts only the most relevant sentences from retrieved documents"
+      },
+      {
+        "name": "LLM Re-ranker",
+        "explanation": "An LLM re-ranker scores retrieved passages by asking the model which best answers the query"
+      },
+      {
+        "name": "Cohere Rerank",
+        "explanation": "Cohere Rerank is a powerful API for improving search result relevance with a cross-encoder"
+      },
+      {
+        "name": "Lost in the Middle",
+        "explanation": "LLMs perform worse on information placed in the middle of long contexts versus edges"
+      },
+      {
+        "name": "Answer Generation",
+        "explanation": "Answer generation is the final RAG step where the LLM synthesizes retrieved chunks into a response"
+      },
+      {
+        "name": "Citation Generation",
+        "explanation": "RAG systems can cite source documents in answers so users can verify the information"
+      },
+      {
+        "name": "Grounding",
+        "explanation": "Grounding anchors LLM responses to retrieved factual sources to reduce hallucination"
+      },
+      {
+        "name": "Faithfulness",
+        "explanation": "Faithfulness measures whether a RAG answer is actually supported by the retrieved documents"
+      },
+      {
+        "name": "Answer Relevance",
+        "explanation": "Answer relevance measures whether the generated answer actually addresses the question asked"
+      },
+      {
+        "name": "Context Recall",
+        "explanation": "Context recall measures whether retrieved chunks contain all information needed to answer"
+      },
+      {
+        "name": "RAGAS",
+        "explanation": "RAGAS is an evaluation framework that automatically scores RAG pipelines on key quality metrics"
+      },
+      {
+        "name": "Trulens",
+        "explanation": "TruLens is an observability tool for evaluating and debugging RAG and LLM applications"
+      },
+      {
+        "name": "LangSmith",
+        "explanation": "LangSmith traces, monitors, and evaluates LangChain RAG applications in production"
+      },
+      {
+        "name": "Indexing Pipeline",
+        "explanation": "The indexing pipeline loads, chunks, embeds, and stores documents for later retrieval"
+      },
+      {
+        "name": "Query Pipeline",
+        "explanation": "The query pipeline takes a user question, retrieves relevant chunks, and generates an answer"
+      },
+      {
+        "name": "LangChain",
+        "explanation": "LangChain is a popular framework for building LLM and RAG applications with composable components"
+      },
+      {
+        "name": "LlamaIndex",
+        "explanation": "LlamaIndex specializes in RAG infrastructure with powerful data connectors and query engines"
+      },
+      {
+        "name": "Haystack",
+        "explanation": "Haystack is an open-source framework for building production-grade RAG and search pipelines"
+      },
+      {
+        "name": "DSPy",
+        "explanation": "DSPy automatically optimizes LLM prompts and pipelines using machine learning"
+      },
+      {
+        "name": "Multi-hop Reasoning",
+        "explanation": "Multi-hop RAG answers complex questions by chaining multiple retrieval and reasoning steps"
+      },
+      {
+        "name": "GraphRAG",
+        "explanation": "GraphRAG builds a knowledge graph from documents enabling complex relational question answering"
+      },
+      {
+        "name": "Long-context RAG",
+        "explanation": "Long-context RAG passes many retrieved documents into LLMs with very large context windows"
+      },
+      {
+        "name": "Streaming RAG",
+        "explanation": "Streaming RAG displays the LLM answer token by token as it generates for faster perceived response"
+      },
+      {
+        "name": "Conversational RAG",
+        "explanation": "Conversational RAG maintains chat history so follow-up questions reference previous turns"
+      },
+      {
+        "name": "Table RAG",
+        "explanation": "Table RAG retrieves and reasons over structured tabular data inside documents"
+      },
+      {
+        "name": "Multimodal RAG",
+        "explanation": "Multimodal RAG retrieves and reasons over images, charts, and text together"
+      },
+      {
+        "name": "Audio RAG",
+        "explanation": "Audio RAG transcribes speech then indexes and retrieves from audio content"
+      },
+      {
+        "name": "Code RAG",
+        "explanation": "Code RAG retrieves relevant code snippets and documentation to assist with programming tasks"
+      },
+      {
+        "name": "PDF Parsing",
+        "explanation": "PDF parsing extracts clean text from PDFs including handling tables, headers, and layouts"
+      },
+      {
+        "name": "OCR",
+        "explanation": "OCR converts images of text like scanned documents into machine-readable searchable text"
+      },
+      {
+        "name": "Document Hierarchy",
+        "explanation": "Document hierarchy preserves structure like sections and subsections during indexing"
+      },
+      {
+        "name": "Chunk Metadata",
+        "explanation": "Chunk metadata stores source, page number, and section info alongside each embedded piece"
+      },
+      {
+        "name": "Retrieval Threshold",
+        "explanation": "Retrieval threshold sets a minimum similarity score below which chunks are discarded"
+      },
+      {
+        "name": "Top-k Retrieval",
+        "explanation": "Top-k retrieval fetches the k most similar chunks to the query from the vector database"
+      },
+      {
+        "name": "Maximal Marginal Relevance",
+        "explanation": "MMR selects diverse retrieved chunks so the LLM gets broad coverage not just repetitive top hits"
+      },
+      {
+        "name": "Cache-augmented Generation",
+        "explanation": "CAG pre-loads the entire knowledge base into LLM context to skip retrieval entirely"
+      },
+      {
+        "name": "Knowledge Graph RAG",
+        "explanation": "KG-RAG traverses structured knowledge graphs to find precise factual answers"
+      },
+      {
+        "name": "Step-back Prompting",
+        "explanation": "Step-back prompting asks a broader question first to retrieve better supporting context"
+      },
+      {
+        "name": "Decomposed Retrieval",
+        "explanation": "Decomposed retrieval breaks complex questions into sub-questions and retrieves for each one"
+      },
+      {
+        "name": "Sparse-Dense Fusion",
+        "explanation": "Sparse-dense fusion blends BM25 keyword scores with embedding scores for best-of-both retrieval"
+      },
+      {
+        "name": "Iterative Retrieval",
+        "explanation": "Iterative retrieval refines the search query using partial answers from previous retrieval rounds"
+      },
+      {
+        "name": "Adaptive Retrieval",
+        "explanation": "Adaptive retrieval decides on the fly whether retrieval is needed at all for a given question"
+      },
+      {
+        "name": "RAG Evaluation",
+        "explanation": "RAG evaluation measures faithfulness, relevance, and completeness of generated answers"
+      },
+      {
+        "name": "Token Budget RAG",
+        "explanation": "Token budget RAG trims retrieved context to stay within the model's maximum context window"
+      },
+      {
+        "name": "Hypothetical Document Embedding",
+        "explanation": "HyDE generates a fake ideal answer and embeds it to find real matching documents in the index"
+      },
+      {
+        "name": "Multi-query Retrieval",
+        "explanation": "Multi-query generates several paraphrases of the question to increase retrieval coverage"
+      },
+      {
+        "name": "Fusion Retrieval",
+        "explanation": "Fusion retrieval merges and deduplicates results from many parallel retrieval strategies"
+      },
+      {
+        "name": "Late Chunking",
+        "explanation": "Late chunking embeds full documents first then chunks the contextualized embeddings for better quality"
+      },
+      {
+        "name": "Contextual Retrieval",
+        "explanation": "Contextual retrieval prepends a document-level summary to each chunk before embedding for better matching"
+      },
+      {
+        "name": "Small-to-Big Retrieval",
+        "explanation": "Small-to-big retrieves small precise chunks then expands context by returning their parent sections"
+      },
+      {
+        "name": "Knowledge Distillation RAG",
+        "explanation": "RAG knowledge distillation trains a compact model on LLM-generated answers to avoid retrieval at inference"
+      },
+      {
+        "name": "RAG Triad",
+        "explanation": "The RAG triad evaluates context relevance, groundedness, and answer relevance as three key quality metrics"
+      }
     ]
   },
   "database": {
     "items": [
-      {"name": "SQL",           "explanation": "SQL is the standard language for querying and managing structured relational databases"},
-      {"name": "NoSQL",         "explanation": "NoSQL databases store unstructured or semi-structured data with flexible, scalable schemas"},
-      {"name": "PostgreSQL",    "explanation": "PostgreSQL is a powerful open-source relational database used by millions of applications"},
-      {"name": "MongoDB",       "explanation": "MongoDB stores data as JSON documents — great for flexible, rapidly changing data structures"},
-      {"name": "Redis",         "explanation": "Redis is an in-memory database used for caching, sessions, and real-time applications"},
-      {"name": "Vector DB",     "explanation": "Vector databases like Pinecone and Chroma store AI embeddings for fast similarity search"},
-      {"name": "ACID",          "explanation": "ACID ensures database transactions are Atomic, Consistent, Isolated, and Durable"},
-      {"name": "Indexing",      "explanation": "Database indexes dramatically speed up queries by creating shortcuts to find data fast"},
-      {"name": "Graph Database","explanation": "Graph databases like Neo4j model and query complex relationships between data points"},
-      {"name": "Sharding",      "explanation": "Sharding splits a database across multiple servers to handle massive scale and traffic"}
+      {
+        "name": "SQL",
+        "explanation": "SQL is the standard language for querying and managing structured relational databases"
+      },
+      {
+        "name": "NoSQL",
+        "explanation": "NoSQL databases store unstructured or semi-structured data with flexible scalable schemas"
+      },
+      {
+        "name": "PostgreSQL",
+        "explanation": "PostgreSQL is a powerful open-source relational database used by millions of applications"
+      },
+      {
+        "name": "MongoDB",
+        "explanation": "MongoDB stores data as JSON documents — great for flexible rapidly changing data structures"
+      },
+      {
+        "name": "Redis",
+        "explanation": "Redis is an in-memory database used for caching, sessions, and real-time applications"
+      },
+      {
+        "name": "Vector DB",
+        "explanation": "Vector databases like Pinecone and Chroma store AI embeddings for fast similarity search"
+      },
+      {
+        "name": "ACID",
+        "explanation": "ACID ensures database transactions are Atomic, Consistent, Isolated, and Durable"
+      },
+      {
+        "name": "Indexing",
+        "explanation": "Database indexes dramatically speed up queries by creating shortcuts to find data fast"
+      },
+      {
+        "name": "Graph Database",
+        "explanation": "Graph databases like Neo4j model and query complex relationships between data points"
+      },
+      {
+        "name": "Sharding",
+        "explanation": "Sharding splits a database across multiple servers to handle massive scale and traffic"
+      },
+      {
+        "name": "Replication",
+        "explanation": "Replication copies data across multiple servers so your database stays up if one server fails"
+      },
+      {
+        "name": "Primary Key",
+        "explanation": "A primary key is a unique identifier that distinguishes each row in a database table"
+      },
+      {
+        "name": "Foreign Key",
+        "explanation": "A foreign key links rows in one table to rows in another creating a relationship"
+      },
+      {
+        "name": "JOIN",
+        "explanation": "A JOIN combines rows from two or more tables based on a matching column value"
+      },
+      {
+        "name": "INNER JOIN",
+        "explanation": "INNER JOIN returns only the rows where a match exists in both joined tables"
+      },
+      {
+        "name": "LEFT JOIN",
+        "explanation": "LEFT JOIN returns all rows from the left table and matching rows from the right"
+      },
+      {
+        "name": "Index Scan",
+        "explanation": "An index scan uses a database index to find rows quickly without scanning every row"
+      },
+      {
+        "name": "Full Table Scan",
+        "explanation": "A full table scan reads every row in a table which is slow on large datasets"
+      },
+      {
+        "name": "Query Planner",
+        "explanation": "The query planner figures out the most efficient way to execute a SQL query"
+      },
+      {
+        "name": "Normalization",
+        "explanation": "Normalization organizes a database to reduce redundancy and improve data integrity"
+      },
+      {
+        "name": "Denormalization",
+        "explanation": "Denormalization adds redundancy to a database to speed up read-heavy query performance"
+      },
+      {
+        "name": "Schema",
+        "explanation": "A database schema defines the structure, tables, columns, and data types of a database"
+      },
+      {
+        "name": "Migration",
+        "explanation": "Database migrations manage version-controlled changes to a database schema over time"
+      },
+      {
+        "name": "ORM",
+        "explanation": "Object-Relational Mapping lets developers interact with databases using code objects instead of SQL"
+      },
+      {
+        "name": "Stored Procedure",
+        "explanation": "Stored procedures are pre-compiled SQL logic saved in the database for reuse and speed"
+      },
+      {
+        "name": "Trigger",
+        "explanation": "A database trigger automatically runs code when a specified event like insert or update occurs"
+      },
+      {
+        "name": "View",
+        "explanation": "A database view is a saved query that acts like a virtual table for simpler querying"
+      },
+      {
+        "name": "Materialized View",
+        "explanation": "A materialized view caches the results of a query on disk for much faster reads"
+      },
+      {
+        "name": "Partition",
+        "explanation": "Partitioning divides a large table into smaller pieces to improve query and management performance"
+      },
+      {
+        "name": "B-tree Index",
+        "explanation": "B-tree indexes are balanced tree structures ideal for range queries and equality lookups"
+      },
+      {
+        "name": "Hash Index",
+        "explanation": "Hash indexes provide O(1) lookup speed for exact equality queries"
+      },
+      {
+        "name": "GiST Index",
+        "explanation": "GiST indexes in PostgreSQL support complex data types like geographic and full-text search"
+      },
+      {
+        "name": "Full-text Search",
+        "explanation": "Full-text search indexes words in documents to enable fast natural language text queries"
+      },
+      {
+        "name": "Transaction",
+        "explanation": "A transaction is a group of database operations that all succeed or all fail together"
+      },
+      {
+        "name": "Rollback",
+        "explanation": "Rollback undoes all changes in a transaction if something goes wrong"
+      },
+      {
+        "name": "Commit",
+        "explanation": "Commit saves all changes in a transaction permanently to the database"
+      },
+      {
+        "name": "Deadlock",
+        "explanation": "A deadlock occurs when two transactions each hold a lock the other needs to proceed"
+      },
+      {
+        "name": "Isolation Level",
+        "explanation": "Isolation levels control how much one transaction can see the uncommitted data of another"
+      },
+      {
+        "name": "WAL",
+        "explanation": "Write-Ahead Logging records changes before applying them ensuring durability and crash recovery"
+      },
+      {
+        "name": "MVCC",
+        "explanation": "Multi-Version Concurrency Control lets readers and writers work simultaneously without blocking each other"
+      },
+      {
+        "name": "Connection Pool",
+        "explanation": "A connection pool reuses database connections to avoid the overhead of opening new ones"
+      },
+      {
+        "name": "ORM N+1 Problem",
+        "explanation": "The N+1 problem is when an ORM executes one query per row instead of joining efficiently"
+      },
+      {
+        "name": "Cassandra",
+        "explanation": "Apache Cassandra is a distributed NoSQL database designed for massive write throughput"
+      },
+      {
+        "name": "DynamoDB",
+        "explanation": "DynamoDB is AWS's managed NoSQL database offering single-digit millisecond latency at any scale"
+      },
+      {
+        "name": "MySQL",
+        "explanation": "MySQL is the world's most widely used open-source relational database powering countless websites"
+      },
+      {
+        "name": "SQLite",
+        "explanation": "SQLite is a serverless embedded database that stores everything in a single file"
+      },
+      {
+        "name": "MariaDB",
+        "explanation": "MariaDB is a community-driven MySQL fork with additional features and performance improvements"
+      },
+      {
+        "name": "Oracle DB",
+        "explanation": "Oracle Database is the dominant enterprise relational database trusted by large corporations"
+      },
+      {
+        "name": "Microsoft SQL Server",
+        "explanation": "SQL Server is Microsoft's enterprise database tightly integrated with the Windows ecosystem"
+      },
+      {
+        "name": "Snowflake",
+        "explanation": "Snowflake is a cloud data warehouse that separates compute and storage for flexible scaling"
+      },
+      {
+        "name": "BigQuery",
+        "explanation": "BigQuery is Google's serverless data warehouse for analyzing massive datasets with SQL"
+      },
+      {
+        "name": "Redshift",
+        "explanation": "Amazon Redshift is a cloud data warehouse optimized for analytical queries on large datasets"
+      },
+      {
+        "name": "ClickHouse",
+        "explanation": "ClickHouse is an extremely fast columnar database built for real-time analytics"
+      },
+      {
+        "name": "DuckDB",
+        "explanation": "DuckDB is an in-process analytical database that runs fast SQL queries on local files"
+      },
+      {
+        "name": "InfluxDB",
+        "explanation": "InfluxDB is a purpose-built time series database for metrics, monitoring, and IoT data"
+      },
+      {
+        "name": "TimescaleDB",
+        "explanation": "TimescaleDB extends PostgreSQL with time-series capabilities for fast time-ordered data"
+      },
+      {
+        "name": "CockroachDB",
+        "explanation": "CockroachDB is a distributed SQL database that survives regional failures automatically"
+      },
+      {
+        "name": "PlanetScale",
+        "explanation": "PlanetScale is a MySQL-compatible serverless database platform with branching like Git"
+      },
+      {
+        "name": "Supabase",
+        "explanation": "Supabase is an open-source Firebase alternative built on PostgreSQL with real-time features"
+      },
+      {
+        "name": "Firebase",
+        "explanation": "Firebase is Google's real-time NoSQL cloud database popular for mobile and web apps"
+      },
+      {
+        "name": "Firestore",
+        "explanation": "Firestore is Google's flexible scalable NoSQL cloud database with offline support"
+      },
+      {
+        "name": "FaunaDB",
+        "explanation": "Fauna is a serverless transactional database with a document-relational data model"
+      },
+      {
+        "name": "Couchbase",
+        "explanation": "Couchbase combines NoSQL flexibility with SQL query support and built-in caching"
+      },
+      {
+        "name": "Elasticsearch",
+        "explanation": "Elasticsearch is a distributed search and analytics engine built on Apache Lucene"
+      },
+      {
+        "name": "OpenSearch",
+        "explanation": "OpenSearch is AWS's open-source fork of Elasticsearch for search and log analytics"
+      },
+      {
+        "name": "Apache Solr",
+        "explanation": "Solr is an enterprise search platform built on Lucene with rich faceting and filtering"
+      },
+      {
+        "name": "Neo4j",
+        "explanation": "Neo4j is the leading graph database using nodes and edges to model complex relationships"
+      },
+      {
+        "name": "Amazon Neptune",
+        "explanation": "Neptune is AWS's managed graph database supporting both property graph and RDF queries"
+      },
+      {
+        "name": "ArangoDB",
+        "explanation": "ArangoDB is a multi-model database supporting graphs, documents, and key-value in one system"
+      },
+      {
+        "name": "Dgraph",
+        "explanation": "Dgraph is a distributed graph database that uses GraphQL as its native query language"
+      },
+      {
+        "name": "Memcached",
+        "explanation": "Memcached is a simple high-performance distributed memory cache for speeding up web apps"
+      },
+      {
+        "name": "Apache HBase",
+        "explanation": "HBase is a Hadoop-based NoSQL database for random real-time access to big data"
+      },
+      {
+        "name": "Apache Hive",
+        "explanation": "Hive is a data warehouse built on Hadoop enabling SQL queries over distributed storage"
+      },
+      {
+        "name": "Apache Spark SQL",
+        "explanation": "Spark SQL runs SQL queries over massive distributed datasets using Apache Spark"
+      },
+      {
+        "name": "Presto",
+        "explanation": "Presto is a distributed SQL query engine for running fast queries across heterogeneous data sources"
+      },
+      {
+        "name": "Apache Iceberg",
+        "explanation": "Iceberg is an open table format for huge analytics tables with ACID transactions"
+      },
+      {
+        "name": "Delta Lake",
+        "explanation": "Delta Lake adds ACID transactions and versioning to data lakes stored on cloud storage"
+      },
+      {
+        "name": "Apache Parquet",
+        "explanation": "Parquet is a columnar storage format that compresses analytical data efficiently"
+      },
+      {
+        "name": "Data Lake",
+        "explanation": "A data lake stores raw structured and unstructured data at massive scale for later analysis"
+      },
+      {
+        "name": "Data Warehouse",
+        "explanation": "A data warehouse stores structured historical data optimized for business intelligence queries"
+      },
+      {
+        "name": "Lakehouse",
+        "explanation": "A lakehouse combines data lake flexibility with data warehouse analytics performance"
+      },
+      {
+        "name": "ETL",
+        "explanation": "Extract Transform Load moves data from source systems into a warehouse in a structured form"
+      },
+      {
+        "name": "ELT",
+        "explanation": "ELT loads raw data first and transforms it inside the warehouse using its compute power"
+      },
+      {
+        "name": "Change Data Capture",
+        "explanation": "CDC tracks every insert, update, and delete in a database and streams changes in real time"
+      },
+      {
+        "name": "Database Cursor",
+        "explanation": "A cursor iterates over query results one row at a time instead of loading all at once"
+      },
+      {
+        "name": "Explain Plan",
+        "explanation": "EXPLAIN shows exactly how a database intends to execute a query for optimization"
+      },
+      {
+        "name": "Query Cache",
+        "explanation": "Query caching saves results of expensive queries so identical requests return instantly"
+      },
+      {
+        "name": "Optimistic Locking",
+        "explanation": "Optimistic locking assumes conflicts are rare and only checks for them at commit time"
+      },
+      {
+        "name": "Pessimistic Locking",
+        "explanation": "Pessimistic locking locks data as soon as it is accessed to prevent any concurrent modification"
+      },
+      {
+        "name": "Two-phase Commit",
+        "explanation": "2PC ensures all nodes in a distributed transaction either all commit or all rollback together"
+      },
+      {
+        "name": "CAP Theorem",
+        "explanation": "CAP theorem states a distributed system can only guarantee two of Consistency, Availability, and Partition tolerance"
+      },
+      {
+        "name": "BASE",
+        "explanation": "BASE databases are Basically Available, Soft-state, and Eventually consistent — the NoSQL alternative to ACID"
+      },
+      {
+        "name": "Eventual Consistency",
+        "explanation": "Eventual consistency guarantees data will be consistent across nodes eventually but not immediately"
+      },
+      {
+        "name": "Strong Consistency",
+        "explanation": "Strong consistency ensures every read immediately reflects the most recent write"
+      },
+      {
+        "name": "Surrogate Key",
+        "explanation": "A surrogate key is a system-generated unique ID like an auto-increment integer with no business meaning"
+      },
+      {
+        "name": "Natural Key",
+        "explanation": "A natural key uses real-world data like email or SSN as the unique row identifier"
+      },
+      {
+        "name": "Composite Key",
+        "explanation": "A composite key uses two or more columns together to uniquely identify a row"
+      },
+      {
+        "name": "Columnstore Index",
+        "explanation": "Columnstore indexes store data by column for dramatically faster analytical aggregation queries"
+      },
+      {
+        "name": "Bitmap Index",
+        "explanation": "Bitmap indexes are space-efficient indexes ideal for low-cardinality columns like status flags"
+      },
+      {
+        "name": "Connection String",
+        "explanation": "A connection string contains host, port, database name, and credentials to connect to a database"
+      }
     ]
   },
   "mcp": {
     "items": [
-      {"name": "MCP",            "explanation": "Model Context Protocol is an open standard connecting AI models to external tools and data"},
-      {"name": "MCP Server",     "explanation": "An MCP server exposes tools, resources, and prompts that any compatible AI client can use"},
-      {"name": "MCP Client",     "explanation": "MCP clients like Claude Desktop connect to servers to access their capabilities and data"},
-      {"name": "Tools",          "explanation": "MCP Tools let AI models execute functions like file operations, API calls, and web searches"},
-      {"name": "Resources",      "explanation": "MCP Resources expose data sources like files, databases, and APIs to AI models"},
-      {"name": "Prompts",        "explanation": "MCP Prompts are reusable prompt templates that standardize AI model behavior across apps"},
-      {"name": "Sampling",       "explanation": "MCP Sampling lets servers request LLM completions through the connected client"},
-      {"name": "Transport",      "explanation": "MCP supports stdio and HTTP with SSE transports for client-server communication"},
-      {"name": "Claude Desktop", "explanation": "Claude Desktop natively supports MCP, letting you connect local and remote MCP servers"},
-      {"name": "MCP SDK",        "explanation": "The official MCP SDK lets developers build servers and clients in Python and TypeScript"}
+      {
+        "name": "MCP",
+        "explanation": "Model Context Protocol is an open standard connecting AI models to external tools and data"
+      },
+      {
+        "name": "MCP Server",
+        "explanation": "An MCP server exposes tools, resources, and prompts that any compatible AI client can use"
+      },
+      {
+        "name": "MCP Client",
+        "explanation": "MCP clients like Claude Desktop connect to servers to access their capabilities and data"
+      },
+      {
+        "name": "Tools",
+        "explanation": "MCP Tools let AI models execute functions like file operations, API calls, and web searches"
+      },
+      {
+        "name": "Resources",
+        "explanation": "MCP Resources expose data sources like files, databases, and APIs to AI models"
+      },
+      {
+        "name": "Prompts",
+        "explanation": "MCP Prompts are reusable prompt templates that standardize AI model behavior across apps"
+      },
+      {
+        "name": "Sampling",
+        "explanation": "MCP Sampling lets servers request LLM completions through the connected client"
+      },
+      {
+        "name": "Transport",
+        "explanation": "MCP supports stdio and HTTP with SSE transports for client-server communication"
+      },
+      {
+        "name": "Claude Desktop",
+        "explanation": "Claude Desktop natively supports MCP letting you connect local and remote MCP servers"
+      },
+      {
+        "name": "MCP SDK",
+        "explanation": "The official MCP SDK lets developers build servers and clients in Python and TypeScript"
+      },
+      {
+        "name": "Tool Call",
+        "explanation": "A tool call is when an AI model invokes an MCP tool and waits for the result"
+      },
+      {
+        "name": "Tool Result",
+        "explanation": "A tool result is the data returned by an MCP server after executing a tool call"
+      },
+      {
+        "name": "Tool Schema",
+        "explanation": "Tool schemas define tool names, descriptions, and input parameters using JSON Schema"
+      },
+      {
+        "name": "SSE Transport",
+        "explanation": "Server-Sent Events transport lets remote MCP servers stream updates to clients over HTTP"
+      },
+      {
+        "name": "Stdio Transport",
+        "explanation": "Stdio transport runs MCP servers as local processes communicating through standard input and output"
+      },
+      {
+        "name": "MCP Host",
+        "explanation": "An MCP host is the application like Claude Desktop that manages client connections to servers"
+      },
+      {
+        "name": "Tool Discovery",
+        "explanation": "Tool discovery lets AI clients automatically list all tools available on a connected MCP server"
+      },
+      {
+        "name": "Resource URI",
+        "explanation": "Each MCP resource has a unique URI that clients use to read its current content"
+      },
+      {
+        "name": "Resource Templates",
+        "explanation": "Resource templates are URI patterns that expose dynamic parameterized data sources"
+      },
+      {
+        "name": "Capability Negotiation",
+        "explanation": "MCP clients and servers negotiate supported capabilities during the initialization handshake"
+      },
+      {
+        "name": "JSON-RPC",
+        "explanation": "MCP uses JSON-RPC 2.0 as its message format for all client-server communication"
+      },
+      {
+        "name": "Tool Annotation",
+        "explanation": "MCP tool annotations describe whether tools are read-only or can modify external state"
+      },
+      {
+        "name": "MCP Inspector",
+        "explanation": "The MCP Inspector is a developer tool to test and debug MCP servers interactively"
+      },
+      {
+        "name": "Roots",
+        "explanation": "Roots tell MCP servers which directories or resources the client wants them to focus on"
+      },
+      {
+        "name": "Server-side Prompts",
+        "explanation": "Server-side prompts let MCP servers expose templated prompts users can invoke in their AI client"
+      },
+      {
+        "name": "Elicitation",
+        "explanation": "MCP elicitation lets servers ask the user for additional information mid-task through the client"
+      },
+      {
+        "name": "Progress Notification",
+        "explanation": "Progress notifications let MCP servers report long-running task progress back to clients"
+      },
+      {
+        "name": "Cancellation",
+        "explanation": "MCP supports cancellation tokens so clients can interrupt long-running server operations"
+      },
+      {
+        "name": "Logging",
+        "explanation": "MCP servers can send structured log messages to clients for debugging and observability"
+      },
+      {
+        "name": "Pagination",
+        "explanation": "MCP pagination returns large resource or tool lists in manageable batches via cursor tokens"
+      },
+      {
+        "name": "Authentication MCP",
+        "explanation": "MCP servers can require OAuth 2.1 authentication before granting AI clients access"
+      },
+      {
+        "name": "Remote MCP Server",
+        "explanation": "Remote MCP servers run in the cloud and connect over HTTP giving AI access to remote services"
+      },
+      {
+        "name": "Local MCP Server",
+        "explanation": "Local MCP servers run on your machine with stdio transport and access local files and apps"
+      },
+      {
+        "name": "MCP Registry",
+        "explanation": "MCP registries are directories of published servers that users can discover and install easily"
+      },
+      {
+        "name": "Smithery",
+        "explanation": "Smithery is a popular marketplace for discovering and deploying MCP servers"
+      },
+      {
+        "name": "MCP over REST",
+        "explanation": "MCP can be layered over REST APIs to expose existing HTTP services as AI-callable tools"
+      },
+      {
+        "name": "Tool Composition",
+        "explanation": "Tool composition chains multiple MCP tool calls together to complete complex multi-step tasks"
+      },
+      {
+        "name": "Context Injection",
+        "explanation": "MCP resources inject relevant live data into the AI's context automatically before it responds"
+      },
+      {
+        "name": "File System Server",
+        "explanation": "The official MCP filesystem server exposes local files and directories as readable resources"
+      },
+      {
+        "name": "Git MCP Server",
+        "explanation": "Git MCP servers expose repository history, branches, and diffs as tools for AI code assistants"
+      },
+      {
+        "name": "GitHub MCP Server",
+        "explanation": "The GitHub MCP server lets AI create issues, pull requests, and manage code repositories"
+      },
+      {
+        "name": "Database MCP Server",
+        "explanation": "Database MCP servers let AI query PostgreSQL, MySQL, or SQLite to answer data questions"
+      },
+      {
+        "name": "Browser MCP Server",
+        "explanation": "Browser MCP servers give AI tools to navigate web pages, click elements, and extract content"
+      },
+      {
+        "name": "Slack MCP Server",
+        "explanation": "Slack MCP servers let AI read channels, send messages, and search workspace history"
+      },
+      {
+        "name": "Google Drive MCP",
+        "explanation": "Google Drive MCP servers let AI read, create, and organize files in Google Drive"
+      },
+      {
+        "name": "Notion MCP Server",
+        "explanation": "Notion MCP servers expose pages, databases, and blocks for AI to read and update"
+      },
+      {
+        "name": "Jira MCP Server",
+        "explanation": "Jira MCP servers let AI create tickets, update issues, and query project boards"
+      },
+      {
+        "name": "Kubernetes MCP Server",
+        "explanation": "Kubernetes MCP servers give AI tools to inspect pods, deployments, and cluster resources"
+      },
+      {
+        "name": "AWS MCP Server",
+        "explanation": "AWS MCP servers let AI query and manage cloud resources using AWS APIs as tools"
+      },
+      {
+        "name": "Memory MCP Server",
+        "explanation": "Memory MCP servers give AI persistent long-term memory by storing and retrieving facts"
+      },
+      {
+        "name": "Web Search MCP",
+        "explanation": "Web search MCP servers give AI the ability to search the internet for current information"
+      },
+      {
+        "name": "Image Generation MCP",
+        "explanation": "Image generation MCP servers let AI create images by calling DALL-E or Stable Diffusion tools"
+      },
+      {
+        "name": "Sequential Thinking MCP",
+        "explanation": "Sequential thinking MCP servers give AI a tool to reason step by step through complex problems"
+      },
+      {
+        "name": "Multi-server Setup",
+        "explanation": "AI clients can connect to multiple MCP servers simultaneously to access many tools at once"
+      },
+      {
+        "name": "Tool Namespacing",
+        "explanation": "Tool namespacing prevents name collisions when multiple MCP servers expose similarly named tools"
+      },
+      {
+        "name": "Structured Output",
+        "explanation": "MCP tools can return structured JSON so AI models parse results precisely"
+      },
+      {
+        "name": "Binary Resources",
+        "explanation": "MCP resources can return binary content like images as base64-encoded data"
+      },
+      {
+        "name": "Prompt Arguments",
+        "explanation": "MCP prompts accept named arguments that get interpolated into the prompt template"
+      },
+      {
+        "name": "Server Configuration",
+        "explanation": "MCP server configuration in claude_desktop_config.json defines which servers launch with the client"
+      },
+      {
+        "name": "Environment Variables MCP",
+        "explanation": "MCP servers receive credentials and config via environment variables for secure secret management"
+      },
+      {
+        "name": "Tool Use Latency",
+        "explanation": "Tool use latency is the delay between an AI calling an MCP tool and receiving its result"
+      },
+      {
+        "name": "Parallel Tool Calls",
+        "explanation": "AI models can invoke multiple MCP tools in parallel to complete tasks faster"
+      },
+      {
+        "name": "Tool Error Handling",
+        "explanation": "MCP defines standard error codes so clients handle server failures gracefully"
+      },
+      {
+        "name": "Idempotent Tools",
+        "explanation": "Idempotent MCP tools safely repeat the same call without causing duplicate side effects"
+      },
+      {
+        "name": "Read-only Tools",
+        "explanation": "Read-only MCP tools fetch information without modifying any external state"
+      },
+      {
+        "name": "Write Tools",
+        "explanation": "Write MCP tools create, update, or delete data in external systems"
+      },
+      {
+        "name": "MCP Specification",
+        "explanation": "The MCP specification is a published open standard maintained by Anthropic on GitHub"
+      },
+      {
+        "name": "Tool Versioning",
+        "explanation": "MCP servers can version their tools so clients handle updates without breaking existing workflows"
+      },
+      {
+        "name": "Graceful Degradation",
+        "explanation": "AI apps should work with reduced capability when MCP tools are unavailable or return errors"
+      },
+      {
+        "name": "Agentic Workflows",
+        "explanation": "MCP enables agentic workflows where AI autonomously calls tools in sequence to complete goals"
+      },
+      {
+        "name": "Human in the Loop",
+        "explanation": "MCP supports human approval steps where the user confirms before a tool makes external changes"
+      },
+      {
+        "name": "Tool Trust",
+        "explanation": "Tool trust levels determine which MCP tools can run automatically versus requiring user confirmation"
+      },
+      {
+        "name": "Composable AI Systems",
+        "explanation": "MCP lets developers compose powerful AI systems by mixing specialized servers like building blocks"
+      },
+      {
+        "name": "API Gateway MCP",
+        "explanation": "API gateway MCP servers wrap internal REST APIs to make them accessible as AI tools"
+      },
+      {
+        "name": "Rate Limiting MCP",
+        "explanation": "MCP servers should rate-limit tool calls to protect backend APIs from being overwhelmed"
+      },
+      {
+        "name": "Tool Documentation",
+        "explanation": "Good MCP tool descriptions are critical — AI models use them to decide which tool to call"
+      },
+      {
+        "name": "MCP Proxy",
+        "explanation": "An MCP proxy aggregates multiple upstream servers into one connection for client simplicity"
+      },
+      {
+        "name": "Server Health Checks",
+        "explanation": "AI clients should verify MCP server connectivity before sending tool requests to avoid failures"
+      },
+      {
+        "name": "Mock MCP Server",
+        "explanation": "Mock MCP servers simulate real tools during testing so AI apps can be developed safely"
+      },
+      {
+        "name": "MCP Middleware",
+        "explanation": "MCP middleware intercepts tool calls to add logging, caching, or authentication"
+      },
+      {
+        "name": "Dynamic Tool Registration",
+        "explanation": "Dynamic registration lets MCP servers update their available tools without restarting"
+      },
+      {
+        "name": "Context Preservation",
+        "explanation": "MCP resource subscriptions keep the AI's context fresh with live updates from servers"
+      },
+      {
+        "name": "Streaming Tool Results",
+        "explanation": "Long-running tools can stream partial results back progressively via MCP progress notifications"
+      },
+      {
+        "name": "MCP Analytics",
+        "explanation": "MCP analytics track which tools are called, how often, and which produce errors in production"
+      },
+      {
+        "name": "OpenAPI to MCP",
+        "explanation": "Tools can auto-generate MCP server wrappers from OpenAPI specifications for any REST API"
+      },
+      {
+        "name": "LLM Tool Selection",
+        "explanation": "LLMs select which MCP tool to invoke based on tool descriptions and the user's goal"
+      },
+      {
+        "name": "ReAct Pattern",
+        "explanation": "The ReAct pattern has LLMs alternate between reasoning and MCP tool actions to solve tasks"
+      },
+      {
+        "name": "Plan and Execute",
+        "explanation": "Plan-and-execute agents first create a full plan then run MCP tools step by step"
+      },
+      {
+        "name": "MCP Community",
+        "explanation": "The MCP community has built hundreds of open-source servers covering nearly every service"
+      },
+      {
+        "name": "Metadata in Tools",
+        "explanation": "MCP tool metadata provides hints to clients about cost, risk, and read-write behavior"
+      },
+      {
+        "name": "MCP Versioning",
+        "explanation": "MCP protocol versioning ensures backward compatibility as the specification evolves"
+      },
+      {
+        "name": "Error Propagation",
+        "explanation": "MCP propagates server errors back to the LLM so it can retry or report the failure gracefully"
+      },
+      {
+        "name": "Tool Chaining",
+        "explanation": "Tool chaining passes the output of one MCP tool directly as the input to the next in sequence"
+      },
+      {
+        "name": "MCP in VS Code",
+        "explanation": "VS Code Copilot supports MCP allowing AI code assistants to use custom developer tools"
+      },
+      {
+        "name": "Permission Model",
+        "explanation": "MCP permission models let users grant or revoke specific tool access on a per-server basis"
+      },
+      {
+        "name": "Stateful Servers",
+        "explanation": "Stateful MCP servers maintain session state between tool calls within the same conversation"
+      },
+      {
+        "name": "Stateless Servers",
+        "explanation": "Stateless MCP servers treat every tool call independently with no memory between requests"
+      },
+      {
+        "name": "MCP Middleware Chain",
+        "explanation": "Multiple middleware layers can transform MCP requests for logging, validation, and caching"
+      },
+      {
+        "name": "Context Window Budget",
+        "explanation": "MCP resources should be size-aware so injected context does not overflow the model's context window"
+      },
+      {
+        "name": "Tool Testing Framework",
+        "explanation": "MCP tool testing frameworks simulate client requests to verify server behavior automatically"
+      }
+    ]
+  },
+  "api": {
+    "items": [
+      {
+        "name": "API",
+        "explanation": "An API is an interface that lets different software applications communicate with each other"
+      },
+      {
+        "name": "REST API",
+        "explanation": "REST APIs use standard HTTP methods to create, read, update, and delete web resources"
+      },
+      {
+        "name": "GraphQL",
+        "explanation": "GraphQL lets clients request exactly the data they need in one flexible query"
+      },
+      {
+        "name": "gRPC",
+        "explanation": "gRPC is a high-performance RPC framework from Google using Protocol Buffers over HTTP/2"
+      },
+      {
+        "name": "WebSocket",
+        "explanation": "WebSockets provide persistent two-way communication channels between client and server"
+      },
+      {
+        "name": "Webhook",
+        "explanation": "Webhooks push real-time event data to your server URL when something happens in another app"
+      },
+      {
+        "name": "HTTP Methods",
+        "explanation": "GET, POST, PUT, PATCH, and DELETE are the HTTP verbs that define what an API request does"
+      },
+      {
+        "name": "Status Codes",
+        "explanation": "HTTP status codes like 200, 404, and 500 tell the client what happened to its request"
+      },
+      {
+        "name": "Authentication",
+        "explanation": "API authentication verifies who is making a request using API keys, tokens, or OAuth"
+      },
+      {
+        "name": "Rate Limiting",
+        "explanation": "Rate limiting restricts how many API requests a client can make in a given time window"
+      },
+      {
+        "name": "Endpoint",
+        "explanation": "An API endpoint is a specific URL that represents a resource or action in the API"
+      },
+      {
+        "name": "Request Body",
+        "explanation": "The request body carries data sent to the API usually in JSON format for POST and PUT"
+      },
+      {
+        "name": "Response Body",
+        "explanation": "The response body contains the data the API returns after processing the request"
+      },
+      {
+        "name": "Headers",
+        "explanation": "HTTP headers pass metadata like content type, authorization tokens, and cache rules"
+      },
+      {
+        "name": "Query Parameters",
+        "explanation": "Query parameters are key-value pairs appended to URLs to filter or customize API responses"
+      },
+      {
+        "name": "Path Parameters",
+        "explanation": "Path parameters are variable parts of the URL that identify specific resources"
+      },
+      {
+        "name": "Pagination",
+        "explanation": "Pagination splits large API responses into pages to avoid returning too much data at once"
+      },
+      {
+        "name": "OAuth 2.0",
+        "explanation": "OAuth 2.0 lets users authorize apps to access their data without sharing passwords"
+      },
+      {
+        "name": "JWT",
+        "explanation": "JSON Web Tokens are compact signed tokens used to securely transmit authentication claims"
+      },
+      {
+        "name": "API Key",
+        "explanation": "API keys are simple secret strings that authenticate clients making requests to an API"
+      },
+      {
+        "name": "HTTPS",
+        "explanation": "HTTPS encrypts all data between client and server so it cannot be intercepted"
+      },
+      {
+        "name": "TLS",
+        "explanation": "TLS is the encryption protocol that secures HTTPS connections between client and server"
+      },
+      {
+        "name": "CORS",
+        "explanation": "CORS controls which web origins are allowed to make requests to your API"
+      },
+      {
+        "name": "JSON",
+        "explanation": "JSON is the universal lightweight data format for sending structured data between systems"
+      },
+      {
+        "name": "XML",
+        "explanation": "XML is an older structured data format used in legacy APIs and enterprise systems"
+      },
+      {
+        "name": "Protocol Buffers",
+        "explanation": "Protobuf is Google's binary serialization format much smaller and faster than JSON"
+      },
+      {
+        "name": "OpenAPI Spec",
+        "explanation": "OpenAPI is the standard specification for documenting RESTful APIs in a machine-readable format"
+      },
+      {
+        "name": "Swagger",
+        "explanation": "Swagger tools generate interactive API documentation and client SDKs from OpenAPI specs"
+      },
+      {
+        "name": "API Gateway",
+        "explanation": "An API gateway is a single entry point that routes requests, handles auth, and manages traffic"
+      },
+      {
+        "name": "Reverse Proxy",
+        "explanation": "A reverse proxy sits in front of servers to handle routing, load balancing, and security"
+      },
+      {
+        "name": "Load Balancer",
+        "explanation": "A load balancer distributes incoming API requests across multiple servers for reliability"
+      },
+      {
+        "name": "Caching",
+        "explanation": "API response caching stores results so repeated identical requests are served instantly"
+      },
+      {
+        "name": "Idempotency",
+        "explanation": "An idempotent API call can be safely repeated multiple times without different side effects"
+      },
+      {
+        "name": "Versioning",
+        "explanation": "API versioning lets you update your API without breaking existing clients using the old version"
+      },
+      {
+        "name": "Deprecation",
+        "explanation": "API deprecation signals that an endpoint will be removed giving developers time to migrate"
+      },
+      {
+        "name": "Throttling",
+        "explanation": "Throttling slows down or blocks API requests that exceed defined usage limits"
+      },
+      {
+        "name": "Circuit Breaker",
+        "explanation": "A circuit breaker stops calling a failing API temporarily to prevent cascading failures"
+      },
+      {
+        "name": "Retry Logic",
+        "explanation": "Retry logic automatically resends failed API requests with exponential backoff"
+      },
+      {
+        "name": "Timeout",
+        "explanation": "API timeouts cancel requests that take too long to prevent hanging indefinitely"
+      },
+      {
+        "name": "SDK",
+        "explanation": "An SDK is a pre-built library in your language that makes calling an API much easier"
+      },
+      {
+        "name": "Postman",
+        "explanation": "Postman is the most popular tool for testing, documenting, and collaborating on APIs"
+      },
+      {
+        "name": "Insomnia",
+        "explanation": "Insomnia is a REST and GraphQL API testing client with a clean developer-friendly interface"
+      },
+      {
+        "name": "cURL",
+        "explanation": "cURL is a command-line tool for making HTTP requests to test APIs from the terminal"
+      },
+      {
+        "name": "Mock API",
+        "explanation": "Mock APIs simulate real API responses so frontend development can proceed without a backend"
+      },
+      {
+        "name": "API Contract",
+        "explanation": "An API contract is the agreed specification of inputs, outputs, and behavior between teams"
+      },
+      {
+        "name": "Consumer-driven Contracts",
+        "explanation": "Consumer-driven contracts let API consumers define the exact responses they need from providers"
+      },
+      {
+        "name": "API Testing",
+        "explanation": "API testing validates that endpoints return correct responses for valid and invalid inputs"
+      },
+      {
+        "name": "Integration Testing",
+        "explanation": "Integration tests verify that multiple services work correctly together end-to-end"
+      },
+      {
+        "name": "Load Testing",
+        "explanation": "Load testing simulates high traffic to find how much a system can handle before degrading"
+      },
+      {
+        "name": "Chaos Engineering",
+        "explanation": "Chaos engineering deliberately breaks things to find weaknesses before real failures occur"
+      },
+      {
+        "name": "Service Mesh",
+        "explanation": "A service mesh handles service-to-service communication, security, and observability automatically"
+      },
+      {
+        "name": "Microservices",
+        "explanation": "Microservices split a large app into small independent services that communicate over APIs"
+      },
+      {
+        "name": "Monolith",
+        "explanation": "A monolith is a single large application where all components are deployed together"
+      },
+      {
+        "name": "Event-driven API",
+        "explanation": "Event-driven APIs emit events when things change letting subscribers react in real time"
+      },
+      {
+        "name": "Server-Sent Events",
+        "explanation": "SSE lets servers push updates to clients over a single persistent HTTP connection"
+      },
+      {
+        "name": "Long Polling",
+        "explanation": "Long polling holds a request open until the server has new data to send back"
+      },
+      {
+        "name": "SOAP",
+        "explanation": "SOAP is an older XML-based API protocol still used in legacy enterprise systems"
+      },
+      {
+        "name": "RPC",
+        "explanation": "Remote Procedure Call lets you call a function on a remote server as if it were local"
+      },
+      {
+        "name": "Serialization",
+        "explanation": "Serialization converts objects into a transmittable format like JSON or binary for API calls"
+      },
+      {
+        "name": "Deserialization",
+        "explanation": "Deserialization converts received bytes or JSON back into a usable object in memory"
+      },
+      {
+        "name": "Content Negotiation",
+        "explanation": "Content negotiation lets clients specify what format they want the API to return"
+      },
+      {
+        "name": "HATEOAS",
+        "explanation": "HATEOAS includes links in API responses guiding clients on what actions they can take next"
+      },
+      {
+        "name": "API Composition",
+        "explanation": "API composition aggregates data from multiple microservices into a single response"
+      },
+      {
+        "name": "BFF Pattern",
+        "explanation": "Backend for Frontend creates a dedicated API tailored to each client type like mobile or web"
+      },
+      {
+        "name": "API Monetization",
+        "explanation": "API monetization charges developers for usage enabling APIs to be a revenue stream"
+      },
+      {
+        "name": "Developer Portal",
+        "explanation": "A developer portal provides API docs, sandbox, and key management for external developers"
+      },
+      {
+        "name": "Sandbox",
+        "explanation": "An API sandbox is a test environment where developers can experiment without real-world consequences"
+      },
+      {
+        "name": "Webhook Retry",
+        "explanation": "Webhook retry logic resends failed event deliveries with backoff to ensure no data is lost"
+      },
+      {
+        "name": "Idempotency Key",
+        "explanation": "An idempotency key lets clients safely retry API requests without creating duplicate operations"
+      },
+      {
+        "name": "API Latency",
+        "explanation": "API latency is the time from sending a request to receiving the first byte of response"
+      },
+      {
+        "name": "P99 Latency",
+        "explanation": "P99 latency is the response time that 99 percent of requests complete within"
+      },
+      {
+        "name": "SLA",
+        "explanation": "A Service Level Agreement guarantees minimum API uptime and performance metrics to customers"
+      },
+      {
+        "name": "Uptime",
+        "explanation": "Uptime is the percentage of time an API is available and responding correctly"
+      },
+      {
+        "name": "Zero Downtime Deploy",
+        "explanation": "Zero downtime deployment updates the API without dropping any requests from clients"
+      },
+      {
+        "name": "Blue-Green Deployment",
+        "explanation": "Blue-green deploys a new API version alongside the old one then switches traffic instantly"
+      },
+      {
+        "name": "Canary Release",
+        "explanation": "A canary release routes a small percentage of traffic to a new API version first"
+      },
+      {
+        "name": "Feature Flags",
+        "explanation": "Feature flags turn API features on or off without deploying new code"
+      },
+      {
+        "name": "API Observability",
+        "explanation": "API observability tracks logs, metrics, and traces to understand how your API behaves in production"
+      },
+      {
+        "name": "Distributed Tracing",
+        "explanation": "Distributed tracing follows a request across multiple services to pinpoint where it slows down"
+      },
+      {
+        "name": "API Security",
+        "explanation": "API security protects against injection, broken auth, excessive data exposure, and DDoS attacks"
+      },
+      {
+        "name": "OWASP API Top 10",
+        "explanation": "OWASP API Top 10 lists the most critical API security risks developers must protect against"
+      },
+      {
+        "name": "Mutual TLS",
+        "explanation": "Mutual TLS requires both client and server to present certificates proving their identity"
+      },
+      {
+        "name": "API Analytics",
+        "explanation": "API analytics track usage patterns, popular endpoints, and error rates for business insights"
+      },
+      {
+        "name": "Async API",
+        "explanation": "AsyncAPI is a specification standard for documenting event-driven and message-based APIs"
+      },
+      {
+        "name": "GraphQL Subscription",
+        "explanation": "GraphQL subscriptions use WebSockets to push real-time updates when data changes"
+      },
+      {
+        "name": "DataLoader",
+        "explanation": "DataLoader batches and caches GraphQL data fetches to prevent N+1 query performance issues"
+      },
+      {
+        "name": "Federation",
+        "explanation": "GraphQL federation combines multiple independent GraphQL APIs into one unified schema"
+      },
+      {
+        "name": "Introspection",
+        "explanation": "GraphQL introspection lets clients query the schema to discover available types and operations"
+      },
+      {
+        "name": "Field Resolvers",
+        "explanation": "GraphQL field resolvers are functions that fetch or compute the value of each schema field"
+      },
+      {
+        "name": "API Governance",
+        "explanation": "API governance enforces standards, naming conventions, and security policies across all APIs"
+      },
+      {
+        "name": "Streaming API",
+        "explanation": "Streaming APIs send data incrementally as it becomes available instead of waiting for the full response"
+      },
+      {
+        "name": "Batch API",
+        "explanation": "Batch APIs accept many requests in one call to reduce round trips and improve throughput"
+      },
+      {
+        "name": "API Composition Pattern",
+        "explanation": "API composition aggregates multiple microservice calls into one response on the server side"
+      },
+      {
+        "name": "Back-pressure",
+        "explanation": "Back-pressure signals an overwhelmed API to slow down the rate incoming requests are sent"
+      },
+      {
+        "name": "API Deprecation Policy",
+        "explanation": "A deprecation policy gives developers adequate notice and migration time before removing API features"
+      },
+      {
+        "name": "Contract Testing",
+        "explanation": "Contract tests verify both API provider and consumer honor the agreed schema and behavior"
+      },
+      {
+        "name": "API Schema Validation",
+        "explanation": "Schema validation automatically rejects requests that do not conform to the API specification"
+      },
+      {
+        "name": "Optimistic UI",
+        "explanation": "Optimistic UI assumes API calls succeed and updates the interface before getting confirmation"
+      },
+      {
+        "name": "API Portal",
+        "explanation": "An API portal provides documentation, sandbox testing, key management, and usage analytics"
+      },
+      {
+        "name": "Webhook Security",
+        "explanation": "Webhook security verifies delivery authenticity using HMAC signatures on the payload"
+      }
+    ]
+  },
+  "devops": {
+    "items": [
+      {
+        "name": "DevOps",
+        "explanation": "DevOps combines development and operations to deliver software faster and more reliably"
+      },
+      {
+        "name": "CI/CD",
+        "explanation": "Continuous Integration and Delivery automates building, testing, and deploying code changes"
+      },
+      {
+        "name": "Docker",
+        "explanation": "Docker packages apps and their dependencies into portable containers that run anywhere"
+      },
+      {
+        "name": "Kubernetes",
+        "explanation": "Kubernetes orchestrates containers at scale handling deployment, scaling, and self-healing"
+      },
+      {
+        "name": "Infrastructure as Code",
+        "explanation": "IaC manages servers and cloud resources using version-controlled code instead of manual steps"
+      },
+      {
+        "name": "Terraform",
+        "explanation": "Terraform is the most popular IaC tool for provisioning cloud infrastructure declaratively"
+      },
+      {
+        "name": "Ansible",
+        "explanation": "Ansible automates server configuration and application deployment using YAML playbooks"
+      },
+      {
+        "name": "GitHub Actions",
+        "explanation": "GitHub Actions automates CI/CD workflows directly inside your GitHub repository"
+      },
+      {
+        "name": "Jenkins",
+        "explanation": "Jenkins is the most widely used open-source CI/CD automation server"
+      },
+      {
+        "name": "Monitoring",
+        "explanation": "Monitoring tracks system health, performance metrics, and alerts when things go wrong"
+      },
+      {
+        "name": "Observability",
+        "explanation": "Observability uses logs, metrics, and traces to understand internal system behavior"
+      },
+      {
+        "name": "Prometheus",
+        "explanation": "Prometheus is an open-source metrics collection and alerting system for cloud-native apps"
+      },
+      {
+        "name": "Grafana",
+        "explanation": "Grafana visualizes metrics and logs in beautiful dashboards for system monitoring"
+      },
+      {
+        "name": "ELK Stack",
+        "explanation": "Elasticsearch, Logstash, and Kibana together collect, process, and visualize application logs"
+      },
+      {
+        "name": "Helm",
+        "explanation": "Helm is the package manager for Kubernetes that simplifies deploying complex applications"
+      },
+      {
+        "name": "Service Mesh",
+        "explanation": "A service mesh handles inter-service communication, security, and observability transparently"
+      },
+      {
+        "name": "Istio",
+        "explanation": "Istio is a popular open-source service mesh that adds traffic management and zero-trust security"
+      },
+      {
+        "name": "GitOps",
+        "explanation": "GitOps uses Git as the single source of truth for all infrastructure and deployment changes"
+      },
+      {
+        "name": "ArgoCD",
+        "explanation": "ArgoCD continuously syncs Kubernetes clusters to match the desired state in Git"
+      },
+      {
+        "name": "Continuous Integration",
+        "explanation": "CI automatically builds and tests code every time a developer pushes a change"
+      },
+      {
+        "name": "Continuous Delivery",
+        "explanation": "CD automatically prepares code to be released to production after passing all tests"
+      },
+      {
+        "name": "Continuous Deployment",
+        "explanation": "Continuous deployment automatically pushes every passing change directly to production"
+      },
+      {
+        "name": "Container Registry",
+        "explanation": "A container registry stores and distributes Docker images for deployment"
+      },
+      {
+        "name": "Dockerfile",
+        "explanation": "A Dockerfile is a script of instructions for building a Docker container image"
+      },
+      {
+        "name": "Pod",
+        "explanation": "A Kubernetes Pod is the smallest deployable unit containing one or more containers"
+      },
+      {
+        "name": "Deployment",
+        "explanation": "A Kubernetes Deployment manages how many replicas of a Pod should run and updates them"
+      },
+      {
+        "name": "Service",
+        "explanation": "A Kubernetes Service provides a stable network address to route traffic to Pods"
+      },
+      {
+        "name": "Ingress",
+        "explanation": "Kubernetes Ingress manages external HTTP traffic routing into cluster services"
+      },
+      {
+        "name": "ConfigMap",
+        "explanation": "ConfigMaps store non-secret configuration data that Kubernetes Pods can consume"
+      },
+      {
+        "name": "Secret",
+        "explanation": "Kubernetes Secrets store sensitive data like passwords and API keys securely"
+      },
+      {
+        "name": "Namespace",
+        "explanation": "Kubernetes namespaces logically isolate resources within the same cluster"
+      },
+      {
+        "name": "Rolling Update",
+        "explanation": "Rolling updates gradually replace old Pod versions with new ones with zero downtime"
+      },
+      {
+        "name": "Horizontal Pod Autoscaling",
+        "explanation": "HPA automatically scales Pod replicas up or down based on CPU or memory metrics"
+      },
+      {
+        "name": "Vertical Pod Autoscaling",
+        "explanation": "VPA automatically adjusts CPU and memory requests for Pods based on actual usage"
+      },
+      {
+        "name": "Resource Limits",
+        "explanation": "Resource limits cap how much CPU and memory a Kubernetes container can consume"
+      },
+      {
+        "name": "Liveness Probe",
+        "explanation": "Liveness probes detect and restart Pods that are stuck or deadlocked"
+      },
+      {
+        "name": "Readiness Probe",
+        "explanation": "Readiness probes prevent traffic from reaching Pods that are still starting up"
+      },
+      {
+        "name": "Persistent Volume",
+        "explanation": "Persistent Volumes give Kubernetes Pods durable storage that survives Pod restarts"
+      },
+      {
+        "name": "StatefulSet",
+        "explanation": "StatefulSets manage Pods with stable identities and persistent storage for databases"
+      },
+      {
+        "name": "DaemonSet",
+        "explanation": "DaemonSets ensure one Pod runs on every node for tasks like log collection or monitoring"
+      },
+      {
+        "name": "CronJob",
+        "explanation": "Kubernetes CronJobs run scheduled tasks on a cron schedule inside the cluster"
+      },
+      {
+        "name": "RBAC",
+        "explanation": "Role-Based Access Control restricts what actions Kubernetes users and services can perform"
+      },
+      {
+        "name": "Network Policy",
+        "explanation": "Network policies control which Pods are allowed to communicate with each other"
+      },
+      {
+        "name": "Cert Manager",
+        "explanation": "Cert-manager automates TLS certificate issuance and renewal inside Kubernetes"
+      },
+      {
+        "name": "Kustomize",
+        "explanation": "Kustomize layers environment-specific Kubernetes config on top of base manifests without templating"
+      },
+      {
+        "name": "CI Pipeline",
+        "explanation": "A CI pipeline runs lint, test, build, and security checks on every code commit automatically"
+      },
+      {
+        "name": "Artifact",
+        "explanation": "A CI artifact is a build output like a Docker image or binary stored for deployment"
+      },
+      {
+        "name": "Environment",
+        "explanation": "Environments are isolated deployments like dev, staging, and production with separate configs"
+      },
+      {
+        "name": "Secrets Management",
+        "explanation": "Secrets managers like Vault and AWS Secrets Manager store and rotate credentials securely"
+      },
+      {
+        "name": "HashiCorp Vault",
+        "explanation": "Vault centrally manages secrets, encrypts data, and issues short-lived credentials"
+      },
+      {
+        "name": "Packer",
+        "explanation": "Packer automates building identical machine images for multiple cloud platforms"
+      },
+      {
+        "name": "Pulumi",
+        "explanation": "Pulumi lets you write Infrastructure as Code using familiar programming languages"
+      },
+      {
+        "name": "AWS CDK",
+        "explanation": "AWS CDK defines cloud infrastructure using programming languages that compile to CloudFormation"
+      },
+      {
+        "name": "CloudFormation",
+        "explanation": "AWS CloudFormation provisions infrastructure declaratively through JSON or YAML templates"
+      },
+      {
+        "name": "Crossplane",
+        "explanation": "Crossplane extends Kubernetes to provision and manage cloud resources from any provider"
+      },
+      {
+        "name": "Blue-green Deployment",
+        "explanation": "Blue-green spins up an identical environment and switches traffic over instantly"
+      },
+      {
+        "name": "Canary Deployment",
+        "explanation": "Canary deployments send a small traffic percentage to new versions to test before full rollout"
+      },
+      {
+        "name": "Feature Toggle",
+        "explanation": "Feature toggles enable or disable features at runtime without new deployments"
+      },
+      {
+        "name": "Observability Stack",
+        "explanation": "An observability stack combines metrics, logs, and traces for full system visibility"
+      },
+      {
+        "name": "OpenTelemetry",
+        "explanation": "OpenTelemetry is the open standard for collecting traces, metrics, and logs from applications"
+      },
+      {
+        "name": "Jaeger",
+        "explanation": "Jaeger is an open-source distributed tracing system for monitoring microservices"
+      },
+      {
+        "name": "Zipkin",
+        "explanation": "Zipkin is a distributed tracing system helping find where latency problems occur in services"
+      },
+      {
+        "name": "Datadog",
+        "explanation": "Datadog is a cloud monitoring platform combining metrics, logs, traces, and dashboards"
+      },
+      {
+        "name": "New Relic",
+        "explanation": "New Relic provides full-stack observability and AI-powered alerts for engineering teams"
+      },
+      {
+        "name": "PagerDuty",
+        "explanation": "PagerDuty routes alerts to on-call engineers and manages incident response workflows"
+      },
+      {
+        "name": "Runbook",
+        "explanation": "A runbook documents step-by-step procedures for handling specific operational incidents"
+      },
+      {
+        "name": "Postmortem",
+        "explanation": "A blameless postmortem analyzes what caused an incident to prevent it from happening again"
+      },
+      {
+        "name": "SRE",
+        "explanation": "Site Reliability Engineering applies software engineering to operations and reliability problems"
+      },
+      {
+        "name": "Error Budget",
+        "explanation": "An error budget defines how much downtime is acceptable before new releases are paused"
+      },
+      {
+        "name": "SLO",
+        "explanation": "Service Level Objectives define measurable reliability targets that teams commit to meeting"
+      },
+      {
+        "name": "SLI",
+        "explanation": "Service Level Indicators are the specific metrics used to measure SLO performance"
+      },
+      {
+        "name": "On-call Rotation",
+        "explanation": "On-call rotations share after-hours incident response duties across the engineering team"
+      },
+      {
+        "name": "Incident Management",
+        "explanation": "Incident management is the process of detecting, responding to, and resolving production issues"
+      },
+      {
+        "name": "Mean Time to Recover",
+        "explanation": "MTTR measures the average time from incident detection to full service restoration"
+      },
+      {
+        "name": "Mean Time Between Failures",
+        "explanation": "MTBF measures the average time a system operates before experiencing a failure"
+      },
+      {
+        "name": "Immutable Infrastructure",
+        "explanation": "Immutable infrastructure replaces servers entirely instead of patching them in place"
+      },
+      {
+        "name": "GitLab CI",
+        "explanation": "GitLab CI is a built-in CI/CD system integrated directly into the GitLab platform"
+      },
+      {
+        "name": "CircleCI",
+        "explanation": "CircleCI is a cloud CI/CD platform known for fast builds and easy parallelism"
+      },
+      {
+        "name": "Buildkite",
+        "explanation": "Buildkite runs CI pipelines on your own infrastructure with a cloud-based control plane"
+      },
+      {
+        "name": "Tekton",
+        "explanation": "Tekton is a Kubernetes-native CI/CD framework for building pipelines as custom resources"
+      },
+      {
+        "name": "Argo Workflows",
+        "explanation": "Argo Workflows runs DAG and step-based pipelines as Kubernetes-native workflows"
+      },
+      {
+        "name": "Container Security",
+        "explanation": "Container security scans images for vulnerabilities and enforces policies at runtime"
+      },
+      {
+        "name": "Trivy",
+        "explanation": "Trivy is an open-source vulnerability scanner for containers, file systems, and IaC configs"
+      },
+      {
+        "name": "OPA",
+        "explanation": "Open Policy Agent enforces security and compliance policies across cloud-native systems"
+      },
+      {
+        "name": "Falco",
+        "explanation": "Falco detects suspicious runtime behavior in Kubernetes containers in real time"
+      },
+      {
+        "name": "Supply Chain Security",
+        "explanation": "Supply chain security verifies the integrity of code and dependencies from source to production"
+      },
+      {
+        "name": "SBOM",
+        "explanation": "A Software Bill of Materials lists every component and dependency in a software artifact"
+      },
+      {
+        "name": "Sigstore",
+        "explanation": "Sigstore provides free tools to cryptographically sign and verify software artifacts"
+      },
+      {
+        "name": "Multi-cloud",
+        "explanation": "Multi-cloud uses services from multiple cloud providers to avoid vendor lock-in"
+      },
+      {
+        "name": "Hybrid Cloud",
+        "explanation": "Hybrid cloud combines on-premises infrastructure with public cloud services"
+      },
+      {
+        "name": "Cost Optimization",
+        "explanation": "Cloud cost optimization right-sizes resources and eliminates waste to reduce infrastructure spend"
+      },
+      {
+        "name": "Platform Engineering",
+        "explanation": "Platform engineering builds internal developer platforms to improve team productivity and deployment speed"
+      },
+      {
+        "name": "Internal Developer Platform",
+        "explanation": "An IDP is a self-service layer that abstracts infrastructure complexity from application developers"
+      },
+      {
+        "name": "Backstage",
+        "explanation": "Backstage is Spotify's open-source developer portal for managing services and documentation"
+      },
+      {
+        "name": "Dora Metrics",
+        "explanation": "DORA metrics measure DevOps performance through deploy frequency, lead time, failure rate, and MTTR"
+      },
+      {
+        "name": "Shift Left Testing",
+        "explanation": "Shift left testing moves quality checks earlier in the pipeline to catch bugs before deployment"
+      },
+      {
+        "name": "Progressive Delivery",
+        "explanation": "Progressive delivery releases features to increasing user percentages based on real-time health signals"
+      },
+      {
+        "name": "Policy as Code",
+        "explanation": "Policy as code enforces compliance and security rules automatically in CI/CD pipelines"
+      },
+      {
+        "name": "Ephemeral Environments",
+        "explanation": "Ephemeral environments spin up a full preview deployment per pull request and destroy it after merge"
+      },
+      {
+        "name": "Dependency Scanning",
+        "explanation": "Dependency scanning finds known vulnerabilities in third-party libraries automatically in CI"
+      }
+    ]
+  },
+  "cloud": {
+    "items": [
+      {
+        "name": "Cloud Computing",
+        "explanation": "Cloud computing delivers computing resources over the internet on demand at any scale"
+      },
+      {
+        "name": "AWS",
+        "explanation": "Amazon Web Services is the world's largest cloud platform with over 200 services"
+      },
+      {
+        "name": "Google Cloud",
+        "explanation": "Google Cloud Platform offers cloud services powered by Google's global infrastructure"
+      },
+      {
+        "name": "Microsoft Azure",
+        "explanation": "Azure is Microsoft's cloud platform tightly integrated with enterprise Windows products"
+      },
+      {
+        "name": "Serverless",
+        "explanation": "Serverless lets you run code without managing servers — you pay only per execution"
+      },
+      {
+        "name": "AWS Lambda",
+        "explanation": "Lambda is AWS's serverless compute service that runs code in response to events"
+      },
+      {
+        "name": "S3",
+        "explanation": "AWS S3 is virtually unlimited object storage for files, images, backups, and data lakes"
+      },
+      {
+        "name": "EC2",
+        "explanation": "AWS EC2 provides resizable virtual machines in the cloud for any workload"
+      },
+      {
+        "name": "VPC",
+        "explanation": "A Virtual Private Cloud is your own isolated network section within a public cloud"
+      },
+      {
+        "name": "IAM",
+        "explanation": "Identity and Access Management controls who can do what across all your cloud resources"
+      },
+      {
+        "name": "CDN",
+        "explanation": "A Content Delivery Network caches content at edge locations worldwide for fast delivery"
+      },
+      {
+        "name": "CloudFront",
+        "explanation": "AWS CloudFront is a global CDN that speeds up delivery of websites, APIs, and media"
+      },
+      {
+        "name": "Auto Scaling",
+        "explanation": "Auto scaling automatically adds or removes compute instances based on demand"
+      },
+      {
+        "name": "Elastic Load Balancing",
+        "explanation": "ELB distributes incoming traffic across multiple healthy EC2 instances automatically"
+      },
+      {
+        "name": "RDS",
+        "explanation": "AWS RDS is a managed relational database service supporting MySQL, Postgres, and more"
+      },
+      {
+        "name": "Aurora",
+        "explanation": "Aurora is AWS's cloud-native database offering up to 5x MySQL performance"
+      },
+      {
+        "name": "DynamoDB",
+        "explanation": "DynamoDB is AWS's serverless NoSQL database with single-digit millisecond response times"
+      },
+      {
+        "name": "ElastiCache",
+        "explanation": "ElastiCache provides managed Redis and Memcached caching in the cloud"
+      },
+      {
+        "name": "SQS",
+        "explanation": "AWS SQS is a managed message queue for decoupling distributed application components"
+      },
+      {
+        "name": "SNS",
+        "explanation": "AWS SNS is a pub-sub messaging service for fan-out notifications to many subscribers"
+      },
+      {
+        "name": "EventBridge",
+        "explanation": "EventBridge is a serverless event bus connecting AWS services and SaaS apps with routing rules"
+      },
+      {
+        "name": "Kinesis",
+        "explanation": "AWS Kinesis processes real-time streaming data from millions of sources simultaneously"
+      },
+      {
+        "name": "ECS",
+        "explanation": "AWS ECS is a managed container orchestration service for running Docker containers"
+      },
+      {
+        "name": "EKS",
+        "explanation": "AWS EKS is a managed Kubernetes service removing the burden of running control planes"
+      },
+      {
+        "name": "Fargate",
+        "explanation": "AWS Fargate runs containers without managing any underlying servers or clusters"
+      },
+      {
+        "name": "App Runner",
+        "explanation": "AWS App Runner deploys containerized web apps automatically from code or images"
+      },
+      {
+        "name": "API Gateway AWS",
+        "explanation": "AWS API Gateway creates, manages, and secures REST, HTTP, and WebSocket APIs at scale"
+      },
+      {
+        "name": "Route 53",
+        "explanation": "AWS Route 53 is a scalable DNS service with health checking and traffic routing"
+      },
+      {
+        "name": "CloudWatch",
+        "explanation": "CloudWatch collects logs, metrics, and alarms for all AWS resources in one place"
+      },
+      {
+        "name": "CloudTrail",
+        "explanation": "CloudTrail logs every API call made in your AWS account for auditing and compliance"
+      },
+      {
+        "name": "Secrets Manager AWS",
+        "explanation": "AWS Secrets Manager stores, rotates, and manages database passwords and API keys"
+      },
+      {
+        "name": "KMS",
+        "explanation": "AWS Key Management Service creates and controls encryption keys for protecting data"
+      },
+      {
+        "name": "WAF",
+        "explanation": "AWS WAF filters malicious web traffic to protect your applications from attacks"
+      },
+      {
+        "name": "Shield",
+        "explanation": "AWS Shield provides automatic DDoS protection for all AWS resources"
+      },
+      {
+        "name": "GuardDuty",
+        "explanation": "GuardDuty uses ML to continuously monitor AWS accounts for malicious activity"
+      },
+      {
+        "name": "Regions",
+        "explanation": "Cloud regions are geographic areas with multiple isolated data centers for redundancy"
+      },
+      {
+        "name": "Availability Zones",
+        "explanation": "Availability Zones are isolated data centers within a region for high availability"
+      },
+      {
+        "name": "Edge Locations",
+        "explanation": "Edge locations are CDN points of presence around the world that cache content close to users"
+      },
+      {
+        "name": "Spot Instances",
+        "explanation": "Spot instances are spare cloud capacity offered at up to 90% discount for interruptible workloads"
+      },
+      {
+        "name": "Reserved Instances",
+        "explanation": "Reserved instances commit to 1 or 3 years of cloud usage for significant cost savings"
+      },
+      {
+        "name": "Savings Plans",
+        "explanation": "AWS Savings Plans offer flexible discounts for consistent cloud compute usage"
+      },
+      {
+        "name": "Cloud Cost Management",
+        "explanation": "Cloud cost management uses tools and practices to control and optimize cloud spending"
+      },
+      {
+        "name": "FinOps",
+        "explanation": "FinOps is the practice of bringing financial accountability to variable cloud spending"
+      },
+      {
+        "name": "Shared Responsibility Model",
+        "explanation": "Shared responsibility defines what the cloud provider secures versus what customers secure"
+      },
+      {
+        "name": "Cloud Native",
+        "explanation": "Cloud-native apps are designed from the ground up to use cloud services and scale elastically"
+      },
+      {
+        "name": "Twelve-Factor App",
+        "explanation": "The Twelve-Factor methodology defines best practices for building scalable cloud-native apps"
+      },
+      {
+        "name": "Google Cloud Run",
+        "explanation": "Cloud Run is Google's serverless container service that scales to zero when idle"
+      },
+      {
+        "name": "Google Cloud Functions",
+        "explanation": "Cloud Functions is Google's FaaS offering for running event-driven serverless code"
+      },
+      {
+        "name": "BigTable",
+        "explanation": "BigTable is Google's massively scalable NoSQL database used internally for Search and Maps"
+      },
+      {
+        "name": "Pub/Sub",
+        "explanation": "Google Cloud Pub/Sub is a globally distributed messaging service for async event pipelines"
+      },
+      {
+        "name": "Azure Functions",
+        "explanation": "Azure Functions is Microsoft's serverless compute service integrated with the Microsoft ecosystem"
+      },
+      {
+        "name": "Azure Blob Storage",
+        "explanation": "Azure Blob Storage is Microsoft's object storage service for unstructured data"
+      },
+      {
+        "name": "Azure DevOps",
+        "explanation": "Azure DevOps provides pipelines, boards, and repos for end-to-end software delivery"
+      },
+      {
+        "name": "Cloudflare Workers",
+        "explanation": "Cloudflare Workers run JavaScript at edge locations worldwide with sub-millisecond cold starts"
+      },
+      {
+        "name": "Vercel",
+        "explanation": "Vercel is a frontend cloud platform that deploys web apps globally with instant previews"
+      },
+      {
+        "name": "Netlify",
+        "explanation": "Netlify is a developer platform for building, deploying, and scaling modern web projects"
+      },
+      {
+        "name": "Heroku",
+        "explanation": "Heroku pioneered PaaS making it simple to deploy apps without managing infrastructure"
+      },
+      {
+        "name": "Fly.io",
+        "explanation": "Fly.io runs containerized apps close to users by deploying to micro-VMs worldwide"
+      },
+      {
+        "name": "Railway",
+        "explanation": "Railway is a modern PaaS that makes deploying apps and databases simple for developers"
+      },
+      {
+        "name": "Render",
+        "explanation": "Render is a cloud platform combining the simplicity of Heroku with competitive pricing"
+      },
+      {
+        "name": "Supabase Cloud",
+        "explanation": "Supabase hosts open-source PostgreSQL with real-time and auth as a managed cloud service"
+      },
+      {
+        "name": "PlanetScale Cloud",
+        "explanation": "PlanetScale is a serverless MySQL database with branching for schema change workflows"
+      },
+      {
+        "name": "Neon",
+        "explanation": "Neon is a serverless Postgres that separates compute from storage and scales to zero"
+      },
+      {
+        "name": "Turso",
+        "explanation": "Turso is an edge-hosted SQLite database replicated globally for low-latency reads"
+      },
+      {
+        "name": "Upstash",
+        "explanation": "Upstash provides serverless Redis and Kafka pay-per-request with no idle costs"
+      },
+      {
+        "name": "Cloudflare D1",
+        "explanation": "Cloudflare D1 is a serverless SQLite database running at the network edge"
+      },
+      {
+        "name": "Cloudflare R2",
+        "explanation": "Cloudflare R2 is S3-compatible object storage with zero egress fees"
+      },
+      {
+        "name": "Object Storage",
+        "explanation": "Object storage keeps files as flat objects with metadata rather than in folder hierarchies"
+      },
+      {
+        "name": "Block Storage",
+        "explanation": "Block storage presents raw disk volumes to servers like a physical hard drive"
+      },
+      {
+        "name": "File Storage",
+        "explanation": "File storage exposes shared NFS or SMB file systems that multiple instances can mount"
+      },
+      {
+        "name": "Multi-region",
+        "explanation": "Multi-region deployments run your app in multiple geographic regions for global reliability"
+      },
+      {
+        "name": "Disaster Recovery",
+        "explanation": "Disaster recovery plans restore systems after catastrophic failures using backups and replication"
+      },
+      {
+        "name": "Recovery Point Objective",
+        "explanation": "RPO is the maximum acceptable amount of data loss measured in time after a disaster"
+      },
+      {
+        "name": "Recovery Time Objective",
+        "explanation": "RTO is the maximum acceptable time to restore service after a disaster occurs"
+      },
+      {
+        "name": "Warm Standby",
+        "explanation": "Warm standby keeps a scaled-down copy of production running that scales up on failover"
+      },
+      {
+        "name": "Hot Standby",
+        "explanation": "Hot standby keeps a full-scale replica running ready to take over instantly on failure"
+      },
+      {
+        "name": "Cold Standby",
+        "explanation": "Cold standby stores backups but requires time to provision and restore on failure"
+      },
+      {
+        "name": "Data Residency",
+        "explanation": "Data residency laws require certain data to stay within specific country borders"
+      },
+      {
+        "name": "Compliance",
+        "explanation": "Cloud compliance meets regulatory standards like GDPR, HIPAA, and SOC2 for data protection"
+      },
+      {
+        "name": "SOC2",
+        "explanation": "SOC2 certification proves a cloud service meets security and availability trust standards"
+      },
+      {
+        "name": "GDPR",
+        "explanation": "GDPR is EU regulation requiring proper handling and protection of personal data"
+      },
+      {
+        "name": "HIPAA",
+        "explanation": "HIPAA requires cloud services handling US medical records to meet strict security standards"
+      },
+      {
+        "name": "Zero Trust",
+        "explanation": "Zero trust security assumes no user or system is trusted by default even inside the network"
+      },
+      {
+        "name": "Private Link",
+        "explanation": "Private Link connects cloud services to your VPC privately without traffic hitting the public internet"
+      },
+      {
+        "name": "VPN",
+        "explanation": "A VPN creates an encrypted private tunnel between your network and the cloud"
+      },
+      {
+        "name": "Direct Connect",
+        "explanation": "AWS Direct Connect provides dedicated private network connections from your data center to AWS"
+      },
+      {
+        "name": "PoP",
+        "explanation": "A Point of Presence is a cloud edge location where traffic enters the provider's backbone network"
+      },
+      {
+        "name": "Egress Cost",
+        "explanation": "Egress costs are fees cloud providers charge for data leaving their network to the internet"
+      },
+      {
+        "name": "eBPF",
+        "explanation": "eBPF runs sandboxed programs in the Linux kernel enabling powerful cloud networking and security"
+      },
+      {
+        "name": "WebAssembly Cloud",
+        "explanation": "WebAssembly on the cloud runs portable sandboxed code at the edge with near-native performance"
+      },
+      {
+        "name": "Cloud Migration",
+        "explanation": "Cloud migration moves applications and data from on-premises data centers to the cloud"
+      },
+      {
+        "name": "Lift and Shift",
+        "explanation": "Lift and shift moves applications to the cloud without changing their architecture"
+      },
+      {
+        "name": "Re-platforming",
+        "explanation": "Re-platforming makes minor cloud optimizations during migration like switching to managed databases"
+      },
+      {
+        "name": "Re-architecting",
+        "explanation": "Re-architecting redesigns applications to fully leverage cloud-native services and patterns"
+      },
+      {
+        "name": "Cloud Bursting",
+        "explanation": "Cloud bursting runs workloads on-premises normally and spills to the cloud during peak demand"
+      },
+      {
+        "name": "Managed Service",
+        "explanation": "Managed services let the cloud provider handle provisioning, patching, and scaling for you"
+      },
+      {
+        "name": "Serverless Framework",
+        "explanation": "Serverless Framework is an open-source tool for deploying serverless functions across cloud providers"
+      },
+      {
+        "name": "AWS SAM",
+        "explanation": "AWS Serverless Application Model simplifies building and deploying serverless apps on AWS"
+      },
+      {
+        "name": "Infrastructure Drift",
+        "explanation": "Infrastructure drift is when live cloud resources deviate from the IaC definition over time"
+      },
+      {
+        "name": "Cloud Security Posture",
+        "explanation": "CSPM tools continuously monitor cloud configurations for security misconfigurations"
+      }
+    ]
+  },
+  "security": {
+    "items": [
+      {
+        "name": "Cybersecurity",
+        "explanation": "Cybersecurity protects computers, networks, and data from attacks, theft, and unauthorized access"
+      },
+      {
+        "name": "Encryption",
+        "explanation": "Encryption scrambles data so only authorized parties with the key can read it"
+      },
+      {
+        "name": "Firewall",
+        "explanation": "A firewall monitors and controls incoming and outgoing network traffic based on security rules"
+      },
+      {
+        "name": "VPN",
+        "explanation": "A VPN creates an encrypted tunnel protecting your internet traffic from surveillance"
+      },
+      {
+        "name": "Two-factor Authentication",
+        "explanation": "2FA requires a second proof of identity beyond your password to access an account"
+      },
+      {
+        "name": "Phishing",
+        "explanation": "Phishing tricks people into revealing credentials or clicking malware links via fake messages"
+      },
+      {
+        "name": "Malware",
+        "explanation": "Malware is software designed to damage, disrupt, or gain unauthorized access to computer systems"
+      },
+      {
+        "name": "Ransomware",
+        "explanation": "Ransomware encrypts your files and demands payment to restore access to them"
+      },
+      {
+        "name": "Zero-day",
+        "explanation": "A zero-day vulnerability is an undiscovered flaw that hackers exploit before a patch exists"
+      },
+      {
+        "name": "Penetration Testing",
+        "explanation": "Pen testing simulates real attacks to find and fix security weaknesses before hackers do"
+      },
+      {
+        "name": "SQL Injection",
+        "explanation": "SQL injection inserts malicious code into database queries to steal or modify data"
+      },
+      {
+        "name": "XSS",
+        "explanation": "Cross-site scripting injects malicious scripts into web pages viewed by other users"
+      },
+      {
+        "name": "CSRF",
+        "explanation": "Cross-site request forgery tricks a browser into making unauthorized requests to another site"
+      },
+      {
+        "name": "DDoS",
+        "explanation": "Distributed Denial of Service floods a server with traffic to make it unavailable"
+      },
+      {
+        "name": "Man-in-the-Middle",
+        "explanation": "MITM attacks intercept and potentially alter communications between two parties"
+      },
+      {
+        "name": "Social Engineering",
+        "explanation": "Social engineering manipulates people into giving up secrets or access instead of hacking systems"
+      },
+      {
+        "name": "Brute Force Attack",
+        "explanation": "Brute force attacks try every possible password combination until they find the right one"
+      },
+      {
+        "name": "Credential Stuffing",
+        "explanation": "Credential stuffing uses leaked username-password pairs from breaches on other sites"
+      },
+      {
+        "name": "Public Key Infrastructure",
+        "explanation": "PKI is a system of digital certificates and keys that enables secure encrypted communication"
+      },
+      {
+        "name": "Certificate Authority",
+        "explanation": "A CA issues digital certificates that verify a website's identity over HTTPS"
+      },
+      {
+        "name": "RSA",
+        "explanation": "RSA is a widely used public-key cryptographic algorithm for encryption and digital signing"
+      },
+      {
+        "name": "AES",
+        "explanation": "Advanced Encryption Standard is the gold standard symmetric encryption algorithm used worldwide"
+      },
+      {
+        "name": "Hashing",
+        "explanation": "Hashing converts data into a fixed-length digest that cannot be reversed to find the original"
+      },
+      {
+        "name": "Salt",
+        "explanation": "A cryptographic salt is random data added to passwords before hashing to prevent rainbow table attacks"
+      },
+      {
+        "name": "Password Manager",
+        "explanation": "A password manager generates and stores unique strong passwords for every account securely"
+      },
+      {
+        "name": "Biometrics",
+        "explanation": "Biometric authentication uses fingerprints, face, or iris scans instead of passwords"
+      },
+      {
+        "name": "Single Sign-On",
+        "explanation": "SSO lets users log into multiple apps with one set of credentials"
+      },
+      {
+        "name": "SAML",
+        "explanation": "SAML is an XML-based standard for exchanging authentication data between identity providers and apps"
+      },
+      {
+        "name": "OIDC",
+        "explanation": "OpenID Connect is an identity layer on top of OAuth 2.0 for authentication"
+      },
+      {
+        "name": "Zero Trust Security",
+        "explanation": "Zero trust never automatically trusts any user or device and verifies every access request"
+      },
+      {
+        "name": "Least Privilege",
+        "explanation": "Least privilege grants users and systems only the minimum permissions they need to function"
+      },
+      {
+        "name": "Defense in Depth",
+        "explanation": "Defense in depth layers multiple security controls so no single failure causes a breach"
+      },
+      {
+        "name": "SIEM",
+        "explanation": "Security Information and Event Management aggregates and analyzes logs to detect threats"
+      },
+      {
+        "name": "SOAR",
+        "explanation": "SOAR automates security incident response workflows to speed up threat neutralization"
+      },
+      {
+        "name": "Threat Intelligence",
+        "explanation": "Threat intelligence gathers information about current attackers and tactics to improve defenses"
+      },
+      {
+        "name": "Vulnerability Scanner",
+        "explanation": "Vulnerability scanners automatically probe systems to find known security weaknesses"
+      },
+      {
+        "name": "CVSS",
+        "explanation": "Common Vulnerability Scoring System rates the severity of security vulnerabilities from 0 to 10"
+      },
+      {
+        "name": "CVE",
+        "explanation": "Common Vulnerabilities and Exposures is a public dictionary of known security flaws"
+      },
+      {
+        "name": "Bug Bounty",
+        "explanation": "Bug bounty programs pay security researchers to responsibly disclose vulnerabilities"
+      },
+      {
+        "name": "Responsible Disclosure",
+        "explanation": "Responsible disclosure reports vulnerabilities privately to vendors before going public"
+      },
+      {
+        "name": "WAF",
+        "explanation": "A Web Application Firewall blocks malicious HTTP traffic targeting web application vulnerabilities"
+      },
+      {
+        "name": "IDS",
+        "explanation": "An Intrusion Detection System monitors network traffic and alerts on suspicious patterns"
+      },
+      {
+        "name": "IPS",
+        "explanation": "An Intrusion Prevention System actively blocks detected threats in real time"
+      },
+      {
+        "name": "EDR",
+        "explanation": "Endpoint Detection and Response monitors devices for threats and provides forensic investigation"
+      },
+      {
+        "name": "XDR",
+        "explanation": "Extended Detection and Response unifies security data across endpoints, network, and cloud"
+      },
+      {
+        "name": "Security Audit",
+        "explanation": "A security audit systematically reviews systems, policies, and controls for compliance and risk"
+      },
+      {
+        "name": "Compliance",
+        "explanation": "Security compliance meets regulatory standards like SOC2, HIPAA, and ISO 27001"
+      },
+      {
+        "name": "GDPR",
+        "explanation": "GDPR fines companies up to 4% of global revenue for mishandling European personal data"
+      },
+      {
+        "name": "Data Breach",
+        "explanation": "A data breach is unauthorized access to confidential data that exposes it to attackers"
+      },
+      {
+        "name": "Insider Threat",
+        "explanation": "Insider threats come from employees or contractors who misuse their legitimate access"
+      },
+      {
+        "name": "Advanced Persistent Threat",
+        "explanation": "APTs are sophisticated long-term attacks by nation-states or organized crime groups"
+      },
+      {
+        "name": "Botnet",
+        "explanation": "A botnet is a network of compromised computers controlled by attackers for DDoS or spam"
+      },
+      {
+        "name": "Keylogger",
+        "explanation": "Keyloggers secretly record every keystroke to steal passwords and sensitive data"
+      },
+      {
+        "name": "Rootkit",
+        "explanation": "Rootkits hide deep in operating systems to give attackers persistent undetected access"
+      },
+      {
+        "name": "Backdoor",
+        "explanation": "A backdoor is a hidden method of bypassing normal authentication to access a system"
+      },
+      {
+        "name": "Exploit",
+        "explanation": "An exploit is code or technique that takes advantage of a vulnerability to compromise a system"
+      },
+      {
+        "name": "Payload",
+        "explanation": "A payload is the malicious code that executes after an exploit successfully compromises a system"
+      },
+      {
+        "name": "Command and Control",
+        "explanation": "C2 servers remotely control malware installed on compromised victim machines"
+      },
+      {
+        "name": "Exfiltration",
+        "explanation": "Data exfiltration is the unauthorized transfer of sensitive data out of an organization"
+      },
+      {
+        "name": "Lateral Movement",
+        "explanation": "Lateral movement is when attackers spread through a network after gaining initial access"
+      },
+      {
+        "name": "Privilege Escalation",
+        "explanation": "Privilege escalation gains higher permissions than originally granted to access more systems"
+      },
+      {
+        "name": "Supply Chain Attack",
+        "explanation": "Supply chain attacks compromise software or hardware before it reaches the target organization"
+      },
+      {
+        "name": "Homomorphic Encryption",
+        "explanation": "Homomorphic encryption allows computations on encrypted data without ever decrypting it"
+      },
+      {
+        "name": "End-to-End Encryption",
+        "explanation": "E2EE ensures only sender and receiver can read messages — not even the service provider"
+      },
+      {
+        "name": "Quantum Cryptography",
+        "explanation": "Quantum cryptography uses quantum mechanics to create theoretically unbreakable encryption"
+      },
+      {
+        "name": "Post-quantum Cryptography",
+        "explanation": "Post-quantum algorithms are designed to resist attacks from future quantum computers"
+      },
+      {
+        "name": "Hardware Security Module",
+        "explanation": "HSMs are tamper-proof hardware devices that store and use cryptographic keys securely"
+      },
+      {
+        "name": "Secure Boot",
+        "explanation": "Secure boot verifies that only trusted software loads when a computer starts"
+      },
+      {
+        "name": "TPM",
+        "explanation": "Trusted Platform Module is a chip that stores cryptographic keys to secure device integrity"
+      },
+      {
+        "name": "Memory Safety",
+        "explanation": "Memory-safe languages like Rust prevent entire classes of security bugs at compile time"
+      },
+      {
+        "name": "Buffer Overflow",
+        "explanation": "Buffer overflows write beyond allocated memory to corrupt data or execute malicious code"
+      },
+      {
+        "name": "Code Injection",
+        "explanation": "Code injection inserts malicious commands into an application via unsanitized user input"
+      },
+      {
+        "name": "Input Validation",
+        "explanation": "Input validation checks all user-provided data before processing to prevent injection attacks"
+      },
+      {
+        "name": "OWASP Top 10",
+        "explanation": "OWASP Top 10 lists the most critical web application security risks developers must address"
+      },
+      {
+        "name": "Security by Design",
+        "explanation": "Security by design builds protection into systems from the start rather than adding it later"
+      },
+      {
+        "name": "Shift Left Security",
+        "explanation": "Shifting left integrates security testing early in the development lifecycle"
+      },
+      {
+        "name": "DevSecOps",
+        "explanation": "DevSecOps integrates security practices throughout the entire CI/CD pipeline"
+      },
+      {
+        "name": "DAST",
+        "explanation": "Dynamic Application Security Testing attacks running apps to find exploitable vulnerabilities"
+      },
+      {
+        "name": "SAST",
+        "explanation": "Static Application Security Testing analyzes source code for security flaws without running it"
+      },
+      {
+        "name": "SCA",
+        "explanation": "Software Composition Analysis identifies vulnerabilities in open-source dependencies"
+      },
+      {
+        "name": "Container Scanning",
+        "explanation": "Container image scanning detects known vulnerabilities in OS packages and dependencies"
+      },
+      {
+        "name": "Secret Scanning",
+        "explanation": "Secret scanning detects accidentally committed API keys and passwords in code repositories"
+      },
+      {
+        "name": "Security Headers",
+        "explanation": "HTTP security headers like CSP and HSTS instruct browsers to enforce additional protections"
+      },
+      {
+        "name": "Content Security Policy",
+        "explanation": "CSP prevents XSS by specifying which sources of scripts and content browsers should trust"
+      },
+      {
+        "name": "HSTS",
+        "explanation": "HTTP Strict Transport Security forces browsers to only connect via HTTPS"
+      },
+      {
+        "name": "Cyber Kill Chain",
+        "explanation": "The cyber kill chain models the stages of an attack from reconnaissance to data exfiltration"
+      },
+      {
+        "name": "MITRE ATT&CK",
+        "explanation": "MITRE ATT&CK is a framework cataloging real-world attacker tactics and techniques"
+      },
+      {
+        "name": "Red Team",
+        "explanation": "A red team simulates real attackers to test how well an organization can be compromised"
+      },
+      {
+        "name": "Blue Team",
+        "explanation": "A blue team defends against red team and real attacks by monitoring and responding to threats"
+      },
+      {
+        "name": "Purple Team",
+        "explanation": "Purple teaming combines red and blue teams to improve defenses through shared knowledge"
+      },
+      {
+        "name": "Honeypot",
+        "explanation": "A honeypot is a decoy system designed to attract and trap attackers to study their methods"
+      },
+      {
+        "name": "Digital Forensics",
+        "explanation": "Digital forensics recovers and analyzes evidence from devices after a security incident"
+      },
+      {
+        "name": "Incident Response",
+        "explanation": "Incident response is the structured process of containing and recovering from a security breach"
+      },
+      {
+        "name": "Threat Modeling",
+        "explanation": "Threat modeling systematically identifies potential threats to a system and designs mitigations"
+      },
+      {
+        "name": "Attack Surface",
+        "explanation": "The attack surface is the total number of entry points an attacker could use to compromise a system"
+      },
+      {
+        "name": "Hardening",
+        "explanation": "System hardening reduces the attack surface by disabling unneeded services and applying security settings"
+      },
+      {
+        "name": "Patch Management",
+        "explanation": "Patch management keeps software up to date with security fixes to close known vulnerabilities"
+      },
+      {
+        "name": "Security Posture",
+        "explanation": "Security posture is an organization's overall readiness to detect and respond to cyber threats"
+      },
+      {
+        "name": "Canary Token",
+        "explanation": "Canary tokens are fake credentials that alert you when attackers find and use them"
+      },
+      {
+        "name": "Air Gap",
+        "explanation": "An air-gapped system is completely isolated from the internet to protect highly sensitive data"
+      }
     ]
   }
 }

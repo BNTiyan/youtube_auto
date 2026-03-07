@@ -1,0 +1,134 @@
+name: Kids Learning — Daily Upload
+
+# ─── Triggers ─────────────────────────────────────────────────────────────────
+on:
+  schedule:
+    # 9:00 AM EST daily  (EST = UTC-5  →  14:00 UTC)
+    - cron: '0 14 * * *'
+  workflow_dispatch:          # also triggerable manually from GitHub UI
+    inputs:
+      category:
+        description: 'Override category (animals/fruits/vegetables/cars/airplanes/brands). Leave blank for auto.'
+        required: false
+        default: ''
+      dry_run:
+        description: 'Dry run — generate video but skip YouTube upload'
+        type: boolean
+        required: false
+        default: false
+
+# ─── Permissions ──────────────────────────────────────────────────────────────
+permissions:
+  contents: read            # checkout only — no write-back needed
+
+# ─── Job ──────────────────────────────────────────────────────────────────────
+jobs:
+  upload:
+    name: Generate & Upload
+    runs-on: ubuntu-latest
+    timeout-minutes: 90     # video generation can take ~30 min for longer clips
+
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+
+    steps:
+      # ── 1. Checkout ────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Python ──────────────────────────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      # ── 3. System dependencies (ffmpeg required by moviepy) ────────────────
+      - name: Install ffmpeg
+        run: sudo apt-get install -y ffmpeg
+
+      # ── 4. Python dependencies ─────────────────────────────────────────────
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      # ── 5. Decode YouTube credentials from GitHub Secrets ──────────────────
+      #   Set these secrets in: GitHub repo → Settings → Secrets → Actions
+      #   YOUTUBE_CLIENT_SECRETS_B64 : base64 -i client_secrets.json | pbcopy
+      #   YOUTUBE_TOKEN_KIDS_B64     : base64 -i youtube_token.json  | pbcopy
+      - name: Decode YouTube credentials
+        run: |
+          echo '${{ secrets.YOUTUBE_CLIENT_SECRETS_B64 }}' | base64 -d > client_secrets.json
+          echo '${{ secrets.YOUTUBE_TOKEN_KIDS_B64 }}'     | base64 -d > youtube_token.json
+
+      # ── 6. Pick today's category ───────────────────────────────────────────
+      #   Rotates through all 6 kids categories using day-of-year.
+      #   Manual override available via workflow_dispatch input.
+      - name: Select category
+        id: pick
+        run: |
+          OVERRIDE="${{ github.event.inputs.category }}"
+
+          if [ -n "$OVERRIDE" ]; then
+            CATEGORY="$OVERRIDE"
+            echo "Category overridden to: $CATEGORY"
+          else
+            CATEGORIES=(animals fruits vegetables cars airplanes brands)
+            DOY=$(date +%j | sed 's/^0*//')          # day-of-year, no leading zeros
+            INDEX=$(( (DOY - 1) % ${#CATEGORIES[@]} ))
+            CATEGORY="${CATEGORIES[$INDEX]}"
+            echo "Day $DOY → index $INDEX → category: $CATEGORY"
+          fi
+
+          # Derive a rich topic string for Gemini metadata generation
+          case "$CATEGORY" in
+            animals)    TOPIC="Amazing Animals for Kids — Learn Animal Names and Fun Facts" ;;
+            fruits)     TOPIC="Yummy Fruits for Kids — Learn Fruit Names and Fun Facts" ;;
+            vegetables) TOPIC="Healthy Vegetables for Kids — Learn Vegetable Names" ;;
+            cars)       TOPIC="Cool Cars for Kids — Famous Car Brands and Facts" ;;
+            airplanes)  TOPIC="Amazing Airplanes for Kids — Types of Aircraft" ;;
+            brands)     TOPIC="Famous Brands for Kids — Popular Logos and Companies" ;;
+            *)          TOPIC="${CATEGORY^} for Kids" ;;
+          esac
+
+          echo "category=$CATEGORY" >> "$GITHUB_OUTPUT"
+          echo "topic=$TOPIC"       >> "$GITHUB_OUTPUT"
+
+      # ── 7. Generate the video ──────────────────────────────────────────────
+      - name: Generate video — ${{ steps.pick.outputs.category }}
+        run: |
+          mkdir -p videos
+          python video_creator.py "${{ steps.pick.outputs.category }}" \
+            --config content_config.json \
+            --output-dir videos
+
+      # ── 8. Upload to YouTube ───────────────────────────────────────────────
+      - name: Upload to YouTube
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          CATEGORY="${{ steps.pick.outputs.category }}"
+          VIDEO="videos/${CATEGORY}_learning.mp4"
+
+          python youtube_auto.py "$VIDEO" \
+            --topic    "${{ steps.pick.outputs.topic }}" \
+            --niche    "Kids Education" \
+            --tone     "fun, friendly and educational for young children" \
+            --category 27 \
+            --made-for-kids \
+            --privacy  public
+
+      # ── 9. Dry-run notice ──────────────────────────────────────────────────
+      - name: Dry run notice
+        if: ${{ github.event.inputs.dry_run == 'true' }}
+        run: echo "⚠️  Dry run — video was generated but NOT uploaded to YouTube."
+
+      # ── 10. Summary ────────────────────────────────────────────────────────
+      - name: Write job summary
+        if: always()
+        run: |
+          echo "## Kids Learning Pipeline" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Field | Value |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Category | \`${{ steps.pick.outputs.category }}\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Topic    | ${{ steps.pick.outputs.topic }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Run date | $(date '+%Y-%m-%d %H:%M UTC') |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Dry run  | ${{ github.event.inputs.dry_run }} |" >> "$GITHUB_STEP_SUMMARY"

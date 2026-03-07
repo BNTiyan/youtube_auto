@@ -1,0 +1,72 @@
+{
+  "ai": {
+    "items": [
+      {"name": "Artificial Intelligence", "explanation": "AI teaches computers to think, learn, and make decisions like humans"},
+      {"name": "Machine Learning",        "explanation": "ML lets computers learn from data without being explicitly programmed for every task"},
+      {"name": "Neural Networks",         "explanation": "Neural networks are inspired by the brain and learn to recognize patterns in data"},
+      {"name": "Deep Learning",           "explanation": "Deep learning stacks many neural network layers to solve complex AI problems"},
+      {"name": "Computer Vision",         "explanation": "Computer vision lets machines see and understand images and video like humans do"},
+      {"name": "NLP",                     "explanation": "Natural Language Processing helps computers read, understand, and generate human language"},
+      {"name": "Reinforcement Learning",  "explanation": "RL trains AI by rewarding good decisions — like teaching a dog new tricks with treats"},
+      {"name": "Generative AI",           "explanation": "Generative AI creates new content: text, images, audio, code, and video from scratch"},
+      {"name": "Transfer Learning",       "explanation": "Transfer learning reuses knowledge from one AI task to speed up solving another"},
+      {"name": "AI Agents",               "explanation": "AI agents can reason, plan, and take actions autonomously to complete complex tasks"}
+    ]
+  },
+  "llm": {
+    "items": [
+      {"name": "Large Language Model",  "explanation": "LLMs are AI trained on massive text data to understand and generate human language"},
+      {"name": "Transformer",           "explanation": "The Transformer architecture revolutionized AI with powerful self-attention mechanisms"},
+      {"name": "Tokens",                "explanation": "Tokens are the smallest text units LLMs process — roughly 0.75 words per token"},
+      {"name": "Context Window",        "explanation": "The context window is how much text an LLM can read and remember in one conversation"},
+      {"name": "Prompt Engineering",    "explanation": "Prompt engineering is crafting inputs to reliably get the best outputs from LLMs"},
+      {"name": "Fine-tuning",           "explanation": "Fine-tuning adapts a pre-trained LLM to a specific domain, task, or writing style"},
+      {"name": "Embeddings",            "explanation": "Embeddings are numerical vectors that capture the meaning of text for AI search and retrieval"},
+      {"name": "Hallucination",         "explanation": "LLM hallucination is when the model generates confident but factually incorrect answers"},
+      {"name": "Temperature",           "explanation": "Temperature controls how creative or random an LLM's output is — higher means more creative"},
+      {"name": "System Prompt",         "explanation": "A system prompt sets the AI assistant's role, persona, rules, and constraints upfront"}
+    ]
+  },
+  "rag": {
+    "items": [
+      {"name": "RAG",                 "explanation": "Retrieval Augmented Generation combines search with LLMs to give accurate, grounded answers"},
+      {"name": "Vector Database",     "explanation": "Vector databases store embeddings and enable lightning-fast semantic similarity search"},
+      {"name": "Chunking",            "explanation": "Chunking splits documents into smaller pieces for efficient storage and relevant retrieval"},
+      {"name": "Semantic Search",     "explanation": "Semantic search finds results by meaning, not just keyword matching — much smarter"},
+      {"name": "Re-ranking",          "explanation": "Re-ranking re-orders retrieved results to improve relevance before passing them to the LLM"},
+      {"name": "Knowledge Base",      "explanation": "A knowledge base is your collection of documents that RAG searches to answer questions"},
+      {"name": "Document Loader",     "explanation": "Document loaders parse PDFs, web pages, and files into clean text for RAG pipelines"},
+      {"name": "Query Expansion",     "explanation": "Query expansion rewrites user questions multiple ways to improve search recall and coverage"},
+      {"name": "Hybrid Search",       "explanation": "Hybrid search combines keyword and semantic search for better, more reliable results"},
+      {"name": "Context Window RAG",  "explanation": "RAG stuffs retrieved documents into the LLM's context so it can answer with real knowledge"}
+    ]
+  },
+  "database": {
+    "items": [
+      {"name": "SQL",           "explanation": "SQL is the standard language for querying and managing structured relational databases"},
+      {"name": "NoSQL",         "explanation": "NoSQL databases store unstructured or semi-structured data with flexible, scalable schemas"},
+      {"name": "PostgreSQL",    "explanation": "PostgreSQL is a powerful open-source relational database used by millions of applications"},
+      {"name": "MongoDB",       "explanation": "MongoDB stores data as JSON documents — great for flexible, rapidly changing data structures"},
+      {"name": "Redis",         "explanation": "Redis is an in-memory database used for caching, sessions, and real-time applications"},
+      {"name": "Vector DB",     "explanation": "Vector databases like Pinecone and Chroma store AI embeddings for fast similarity search"},
+      {"name": "ACID",          "explanation": "ACID ensures database transactions are Atomic, Consistent, Isolated, and Durable"},
+      {"name": "Indexing",      "explanation": "Database indexes dramatically speed up queries by creating shortcuts to find data fast"},
+      {"name": "Graph Database","explanation": "Graph databases like Neo4j model and query complex relationships between data points"},
+      {"name": "Sharding",      "explanation": "Sharding splits a database across multiple servers to handle massive scale and traffic"}
+    ]
+  },
+  "mcp": {
+    "items": [
+      {"name": "MCP",            "explanation": "Model Context Protocol is an open standard connecting AI models to external tools and data"},
+      {"name": "MCP Server",     "explanation": "An MCP server exposes tools, resources, and prompts that any compatible AI client can use"},
+      {"name": "MCP Client",     "explanation": "MCP clients like Claude Desktop connect to servers to access their capabilities and data"},
+      {"name": "Tools",          "explanation": "MCP Tools let AI models execute functions like file operations, API calls, and web searches"},
+      {"name": "Resources",      "explanation": "MCP Resources expose data sources like files, databases, and APIs to AI models"},
+      {"name": "Prompts",        "explanation": "MCP Prompts are reusable prompt templates that standardize AI model behavior across apps"},
+      {"name": "Sampling",       "explanation": "MCP Sampling lets servers request LLM completions through the connected client"},
+      {"name": "Transport",      "explanation": "MCP supports stdio and HTTP with SSE transports for client-server communication"},
+      {"name": "Claude Desktop", "explanation": "Claude Desktop natively supports MCP, letting you connect local and remote MCP servers"},
+      {"name": "MCP SDK",        "explanation": "The official MCP SDK lets developers build servers and clients in Python and TypeScript"}
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "animals": {
+    "items": [
+      {"name": "Lion",       "fact": "Lions live in Africa and are called the King of the Jungle"},
+      {"name": "Elephant",   "fact": "Elephants are the largest land animals and have amazing memory"},
+      {"name": "Giraffe",    "fact": "Giraffes are the tallest animals with very long necks to reach trees"},
+      {"name": "Tiger",      "fact": "Tigers are the biggest wild cats and have beautiful stripes"},
+      {"name": "Dolphin",    "fact": "Dolphins are very smart and love to play in the ocean"},
+      {"name": "Penguin",    "fact": "Penguins cannot fly but they are amazing swimmers"},
+      {"name": "Panda",      "fact": "Giant Pandas eat bamboo and are very rare and special"},
+      {"name": "Kangaroo",   "fact": "Kangaroos carry their babies in a special pouch on their tummy"},
+      {"name": "Cheetah",    "fact": "Cheetahs are the fastest animals running at 75 miles per hour"},
+      {"name": "Parrot",     "fact": "Parrots are colorful birds that can learn to talk like humans"}
+    ]
+  },
+  "fruits": {
+    "items": [
+      {"name": "Apple",      "fact": "Apples come in red, green, and yellow and are very healthy"},
+      {"name": "Banana",     "fact": "Bananas are yellow when ripe and give you lots of energy"},
+      {"name": "Mango",      "fact": "Mangoes are called the King of Fruits and taste delicious"},
+      {"name": "Strawberry", "fact": "Strawberries are red, sweet, and shaped like a little heart"},
+      {"name": "Watermelon", "fact": "Watermelons are mostly water and very refreshing in summer"},
+      {"name": "Grapes",     "fact": "Grapes grow in big bunches and can be red or green"},
+      {"name": "Orange",     "fact": "Oranges are full of Vitamin C which keeps us healthy"},
+      {"name": "Pineapple",  "fact": "Pineapples have a spiky crown and grow on low plants near the ground"},
+      {"name": "Cherry",     "fact": "Cherries are tiny red fruits that grow in pairs on trees"},
+      {"name": "Kiwi",       "fact": "Kiwi fruits are brown outside and bright green inside"}
+    ]
+  },
+  "vegetables": {
+    "items": [
+      {"name": "Carrot",    "fact": "Carrots are orange and help make your eyes strong and healthy"},
+      {"name": "Broccoli",  "fact": "Broccoli looks like tiny trees and is packed with vitamins"},
+      {"name": "Tomato",    "fact": "Tomatoes are actually a fruit but we eat them like a vegetable"},
+      {"name": "Potato",    "fact": "Potatoes grow underground and can be made into many yummy dishes"},
+      {"name": "Corn",      "fact": "Each corn cob has hundreds of tiny yellow kernels on it"},
+      {"name": "Spinach",   "fact": "Spinach makes you strong and healthy just like Popeye the sailor"},
+      {"name": "Pea",       "fact": "Tiny green peas grow snugly inside a long green pod"},
+      {"name": "Cucumber",  "fact": "Cucumbers are cool and refreshing and mostly made of water"},
+      {"name": "Pepper",    "fact": "Peppers come in red, yellow, orange, and green colors"},
+      {"name": "Pumpkin",   "fact": "Pumpkins are big orange vegetables used to make jack-o-lanterns"}
+    ]
+  },
+  "cars": {
+    "items": [
+      {"name": "Ferrari",      "fact": "Ferrari is an Italian supercar brand known for incredible speed"},
+      {"name": "Lamborghini",  "fact": "Lamborghinis are Italian supercars with a cool low wedge shape"},
+      {"name": "BMW",          "fact": "BMW is a German luxury car brand loved all around the world"},
+      {"name": "Tesla",        "fact": "Tesla makes electric cars that run on batteries instead of gas"},
+      {"name": "Porsche",      "fact": "Porsche is a German brand famous for making fast sports cars"},
+      {"name": "Bugatti",      "fact": "Bugatti makes some of the fastest and most expensive cars on Earth"},
+      {"name": "Rolls Royce",  "fact": "Rolls Royce makes the most luxurious and elegant cars in the world"},
+      {"name": "Ford Mustang", "fact": "The Ford Mustang is a famous American muscle car with a roaring engine"},
+      {"name": "Toyota",       "fact": "Toyota is one of the world's biggest and most reliable car makers"},
+      {"name": "Jeep",         "fact": "Jeeps are tough vehicles that can drive over mountains and rough roads"}
+    ]
+  },
+  "airplanes": {
+    "items": [
+      {"name": "Boeing 747",     "fact": "The Boeing 747 is called the Queen of the Skies and carries hundreds of passengers"},
+      {"name": "Airbus A380",    "fact": "The A380 is the world's largest passenger airplane with two full decks"},
+      {"name": "Concorde",       "fact": "The Concorde could fly faster than the speed of sound"},
+      {"name": "Fighter Jet",    "fact": "Fighter jets fly at incredible speeds and protect countries in the sky"},
+      {"name": "Helicopter",     "fact": "Helicopters can hover in one place and fly in any direction"},
+      {"name": "Hot Air Balloon","fact": "Hot air balloons float high using warm air trapped inside a huge bag"},
+      {"name": "Space Shuttle",  "fact": "Space Shuttles carried brave astronauts all the way to outer space"},
+      {"name": "Seaplane",       "fact": "Seaplanes are special planes that can land on both water and land"},
+      {"name": "Biplane",        "fact": "Biplanes have two sets of wings and were flown by pilots long ago"},
+      {"name": "Drone",          "fact": "Drones are small flying machines controlled by remote control"}
+    ]
+  },
+  "brands": {
+    "items": [
+      {"name": "Apple",      "fact": "Apple makes iPhones, iPads, and Mac computers used all over the world"},
+      {"name": "Nike",       "fact": "Nike makes sports shoes and clothing with a famous swoosh logo"},
+      {"name": "McDonald's", "fact": "McDonald's golden arches are one of the most recognized symbols on Earth"},
+      {"name": "LEGO",       "fact": "LEGO bricks snap together so you can build almost anything you imagine"},
+      {"name": "Disney",     "fact": "Disney creates magical movies, cartoons, and exciting theme parks"},
+      {"name": "Google",     "fact": "Google helps billions of people find information every single day"},
+      {"name": "Coca-Cola",  "fact": "Coca-Cola is one of the world's most popular and delicious drinks"},
+      {"name": "Microsoft",  "fact": "Microsoft makes Windows computers, Xbox games, and Office software"},
+      {"name": "Amazon",     "fact": "Amazon started as a bookstore and now delivers almost everything to your door"},
+      {"name": "YouTube",    "fact": "YouTube is where millions of people watch, learn, and share videos every day"}
+    ]
+  }
+}

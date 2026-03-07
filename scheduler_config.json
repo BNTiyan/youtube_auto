@@ -1,0 +1,43 @@
+{
+  "schedule_time": "09:00",
+
+  "channels": [
+    {
+      "name":          "Kids Learning",
+      "videos_dir":    "videos",
+      "upload_log":    "logs/upload_log_kids.json",
+      "daily_limit":   5,
+      "privacy":       "public",
+      "category_id":   "27",
+      "made_for_kids": true,
+      "niche":         "Kids Education",
+      "tone":          "fun, friendly and educational for young children",
+      "topic_map": {
+        "animals":    "Amazing Animals for Kids — Learn Animal Names and Facts",
+        "fruits":     "Yummy Fruits for Kids — Learn Fruit Names and Facts",
+        "vegetables": "Healthy Vegetables for Kids — Learn Vegetable Names",
+        "cars":       "Cool Cars for Kids — Famous Car Brands Explained",
+        "airplanes":  "Amazing Airplanes for Kids — Types of Aircraft",
+        "brands":     "Famous Brands for Kids — Learn Popular Logos and Companies"
+      }
+    },
+    {
+      "name":          "Tech Learning",
+      "videos_dir":    "tech_videos",
+      "upload_log":    "logs/upload_log_tech.json",
+      "daily_limit":   5,
+      "privacy":       "public",
+      "category_id":   "28",
+      "made_for_kids": false,
+      "niche":         "Technology and AI Education",
+      "tone":          "clear, professional and educational for developers and tech enthusiasts",
+      "topic_map": {
+        "ai":       "Artificial Intelligence Explained — Key AI Concepts",
+        "llm":      "Large Language Models Guide — How LLMs Work",
+        "rag":      "Retrieval Augmented Generation Tutorial — RAG Explained",
+        "database": "Database Systems Explained — SQL, NoSQL and Vector Databases",
+        "mcp":      "Model Context Protocol Guide — MCP for AI Developers"
+      }
+    }
+  ]
+}

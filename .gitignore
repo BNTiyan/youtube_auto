@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# ── Sensitive credentials (NEVER commit these) ────────────────────────────────
+client_secrets.json
+youtube_token.json
+*.json.bak
+
+# Environment variables
+.env
+.env.*
+
+# ── Generated video files (large — not tracked in git) ───────────────────────
+videos/*.mp4
+videos/*.mov
+videos/*.avi
+videos/*.mkv
+tech_videos/
+tech_videos/*.mp4
+
+# ── Upload state logs (channel-specific, generated at runtime) ────────────────
+# These are written by the GitHub Actions pipeline; no need to track locally.
+logs/upload_log_kids.json
+logs/upload_log_tech.json
+
+# ── Generated video metadata sidecars ─────────────────────────────────────────
+*_metadata.json
+
+# ── IDE / tooling ─────────────────────────────────────────────────────────────
+.claude/
+.vscode/
+.idea/
+
+# ── macOS ─────────────────────────────────────────────────────────────────────
+.DS_Store
+**/.DS_Store

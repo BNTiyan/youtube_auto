@@ -1,0 +1,15 @@
+# YouTube API + Gemini AI
+google-generativeai>=0.8.6
+google-api-python-client>=2.191.0
+google-auth-oauthlib>=1.3.0
+google-auth-httplib2>=0.3.0
+httplib2>=0.31.2
+
+# Video generation (video_creator.py)
+moviepy>=1.0.3
+Pillow>=10.0.0
+gTTS>=2.3.0
+numpy>=1.24.0
+
+# Scheduler (scheduler.py daemon mode)
+schedule>=1.2.0

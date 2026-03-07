@@ -10,6 +10,8 @@ ENV/
 client_secrets.json
 youtube_token.json
 *.json.bak
+secrets*.json
+token*.json
 
 # Environment variables
 .env

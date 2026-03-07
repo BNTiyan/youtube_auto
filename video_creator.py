@@ -295,7 +295,7 @@ def create_intro_slide(category: str, total: int, theme: dict,
 def create_outro_slide(category: str, theme: dict) -> np.ndarray:
     return create_slide(           # outro is always text-only
         title="Great Job! ⭐",
-        fact=f"You learned about {category}! Like & Subscribe for more!",
+        fact=f"You learned about {category}! Come back tomorrow for more!",
         theme=theme,
     )
 
@@ -355,8 +355,7 @@ def create_single_item_video(
         outro_slide = create_outro_slide(category, theme)
         outro_mp3   = os.path.join(tmp, "outro.mp3")
         create_tts(
-            f"Great job! Now you know about {name}! "
-            "Don't forget to like and subscribe for more fun learning videos!",
+            f"Great job! Now you know about {name}! Come back tomorrow for another fun fact!",
             outro_mp3, lang,
         )
         clips.append(make_clip(outro_slide, outro_mp3))
@@ -448,8 +447,7 @@ def create_kids_video(
         outro_slide = create_outro_slide(category, theme)
         outro_mp3   = os.path.join(tmp, "outro.mp3")
         create_tts(
-            f"Amazing work! You learned about {total} {category}! "
-            "Don't forget to like and subscribe for more fun learning videos!",
+            f"Amazing work! You learned about {total} {category}! Come back tomorrow for more!",
             outro_mp3, lang,
         )
         clips.append(make_clip(outro_slide, outro_mp3))

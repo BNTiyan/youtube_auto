@@ -350,7 +350,7 @@ def create_tech_slide(
         y_pos += 50
 
     # ── Bottom watermark ──
-    wm = "Tech Learning  •  Subscribe for more"
+    wm = "Tech Learning"
     wm_font = load_font(20)
     bbox = draw.textbbox((0, 0), wm, font=wm_font)
     draw.text(((text_x_start + text_x_end - (bbox[2] - bbox[0])) // 2, HEIGHT - 32),
@@ -372,7 +372,7 @@ def create_tech_intro(category: str, total: int, theme: dict,
 def create_tech_outro(category: str, theme: dict) -> np.ndarray:
     return create_tech_slide(
         term="That's a Wrap!",
-        explanation=f"You leveled up your {category.upper()} knowledge. Like & Subscribe!",
+        explanation=f"You leveled up your {category.upper()} knowledge. See you tomorrow!",
         theme=theme,
     )
 
@@ -436,7 +436,7 @@ def create_single_concept_video(
         outro_mp3   = os.path.join(tmp, "outro.mp3")
         create_tts(
             f"Great work! Now you understand {name}. "
-            "Like and subscribe for a new tech concept every day!",
+            "See you tomorrow for another tech concept!",
             outro_mp3, lang,
         )
         clips.append(make_clip(outro_slide, outro_mp3))
@@ -529,7 +529,7 @@ def create_tech_video(
         outro_mp3   = os.path.join(tmp, "outro.mp3")
         create_tts(
             f"Great work! You've learned {total} {category} concepts. "
-            "If you found this helpful, please like and subscribe for more tech learning videos!",
+            "Come back tomorrow for another tech learning concept!",
             outro_mp3, lang,
         )
         clips.append(make_clip(outro_slide, outro_mp3))

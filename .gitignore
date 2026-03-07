@@ -7,8 +7,8 @@ venv/
 ENV/
 
 # ── Sensitive credentials (NEVER commit these) ────────────────────────────────
-client_secrets.json
-youtube_token.json
+client_secrets*.json
+youtube_token*.json
 *.json.bak
 secrets*.json
 token*.json

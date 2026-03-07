@@ -54,15 +54,12 @@ jobs:
 
       # ── 5. Decode YouTube credentials from GitHub Secrets ──────────────────
       #   Set these secrets in: GitHub repo → Settings → Secrets → Actions
-      #   YOUTUBE_CLIENT_SECRETS_B64 : base64 -i client_secrets.json | pbcopy
-      #   YOUTUBE_TOKEN_TECH_B64     : base64 -i youtube_token.json  | pbcopy
-      #
-      #   NOTE: If both channels share the same Google account, set
-      #         YOUTUBE_TOKEN_TECH_B64 = YOUTUBE_TOKEN_KIDS_B64
-      - name: Decode YouTube credentials
+      #   YOUTUBE_CLIENT_SECRETS_TECH_B64 : base64 -i client_secrets_tech.json | pbcopy
+      #   YOUTUBE_TOKEN_TECH_B64          : base64 -i youtube_token_tech.json   | pbcopy
+      - name: Decode YouTube credentials (Tech account)
         run: |
-          echo '${{ secrets.YOUTUBE_CLIENT_SECRETS_B64 }}' | base64 -d > client_secrets.json
-          echo '${{ secrets.YOUTUBE_TOKEN_TECH_B64 }}'     | base64 -d > youtube_token.json
+          echo '${{ secrets.YOUTUBE_CLIENT_SECRETS_TECH_B64 }}' | base64 -d > client_secrets.json
+          echo '${{ secrets.YOUTUBE_TOKEN_TECH_B64 }}'           | base64 -d > youtube_token.json
 
       # ── 6. Pick today's category ───────────────────────────────────────────
       #   Rotates through all 5 tech categories using day-of-year.

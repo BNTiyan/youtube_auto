@@ -37,29 +37,49 @@ Go to **Actions → Kids/Tech Learning — Daily Upload → Run workflow** in Gi
 
 Set these in **GitHub → Settings → Secrets and variables → Actions**:
 
-| Secret | Description | How to get |
+Both channels use **different Google accounts**, so each has its own `client_secrets.json` and `youtube_token.json`.
+
+| Secret | Channel | Description |
 |---|---|---|
-| `GEMINI_API_KEY` | Gemini API key | [aistudio.google.com](https://aistudio.google.com) |
-| `YOUTUBE_CLIENT_SECRETS_B64` | Base64-encoded `client_secrets.json` | See below |
-| `YOUTUBE_TOKEN_KIDS_B64` | Base64-encoded `youtube_token.json` for kids channel | See below |
-| `YOUTUBE_TOKEN_TECH_B64` | Base64-encoded `youtube_token.json` for tech channel | Same as above if same account |
+| `GEMINI_API_KEY` | Shared | Gemini API key from [aistudio.google.com](https://aistudio.google.com) |
+| `YOUTUBE_CLIENT_SECRETS_KIDS_B64` | Kids | Base64 of `client_secrets.json` for the Kids Google account |
+| `YOUTUBE_TOKEN_KIDS_B64` | Kids | Base64 of `youtube_token.json` for the Kids Google account |
+| `YOUTUBE_CLIENT_SECRETS_TECH_B64` | Tech | Base64 of `client_secrets.json` for the Tech Google account |
+| `YOUTUBE_TOKEN_TECH_B64` | Tech | Base64 of `youtube_token.json` for the Tech Google account |
 
 ### Encode credentials for secrets
 
+Do this separately for **each Google account**:
+
 ```bash
-# On macOS — copies to clipboard
-base64 -i client_secrets.json | pbcopy   # paste as YOUTUBE_CLIENT_SECRETS_B64
-base64 -i youtube_token.json  | pbcopy   # paste as YOUTUBE_TOKEN_KIDS_B64 and YOUTUBE_TOKEN_TECH_B64
+# ── Kids channel account ──────────────────────────────────────────
+# 1. Download client_secrets.json for the Kids Google Cloud project
+# 2. Authenticate locally to get youtube_token.json for the Kids account:
+python youtube_auto.py videos/any.mp4 --dry-run   # opens browser → sign in with Kids account
+# 3. Encode both files:
+base64 -i client_secrets.json | pbcopy   # → paste as YOUTUBE_CLIENT_SECRETS_KIDS_B64
+base64 -i youtube_token.json  | pbcopy   # → paste as YOUTUBE_TOKEN_KIDS_B64
+
+# ── Tech channel account ──────────────────────────────────────────
+# 1. Download client_secrets.json for the Tech Google Cloud project
+# 2. Rename your existing files so they don't overwrite:
+mv client_secrets.json client_secrets_kids_backup.json
+mv youtube_token.json  youtube_token_kids_backup.json
+# 3. Place the Tech client_secrets.json and authenticate:
+python youtube_auto.py videos/any.mp4 --dry-run   # opens browser → sign in with Tech account
+# 4. Encode:
+base64 -i client_secrets.json | pbcopy   # → paste as YOUTUBE_CLIENT_SECRETS_TECH_B64
+base64 -i youtube_token.json  | pbcopy   # → paste as YOUTUBE_TOKEN_TECH_B64
+# 5. Restore Kids credentials:
+mv client_secrets_kids_backup.json client_secrets.json
+mv youtube_token_kids_backup.json  youtube_token.json
 ```
 
-### Get credentials (one-time setup)
-1. [Google Cloud Console](https://console.cloud.google.com) → New Project → Enable **YouTube Data API v3**
+### Get credentials per account (one-time setup)
+1. [Google Cloud Console](https://console.cloud.google.com) → Create **one project per channel** → Enable **YouTube Data API v3** in each
 2. Create **OAuth 2.0 credentials** (Desktop App) → Download as `client_secrets.json`
-3. Run locally once to authenticate and generate `youtube_token.json`:
-   ```bash
-   python youtube_auto.py videos/any_video.mp4 --dry-run
-   ```
-4. Encode and set both files as secrets (see above)
+3. Run locally with that account's `client_secrets.json` to generate `youtube_token.json`
+4. Encode and add both files as the channel-specific secrets above
 
 ---
 

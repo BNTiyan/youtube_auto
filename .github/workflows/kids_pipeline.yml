@@ -53,12 +53,12 @@ jobs:
 
       # ── 5. Decode YouTube credentials from GitHub Secrets ──────────────────
       #   Set these secrets in: GitHub repo → Settings → Secrets → Actions
-      #   YOUTUBE_CLIENT_SECRETS_B64 : base64 -i client_secrets.json | pbcopy
-      #   YOUTUBE_TOKEN_KIDS_B64     : base64 -i youtube_token.json  | pbcopy
-      - name: Decode YouTube credentials
+      #   YOUTUBE_CLIENT_SECRETS_KIDS_B64 : base64 -i client_secrets_kids.json | pbcopy
+      #   YOUTUBE_TOKEN_KIDS_B64          : base64 -i youtube_token_kids.json   | pbcopy
+      - name: Decode YouTube credentials (Kids account)
         run: |
-          echo '${{ secrets.YOUTUBE_CLIENT_SECRETS_B64 }}' | base64 -d > client_secrets.json
-          echo '${{ secrets.YOUTUBE_TOKEN_KIDS_B64 }}'     | base64 -d > youtube_token.json
+          echo '${{ secrets.YOUTUBE_CLIENT_SECRETS_KIDS_B64 }}' | base64 -d > client_secrets.json
+          echo '${{ secrets.YOUTUBE_TOKEN_KIDS_B64 }}'           | base64 -d > youtube_token.json
 
       # ── 6. Pick today's category ───────────────────────────────────────────
       #   Rotates through all 6 kids categories using day-of-year.

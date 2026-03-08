@@ -1,19 +1,19 @@
-name: Tech Learning — Daily Upload
+name: Tech Learning — Daily Video + Short
 
 # ─── Triggers ─────────────────────────────────────────────────────────────────
 on:
   schedule:
-    # 9:10 AM EST daily  (EST = UTC-5  →  14:10 UTC)
-    # Staggered 10 min after kids pipeline to avoid simultaneous API calls
-    - cron: '10 14 * * *'
-  workflow_dispatch:          # also triggerable manually from GitHub UI
+    # 9:20 AM EST daily  (EST = UTC-5  →  14:20 UTC)
+    # Staggered 20 min after kids pipeline to avoid simultaneous API calls
+    - cron: '20 14 * * *'
+  workflow_dispatch:
     inputs:
       category:
-        description: 'Limit to category (ai/llm/rag/database/mcp). Leave blank for auto rotation across all 50 concepts.'
+        description: 'Limit to category (ai/llm/rag/database/mcp). Leave blank for auto rotation.'
         required: false
         default: ''
       dry_run:
-        description: 'Dry run — generate video but skip YouTube upload'
+        description: 'Dry run — generate videos but skip YouTube upload'
         type: boolean
         required: false
         default: false
@@ -24,8 +24,8 @@ permissions:
 
 # ─── Job ──────────────────────────────────────────────────────────────────────
 jobs:
-  upload:
-    name: Generate & Upload
+  daily:
+    name: Generate & Upload (Video + Short)
     runs-on: ubuntu-latest
     timeout-minutes: 90
 
@@ -53,38 +53,26 @@ jobs:
       - name: Install Python dependencies
         run: pip install -r requirements.txt
 
-      # ── 5. Decode YouTube credentials from GitHub Secrets ──────────────────
-      #   Set these secrets in: GitHub repo → Settings → Secrets → Actions
-      #   YOUTUBE_CLIENT_SECRETS_TECH_B64 : base64 -i client_secrets_tech.json | pbcopy
-      #   YOUTUBE_TOKEN_TECH_B64          : base64 -i youtube_token_tech.json   | pbcopy
-      - name: Decode YouTube credentials (Tech account)
+      # ── 5. Decode YouTube credentials (Tech account) ───────────────────────
+      - name: Decode YouTube credentials
         run: |
           echo '${{ secrets.YOUTUBE_CLIENT_SECRETS_TECH_B64 }}' | base64 -d > client_secrets.json
           echo '${{ secrets.YOUTUBE_TOKEN_TECH_B64 }}'           | base64 -d > youtube_token.json
 
-      # ── 6. Pick today's single concept ──────────────────────────────────────
+      # ── 6. Pick today's concept (shared by both video + short) ─────────────
       #   Rotates across all 50 tech concepts (5 categories × 10) by day-of-year.
-      #   Optional category override limits rotation to that category's 10 items.
-      #   Outputs: category, name, text, slug, index, total → used in later steps.
       - name: Pick today's concept
         id: pick
         run: |
           OVERRIDE_CAT="${{ github.event.inputs.category }}"
-
           if [ -n "$OVERRIDE_CAT" ]; then
-            echo "Category filter: $OVERRIDE_CAT"
-            python pick_item.py \
-              --config   tech_content_config.json \
-              --field    explanation \
-              --category "$OVERRIDE_CAT"
+            python pick_item.py --config tech_content_config.json --field explanation --category "$OVERRIDE_CAT"
           else
-            python pick_item.py \
-              --config tech_content_config.json \
-              --field  explanation
+            python pick_item.py --config tech_content_config.json --field explanation
           fi
 
-      # ── 7. Generate the single-concept video ──────────────────────────────
-      - name: Generate video — ${{ steps.pick.outputs.name }}
+      # ── 7. Generate regular landscape video (1280×720) ────────────────────
+      - name: Generate regular video — ${{ steps.pick.outputs.name }}
         env:
           ITEM_NAME: ${{ steps.pick.outputs.name }}
           ITEM_CAT:  ${{ steps.pick.outputs.category }}
@@ -96,8 +84,23 @@ jobs:
             --config     tech_content_config.json \
             --output-dir tech_videos
 
-      # ── 8. Upload to YouTube ───────────────────────────────────────────────
-      - name: Upload to YouTube
+      # ── 8. Generate short portrait video (1080×1920) ──────────────────────
+      - name: Generate short — ${{ steps.pick.outputs.name }}
+        env:
+          ITEM_NAME: ${{ steps.pick.outputs.name }}
+          ITEM_CAT:  ${{ steps.pick.outputs.category }}
+          ITEM_TEXT: ${{ steps.pick.outputs.text }}
+        run: |
+          mkdir -p tech_shorts
+          python shorts_creator.py \
+            --item       "$ITEM_NAME" \
+            --cat        "$ITEM_CAT"  \
+            --text       "$ITEM_TEXT" \
+            --style      tech \
+            --output-dir tech_shorts
+
+      # ── 9. Upload regular video ────────────────────────────────────────────
+      - name: Upload regular video to YouTube
         if: ${{ github.event.inputs.dry_run != 'true' }}
         env:
           ITEM_NAME: ${{ steps.pick.outputs.name }}
@@ -105,8 +108,7 @@ jobs:
           ITEM_SLUG: ${{ steps.pick.outputs.slug }}
         run: |
           VIDEO="tech_videos/${ITEM_SLUG}_learning.mp4"
-          ITEM_CAT_UPPER="${ITEM_CAT^^}"    # uppercase (bash 4+)
-
+          ITEM_CAT_UPPER="${ITEM_CAT^^}"
           python youtube_auto.py "$VIDEO" \
             --topic    "${ITEM_NAME} Explained — ${ITEM_CAT_UPPER} Concepts" \
             --niche    "Technology and AI Education" \
@@ -114,12 +116,31 @@ jobs:
             --category 28 \
             --privacy  public
 
-      # ── 9. Dry-run notice ──────────────────────────────────────────────────
+      # ── 10. Upload short ───────────────────────────────────────────────────
+      #   YouTube auto-detects 1080×1920 portrait videos under 60 sec as Shorts.
+      - name: Upload short to YouTube
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          ITEM_NAME: ${{ steps.pick.outputs.name }}
+          ITEM_CAT:  ${{ steps.pick.outputs.category }}
+          ITEM_SLUG: ${{ steps.pick.outputs.slug }}
+        run: |
+          VIDEO="tech_shorts/${ITEM_SLUG}_short.mp4"
+          ITEM_CAT_UPPER="${ITEM_CAT^^}"
+          python youtube_auto.py "$VIDEO" \
+            --topic    "${ITEM_NAME} in 60 Seconds — ${ITEM_CAT_UPPER} #Shorts" \
+            --niche    "Technology and AI Education Shorts" \
+            --tone     "clear, professional and educational for developers. Short vertical video." \
+            --category 28 \
+            --privacy  public
+
+      # ── 11. Dry-run notice ────────────────────────────────────────────────
       - name: Dry run notice
         if: ${{ github.event.inputs.dry_run == 'true' }}
-        run: echo "⚠️  Dry run — video was generated but NOT uploaded to YouTube."
+        run: |
+          echo "⚠️  Dry run — both videos were generated but NOT uploaded to YouTube."
 
-      # ── 10. Summary ────────────────────────────────────────────────────────
+      # ── 12. Job summary ───────────────────────────────────────────────────
       - name: Write job summary
         if: always()
         env:
@@ -127,11 +148,13 @@ jobs:
           ITEM_CAT:  ${{ steps.pick.outputs.category }}
           ITEM_SLUG: ${{ steps.pick.outputs.slug }}
         run: |
-          echo "## Tech Learning Pipeline" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Field    | Value |" >> "$GITHUB_STEP_SUMMARY"
+          echo "## 💻 Tech Learning — Daily Pipeline" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Field         | Value |" >> "$GITHUB_STEP_SUMMARY"
           echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Category | \`${ITEM_CAT}\` |" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Concept  | ${ITEM_NAME} |" >> "$GITHUB_STEP_SUMMARY"
-          echo "| File     | \`${ITEM_SLUG}_learning.mp4\` |" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Run date | $(date '+%Y-%m-%d %H:%M UTC') |" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Dry run  | ${{ github.event.inputs.dry_run }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Category      | \`${ITEM_CAT}\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Concept       | **${ITEM_NAME}** |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Regular video | \`${ITEM_SLUG}_learning.mp4\` (1280×720) |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Short         | \`${ITEM_SLUG}_short.mp4\` (1080×1920) |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Uploads today | 2 (video + short) |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Run date      | $(date '+%Y-%m-%d %H:%M UTC') |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Dry run       | ${{ github.event.inputs.dry_run }} |" >> "$GITHUB_STEP_SUMMARY"

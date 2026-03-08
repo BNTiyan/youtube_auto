@@ -22,10 +22,12 @@ import tempfile
 from io import BytesIO
 from typing import Optional
 
+import asyncio
+
 import numpy as np
 import requests
 from PIL import Image, ImageDraw, ImageFont
-from gtts import gTTS
+from gtts import gTTS          # fallback TTS when edge-tts is unavailable
 
 # ── moviepy v1 / v2 compat ────────────────────────────────────────────────────
 try:
@@ -52,6 +54,16 @@ TEXT_H  = HEIGHT - IMAGE_H   # = 300 px text band at bottom
 GRAD_H  = 90           # gradient blend zone at bottom of photo
 
 PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY", "")
+
+# ── Kids TTS voice ────────────────────────────────────────────────────────────
+# en-US-AnaNeural  = Microsoft neural child voice (girl, ~8 years old) ⭐
+# Falls back to gTTS if edge-tts is not installed or network is unavailable.
+KIDS_TTS_VOICE  = "en-US-AnaNeural"
+_LANG_TO_VOICE  = {
+    "en":    "en-US-AnaNeural",
+    "en-GB": "en-GB-SoniaNeural",
+    "en-AU": "en-AU-NatashaNeural",
+}
 
 # Extra search words appended to item name per category
 CATEGORY_SEARCH_SUFFIX = {
@@ -336,7 +348,7 @@ def create_single_item_video(
         )
         intro_mp3 = os.path.join(tmp, "intro.mp3")
         create_tts(f"Hello friends! Today we are going to learn about {name}!", intro_mp3, lang)
-        clips.append(make_clip(intro_slide, intro_mp3))
+        clips.append(make_clip(intro_slide, intro_mp3, animate=(item_img is not None)))
 
         # ── Main content slide ────────────────────────────────────────────────
         print("  Creating main slide...")
@@ -348,7 +360,7 @@ def create_single_item_video(
         )
         main_mp3 = os.path.join(tmp, "main.mp3")
         create_tts(f"{name}. {fact}", main_mp3, lang)
-        clips.append(make_clip(main_slide, main_mp3))
+        clips.append(make_clip(main_slide, main_mp3, animate=(item_img is not None)))
 
         # ── Outro slide ───────────────────────────────────────────────────────
         print("  Creating outro slide...")
@@ -358,7 +370,7 @@ def create_single_item_video(
             f"Great job! Now you know about {name}! Come back tomorrow for another fun fact!",
             outro_mp3, lang,
         )
-        clips.append(make_clip(outro_slide, outro_mp3))
+        clips.append(make_clip(outro_slide, outro_mp3, animate=False))
 
         # ── Render ────────────────────────────────────────────────────────────
         print(f"\n  Rendering → {output_path}")
@@ -383,18 +395,79 @@ def create_single_item_video(
     return output_path
 
 
-# ── AUDIO ─────────────────────────────────────────────────────────────────────
+# ── AUDIO — Microsoft edge-tts kids voice (gTTS fallback) ────────────────────
+
+async def _async_edge_tts(text: str, path: str, voice: str) -> None:
+    import edge_tts
+    await edge_tts.Communicate(text, voice).save(path)
+
 
 def create_tts(text: str, out_path: str, lang: str = "en") -> None:
+    """
+    Generate TTS narration.
+    Primary  : Microsoft edge-tts with AnaNeural (real child voice, no API key needed).
+    Fallback : gTTS if edge-tts is unavailable or network fails.
+    """
+    voice = _LANG_TO_VOICE.get(lang, KIDS_TTS_VOICE)
+    try:
+        asyncio.run(_async_edge_tts(text, out_path, voice))
+        return
+    except Exception as e:
+        print(f"    ⚠️  edge-tts failed ({e}), falling back to gTTS")
     gTTS(text=text, lang=lang, slow=False).save(out_path)
+
+
+# ── KEN BURNS ZOOM ANIMATION ──────────────────────────────────────────────────
+
+def _ken_burns(clip, zoom_ratio: float = 0.06):
+    """
+    Slowly zoom in over the clip duration — the classic Ken Burns effect.
+    zoom_ratio=0.06 → image grows from 100 % to 106 % by the last frame.
+    Applied only to photo slides; text-only slides stay static.
+    """
+    duration = clip.duration
+    w, h = clip.size                        # moviepy: (width, height)
+
+    def _zoom(get_frame, t):
+        frame    = get_frame(t)
+        progress = min(t / duration, 1.0)
+        zoom     = 1.0 + zoom_ratio * progress   # 1.00 → 1.06
+        new_w    = max(1, int(w / zoom))
+        new_h    = max(1, int(h / zoom))
+        x1 = (w - new_w) // 2
+        y1 = (h - new_h) // 2
+        cropped  = frame[y1: y1 + new_h, x1: x1 + new_w]
+        return np.array(Image.fromarray(cropped).resize((w, h), Image.LANCZOS))
+
+    return clip.fl(_zoom)
+
+
+def _fadein(clip, duration: float = 0.30):
+    """Apply a fade-in; silently no-ops if moviepy version doesn't support it."""
+    try:
+        return clip.fadein(duration)
+    except Exception:
+        return clip
 
 
 # ── CLIP ASSEMBLY ─────────────────────────────────────────────────────────────
 
-def make_clip(slide: np.ndarray, audio_path: str):
-    audio = AudioFileClip(audio_path)
+def make_clip(slide: np.ndarray, audio_path: str, animate: bool = False):
+    """
+    Build a single slide video clip.
+
+    animate=True  → Ken Burns slow-zoom + fade-in  (use for photo slides)
+    animate=False → static image + fade-in          (use for text-only slides)
+    """
+    audio    = AudioFileClip(audio_path)
     duration = max(audio.duration + PAUSE_AFTER_AUDIO, MIN_SLIDE_DURATION)
-    return _set_audio(ImageClip(slide, duration=duration), audio)
+    clip     = ImageClip(slide, duration=duration)
+
+    if animate:
+        clip = _ken_burns(clip, zoom_ratio=0.06)
+
+    clip = _fadein(clip, 0.30)              # smooth fade-in on every slide
+    return _set_audio(clip, audio)
 
 
 # ── MAIN VIDEO BUILDER ────────────────────────────────────────────────────────
@@ -421,7 +494,7 @@ def create_kids_video(
         intro_slide = create_intro_slide(category, total, theme, image=intro_img)
         intro_mp3   = os.path.join(tmp, "intro.mp3")
         create_tts(f"Hello friends! Let's learn about {category}! Get ready!", intro_mp3, lang)
-        clips.append(make_clip(intro_slide, intro_mp3))
+        clips.append(make_clip(intro_slide, intro_mp3, animate=(intro_img is not None)))
 
         # ── Item slides ──
         for i, item in enumerate(items, 1):
@@ -440,7 +513,7 @@ def create_kids_video(
                                     counter=counter, image=item_img)
             mp3_path = os.path.join(tmp, f"item_{i}.mp3")
             create_tts(f"{name}. {fact}", mp3_path, lang)
-            clips.append(make_clip(slide, mp3_path))
+            clips.append(make_clip(slide, mp3_path, animate=(item_img is not None)))
 
         # ── Outro ──
         print("  Creating outro...")
@@ -450,7 +523,7 @@ def create_kids_video(
             f"Amazing work! You learned about {total} {category}! Come back tomorrow for more!",
             outro_mp3, lang,
         )
-        clips.append(make_clip(outro_slide, outro_mp3))
+        clips.append(make_clip(outro_slide, outro_mp3, animate=False))
 
         # ── Render ──
         print(f"\n  Rendering → {output_path}")

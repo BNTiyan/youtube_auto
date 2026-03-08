@@ -9,7 +9,8 @@ httplib2>=0.31.2
 requests>=2.31.0
 moviepy>=1.0.3
 Pillow>=10.0.0
-gTTS>=2.3.0
+gTTS>=2.3.0           # fallback TTS
+edge-tts>=6.1.9       # primary TTS — Microsoft neural kids voice (AnaNeural)
 numpy>=1.24.0
 
 # Scheduler (scheduler.py daemon mode)

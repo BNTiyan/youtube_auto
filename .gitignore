@@ -24,6 +24,10 @@ videos/*.avi
 videos/*.mkv
 tech_videos/
 tech_videos/*.mp4
+shorts/
+shorts/*.mp4
+tech_shorts/
+tech_shorts/*.mp4
 
 # ── Upload state logs (channel-specific, generated at runtime) ────────────────
 # These are written by the GitHub Actions pipeline; no need to track locally.

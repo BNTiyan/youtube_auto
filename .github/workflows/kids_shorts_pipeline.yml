@@ -1,0 +1,131 @@
+name: Kids Learning — Daily Shorts Upload
+
+# ─── Triggers ─────────────────────────────────────────────────────────────────
+on:
+  schedule:
+    # 9:00 AM EST daily  (EST = UTC-5  →  14:00 UTC)
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+    inputs:
+      category:
+        description: 'Limit to category (animals/fruits/vegetables/cars/airplanes/brands). Leave blank for auto.'
+        required: false
+        default: ''
+      dry_run:
+        description: 'Dry run — generate Short but skip YouTube upload'
+        type: boolean
+        required: false
+        default: false
+
+# ─── Permissions ──────────────────────────────────────────────────────────────
+permissions:
+  contents: read
+
+# ─── Job ──────────────────────────────────────────────────────────────────────
+jobs:
+  upload:
+    name: Generate & Upload Short
+    runs-on: ubuntu-latest
+    timeout-minutes: 30   # Shorts are short — render is fast
+
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+
+    steps:
+      # ── 1. Checkout ────────────────────────────────────────────────────────
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # ── 2. Python ──────────────────────────────────────────────────────────
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      # ── 3. ffmpeg (required by moviepy) ───────────────────────────────────
+      - name: Install ffmpeg
+        run: sudo apt-get install -y ffmpeg
+
+      # ── 4. Python deps ────────────────────────────────────────────────────
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+
+      # ── 5. YouTube credentials (Kids account) ─────────────────────────────
+      - name: Decode YouTube credentials
+        run: |
+          echo '${{ secrets.YOUTUBE_CLIENT_SECRETS_KIDS_B64 }}' | base64 -d > client_secrets.json
+          echo '${{ secrets.YOUTUBE_TOKEN_KIDS_B64 }}'           | base64 -d > youtube_token.json
+
+      # ── 6. Pick today's item ───────────────────────────────────────────────
+      #   60 kids items total (6 × 10). Rotates by day-of-year.
+      #   Outputs: category, name, text, slug
+      - name: Pick today's item
+        id: pick
+        run: |
+          OVERRIDE_CAT="${{ github.event.inputs.category }}"
+          if [ -n "$OVERRIDE_CAT" ]; then
+            python pick_item.py --config content_config.json --field fact --category "$OVERRIDE_CAT"
+          else
+            python pick_item.py --config content_config.json --field fact
+          fi
+
+      # ── 7. Generate the Short (1080×1920 portrait) ────────────────────────
+      - name: Generate Short — ${{ steps.pick.outputs.name }}
+        env:
+          ITEM_NAME: ${{ steps.pick.outputs.name }}
+          ITEM_CAT:  ${{ steps.pick.outputs.category }}
+          ITEM_TEXT: ${{ steps.pick.outputs.text }}
+        run: |
+          mkdir -p shorts
+          python shorts_creator.py \
+            --item       "$ITEM_NAME" \
+            --cat        "$ITEM_CAT"  \
+            --text       "$ITEM_TEXT" \
+            --style      kids \
+            --output-dir shorts
+
+      # ── 8. Upload to YouTube as a Short ───────────────────────────────────
+      #   YouTube auto-detects vertical videos ≤ 60 sec as Shorts.
+      #   No extra flags needed — the 1080×1920 portrait format is sufficient.
+      - name: Upload to YouTube
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          ITEM_NAME: ${{ steps.pick.outputs.name }}
+          ITEM_CAT:  ${{ steps.pick.outputs.category }}
+          ITEM_SLUG: ${{ steps.pick.outputs.slug }}
+        run: |
+          VIDEO="shorts/${ITEM_SLUG}_short.mp4"
+          CAT_TITLE="${ITEM_CAT^}"
+
+          python youtube_auto.py "$VIDEO" \
+            --topic    "${ITEM_NAME} for Kids — Learn about ${CAT_TITLE}" \
+            --niche    "Kids Education Shorts" \
+            --tone     "fun, friendly and educational for young children. Short 60-second video." \
+            --category 27 \
+            --made-for-kids \
+            --privacy  public
+
+      # ── 9. Dry-run notice ─────────────────────────────────────────────────
+      - name: Dry run notice
+        if: ${{ github.event.inputs.dry_run == 'true' }}
+        run: echo "⚠️  Dry run — Short was generated but NOT uploaded."
+
+      # ── 10. Summary ───────────────────────────────────────────────────────
+      - name: Write job summary
+        if: always()
+        env:
+          ITEM_NAME: ${{ steps.pick.outputs.name }}
+          ITEM_CAT:  ${{ steps.pick.outputs.category }}
+          ITEM_SLUG: ${{ steps.pick.outputs.slug }}
+        run: |
+          echo "## 📱 Kids Shorts Pipeline" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Field    | Value |" >> "$GITHUB_STEP_SUMMARY"
+          echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Format   | 1080×1920 portrait (YouTube Short) |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Category | \`${ITEM_CAT}\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Item     | ${ITEM_NAME} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| File     | \`${ITEM_SLUG}_short.mp4\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Run date | $(date '+%Y-%m-%d %H:%M UTC') |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Dry run  | ${{ github.event.inputs.dry_run }} |" >> "$GITHUB_STEP_SUMMARY"

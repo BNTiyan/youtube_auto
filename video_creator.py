@@ -154,6 +154,17 @@ def fetch_pexels_image(query: str) -> Optional[Image.Image]:
         resp.raise_for_status()
         photos = resp.json().get("photos", [])
         if not photos:
+            # Retry without orientation filter (helps for subjects like hummingbirds
+            # where landscape shots are rare on Pexels)
+            resp2 = requests.get(
+                "https://api.pexels.com/v1/search",
+                headers={"Authorization": PEXELS_API_KEY},
+                params={"query": query, "per_page": 3},
+                timeout=10,
+            )
+            resp2.raise_for_status()
+            photos = resp2.json().get("photos", [])
+        if not photos:
             _img_cache[query] = None
             return None
 

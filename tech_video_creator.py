@@ -100,6 +100,97 @@ TECH_IMAGE_QUERIES: dict = {
     "Indexing":                "database index search optimization",
     "Graph Database":          "graph network nodes connections",
     "Sharding":                "distributed server database technology",
+    # AI (extended)
+    "Supervised Learning":     "teacher student learning classroom",
+    "Unsupervised Learning":   "data clustering abstract patterns",
+    "Semi-supervised Learning":"data science analysis chart",
+    "Self-supervised Learning":"robot self training learning",
+    "Federated Learning":      "distributed network privacy data",
+    "Active Learning":         "human loop labeling data annotation",
+    "Few-shot Learning":       "small data examples learning AI",
+    "Zero-shot Learning":      "AI generalization knowledge transfer",
+    "One-shot Learning":       "single example face recognition",
+    "Meta-learning":           "learning to learn AI optimization",
+    "Explainable AI":          "transparent AI explanation dashboard",
+    "AI Safety":               "safety shield protection technology",
+    "AI Alignment":            "AI human values alignment ethics",
+    "AI Ethics":               "ethics fairness AI society",
+    "Bias in AI":              "bias fairness scale balance data",
+    "AI Fairness":             "fairness equality technology AI",
+    "Robustness":              "shield protection robust technology",
+    "Adversarial Examples":    "attack glitch image adversarial",
+    "Model Interpretability":  "transparent glass model explanation",
+    "Feature Engineering":     "data science feature analysis chart",
+    "Overfitting":             "fitting curve data graph overfitting",
+    "Underfitting":            "simple model data graph chart",
+    "Regularization":          "constraint optimization mathematics",
+    "Cross-validation":        "validation testing data split science",
+    "Hyperparameter Tuning":   "optimization tuning knobs settings",
+    "Gradient Descent":        "mountain slope descent optimization graph",
+    "Backpropagation":         "neural network backward signal circuit",
+    "Epoch":                   "training cycle loop data iteration",
+    "Batch Size":              "data batch group processing server",
+    "Learning Rate":           "speed optimization learning rate graph",
+    "Dropout":                 "neural network regularization circuit",
+    "Attention Mechanism":     "focus attention spotlight AI",
+    "Convolutional Neural Net":"image recognition layers neural",
+    "Recurrent Neural Net":    "sequence time series neural network",
+    "LSTM":                    "memory cell sequence learning neural",
+    "GAN":                     "generative adversarial network art",
+    "Diffusion Model":         "image generation art diffusion noise",
+    "Variational Autoencoder": "encoder decoder latent space AI",
+    "Encoder-Decoder":         "encoder decoder architecture AI",
+    "Object Detection":        "object detection bounding box camera",
+    "Image Segmentation":      "image segmentation mask pixel",
+    "Speech Recognition":      "speech microphone voice recognition",
+    "Text-to-Speech":          "text voice speaker audio",
+    "Sentiment Analysis":      "emotion sentiment happy sad text",
+    "Named Entity Recognition":"text entity highlight recognition",
+    "Text Classification":     "text label classification document",
+    "Recommendation System":   "recommendation engine Netflix shopping",
+    "Anomaly Detection":       "anomaly alert warning detection",
+    "Time Series Forecasting": "time series chart forecast prediction",
+    "Clustering":              "data clustering groups visualization",
+    "Principal Component Analysis":"data dimensionality reduction chart",
+    "Random Forest":           "forest trees decision ensemble",
+    "Support Vector Machine":  "classification boundary data science",
+    "Decision Tree":           "decision tree branch flowchart",
+    "Naive Bayes":             "probability statistics bayesian",
+    "K-Nearest Neighbors":     "nearest neighbor points data chart",
+    "Logistic Regression":     "classification sigmoid curve chart",
+    "Linear Regression":       "statistics graph line chart data science",
+    "Ensemble Learning":       "team ensemble models combination",
+    "Boosting":                "boost performance optimization chart",
+    "Bagging":                 "sampling bootstrap data bags",
+    "Stacking":                "stack layers models ensemble",
+    "Confusion Matrix":        "matrix table classification results",
+    "Precision and Recall":    "precision recall metrics evaluation",
+    "F1 Score":                "score metric evaluation chart",
+    "ROC Curve":               "roc curve chart classification",
+    "AUC":                     "area curve chart classification metric",
+    "Mean Squared Error":      "error loss function graph chart",
+    "Cross-entropy Loss":      "loss function neural network training",
+    "Reward Function":         "reward signal robot training",
+    "Policy Gradient":         "policy optimization reinforcement",
+    "Q-Learning":              "Q table reinforcement learning game",
+    "Multi-agent Systems":     "multiple agents robots cooperation",
+    "Symbolic AI":             "logic symbols rules AI",
+    "Neuro-symbolic AI":       "neural symbolic hybrid AI",
+    "Causal Inference":        "cause effect arrows diagram",
+    "AutoML":                  "automated machine learning pipeline",
+    "Neural Architecture Search":"architecture design neural network",
+    "Knowledge Graph":         "knowledge graph nodes edges network",
+    "Ontology":                "ontology concepts hierarchy diagram",
+    "Data Augmentation":       "data augmentation image transformation",
+    "Synthetic Data":          "synthetic data generation AI",
+    "Model Compression":       "compression small model efficient",
+    "Quantization":            "quantization bits precision model",
+    "Pruning":                 "pruning cutting branches tree model",
+    "Knowledge Distillation":  "teacher student knowledge transfer",
+    "Edge AI":                 "edge device mobile AI chip",
+    "Multimodal AI":           "multimodal image text audio AI",
+    "World Model":             "world simulation model AI",
+    "AI Benchmark":            "benchmark test score evaluation",
     # MCP
     "MCP":                     "protocol connection API network",
     "MCP Server":              "server API connection technology",
@@ -225,6 +316,15 @@ def fetch_pexels_image(query: str) -> Optional[Image.Image]:
         resp.raise_for_status()
         photos = resp.json().get("photos", [])
         if not photos:
+            resp2 = requests.get(
+                "https://api.pexels.com/v1/search",
+                headers={"Authorization": PEXELS_API_KEY},
+                params={"query": query, "per_page": 3},
+                timeout=10,
+            )
+            resp2.raise_for_status()
+            photos = resp2.json().get("photos", [])
+        if not photos:
             _img_cache[query] = None
             return None
 
@@ -243,8 +343,15 @@ def fetch_pexels_image(query: str) -> Optional[Image.Image]:
 
 
 def get_tech_image(term: str) -> Optional[Image.Image]:
-    query = TECH_IMAGE_QUERIES.get(term, f"{term} technology")
-    return fetch_pexels_image(query)
+    query = TECH_IMAGE_QUERIES.get(term)
+    if query:
+        return fetch_pexels_image(query)
+    # For unmapped terms, try the term itself first, then fall back to "technology data science"
+    img = fetch_pexels_image(term)
+    if img:
+        return img
+    return fetch_pexels_image("technology data science code")
+
 
 
 # ── SLIDE CREATION ────────────────────────────────────────────────────────────
@@ -256,10 +363,27 @@ def _draw_grid(draw, theme: dict):
 
 
 def _darken_image(img: Image.Image, factor: float = 0.55) -> Image.Image:
-    """Multiply pixel values by factor to darken the image."""
     arr = np.array(img, dtype=np.float32)
     arr = np.clip(arr * factor, 0, 255)
     return Image.fromarray(arr.astype(np.uint8))
+
+
+def _gradient_bg(w: int, h: int, top_color, bot_color) -> np.ndarray:
+    """Vertical gradient from top_color → bot_color."""
+    arr = np.zeros((h, w, 3), dtype=np.float32)
+    for i, (tc, bc) in enumerate(zip(top_color, bot_color)):
+        arr[:, :, i] = np.linspace(tc, bc, h).reshape(-1, 1)
+    return np.clip(arr, 0, 255).astype(np.uint8)
+
+
+def _accent_glow(arr: np.ndarray, accent, x: int, glow_w: int = 18):
+    """Paint a glowing accent strip at column x (fades right)."""
+    ac = np.array(accent, dtype=np.float32)
+    for dx in range(glow_w):
+        alpha = (1 - dx / glow_w) ** 2
+        col = x + dx
+        if col < arr.shape[1]:
+            arr[:, col] = np.clip(arr[:, col] * (1 - alpha) + ac * alpha, 0, 255)
 
 
 def create_tech_slide(
@@ -270,14 +394,16 @@ def create_tech_slide(
     image: Optional[Image.Image] = None,
 ) -> np.ndarray:
 
-    base = Image.new("RGB", (WIDTH, HEIGHT), theme["bg"])
+    # ── Gradient base ─────────────────────────────────────────────────────────
+    bg_top = tuple(min(c + 12, 255) for c in theme["bg"])
+    bg_arr = _gradient_bg(WIDTH, HEIGHT, bg_top, theme["bg"])
+    base = Image.fromarray(bg_arr)
     draw = ImageDraw.Draw(base)
 
     if image is not None:
         # ══ SPLIT-SCREEN: left = text panel, right = darkened photo ══════════
-        CONTENT_Y = BADGE_H   # content starts below badge bar
+        CONTENT_Y = BADGE_H
 
-        # 1. Fill right half with the photo (cropped to fit)
         photo_h = HEIGHT - CONTENT_Y
         img_w, img_h = image.size
         scale = max(PHOTO_W / img_w, photo_h / img_h)
@@ -287,73 +413,204 @@ def create_tech_slide(
         top  = (nh - photo_h) // 2
         cropped = scaled.crop((left, top, left + PHOTO_W, top + photo_h))
 
-        # 2. Darken photo for readability contrast
-        darkened = _darken_image(cropped, factor=0.55)
+        darkened = _darken_image(cropped, factor=0.50)
         base.paste(darkened, (TEXT_W, CONTENT_Y))
 
-        # 3. Subtle gradient on left edge of photo → dark panel blend
+        # Blend photo edge into card
         arr = np.array(base, dtype=np.float32)
         bg_c = np.array(theme["card"], dtype=np.float32)
-        blend_w = 80
+        blend_w = 100
         for x in range(blend_w):
-            alpha = 1 - (x / blend_w) ** 2
+            alpha = (1 - x / blend_w) ** 1.5
             arr[CONTENT_Y:, TEXT_W + x] = (
                 arr[CONTENT_Y:, TEXT_W + x] * (1 - alpha) + bg_c * alpha
             )
         base = Image.fromarray(arr.astype(np.uint8))
         draw = ImageDraw.Draw(base)
 
-        # 4. Left text panel background
-        draw.rectangle([0, CONTENT_Y, TEXT_W, HEIGHT], fill=theme["card"])
+        # Card gradient on left panel
+        card_arr = _gradient_bg(TEXT_W, HEIGHT - CONTENT_Y,
+                                 tuple(min(c + 8, 255) for c in theme["card"]),
+                                 theme["card"])
+        base.paste(Image.fromarray(card_arr), (0, CONTENT_Y))
+        draw = ImageDraw.Draw(base)
 
     else:
-        # ══ TEXT-ONLY: grid + full-width card ════════════════════════════════
         _draw_grid(draw, theme)
-        draw.rectangle([0, BADGE_H, WIDTH, HEIGHT], fill=theme["card"])
+        card_arr = _gradient_bg(WIDTH, HEIGHT - BADGE_H,
+                                 tuple(min(c + 10, 255) for c in theme["card"]),
+                                 theme["card"])
+        base.paste(Image.fromarray(card_arr), (0, BADGE_H))
+        draw = ImageDraw.Draw(base)
 
-    # ── Top badge bar (always) ──
-    draw.rectangle([0, 0, WIDTH, BADGE_H], fill=theme["bg"])
-    draw.line([(0, BADGE_H), (WIDTH, BADGE_H)], fill=theme["accent"], width=2)
-    draw.text((30, 22), theme["badge"], font=load_font(30), fill=theme["accent"])
+    # ── Top badge bar ──────────────────────────────────────────────────────────
+    badge_arr = _gradient_bg(WIDTH, BADGE_H,
+                              tuple(min(c + 6, 255) for c in theme["bg"]),
+                              theme["bg"])
+    base.paste(Image.fromarray(badge_arr), (0, 0))
+    draw = ImageDraw.Draw(base)
+    draw.line([(0, BADGE_H - 1), (WIDTH, BADGE_H - 1)], fill=theme["accent"], width=3)
+    draw.text((38, 20), theme["badge"], font=load_font(30), fill=theme["accent"])
 
     if counter:
         cf = load_font(26)
         bbox = draw.textbbox((0, 0), counter, font=cf)
-        draw.text((WIDTH - (bbox[2] - bbox[0]) - 30, 24),
+        draw.text((WIDTH - (bbox[2] - bbox[0]) - 30, 22),
                   counter, font=cf, fill=theme["muted"])
 
-    # ── Accent left strip ──
-    draw.rectangle([0, BADGE_H, 5, HEIGHT], fill=theme["accent"])
+    # ── Glowing accent strip ───────────────────────────────────────────────────
+    arr = np.array(base, dtype=np.float32)
+    _accent_glow(arr, theme["accent"], x=0, glow_w=20)
+    base = Image.fromarray(arr.astype(np.uint8))
+    draw = ImageDraw.Draw(base)
 
-    # ── Term name (auto-sized, left panel) ──
-    x_pad = 30
-    text_x_start = 5 + x_pad
+    # ── Term name ─────────────────────────────────────────────────────────────
+    x_pad = 36
+    text_x_start = 20 + x_pad
     text_x_end   = TEXT_W - x_pad if image else WIDTH - x_pad
-    term_font = fit_text_font(draw, term, text_x_end - text_x_start, max_size=72)
-    term_y    = BADGE_H + (HEIGHT - BADGE_H) // 2 - 110
+    term_font = fit_text_font(draw, term, text_x_end - text_x_start, max_size=68)
+    term_y    = BADGE_H + (HEIGHT - BADGE_H) // 2 - 120
+    # Shadow
+    draw.text((text_x_start + 3, term_y + 3), term, font=term_font, fill=(0, 0, 0))
     draw_centered_in(draw, term, term_font, term_y, text_x_start, text_x_end, theme["text"])
 
-    # ── Divider ──
-    div_y = BADGE_H + (HEIGHT - BADGE_H) // 2 - 5
+    # ── Accent divider with dots ───────────────────────────────────────────────
+    div_y = BADGE_H + (HEIGHT - BADGE_H) // 2 - 10
     draw.line([(text_x_start, div_y), (text_x_end, div_y)], fill=theme["accent"], width=2)
+    for dot_x in range(text_x_start, text_x_end, 20):
+        draw.ellipse([dot_x - 2, div_y - 2, dot_x + 2, div_y + 2], fill=theme["accent"])
 
-    # ── Explanation (wrapped, left panel) ──
-    exp_font = load_font(34)
-    max_exp_w = 32 if image else 56
+    # ── Explanation ───────────────────────────────────────────────────────────
+    exp_font = load_font(33)
+    max_exp_w = 30 if image else 54
     wrapped = textwrap.wrap(explanation, width=max_exp_w)
-    y_pos = div_y + 18
+    y_pos = div_y + 22
     for line in wrapped[:3]:
         bbox = draw.textbbox((0, 0), line, font=exp_font)
         tw = bbox[2] - bbox[0]
         x  = text_x_start + (text_x_end - text_x_start - tw) // 2
+        draw.text((x + 1, y_pos + 1), line, font=exp_font, fill=(0, 0, 0))
         draw.text((x, y_pos), line, font=exp_font, fill=theme["muted"])
-        y_pos += 50
+        y_pos += 52
 
-    # ── Bottom watermark ──
-    wm = "Tech Learning"
+    # ── Bottom watermark ──────────────────────────────────────────────────────
+    wm = "NavaDisha Tech Learning"
     wm_font = load_font(20)
     bbox = draw.textbbox((0, 0), wm, font=wm_font)
-    draw.text(((text_x_start + text_x_end - (bbox[2] - bbox[0])) // 2, HEIGHT - 32),
+    draw.text(((text_x_start + text_x_end - (bbox[2] - bbox[0])) // 2, HEIGHT - 30),
+              wm, font=wm_font, fill=theme["grid"])
+
+    return np.array(base)
+
+
+def create_points_slide(
+    term: str,
+    points: list,
+    theme: dict,
+    image: Optional[Image.Image] = None,
+) -> np.ndarray:
+    """Creative bullet-point slide showing key facts about a concept."""
+
+    bg_top = tuple(min(c + 12, 255) for c in theme["bg"])
+    bg_arr = _gradient_bg(WIDTH, HEIGHT, bg_top, theme["bg"])
+    base = Image.fromarray(bg_arr)
+    draw = ImageDraw.Draw(base)
+
+    if image is not None:
+        CONTENT_Y = BADGE_H
+        photo_h = HEIGHT - CONTENT_Y
+        img_w, img_h = image.size
+        scale = max(PHOTO_W / img_w, photo_h / img_h)
+        nw, nh = int(img_w * scale), int(img_h * scale)
+        scaled = image.resize((nw, nh), Image.LANCZOS)
+        left = (nw - PHOTO_W) // 2
+        top  = (nh - photo_h) // 2
+        cropped = scaled.crop((left, top, left + PHOTO_W, top + photo_h))
+        darkened = _darken_image(cropped, factor=0.45)
+        base.paste(darkened, (TEXT_W, CONTENT_Y))
+
+        arr = np.array(base, dtype=np.float32)
+        bg_c = np.array(theme["card"], dtype=np.float32)
+        for x in range(100):
+            alpha = (1 - x / 100) ** 1.5
+            arr[CONTENT_Y:, TEXT_W + x] = arr[CONTENT_Y:, TEXT_W + x] * (1 - alpha) + bg_c * alpha
+        base = Image.fromarray(arr.astype(np.uint8))
+
+        card_arr = _gradient_bg(TEXT_W, HEIGHT - CONTENT_Y,
+                                 tuple(min(c + 8, 255) for c in theme["card"]),
+                                 theme["card"])
+        base.paste(Image.fromarray(card_arr), (0, CONTENT_Y))
+    else:
+        _draw_grid(draw, theme)
+        card_arr = _gradient_bg(WIDTH, HEIGHT - BADGE_H,
+                                 tuple(min(c + 10, 255) for c in theme["card"]),
+                                 theme["card"])
+        base.paste(Image.fromarray(card_arr), (0, BADGE_H))
+
+    draw = ImageDraw.Draw(base)
+
+    # Badge bar
+    badge_arr = _gradient_bg(WIDTH, BADGE_H,
+                              tuple(min(c + 6, 255) for c in theme["bg"]),
+                              theme["bg"])
+    base.paste(Image.fromarray(badge_arr), (0, 0))
+    draw = ImageDraw.Draw(base)
+    draw.line([(0, BADGE_H - 1), (WIDTH, BADGE_H - 1)], fill=theme["accent"], width=3)
+    draw.text((38, 20), theme["badge"], font=load_font(30), fill=theme["accent"])
+
+    # Glowing strip
+    arr = np.array(base, dtype=np.float32)
+    _accent_glow(arr, theme["accent"], x=0, glow_w=20)
+    base = Image.fromarray(arr.astype(np.uint8))
+    draw = ImageDraw.Draw(base)
+
+    x_pad = 36
+    text_x_start = 20 + x_pad
+    text_x_end   = TEXT_W - x_pad if image else WIDTH - x_pad
+    panel_w = text_x_end - text_x_start
+
+    # "Key Points" header
+    header_font = fit_text_font(draw, term, panel_w, max_size=52)
+    header_y = BADGE_H + 22
+    draw.text((text_x_start + 2, header_y + 2), term, font=header_font, fill=(0, 0, 0))
+    draw_centered_in(draw, term, header_font, header_y, text_x_start, text_x_end, theme["text"])
+
+    # Accent underline
+    uh = header_y + 62
+    draw.line([(text_x_start, uh), (text_x_end, uh)], fill=theme["accent"], width=2)
+    draw.text((text_x_start, uh + 8), "Key Points", font=load_font(26), fill=theme["accent"])
+
+    # Bullet point rows
+    bullet_font  = load_font(28)
+    marker_font  = load_font(30)
+    row_h        = 95
+    row_start_y  = uh + 52
+    use_points   = [p for p in points if p][:3]
+
+    for i, point in enumerate(use_points):
+        ry = row_start_y + i * row_h
+        # Row background card
+        row_bg = tuple(min(c + 18, 255) for c in theme["card"])
+        draw.rectangle([text_x_start - 8, ry - 4,
+                        text_x_end + 8, ry + row_h - 14], fill=row_bg)
+        # Left accent bar for each row
+        draw.rectangle([text_x_start - 8, ry - 4,
+                        text_x_start - 4, ry + row_h - 14], fill=theme["accent"])
+        # Bullet marker
+        draw.text((text_x_start + 4, ry + 4), "▶", font=marker_font, fill=theme["accent"])
+        # Point text (wrapped)
+        max_chars = 38 if image else 60
+        wrapped_pt = textwrap.wrap(point, width=max_chars)
+        pt_y = ry + 6
+        for line in wrapped_pt[:2]:
+            draw.text((text_x_start + 38, pt_y), line, font=bullet_font, fill=theme["muted"])
+            pt_y += 34
+
+    # Bottom watermark
+    wm = "NavaDisha Tech Learning"
+    wm_font = load_font(20)
+    bbox = draw.textbbox((0, 0), wm, font=wm_font)
+    draw.text(((text_x_start + text_x_end - (bbox[2] - bbox[0])) // 2, HEIGHT - 30),
               wm, font=wm_font, fill=theme["grid"])
 
     return np.array(base)
@@ -387,12 +644,13 @@ def create_single_concept_video(
     use_images: bool = True,
 ) -> str:
     """
-    Generate a short (~30-45 sec) video for ONE tech concept only.
-    Structure: intro slide → main content slide → outro slide.
+    Generate a short (~45-60 sec) video for ONE tech concept.
+    Structure: intro → concept explanation → key points → outro.
     """
     theme       = TECH_THEMES.get(category.lower(), DEFAULT_TECH_THEME)
     name        = item["name"]
     explanation = item.get("explanation", f"{name} is a key concept in tech.")
+    raw_points  = item.get("points", [])
     clips       = []
 
     with tempfile.TemporaryDirectory() as tmp:
@@ -403,7 +661,7 @@ def create_single_concept_video(
             print(f"  🖼️  Fetching image for {name}...")
             item_img = get_tech_image(name)
 
-        # ── Intro slide ──────────────────────────────────────────────────────
+        # ── Slide 1: Intro ────────────────────────────────────────────────────
         print("  Creating intro slide...")
         intro_slide = create_tech_slide(
             term=f"Today: {name}",
@@ -413,13 +671,14 @@ def create_single_concept_video(
         )
         intro_mp3 = os.path.join(tmp, "intro.mp3")
         create_tts(
-            f"Welcome! Today we are going to explain {name} — a key {category} concept.",
+            f"Welcome to NavaDisha Tech Learning! "
+            f"Today we are breaking down {name} — an essential {category} concept.",
             intro_mp3, lang,
         )
         clips.append(make_clip(intro_slide, intro_mp3))
 
-        # ── Main content slide ────────────────────────────────────────────────
-        print("  Creating main slide...")
+        # ── Slide 2: Concept explanation ──────────────────────────────────────
+        print("  Creating concept slide...")
         main_slide = create_tech_slide(
             term=name,
             explanation=explanation,
@@ -427,16 +686,39 @@ def create_single_concept_video(
             image=item_img,
         )
         main_mp3 = os.path.join(tmp, "main.mp3")
-        create_tts(f"{name}. {explanation}", main_mp3, lang)
+        create_tts(
+            f"So, what is {name}? {explanation} "
+            f"This is one of the core ideas in {category} that every developer should know.",
+            main_mp3, lang,
+        )
         clips.append(make_clip(main_slide, main_mp3))
 
-        # ── Outro slide ───────────────────────────────────────────────────────
+        # ── Slide 3: Key points ───────────────────────────────────────────────
+        if raw_points:
+            print("  Creating key points slide...")
+            points_slide = create_points_slide(
+                term=name,
+                points=raw_points,
+                theme=theme,
+                image=item_img,
+            )
+            points_mp3 = os.path.join(tmp, "points.mp3")
+            # Build a natural-sounding TTS from the first 3 points
+            pts_tts = [p for p in raw_points if p][:3]
+            pts_text = " ".join(f"Point {i+1}: {p}" for i, p in enumerate(pts_tts))
+            create_tts(
+                f"Here are the key things to know about {name}. {pts_text}",
+                points_mp3, lang,
+            )
+            clips.append(make_clip(points_slide, points_mp3))
+
+        # ── Slide 4: Outro ────────────────────────────────────────────────────
         print("  Creating outro slide...")
         outro_slide = create_tech_outro(category, theme)
         outro_mp3   = os.path.join(tmp, "outro.mp3")
         create_tts(
-            f"Great work! Now you understand {name}. "
-            "See you tomorrow for another tech concept!",
+            f"And that is {name} explained! "
+            f"Subscribe to NavaDisha for a new {category} concept every single day. See you tomorrow!",
             outro_mp3, lang,
         )
         clips.append(make_clip(outro_slide, outro_mp3))

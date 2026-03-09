@@ -173,6 +173,15 @@ def fetch_pexels_image(query: str) -> Optional[Image.Image]:
         resp.raise_for_status()
         photos = resp.json().get("photos", [])
         if not photos:
+            resp2 = requests.get(
+                "https://api.pexels.com/v1/search",
+                headers={"Authorization": PEXELS_API_KEY},
+                params={"query": query, "per_page": 5},
+                timeout=10,
+            )
+            resp2.raise_for_status()
+            photos = resp2.json().get("photos", [])
+        if not photos:
             _img_cache[query] = None
             return None
         src = photos[0]["src"]

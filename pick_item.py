@@ -17,6 +17,34 @@ import argparse
 from datetime import datetime
 
 
+def generate_fallback_metadata(name: str, category: str, text: str, points: list) -> dict:
+    """
+    Generate high-quality metadata from local JSON data.
+    """
+    clean_name = name.strip()
+    clean_cat = category.strip().capitalize()
+    
+    title = f"All About {clean_name} | {clean_cat} Learning"
+    
+    description = f"{text}\n\n"
+    if points:
+        description += "Key learning points:\n"
+        for p in points:
+            description += f"• {p}\n"
+    
+    # Generic but relevant tags
+    tags = [clean_name.lower(), clean_cat.lower(), "learning", "education", "facts", "youtube"]
+    
+    # Add hashtags to description
+    description += f"\n#Youtube #Learning #Education #{clean_name.replace(' ', '')} #{clean_cat.replace(' ', '')}"
+    
+    return {
+        "title": title,
+        "description": description,
+        "tags": ",".join(tags)
+    }
+
+
 def pick_today(config_dir: str, field: str = "fact", category_filter: str = "") -> dict:
     """
     Pick ONE json from folders and fetch data from that.
@@ -90,7 +118,13 @@ def pick_today(config_dir: str, field: str = "fact", category_filter: str = "") 
 
     raw_item = all_items[item_idx]
     text = raw_item.get(field) or raw_item.get("fact") or raw_item.get("explanation") or ""
+    points = raw_item.get("points", [])
+    
     chosen = {"category": cat, "name": raw_item["name"], "text": text}
+    
+    # Generate fallback metadata fields
+    fallback = generate_fallback_metadata(chosen["name"], chosen["category"], chosen["text"], points)
+    chosen.update(fallback)
 
     # Slug: lowercase name, spaces/hyphens → underscores
     chosen["slug"]  = chosen["name"].lower().replace(" ", "_").replace("-", "_")
@@ -135,7 +169,7 @@ Examples:
     gh_output = os.environ.get("GITHUB_OUTPUT", "")
     if gh_output:
         with open(gh_output, "a") as f:
-            for key in ("category", "name", "text", "slug"):
+            for key in ("category", "name", "text", "slug", "title", "description", "tags"):
                 # Sanitise: collapse any embedded newlines so the GITHUB_OUTPUT
                 # key=value format stays on a single line.
                 val = str(item[key]).replace("\n", " ").replace("\r", "")

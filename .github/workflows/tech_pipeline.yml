@@ -106,11 +106,14 @@ jobs:
           ITEM_NAME: ${{ steps.pick.outputs.name }}
           ITEM_CAT:  ${{ steps.pick.outputs.category }}
           ITEM_SLUG: ${{ steps.pick.outputs.slug }}
+          ITEM_TITLE: ${{ steps.pick.outputs.title }}
+          ITEM_DESC: ${{ steps.pick.outputs.description }}
+          ITEM_TAGS: ${{ steps.pick.outputs.tags }}
         run: |
           VIDEO="tech_videos/${ITEM_SLUG}_learning.mp4"
           ITEM_CAT_UPPER="${ITEM_CAT^^}"
           python youtube_auto.py "$VIDEO" \
-            --topic    "${ITEM_NAME} Explained — ${ITEM_CAT_UPPER} Concepts" \
+            --topic    "${ITEM_TITLE}" \
             --niche    "Technology and AI Education" \
             --tone     "clear, professional and educational for developers and tech enthusiasts" \
             --category 28 \
@@ -124,11 +127,14 @@ jobs:
           ITEM_NAME: ${{ steps.pick.outputs.name }}
           ITEM_CAT:  ${{ steps.pick.outputs.category }}
           ITEM_SLUG: ${{ steps.pick.outputs.slug }}
+          ITEM_TITLE: ${{ steps.pick.outputs.title }}
+          ITEM_DESC: ${{ steps.pick.outputs.description }}
+          ITEM_TAGS: ${{ steps.pick.outputs.tags }}
         run: |
           VIDEO="tech_shorts/${ITEM_SLUG}_short.mp4"
           ITEM_CAT_UPPER="${ITEM_CAT^^}"
           python youtube_auto.py "$VIDEO" \
-            --topic    "${ITEM_NAME} in 60 Seconds — ${ITEM_CAT_UPPER} #Shorts" \
+            --topic    "${ITEM_TITLE} #Shorts" \
             --niche    "Technology and AI Education Shorts" \
             --tone     "clear, professional and educational for developers. Short vertical video." \
             --category 28 \

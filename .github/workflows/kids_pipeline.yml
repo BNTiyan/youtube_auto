@@ -106,11 +106,14 @@ jobs:
           ITEM_NAME: ${{ steps.pick.outputs.name }}
           ITEM_CAT:  ${{ steps.pick.outputs.category }}
           ITEM_SLUG: ${{ steps.pick.outputs.slug }}
+          ITEM_TITLE: ${{ steps.pick.outputs.title }}
+          ITEM_DESC: ${{ steps.pick.outputs.description }}
+          ITEM_TAGS: ${{ steps.pick.outputs.tags }}
         run: |
           VIDEO="videos/${ITEM_SLUG}_learning.mp4"
           CAT_TITLE="${ITEM_CAT^}"
           python youtube_auto.py "$VIDEO" \
-            --topic    "${ITEM_NAME} for Kids — Learn about ${CAT_TITLE}" \
+            --topic    "${ITEM_TITLE}" \
             --niche    "Kids Education" \
             --tone     "fun, friendly and educational for young children" \
             --category 27 \
@@ -125,11 +128,14 @@ jobs:
           ITEM_NAME: ${{ steps.pick.outputs.name }}
           ITEM_CAT:  ${{ steps.pick.outputs.category }}
           ITEM_SLUG: ${{ steps.pick.outputs.slug }}
+          ITEM_TITLE: ${{ steps.pick.outputs.title }}
+          ITEM_DESC: ${{ steps.pick.outputs.description }}
+          ITEM_TAGS: ${{ steps.pick.outputs.tags }}
         run: |
           VIDEO="shorts/${ITEM_SLUG}_short.mp4"
           CAT_TITLE="${ITEM_CAT^}"
           python youtube_auto.py "$VIDEO" \
-            --topic    "${ITEM_NAME} for Kids — ${CAT_TITLE} #Shorts" \
+            --topic    "${ITEM_TITLE} #Shorts" \
             --niche    "Kids Education Shorts" \
             --tone     "fun, friendly and educational for young children. Short vertical video." \
             --category 27 \

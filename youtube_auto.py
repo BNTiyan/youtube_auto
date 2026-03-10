@@ -381,6 +381,10 @@ def main():
     if os.path.isfile(args.path):
         video_files.append(args.path)
     elif not os.path.exists(args.path):
+        # Don't auto-create if it looks like a file (e.g. ends in .mp4)
+        if args.path.lower().endswith(('.mp4', '.mov', '.avi', '.mkv', '.webm')):
+            print(f"❌  Video file not found: {args.path}")
+            sys.exit(1)
         os.makedirs(args.path, exist_ok=True)
         print(f"📂  Auto-created missing directory: {args.path}")
         video_files = []

@@ -21,6 +21,7 @@ import textwrap
 import tempfile
 import random
 import glob
+import shutil
 from io import BytesIO
 from typing import Optional
 
@@ -428,6 +429,12 @@ def create_short(
         print(f"\n  Rendering {WIDTH}×{HEIGHT} Short → {output_path}")
         final = concatenate_videoclips(clips, method="compose")
         os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
+        
+        # Robustness: Remove if it mistakenly exists as a directory
+        if os.path.isdir(output_path):
+            print(f"  ⚠️   Removing erroneous directory at output path: {output_path}")
+            shutil.rmtree(output_path)
+            
         try:
             final.write_videofile(output_path, fps=FPS, codec="libx264",
                                   audio_codec="aac", logger=None)

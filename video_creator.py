@@ -459,7 +459,10 @@ def _ken_burns(clip, zoom_ratio: float = 0.06):
         cropped  = frame[y1: y1 + new_h, x1: x1 + new_w]
         return np.array(Image.fromarray(cropped).resize((w, h), Image.LANCZOS))
 
-    return clip.fl(_zoom)
+    # moviepy v1 uses .fl(); v2 renamed it to .transform() — same signature
+    if hasattr(clip, 'fl'):
+        return clip.fl(_zoom)
+    return clip.transform(_zoom)
 
 
 def _fadein(clip, duration: float = 0.30):

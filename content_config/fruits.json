@@ -1,0 +1,406 @@
+{
+  "fruits": {
+    "items": [
+      {
+        "name": "Apple",
+        "fact": "Apples come in red, green, and yellow and are very healthy"
+      },
+      {
+        "name": "Banana",
+        "fact": "Bananas are yellow when ripe and give you lots of energy"
+      },
+      {
+        "name": "Mango",
+        "fact": "Mangoes are called the King of Fruits and taste delicious"
+      },
+      {
+        "name": "Strawberry",
+        "fact": "Strawberries are red, sweet, and shaped like a little heart"
+      },
+      {
+        "name": "Watermelon",
+        "fact": "Watermelons are mostly water and very refreshing in summer"
+      },
+      {
+        "name": "Grapes",
+        "fact": "Grapes grow in big bunches and can be red or green"
+      },
+      {
+        "name": "Orange",
+        "fact": "Oranges are full of Vitamin C which keeps us healthy"
+      },
+      {
+        "name": "Pineapple",
+        "fact": "Pineapples have a spiky crown and grow on low plants near the ground"
+      },
+      {
+        "name": "Cherry",
+        "fact": "Cherries are tiny red fruits that grow in pairs on trees"
+      },
+      {
+        "name": "Kiwi",
+        "fact": "Kiwi fruits are brown outside and bright green inside"
+      },
+      {
+        "name": "Peach",
+        "fact": "Peaches have fuzzy skin and sweet juicy flesh inside"
+      },
+      {
+        "name": "Pear",
+        "fact": "Pears are shaped like teardrops and are sweet and juicy"
+      },
+      {
+        "name": "Lemon",
+        "fact": "Lemons are very sour and full of Vitamin C"
+      },
+      {
+        "name": "Lime",
+        "fact": "Limes are small green citrus fruits used in drinks and cooking"
+      },
+      {
+        "name": "Coconut",
+        "fact": "Coconuts are large tropical fruits full of refreshing water inside"
+      },
+      {
+        "name": "Papaya",
+        "fact": "Papayas are tropical fruits with orange flesh and black seeds"
+      },
+      {
+        "name": "Blueberry",
+        "fact": "Blueberries are tiny blue berries packed with powerful antioxidants"
+      },
+      {
+        "name": "Raspberry",
+        "fact": "Raspberries are delicate red berries that grow on thorny bushes"
+      },
+      {
+        "name": "Blackberry",
+        "fact": "Blackberries are dark purple berries that grow wild in hedgerows"
+      },
+      {
+        "name": "Plum",
+        "fact": "Plums are juicy purple fruits that can be dried to make prunes"
+      },
+      {
+        "name": "Pomegranate",
+        "fact": "Pomegranates are filled with hundreds of tiny red jewel-like seeds"
+      },
+      {
+        "name": "Guava",
+        "fact": "Guavas have pink flesh and are extremely rich in Vitamin C"
+      },
+      {
+        "name": "Lychee",
+        "fact": "Lychees have a bumpy pink shell and a sweet white fruit inside"
+      },
+      {
+        "name": "Dragonfruit",
+        "fact": "Dragon fruit has a bright pink skin with white speckled flesh inside"
+      },
+      {
+        "name": "Passion Fruit",
+        "fact": "Passion fruits have a wrinkly purple shell and tangy yellow seeds inside"
+      },
+      {
+        "name": "Fig",
+        "fact": "Figs are one of the oldest cultivated fruits in human history"
+      },
+      {
+        "name": "Date",
+        "fact": "Dates are very sweet sticky fruits that grow on palm trees"
+      },
+      {
+        "name": "Apricot",
+        "fact": "Apricots are small orange fruits similar to peaches but less fuzzy"
+      },
+      {
+        "name": "Grapefruit",
+        "fact": "Grapefruits are large citrus fruits with a bitter sweet taste"
+      },
+      {
+        "name": "Tangerine",
+        "fact": "Tangerines are small easy-to-peel oranges with a sweet flavor"
+      },
+      {
+        "name": "Cantaloupe",
+        "fact": "Cantaloupes are round melons with orange flesh and a sweet fragrance"
+      },
+      {
+        "name": "Honeydew",
+        "fact": "Honeydew melons have pale green flesh and are very sweet"
+      },
+      {
+        "name": "Starfruit",
+        "fact": "When you cut a starfruit sideways it makes a perfect star shape"
+      },
+      {
+        "name": "Jackfruit",
+        "fact": "Jackfruit is the largest fruit that grows on a tree, sometimes over 80 pounds"
+      },
+      {
+        "name": "Durian",
+        "fact": "Durian is called the King of Tropical Fruits but has a very strong smell"
+      },
+      {
+        "name": "Rambutan",
+        "fact": "Rambutans are hairy red fruits related to lychees and very sweet inside"
+      },
+      {
+        "name": "Longan",
+        "fact": "Longans are called Dragon Eye fruit and taste like sweet honey"
+      },
+      {
+        "name": "Tamarind",
+        "fact": "Tamarind is a sour brown pod fruit used in cooking and drinks worldwide"
+      },
+      {
+        "name": "Mulberry",
+        "fact": "Mulberries look like elongated blackberries and stain your fingers purple"
+      },
+      {
+        "name": "Elderberry",
+        "fact": "Elderberries are dark purple berries used in syrups and medicine"
+      },
+      {
+        "name": "Gooseberry",
+        "fact": "Gooseberries are small tart berries that grow on spiny bushes"
+      },
+      {
+        "name": "Persimmon",
+        "fact": "Persimmons are bright orange fruits that taste like honey when very ripe"
+      },
+      {
+        "name": "Kumquat",
+        "fact": "Kumquats are tiny orange fruits you eat whole including the sweet skin"
+      },
+      {
+        "name": "Quince",
+        "fact": "Quinces are golden yellow fruits too hard to eat raw but wonderful cooked"
+      },
+      {
+        "name": "Breadfruit",
+        "fact": "Breadfruit got its name because its starchy flesh tastes like freshly baked bread"
+      },
+      {
+        "name": "Nectarine",
+        "fact": "Nectarines are like peaches but with smooth shiny skin instead of fuzzy"
+      },
+      {
+        "name": "Ugli Fruit",
+        "fact": "Ugli fruit has a wrinkled ugly outside but a sweet delicious inside"
+      },
+      {
+        "name": "Ackee",
+        "fact": "Ackee is the national fruit of Jamaica and must be ripe before eating safely"
+      },
+      {
+        "name": "Cherimoya",
+        "fact": "Cherimoya is called the custard apple because its flesh is creamy and sweet"
+      },
+      {
+        "name": "Soursop",
+        "fact": "Soursop has a spiky green skin and a creamy white interior with a tangy flavor"
+      },
+      {
+        "name": "Carambola",
+        "fact": "Carambola is another name for starfruit which makes star shapes when sliced"
+      },
+      {
+        "name": "Feijoa",
+        "fact": "Feijoas smell like tropical perfume and taste like a mix of guava and mint"
+      },
+      {
+        "name": "Mangosteen",
+        "fact": "Mangosteen is called the Queen of Fruits with a sweet tangy white interior"
+      },
+      {
+        "name": "Salak",
+        "fact": "Salak is called snake fruit because of its scaly brown skin"
+      },
+      {
+        "name": "Sapodilla",
+        "fact": "Sapodilla tastes like a pear soaked in brown sugar and caramel"
+      },
+      {
+        "name": "Cupuacu",
+        "fact": "Cupua\u00e7u is a South American fruit related to cacao with a creamy white pulp"
+      },
+      {
+        "name": "Miracle Fruit",
+        "fact": "Miracle fruit makes sour foods taste sweet after you eat it"
+      },
+      {
+        "name": "Pitahaya",
+        "fact": "Pitahaya is a yellow dragon fruit even sweeter than the pink variety"
+      },
+      {
+        "name": "Pomelo",
+        "fact": "Pomelos are the largest citrus fruit in the world with thick fluffy rind"
+      },
+      {
+        "name": "Buddha's Hand",
+        "fact": "Buddha's Hand citrus fruit has finger-like segments and smells amazing"
+      },
+      {
+        "name": "Calamansi",
+        "fact": "Calamansi are tiny citrus fruits popular in Southeast Asian cooking"
+      },
+      {
+        "name": "Cloudberry",
+        "fact": "Cloudberries grow in Arctic regions and are golden orange when ripe"
+      },
+      {
+        "name": "Boysenberry",
+        "fact": "Boysenberries are a cross between raspberries, blackberries, and loganberries"
+      },
+      {
+        "name": "Acerola",
+        "fact": "Acerola cherries have 65 times more Vitamin C than oranges"
+      },
+      {
+        "name": "Pitanga",
+        "fact": "Pitanga is a Brazilian cherry also called Surinam cherry with a ridged shape"
+      },
+      {
+        "name": "Cactus Pear",
+        "fact": "Cactus pears grow on cacti and have a sweet red or yellow flesh inside"
+      },
+      {
+        "name": "Jabuticaba",
+        "fact": "Jabuticaba is a unique fruit that grows directly on the trunk of the tree"
+      },
+      {
+        "name": "Marula",
+        "fact": "Marula fruits ferment on the tree and animals get tipsy eating them"
+      },
+      {
+        "name": "Bael",
+        "fact": "Bael fruit has a hard woody shell and a fragrant sticky pulp inside"
+      },
+      {
+        "name": "Monstera Fruit",
+        "fact": "Monstera deliciosa fruit takes over a year to ripen and tastes like pineapple"
+      },
+      {
+        "name": "Rose Apple",
+        "fact": "Rose apples are shaped like bells and have a faint rose aroma"
+      },
+      {
+        "name": "Wax Apple",
+        "fact": "Wax apples look shiny and artificial but are real crunchy fruits"
+      },
+      {
+        "name": "Loquat",
+        "fact": "Loquats are small golden fruits that grow in clusters and taste sweet-tart"
+      },
+      {
+        "name": "Jujube",
+        "fact": "Jujubes are small red fruits also called Chinese dates full of Vitamin C"
+      },
+      {
+        "name": "Pawpaw",
+        "fact": "Pawpaws are North America's largest native fruit tasting like mango custard"
+      },
+      {
+        "name": "Langsat",
+        "fact": "Langsats grow in grape-like clusters and taste sweet with a hint of grapefruit"
+      },
+      {
+        "name": "Mamey Sapote",
+        "fact": "Mamey sapote has pinkish-orange flesh that tastes like sweet potato and almond"
+      },
+      {
+        "name": "Ilama",
+        "fact": "Ilamas are tropical fruits related to cherimoya with green or pink skin"
+      },
+      {
+        "name": "Pummelo",
+        "fact": "Pummelos are ancient citrus ancestors of the modern grapefruit"
+      },
+      {
+        "name": "Natal Plum",
+        "fact": "Natal plums are red star-shaped fruits from South Africa with a sweet-tart taste"
+      },
+      {
+        "name": "Ice Cream Bean",
+        "fact": "Ice cream beans are long pods filled with cotton candy-like white pulp"
+      },
+      {
+        "name": "Rollinia",
+        "fact": "Rollinia is a tropical fruit with a bumpy yellow skin and lemony cream flesh"
+      },
+      {
+        "name": "Black Sapote",
+        "fact": "Black sapote is nicknamed the chocolate pudding fruit for its dark rich flesh"
+      },
+      {
+        "name": "Canistel",
+        "fact": "Canistel is called the egg fruit because its dry yellow flesh resembles egg yolk"
+      },
+      {
+        "name": "Abiu",
+        "fact": "Abiu is a yellow tropical fruit from the Amazon with translucent sweet flesh"
+      },
+      {
+        "name": "Mamoncillo",
+        "fact": "Mamoncillo is a small green fruit you pop open to reveal a tangy pink pulp"
+      },
+      {
+        "name": "Genip",
+        "fact": "Genips are tropical fruits with firm green skin and sweet orange flesh"
+      },
+      {
+        "name": "Jabara",
+        "fact": "Jabara is a rare Japanese citrus from Wakayama with a unique bitter-sweet flavor"
+      },
+      {
+        "name": "Kiwano",
+        "fact": "Kiwano is a horned melon from Africa with bright orange skin and green jelly inside"
+      },
+      {
+        "name": "Noni",
+        "fact": "Noni fruit has a strong smell but is used as traditional medicine across the Pacific"
+      },
+      {
+        "name": "Tamarillo",
+        "fact": "Tamarillos are also called tree tomatoes and are eaten with a spoon"
+      },
+      {
+        "name": "Naranjilla",
+        "fact": "Naranjilla is a South American fruit with a tart citrusy flavor like lime and rhubarb"
+      },
+      {
+        "name": "Pepino",
+        "fact": "Pepino melon is a South American fruit that tastes like a mix of melon and cucumber"
+      },
+      {
+        "name": "Davidson Plum",
+        "fact": "Davidson plums are Australian native fruits with deep purple skin and tart red flesh"
+      },
+      {
+        "name": "Finger Lime",
+        "fact": "Finger limes are called citrus caviar because the flesh pops in tiny juice pearls"
+      },
+      {
+        "name": "Uva Ursi",
+        "fact": "Uva ursi or bearberry produces small red fruits eaten by bears and birds"
+      },
+      {
+        "name": "Sea Buckthorn",
+        "fact": "Sea buckthorn berries are extremely sour orange berries rich in Vitamin C"
+      },
+      {
+        "name": "Barberry",
+        "fact": "Barberries are tiny tart red berries used in Persian rice dishes and jams"
+      },
+      {
+        "name": "Hackberry",
+        "fact": "Hackberries are small purple-brown wild berries with a sweet date-like flavor"
+      },
+      {
+        "name": "Salmonberry",
+        "fact": "Salmonberries are Pacific Northwest berries ranging from yellow to deep red"
+      }
+    ]
+  }
+}

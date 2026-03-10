@@ -19,6 +19,8 @@ import json
 import argparse
 import textwrap
 import tempfile
+import random
+import glob
 from io import BytesIO
 from typing import Optional
 
@@ -344,10 +346,12 @@ def create_short(
     style: str = "kids",
     lang: str = "en",
     use_images: bool = True,
+    points: list = [],
 ) -> str:
     """
     Build a 3-slide portrait Short:  intro → main → outro.
     Typical total: 30–55 seconds (within YouTube Shorts 60 sec limit).
+    Uses up to 2 bullet points for main slide if provided.
     """
     themes    = KIDS_THEMES if style == "kids" else TECH_THEMES
     theme     = themes.get(category.lower(), DEFAULT_THEME)
@@ -385,12 +389,19 @@ def create_short(
 
         # ── Slide 2: Main content ─────────────────────────────────────────────
         print("  Building main slide…")
+        use_pts = [p for p in points if p][:2]
+        if use_pts:
+            main_subtitle = "  •  ".join(use_pts)
+            main_tts_text = f"{name}. {'. '.join(use_pts)}"
+        else:
+            main_subtitle = text
+            main_tts_text = f"{name}. {text}"
         main_slide = create_short_slide(
-            title=name, subtitle=text,
+            title=name, subtitle=main_subtitle,
             theme=theme, top_label=top_label, image=img,
         )
         main_mp3 = os.path.join(tmp, "main.mp3")
-        make_tts(f"{name}. {text}", main_mp3, lang)
+        make_tts(main_tts_text, main_mp3, lang)
         clips.append(make_clip(main_slide, main_mp3))
 
         # ── Slide 3: Outro (solid colour — no photo distraction) ──────────────
@@ -474,14 +485,38 @@ Examples:
 
     # ── Auto-select config ────────────────────────────────────────────────────
     if not args.config:
-        args.config = ("tech_content_config.json"
+        args.config = ("tech_content_config"
                        if args.style == "tech"
-                       else "content_config.json")
+                       else "content_config")
 
-    # ── Look up text from config if not supplied ──────────────────────────────
-    text = args.text
-    if not text and os.path.exists(args.config):
-        with open(args.config) as f:
+    # ── Look up text and points from config if not supplied ───────────────────
+    text   = args.text
+    points = []
+    
+    config_path = args.config
+    if os.path.isdir(args.config):
+        json_files = sorted(glob.glob(os.path.join(args.config, "*.json")))
+        if json_files:
+            state_file = os.path.join(args.config, ".last_config_idx.txt")
+            idx = 0
+            if os.path.exists(state_file):
+                try:
+                    with open(state_file) as sf:
+                        idx = (int(sf.read().strip()) + 1) % len(json_files)
+                except Exception:
+                    pass
+            
+            config_path = json_files[idx]
+            try:
+                with open(state_file, "w") as sf:
+                    sf.write(str(idx))
+            except Exception:
+                pass
+                
+            print(f"🔄  Sequentially selected config: {os.path.basename(config_path)}")
+
+    if os.path.exists(config_path):
+        with open(config_path) as f:
             cfg = json.load(f)
         cat = args.cat.lower()
         if cat in cfg:
@@ -492,7 +527,9 @@ Examples:
                 None,
             )
             if item_data:
-                text = item_data.get(field, "")
+                if not text:
+                    text = item_data.get(field, "")
+                points = item_data.get("points", [])
 
     if not text:
         text = f"{args.item} is amazing!"
@@ -513,7 +550,7 @@ Examples:
         create_short(
             name=args.item, text=text, category=args.cat,
             output_path=output_path, style=args.style,
-            lang=args.lang, use_images=use_images,
+            lang=args.lang, use_images=use_images, points=points,
         )
         print(f"\n✅  Short ready: {output_path}")
         print("📏  1080×1920 portrait — YouTube auto-detects as a Short ✅")

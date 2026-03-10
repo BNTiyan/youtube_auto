@@ -1,0 +1,406 @@
+{
+  "colors": {
+    "items": [
+      {
+        "name": "Red",
+        "fact": "Red is the color of fire, roses, and is used on stop signs to mean danger or stop"
+      },
+      {
+        "name": "Blue",
+        "fact": "Blue is the color of the sky and ocean and is the most popular favorite color worldwide"
+      },
+      {
+        "name": "Yellow",
+        "fact": "Yellow is the color of the sun and makes people feel happy and cheerful"
+      },
+      {
+        "name": "Green",
+        "fact": "Green is the color of plants and nature and is associated with growth and life"
+      },
+      {
+        "name": "Orange",
+        "fact": "Orange is a warm color that is a mix of red and yellow"
+      },
+      {
+        "name": "Purple",
+        "fact": "Purple was historically the most expensive dye and was only worn by royalty"
+      },
+      {
+        "name": "Pink",
+        "fact": "Pink is made by mixing red and white together in various proportions"
+      },
+      {
+        "name": "Brown",
+        "fact": "Brown is a warm earthy color found in soil, wood, and chocolate"
+      },
+      {
+        "name": "Black",
+        "fact": "Black is the absence of visible light and absorbs all colors of the spectrum"
+      },
+      {
+        "name": "White",
+        "fact": "White reflects all colors of light and is associated with purity and cleanliness"
+      },
+      {
+        "name": "Gray",
+        "fact": "Gray is a neutral color between black and white found in clouds and rocks"
+      },
+      {
+        "name": "Cyan",
+        "fact": "Cyan is a bright blue-green color used in color printing alongside magenta and yellow"
+      },
+      {
+        "name": "Magenta",
+        "fact": "Magenta is a vivid pink-purple used in printing and does not appear in the rainbow"
+      },
+      {
+        "name": "Turquoise",
+        "fact": "Turquoise is a blue-green color named after the precious gemstone"
+      },
+      {
+        "name": "Indigo",
+        "fact": "Indigo is a deep blue-violet that sits between blue and violet in the rainbow"
+      },
+      {
+        "name": "Violet",
+        "fact": "Violet is the last color in the visible spectrum with the shortest wavelength"
+      },
+      {
+        "name": "Maroon",
+        "fact": "Maroon is a dark brownish-red color named after the French word for chestnut"
+      },
+      {
+        "name": "Navy Blue",
+        "fact": "Navy blue is a very dark shade of blue traditionally used for military uniforms"
+      },
+      {
+        "name": "Teal",
+        "fact": "Teal is a blue-green color named after the colored stripe on a duck called a teal"
+      },
+      {
+        "name": "Lime",
+        "fact": "Lime green is a vivid yellow-green color as bright as a fresh lime fruit"
+      },
+      {
+        "name": "Olive",
+        "fact": "Olive is a dark yellow-green color resembling ripe olive fruits"
+      },
+      {
+        "name": "Coral",
+        "fact": "Coral is a warm pink-orange color inspired by the colors of sea coral reefs"
+      },
+      {
+        "name": "Salmon",
+        "fact": "Salmon is a pinkish-orange color named after the flesh of the salmon fish"
+      },
+      {
+        "name": "Peach",
+        "fact": "Peach is a soft pale orange-pink color like the skin of a ripe peach fruit"
+      },
+      {
+        "name": "Lavender",
+        "fact": "Lavender is a pale soft purple named after the lavender flower"
+      },
+      {
+        "name": "Ivory",
+        "fact": "Ivory is a warm off-white color originally from elephant and walrus tusks"
+      },
+      {
+        "name": "Cream",
+        "fact": "Cream is a pale yellow-white color like the color of fresh dairy cream"
+      },
+      {
+        "name": "Beige",
+        "fact": "Beige is a very light warm tan or sandy color often used in interior design"
+      },
+      {
+        "name": "Tan",
+        "fact": "Tan is a light brown color like sun-tanned skin or leather"
+      },
+      {
+        "name": "Khaki",
+        "fact": "Khaki is a dull brownish-yellow used in military and casual clothing"
+      },
+      {
+        "name": "Gold",
+        "fact": "Gold is a rich warm yellow metallic color associated with wealth and luxury"
+      },
+      {
+        "name": "Silver",
+        "fact": "Silver is a metallic grey color associated with high technology and modernity"
+      },
+      {
+        "name": "Bronze",
+        "fact": "Bronze is a dark orange-brown metallic color of the ancient alloy of copper and tin"
+      },
+      {
+        "name": "Copper",
+        "fact": "Copper is a reddish-orange metallic color like freshly polished copper pipes"
+      },
+      {
+        "name": "Scarlet",
+        "fact": "Scarlet is a vivid bright red slightly towards orange associated with passion"
+      },
+      {
+        "name": "Crimson",
+        "fact": "Crimson is a deep rich red color used for royalty and in many national flags"
+      },
+      {
+        "name": "Burgundy",
+        "fact": "Burgundy is a dark red wine color named after the Burgundy wine region of France"
+      },
+      {
+        "name": "Vermilion",
+        "fact": "Vermilion is a bright orange-red once made from toxic mercury sulfide"
+      },
+      {
+        "name": "Amber",
+        "fact": "Amber is a warm golden yellow color like the fossilized tree resin"
+      },
+      {
+        "name": "Ochre",
+        "fact": "Ochre is an earthy yellow-brown used as one of the oldest natural pigments in art"
+      },
+      {
+        "name": "Sienna",
+        "fact": "Sienna is a reddish-brown earth pigment named after the Italian city of Siena"
+      },
+      {
+        "name": "Umber",
+        "fact": "Umber is a dark brown natural earth pigment with a slight greenish tinge"
+      },
+      {
+        "name": "Cobalt Blue",
+        "fact": "Cobalt blue is a deep vivid blue made from cobalt salts used by artists for centuries"
+      },
+      {
+        "name": "Cerulean",
+        "fact": "Cerulean is a sky blue color named after the Latin word for sky"
+      },
+      {
+        "name": "Periwinkle",
+        "fact": "Periwinkle is a soft blue-lavender color named after a small flowering plant"
+      },
+      {
+        "name": "Mauve",
+        "fact": "Mauve was the first synthetic dye color discovered in 1856 by accident"
+      },
+      {
+        "name": "Fuchsia",
+        "fact": "Fuchsia is a vivid hot pink named after the fuchsia plant's bright flowers"
+      },
+      {
+        "name": "Rose",
+        "fact": "Rose is a medium-dark pink color like the petals of a classic rose"
+      },
+      {
+        "name": "Blush",
+        "fact": "Blush is a very soft and light pink like the color of a subtle blush on cheeks"
+      },
+      {
+        "name": "Hot Pink",
+        "fact": "Hot pink is a neon vivid version of pink used widely in pop art and fashion"
+      },
+      {
+        "name": "Chartreuse",
+        "fact": "Chartreuse is a vivid yellow-green named after a French liqueur of the same color"
+      },
+      {
+        "name": "Sage",
+        "fact": "Sage is a soft grayish-green color like the herb used in cooking"
+      },
+      {
+        "name": "Mint",
+        "fact": "Mint is a fresh pale cool green color like the mint plant"
+      },
+      {
+        "name": "Emerald",
+        "fact": "Emerald is a rich vivid green color like the precious gemstone"
+      },
+      {
+        "name": "Forest Green",
+        "fact": "Forest green is a dark natural green color like the shade inside a dense forest"
+      },
+      {
+        "name": "Hunter Green",
+        "fact": "Hunter green is a very deep dark green traditionally used in outdoor hunting clothing"
+      },
+      {
+        "name": "Jade",
+        "fact": "Jade is a medium cool green color like the precious jade stone from Asia"
+      },
+      {
+        "name": "Aquamarine",
+        "fact": "Aquamarine is a light blue-green like clear tropical ocean water"
+      },
+      {
+        "name": "Sapphire",
+        "fact": "Sapphire blue is a deep brilliant blue like the precious sapphire gemstone"
+      },
+      {
+        "name": "Royal Blue",
+        "fact": "Royal blue is a vivid bright blue historically associated with royalty"
+      },
+      {
+        "name": "Midnight Blue",
+        "fact": "Midnight blue is an extremely dark blue almost black like the deep night sky"
+      },
+      {
+        "name": "Electric Blue",
+        "fact": "Electric blue is a vivid fluorescent blue like an electric spark"
+      },
+      {
+        "name": "Baby Blue",
+        "fact": "Baby blue is a very soft pale blue traditionally used for newborn boys"
+      },
+      {
+        "name": "Ice Blue",
+        "fact": "Ice blue is a pale cold blue like sunlight reflecting off frozen ice"
+      },
+      {
+        "name": "Steel Blue",
+        "fact": "Steel blue is a medium grayish-blue like polished steel"
+      },
+      {
+        "name": "Plum",
+        "fact": "Plum is a dark purple-red color like the skin of a plum fruit"
+      },
+      {
+        "name": "Lilac",
+        "fact": "Lilac is a pale soft violet-pink named after the lilac flowering bush"
+      },
+      {
+        "name": "Orchid",
+        "fact": "Orchid is a medium pink-purple color like many exotic orchid flowers"
+      },
+      {
+        "name": "Wisteria",
+        "fact": "Wisteria is a soft blue-purple color named after the cascading wisteria vine"
+      },
+      {
+        "name": "Mulberry",
+        "fact": "Mulberry is a dark reddish-purple color like the juice of mulberries"
+      },
+      {
+        "name": "Eggplant",
+        "fact": "Eggplant is a very dark purple almost black like the skin of an eggplant"
+      },
+      {
+        "name": "Taupe",
+        "fact": "Taupe is a warm brownish-gray color very popular in modern home decor"
+      },
+      {
+        "name": "Charcoal",
+        "fact": "Charcoal is a very dark gray almost black like burned charcoal"
+      },
+      {
+        "name": "Slate",
+        "fact": "Slate is a medium blue-gray color like the rock used for roofing tiles"
+      },
+      {
+        "name": "Ash",
+        "fact": "Ash is a pale grayish-white color like wood ash after a fire"
+      },
+      {
+        "name": "Snow White",
+        "fact": "Snow white is the purest brightest white like freshly fallen clean snow"
+      },
+      {
+        "name": "Pearl",
+        "fact": "Pearl is a soft iridescent white with a slightly warm tone like a real pearl"
+      },
+      {
+        "name": "Eggshell",
+        "fact": "Eggshell is a slightly off-white color with a warm yellowish tint"
+      },
+      {
+        "name": "Linen",
+        "fact": "Linen is a warm creamy white-beige color like the natural fabric"
+      },
+      {
+        "name": "Alabaster",
+        "fact": "Alabaster is a very pale warm white like the smooth translucent stone"
+      },
+      {
+        "name": "Saffron",
+        "fact": "Saffron is a vivid golden-yellow like the spice made from crocus flowers"
+      },
+      {
+        "name": "Mustard",
+        "fact": "Mustard is a deep dull yellow color like the famous condiment"
+      },
+      {
+        "name": "Lemon",
+        "fact": "Lemon yellow is a bright cool yellow like fresh lemon peel"
+      },
+      {
+        "name": "Canary",
+        "fact": "Canary yellow is a bright cheerful yellow like the feathers of a canary bird"
+      },
+      {
+        "name": "Butter",
+        "fact": "Butter yellow is a soft pale warm yellow like fresh dairy butter"
+      },
+      {
+        "name": "Pumpkin Orange",
+        "fact": "Pumpkin orange is a warm deep orange like a Halloween pumpkin"
+      },
+      {
+        "name": "Tangerine",
+        "fact": "Tangerine orange is a vivid medium orange like the tangerine fruit"
+      },
+      {
+        "name": "Apricot",
+        "fact": "Apricot is a soft pale peachy-orange like the skin of the apricot fruit"
+      },
+      {
+        "name": "Rust",
+        "fact": "Rust is a reddish-brown orange color like iron that has oxidized and rusted"
+      },
+      {
+        "name": "Cinnamon",
+        "fact": "Cinnamon is a warm reddish-brown color like the popular baking spice"
+      },
+      {
+        "name": "Caramel",
+        "fact": "Caramel is a rich golden-brown color like cooked sugar caramel"
+      },
+      {
+        "name": "Mocha",
+        "fact": "Mocha is a warm brownish-tan color like coffee mixed with chocolate"
+      },
+      {
+        "name": "Espresso",
+        "fact": "Espresso is an extremely dark rich brown almost black like strong black coffee"
+      },
+      {
+        "name": "Chocolate",
+        "fact": "Chocolate brown is a deep warm brown color like dark chocolate bars"
+      },
+      {
+        "name": "Mahogany",
+        "fact": "Mahogany is a reddish-brown color like the tropical wood used in fine furniture"
+      },
+      {
+        "name": "Cerise",
+        "fact": "Cerise is a vivid deep pinkish-red color named after the French word for cherry"
+      },
+      {
+        "name": "Cinnabar",
+        "fact": "Cinnabar is a brilliant red-orange color from the mercury sulfide mineral of the same name"
+      },
+      {
+        "name": "Hooker's Green",
+        "fact": "Hooker's Green is a dark botanical green used by artists since the 1800s"
+      },
+      {
+        "name": "Prussian Blue",
+        "fact": "Prussian blue was the first modern synthetic pigment created by accident in 1704"
+      },
+      {
+        "name": "Verdigris",
+        "fact": "Verdigris is the distinctive blue-green color that forms when copper oxidizes"
+      }
+    ]
+  }
+}

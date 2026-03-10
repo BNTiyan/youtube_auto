@@ -1,0 +1,406 @@
+{
+  "stars": {
+    "items": [
+      {
+        "name": "Sun",
+        "fact": "The Sun contains 99.8% of all the mass in our solar system"
+      },
+      {
+        "name": "Sirius",
+        "fact": "Sirius is the brightest star in Earth's night sky and is twice the size of our Sun"
+      },
+      {
+        "name": "Alpha Centauri",
+        "fact": "Alpha Centauri is the nearest star system to Earth at just 4.37 light-years away"
+      },
+      {
+        "name": "Proxima Centauri",
+        "fact": "Proxima Centauri is the single closest known star to our Sun at 4.24 light-years"
+      },
+      {
+        "name": "Betelgeuse",
+        "fact": "Betelgeuse is a massive red supergiant star that will explode as a supernova one day"
+      },
+      {
+        "name": "Rigel",
+        "fact": "Rigel is a blue supergiant star 120,000 times more luminous than our Sun"
+      },
+      {
+        "name": "Vega",
+        "fact": "Vega will become Earth's pole star in about 13,000 years due to axial precession"
+      },
+      {
+        "name": "Polaris",
+        "fact": "Polaris is the North Star that always points north and barely moves in the night sky"
+      },
+      {
+        "name": "Canopus",
+        "fact": "Canopus is the second brightest star in the sky and is used to navigate spacecraft"
+      },
+      {
+        "name": "Arcturus",
+        "fact": "Arcturus is the brightest star in the northern sky and a bright orange-red giant"
+      },
+      {
+        "name": "Aldebaran",
+        "fact": "Aldebaran is a giant orange star 44 times the diameter of our Sun"
+      },
+      {
+        "name": "Antares",
+        "fact": "Antares is a red supergiant so massive that if placed where our Sun is it would reach beyond Mars"
+      },
+      {
+        "name": "Spica",
+        "fact": "Spica is a binary star system and one of the bluest and hottest visible stars"
+      },
+      {
+        "name": "Capella",
+        "fact": "Capella is actually four stars in two binary pairs all orbiting together"
+      },
+      {
+        "name": "Deneb",
+        "fact": "Deneb is so luminous it would outshine a crescent Moon if it were as close as Sirius"
+      },
+      {
+        "name": "Fomalhaut",
+        "fact": "Fomalhaut has a wide debris disk surrounding it with possible young planets forming"
+      },
+      {
+        "name": "Regulus",
+        "fact": "Regulus is a rapidly spinning star that bulges at its equator from its fast rotation"
+      },
+      {
+        "name": "Castor",
+        "fact": "Castor is a remarkable sextuple star system of six stars all bound together"
+      },
+      {
+        "name": "Pollux",
+        "fact": "Pollux is a giant orange star with a confirmed planet orbiting it"
+      },
+      {
+        "name": "Procyon",
+        "fact": "Procyon is a binary star that has a faint white dwarf companion orbiting it"
+      },
+      {
+        "name": "Epsilon Eridani",
+        "fact": "Epsilon Eridani is a young star similar to our young Sun and has a confirmed planet"
+      },
+      {
+        "name": "Tau Ceti",
+        "fact": "Tau Ceti is one of the most Sun-like stars visible to the naked eye"
+      },
+      {
+        "name": "Barnard's Star",
+        "fact": "Barnard's Star has the fastest proper motion across the sky of any known star"
+      },
+      {
+        "name": "Wolf 359",
+        "fact": "Wolf 359 is one of the faintest and smallest known red dwarf stars near the Sun"
+      },
+      {
+        "name": "Luyten's Star",
+        "fact": "Luyten's Star is a red dwarf with a potentially habitable planet in a close orbit"
+      },
+      {
+        "name": "Ross 128",
+        "fact": "Ross 128 is one of the quietest red dwarfs making its planet more habitable"
+      },
+      {
+        "name": "TRAPPIST-1",
+        "fact": "TRAPPIST-1 is an ultra-cool red dwarf hosting seven rocky planets including habitable zone ones"
+      },
+      {
+        "name": "Gliese 667C",
+        "fact": "Gliese 667C hosts multiple potentially habitable super-Earth planets around it"
+      },
+      {
+        "name": "Kepler-452",
+        "fact": "Kepler-452 is very similar to our Sun and hosts a planet often called Earth's older cousin"
+      },
+      {
+        "name": "55 Cancri A",
+        "fact": "55 Cancri A hosts five known planets including one giant in a wide orbit"
+      },
+      {
+        "name": "HR 8799",
+        "fact": "HR 8799 is a young star with four directly imaged gas giant planets around it"
+      },
+      {
+        "name": "Beta Pictoris",
+        "fact": "Beta Pictoris is surrounded by a huge dusty disk and has a planet already photographed"
+      },
+      {
+        "name": "Eta Carinae",
+        "fact": "Eta Carinae is one of the most massive stars known and will soon become a hypernova"
+      },
+      {
+        "name": "VY Canis Majoris",
+        "fact": "VY Canis Majoris is one of the largest known stars so big that light takes hours to cross it"
+      },
+      {
+        "name": "UY Scuti",
+        "fact": "UY Scuti is one of the largest known stars with a radius over 1,700 times that of the Sun"
+      },
+      {
+        "name": "Stephenson 2-18",
+        "fact": "Stephenson 2-18 is potentially the largest known star with a radius 2,150 times the Sun"
+      },
+      {
+        "name": "R136a1",
+        "fact": "R136a1 is the most massive known star at around 200 solar masses in the Milky Way"
+      },
+      {
+        "name": "Pistol Star",
+        "fact": "The Pistol Star is one of the most luminous stars known near the Milky Way's center"
+      },
+      {
+        "name": "Peony Star",
+        "fact": "The Peony Star near the galactic center may be even more luminous than the Pistol Star"
+      },
+      {
+        "name": "LBV 1806-20",
+        "fact": "LBV 1806-20 is an extremely luminous hypergiant star close to the Milky Way's core"
+      },
+      {
+        "name": "Zeta Puppis",
+        "fact": "Zeta Puppis is a hot luminous blue supergiant shedding mass in powerful stellar winds"
+      },
+      {
+        "name": "P Cygni",
+        "fact": "P Cygni is a luminous blue variable that brightened dramatically in the year 1600"
+      },
+      {
+        "name": "Rho Cassiopeiae",
+        "fact": "Rho Cassiopeiae is a yellow hypergiant one of the rarest types of stars in existence"
+      },
+      {
+        "name": "HR Carinae",
+        "fact": "HR Carinae is a luminous blue variable periodically undergoing violent eruptions"
+      },
+      {
+        "name": "W Virginis",
+        "fact": "W Virginis is a type II Cepheid variable star pulsating in size and brightness"
+      },
+      {
+        "name": "Mira",
+        "fact": "Mira is a pulsating variable star that changes from barely visible to very bright"
+      },
+      {
+        "name": "Chi Cygni",
+        "fact": "Chi Cygni is a Mira-type variable that grows to over 400 times the Sun's size"
+      },
+      {
+        "name": "RR Lyrae",
+        "fact": "RR Lyrae variables are used as distance markers across the Milky Way galaxy"
+      },
+      {
+        "name": "Delta Cephei",
+        "fact": "Delta Cephei is the prototype of Cepheid variable stars crucial for measuring distances"
+      },
+      {
+        "name": "Beta Lyrae",
+        "fact": "Beta Lyrae is a contact binary where two stars are so close they share their outer atmosphere"
+      },
+      {
+        "name": "Algol",
+        "fact": "Algol the Demon Star is an eclipsing binary that dims every 2.87 days"
+      },
+      {
+        "name": "W Ursae Majoris",
+        "fact": "W UMa is a contact binary where two stars are touching and share common envelopes"
+      },
+      {
+        "name": "AM Canum Venaticorum",
+        "fact": "AM CVn is an ultra-compact binary where white dwarf pulls helium from another star"
+      },
+      {
+        "name": "Pulsars",
+        "fact": "Pulsars are spinning neutron stars that emit beams of radio waves like a cosmic lighthouse"
+      },
+      {
+        "name": "Magnetar",
+        "fact": "Magnetars have magnetic fields a quadrillion times stronger than Earth's"
+      },
+      {
+        "name": "Neutron Star",
+        "fact": "Neutron stars are incredibly dense collapsed stars where a teaspoon would weigh a billion tons"
+      },
+      {
+        "name": "White Dwarf",
+        "fact": "White dwarfs are the dead cores of stars like our Sun that will slowly cool over billions of years"
+      },
+      {
+        "name": "Black Dwarf",
+        "fact": "Black dwarfs are theoretical cooled white dwarfs but none exist yet as the universe is too young"
+      },
+      {
+        "name": "Brown Dwarf",
+        "fact": "Brown dwarfs are failed stars too small to sustain hydrogen fusion in their cores"
+      },
+      {
+        "name": "Red Dwarf",
+        "fact": "Red dwarfs are the smallest and most common stars in the universe and can live for trillions of years"
+      },
+      {
+        "name": "Yellow Dwarf",
+        "fact": "Yellow dwarfs like our Sun are medium-sized stable stars that live for about 10 billion years"
+      },
+      {
+        "name": "Blue Giant",
+        "fact": "Blue giants are massive hot stars that live fast and die young in huge supernova explosions"
+      },
+      {
+        "name": "Red Giant",
+        "fact": "Red giants are aging stars that expand enormously as they burn the last of their hydrogen"
+      },
+      {
+        "name": "Hypergiant",
+        "fact": "Hypergiants are the rarest and most extreme class of stars with enormous mass and luminosity"
+      },
+      {
+        "name": "Protostar",
+        "fact": "Protostars are forming stars hidden in dense clouds of gas and dust before ignition"
+      },
+      {
+        "name": "T Tauri",
+        "fact": "T Tauri stars are very young unstable stars just beginning the process of nuclear fusion"
+      },
+      {
+        "name": "Herbig Ae/Be",
+        "fact": "Herbig Ae/Be stars are young intermediate-mass stars with disks of material still forming"
+      },
+      {
+        "name": "Subdwarf",
+        "fact": "Subdwarf stars are small dim stars fusing helium rather than the usual hydrogen"
+      },
+      {
+        "name": "Subgiant",
+        "fact": "Subgiant stars are just beginning the transition from main sequence to red giant phase"
+      },
+      {
+        "name": "Wolf-Rayet",
+        "fact": "Wolf-Rayet stars shed their outer layers in fierce stellar winds exposing their hot cores"
+      },
+      {
+        "name": "Carbon Star",
+        "fact": "Carbon stars have so much carbon in their atmosphere that soot-like compounds form"
+      },
+      {
+        "name": "Technetium Star",
+        "fact": "Technetium stars contain unstable radioactive technetium showing active nucleosynthesis"
+      },
+      {
+        "name": "Lithium Star",
+        "fact": "Lithium-rich giant stars are a puzzle as normal giants should destroy their lithium not keep it"
+      },
+      {
+        "name": "Barium Star",
+        "fact": "Barium stars have anomalously high amounts of heavy elements from a companion star"
+      },
+      {
+        "name": "Ap Star",
+        "fact": "Ap stars have abnormal amounts of certain elements and extremely strong magnetic fields"
+      },
+      {
+        "name": "FK Comae",
+        "fact": "FK Comae type stars are rapidly spinning giants with extreme star spot activity"
+      },
+      {
+        "name": "Flare Star",
+        "fact": "Flare stars are red dwarfs that produce powerful sudden flares brightening dramatically"
+      },
+      {
+        "name": "BY Draconis",
+        "fact": "BY Draconis stars vary in brightness due to large dark star spots on their surface"
+      },
+      {
+        "name": "FU Orionis",
+        "fact": "FU Orionis stars are young stars that suddenly brighten 100 fold due to disk accretion"
+      },
+      {
+        "name": "EX Lupi",
+        "fact": "EX Lupi stars are young stars with episodic outbursts caused by instabilities in their disk"
+      },
+      {
+        "name": "Symbiotic Star",
+        "fact": "Symbiotic stars are binary systems with a red giant and white dwarf interacting closely"
+      },
+      {
+        "name": "Cataclysmic Variable",
+        "fact": "Cataclysmic variables are binaries where a white dwarf pulls material from a companion"
+      },
+      {
+        "name": "Nova",
+        "fact": "A nova occurs when a white dwarf accretes enough material to trigger a thermonuclear explosion"
+      },
+      {
+        "name": "Supernova",
+        "fact": "A supernova explosion releases as much energy as the Sun will emit in its entire lifetime"
+      },
+      {
+        "name": "Hypernova",
+        "fact": "Hypernovae are incredibly powerful supernovae that may produce long gamma-ray bursts"
+      },
+      {
+        "name": "Kilonova",
+        "fact": "Kilonovae occur when two neutron stars collide creating all heavy elements like gold"
+      },
+      {
+        "name": "Quasar",
+        "fact": "Quasars are the most luminous objects in the universe powered by supermassive black holes"
+      },
+      {
+        "name": "Blazar",
+        "fact": "Blazars are quasars with a jet of material aimed directly at Earth"
+      },
+      {
+        "name": "Seyfert Galaxy Core",
+        "fact": "Seyfert galaxies have active galactic nuclei with bright cores visible at multiple wavelengths"
+      },
+      {
+        "name": "Microquasar",
+        "fact": "Microquasars are stellar-mass black holes that mimic quasar behavior on a smaller scale"
+      },
+      {
+        "name": "Black Hole",
+        "fact": "Black holes have gravity so strong that nothing not even light can escape from them"
+      },
+      {
+        "name": "Sagittarius A*",
+        "fact": "Sagittarius A* is the supermassive black hole at the center of our Milky Way galaxy"
+      },
+      {
+        "name": "TON 618",
+        "fact": "TON 618 is one of the most massive black holes known with 66 billion solar masses"
+      },
+      {
+        "name": "Xi Persei",
+        "fact": "Xi Persei is a hot blue giant moving rapidly through space creating a bow shock"
+      },
+      {
+        "name": "Epsilon Aurigae",
+        "fact": "Epsilon Aurigae is an eclipsed by a mysterious dark disk object every 27 years"
+      },
+      {
+        "name": "KIC 8462852",
+        "fact": "Tabby's Star dims in strange irregular patterns that still puzzle astronomers today"
+      },
+      {
+        "name": "Przybylski's Star",
+        "fact": "Przybylski's Star contains impossibly short-lived radioactive elements that should not exist"
+      },
+      {
+        "name": "Thorne-Zytkow Object",
+        "fact": "A Thorne-Zytkow object is a red giant with a neutron star hiding inside its core"
+      },
+      {
+        "name": "HV 2112",
+        "fact": "HV 2112 in the Small Magellanic Cloud may be the first confirmed Thorne-Zytkow object"
+      },
+      {
+        "name": "SDSS J0002+6230",
+        "fact": "This star has one of the fastest velocities ever measured being ejected from the galaxy"
+      }
+    ]
+  }
+}

@@ -1,0 +1,1106 @@
+{
+  "database": {
+    "items": [
+      {
+        "name": "SQL",
+        "explanation": "SQL is the standard language for querying and managing structured relational databases",
+        "points": [
+          "Core concept of SQL used widely in modern software and AI systems",
+          "Important for understanding: SQL is the standard language for querying and managing structured relational databases",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "NoSQL",
+        "explanation": "NoSQL databases store unstructured or semi-structured data with flexible scalable schemas",
+        "points": [
+          "Core concept of NoSQL used widely in modern software and AI systems",
+          "Important for understanding: NoSQL databases store unstructured or semi-structured data with flexible scalable schemas",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "PostgreSQL",
+        "explanation": "PostgreSQL is a powerful open-source relational database used by millions of applications",
+        "points": [
+          "Core concept of PostgreSQL used widely in modern software and AI systems",
+          "Important for understanding: PostgreSQL is a powerful open-source relational database used by millions of applications",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "MongoDB",
+        "explanation": "MongoDB stores data as JSON documents \u2014 great for flexible rapidly changing data structures",
+        "points": [
+          "Core concept of MongoDB used widely in modern software and AI systems",
+          "Important for understanding: MongoDB stores data as JSON documents \u2014 great for flexible rapidly changing data structures",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Redis",
+        "explanation": "Redis is an in-memory database used for caching, sessions, and real-time applications",
+        "points": [
+          "Core concept of Redis used widely in modern software and AI systems",
+          "Important for understanding: Redis is an in-memory database used for caching, sessions, and real-time applications",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Vector DB",
+        "explanation": "Vector databases like Pinecone and Chroma store AI embeddings for fast similarity search",
+        "points": [
+          "Core concept of Vector DB used widely in modern software and AI systems",
+          "Important for understanding: Vector databases like Pinecone and Chroma store AI embeddings for fast similarity search",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "ACID",
+        "explanation": "ACID ensures database transactions are Atomic, Consistent, Isolated, and Durable",
+        "points": [
+          "Core concept of ACID used widely in modern software and AI systems",
+          "Important for understanding: ACID ensures database transactions are Atomic, Consistent, Isolated, and Durable",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Indexing",
+        "explanation": "Database indexes dramatically speed up queries by creating shortcuts to find data fast",
+        "points": [
+          "Core concept of Indexing used widely in modern software and AI systems",
+          "Important for understanding: Database indexes dramatically speed up queries by creating shortcuts to find data fast",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Graph Database",
+        "explanation": "Graph databases like Neo4j model and query complex relationships between data points",
+        "points": [
+          "Core concept of Graph Database used widely in modern software and AI systems",
+          "Important for understanding: Graph databases like Neo4j model and query complex relationships between data points",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Sharding",
+        "explanation": "Sharding splits a database across multiple servers to handle massive scale and traffic",
+        "points": [
+          "Core concept of Sharding used widely in modern software and AI systems",
+          "Important for understanding: Sharding splits a database across multiple servers to handle massive scale and traffic",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Replication",
+        "explanation": "Replication copies data across multiple servers so your database stays up if one server fails",
+        "points": [
+          "Core concept of Replication used widely in modern software and AI systems",
+          "Important for understanding: Replication copies data across multiple servers so your database stays up if one server fails",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Primary Key",
+        "explanation": "A primary key is a unique identifier that distinguishes each row in a database table",
+        "points": [
+          "Core concept of Primary Key used widely in modern software and AI systems",
+          "Important for understanding: A primary key is a unique identifier that distinguishes each row in a database table",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Foreign Key",
+        "explanation": "A foreign key links rows in one table to rows in another creating a relationship",
+        "points": [
+          "Core concept of Foreign Key used widely in modern software and AI systems",
+          "Important for understanding: A foreign key links rows in one table to rows in another creating a relationship",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "JOIN",
+        "explanation": "A JOIN combines rows from two or more tables based on a matching column value",
+        "points": [
+          "Core concept of JOIN used widely in modern software and AI systems",
+          "Important for understanding: A JOIN combines rows from two or more tables based on a matching column value",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "INNER JOIN",
+        "explanation": "INNER JOIN returns only the rows where a match exists in both joined tables",
+        "points": [
+          "Core concept of INNER JOIN used widely in modern software and AI systems",
+          "Important for understanding: INNER JOIN returns only the rows where a match exists in both joined tables",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "LEFT JOIN",
+        "explanation": "LEFT JOIN returns all rows from the left table and matching rows from the right",
+        "points": [
+          "Core concept of LEFT JOIN used widely in modern software and AI systems",
+          "Important for understanding: LEFT JOIN returns all rows from the left table and matching rows from the right",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Index Scan",
+        "explanation": "An index scan uses a database index to find rows quickly without scanning every row",
+        "points": [
+          "Core concept of Index Scan used widely in modern software and AI systems",
+          "Important for understanding: An index scan uses a database index to find rows quickly without scanning every row",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Full Table Scan",
+        "explanation": "A full table scan reads every row in a table which is slow on large datasets",
+        "points": [
+          "Core concept of Full Table Scan used widely in modern software and AI systems",
+          "Important for understanding: A full table scan reads every row in a table which is slow on large datasets",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Query Planner",
+        "explanation": "The query planner figures out the most efficient way to execute a SQL query",
+        "points": [
+          "Core concept of Query Planner used widely in modern software and AI systems",
+          "Important for understanding: The query planner figures out the most efficient way to execute a SQL query",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Normalization",
+        "explanation": "Normalization organizes a database to reduce redundancy and improve data integrity",
+        "points": [
+          "Core concept of Normalization used widely in modern software and AI systems",
+          "Important for understanding: Normalization organizes a database to reduce redundancy and improve data integrity",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Denormalization",
+        "explanation": "Denormalization adds redundancy to a database to speed up read-heavy query performance",
+        "points": [
+          "Core concept of Denormalization used widely in modern software and AI systems",
+          "Important for understanding: Denormalization adds redundancy to a database to speed up read-heavy query performance",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Schema",
+        "explanation": "A database schema defines the structure, tables, columns, and data types of a database",
+        "points": [
+          "Core concept of Schema used widely in modern software and AI systems",
+          "Important for understanding: A database schema defines the structure, tables, columns, and data types of a database",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Migration",
+        "explanation": "Database migrations manage version-controlled changes to a database schema over time",
+        "points": [
+          "Core concept of Migration used widely in modern software and AI systems",
+          "Important for understanding: Database migrations manage version-controlled changes to a database schema over time",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "ORM",
+        "explanation": "Object-Relational Mapping lets developers interact with databases using code objects instead of SQL",
+        "points": [
+          "Core concept of ORM used widely in modern software and AI systems",
+          "Important for understanding: Object-Relational Mapping lets developers interact with databases using code objects instead of SQL",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Stored Procedure",
+        "explanation": "Stored procedures are pre-compiled SQL logic saved in the database for reuse and speed",
+        "points": [
+          "Core concept of Stored Procedure used widely in modern software and AI systems",
+          "Important for understanding: Stored procedures are pre-compiled SQL logic saved in the database for reuse and speed",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Trigger",
+        "explanation": "A database trigger automatically runs code when a specified event like insert or update occurs",
+        "points": [
+          "Core concept of Trigger used widely in modern software and AI systems",
+          "Important for understanding: A database trigger automatically runs code when a specified event like insert or update occurs",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "View",
+        "explanation": "A database view is a saved query that acts like a virtual table for simpler querying",
+        "points": [
+          "Core concept of View used widely in modern software and AI systems",
+          "Important for understanding: A database view is a saved query that acts like a virtual table for simpler querying",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Materialized View",
+        "explanation": "A materialized view caches the results of a query on disk for much faster reads",
+        "points": [
+          "Core concept of Materialized View used widely in modern software and AI systems",
+          "Important for understanding: A materialized view caches the results of a query on disk for much faster reads",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Partition",
+        "explanation": "Partitioning divides a large table into smaller pieces to improve query and management performance",
+        "points": [
+          "Core concept of Partition used widely in modern software and AI systems",
+          "Important for understanding: Partitioning divides a large table into smaller pieces to improve query and management performance",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "B-tree Index",
+        "explanation": "B-tree indexes are balanced tree structures ideal for range queries and equality lookups",
+        "points": [
+          "Core concept of B-tree Index used widely in modern software and AI systems",
+          "Important for understanding: B-tree indexes are balanced tree structures ideal for range queries and equality lookups",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Hash Index",
+        "explanation": "Hash indexes provide O(1) lookup speed for exact equality queries",
+        "points": [
+          "Core concept of Hash Index used widely in modern software and AI systems",
+          "Important for understanding: Hash indexes provide O(1) lookup speed for exact equality queries",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "GiST Index",
+        "explanation": "GiST indexes in PostgreSQL support complex data types like geographic and full-text search",
+        "points": [
+          "Core concept of GiST Index used widely in modern software and AI systems",
+          "Important for understanding: GiST indexes in PostgreSQL support complex data types like geographic and full-text search",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Full-text Search",
+        "explanation": "Full-text search indexes words in documents to enable fast natural language text queries",
+        "points": [
+          "Core concept of Full-text Search used widely in modern software and AI systems",
+          "Important for understanding: Full-text search indexes words in documents to enable fast natural language text queries",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Transaction",
+        "explanation": "A transaction is a group of database operations that all succeed or all fail together",
+        "points": [
+          "Core concept of Transaction used widely in modern software and AI systems",
+          "Important for understanding: A transaction is a group of database operations that all succeed or all fail together",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Rollback",
+        "explanation": "Rollback undoes all changes in a transaction if something goes wrong",
+        "points": [
+          "Core concept of Rollback used widely in modern software and AI systems",
+          "Important for understanding: Rollback undoes all changes in a transaction if something goes wrong",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Commit",
+        "explanation": "Commit saves all changes in a transaction permanently to the database",
+        "points": [
+          "Core concept of Commit used widely in modern software and AI systems",
+          "Important for understanding: Commit saves all changes in a transaction permanently to the database",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Deadlock",
+        "explanation": "A deadlock occurs when two transactions each hold a lock the other needs to proceed",
+        "points": [
+          "Core concept of Deadlock used widely in modern software and AI systems",
+          "Important for understanding: A deadlock occurs when two transactions each hold a lock the other needs to proceed",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Isolation Level",
+        "explanation": "Isolation levels control how much one transaction can see the uncommitted data of another",
+        "points": [
+          "Core concept of Isolation Level used widely in modern software and AI systems",
+          "Important for understanding: Isolation levels control how much one transaction can see the uncommitted data of another",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "WAL",
+        "explanation": "Write-Ahead Logging records changes before applying them ensuring durability and crash recovery",
+        "points": [
+          "Core concept of WAL used widely in modern software and AI systems",
+          "Important for understanding: Write-Ahead Logging records changes before applying them ensuring durability and crash recovery",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "MVCC",
+        "explanation": "Multi-Version Concurrency Control lets readers and writers work simultaneously without blocking each other",
+        "points": [
+          "Core concept of MVCC used widely in modern software and AI systems",
+          "Important for understanding: Multi-Version Concurrency Control lets readers and writers work simultaneously without blocking each other",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Connection Pool",
+        "explanation": "A connection pool reuses database connections to avoid the overhead of opening new ones",
+        "points": [
+          "Core concept of Connection Pool used widely in modern software and AI systems",
+          "Important for understanding: A connection pool reuses database connections to avoid the overhead of opening new ones",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "ORM N+1 Problem",
+        "explanation": "The N+1 problem is when an ORM executes one query per row instead of joining efficiently",
+        "points": [
+          "Core concept of ORM N+1 Problem used widely in modern software and AI systems",
+          "Important for understanding: The N+1 problem is when an ORM executes one query per row instead of joining efficiently",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Cassandra",
+        "explanation": "Apache Cassandra is a distributed NoSQL database designed for massive write throughput",
+        "points": [
+          "Core concept of Cassandra used widely in modern software and AI systems",
+          "Important for understanding: Apache Cassandra is a distributed NoSQL database designed for massive write throughput",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "DynamoDB",
+        "explanation": "DynamoDB is AWS's managed NoSQL database offering single-digit millisecond latency at any scale",
+        "points": [
+          "Core concept of DynamoDB used widely in modern software and AI systems",
+          "Important for understanding: DynamoDB is AWS's managed NoSQL database offering single-digit millisecond latency at any scale",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "MySQL",
+        "explanation": "MySQL is the world's most widely used open-source relational database powering countless websites",
+        "points": [
+          "Core concept of MySQL used widely in modern software and AI systems",
+          "Important for understanding: MySQL is the world's most widely used open-source relational database powering countless websites",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "SQLite",
+        "explanation": "SQLite is a serverless embedded database that stores everything in a single file",
+        "points": [
+          "Core concept of SQLite used widely in modern software and AI systems",
+          "Important for understanding: SQLite is a serverless embedded database that stores everything in a single file",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "MariaDB",
+        "explanation": "MariaDB is a community-driven MySQL fork with additional features and performance improvements",
+        "points": [
+          "Core concept of MariaDB used widely in modern software and AI systems",
+          "Important for understanding: MariaDB is a community-driven MySQL fork with additional features and performance improvements",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Oracle DB",
+        "explanation": "Oracle Database is the dominant enterprise relational database trusted by large corporations",
+        "points": [
+          "Core concept of Oracle DB used widely in modern software and AI systems",
+          "Important for understanding: Oracle Database is the dominant enterprise relational database trusted by large corporations",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Microsoft SQL Server",
+        "explanation": "SQL Server is Microsoft's enterprise database tightly integrated with the Windows ecosystem",
+        "points": [
+          "Core concept of Microsoft SQL Server used widely in modern software and AI systems",
+          "Important for understanding: SQL Server is Microsoft's enterprise database tightly integrated with the Windows ecosystem",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Snowflake",
+        "explanation": "Snowflake is a cloud data warehouse that separates compute and storage for flexible scaling",
+        "points": [
+          "Core concept of Snowflake used widely in modern software and AI systems",
+          "Important for understanding: Snowflake is a cloud data warehouse that separates compute and storage for flexible scaling",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "BigQuery",
+        "explanation": "BigQuery is Google's serverless data warehouse for analyzing massive datasets with SQL",
+        "points": [
+          "Core concept of BigQuery used widely in modern software and AI systems",
+          "Important for understanding: BigQuery is Google's serverless data warehouse for analyzing massive datasets with SQL",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Redshift",
+        "explanation": "Amazon Redshift is a cloud data warehouse optimized for analytical queries on large datasets",
+        "points": [
+          "Core concept of Redshift used widely in modern software and AI systems",
+          "Important for understanding: Amazon Redshift is a cloud data warehouse optimized for analytical queries on large datasets",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "ClickHouse",
+        "explanation": "ClickHouse is an extremely fast columnar database built for real-time analytics",
+        "points": [
+          "Core concept of ClickHouse used widely in modern software and AI systems",
+          "Important for understanding: ClickHouse is an extremely fast columnar database built for real-time analytics",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "DuckDB",
+        "explanation": "DuckDB is an in-process analytical database that runs fast SQL queries on local files",
+        "points": [
+          "Core concept of DuckDB used widely in modern software and AI systems",
+          "Important for understanding: DuckDB is an in-process analytical database that runs fast SQL queries on local files",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "InfluxDB",
+        "explanation": "InfluxDB is a purpose-built time series database for metrics, monitoring, and IoT data",
+        "points": [
+          "Core concept of InfluxDB used widely in modern software and AI systems",
+          "Important for understanding: InfluxDB is a purpose-built time series database for metrics, monitoring, and IoT data",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "TimescaleDB",
+        "explanation": "TimescaleDB extends PostgreSQL with time-series capabilities for fast time-ordered data",
+        "points": [
+          "Core concept of TimescaleDB used widely in modern software and AI systems",
+          "Important for understanding: TimescaleDB extends PostgreSQL with time-series capabilities for fast time-ordered data",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "CockroachDB",
+        "explanation": "CockroachDB is a distributed SQL database that survives regional failures automatically",
+        "points": [
+          "Core concept of CockroachDB used widely in modern software and AI systems",
+          "Important for understanding: CockroachDB is a distributed SQL database that survives regional failures automatically",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "PlanetScale",
+        "explanation": "PlanetScale is a MySQL-compatible serverless database platform with branching like Git",
+        "points": [
+          "Core concept of PlanetScale used widely in modern software and AI systems",
+          "Important for understanding: PlanetScale is a MySQL-compatible serverless database platform with branching like Git",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Supabase",
+        "explanation": "Supabase is an open-source Firebase alternative built on PostgreSQL with real-time features",
+        "points": [
+          "Core concept of Supabase used widely in modern software and AI systems",
+          "Important for understanding: Supabase is an open-source Firebase alternative built on PostgreSQL with real-time features",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Firebase",
+        "explanation": "Firebase is Google's real-time NoSQL cloud database popular for mobile and web apps",
+        "points": [
+          "Core concept of Firebase used widely in modern software and AI systems",
+          "Important for understanding: Firebase is Google's real-time NoSQL cloud database popular for mobile and web apps",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Firestore",
+        "explanation": "Firestore is Google's flexible scalable NoSQL cloud database with offline support",
+        "points": [
+          "Core concept of Firestore used widely in modern software and AI systems",
+          "Important for understanding: Firestore is Google's flexible scalable NoSQL cloud database with offline support",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "FaunaDB",
+        "explanation": "Fauna is a serverless transactional database with a document-relational data model",
+        "points": [
+          "Core concept of FaunaDB used widely in modern software and AI systems",
+          "Important for understanding: Fauna is a serverless transactional database with a document-relational data model",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Couchbase",
+        "explanation": "Couchbase combines NoSQL flexibility with SQL query support and built-in caching",
+        "points": [
+          "Core concept of Couchbase used widely in modern software and AI systems",
+          "Important for understanding: Couchbase combines NoSQL flexibility with SQL query support and built-in caching",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Elasticsearch",
+        "explanation": "Elasticsearch is a distributed search and analytics engine built on Apache Lucene",
+        "points": [
+          "Core concept of Elasticsearch used widely in modern software and AI systems",
+          "Important for understanding: Elasticsearch is a distributed search and analytics engine built on Apache Lucene",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "OpenSearch",
+        "explanation": "OpenSearch is AWS's open-source fork of Elasticsearch for search and log analytics",
+        "points": [
+          "Core concept of OpenSearch used widely in modern software and AI systems",
+          "Important for understanding: OpenSearch is AWS's open-source fork of Elasticsearch for search and log analytics",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Apache Solr",
+        "explanation": "Solr is an enterprise search platform built on Lucene with rich faceting and filtering",
+        "points": [
+          "Core concept of Apache Solr used widely in modern software and AI systems",
+          "Important for understanding: Solr is an enterprise search platform built on Lucene with rich faceting and filtering",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Neo4j",
+        "explanation": "Neo4j is the leading graph database using nodes and edges to model complex relationships",
+        "points": [
+          "Core concept of Neo4j used widely in modern software and AI systems",
+          "Important for understanding: Neo4j is the leading graph database using nodes and edges to model complex relationships",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Amazon Neptune",
+        "explanation": "Neptune is AWS's managed graph database supporting both property graph and RDF queries",
+        "points": [
+          "Core concept of Amazon Neptune used widely in modern software and AI systems",
+          "Important for understanding: Neptune is AWS's managed graph database supporting both property graph and RDF queries",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "ArangoDB",
+        "explanation": "ArangoDB is a multi-model database supporting graphs, documents, and key-value in one system",
+        "points": [
+          "Core concept of ArangoDB used widely in modern software and AI systems",
+          "Important for understanding: ArangoDB is a multi-model database supporting graphs, documents, and key-value in one system",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Dgraph",
+        "explanation": "Dgraph is a distributed graph database that uses GraphQL as its native query language",
+        "points": [
+          "Core concept of Dgraph used widely in modern software and AI systems",
+          "Important for understanding: Dgraph is a distributed graph database that uses GraphQL as its native query language",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Memcached",
+        "explanation": "Memcached is a simple high-performance distributed memory cache for speeding up web apps",
+        "points": [
+          "Core concept of Memcached used widely in modern software and AI systems",
+          "Important for understanding: Memcached is a simple high-performance distributed memory cache for speeding up web apps",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Apache HBase",
+        "explanation": "HBase is a Hadoop-based NoSQL database for random real-time access to big data",
+        "points": [
+          "Core concept of Apache HBase used widely in modern software and AI systems",
+          "Important for understanding: HBase is a Hadoop-based NoSQL database for random real-time access to big data",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Apache Hive",
+        "explanation": "Hive is a data warehouse built on Hadoop enabling SQL queries over distributed storage",
+        "points": [
+          "Core concept of Apache Hive used widely in modern software and AI systems",
+          "Important for understanding: Hive is a data warehouse built on Hadoop enabling SQL queries over distributed storage",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Apache Spark SQL",
+        "explanation": "Spark SQL runs SQL queries over massive distributed datasets using Apache Spark",
+        "points": [
+          "Core concept of Apache Spark SQL used widely in modern software and AI systems",
+          "Important for understanding: Spark SQL runs SQL queries over massive distributed datasets using Apache Spark",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Presto",
+        "explanation": "Presto is a distributed SQL query engine for running fast queries across heterogeneous data sources",
+        "points": [
+          "Core concept of Presto used widely in modern software and AI systems",
+          "Important for understanding: Presto is a distributed SQL query engine for running fast queries across heterogeneous data sources",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Apache Iceberg",
+        "explanation": "Iceberg is an open table format for huge analytics tables with ACID transactions",
+        "points": [
+          "Core concept of Apache Iceberg used widely in modern software and AI systems",
+          "Important for understanding: Iceberg is an open table format for huge analytics tables with ACID transactions",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Delta Lake",
+        "explanation": "Delta Lake adds ACID transactions and versioning to data lakes stored on cloud storage",
+        "points": [
+          "Core concept of Delta Lake used widely in modern software and AI systems",
+          "Important for understanding: Delta Lake adds ACID transactions and versioning to data lakes stored on cloud storage",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Apache Parquet",
+        "explanation": "Parquet is a columnar storage format that compresses analytical data efficiently",
+        "points": [
+          "Core concept of Apache Parquet used widely in modern software and AI systems",
+          "Important for understanding: Parquet is a columnar storage format that compresses analytical data efficiently",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Data Lake",
+        "explanation": "A data lake stores raw structured and unstructured data at massive scale for later analysis",
+        "points": [
+          "Core concept of Data Lake used widely in modern software and AI systems",
+          "Important for understanding: A data lake stores raw structured and unstructured data at massive scale for later analysis",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Data Warehouse",
+        "explanation": "A data warehouse stores structured historical data optimized for business intelligence queries",
+        "points": [
+          "Core concept of Data Warehouse used widely in modern software and AI systems",
+          "Important for understanding: A data warehouse stores structured historical data optimized for business intelligence queries",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Lakehouse",
+        "explanation": "A lakehouse combines data lake flexibility with data warehouse analytics performance",
+        "points": [
+          "Core concept of Lakehouse used widely in modern software and AI systems",
+          "Important for understanding: A lakehouse combines data lake flexibility with data warehouse analytics performance",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "ETL",
+        "explanation": "Extract Transform Load moves data from source systems into a warehouse in a structured form",
+        "points": [
+          "Core concept of ETL used widely in modern software and AI systems",
+          "Important for understanding: Extract Transform Load moves data from source systems into a warehouse in a structured form",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "ELT",
+        "explanation": "ELT loads raw data first and transforms it inside the warehouse using its compute power",
+        "points": [
+          "Core concept of ELT used widely in modern software and AI systems",
+          "Important for understanding: ELT loads raw data first and transforms it inside the warehouse using its compute power",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Change Data Capture",
+        "explanation": "CDC tracks every insert, update, and delete in a database and streams changes in real time",
+        "points": [
+          "Core concept of Change Data Capture used widely in modern software and AI systems",
+          "Important for understanding: CDC tracks every insert, update, and delete in a database and streams changes in real time",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Database Cursor",
+        "explanation": "A cursor iterates over query results one row at a time instead of loading all at once",
+        "points": [
+          "Core concept of Database Cursor used widely in modern software and AI systems",
+          "Important for understanding: A cursor iterates over query results one row at a time instead of loading all at once",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Explain Plan",
+        "explanation": "EXPLAIN shows exactly how a database intends to execute a query for optimization",
+        "points": [
+          "Core concept of Explain Plan used widely in modern software and AI systems",
+          "Important for understanding: EXPLAIN shows exactly how a database intends to execute a query for optimization",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Query Cache",
+        "explanation": "Query caching saves results of expensive queries so identical requests return instantly",
+        "points": [
+          "Core concept of Query Cache used widely in modern software and AI systems",
+          "Important for understanding: Query caching saves results of expensive queries so identical requests return instantly",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Optimistic Locking",
+        "explanation": "Optimistic locking assumes conflicts are rare and only checks for them at commit time",
+        "points": [
+          "Core concept of Optimistic Locking used widely in modern software and AI systems",
+          "Important for understanding: Optimistic locking assumes conflicts are rare and only checks for them at commit time",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Pessimistic Locking",
+        "explanation": "Pessimistic locking locks data as soon as it is accessed to prevent any concurrent modification",
+        "points": [
+          "Core concept of Pessimistic Locking used widely in modern software and AI systems",
+          "Important for understanding: Pessimistic locking locks data as soon as it is accessed to prevent any concurrent modification",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Two-phase Commit",
+        "explanation": "2PC ensures all nodes in a distributed transaction either all commit or all rollback together",
+        "points": [
+          "Core concept of Two-phase Commit used widely in modern software and AI systems",
+          "Important for understanding: 2PC ensures all nodes in a distributed transaction either all commit or all rollback together",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "CAP Theorem",
+        "explanation": "CAP theorem states a distributed system can only guarantee two of Consistency, Availability, and Partition tolerance",
+        "points": [
+          "Core concept of CAP Theorem used widely in modern software and AI systems",
+          "Important for understanding: CAP theorem states a distributed system can only guarantee two of Consistency, Availability, and Partition tolerance",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "BASE",
+        "explanation": "BASE databases are Basically Available, Soft-state, and Eventually consistent \u2014 the NoSQL alternative to ACID",
+        "points": [
+          "Core concept of BASE used widely in modern software and AI systems",
+          "Important for understanding: BASE databases are Basically Available, Soft-state, and Eventually consistent \u2014 the NoSQL alternative to ACID",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Eventual Consistency",
+        "explanation": "Eventual consistency guarantees data will be consistent across nodes eventually but not immediately",
+        "points": [
+          "Core concept of Eventual Consistency used widely in modern software and AI systems",
+          "Important for understanding: Eventual consistency guarantees data will be consistent across nodes eventually but not immediately",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Strong Consistency",
+        "explanation": "Strong consistency ensures every read immediately reflects the most recent write",
+        "points": [
+          "Core concept of Strong Consistency used widely in modern software and AI systems",
+          "Important for understanding: Strong consistency ensures every read immediately reflects the most recent write",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Surrogate Key",
+        "explanation": "A surrogate key is a system-generated unique ID like an auto-increment integer with no business meaning",
+        "points": [
+          "Core concept of Surrogate Key used widely in modern software and AI systems",
+          "Important for understanding: A surrogate key is a system-generated unique ID like an auto-increment integer with no business meaning",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Natural Key",
+        "explanation": "A natural key uses real-world data like email or SSN as the unique row identifier",
+        "points": [
+          "Core concept of Natural Key used widely in modern software and AI systems",
+          "Important for understanding: A natural key uses real-world data like email or SSN as the unique row identifier",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Composite Key",
+        "explanation": "A composite key uses two or more columns together to uniquely identify a row",
+        "points": [
+          "Core concept of Composite Key used widely in modern software and AI systems",
+          "Important for understanding: A composite key uses two or more columns together to uniquely identify a row",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Columnstore Index",
+        "explanation": "Columnstore indexes store data by column for dramatically faster analytical aggregation queries",
+        "points": [
+          "Core concept of Columnstore Index used widely in modern software and AI systems",
+          "Important for understanding: Columnstore indexes store data by column for dramatically faster analytical aggregation queries",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Bitmap Index",
+        "explanation": "Bitmap indexes are space-efficient indexes ideal for low-cardinality columns like status flags",
+        "points": [
+          "Core concept of Bitmap Index used widely in modern software and AI systems",
+          "Important for understanding: Bitmap indexes are space-efficient indexes ideal for low-cardinality columns like status flags",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Connection String",
+        "explanation": "A connection string contains host, port, database name, and credentials to connect to a database",
+        "points": [
+          "Core concept of Connection String used widely in modern software and AI systems",
+          "Important for understanding: A connection string contains host, port, database name, and credentials to connect to a database",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      }
+    ]
+  }
+}

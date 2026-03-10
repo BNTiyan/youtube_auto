@@ -1,0 +1,406 @@
+{
+  "brands": {
+    "items": [
+      {
+        "name": "Apple",
+        "fact": "Apple makes iPhones, iPads, and Mac computers used all over the world"
+      },
+      {
+        "name": "Nike",
+        "fact": "Nike makes sports shoes and clothing with a famous swoosh logo"
+      },
+      {
+        "name": "McDonald's",
+        "fact": "McDonald's golden arches are one of the most recognized symbols on Earth"
+      },
+      {
+        "name": "LEGO",
+        "fact": "LEGO bricks snap together so you can build almost anything you imagine"
+      },
+      {
+        "name": "Disney",
+        "fact": "Disney creates magical movies, cartoons, and exciting theme parks"
+      },
+      {
+        "name": "Google",
+        "fact": "Google helps billions of people find information every single day"
+      },
+      {
+        "name": "Coca-Cola",
+        "fact": "Coca-Cola is one of the world's most popular and delicious drinks"
+      },
+      {
+        "name": "Microsoft",
+        "fact": "Microsoft makes Windows computers, Xbox games, and Office software"
+      },
+      {
+        "name": "Amazon",
+        "fact": "Amazon started as a bookstore and now delivers almost everything to your door"
+      },
+      {
+        "name": "YouTube",
+        "fact": "YouTube is where millions of people watch, learn, and share videos every day"
+      },
+      {
+        "name": "Samsung",
+        "fact": "Samsung makes smartphones, TVs, and even supplies chips to other tech companies"
+      },
+      {
+        "name": "Sony",
+        "fact": "Sony makes PlayStation games, cameras, music equipment, and movies"
+      },
+      {
+        "name": "Netflix",
+        "fact": "Netflix streams movies and TV shows to over 200 million subscribers worldwide"
+      },
+      {
+        "name": "Spotify",
+        "fact": "Spotify lets you listen to millions of songs and podcasts anywhere anytime"
+      },
+      {
+        "name": "Meta",
+        "fact": "Meta owns Facebook, Instagram, and WhatsApp connecting billions of people"
+      },
+      {
+        "name": "Twitter/X",
+        "fact": "Twitter, now called X, lets people share short messages with the whole world"
+      },
+      {
+        "name": "TikTok",
+        "fact": "TikTok is a short video app where anyone can become famous overnight"
+      },
+      {
+        "name": "Snapchat",
+        "fact": "Snapchat lets you send photos and videos that disappear after a few seconds"
+      },
+      {
+        "name": "Adobe",
+        "fact": "Adobe makes creative tools like Photoshop used by artists and designers worldwide"
+      },
+      {
+        "name": "Zoom",
+        "fact": "Zoom became how millions of people met for school and work during the pandemic"
+      },
+      {
+        "name": "Adidas",
+        "fact": "Adidas is Nike's biggest rival and has three famous parallel stripes"
+      },
+      {
+        "name": "Puma",
+        "fact": "Puma is a German sports brand with a leaping cat as its mascot"
+      },
+      {
+        "name": "Under Armour",
+        "fact": "Under Armour makes high-tech sports gear designed to keep athletes performing"
+      },
+      {
+        "name": "Gucci",
+        "fact": "Gucci is one of the world's most famous fashion luxury brands from Italy"
+      },
+      {
+        "name": "Louis Vuitton",
+        "fact": "Louis Vuitton is famous for luxury handbags and the iconic LV monogram pattern"
+      },
+      {
+        "name": "Chanel",
+        "fact": "Chanel is a legendary French fashion house known for the little black dress"
+      },
+      {
+        "name": "Ferrari Brand",
+        "fact": "The Ferrari prancing horse logo is one of the most coveted symbols in the world"
+      },
+      {
+        "name": "Rolex",
+        "fact": "Rolex makes the most recognized luxury watches in the world"
+      },
+      {
+        "name": "IKEA",
+        "fact": "IKEA is a Swedish furniture store where you assemble the furniture yourself at home"
+      },
+      {
+        "name": "H&M",
+        "fact": "H&M is a Swedish fashion brand making affordable trendy clothing for everyone"
+      },
+      {
+        "name": "Zara",
+        "fact": "Zara can design and deliver new fashion to stores in just two weeks"
+      },
+      {
+        "name": "Starbucks",
+        "fact": "Starbucks serves coffee to millions of customers in over 80 countries every day"
+      },
+      {
+        "name": "Subway",
+        "fact": "Subway has more locations worldwide than any other fast food restaurant"
+      },
+      {
+        "name": "Burger King",
+        "fact": "Burger King is famous for the Whopper and flame-grilling all their burgers"
+      },
+      {
+        "name": "KFC",
+        "fact": "KFC was started by Colonel Harland Sanders who began frying chicken at age 65"
+      },
+      {
+        "name": "Pizza Hut",
+        "fact": "Pizza Hut opened in 1958 and became the world's largest pizza restaurant chain"
+      },
+      {
+        "name": "Domino's",
+        "fact": "Domino's guarantees pizza delivery in 30 minutes or the order is free"
+      },
+      {
+        "name": "Walmart",
+        "fact": "Walmart is the world's largest company by revenue employing over 2 million people"
+      },
+      {
+        "name": "NVIDIA",
+        "fact": "NVIDIA makes graphics chips that power video games, AI, and scientific research"
+      },
+      {
+        "name": "Intel",
+        "fact": "Intel makes the microprocessors found in the majority of the world's computers"
+      },
+      {
+        "name": "Qualcomm",
+        "fact": "Qualcomm's chips power the cellular technology in billions of smartphones"
+      },
+      {
+        "name": "SpaceX",
+        "fact": "SpaceX builds reusable rockets and has its own satellite internet called Starlink"
+      },
+      {
+        "name": "NASA",
+        "fact": "NASA has sent humans to the Moon and probes to every planet in our solar system"
+      },
+      {
+        "name": "Red Bull",
+        "fact": "Red Bull sells over 12 billion cans per year and sponsors extreme sports worldwide"
+      },
+      {
+        "name": "Monster Energy",
+        "fact": "Monster Energy is famous for its giant M-claw logo and sponsoring action sports"
+      },
+      {
+        "name": "GoPro",
+        "fact": "GoPro makes tiny rugged cameras that athletes strap to helmets and boards"
+      },
+      {
+        "name": "DJI",
+        "fact": "DJI makes over 70% of the world's commercial drones and camera gimbals"
+      },
+      {
+        "name": "Dyson",
+        "fact": "Dyson reinvented the vacuum cleaner by removing the bag and using cyclone technology"
+      },
+      {
+        "name": "Philips",
+        "fact": "Philips is a Dutch company making everything from light bulbs to medical equipment"
+      },
+      {
+        "name": "Bosch",
+        "fact": "Bosch makes power tools, appliances, and auto parts used around the world"
+      },
+      {
+        "name": "Caterpillar",
+        "fact": "Caterpillar makes the massive yellow construction machines that build roads and buildings"
+      },
+      {
+        "name": "John Deere",
+        "fact": "John Deere's green tractors are used on farms in almost every country on Earth"
+      },
+      {
+        "name": "3M",
+        "fact": "3M invented Post-it notes, Scotch tape, and thousands of other everyday products"
+      },
+      {
+        "name": "Johnson & Johnson",
+        "fact": "Johnson & Johnson makes baby products, Band-Aids, and medicines for millions"
+      },
+      {
+        "name": "Pfizer",
+        "fact": "Pfizer is one of the world's biggest drug companies making vaccines and medicines"
+      },
+      {
+        "name": "LEGO Technic",
+        "fact": "LEGO Technic sets build complex machines with gears and motors that actually work"
+      },
+      {
+        "name": "Mattel",
+        "fact": "Mattel makes Barbie, Hot Wheels, and many of the world's most loved toys"
+      },
+      {
+        "name": "Hasbro",
+        "fact": "Hasbro makes board games like Monopoly and toys like Transformers and Nerf"
+      },
+      {
+        "name": "Nintendo",
+        "fact": "Nintendo created Mario, Zelda, and Pokemon and made gaming fun for everyone"
+      },
+      {
+        "name": "PlayStation",
+        "fact": "PlayStation is Sony's gaming brand and has sold over 500 million consoles"
+      },
+      {
+        "name": "Xbox",
+        "fact": "Xbox is Microsoft's gaming brand competing with PlayStation for gamers worldwide"
+      },
+      {
+        "name": "Roblox",
+        "fact": "Roblox lets kids create and play millions of games made by other users"
+      },
+      {
+        "name": "Minecraft",
+        "fact": "Minecraft is the best-selling video game of all time with over 238 million copies sold"
+      },
+      {
+        "name": "Fortnite",
+        "fact": "Fortnite became a worldwide phenomenon with over 350 million registered players"
+      },
+      {
+        "name": "Uber",
+        "fact": "Uber transformed transportation by letting you hail a car with just your phone"
+      },
+      {
+        "name": "Airbnb",
+        "fact": "Airbnb lets you stay in someone's home anywhere in the world as a traveler"
+      },
+      {
+        "name": "PayPal",
+        "fact": "PayPal was one of the first ways to send money safely over the internet"
+      },
+      {
+        "name": "Visa",
+        "fact": "Visa processes over 200 billion payment transactions every single year"
+      },
+      {
+        "name": "Mastercard",
+        "fact": "Mastercard processes payments in over 210 countries with its famous red and yellow circles"
+      },
+      {
+        "name": "Stripe",
+        "fact": "Stripe helps millions of websites and apps accept payments securely online"
+      },
+      {
+        "name": "Shopify",
+        "fact": "Shopify lets anyone easily set up and run their own online store"
+      },
+      {
+        "name": "Salesforce",
+        "fact": "Salesforce pioneered cloud computing software for businesses managing customers"
+      },
+      {
+        "name": "Oracle",
+        "fact": "Oracle makes database software that runs the data systems of most large companies"
+      },
+      {
+        "name": "IBM",
+        "fact": "IBM invented the personal computer, created Watson AI, and holds the most patents annually"
+      },
+      {
+        "name": "Siemens",
+        "fact": "Siemens is a giant German company making everything from trains to medical scanners"
+      },
+      {
+        "name": "Panasonic",
+        "fact": "Panasonic makes batteries for Tesla cars and electronics for daily life"
+      },
+      {
+        "name": "Toshiba",
+        "fact": "Toshiba invented the flash memory that powers USB drives and memory cards"
+      },
+      {
+        "name": "Hitachi",
+        "fact": "Hitachi builds trains, power infrastructure, and medical imaging equipment worldwide"
+      },
+      {
+        "name": "Canon",
+        "fact": "Canon makes cameras and printers and is one of Japan's most innovative companies"
+      },
+      {
+        "name": "Nikon",
+        "fact": "Nikon cameras are trusted by professional photographers all over the world"
+      },
+      {
+        "name": "Fujifilm",
+        "fact": "Fujifilm pivoted from camera film to skin care products using the same anti-aging chemistry"
+      },
+      {
+        "name": "Twitter Brand",
+        "fact": "The iconic blue bird logo represented free flowing communication before the rebrand to X"
+      },
+      {
+        "name": "Alibaba",
+        "fact": "Alibaba is China's biggest e-commerce company connecting manufacturers to buyers worldwide"
+      },
+      {
+        "name": "Tencent",
+        "fact": "Tencent owns WeChat and is one of the world's most valuable gaming and tech companies"
+      },
+      {
+        "name": "Baidu",
+        "fact": "Baidu is China's dominant search engine and a leader in AI development"
+      },
+      {
+        "name": "Xiaomi",
+        "fact": "Xiaomi makes affordable smartphones and hundreds of smart home devices"
+      },
+      {
+        "name": "Huawei",
+        "fact": "Huawei is China's largest technology company making phones, 5G networks, and more"
+      },
+      {
+        "name": "Telegram",
+        "fact": "Telegram is a messaging app known for strong privacy and huge group channels"
+      },
+      {
+        "name": "Reddit",
+        "fact": "Reddit is a vast collection of communities where people discuss almost any topic"
+      },
+      {
+        "name": "Pinterest",
+        "fact": "Pinterest is a visual inspiration board where people collect ideas for home and life"
+      },
+      {
+        "name": "LinkedIn",
+        "fact": "LinkedIn is the world's largest professional networking site for careers and business"
+      },
+      {
+        "name": "Dropbox",
+        "fact": "Dropbox made cloud file storage easy long before it became standard technology"
+      },
+      {
+        "name": "Slack",
+        "fact": "Slack transformed how teams communicate at work with organized channels and messages"
+      },
+      {
+        "name": "Notion",
+        "fact": "Notion is an all-in-one workspace for notes, tasks, and team collaboration"
+      },
+      {
+        "name": "Canva",
+        "fact": "Canva lets anyone create beautiful designs even without professional experience"
+      },
+      {
+        "name": "Twitch",
+        "fact": "Twitch is where millions of people watch others play video games live every day"
+      },
+      {
+        "name": "Discord",
+        "fact": "Discord is a chat platform that became the main hub for gaming communities worldwide"
+      },
+      {
+        "name": "Duolingo",
+        "fact": "Duolingo teaches languages through short fun lessons and a relentless encouraging owl"
+      },
+      {
+        "name": "OpenAI",
+        "fact": "OpenAI created ChatGPT which became the fastest-growing app in internet history"
+      },
+      {
+        "name": "Anthropic",
+        "fact": "Anthropic is an AI safety company that created Claude the AI assistant"
+      }
+    ]
+  }
+}

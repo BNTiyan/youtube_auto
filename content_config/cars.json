@@ -1,0 +1,406 @@
+{
+  "cars": {
+    "items": [
+      {
+        "name": "Ferrari",
+        "fact": "Ferrari is an Italian supercar brand known for incredible speed"
+      },
+      {
+        "name": "Lamborghini",
+        "fact": "Lamborghinis are Italian supercars with a cool low wedge shape"
+      },
+      {
+        "name": "BMW",
+        "fact": "BMW is a German luxury car brand loved all around the world"
+      },
+      {
+        "name": "Tesla",
+        "fact": "Tesla makes electric cars that run on batteries instead of gas"
+      },
+      {
+        "name": "Porsche",
+        "fact": "Porsche is a German brand famous for making fast sports cars"
+      },
+      {
+        "name": "Bugatti",
+        "fact": "Bugatti makes some of the fastest and most expensive cars on Earth"
+      },
+      {
+        "name": "Rolls Royce",
+        "fact": "Rolls Royce makes the most luxurious and elegant cars in the world"
+      },
+      {
+        "name": "Ford Mustang",
+        "fact": "The Ford Mustang is a famous American muscle car with a roaring engine"
+      },
+      {
+        "name": "Toyota",
+        "fact": "Toyota is one of the world's biggest and most reliable car makers"
+      },
+      {
+        "name": "Jeep",
+        "fact": "Jeeps are tough vehicles that can drive over mountains and rough roads"
+      },
+      {
+        "name": "Mercedes-Benz",
+        "fact": "Mercedes-Benz is famous for luxury comfort and the three-pointed star logo"
+      },
+      {
+        "name": "Audi",
+        "fact": "Audi is a German car maker known for its Quattro all-wheel-drive system"
+      },
+      {
+        "name": "McLaren",
+        "fact": "McLaren builds extreme supercars originally designed for Formula One racing"
+      },
+      {
+        "name": "Aston Martin",
+        "fact": "Aston Martin is the elegant British car brand famously driven by James Bond"
+      },
+      {
+        "name": "Chevrolet Corvette",
+        "fact": "The Corvette is America's most iconic sports car produced since 1953"
+      },
+      {
+        "name": "Maserati",
+        "fact": "Maserati is an Italian luxury car brand with a legendary trident logo"
+      },
+      {
+        "name": "Bentley",
+        "fact": "Bentley makes handcrafted luxury cars that take thousands of hours to build"
+      },
+      {
+        "name": "Pagani",
+        "fact": "Pagani makes ultra-rare handmade hypercars with beautiful artistic designs"
+      },
+      {
+        "name": "Koenigsegg",
+        "fact": "Koenigsegg is a Swedish brand that holds the world record for fastest production car"
+      },
+      {
+        "name": "Rimac",
+        "fact": "Rimac builds the world's most powerful electric hypercars from Croatia"
+      },
+      {
+        "name": "Lotus",
+        "fact": "Lotus cars are lightweight British sports cars focused on pure driving feel"
+      },
+      {
+        "name": "Alfa Romeo",
+        "fact": "Alfa Romeo is a passionate Italian brand known for beautiful design and racing history"
+      },
+      {
+        "name": "Jaguar",
+        "fact": "Jaguar is a British luxury car brand famous for its leaping cat emblem"
+      },
+      {
+        "name": "Land Rover",
+        "fact": "Land Rovers are British off-road vehicles built to conquer any terrain"
+      },
+      {
+        "name": "Volvo",
+        "fact": "Volvo is famous for being the safest cars in the world"
+      },
+      {
+        "name": "Subaru",
+        "fact": "Subaru is famous for all-wheel-drive and is beloved by adventure drivers"
+      },
+      {
+        "name": "Mazda",
+        "fact": "Mazda makes sporty fun-to-drive cars including the legendary MX-5 roadster"
+      },
+      {
+        "name": "Honda",
+        "fact": "Honda makes reliable cars and is also the world's largest engine manufacturer"
+      },
+      {
+        "name": "Nissan",
+        "fact": "Nissan made the legendary GT-R supercar known as Godzilla"
+      },
+      {
+        "name": "Dodge Challenger",
+        "fact": "The Dodge Challenger is a massive American muscle car with a thunderous engine"
+      },
+      {
+        "name": "Ford F-150",
+        "fact": "The Ford F-150 has been the best-selling vehicle in the USA for over 40 years"
+      },
+      {
+        "name": "Volkswagen",
+        "fact": "Volkswagen means People's Car in German and makes cars for everyone"
+      },
+      {
+        "name": "Hyundai",
+        "fact": "Hyundai transformed from a tiny Korean brand to one of the world's largest car makers"
+      },
+      {
+        "name": "Kia",
+        "fact": "Kia started making bicycles before becoming a major global car manufacturer"
+      },
+      {
+        "name": "Chrysler",
+        "fact": "Chrysler helped define American car culture with bold designs since the 1920s"
+      },
+      {
+        "name": "Cadillac",
+        "fact": "Cadillac is America's most iconic luxury car brand known for big elegant vehicles"
+      },
+      {
+        "name": "Lincoln",
+        "fact": "Lincoln is Ford's luxury brand named after President Abraham Lincoln"
+      },
+      {
+        "name": "Rivian",
+        "fact": "Rivian makes electric adventure trucks and SUVs designed for outdoor exploration"
+      },
+      {
+        "name": "Lucid Motors",
+        "fact": "Lucid Air is an electric car with the longest range of any electric vehicle ever tested"
+      },
+      {
+        "name": "Polestar",
+        "fact": "Polestar is Volvo's pure electric performance car brand from Sweden"
+      },
+      {
+        "name": "Fisker",
+        "fact": "Fisker designs stylish electric cars with a focus on sustainability"
+      },
+      {
+        "name": "BYD",
+        "fact": "BYD is China's biggest electric car maker and sells more EVs than almost anyone"
+      },
+      {
+        "name": "Nio",
+        "fact": "Nio is a Chinese electric car brand with battery swap stations instead of charging"
+      },
+      {
+        "name": "Geely",
+        "fact": "Geely is a Chinese automaker that owns Volvo and Lotus brands"
+      },
+      {
+        "name": "Acura",
+        "fact": "Acura is Honda's luxury division making sporty premium vehicles"
+      },
+      {
+        "name": "Lexus",
+        "fact": "Lexus is Toyota's luxury brand known for whisper-quiet refined vehicles"
+      },
+      {
+        "name": "Infiniti",
+        "fact": "Infiniti is Nissan's luxury brand celebrated for powerful smooth performance"
+      },
+      {
+        "name": "Genesis",
+        "fact": "Genesis is Hyundai's luxury brand that has quickly earned global design awards"
+      },
+      {
+        "name": "Pontiac",
+        "fact": "Pontiac was a bold American car brand known for sporty muscle cars before closing in 2010"
+      },
+      {
+        "name": "Oldsmobile",
+        "fact": "Oldsmobile was one of the oldest American car brands operating for over 100 years"
+      },
+      {
+        "name": "Saab",
+        "fact": "Saab started making jet aircraft before branching into making cars"
+      },
+      {
+        "name": "Lancia",
+        "fact": "Lancia is an Italian brand with a legendary rally racing heritage"
+      },
+      {
+        "name": "De Tomaso",
+        "fact": "De Tomaso is a rare Italian sports car maker known for the powerful Pantera"
+      },
+      {
+        "name": "Vector",
+        "fact": "Vector made outrageous American supercars inspired by military jet fighters"
+      },
+      {
+        "name": "Hennessey Venom",
+        "fact": "Hennessey Venom F5 is one of the fastest cars ever built reaching 311 mph"
+      },
+      {
+        "name": "SSC Tuatara",
+        "fact": "SSC Tuatara is an American hypercar that hit over 300 mph in testing"
+      },
+      {
+        "name": "Devel Sixteen",
+        "fact": "The Devel Sixteen concept car claims an astonishing 5000 horsepower"
+      },
+      {
+        "name": "Ariel Atom",
+        "fact": "The Ariel Atom has no body panels at all and is faster than most supercars on a track"
+      },
+      {
+        "name": "Noble M600",
+        "fact": "Noble is a small British supercar maker producing raw intense driving machines"
+      },
+      {
+        "name": "Gordon Murray T50",
+        "fact": "The Gordon Murray T50 has a giant rear fan that sucks it to the road like a vacuum"
+      },
+      {
+        "name": "Mercedes AMG One",
+        "fact": "The Mercedes AMG One uses an actual Formula 1 engine in a road car"
+      },
+      {
+        "name": "Aston Martin Valkyrie",
+        "fact": "The Aston Martin Valkyrie was designed with the same aerodynamics as an F1 car"
+      },
+      {
+        "name": "Ferrari LaFerrari",
+        "fact": "The LaFerrari uses a hybrid Formula 1-derived system producing 950 horsepower"
+      },
+      {
+        "name": "Lamborghini Sian",
+        "fact": "The Lamborghini Sian is the first Lamborghini to use a hybrid system"
+      },
+      {
+        "name": "Porsche 918",
+        "fact": "The Porsche 918 Spyder is a hybrid hypercar that lapped the Nurburgring in under 7 minutes"
+      },
+      {
+        "name": "McLaren P1",
+        "fact": "The McLaren P1 is a hybrid hypercar producing 903 horsepower total"
+      },
+      {
+        "name": "Koenigsegg Jesko",
+        "fact": "The Koenigsegg Jesko Absolut is designed to reach 330 mph making it theoretically the fastest car"
+      },
+      {
+        "name": "Bugatti Chiron",
+        "fact": "The Bugatti Chiron Super Sport was the first production car to pass 300 mph"
+      },
+      {
+        "name": "Czinger 21C",
+        "fact": "The Czinger 21C is printed using 3D manufacturing technology from scratch"
+      },
+      {
+        "name": "Pininfarina Battista",
+        "fact": "The Battista is an Italian electric hypercar with 1900 horsepower"
+      },
+      {
+        "name": "Hispano Suiza",
+        "fact": "Hispano Suiza is a legendary Spanish brand revived with a stunning electric hypercar"
+      },
+      {
+        "name": "Zenvo TSR-S",
+        "fact": "The Zenvo TSR-S has an active wing that tilts sideways in corners for grip"
+      },
+      {
+        "name": "Donkervoort D8",
+        "fact": "Donkervoort is a Dutch sports car maker producing ultra lightweight track weapons"
+      },
+      {
+        "name": "Scuderia Cameron Glickenhaus",
+        "fact": "SCG makes racing cars that also have to qualify as street legal vehicles"
+      },
+      {
+        "name": "Vanderhall",
+        "fact": "Vanderhall makes three-wheeled autocycle roadsters with open cockpits"
+      },
+      {
+        "name": "Morgan",
+        "fact": "Morgan is a British car company that still handbuilds cars with ash wood frames"
+      },
+      {
+        "name": "Bristol Cars",
+        "fact": "Bristol Cars is an ultra-exclusive British brand that never advertises"
+      },
+      {
+        "name": "Caterham",
+        "fact": "Caterham makes lightweight open-wheel sports cars you can buy as a kit to build yourself"
+      },
+      {
+        "name": "Westfield",
+        "fact": "Westfield builds lightweight track-focused sports cars based on the classic Lotus Seven design"
+      },
+      {
+        "name": "BAC Mono",
+        "fact": "The BAC Mono is a single-seat road-legal race car used as a training tool"
+      },
+      {
+        "name": "Elemental RP1",
+        "fact": "The Elemental RP1 uses aerodynamic downforce equal to twice the car's own weight"
+      },
+      {
+        "name": "Ultima Evolution",
+        "fact": "The Ultima Evolution accelerates faster than a Bugatti Veyron on a budget"
+      },
+      {
+        "name": "Radical SR8",
+        "fact": "The Radical SR8 has smashed numerous lap records at circuits worldwide"
+      },
+      {
+        "name": "Caparo T1",
+        "fact": "The Caparo T1 is essentially a Formula 1 car with a roof that can be driven on the road"
+      },
+      {
+        "name": "Vuhl 05",
+        "fact": "The Vuhl 05 is a Mexican lightweight sports car weighing just 690 kg"
+      },
+      {
+        "name": "Genty Akylone",
+        "fact": "The Genty Akylone is a French hypercar with a carbon fiber body and 1000 hp"
+      },
+      {
+        "name": "Matech GT1",
+        "fact": "Matech built a Ford GT-based racing car that competed at Le Mans"
+      },
+      {
+        "name": "Glickenhaus 003",
+        "fact": "The SCG 003 raced at the Nurburgring 24 Hours as a privateer team"
+      },
+      {
+        "name": "PGO Cevennes",
+        "fact": "PGO is a small French car maker that builds retro-styled roadsters"
+      },
+      {
+        "name": "Saker Raptor",
+        "fact": "The Saker Raptor is a New Zealand track car with serious racing pedigree"
+      },
+      {
+        "name": "Praga R1",
+        "fact": "The Praga R1 is a Czech race car famous for setting lap records at premium circuits"
+      },
+      {
+        "name": "Hispano-Suiza Carmen",
+        "fact": "The Carmen is a Spanish electric luxury car reviving a legendary 1920s brand"
+      },
+      {
+        "name": "Spyker",
+        "fact": "Spyker is a Dutch luxury sports car maker with an aviation-inspired interior design"
+      },
+      {
+        "name": "Mosler MT900",
+        "fact": "The Mosler MT900 is an American lightweight supercar built for serious track performance"
+      },
+      {
+        "name": "Falcon F7",
+        "fact": "The Falcon F7 is a rare American hand-built carbon fiber sports car from Michigan"
+      },
+      {
+        "name": "Factory Five 818",
+        "fact": "Factory Five kit cars let you build your own performance roadster at home from scratch"
+      },
+      {
+        "name": "Ultima GTR",
+        "fact": "The Ultima GTR once held production car lap records at numerous famous circuits"
+      },
+      {
+        "name": "Saleen S7",
+        "fact": "The Saleen S7 was America's first true mid-engine supercar with over 750 horsepower"
+      },
+      {
+        "name": "Callaway C8",
+        "fact": "Callaway transforms Corvettes into even more extreme supercars with custom upgrades"
+      },
+      {
+        "name": "Panoz Esperante",
+        "fact": "Panoz is a rare American sports car maker known for distinctive retro styling"
+      }
+    ]
+  }
+}

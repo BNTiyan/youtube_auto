@@ -1,0 +1,699 @@
+{
+  "ai": {
+    "items": [
+      {
+        "name": "Artificial Intelligence",
+        "explanation": "AI teaches computers to think, learn, and make decisions like humans",
+        "points": [
+          "Encompasses symbolic rules, statistical learning, neural networks and hybrid approaches",
+          "Powers recommendation engines, autonomous driving, medical image analysis, fraud detection and chat interfaces",
+          "Most current systems remain narrow / task-specific rather than generally intelligent",
+          "Long-term research targets safe AGI while near-term focus lies on reliability and misuse prevention",
+          "Progress heavily tied to exponential growth in compute, data volume and algorithmic efficiency"
+        ]
+      },
+      {
+        "name": "Machine Learning",
+        "explanation": "ML lets computers learn from data without being explicitly programmed for every task",
+        "points": [
+          "Learns generalizable patterns from examples instead of hand-written if-then rules",
+          "Main families: supervised, unsupervised, reinforcement, self-supervised, semi-supervised",
+          "Drives search ranking, ad targeting, churn prediction, demand forecasting, anomaly detection",
+          "Model quality is extremely sensitive to training data distribution, label accuracy and coverage",
+          "Requires deliberate validation (time-split, stratified CV, OOD testing) to estimate deployment performance"
+        ]
+      },
+      {
+        "name": "Neural Networks",
+        "explanation": "Neural networks are inspired by the brain and learn to recognize patterns in data",
+        "points": [
+          "Layers of weighted connections + non-linear activations allow complex function approximation",
+          "Theoretical universal approximation property holds given enough neurons and layers",
+          "Backbone architecture for nearly all leading vision, language and audio models since ~2012",
+          "Training frontier-scale models routinely consumes thousands of GPU/TPU-days",
+          "Black-box optimization behavior motivates large interpretability and reverse-engineering efforts"
+        ]
+      },
+      {
+        "name": "Deep Learning",
+        "explanation": "Deep learning stacks many neural network layers to solve complex AI problems",
+        "points": [
+          "Discovers hierarchical representations automatically from raw pixels, waveforms or tokens",
+          "Delivered super-human performance on ImageNet, speech recognition, Go, protein structure prediction",
+          "Scaling laws relate performance gains to model size, dataset size and compute budget",
+          "Overfitting combated via dropout, weight decay, label smoothing, mixup, CutMix, stochastic depth",
+          "Very deep architectures rely on residual connections, normalization layers and careful initialization"
+        ]
+      },
+      {
+        "name": "Computer Vision",
+        "explanation": "Computer vision lets machines see and understand images and video like humans do",
+        "points": [
+          "Core problems: classification, detection, segmentation, pose estimation, optical flow, tracking, depth",
+          "Modern pipelines dominated by CNNs → Vision Transformers → hybrid Conv-Transformer designs",
+          "Deployed at scale in self-driving cars, radiology, facial recognition, inventory robots, AR/VR",
+          "Brittle under domain shift, adversarial patches, extreme lighting, heavy occlusion, rare classes",
+          "Strong trend toward foundation models pretrained on massive image–text or video–text pairs"
+        ]
+      },
+      {
+        "name": "NLP",
+        "explanation": "Natural Language Processing helps computers read, understand, and generate human language",
+        "points": [
+          "Spans tokenization, POS tagging, NER, sentiment, translation, summarization, QA, dialogue, reasoning",
+          "Transformer-based large autoregressive / masked language models dominate since 2018",
+          "Enables virtual assistants, real-time translation, content moderation, legal search, code completion",
+          "Low-resource languages, dialects, code-mixing, sarcasm, long-document understanding remain hard",
+          "Highly vulnerable to prompt injection, jailbreaks, sycophancy, hallucination, bias leakage"
+        ]
+      },
+      {
+        "name": "Reinforcement Learning",
+        "explanation": "RL trains AI by rewarding good decisions like teaching a dog new tricks with treats",
+        "points": [
+          "Learns policies or value functions through environment interaction and delayed rewards",
+          "Landmark results: AlphaGo/AlphaZero, Dota 2, StarCraft, dexterous robot manipulation, chip floorplanning",
+          "Sample inefficiency often requires millions to billions of environment steps to learn",
+          "Exploration addressed via epsilon-greedy, entropy regularization, curiosity, count-based bonuses",
+          "Deep RL still suffers from brittle training, reward hacking and high variance in policy gradients"
+        ]
+      },
+      {
+        "name": "Generative AI",
+        "explanation": "Generative AI creates new content: text, images, audio, code, and video from scratch",
+        "points": [
+          "Major families: autoregressive transformers, diffusion models, GANs, VAEs, normalizing flows",
+          "Produced photorealistic images (Midjourney, Flux), coherent long text (Claude, GPT-4o), music & video",
+          "Text-to-X conditioning allows style, composition and subject control via natural language",
+          "Training extremely compute hungry; inference often accelerated via quantization, distillation, speculation",
+          "Intense debate around training data copyright, deepfake detection, provenance watermarking"
+        ]
+      },
+      {
+        "name": "Transfer Learning",
+        "explanation": "Transfer learning reuses knowledge from one AI task to speed up solving another",
+        "points": [
+          "Pre-train once on broad data → fine-tune on target task with far less labeled data",
+          "Standard recipe that enabled modern CV (ImageNet → downstream) and NLP (BERT/GPT → fine-tune)",
+          "Reduces annotation cost and training time by 10–100× in many domains",
+          "Negative transfer occurs when source and target distributions are too dissimilar",
+          "Parameter-efficient variants (LoRA, DoRA, adapters, prompt/prefix tuning) dominate for ≥70B models"
+        ]
+      },
+      {
+        "name": "AI Agents",
+        "explanation": "AI agents can reason, plan, and take actions autonomously to complete complex tasks",
+        "points": [
+          "Usually LLM backbone + memory + tools (search, code, calculator) + planning/reflection loop",
+          "Prototypes: Auto-GPT, LangGraph, OpenAI o1 reasoning mode, robotics task decomposition",
+          "Aims at long-horizon autonomy instead of single-turn Q&A or classification",
+          "Frequent issues: looping, hallucinated actions, context overflow, poor error recovery",
+          "Safety concerns escalate dramatically with tool access and real-world actuators"
+        ]
+      },
+      {
+        "name": "Supervised Learning",
+        "explanation": "Supervised learning trains AI using labeled examples with known correct answers",
+        "points": [
+          "Most production ML today is supervised classification or regression",
+          "Bottleneck usually high-quality labeled data — annotation cost and label noise common",
+          "Training almost always uses mini-batch stochastic gradient descent variants",
+          "Real datasets frequently show severe imbalance, long-tail distribution, noisy/incorrect labels",
+          "Mitigations include re-weighting, focal loss, data augmentation, label smoothing, distillation"
+        ]
+      },
+      {
+        "name": "Unsupervised Learning",
+        "explanation": "Unsupervised learning finds hidden patterns in data without any labeled examples",
+        "points": [
+          "Families: clustering, density estimation, dimensionality reduction, representation learning",
+          "Applications: customer segmentation, outlier detection, feature discovery, pre-training",
+          "Intrinsic evaluation metrics (silhouette, reconstruction error, log-likelihood) often noisy",
+          "Frequently serves as warm-start or auxiliary task before supervised fine-tuning",
+          "Scaling to trillion-token unlabeled corpora remains an important research direction"
+        ]
+      },
+      {
+        "name": "Self-supervised Learning",
+        "explanation": "Self-supervised learning creates its own labels from raw data to train on",
+        "points": [
+          "Popular pretext tasks: masked prediction, contrastive learning, rotation, jigsaw, denoising",
+          "Produced many strong vision (DINOv2, MAE) and multimodal (data2vec, CLIP) backbones",
+          "Learns transferable representations from internet-scale unlabeled image/text/audio/video",
+          "Scaling laws show predictable gains from model size, data volume and pretext design",
+          "Augmentation strategy, negative sampling and loss formulation still critically important"
+        ]
+      },
+      {
+        "name": "Few-shot Learning",
+        "explanation": "Few-shot learning teaches AI to recognize new concepts from just a handful of examples",
+        "points": [
+          "Strategies: meta-learning (MAML), metric learning (Prototypical Nets), prompt conditioning",
+          "Essential in domains with very sparse labels: rare diseases, emerging products, new attack types",
+          "Large language models perform few-shot classification via in-context examples",
+          "Human-level few-shot generalization on arbitrary new concepts remains far away",
+          "Synthetic data, better pre-training and retrieval augmentation improve few-shot results"
+        ]
+      },
+      {
+        "name": "Zero-shot Learning",
+        "explanation": "Zero-shot learning allows AI to handle tasks it was never explicitly trained on",
+        "points": [
+          "Relies on side information: semantic embeddings, attributes, class descriptions in natural language",
+          "Contrastive image–text models (CLIP, ALIGN) enabled strong zero-shot image classification",
+          "LLMs solve zero-shot QA, classification, translation via well-crafted prompts",
+          "Performance collapses when target domain or task lies outside pre-training coverage",
+          "Prompt brittleness, ambiguous instructions and distributional shift are primary failure modes"
+        ]
+      },
+      {
+        "name": "Explainable AI",
+        "explanation": "XAI makes AI decisions transparent and understandable to humans",
+        "points": [
+          "Methods include LIME, SHAP, integrated gradients, attention rollout, counterfactuals",
+          "Mandatory or strongly desired in healthcare, finance, justice, safety-critical automation",
+          "Common tension: more interpretable models (trees, rules) usually less accurate",
+          "Post-hoc explanations can be unstable, misleading or gamed with small input perturbations",
+          "Mechanistic interpretability aims for faithful reverse-engineering of network computations"
+        ]
+      },
+      {
+        "name": "AI Safety",
+        "explanation": "AI safety research ensures powerful AI systems remain aligned with human values and goals",
+        "points": [
+          "Near-term: bias mitigation, jailbreak resistance, reliability, adversarial robustness",
+          "Long-term: avoiding goal misgeneralization, scalable oversight, corrigibility, value learning",
+          "Evaluation techniques: red-teaming, debate protocols, weak-to-strong generalization probes",
+          "Mechanistic interpretability and activation engineering are key scientific tools",
+          "Compute governance, international coordination and whistleblower protections gaining traction"
+        ]
+      },
+      {
+        "name": "AI Alignment",
+        "explanation": "Alignment ensures that what AI optimizes for matches what humans actually want",
+        "points": [
+          "Classic problems: specification gaming, proxy reward exploitation, inner misalignment",
+          "Dominant current method: RLHF → reward modeling → PPO optimization",
+          "Alternatives under exploration: constitutional AI, debate, recursive reward modeling, RLAIF",
+          "Scalable oversight becomes necessary once models exceed median human capability",
+          "Core open challenge: defining, preserving and loading coherent human values at superintelligence scale"
+        ]
+      },
+      {
+        "name": "AI Ethics",
+        "explanation": "AI ethics studies the moral implications of building and deploying AI systems",
+        "points": [
+          "Key themes: fairness, accountability, transparency, privacy, autonomy, responsibility",
+          "Addresses differential impact on marginalized groups, surveillance capitalism, labor displacement",
+          "Frameworks: value-sensitive design, ethics-by-design, stakeholder consultation, impact assessment",
+          "Tension between open research, commercial incentives and dual-use technology risks",
+          "Increasing calls for binding regulation, independent auditing and public deliberation"
+        ]
+      },
+      {
+        "name": "Bias in AI",
+        "explanation": "AI bias happens when training data contains unfair patterns that the model learns and repeats",
+        "points": [
+          "Sources: historical discrimination, selection bias, label bias, proxy features, measurement error",
+          "Manifests in hiring tools, credit scoring, facial analysis, recidivism prediction, ad targeting",
+          "Fairness definitions conflict (demographic parity vs equal opportunity vs equalized odds…)",
+          "Mitigation toolbox: re-sampling, adversarial debiasing, post-processing, causal intervention",
+          "Bias often re-emerges after deployment when data distributions drift or populations change"
+        ]
+      },
+      {
+        "name": "Adversarial Examples",
+        "explanation": "Adversarial examples are inputs carefully crafted to fool AI models into making mistakes",
+        "points": [
+          "Small norm-bounded perturbations cause confident misclassification",
+          "Threat vector for vision (stop-sign attacks), audio (speech command spoofing), text (toxic bypass)",
+          "Defenses: adversarial training, randomized smoothing, certified robustness, input purification",
+          "Adversarial vulnerability appears inherent to high-dimensional linear classifiers",
+          "Transferability across models and black-box query attacks remain practical concerns"
+        ]
+      },
+      {
+        "name": "Gradient Descent",
+        "explanation": "Gradient descent is the algorithm that iteratively adjusts model weights to minimize error",
+        "points": [
+          "Dominant optimizers: SGD+momentum, Adam, AdamW, Lion, Sophia, Adafactor",
+          "Learning rate warm-up, cosine decay, OneCycle policy improve convergence speed & stability",
+          "Second-order / quasi-Newton methods (K-FAC, Shampoo) show promise but scale poorly",
+          "Generalization often better when converging to flatter minima in the loss landscape",
+          "Very large batch sizes require learning rate scaling and sometimes LARS/LAMB optimizers"
+        ]
+      },
+      {
+        "name": "Attention Mechanism",
+        "explanation": "Attention lets AI models focus on the most relevant parts of input when producing output",
+        "points": [
+          "Scaled dot-product self-attention enables parallel sequence processing",
+          "Multi-head attention learns different semantic subspaces simultaneously",
+          "Core innovation that made Transformers outperform RNNs on long sequences",
+          "Efficiency variants: sparse, linear, FlashAttention-2, multi-query/grouped-query",
+          "Long-context modeling still limited; state-space models and hybrid approaches gaining ground"
+        ]
+      },
+      {
+        "name": "Convolutional Neural Net",
+        "explanation": "CNNs use filters to detect visual patterns making them ideal for image recognition tasks",
+        "points": [
+          "Local receptive fields + weight sharing → translation equivariance and parameter efficiency",
+          "Evolution: LeNet → AlexNet → VGG → ResNet → EfficientNet → ConvNeXt → modern hybrids",
+          "Still competitive with ViTs on smaller datasets or when compute is constrained",
+          "Extensions: depthwise-separable, dilated/atrous, deformable, 3D convolutions for video/volumetric data",
+          "Hybrid CNN-Transformer backbones frequently win efficiency-accuracy trade-offs"
+        ]
+      },
+      {
+        "name": "Diffusion Model",
+        "explanation": "Diffusion models generate images by learning to reverse a gradual noising process",
+        "points": [
+          "Currently produce highest-fidelity text-to-image results (Stable Diffusion 3, Flux, Imagen 3)",
+          "Sampling speed improved via DDIM, latent diffusion, consistency models, flow matching",
+          "Classifier-free guidance strongly boosts prompt adherence without auxiliary classifier",
+          "Training compute-intensive but parallelizable; inference can be distilled or quantized",
+          "Rapidly expanding to video, 3D generation, protein design, time-series, audio synthesis"
+        ]
+      },
+      {
+        "name": "Transformer",
+        "explanation": "Transformers process entire sequences in parallel using self-attention instead of recurrence",
+        "points": [
+          "Replaced RNNs as dominant sequence model for language, vision, audio, biology",
+          "Variants: encoder-only (BERT), decoder-only (GPT), encoder-decoder (T5, BART)",
+          "Scaling laws predict performance from parameters, data and compute — very predictable returns",
+          "Context window limitations addressed via RoPE, ALiBi, sparse attention, ring attention",
+          "Mixture-of-Experts (MoE) layers enable trillion-parameter models with manageable inference cost"
+        ]
+      },
+      {
+        "name": "Large Language Model",
+        "explanation": "LLMs are massive transformer models pretrained on internet-scale text corpora",
+        "points": [
+          "Emergent abilities: in-context learning, chain-of-thought, tool use appear at ~50–100B scale",
+          "Frontier examples (2025): GPT-4o, Claude 3.5/4, Gemini 2, Grok-2/3, Llama 4, Mistral Large",
+          "Instruction-tuning + preference optimization (RLHF/RLAIF/DPO) align helpful & honest behavior",
+          "Inference cost/latency/energy still major hurdles for real-time widespread deployment",
+          "Open-weight models accelerate research but amplify misuse and distillation risks"
+        ]
+      },
+      {
+        "name": "Federated Learning",
+        "explanation": "Federated learning trains AI across many devices without sharing private data centrally",
+        "points": [
+          "Keeps raw user data on-device; only model updates (gradients) leave the device",
+          "Deployed in mobile keyboards (Gboard), healthcare cross-hospital models, finance",
+          "Challenges: non-IID data, client heterogeneity, communication cost, stragglers",
+          "Defenses against poisoning and inference attacks (differential privacy + secure aggregation)",
+          "Personalization via hybrid global + local adaptation is common in production"
+        ]
+      },
+      {
+        "name": "Reinforcement Learning from Human Feedback",
+        "explanation": "RLHF aligns language models using human preference data via reward modeling and policy optimization",
+        "points": [
+          "Three stages: supervised fine-tuning → reward model training → PPO / DPO optimization",
+          "Used to align ChatGPT, Claude, Gemini, Llama-2-chat, Grok — dramatically improved helpfulness",
+          "Alternatives: Direct Preference Optimization (DPO), Kahneman-Tversky Optimization, SPIN",
+          "Scaling human feedback is expensive; synthetic preferences and AI feedback (RLAIF) emerging",
+          "Reward hacking, sycophancy, jailbreak vulnerability remain difficult to eliminate"
+        ]
+      },
+      {
+        "name": "Multimodal AI",
+        "explanation": "Multimodal AI understands and generates multiple types of data like text, images, and audio",
+        "points": [
+          "Examples: GPT-4o, Gemini 1.5/2, Claude 3.5, LLaVA, Kosmos-2, Chameleon, ImageBind",
+          "Enables image captioning, visual QA, document understanding, video summarization, speech+vision",
+          "Training usually involves contrastive, masked or next-token prediction across modalities",
+          "Unified tokenization / discrete autoencoders help bridge different data types",
+          "Long-context multimodal understanding still severely limited by memory and compute"
+        ]
+      },
+      {
+        "name": "Overfitting",
+        "explanation": "Overfitting is when a model memorizes training data but fails to generalize to new examples",
+        "points": [
+          "Symptoms: large train–validation performance gap, poor OOD / test-set accuracy",
+          "Causes: excessive capacity, insufficient regularization, data leakage, low dataset diversity",
+          "Mitigated by early stopping, strong regularization, data augmentation, ensemble methods",
+          "Double descent phenomenon shows test error can decrease again after overfitting peak",
+          "Modern large models often interpolate training data yet still generalize surprisingly well"
+        ]
+      },
+      {
+        "name": "Regularization",
+        "explanation": "Regularization adds penalties to prevent AI models from becoming too complex and overfitting",
+        "points": [
+          "Common forms: L1 (Lasso), L2 (weight decay), dropout, stochastic depth, label smoothing",
+          "Modern favorite: decoupled weight decay (AdamW) + large learning rate warm-up",
+          "Data-based regularization: augmentation (AutoAugment, RandAugment, AugMix)",
+          "Architecture-based: batch/layer norm, residual connections, squeeze-excitation",
+          "Too much regularization can cause underfitting or optimization instability"
+        ]
+      },
+      {
+        "name": "Hyperparameter Tuning",
+        "explanation": "Hyperparameter tuning finds the best settings to maximize an AI model's performance",
+        "points": [
+          "Key hyperparameters: learning rate, batch size, weight decay, dropout rate, architecture depth/width",
+          "Popular methods: grid search, random search, Bayesian optimization (Optuna, Hyperopt)",
+          "Population-based training (PBT), ASHA, multi-fidelity methods scale better to clusters",
+          "Modern deep models often most sensitive to learning rate schedule and optimizer choice",
+          "Over-tuning on validation set can indirectly leak test-set information"
+        ]
+      },
+      {
+        "name": "Backpropagation",
+        "explanation": "Backpropagation calculates how much each weight contributed to an error and adjusts accordingly",
+        "points": [
+          "Efficiently computes exact gradients via chain rule through the computation graph",
+          "Autograd systems (PyTorch, JAX, TensorFlow) automate forward + backward passes",
+          "Vanishing/exploding gradients historically limited depth; residuals & normalization largely solved it",
+          "Higher-order gradients and meta-gradients enable MAML, hypernetwork training, etc.",
+          "Memory-efficient alternatives (gradient checkpointing, activation recomputation) critical at scale"
+        ]
+      },
+      {
+        "name": "GAN",
+        "explanation": "Generative Adversarial Networks pit a generator against a discriminator to create realistic content",
+        "points": [
+          "Adversarial training creates a minimax game where generator improves by fooling an increasingly skilled discriminator",
+          "Produced early photorealistic faces, art and style transfer (ProGAN, StyleGAN series, BigGAN)",
+          "Training instability, mode collapse and evaluation difficulty (no direct likelihood) are classic pain points",
+          "Conditional, cycle-consistent, progressive growing and adaptive versions addressed many limitations",
+          "Largely overtaken by diffusion models for state-of-the-art unconditional and guided image synthesis in recent years"
+        ]
+      },
+      {
+        "name": "LSTM",
+        "explanation": "Long Short-Term Memory networks solve the vanishing gradient problem in long sequences",
+        "points": [
+          "Cell state plus input/forget/output gates allow selective long-range information retention",
+          "Dominant sequence model for speech, translation, time-series from ~2014 until Transformers took over",
+          "Still appears in embedded systems, real-time signal processing and some legacy production pipelines",
+          "Sequential computation prevents full parallelization → slower training/inference than attention-based models",
+          "Recent variants (xLSTM, sLSTM, mLSTM) try to bring matrix memory and better parallelization to LSTM-like cells"
+        ]
+      },
+      {
+        "name": "Random Forest",
+        "explanation": "Random forests combine many decision trees to make more accurate and stable predictions",
+        "points": [
+          "Ensemble via bagging + random feature selection at splits reduces variance and correlation",
+          "Very strong baseline on tabular/structured data with almost no tuning required",
+          "Built-in feature importance (permutation or Gini-based) aids interpretability",
+          "Robust to outliers, missing values (with surrogate splits) and mixed data types",
+          "Inference latency grows with number of trees; usually outperformed by gradient boosting on accuracy"
+        ]
+      },
+      {
+        "name": "Gradient Boosting",
+        "explanation": "Gradient boosting builds trees sequentially, with each new tree correcting errors of the previous ones",
+        "points": [
+          "Leading tabular ML algorithms for years: XGBoost, LightGBM, CatBoost, HistGradientBoosting",
+          "Minimizes differentiable loss via functional gradient descent → extremely flexible",
+          "Strong regularization (shrinkage/learning rate, subsampling, max depth) prevents overfitting",
+          "Native categorical support (ordered target stats in CatBoost, optimal splitting in LightGBM)",
+          "Faster training than deep models on medium-sized tabular data; often wins Kaggle tabular competitions"
+        ]
+      },
+      {
+        "name": "F1 Score",
+        "explanation": "The F1 score balances precision and recall into a single model performance metric",
+        "points": [
+          "Harmonic mean → penalizes extreme imbalance between precision and recall more than arithmetic mean",
+          "Standard metric for imbalanced classification (fraud, rare event detection, NER, information retrieval)",
+          "Macro-F1 treats all classes equally; micro-F1 aggregates counts globally; weighted-F1 most common multi-class variant",
+          "Can mask poor performance on minority classes when majority dominates",
+          "Matthews correlation coefficient or Cohen’s kappa sometimes preferred for very skewed problems"
+        ]
+      },
+      {
+        "name": "Confusion Matrix",
+        "explanation": "A confusion matrix shows how many predictions were correct and which errors were made",
+        "points": [
+          "N×N table (rows = true class, columns = predicted class) reveals per-class error patterns",
+          "Direct source for accuracy, precision, recall, specificity, false discovery rate, etc.",
+          "Normalized versions (row-wise = recall, column-wise = precision) make comparison easier",
+          "Heatmap visualization quickly highlights systematic confusions (e.g. 5↔3 in digit recognition)",
+          "Extremely useful for debugging multi-class models before trusting aggregate metrics"
+        ]
+      },
+      {
+        "name": "ROC Curve & AUC",
+        "explanation": "The ROC curve shows the tradeoff between true positive rate and false positive rate; AUC summarizes it",
+        "points": [
+          "Threshold-independent view of binary classifier ranking ability",
+          "AUC = probability that random positive ranks higher than random negative",
+          "Robust to class imbalance (unlike accuracy); AUC ≈ 0.5 = random, 1.0 = perfect",
+          "Precision-recall curve + AUPRC usually more informative when positives are very rare",
+          "Can be misleadingly high when many score ties exist or when operating point is irrelevant"
+        ]
+      },
+      {
+        "name": "Feature Engineering",
+        "explanation": "Feature engineering transforms raw data into meaningful inputs that help AI learn better",
+        "points": [
+          "Frequently the highest-leverage step in traditional ML pipelines and tabular competitions",
+          "Techniques include binning, polynomial/interaction terms, target encoding, cyclical features, embeddings",
+          "Domain-specific features (ratios, differences, time-based aggregates) often beat automatic methods",
+          "Feature selection (mutual information, permutation importance, Boruta, recursive elimination) cuts noise",
+          "Tree-based models reduce (but rarely eliminate) the need for heavy manual engineering"
+        ]
+      },
+      {
+        "name": "AutoML",
+        "explanation": "AutoML automatically selects and tunes the best machine learning pipeline for a task",
+        "points": [
+          "Systems: AutoGluon, H2O AutoML, TPOT, FLAML, Auto-sklearn, Google Cloud AutoML, Vertex AI",
+          "Searches algorithms, preprocessors, hyperparameters, stacking/ensembling strategies",
+          "Often beats hand-crafted models on tabular data when given reasonable compute budget",
+          "Struggles more with vision, NLP, custom preprocessing or very small datasets",
+          "Production concerns include pipeline reproducibility, auditability and explanation of chosen model"
+        ]
+      },
+      {
+        "name": "Edge AI",
+        "explanation": "Edge AI runs machine learning models directly on devices rather than in the cloud",
+        "points": [
+          "Benefits: ultra-low latency, offline operation, privacy (no data transmission), bandwidth savings",
+          "Target hardware: smartphones, IoT sensors, cameras, wearables, industrial controllers, drones",
+          "Depends heavily on quantization (INT8/4), pruning, distillation, TensorFlow Lite Micro, ONNX",
+          "Hardware accelerators (Apple Neural Engine, Google Edge TPU, Hailo, Qualcomm Hexagon) critical",
+          "Core engineering trade-off: accuracy vs model size vs power vs latency"
+        ]
+      },
+      {
+        "name": "World Model",
+        "explanation": "World models let AI simulate and predict outcomes in an environment to plan ahead",
+        "points": [
+          "Learns dynamics via video prediction, state transition modeling or reward prediction",
+          "Powers DreamerV3 (Atari/Sim), Genie, Sora-like video generation as implicit world models",
+          "Planning happens in imagination/latent space → far fewer real environment interactions",
+          "Usually trained with reconstruction + consistency or contrastive objectives",
+          "Scaling high-fidelity video generation dramatically improves world model quality"
+        ]
+      },
+      {
+        "name": "Q-Learning",
+        "explanation": "Q-learning teaches agents the value of taking actions in states to maximize future reward",
+        "points": [
+          "Tabular or approximated action-value function learned off-policy",
+          "Deep Q-Network (DQN) breakthrough combined CNNs + experience replay + target network",
+          "Improvements: Double DQN, Dueling, Prioritized Replay, Noisy Nets, Rainbow ensemble",
+          "Requires large replay memory and careful exploration schedule",
+          "Largely replaced by actor-critic methods in continuous/high-dimensional action domains"
+        ]
+      },
+      {
+        "name": "Policy Gradient",
+        "explanation": "Policy gradient methods optimize the AI policy directly using gradient ascent",
+        "points": [
+          "REINFORCE baseline: policy gradient theorem + variance reduction via advantage",
+          "Actor-critic (A2C/A3C) adds value critic to stabilize training",
+          "PPO clips objective for monotonic improvement → became industry standard for stability",
+          "TRPO / natural PG use trust-region constraint to avoid destructive steps",
+          "Strong in continuous control; combines well with off-policy replay (SAC, TD3)"
+        ]
+      },
+      {
+        "name": "Principal Component Analysis",
+        "explanation": "PCA reduces data dimensions while preserving the most important patterns and variance",
+        "points": [
+          "Finds orthogonal axes (principal components) of maximum variance via SVD or eigendecomposition",
+          "Classic unsupervised dimensionality reduction for visualization, denoising, compression",
+          "Linear method → kernel PCA, autoencoder-based nonlinear extensions exist",
+          "Requires centering/standardization; sensitive to outliers and scale",
+          "Explained variance ratio guides choice of number of components to keep"
+        ]
+      },
+      {
+        "name": "Clustering",
+        "explanation": "Clustering groups similar data points together without using any predefined labels",
+        "points": [
+          "Algorithms: k-means (centroid), DBSCAN/HDBSCAN (density), GMM (probabilistic), spectral",
+          "Applications: market segmentation, image compression, anomaly grouping, topic discovery",
+          "Number of clusters often chosen via elbow, silhouette, gap statistic or domain knowledge",
+          "Density-based methods handle noise and arbitrary shapes better than k-means",
+          "Downstream task performance or qualitative inspection most common evaluation"
+        ]
+      },
+      {
+        "name": "Time Series Forecasting",
+        "explanation": "AI forecasting models predict future values based on patterns in historical time data",
+        "points": [
+          "Traditional: ARIMA/SARIMA, Prophet; ML: XGBoost with lags, N-BEATS, TFT, PatchTST",
+          "Deep models excel at multivariate, long-horizon, probabilistic forecasting",
+          "Benchmarks: M4/M5, Monash archive, electricity, traffic, weather, ETT datasets",
+          "Seasonality, exogenous variables, missing data, concept drift are frequent issues",
+          "Quantile/ distribution heads increasingly standard for uncertainty estimation"
+        ]
+      },
+      {
+        "name": "Anomaly Detection",
+        "explanation": "Anomaly detection identifies unusual patterns that deviate from normal expected behavior",
+        "points": [
+          "Methods: isolation forest, autoencoders, one-class SVM, LOF, GAN-based reconstruction",
+          "Key domains: fraud, predictive maintenance, network intrusion, manufacturing defects",
+          "Mostly unsupervised or semi-supervised (normal data abundant, anomalies rare)",
+          "Metrics: precision@K, ROC-AUC-PR, F1@K due to extreme imbalance",
+          "Contextual / collective anomalies need specialized sequence or graph methods"
+        ]
+      },
+      {
+        "name": "Recommendation System",
+        "explanation": "Recommendation systems predict what a user will like based on their history and behavior",
+        "points": [
+          "Collaborative filtering, content-based, hybrid, knowledge-based approaches",
+          "Modern: two-tower models, neural CF, Wide & Deep, DeepFM, session-based transformers",
+          "Production: candidate generation → ranking → re-ranking + diversity stages",
+          "Cold-start mitigated via side information, exploration, meta-learning",
+          "Offline metrics (NDCG, Recall@K) + online A/B tests (CTR, conversion, retention)"
+        ]
+      },
+      {
+        "name": "Text Classification",
+        "explanation": "Text classification automatically assigns categories or labels to pieces of text",
+        "points": [
+          "Tasks: sentiment, topic, spam, toxicity, intent, news categorization",
+          "Current SOTA: fine-tune DeBERTa-v3, ELECTRA, Longformer or large LLM prompting",
+          "Few-shot / zero-shot via large models with structured prompts",
+          "Imbalance handled via focal loss, class weighting, oversampling",
+          "Multilabel setting uses sigmoid + binary cross-entropy"
+        ]
+      },
+      {
+        "name": "Named Entity Recognition",
+        "explanation": "NER identifies and classifies names, dates, places, and organizations in text",
+        "points": [
+          "Datasets: CoNLL-2003, OntoNotes, ACE, Few-NERD, multilingual WikiANN",
+          "Transformer + CRF or span-based (GlobalPointer, W2NER) near human performance",
+          "Nested entities, emerging names, code-mixed text, long documents still difficult",
+          "Zero/few-shot NER via large language models + prompt engineering improving fast",
+          "BIO/ES/BILOU tagging schemes; span classification often more robust"
+        ]
+      },
+      {
+        "name": "Sentiment Analysis",
+        "explanation": "Sentiment analysis detects whether text is positive, negative, or neutral in tone",
+        "points": [
+          "Levels: document, sentence, aspect-based (e.g. food good, service bad)",
+          "Modern: transformer fine-tuning or LLM with chain-of-thought for nuance",
+          "Sarcasm, negation, emojis, implicit sentiment, domain shift cause errors",
+          "Multilingual performance lags in low-resource languages",
+          "Aspect-based and emotion-augmented variants add granularity"
+        ]
+      },
+      {
+        "name": "Text-to-Speech",
+        "explanation": "TTS synthesizes natural-sounding speech audio from plain text input",
+        "points": [
+          "Pipeline: text → phoneme/G2P → acoustic → vocoder (HiFi-GAN, WaveGlow)",
+          "End-to-end leaders: VITS, NaturalSpeech 2, Mega-TTS, Vall-E X, StyleTTS 2",
+          "Zero-shot cloning, prosody/emotion control, multilingual support advancing rapidly",
+          "Evaluation: MOS, WER (ASR on output), speaker similarity, real-time latency",
+          "Low-latency streaming TTS still challenging for expressive models"
+        ]
+      },
+      {
+        "name": "Speech Recognition",
+        "explanation": "Speech recognition converts spoken audio into text as accurately as a human transcriber",
+        "points": [
+          "End-to-end: CTC, RNN-T/Transducer, LAS; Conformer + Whisper-style models",
+          "Whisper (multilingual weak supervision) set new bar for robustness and coverage",
+          "Accents, noise, overlap, code-switching, domain mismatch remain hard",
+          "Self-supervised pre-training (wav2vec 2.0, HuBERT) key to low-resource ASR",
+          "Streaming real-time systems use RNN-T / Zipformer architectures"
+        ]
+      },
+      {
+        "name": "Image Segmentation",
+        "explanation": "Image segmentation labels every pixel in an image with a class it belongs to",
+        "points": [
+          "Semantic, instance, panoptic; U-Net → DeepLab → SegFormer → SAM family",
+          "Segment Anything Model (SAM / SAM 2) enables promptable zero-shot segmentation",
+          "Medical imaging, autonomous driving, remote sensing are primary applications",
+          "Pixel-level annotation expensive → weak supervision, SAM-assisted labeling help",
+          "Real-time segmentation critical for robotics and video pipelines"
+        ]
+      },
+      {
+        "name": "Object Detection",
+        "explanation": "Object detection identifies and draws bounding boxes around multiple objects in images",
+        "points": [
+          "One-stage (YOLOv8–v10, RT-DETR), two-stage (Faster R-CNN), transformer (DETR, DINO)",
+          "Metrics: mAP@0.5:0.95 (COCO), speed (FPS), small/medium/large AP",
+          "Open-vocabulary: OWLv2, Grounding DINO detect arbitrary text-described objects",
+          "Real-time edge models prioritize YOLO, NanoSAM, RT-DETR variants",
+          "Dense prediction heads and query-based decoders dominate recent advances"
+        ]
+      },
+      {
+        "name": "Knowledge Distillation",
+        "explanation": "Distillation trains a small student model to mimic the behavior of a large teacher model",
+        "points": [
+          "Loss usually combines hard labels + soft teacher logits (KL divergence)",
+          "Variants: offline (fixed teacher), online (joint training), self-distillation",
+          "Effective for compressing 70B+ LLMs into 7–13B range with minimal drop",
+          "Intermediate layer alignment, attention distillation, data-free variants exist",
+          "Distilled models often more robust and calibrate better than small models trained from scratch"
+        ]
+      },
+      {
+        "name": "Quantization",
+        "explanation": "Quantization reduces model weight precision from 32-bit to 8-bit or 4-bit for speed and size",
+        "points": [
+          "Post-training quantization (PTQ) vs quantization-aware training (QAT)",
+          "Popular formats: INT8, INT4, NF4, FP8; mixed-precision common for sensitive layers",
+          "Modern methods (GPTQ, AWQ, SpQR) achieve near-lossless 4-bit inference",
+          "Speedups of 2–4× and memory reduction of 4–8× typical on GPU/CPU",
+          "Activation quantization and per-token dynamic scaling further improve results"
+        ]
+      },
+      {
+        "name": "Retrieval-Augmented Generation",
+        "explanation": "RAG combines retrieval of relevant documents with generation to reduce hallucination",
+        "points": [
+          "Retrieves top-k passages → augments context → generates grounded answer",
+          "Greatly improves factual accuracy and allows updating knowledge without retraining",
+          "Components: dense retriever (DPR, ColBERT), sparse retriever (BM25), reranker, generator",
+          "Challenges: retrieval recall, long-context noise, chunking strategy, staleness",
+          "Advanced variants: iterative retrieval, self-RAG, corrective RAG, graph RAG"
+        ]
+      },
+      {
+        "name": "Mixture of Experts",
+        "explanation": "MoE sparsely activates only a subset of parameters for each input token",
+        "points": [
+          "Enables trillion-parameter models with active parameter count similar to dense 100B",
+          "Routing usually learned top-k softmax over expert scores + load balancing loss",
+          "Used in Mixtral 8×22B, DBRX, Grok-1, DeepSeek-V2, future frontier models",
+          "Inference cost comparable to dense model of same active size; training more communication heavy",
+          "Expert specialization emerges but can lead to routing collapse without careful regularization"
+        ]
+      }
+    ]
+  }
+}

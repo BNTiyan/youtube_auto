@@ -1,0 +1,1106 @@
+{
+  "rag": {
+    "items": [
+      {
+        "name": "RAG",
+        "explanation": "Retrieval Augmented Generation combines search with LLMs to give accurate grounded answers",
+        "points": [
+          "Core concept of RAG used widely in modern software and AI systems",
+          "Important for understanding: Retrieval Augmented Generation combines search with LLMs to give accurate grounded answers",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Vector Database",
+        "explanation": "Vector databases store embeddings and enable lightning-fast semantic similarity search",
+        "points": [
+          "Core concept of Vector Database used widely in modern software and AI systems",
+          "Important for understanding: Vector databases store embeddings and enable lightning-fast semantic similarity search",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Chunking",
+        "explanation": "Chunking splits documents into smaller pieces for efficient storage and relevant retrieval",
+        "points": [
+          "Core concept of Chunking used widely in modern software and AI systems",
+          "Important for understanding: Chunking splits documents into smaller pieces for efficient storage and relevant retrieval",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Semantic Search",
+        "explanation": "Semantic search finds results by meaning not just keyword matching \u2014 much smarter",
+        "points": [
+          "Core concept of Semantic Search used widely in modern software and AI systems",
+          "Important for understanding: Semantic search finds results by meaning not just keyword matching \u2014 much smarter",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Re-ranking",
+        "explanation": "Re-ranking re-orders retrieved results to improve relevance before passing them to the LLM",
+        "points": [
+          "Core concept of Re-ranking used widely in modern software and AI systems",
+          "Important for understanding: Re-ranking re-orders retrieved results to improve relevance before passing them to the LLM",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Knowledge Base",
+        "explanation": "A knowledge base is your collection of documents that RAG searches to answer questions",
+        "points": [
+          "Core concept of Knowledge Base used widely in modern software and AI systems",
+          "Important for understanding: A knowledge base is your collection of documents that RAG searches to answer questions",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Document Loader",
+        "explanation": "Document loaders parse PDFs, web pages, and files into clean text for RAG pipelines",
+        "points": [
+          "Core concept of Document Loader used widely in modern software and AI systems",
+          "Important for understanding: Document loaders parse PDFs, web pages, and files into clean text for RAG pipelines",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Query Expansion",
+        "explanation": "Query expansion rewrites user questions multiple ways to improve search recall and coverage",
+        "points": [
+          "Core concept of Query Expansion used widely in modern software and AI systems",
+          "Important for understanding: Query expansion rewrites user questions multiple ways to improve search recall and coverage",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Hybrid Search",
+        "explanation": "Hybrid search combines keyword and semantic search for better more reliable results",
+        "points": [
+          "Core concept of Hybrid Search used widely in modern software and AI systems",
+          "Important for understanding: Hybrid search combines keyword and semantic search for better more reliable results",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Context Window RAG",
+        "explanation": "RAG stuffs retrieved documents into the LLM's context so it can answer with real knowledge",
+        "points": [
+          "Core concept of Context Window RAG used widely in modern software and AI systems",
+          "Important for understanding: RAG stuffs retrieved documents into the LLM's context so it can answer with real knowledge",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Naive RAG",
+        "explanation": "Naive RAG indexes documents, retrieves top-k chunks, and feeds them to an LLM without optimization",
+        "points": [
+          "Core concept of Naive RAG used widely in modern software and AI systems",
+          "Important for understanding: Naive RAG indexes documents, retrieves top-k chunks, and feeds them to an LLM without optimization",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Advanced RAG",
+        "explanation": "Advanced RAG adds pre-retrieval and post-retrieval steps to dramatically improve answer quality",
+        "points": [
+          "Core concept of Advanced RAG used widely in modern software and AI systems",
+          "Important for understanding: Advanced RAG adds pre-retrieval and post-retrieval steps to dramatically improve answer quality",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Modular RAG",
+        "explanation": "Modular RAG is a flexible framework where each pipeline component can be swapped independently",
+        "points": [
+          "Core concept of Modular RAG used widely in modern software and AI systems",
+          "Important for understanding: Modular RAG is a flexible framework where each pipeline component can be swapped independently",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Agentic RAG",
+        "explanation": "Agentic RAG uses an AI agent that decides when and how to retrieve information dynamically",
+        "points": [
+          "Core concept of Agentic RAG used widely in modern software and AI systems",
+          "Important for understanding: Agentic RAG uses an AI agent that decides when and how to retrieve information dynamically",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Self-RAG",
+        "explanation": "Self-RAG trains the model to decide when to retrieve and to critique its own generated answers",
+        "points": [
+          "Core concept of Self-RAG used widely in modern software and AI systems",
+          "Important for understanding: Self-RAG trains the model to decide when to retrieve and to critique its own generated answers",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Corrective RAG",
+        "explanation": "Corrective RAG evaluates retrieved documents and web-searches for more if they are not relevant",
+        "points": [
+          "Core concept of Corrective RAG used widely in modern software and AI systems",
+          "Important for understanding: Corrective RAG evaluates retrieved documents and web-searches for more if they are not relevant",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Sentence-window Retrieval",
+        "explanation": "Sentence-window retrieval stores small sentences but returns the surrounding context window",
+        "points": [
+          "Core concept of Sentence-window Retrieval used widely in modern software and AI systems",
+          "Important for understanding: Sentence-window retrieval stores small sentences but returns the surrounding context window",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Parent-child Chunking",
+        "explanation": "Parent-child chunking retrieves small child chunks but passes larger parent context to the LLM",
+        "points": [
+          "Core concept of Parent-child Chunking used widely in modern software and AI systems",
+          "Important for understanding: Parent-child chunking retrieves small child chunks but passes larger parent context to the LLM",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Recursive Chunking",
+        "explanation": "Recursive chunking splits text hierarchically using natural boundaries like paragraphs and sentences",
+        "points": [
+          "Core concept of Recursive Chunking used widely in modern software and AI systems",
+          "Important for understanding: Recursive chunking splits text hierarchically using natural boundaries like paragraphs and sentences",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Semantic Chunking",
+        "explanation": "Semantic chunking splits documents at points where the topic meaningfully changes",
+        "points": [
+          "Core concept of Semantic Chunking used widely in modern software and AI systems",
+          "Important for understanding: Semantic chunking splits documents at points where the topic meaningfully changes",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Fixed-size Chunking",
+        "explanation": "Fixed-size chunking splits documents into equal token or character length pieces",
+        "points": [
+          "Core concept of Fixed-size Chunking used widely in modern software and AI systems",
+          "Important for understanding: Fixed-size chunking splits documents into equal token or character length pieces",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Overlapping Chunks",
+        "explanation": "Overlapping chunks share text between adjacent pieces so context is never split abruptly",
+        "points": [
+          "Core concept of Overlapping Chunks used widely in modern software and AI systems",
+          "Important for understanding: Overlapping chunks share text between adjacent pieces so context is never split abruptly",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Sparse Retrieval",
+        "explanation": "Sparse retrieval uses keyword signals like BM25 to find lexically matching documents",
+        "points": [
+          "Core concept of Sparse Retrieval used widely in modern software and AI systems",
+          "Important for understanding: Sparse retrieval uses keyword signals like BM25 to find lexically matching documents",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Dense Retrieval",
+        "explanation": "Dense retrieval uses embedding similarity to find semantically relevant documents",
+        "points": [
+          "Core concept of Dense Retrieval used widely in modern software and AI systems",
+          "Important for understanding: Dense retrieval uses embedding similarity to find semantically relevant documents",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "BM25",
+        "explanation": "BM25 is a classic keyword ranking algorithm that scores documents by term frequency",
+        "points": [
+          "Core concept of BM25 used widely in modern software and AI systems",
+          "Important for understanding: BM25 is a classic keyword ranking algorithm that scores documents by term frequency",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "FAISS",
+        "explanation": "FAISS is Meta's fast similarity search library for finding nearest vectors at scale",
+        "points": [
+          "Core concept of FAISS used widely in modern software and AI systems",
+          "Important for understanding: FAISS is Meta's fast similarity search library for finding nearest vectors at scale",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Pinecone",
+        "explanation": "Pinecone is a managed vector database built for production AI applications",
+        "points": [
+          "Core concept of Pinecone used widely in modern software and AI systems",
+          "Important for understanding: Pinecone is a managed vector database built for production AI applications",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Weaviate",
+        "explanation": "Weaviate is an open-source vector database with a built-in hybrid search capability",
+        "points": [
+          "Core concept of Weaviate used widely in modern software and AI systems",
+          "Important for understanding: Weaviate is an open-source vector database with a built-in hybrid search capability",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Chroma",
+        "explanation": "Chroma is a lightweight open-source vector database popular for local RAG development",
+        "points": [
+          "Core concept of Chroma used widely in modern software and AI systems",
+          "Important for understanding: Chroma is a lightweight open-source vector database popular for local RAG development",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Qdrant",
+        "explanation": "Qdrant is a high-performance vector database with advanced filtering capabilities",
+        "points": [
+          "Core concept of Qdrant used widely in modern software and AI systems",
+          "Important for understanding: Qdrant is a high-performance vector database with advanced filtering capabilities",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Milvus",
+        "explanation": "Milvus is a scalable open-source vector database designed for enterprise AI workloads",
+        "points": [
+          "Core concept of Milvus used widely in modern software and AI systems",
+          "Important for understanding: Milvus is a scalable open-source vector database designed for enterprise AI workloads",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "LanceDB",
+        "explanation": "LanceDB is a developer-friendly embedded vector database that runs locally",
+        "points": [
+          "Core concept of LanceDB used widely in modern software and AI systems",
+          "Important for understanding: LanceDB is a developer-friendly embedded vector database that runs locally",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Embedding Model",
+        "explanation": "Embedding models convert text into dense numerical vectors that capture semantic meaning",
+        "points": [
+          "Core concept of Embedding Model used widely in modern software and AI systems",
+          "Important for understanding: Embedding models convert text into dense numerical vectors that capture semantic meaning",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Bi-encoder",
+        "explanation": "Bi-encoders create independent embeddings for queries and documents for fast retrieval",
+        "points": [
+          "Core concept of Bi-encoder used widely in modern software and AI systems",
+          "Important for understanding: Bi-encoders create independent embeddings for queries and documents for fast retrieval",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Cross-encoder",
+        "explanation": "Cross-encoders compare query and document together for highly accurate re-ranking",
+        "points": [
+          "Core concept of Cross-encoder used widely in modern software and AI systems",
+          "Important for understanding: Cross-encoders compare query and document together for highly accurate re-ranking",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "HNSW",
+        "explanation": "Hierarchical Navigable Small World is a fast graph algorithm for approximate nearest neighbor search",
+        "points": [
+          "Core concept of HNSW used widely in modern software and AI systems",
+          "Important for understanding: Hierarchical Navigable Small World is a fast graph algorithm for approximate nearest neighbor search",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "ANN Search",
+        "explanation": "Approximate Nearest Neighbor search trades perfect accuracy for massive speed gains",
+        "points": [
+          "Core concept of ANN Search used widely in modern software and AI systems",
+          "Important for understanding: Approximate Nearest Neighbor search trades perfect accuracy for massive speed gains",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Cosine Similarity",
+        "explanation": "Cosine similarity measures the angle between two vectors to quantify how similar they are",
+        "points": [
+          "Core concept of Cosine Similarity used widely in modern software and AI systems",
+          "Important for understanding: Cosine similarity measures the angle between two vectors to quantify how similar they are",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Dot Product",
+        "explanation": "Dot product similarity multiplies corresponding embedding dimensions and sums the results",
+        "points": [
+          "Core concept of Dot Product used widely in modern software and AI systems",
+          "Important for understanding: Dot product similarity multiplies corresponding embedding dimensions and sums the results",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "L2 Distance",
+        "explanation": "L2 or Euclidean distance measures the straight-line distance between two embedding vectors",
+        "points": [
+          "Core concept of L2 Distance used widely in modern software and AI systems",
+          "Important for understanding: L2 or Euclidean distance measures the straight-line distance between two embedding vectors",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Namespace",
+        "explanation": "Namespaces partition a vector index so different users or tenants have isolated data",
+        "points": [
+          "Core concept of Namespace used widely in modern software and AI systems",
+          "Important for understanding: Namespaces partition a vector index so different users or tenants have isolated data",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Metadata Filtering",
+        "explanation": "Metadata filtering restricts vector search to documents matching specific tags or fields",
+        "points": [
+          "Core concept of Metadata Filtering used widely in modern software and AI systems",
+          "Important for understanding: Metadata filtering restricts vector search to documents matching specific tags or fields",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Multi-vector Retrieval",
+        "explanation": "Multi-vector retrieval represents each document with multiple embeddings for better coverage",
+        "points": [
+          "Core concept of Multi-vector Retrieval used widely in modern software and AI systems",
+          "Important for understanding: Multi-vector retrieval represents each document with multiple embeddings for better coverage",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "ColBERT",
+        "explanation": "ColBERT stores token-level embeddings per document enabling late interaction for accurate retrieval",
+        "points": [
+          "Core concept of ColBERT used widely in modern software and AI systems",
+          "Important for understanding: ColBERT stores token-level embeddings per document enabling late interaction for accurate retrieval",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "HyDE",
+        "explanation": "HyDE generates a hypothetical document answer and uses that embedding to search for real ones",
+        "points": [
+          "Core concept of HyDE used widely in modern software and AI systems",
+          "Important for understanding: HyDE generates a hypothetical document answer and uses that embedding to search for real ones",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Query Routing",
+        "explanation": "Query routing directs different questions to the most appropriate retrieval pipeline",
+        "points": [
+          "Core concept of Query Routing used widely in modern software and AI systems",
+          "Important for understanding: Query routing directs different questions to the most appropriate retrieval pipeline",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Ensemble Retrieval",
+        "explanation": "Ensemble retrieval combines results from multiple retrievers and fuses their scores",
+        "points": [
+          "Core concept of Ensemble Retrieval used widely in modern software and AI systems",
+          "Important for understanding: Ensemble retrieval combines results from multiple retrievers and fuses their scores",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Reciprocal Rank Fusion",
+        "explanation": "RRF combines ranked lists from multiple retrievers into a single better-performing ranked list",
+        "points": [
+          "Core concept of Reciprocal Rank Fusion used widely in modern software and AI systems",
+          "Important for understanding: RRF combines ranked lists from multiple retrievers into a single better-performing ranked list",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Contextual Compression",
+        "explanation": "Contextual compression extracts only the most relevant sentences from retrieved documents",
+        "points": [
+          "Core concept of Contextual Compression used widely in modern software and AI systems",
+          "Important for understanding: Contextual compression extracts only the most relevant sentences from retrieved documents",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "LLM Re-ranker",
+        "explanation": "An LLM re-ranker scores retrieved passages by asking the model which best answers the query",
+        "points": [
+          "Core concept of LLM Re-ranker used widely in modern software and AI systems",
+          "Important for understanding: An LLM re-ranker scores retrieved passages by asking the model which best answers the query",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Cohere Rerank",
+        "explanation": "Cohere Rerank is a powerful API for improving search result relevance with a cross-encoder",
+        "points": [
+          "Core concept of Cohere Rerank used widely in modern software and AI systems",
+          "Important for understanding: Cohere Rerank is a powerful API for improving search result relevance with a cross-encoder",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Lost in the Middle",
+        "explanation": "LLMs perform worse on information placed in the middle of long contexts versus edges",
+        "points": [
+          "Core concept of Lost in the Middle used widely in modern software and AI systems",
+          "Important for understanding: LLMs perform worse on information placed in the middle of long contexts versus edges",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Answer Generation",
+        "explanation": "Answer generation is the final RAG step where the LLM synthesizes retrieved chunks into a response",
+        "points": [
+          "Core concept of Answer Generation used widely in modern software and AI systems",
+          "Important for understanding: Answer generation is the final RAG step where the LLM synthesizes retrieved chunks into a response",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Citation Generation",
+        "explanation": "RAG systems can cite source documents in answers so users can verify the information",
+        "points": [
+          "Core concept of Citation Generation used widely in modern software and AI systems",
+          "Important for understanding: RAG systems can cite source documents in answers so users can verify the information",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Grounding",
+        "explanation": "Grounding anchors LLM responses to retrieved factual sources to reduce hallucination",
+        "points": [
+          "Core concept of Grounding used widely in modern software and AI systems",
+          "Important for understanding: Grounding anchors LLM responses to retrieved factual sources to reduce hallucination",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Faithfulness",
+        "explanation": "Faithfulness measures whether a RAG answer is actually supported by the retrieved documents",
+        "points": [
+          "Core concept of Faithfulness used widely in modern software and AI systems",
+          "Important for understanding: Faithfulness measures whether a RAG answer is actually supported by the retrieved documents",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Answer Relevance",
+        "explanation": "Answer relevance measures whether the generated answer actually addresses the question asked",
+        "points": [
+          "Core concept of Answer Relevance used widely in modern software and AI systems",
+          "Important for understanding: Answer relevance measures whether the generated answer actually addresses the question asked",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Context Recall",
+        "explanation": "Context recall measures whether retrieved chunks contain all information needed to answer",
+        "points": [
+          "Core concept of Context Recall used widely in modern software and AI systems",
+          "Important for understanding: Context recall measures whether retrieved chunks contain all information needed to answer",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "RAGAS",
+        "explanation": "RAGAS is an evaluation framework that automatically scores RAG pipelines on key quality metrics",
+        "points": [
+          "Core concept of RAGAS used widely in modern software and AI systems",
+          "Important for understanding: RAGAS is an evaluation framework that automatically scores RAG pipelines on key quality metrics",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Trulens",
+        "explanation": "TruLens is an observability tool for evaluating and debugging RAG and LLM applications",
+        "points": [
+          "Core concept of Trulens used widely in modern software and AI systems",
+          "Important for understanding: TruLens is an observability tool for evaluating and debugging RAG and LLM applications",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "LangSmith",
+        "explanation": "LangSmith traces, monitors, and evaluates LangChain RAG applications in production",
+        "points": [
+          "Core concept of LangSmith used widely in modern software and AI systems",
+          "Important for understanding: LangSmith traces, monitors, and evaluates LangChain RAG applications in production",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Indexing Pipeline",
+        "explanation": "The indexing pipeline loads, chunks, embeds, and stores documents for later retrieval",
+        "points": [
+          "Core concept of Indexing Pipeline used widely in modern software and AI systems",
+          "Important for understanding: The indexing pipeline loads, chunks, embeds, and stores documents for later retrieval",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Query Pipeline",
+        "explanation": "The query pipeline takes a user question, retrieves relevant chunks, and generates an answer",
+        "points": [
+          "Core concept of Query Pipeline used widely in modern software and AI systems",
+          "Important for understanding: The query pipeline takes a user question, retrieves relevant chunks, and generates an answer",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "LangChain",
+        "explanation": "LangChain is a popular framework for building LLM and RAG applications with composable components",
+        "points": [
+          "Core concept of LangChain used widely in modern software and AI systems",
+          "Important for understanding: LangChain is a popular framework for building LLM and RAG applications with composable components",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "LlamaIndex",
+        "explanation": "LlamaIndex specializes in RAG infrastructure with powerful data connectors and query engines",
+        "points": [
+          "Core concept of LlamaIndex used widely in modern software and AI systems",
+          "Important for understanding: LlamaIndex specializes in RAG infrastructure with powerful data connectors and query engines",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Haystack",
+        "explanation": "Haystack is an open-source framework for building production-grade RAG and search pipelines",
+        "points": [
+          "Core concept of Haystack used widely in modern software and AI systems",
+          "Important for understanding: Haystack is an open-source framework for building production-grade RAG and search pipelines",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "DSPy",
+        "explanation": "DSPy automatically optimizes LLM prompts and pipelines using machine learning",
+        "points": [
+          "Core concept of DSPy used widely in modern software and AI systems",
+          "Important for understanding: DSPy automatically optimizes LLM prompts and pipelines using machine learning",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Multi-hop Reasoning",
+        "explanation": "Multi-hop RAG answers complex questions by chaining multiple retrieval and reasoning steps",
+        "points": [
+          "Core concept of Multi-hop Reasoning used widely in modern software and AI systems",
+          "Important for understanding: Multi-hop RAG answers complex questions by chaining multiple retrieval and reasoning steps",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "GraphRAG",
+        "explanation": "GraphRAG builds a knowledge graph from documents enabling complex relational question answering",
+        "points": [
+          "Core concept of GraphRAG used widely in modern software and AI systems",
+          "Important for understanding: GraphRAG builds a knowledge graph from documents enabling complex relational question answering",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Long-context RAG",
+        "explanation": "Long-context RAG passes many retrieved documents into LLMs with very large context windows",
+        "points": [
+          "Core concept of Long-context RAG used widely in modern software and AI systems",
+          "Important for understanding: Long-context RAG passes many retrieved documents into LLMs with very large context windows",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Streaming RAG",
+        "explanation": "Streaming RAG displays the LLM answer token by token as it generates for faster perceived response",
+        "points": [
+          "Core concept of Streaming RAG used widely in modern software and AI systems",
+          "Important for understanding: Streaming RAG displays the LLM answer token by token as it generates for faster perceived response",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Conversational RAG",
+        "explanation": "Conversational RAG maintains chat history so follow-up questions reference previous turns",
+        "points": [
+          "Core concept of Conversational RAG used widely in modern software and AI systems",
+          "Important for understanding: Conversational RAG maintains chat history so follow-up questions reference previous turns",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Table RAG",
+        "explanation": "Table RAG retrieves and reasons over structured tabular data inside documents",
+        "points": [
+          "Core concept of Table RAG used widely in modern software and AI systems",
+          "Important for understanding: Table RAG retrieves and reasons over structured tabular data inside documents",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Multimodal RAG",
+        "explanation": "Multimodal RAG retrieves and reasons over images, charts, and text together",
+        "points": [
+          "Core concept of Multimodal RAG used widely in modern software and AI systems",
+          "Important for understanding: Multimodal RAG retrieves and reasons over images, charts, and text together",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Audio RAG",
+        "explanation": "Audio RAG transcribes speech then indexes and retrieves from audio content",
+        "points": [
+          "Core concept of Audio RAG used widely in modern software and AI systems",
+          "Important for understanding: Audio RAG transcribes speech then indexes and retrieves from audio content",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Code RAG",
+        "explanation": "Code RAG retrieves relevant code snippets and documentation to assist with programming tasks",
+        "points": [
+          "Core concept of Code RAG used widely in modern software and AI systems",
+          "Important for understanding: Code RAG retrieves relevant code snippets and documentation to assist with programming tasks",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "PDF Parsing",
+        "explanation": "PDF parsing extracts clean text from PDFs including handling tables, headers, and layouts",
+        "points": [
+          "Core concept of PDF Parsing used widely in modern software and AI systems",
+          "Important for understanding: PDF parsing extracts clean text from PDFs including handling tables, headers, and layouts",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "OCR",
+        "explanation": "OCR converts images of text like scanned documents into machine-readable searchable text",
+        "points": [
+          "Core concept of OCR used widely in modern software and AI systems",
+          "Important for understanding: OCR converts images of text like scanned documents into machine-readable searchable text",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Document Hierarchy",
+        "explanation": "Document hierarchy preserves structure like sections and subsections during indexing",
+        "points": [
+          "Core concept of Document Hierarchy used widely in modern software and AI systems",
+          "Important for understanding: Document hierarchy preserves structure like sections and subsections during indexing",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Chunk Metadata",
+        "explanation": "Chunk metadata stores source, page number, and section info alongside each embedded piece",
+        "points": [
+          "Core concept of Chunk Metadata used widely in modern software and AI systems",
+          "Important for understanding: Chunk metadata stores source, page number, and section info alongside each embedded piece",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Retrieval Threshold",
+        "explanation": "Retrieval threshold sets a minimum similarity score below which chunks are discarded",
+        "points": [
+          "Core concept of Retrieval Threshold used widely in modern software and AI systems",
+          "Important for understanding: Retrieval threshold sets a minimum similarity score below which chunks are discarded",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Top-k Retrieval",
+        "explanation": "Top-k retrieval fetches the k most similar chunks to the query from the vector database",
+        "points": [
+          "Core concept of Top-k Retrieval used widely in modern software and AI systems",
+          "Important for understanding: Top-k retrieval fetches the k most similar chunks to the query from the vector database",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Maximal Marginal Relevance",
+        "explanation": "MMR selects diverse retrieved chunks so the LLM gets broad coverage not just repetitive top hits",
+        "points": [
+          "Core concept of Maximal Marginal Relevance used widely in modern software and AI systems",
+          "Important for understanding: MMR selects diverse retrieved chunks so the LLM gets broad coverage not just repetitive top hits",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Cache-augmented Generation",
+        "explanation": "CAG pre-loads the entire knowledge base into LLM context to skip retrieval entirely",
+        "points": [
+          "Core concept of Cache-augmented Generation used widely in modern software and AI systems",
+          "Important for understanding: CAG pre-loads the entire knowledge base into LLM context to skip retrieval entirely",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Knowledge Graph RAG",
+        "explanation": "KG-RAG traverses structured knowledge graphs to find precise factual answers",
+        "points": [
+          "Core concept of Knowledge Graph RAG used widely in modern software and AI systems",
+          "Important for understanding: KG-RAG traverses structured knowledge graphs to find precise factual answers",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Step-back Prompting",
+        "explanation": "Step-back prompting asks a broader question first to retrieve better supporting context",
+        "points": [
+          "Core concept of Step-back Prompting used widely in modern software and AI systems",
+          "Important for understanding: Step-back prompting asks a broader question first to retrieve better supporting context",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Decomposed Retrieval",
+        "explanation": "Decomposed retrieval breaks complex questions into sub-questions and retrieves for each one",
+        "points": [
+          "Core concept of Decomposed Retrieval used widely in modern software and AI systems",
+          "Important for understanding: Decomposed retrieval breaks complex questions into sub-questions and retrieves for each one",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Sparse-Dense Fusion",
+        "explanation": "Sparse-dense fusion blends BM25 keyword scores with embedding scores for best-of-both retrieval",
+        "points": [
+          "Core concept of Sparse-Dense Fusion used widely in modern software and AI systems",
+          "Important for understanding: Sparse-dense fusion blends BM25 keyword scores with embedding scores for best-of-both retrieval",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Iterative Retrieval",
+        "explanation": "Iterative retrieval refines the search query using partial answers from previous retrieval rounds",
+        "points": [
+          "Core concept of Iterative Retrieval used widely in modern software and AI systems",
+          "Important for understanding: Iterative retrieval refines the search query using partial answers from previous retrieval rounds",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Adaptive Retrieval",
+        "explanation": "Adaptive retrieval decides on the fly whether retrieval is needed at all for a given question",
+        "points": [
+          "Core concept of Adaptive Retrieval used widely in modern software and AI systems",
+          "Important for understanding: Adaptive retrieval decides on the fly whether retrieval is needed at all for a given question",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "RAG Evaluation",
+        "explanation": "RAG evaluation measures faithfulness, relevance, and completeness of generated answers",
+        "points": [
+          "Core concept of RAG Evaluation used widely in modern software and AI systems",
+          "Important for understanding: RAG evaluation measures faithfulness, relevance, and completeness of generated answers",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Token Budget RAG",
+        "explanation": "Token budget RAG trims retrieved context to stay within the model's maximum context window",
+        "points": [
+          "Core concept of Token Budget RAG used widely in modern software and AI systems",
+          "Important for understanding: Token budget RAG trims retrieved context to stay within the model's maximum context window",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Hypothetical Document Embedding",
+        "explanation": "HyDE generates a fake ideal answer and embeds it to find real matching documents in the index",
+        "points": [
+          "Core concept of Hypothetical Document Embedding used widely in modern software and AI systems",
+          "Important for understanding: HyDE generates a fake ideal answer and embeds it to find real matching documents in the index",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Multi-query Retrieval",
+        "explanation": "Multi-query generates several paraphrases of the question to increase retrieval coverage",
+        "points": [
+          "Core concept of Multi-query Retrieval used widely in modern software and AI systems",
+          "Important for understanding: Multi-query generates several paraphrases of the question to increase retrieval coverage",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Fusion Retrieval",
+        "explanation": "Fusion retrieval merges and deduplicates results from many parallel retrieval strategies",
+        "points": [
+          "Core concept of Fusion Retrieval used widely in modern software and AI systems",
+          "Important for understanding: Fusion retrieval merges and deduplicates results from many parallel retrieval strategies",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Late Chunking",
+        "explanation": "Late chunking embeds full documents first then chunks the contextualized embeddings for better quality",
+        "points": [
+          "Core concept of Late Chunking used widely in modern software and AI systems",
+          "Important for understanding: Late chunking embeds full documents first then chunks the contextualized embeddings for better quality",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Contextual Retrieval",
+        "explanation": "Contextual retrieval prepends a document-level summary to each chunk before embedding for better matching",
+        "points": [
+          "Core concept of Contextual Retrieval used widely in modern software and AI systems",
+          "Important for understanding: Contextual retrieval prepends a document-level summary to each chunk before embedding for better matching",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Small-to-Big Retrieval",
+        "explanation": "Small-to-big retrieves small precise chunks then expands context by returning their parent sections",
+        "points": [
+          "Core concept of Small-to-Big Retrieval used widely in modern software and AI systems",
+          "Important for understanding: Small-to-big retrieves small precise chunks then expands context by returning their parent sections",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Knowledge Distillation RAG",
+        "explanation": "RAG knowledge distillation trains a compact model on LLM-generated answers to avoid retrieval at inference",
+        "points": [
+          "Core concept of Knowledge Distillation RAG used widely in modern software and AI systems",
+          "Important for understanding: RAG knowledge distillation trains a compact model on LLM-generated answers to avoid retrieval at inference",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "RAG Triad",
+        "explanation": "The RAG triad evaluates context relevance, groundedness, and answer relevance as three key quality metrics",
+        "points": [
+          "Core concept of RAG Triad used widely in modern software and AI systems",
+          "Important for understanding: The RAG triad evaluates context relevance, groundedness, and answer relevance as three key quality metrics",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      }
+    ]
+  }
+}

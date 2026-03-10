@@ -1,0 +1,1106 @@
+{
+  "llm": {
+    "items": [
+      {
+        "name": "Large Language Model",
+        "explanation": "LLMs are AI trained on massive text data to understand and generate human language",
+        "points": [
+          "Core concept of Large Language Model used widely in modern software and AI systems",
+          "Important for understanding: LLMs are AI trained on massive text data to understand and generate human language",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Transformer",
+        "explanation": "The Transformer architecture revolutionized AI with powerful self-attention mechanisms",
+        "points": [
+          "Core concept of Transformer used widely in modern software and AI systems",
+          "Important for understanding: The Transformer architecture revolutionized AI with powerful self-attention mechanisms",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Tokens",
+        "explanation": "Tokens are the smallest text units LLMs process \u2014 roughly 0.75 words per token",
+        "points": [
+          "Core concept of Tokens used widely in modern software and AI systems",
+          "Important for understanding: Tokens are the smallest text units LLMs process \u2014 roughly 0.75 words per token",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Context Window",
+        "explanation": "The context window is how much text an LLM can read and remember in one conversation",
+        "points": [
+          "Core concept of Context Window used widely in modern software and AI systems",
+          "Important for understanding: The context window is how much text an LLM can read and remember in one conversation",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Prompt Engineering",
+        "explanation": "Prompt engineering is crafting inputs to reliably get the best outputs from LLMs",
+        "points": [
+          "Core concept of Prompt Engineering used widely in modern software and AI systems",
+          "Important for understanding: Prompt engineering is crafting inputs to reliably get the best outputs from LLMs",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Fine-tuning",
+        "explanation": "Fine-tuning adapts a pre-trained LLM to a specific domain, task, or writing style",
+        "points": [
+          "Core concept of Fine-tuning used widely in modern software and AI systems",
+          "Important for understanding: Fine-tuning adapts a pre-trained LLM to a specific domain, task, or writing style",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Embeddings",
+        "explanation": "Embeddings are numerical vectors that capture the meaning of text for AI search and retrieval",
+        "points": [
+          "Core concept of Embeddings used widely in modern software and AI systems",
+          "Important for understanding: Embeddings are numerical vectors that capture the meaning of text for AI search and retrieval",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Hallucination",
+        "explanation": "LLM hallucination is when the model generates confident but factually incorrect answers",
+        "points": [
+          "Core concept of Hallucination used widely in modern software and AI systems",
+          "Important for understanding: LLM hallucination is when the model generates confident but factually incorrect answers",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Temperature",
+        "explanation": "Temperature controls how creative or random an LLM's output is \u2014 higher means more creative",
+        "points": [
+          "Core concept of Temperature used widely in modern software and AI systems",
+          "Important for understanding: Temperature controls how creative or random an LLM's output is \u2014 higher means more creative",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "System Prompt",
+        "explanation": "A system prompt sets the AI assistant's role, persona, rules, and constraints upfront",
+        "points": [
+          "Core concept of System Prompt used widely in modern software and AI systems",
+          "Important for understanding: A system prompt sets the AI assistant's role, persona, rules, and constraints upfront",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Pre-training",
+        "explanation": "Pre-training is the initial phase where a model learns language patterns from massive text corpora",
+        "points": [
+          "Core concept of Pre-training used widely in modern software and AI systems",
+          "Important for understanding: Pre-training is the initial phase where a model learns language patterns from massive text corpora",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "RLHF",
+        "explanation": "Reinforcement Learning from Human Feedback aligns LLMs to human preferences and values",
+        "points": [
+          "Core concept of RLHF used widely in modern software and AI systems",
+          "Important for understanding: Reinforcement Learning from Human Feedback aligns LLMs to human preferences and values",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "RLAIF",
+        "explanation": "RLAIF uses AI feedback instead of human feedback to align language models at scale",
+        "points": [
+          "Core concept of RLAIF used widely in modern software and AI systems",
+          "Important for understanding: RLAIF uses AI feedback instead of human feedback to align language models at scale",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Constitutional AI",
+        "explanation": "Constitutional AI trains models using a set of principles to guide safe and helpful behavior",
+        "points": [
+          "Core concept of Constitutional AI used widely in modern software and AI systems",
+          "Important for understanding: Constitutional AI trains models using a set of principles to guide safe and helpful behavior",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Instruction Tuning",
+        "explanation": "Instruction tuning trains LLMs to follow natural language instructions reliably",
+        "points": [
+          "Core concept of Instruction Tuning used widely in modern software and AI systems",
+          "Important for understanding: Instruction tuning trains LLMs to follow natural language instructions reliably",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Chain-of-Thought",
+        "explanation": "Chain-of-thought prompting makes LLMs reason step by step for more accurate answers",
+        "points": [
+          "Core concept of Chain-of-Thought used widely in modern software and AI systems",
+          "Important for understanding: Chain-of-thought prompting makes LLMs reason step by step for more accurate answers",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Few-shot Prompting",
+        "explanation": "Few-shot prompting gives the LLM several examples in the prompt to guide its responses",
+        "points": [
+          "Core concept of Few-shot Prompting used widely in modern software and AI systems",
+          "Important for understanding: Few-shot prompting gives the LLM several examples in the prompt to guide its responses",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Zero-shot Prompting",
+        "explanation": "Zero-shot prompting asks the LLM to complete a task with no examples given",
+        "points": [
+          "Core concept of Zero-shot Prompting used widely in modern software and AI systems",
+          "Important for understanding: Zero-shot prompting asks the LLM to complete a task with no examples given",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Top-p Sampling",
+        "explanation": "Top-p (nucleus) sampling limits word choices to the smallest set covering p probability mass",
+        "points": [
+          "Core concept of Top-p Sampling used widely in modern software and AI systems",
+          "Important for understanding: Top-p (nucleus) sampling limits word choices to the smallest set covering p probability mass",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Top-k Sampling",
+        "explanation": "Top-k sampling restricts the model to only choose from the k most likely next tokens",
+        "points": [
+          "Core concept of Top-k Sampling used widely in modern software and AI systems",
+          "Important for understanding: Top-k sampling restricts the model to only choose from the k most likely next tokens",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Beam Search",
+        "explanation": "Beam search keeps multiple candidate sequences and picks the most probable final output",
+        "points": [
+          "Core concept of Beam Search used widely in modern software and AI systems",
+          "Important for understanding: Beam search keeps multiple candidate sequences and picks the most probable final output",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Greedy Decoding",
+        "explanation": "Greedy decoding always picks the single most likely next token at every step",
+        "points": [
+          "Core concept of Greedy Decoding used widely in modern software and AI systems",
+          "Important for understanding: Greedy decoding always picks the single most likely next token at every step",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Tokenizer",
+        "explanation": "A tokenizer converts text into numerical tokens that the model can process",
+        "points": [
+          "Core concept of Tokenizer used widely in modern software and AI systems",
+          "Important for understanding: A tokenizer converts text into numerical tokens that the model can process",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Vocabulary",
+        "explanation": "An LLM vocabulary is the complete set of tokens the model knows and can use",
+        "points": [
+          "Core concept of Vocabulary used widely in modern software and AI systems",
+          "Important for understanding: An LLM vocabulary is the complete set of tokens the model knows and can use",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Attention Head",
+        "explanation": "Attention heads each learn to focus on different relationships within the input text",
+        "points": [
+          "Core concept of Attention Head used widely in modern software and AI systems",
+          "Important for understanding: Attention heads each learn to focus on different relationships within the input text",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Multi-head Attention",
+        "explanation": "Multi-head attention runs several attention operations in parallel for richer representations",
+        "points": [
+          "Core concept of Multi-head Attention used widely in modern software and AI systems",
+          "Important for understanding: Multi-head attention runs several attention operations in parallel for richer representations",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Positional Encoding",
+        "explanation": "Positional encoding tells the Transformer where each token appears in the sequence",
+        "points": [
+          "Core concept of Positional Encoding used widely in modern software and AI systems",
+          "Important for understanding: Positional encoding tells the Transformer where each token appears in the sequence",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Layer Normalization",
+        "explanation": "Layer normalization stabilizes training by normalizing activations within each layer",
+        "points": [
+          "Core concept of Layer Normalization used widely in modern software and AI systems",
+          "Important for understanding: Layer normalization stabilizes training by normalizing activations within each layer",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Feed-forward Layer",
+        "explanation": "Feed-forward layers in Transformers process each token's representation independently",
+        "points": [
+          "Core concept of Feed-forward Layer used widely in modern software and AI systems",
+          "Important for understanding: Feed-forward layers in Transformers process each token's representation independently",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Residual Connection",
+        "explanation": "Residual connections let information skip layers to prevent vanishing gradients in deep models",
+        "points": [
+          "Core concept of Residual Connection used widely in modern software and AI systems",
+          "Important for understanding: Residual connections let information skip layers to prevent vanishing gradients in deep models",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Model Weights",
+        "explanation": "Model weights are billions of numerical parameters that store everything the LLM has learned",
+        "points": [
+          "Core concept of Model Weights used widely in modern software and AI systems",
+          "Important for understanding: Model weights are billions of numerical parameters that store everything the LLM has learned",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Parameter Count",
+        "explanation": "Parameter count measures model size \u2014 larger models generally have greater capability",
+        "points": [
+          "Core concept of Parameter Count used widely in modern software and AI systems",
+          "Important for understanding: Parameter count measures model size \u2014 larger models generally have greater capability",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Scaling Law",
+        "explanation": "Scaling laws predict how model performance improves with more data, compute, and parameters",
+        "points": [
+          "Core concept of Scaling Law used widely in modern software and AI systems",
+          "Important for understanding: Scaling laws predict how model performance improves with more data, compute, and parameters",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Emergent Abilities",
+        "explanation": "Emergent abilities are surprising capabilities that appear as LLMs scale up in size",
+        "points": [
+          "Core concept of Emergent Abilities used widely in modern software and AI systems",
+          "Important for understanding: Emergent abilities are surprising capabilities that appear as LLMs scale up in size",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "In-context Learning",
+        "explanation": "In-context learning lets LLMs learn new tasks from examples provided directly in the prompt",
+        "points": [
+          "Core concept of In-context Learning used widely in modern software and AI systems",
+          "Important for understanding: In-context learning lets LLMs learn new tasks from examples provided directly in the prompt",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Prompt Injection",
+        "explanation": "Prompt injection attacks try to hijack an AI's behavior using malicious input text",
+        "points": [
+          "Core concept of Prompt Injection used widely in modern software and AI systems",
+          "Important for understanding: Prompt injection attacks try to hijack an AI's behavior using malicious input text",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Jailbreaking",
+        "explanation": "Jailbreaking tries to bypass an LLM's safety guidelines through clever prompting",
+        "points": [
+          "Core concept of Jailbreaking used widely in modern software and AI systems",
+          "Important for understanding: Jailbreaking tries to bypass an LLM's safety guidelines through clever prompting",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Guardrails",
+        "explanation": "Guardrails are safety checks that prevent LLMs from generating harmful or inappropriate content",
+        "points": [
+          "Core concept of Guardrails used widely in modern software and AI systems",
+          "Important for understanding: Guardrails are safety checks that prevent LLMs from generating harmful or inappropriate content",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "GGUF Format",
+        "explanation": "GGUF is a file format for storing quantized LLMs for efficient local deployment",
+        "points": [
+          "Core concept of GGUF Format used widely in modern software and AI systems",
+          "Important for understanding: GGUF is a file format for storing quantized LLMs for efficient local deployment",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Mixture of Experts",
+        "explanation": "MoE architecture activates only a subset of model parameters per token for efficient scaling",
+        "points": [
+          "Core concept of Mixture of Experts used widely in modern software and AI systems",
+          "Important for understanding: MoE architecture activates only a subset of model parameters per token for efficient scaling",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Sparse Attention",
+        "explanation": "Sparse attention computes only a subset of attention scores to handle very long contexts",
+        "points": [
+          "Core concept of Sparse Attention used widely in modern software and AI systems",
+          "Important for understanding: Sparse attention computes only a subset of attention scores to handle very long contexts",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Flash Attention",
+        "explanation": "Flash Attention is a hardware-aware algorithm that makes Transformer training much faster",
+        "points": [
+          "Core concept of Flash Attention used widely in modern software and AI systems",
+          "Important for understanding: Flash Attention is a hardware-aware algorithm that makes Transformer training much faster",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "KV Cache",
+        "explanation": "The KV cache stores computed attention keys and values to speed up text generation",
+        "points": [
+          "Core concept of KV Cache used widely in modern software and AI systems",
+          "Important for understanding: The KV cache stores computed attention keys and values to speed up text generation",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Speculative Decoding",
+        "explanation": "Speculative decoding uses a small draft model to speed up generation by the larger model",
+        "points": [
+          "Core concept of Speculative Decoding used widely in modern software and AI systems",
+          "Important for understanding: Speculative decoding uses a small draft model to speed up generation by the larger model",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Sliding Window Attention",
+        "explanation": "Sliding window attention lets models handle longer contexts by attending to nearby tokens",
+        "points": [
+          "Core concept of Sliding Window Attention used widely in modern software and AI systems",
+          "Important for understanding: Sliding window attention lets models handle longer contexts by attending to nearby tokens",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Rotary Embeddings",
+        "explanation": "RoPE encodes position information in a way that generalizes to longer sequences",
+        "points": [
+          "Core concept of Rotary Embeddings used widely in modern software and AI systems",
+          "Important for understanding: RoPE encodes position information in a way that generalizes to longer sequences",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Grouped Query Attention",
+        "explanation": "GQA reduces memory and computation by sharing key-value heads across query heads",
+        "points": [
+          "Core concept of Grouped Query Attention used widely in modern software and AI systems",
+          "Important for understanding: GQA reduces memory and computation by sharing key-value heads across query heads",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Perplexity",
+        "explanation": "Perplexity measures how well an LLM predicts text \u2014 lower means more confident and accurate",
+        "points": [
+          "Core concept of Perplexity used widely in modern software and AI systems",
+          "Important for understanding: Perplexity measures how well an LLM predicts text \u2014 lower means more confident and accurate",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "BLEU Score",
+        "explanation": "BLEU score measures how closely AI-generated text matches human reference translations",
+        "points": [
+          "Core concept of BLEU Score used widely in modern software and AI systems",
+          "Important for understanding: BLEU score measures how closely AI-generated text matches human reference translations",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "ROUGE Score",
+        "explanation": "ROUGE measures overlap between AI-generated summaries and human-written reference summaries",
+        "points": [
+          "Core concept of ROUGE Score used widely in modern software and AI systems",
+          "Important for understanding: ROUGE measures overlap between AI-generated summaries and human-written reference summaries",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "BenchMark Evaluation",
+        "explanation": "Benchmarks like MMLU and HellaSwag measure LLM knowledge and reasoning across many subjects",
+        "points": [
+          "Core concept of BenchMark Evaluation used widely in modern software and AI systems",
+          "Important for understanding: Benchmarks like MMLU and HellaSwag measure LLM knowledge and reasoning across many subjects",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "MMLU",
+        "explanation": "Massive Multitask Language Understanding tests LLMs across 57 academic subjects",
+        "points": [
+          "Core concept of MMLU used widely in modern software and AI systems",
+          "Important for understanding: Massive Multitask Language Understanding tests LLMs across 57 academic subjects",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "HumanEval",
+        "explanation": "HumanEval benchmarks LLM coding ability by asking them to write and pass real Python tests",
+        "points": [
+          "Core concept of HumanEval used widely in modern software and AI systems",
+          "Important for understanding: HumanEval benchmarks LLM coding ability by asking them to write and pass real Python tests",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "GSM8K",
+        "explanation": "GSM8K tests grade school math reasoning requiring multi-step problem solving",
+        "points": [
+          "Core concept of GSM8K used widely in modern software and AI systems",
+          "Important for understanding: GSM8K tests grade school math reasoning requiring multi-step problem solving",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "TruthfulQA",
+        "explanation": "TruthfulQA tests whether LLMs give honest accurate answers instead of plausible-sounding falsehoods",
+        "points": [
+          "Core concept of TruthfulQA used widely in modern software and AI systems",
+          "Important for understanding: TruthfulQA tests whether LLMs give honest accurate answers instead of plausible-sounding falsehoods",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "LoRA",
+        "explanation": "Low-Rank Adaptation fine-tunes LLMs efficiently by training only small adapter layers",
+        "points": [
+          "Core concept of LoRA used widely in modern software and AI systems",
+          "Important for understanding: Low-Rank Adaptation fine-tunes LLMs efficiently by training only small adapter layers",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "QLoRA",
+        "explanation": "QLoRA combines quantization and LoRA to fine-tune large models on consumer hardware",
+        "points": [
+          "Core concept of QLoRA used widely in modern software and AI systems",
+          "Important for understanding: QLoRA combines quantization and LoRA to fine-tune large models on consumer hardware",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "PEFT",
+        "explanation": "Parameter-Efficient Fine-Tuning updates only a small fraction of model parameters to save compute",
+        "points": [
+          "Core concept of PEFT used widely in modern software and AI systems",
+          "Important for understanding: Parameter-Efficient Fine-Tuning updates only a small fraction of model parameters to save compute",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Adapter Layers",
+        "explanation": "Adapter layers add small trainable modules between frozen pre-trained model layers",
+        "points": [
+          "Core concept of Adapter Layers used widely in modern software and AI systems",
+          "Important for understanding: Adapter layers add small trainable modules between frozen pre-trained model layers",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Prefix Tuning",
+        "explanation": "Prefix tuning prepends trainable virtual tokens to the input instead of updating model weights",
+        "points": [
+          "Core concept of Prefix Tuning used widely in modern software and AI systems",
+          "Important for understanding: Prefix tuning prepends trainable virtual tokens to the input instead of updating model weights",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Prompt Tuning",
+        "explanation": "Prompt tuning learns soft prompt embeddings while keeping the full model frozen",
+        "points": [
+          "Core concept of Prompt Tuning used widely in modern software and AI systems",
+          "Important for understanding: Prompt tuning learns soft prompt embeddings while keeping the full model frozen",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Tokenization",
+        "explanation": "Tokenization splits text into subword pieces using algorithms like BPE or WordPiece",
+        "points": [
+          "Core concept of Tokenization used widely in modern software and AI systems",
+          "Important for understanding: Tokenization splits text into subword pieces using algorithms like BPE or WordPiece",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "BPE",
+        "explanation": "Byte Pair Encoding builds a vocabulary by iteratively merging the most frequent character pairs",
+        "points": [
+          "Core concept of BPE used widely in modern software and AI systems",
+          "Important for understanding: Byte Pair Encoding builds a vocabulary by iteratively merging the most frequent character pairs",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "SentencePiece",
+        "explanation": "SentencePiece is a language-independent tokenization library used by many modern LLMs",
+        "points": [
+          "Core concept of SentencePiece used widely in modern software and AI systems",
+          "Important for understanding: SentencePiece is a language-independent tokenization library used by many modern LLMs",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Padding",
+        "explanation": "Padding adds dummy tokens to make all sequences the same length in a batch",
+        "points": [
+          "Core concept of Padding used widely in modern software and AI systems",
+          "Important for understanding: Padding adds dummy tokens to make all sequences the same length in a batch",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Truncation",
+        "explanation": "Truncation cuts sequences that exceed the maximum context length of the model",
+        "points": [
+          "Core concept of Truncation used widely in modern software and AI systems",
+          "Important for understanding: Truncation cuts sequences that exceed the maximum context length of the model",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Logits",
+        "explanation": "Logits are raw unnormalized scores the model assigns to each possible next token",
+        "points": [
+          "Core concept of Logits used widely in modern software and AI systems",
+          "Important for understanding: Logits are raw unnormalized scores the model assigns to each possible next token",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Softmax",
+        "explanation": "Softmax converts logits into a probability distribution over the vocabulary",
+        "points": [
+          "Core concept of Softmax used widely in modern software and AI systems",
+          "Important for understanding: Softmax converts logits into a probability distribution over the vocabulary",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Cross-attention",
+        "explanation": "Cross-attention lets the decoder attend to encoder representations in sequence-to-sequence tasks",
+        "points": [
+          "Core concept of Cross-attention used widely in modern software and AI systems",
+          "Important for understanding: Cross-attention lets the decoder attend to encoder representations in sequence-to-sequence tasks",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Causal Masking",
+        "explanation": "Causal masking prevents the model from attending to future tokens during training",
+        "points": [
+          "Core concept of Causal Masking used widely in modern software and AI systems",
+          "Important for understanding: Causal masking prevents the model from attending to future tokens during training",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Inference",
+        "explanation": "Inference is the process of running a trained LLM to generate predictions or responses",
+        "points": [
+          "Core concept of Inference used widely in modern software and AI systems",
+          "Important for understanding: Inference is the process of running a trained LLM to generate predictions or responses",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Quantization LLM",
+        "explanation": "Quantization reduces LLM weight precision to run large models on smaller hardware",
+        "points": [
+          "Core concept of Quantization LLM used widely in modern software and AI systems",
+          "Important for understanding: Quantization reduces LLM weight precision to run large models on smaller hardware",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Tensor Parallelism",
+        "explanation": "Tensor parallelism splits model tensors across multiple GPUs to fit very large models",
+        "points": [
+          "Core concept of Tensor Parallelism used widely in modern software and AI systems",
+          "Important for understanding: Tensor parallelism splits model tensors across multiple GPUs to fit very large models",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Pipeline Parallelism",
+        "explanation": "Pipeline parallelism splits model layers across GPUs so each GPU handles different layers",
+        "points": [
+          "Core concept of Pipeline Parallelism used widely in modern software and AI systems",
+          "Important for understanding: Pipeline parallelism splits model layers across GPUs so each GPU handles different layers",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Model Serving",
+        "explanation": "Model serving hosts LLMs in production to handle real-time inference requests at scale",
+        "points": [
+          "Core concept of Model Serving used widely in modern software and AI systems",
+          "Important for understanding: Model serving hosts LLMs in production to handle real-time inference requests at scale",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "vLLM",
+        "explanation": "vLLM is an efficient LLM inference engine using PagedAttention for high throughput serving",
+        "points": [
+          "Core concept of vLLM used widely in modern software and AI systems",
+          "Important for understanding: vLLM is an efficient LLM inference engine using PagedAttention for high throughput serving",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Ollama",
+        "explanation": "Ollama lets you run open-source LLMs locally on your laptop with a simple command",
+        "points": [
+          "Core concept of Ollama used widely in modern software and AI systems",
+          "Important for understanding: Ollama lets you run open-source LLMs locally on your laptop with a simple command",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "LLaMA",
+        "explanation": "Meta's LLaMA is an open-weight large language model series used by researchers worldwide",
+        "points": [
+          "Core concept of LLaMA used widely in modern software and AI systems",
+          "Important for understanding: Meta's LLaMA is an open-weight large language model series used by researchers worldwide",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "GPT",
+        "explanation": "GPT (Generative Pre-trained Transformer) is OpenAI's family of influential language models",
+        "points": [
+          "Core concept of GPT used widely in modern software and AI systems",
+          "Important for understanding: GPT (Generative Pre-trained Transformer) is OpenAI's family of influential language models",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Claude",
+        "explanation": "Claude is Anthropic's AI assistant family trained to be helpful, harmless, and honest",
+        "points": [
+          "Core concept of Claude used widely in modern software and AI systems",
+          "Important for understanding: Claude is Anthropic's AI assistant family trained to be helpful, harmless, and honest",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Gemini",
+        "explanation": "Gemini is Google DeepMind's multimodal AI model family competing with GPT and Claude",
+        "points": [
+          "Core concept of Gemini used widely in modern software and AI systems",
+          "Important for understanding: Gemini is Google DeepMind's multimodal AI model family competing with GPT and Claude",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Mistral",
+        "explanation": "Mistral is a French AI startup making efficient high-quality open-weight language models",
+        "points": [
+          "Core concept of Mistral used widely in modern software and AI systems",
+          "Important for understanding: Mistral is a French AI startup making efficient high-quality open-weight language models",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Phi",
+        "explanation": "Microsoft's Phi models are surprisingly capable small language models trained on high-quality data",
+        "points": [
+          "Core concept of Phi used widely in modern software and AI systems",
+          "Important for understanding: Microsoft's Phi models are surprisingly capable small language models trained on high-quality data",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Qwen",
+        "explanation": "Qwen is Alibaba's family of open-weight multilingual large language models",
+        "points": [
+          "Core concept of Qwen used widely in modern software and AI systems",
+          "Important for understanding: Qwen is Alibaba's family of open-weight multilingual large language models",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "DeepSeek",
+        "explanation": "DeepSeek is a Chinese LLM series that achieved GPT-4-level performance at far lower cost",
+        "points": [
+          "Core concept of DeepSeek used widely in modern software and AI systems",
+          "Important for understanding: DeepSeek is a Chinese LLM series that achieved GPT-4-level performance at far lower cost",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Reward Model",
+        "explanation": "A reward model scores LLM outputs for quality, helpfulness, and safety during RLHF training",
+        "points": [
+          "Core concept of Reward Model used widely in modern software and AI systems",
+          "Important for understanding: A reward model scores LLM outputs for quality, helpfulness, and safety during RLHF training",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Constitutional Principles",
+        "explanation": "Constitutional principles are explicit rules an AI uses to critique and improve its own outputs",
+        "points": [
+          "Core concept of Constitutional Principles used widely in modern software and AI systems",
+          "Important for understanding: Constitutional principles are explicit rules an AI uses to critique and improve its own outputs",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Red-teaming",
+        "explanation": "Red-teaming adversarially tests LLMs to find safety failures before deployment",
+        "points": [
+          "Core concept of Red-teaming used widely in modern software and AI systems",
+          "Important for understanding: Red-teaming adversarially tests LLMs to find safety failures before deployment",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Model Card",
+        "explanation": "A model card documents what an AI model can do, how it was trained, and known limitations",
+        "points": [
+          "Core concept of Model Card used widely in modern software and AI systems",
+          "Important for understanding: A model card documents what an AI model can do, how it was trained, and known limitations",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "System 2 Thinking",
+        "explanation": "System 2 AI mimics slow deliberate reasoning rather than fast instinctive responses",
+        "points": [
+          "Core concept of System 2 Thinking used widely in modern software and AI systems",
+          "Important for understanding: System 2 AI mimics slow deliberate reasoning rather than fast instinctive responses",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Reasoning Model",
+        "explanation": "Reasoning models think step by step internally before producing a final answer",
+        "points": [
+          "Core concept of Reasoning Model used widely in modern software and AI systems",
+          "Important for understanding: Reasoning models think step by step internally before producing a final answer",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Mixture of Experts Routing",
+        "explanation": "MoE routing gates select which expert sub-networks handle each input token dynamically",
+        "points": [
+          "Core concept of Mixture of Experts Routing used widely in modern software and AI systems",
+          "Important for understanding: MoE routing gates select which expert sub-networks handle each input token dynamically",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Sliding Context",
+        "explanation": "Sliding context moves a fixed-size window across very long documents for extended processing",
+        "points": [
+          "Core concept of Sliding Context used widely in modern software and AI systems",
+          "Important for understanding: Sliding context moves a fixed-size window across very long documents for extended processing",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Long Context LLM",
+        "explanation": "Long context models like Gemini 1.5 can process over a million tokens in one pass",
+        "points": [
+          "Core concept of Long Context LLM used widely in modern software and AI systems",
+          "Important for understanding: Long context models like Gemini 1.5 can process over a million tokens in one pass",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Prompt Caching",
+        "explanation": "Prompt caching stores computed activations for repeated prompt prefixes to save cost and latency",
+        "points": [
+          "Core concept of Prompt Caching used widely in modern software and AI systems",
+          "Important for understanding: Prompt caching stores computed activations for repeated prompt prefixes to save cost and latency",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Structured Output LLM",
+        "explanation": "Structured output forces LLMs to respond in valid JSON or a specified schema every time",
+        "points": [
+          "Core concept of Structured Output LLM used widely in modern software and AI systems",
+          "Important for understanding: Structured output forces LLMs to respond in valid JSON or a specified schema every time",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Function Calling",
+        "explanation": "Function calling lets LLMs invoke structured external functions based on natural language requests",
+        "points": [
+          "Core concept of Function Calling used widely in modern software and AI systems",
+          "Important for understanding: Function calling lets LLMs invoke structured external functions based on natural language requests",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Tool Use",
+        "explanation": "Tool use enables LLMs to call external APIs, search the web, and run code during reasoning",
+        "points": [
+          "Core concept of Tool Use used widely in modern software and AI systems",
+          "Important for understanding: Tool use enables LLMs to call external APIs, search the web, and run code during reasoning",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Multi-turn Conversation",
+        "explanation": "Multi-turn conversations maintain context across many message exchanges in a session",
+        "points": [
+          "Core concept of Multi-turn Conversation used widely in modern software and AI systems",
+          "Important for understanding: Multi-turn conversations maintain context across many message exchanges in a session",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Safety Training",
+        "explanation": "Safety training teaches LLMs to refuse harmful requests and add caveats to dangerous content",
+        "points": [
+          "Core concept of Safety Training used widely in modern software and AI systems",
+          "Important for understanding: Safety training teaches LLMs to refuse harmful requests and add caveats to dangerous content",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      }
+    ]
+  }
+}

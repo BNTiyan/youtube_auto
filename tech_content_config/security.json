@@ -1,0 +1,1106 @@
+{
+  "security": {
+    "items": [
+      {
+        "name": "Cybersecurity",
+        "explanation": "Cybersecurity protects computers, networks, and data from attacks, theft, and unauthorized access",
+        "points": [
+          "Core concept of Cybersecurity used widely in modern software and AI systems",
+          "Important for understanding: Cybersecurity protects computers, networks, and data from attacks, theft, and unauthorized access",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Encryption",
+        "explanation": "Encryption scrambles data so only authorized parties with the key can read it",
+        "points": [
+          "Core concept of Encryption used widely in modern software and AI systems",
+          "Important for understanding: Encryption scrambles data so only authorized parties with the key can read it",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Firewall",
+        "explanation": "A firewall monitors and controls incoming and outgoing network traffic based on security rules",
+        "points": [
+          "Core concept of Firewall used widely in modern software and AI systems",
+          "Important for understanding: A firewall monitors and controls incoming and outgoing network traffic based on security rules",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "VPN",
+        "explanation": "A VPN creates an encrypted tunnel protecting your internet traffic from surveillance",
+        "points": [
+          "Core concept of VPN used widely in modern software and AI systems",
+          "Important for understanding: A VPN creates an encrypted tunnel protecting your internet traffic from surveillance",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Two-factor Authentication",
+        "explanation": "2FA requires a second proof of identity beyond your password to access an account",
+        "points": [
+          "Core concept of Two-factor Authentication used widely in modern software and AI systems",
+          "Important for understanding: 2FA requires a second proof of identity beyond your password to access an account",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Phishing",
+        "explanation": "Phishing tricks people into revealing credentials or clicking malware links via fake messages",
+        "points": [
+          "Core concept of Phishing used widely in modern software and AI systems",
+          "Important for understanding: Phishing tricks people into revealing credentials or clicking malware links via fake messages",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Malware",
+        "explanation": "Malware is software designed to damage, disrupt, or gain unauthorized access to computer systems",
+        "points": [
+          "Core concept of Malware used widely in modern software and AI systems",
+          "Important for understanding: Malware is software designed to damage, disrupt, or gain unauthorized access to computer systems",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Ransomware",
+        "explanation": "Ransomware encrypts your files and demands payment to restore access to them",
+        "points": [
+          "Core concept of Ransomware used widely in modern software and AI systems",
+          "Important for understanding: Ransomware encrypts your files and demands payment to restore access to them",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Zero-day",
+        "explanation": "A zero-day vulnerability is an undiscovered flaw that hackers exploit before a patch exists",
+        "points": [
+          "Core concept of Zero-day used widely in modern software and AI systems",
+          "Important for understanding: A zero-day vulnerability is an undiscovered flaw that hackers exploit before a patch exists",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Penetration Testing",
+        "explanation": "Pen testing simulates real attacks to find and fix security weaknesses before hackers do",
+        "points": [
+          "Core concept of Penetration Testing used widely in modern software and AI systems",
+          "Important for understanding: Pen testing simulates real attacks to find and fix security weaknesses before hackers do",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "SQL Injection",
+        "explanation": "SQL injection inserts malicious code into database queries to steal or modify data",
+        "points": [
+          "Core concept of SQL Injection used widely in modern software and AI systems",
+          "Important for understanding: SQL injection inserts malicious code into database queries to steal or modify data",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "XSS",
+        "explanation": "Cross-site scripting injects malicious scripts into web pages viewed by other users",
+        "points": [
+          "Core concept of XSS used widely in modern software and AI systems",
+          "Important for understanding: Cross-site scripting injects malicious scripts into web pages viewed by other users",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "CSRF",
+        "explanation": "Cross-site request forgery tricks a browser into making unauthorized requests to another site",
+        "points": [
+          "Core concept of CSRF used widely in modern software and AI systems",
+          "Important for understanding: Cross-site request forgery tricks a browser into making unauthorized requests to another site",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "DDoS",
+        "explanation": "Distributed Denial of Service floods a server with traffic to make it unavailable",
+        "points": [
+          "Core concept of DDoS used widely in modern software and AI systems",
+          "Important for understanding: Distributed Denial of Service floods a server with traffic to make it unavailable",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Man-in-the-Middle",
+        "explanation": "MITM attacks intercept and potentially alter communications between two parties",
+        "points": [
+          "Core concept of Man-in-the-Middle used widely in modern software and AI systems",
+          "Important for understanding: MITM attacks intercept and potentially alter communications between two parties",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Social Engineering",
+        "explanation": "Social engineering manipulates people into giving up secrets or access instead of hacking systems",
+        "points": [
+          "Core concept of Social Engineering used widely in modern software and AI systems",
+          "Important for understanding: Social engineering manipulates people into giving up secrets or access instead of hacking systems",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Brute Force Attack",
+        "explanation": "Brute force attacks try every possible password combination until they find the right one",
+        "points": [
+          "Core concept of Brute Force Attack used widely in modern software and AI systems",
+          "Important for understanding: Brute force attacks try every possible password combination until they find the right one",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Credential Stuffing",
+        "explanation": "Credential stuffing uses leaked username-password pairs from breaches on other sites",
+        "points": [
+          "Core concept of Credential Stuffing used widely in modern software and AI systems",
+          "Important for understanding: Credential stuffing uses leaked username-password pairs from breaches on other sites",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Public Key Infrastructure",
+        "explanation": "PKI is a system of digital certificates and keys that enables secure encrypted communication",
+        "points": [
+          "Core concept of Public Key Infrastructure used widely in modern software and AI systems",
+          "Important for understanding: PKI is a system of digital certificates and keys that enables secure encrypted communication",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Certificate Authority",
+        "explanation": "A CA issues digital certificates that verify a website's identity over HTTPS",
+        "points": [
+          "Core concept of Certificate Authority used widely in modern software and AI systems",
+          "Important for understanding: A CA issues digital certificates that verify a website's identity over HTTPS",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "RSA",
+        "explanation": "RSA is a widely used public-key cryptographic algorithm for encryption and digital signing",
+        "points": [
+          "Core concept of RSA used widely in modern software and AI systems",
+          "Important for understanding: RSA is a widely used public-key cryptographic algorithm for encryption and digital signing",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "AES",
+        "explanation": "Advanced Encryption Standard is the gold standard symmetric encryption algorithm used worldwide",
+        "points": [
+          "Core concept of AES used widely in modern software and AI systems",
+          "Important for understanding: Advanced Encryption Standard is the gold standard symmetric encryption algorithm used worldwide",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Hashing",
+        "explanation": "Hashing converts data into a fixed-length digest that cannot be reversed to find the original",
+        "points": [
+          "Core concept of Hashing used widely in modern software and AI systems",
+          "Important for understanding: Hashing converts data into a fixed-length digest that cannot be reversed to find the original",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Salt",
+        "explanation": "A cryptographic salt is random data added to passwords before hashing to prevent rainbow table attacks",
+        "points": [
+          "Core concept of Salt used widely in modern software and AI systems",
+          "Important for understanding: A cryptographic salt is random data added to passwords before hashing to prevent rainbow table attacks",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Password Manager",
+        "explanation": "A password manager generates and stores unique strong passwords for every account securely",
+        "points": [
+          "Core concept of Password Manager used widely in modern software and AI systems",
+          "Important for understanding: A password manager generates and stores unique strong passwords for every account securely",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Biometrics",
+        "explanation": "Biometric authentication uses fingerprints, face, or iris scans instead of passwords",
+        "points": [
+          "Core concept of Biometrics used widely in modern software and AI systems",
+          "Important for understanding: Biometric authentication uses fingerprints, face, or iris scans instead of passwords",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Single Sign-On",
+        "explanation": "SSO lets users log into multiple apps with one set of credentials",
+        "points": [
+          "Core concept of Single Sign-On used widely in modern software and AI systems",
+          "Important for understanding: SSO lets users log into multiple apps with one set of credentials",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "SAML",
+        "explanation": "SAML is an XML-based standard for exchanging authentication data between identity providers and apps",
+        "points": [
+          "Core concept of SAML used widely in modern software and AI systems",
+          "Important for understanding: SAML is an XML-based standard for exchanging authentication data between identity providers and apps",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "OIDC",
+        "explanation": "OpenID Connect is an identity layer on top of OAuth 2.0 for authentication",
+        "points": [
+          "Core concept of OIDC used widely in modern software and AI systems",
+          "Important for understanding: OpenID Connect is an identity layer on top of OAuth 2.0 for authentication",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Zero Trust Security",
+        "explanation": "Zero trust never automatically trusts any user or device and verifies every access request",
+        "points": [
+          "Core concept of Zero Trust Security used widely in modern software and AI systems",
+          "Important for understanding: Zero trust never automatically trusts any user or device and verifies every access request",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Least Privilege",
+        "explanation": "Least privilege grants users and systems only the minimum permissions they need to function",
+        "points": [
+          "Core concept of Least Privilege used widely in modern software and AI systems",
+          "Important for understanding: Least privilege grants users and systems only the minimum permissions they need to function",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Defense in Depth",
+        "explanation": "Defense in depth layers multiple security controls so no single failure causes a breach",
+        "points": [
+          "Core concept of Defense in Depth used widely in modern software and AI systems",
+          "Important for understanding: Defense in depth layers multiple security controls so no single failure causes a breach",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "SIEM",
+        "explanation": "Security Information and Event Management aggregates and analyzes logs to detect threats",
+        "points": [
+          "Core concept of SIEM used widely in modern software and AI systems",
+          "Important for understanding: Security Information and Event Management aggregates and analyzes logs to detect threats",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "SOAR",
+        "explanation": "SOAR automates security incident response workflows to speed up threat neutralization",
+        "points": [
+          "Core concept of SOAR used widely in modern software and AI systems",
+          "Important for understanding: SOAR automates security incident response workflows to speed up threat neutralization",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Threat Intelligence",
+        "explanation": "Threat intelligence gathers information about current attackers and tactics to improve defenses",
+        "points": [
+          "Core concept of Threat Intelligence used widely in modern software and AI systems",
+          "Important for understanding: Threat intelligence gathers information about current attackers and tactics to improve defenses",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Vulnerability Scanner",
+        "explanation": "Vulnerability scanners automatically probe systems to find known security weaknesses",
+        "points": [
+          "Core concept of Vulnerability Scanner used widely in modern software and AI systems",
+          "Important for understanding: Vulnerability scanners automatically probe systems to find known security weaknesses",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "CVSS",
+        "explanation": "Common Vulnerability Scoring System rates the severity of security vulnerabilities from 0 to 10",
+        "points": [
+          "Core concept of CVSS used widely in modern software and AI systems",
+          "Important for understanding: Common Vulnerability Scoring System rates the severity of security vulnerabilities from 0 to 10",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "CVE",
+        "explanation": "Common Vulnerabilities and Exposures is a public dictionary of known security flaws",
+        "points": [
+          "Core concept of CVE used widely in modern software and AI systems",
+          "Important for understanding: Common Vulnerabilities and Exposures is a public dictionary of known security flaws",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Bug Bounty",
+        "explanation": "Bug bounty programs pay security researchers to responsibly disclose vulnerabilities",
+        "points": [
+          "Core concept of Bug Bounty used widely in modern software and AI systems",
+          "Important for understanding: Bug bounty programs pay security researchers to responsibly disclose vulnerabilities",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Responsible Disclosure",
+        "explanation": "Responsible disclosure reports vulnerabilities privately to vendors before going public",
+        "points": [
+          "Core concept of Responsible Disclosure used widely in modern software and AI systems",
+          "Important for understanding: Responsible disclosure reports vulnerabilities privately to vendors before going public",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "WAF",
+        "explanation": "A Web Application Firewall blocks malicious HTTP traffic targeting web application vulnerabilities",
+        "points": [
+          "Core concept of WAF used widely in modern software and AI systems",
+          "Important for understanding: A Web Application Firewall blocks malicious HTTP traffic targeting web application vulnerabilities",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "IDS",
+        "explanation": "An Intrusion Detection System monitors network traffic and alerts on suspicious patterns",
+        "points": [
+          "Core concept of IDS used widely in modern software and AI systems",
+          "Important for understanding: An Intrusion Detection System monitors network traffic and alerts on suspicious patterns",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "IPS",
+        "explanation": "An Intrusion Prevention System actively blocks detected threats in real time",
+        "points": [
+          "Core concept of IPS used widely in modern software and AI systems",
+          "Important for understanding: An Intrusion Prevention System actively blocks detected threats in real time",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "EDR",
+        "explanation": "Endpoint Detection and Response monitors devices for threats and provides forensic investigation",
+        "points": [
+          "Core concept of EDR used widely in modern software and AI systems",
+          "Important for understanding: Endpoint Detection and Response monitors devices for threats and provides forensic investigation",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "XDR",
+        "explanation": "Extended Detection and Response unifies security data across endpoints, network, and cloud",
+        "points": [
+          "Core concept of XDR used widely in modern software and AI systems",
+          "Important for understanding: Extended Detection and Response unifies security data across endpoints, network, and cloud",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Security Audit",
+        "explanation": "A security audit systematically reviews systems, policies, and controls for compliance and risk",
+        "points": [
+          "Core concept of Security Audit used widely in modern software and AI systems",
+          "Important for understanding: A security audit systematically reviews systems, policies, and controls for compliance and risk",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Compliance",
+        "explanation": "Security compliance meets regulatory standards like SOC2, HIPAA, and ISO 27001",
+        "points": [
+          "Core concept of Compliance used widely in modern software and AI systems",
+          "Important for understanding: Security compliance meets regulatory standards like SOC2, HIPAA, and ISO 27001",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "GDPR",
+        "explanation": "GDPR fines companies up to 4% of global revenue for mishandling European personal data",
+        "points": [
+          "Core concept of GDPR used widely in modern software and AI systems",
+          "Important for understanding: GDPR fines companies up to 4% of global revenue for mishandling European personal data",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Data Breach",
+        "explanation": "A data breach is unauthorized access to confidential data that exposes it to attackers",
+        "points": [
+          "Core concept of Data Breach used widely in modern software and AI systems",
+          "Important for understanding: A data breach is unauthorized access to confidential data that exposes it to attackers",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Insider Threat",
+        "explanation": "Insider threats come from employees or contractors who misuse their legitimate access",
+        "points": [
+          "Core concept of Insider Threat used widely in modern software and AI systems",
+          "Important for understanding: Insider threats come from employees or contractors who misuse their legitimate access",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Advanced Persistent Threat",
+        "explanation": "APTs are sophisticated long-term attacks by nation-states or organized crime groups",
+        "points": [
+          "Core concept of Advanced Persistent Threat used widely in modern software and AI systems",
+          "Important for understanding: APTs are sophisticated long-term attacks by nation-states or organized crime groups",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Botnet",
+        "explanation": "A botnet is a network of compromised computers controlled by attackers for DDoS or spam",
+        "points": [
+          "Core concept of Botnet used widely in modern software and AI systems",
+          "Important for understanding: A botnet is a network of compromised computers controlled by attackers for DDoS or spam",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Keylogger",
+        "explanation": "Keyloggers secretly record every keystroke to steal passwords and sensitive data",
+        "points": [
+          "Core concept of Keylogger used widely in modern software and AI systems",
+          "Important for understanding: Keyloggers secretly record every keystroke to steal passwords and sensitive data",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Rootkit",
+        "explanation": "Rootkits hide deep in operating systems to give attackers persistent undetected access",
+        "points": [
+          "Core concept of Rootkit used widely in modern software and AI systems",
+          "Important for understanding: Rootkits hide deep in operating systems to give attackers persistent undetected access",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Backdoor",
+        "explanation": "A backdoor is a hidden method of bypassing normal authentication to access a system",
+        "points": [
+          "Core concept of Backdoor used widely in modern software and AI systems",
+          "Important for understanding: A backdoor is a hidden method of bypassing normal authentication to access a system",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Exploit",
+        "explanation": "An exploit is code or technique that takes advantage of a vulnerability to compromise a system",
+        "points": [
+          "Core concept of Exploit used widely in modern software and AI systems",
+          "Important for understanding: An exploit is code or technique that takes advantage of a vulnerability to compromise a system",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Payload",
+        "explanation": "A payload is the malicious code that executes after an exploit successfully compromises a system",
+        "points": [
+          "Core concept of Payload used widely in modern software and AI systems",
+          "Important for understanding: A payload is the malicious code that executes after an exploit successfully compromises a system",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Command and Control",
+        "explanation": "C2 servers remotely control malware installed on compromised victim machines",
+        "points": [
+          "Core concept of Command and Control used widely in modern software and AI systems",
+          "Important for understanding: C2 servers remotely control malware installed on compromised victim machines",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Exfiltration",
+        "explanation": "Data exfiltration is the unauthorized transfer of sensitive data out of an organization",
+        "points": [
+          "Core concept of Exfiltration used widely in modern software and AI systems",
+          "Important for understanding: Data exfiltration is the unauthorized transfer of sensitive data out of an organization",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Lateral Movement",
+        "explanation": "Lateral movement is when attackers spread through a network after gaining initial access",
+        "points": [
+          "Core concept of Lateral Movement used widely in modern software and AI systems",
+          "Important for understanding: Lateral movement is when attackers spread through a network after gaining initial access",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Privilege Escalation",
+        "explanation": "Privilege escalation gains higher permissions than originally granted to access more systems",
+        "points": [
+          "Core concept of Privilege Escalation used widely in modern software and AI systems",
+          "Important for understanding: Privilege escalation gains higher permissions than originally granted to access more systems",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Supply Chain Attack",
+        "explanation": "Supply chain attacks compromise software or hardware before it reaches the target organization",
+        "points": [
+          "Core concept of Supply Chain Attack used widely in modern software and AI systems",
+          "Important for understanding: Supply chain attacks compromise software or hardware before it reaches the target organization",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Homomorphic Encryption",
+        "explanation": "Homomorphic encryption allows computations on encrypted data without ever decrypting it",
+        "points": [
+          "Core concept of Homomorphic Encryption used widely in modern software and AI systems",
+          "Important for understanding: Homomorphic encryption allows computations on encrypted data without ever decrypting it",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "End-to-End Encryption",
+        "explanation": "E2EE ensures only sender and receiver can read messages \u2014 not even the service provider",
+        "points": [
+          "Core concept of End-to-End Encryption used widely in modern software and AI systems",
+          "Important for understanding: E2EE ensures only sender and receiver can read messages \u2014 not even the service provider",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Quantum Cryptography",
+        "explanation": "Quantum cryptography uses quantum mechanics to create theoretically unbreakable encryption",
+        "points": [
+          "Core concept of Quantum Cryptography used widely in modern software and AI systems",
+          "Important for understanding: Quantum cryptography uses quantum mechanics to create theoretically unbreakable encryption",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Post-quantum Cryptography",
+        "explanation": "Post-quantum algorithms are designed to resist attacks from future quantum computers",
+        "points": [
+          "Core concept of Post-quantum Cryptography used widely in modern software and AI systems",
+          "Important for understanding: Post-quantum algorithms are designed to resist attacks from future quantum computers",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Hardware Security Module",
+        "explanation": "HSMs are tamper-proof hardware devices that store and use cryptographic keys securely",
+        "points": [
+          "Core concept of Hardware Security Module used widely in modern software and AI systems",
+          "Important for understanding: HSMs are tamper-proof hardware devices that store and use cryptographic keys securely",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Secure Boot",
+        "explanation": "Secure boot verifies that only trusted software loads when a computer starts",
+        "points": [
+          "Core concept of Secure Boot used widely in modern software and AI systems",
+          "Important for understanding: Secure boot verifies that only trusted software loads when a computer starts",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "TPM",
+        "explanation": "Trusted Platform Module is a chip that stores cryptographic keys to secure device integrity",
+        "points": [
+          "Core concept of TPM used widely in modern software and AI systems",
+          "Important for understanding: Trusted Platform Module is a chip that stores cryptographic keys to secure device integrity",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Memory Safety",
+        "explanation": "Memory-safe languages like Rust prevent entire classes of security bugs at compile time",
+        "points": [
+          "Core concept of Memory Safety used widely in modern software and AI systems",
+          "Important for understanding: Memory-safe languages like Rust prevent entire classes of security bugs at compile time",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Buffer Overflow",
+        "explanation": "Buffer overflows write beyond allocated memory to corrupt data or execute malicious code",
+        "points": [
+          "Core concept of Buffer Overflow used widely in modern software and AI systems",
+          "Important for understanding: Buffer overflows write beyond allocated memory to corrupt data or execute malicious code",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Code Injection",
+        "explanation": "Code injection inserts malicious commands into an application via unsanitized user input",
+        "points": [
+          "Core concept of Code Injection used widely in modern software and AI systems",
+          "Important for understanding: Code injection inserts malicious commands into an application via unsanitized user input",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Input Validation",
+        "explanation": "Input validation checks all user-provided data before processing to prevent injection attacks",
+        "points": [
+          "Core concept of Input Validation used widely in modern software and AI systems",
+          "Important for understanding: Input validation checks all user-provided data before processing to prevent injection attacks",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "OWASP Top 10",
+        "explanation": "OWASP Top 10 lists the most critical web application security risks developers must address",
+        "points": [
+          "Core concept of OWASP Top 10 used widely in modern software and AI systems",
+          "Important for understanding: OWASP Top 10 lists the most critical web application security risks developers must address",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Security by Design",
+        "explanation": "Security by design builds protection into systems from the start rather than adding it later",
+        "points": [
+          "Core concept of Security by Design used widely in modern software and AI systems",
+          "Important for understanding: Security by design builds protection into systems from the start rather than adding it later",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Shift Left Security",
+        "explanation": "Shifting left integrates security testing early in the development lifecycle",
+        "points": [
+          "Core concept of Shift Left Security used widely in modern software and AI systems",
+          "Important for understanding: Shifting left integrates security testing early in the development lifecycle",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "DevSecOps",
+        "explanation": "DevSecOps integrates security practices throughout the entire CI/CD pipeline",
+        "points": [
+          "Core concept of DevSecOps used widely in modern software and AI systems",
+          "Important for understanding: DevSecOps integrates security practices throughout the entire CI/CD pipeline",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "DAST",
+        "explanation": "Dynamic Application Security Testing attacks running apps to find exploitable vulnerabilities",
+        "points": [
+          "Core concept of DAST used widely in modern software and AI systems",
+          "Important for understanding: Dynamic Application Security Testing attacks running apps to find exploitable vulnerabilities",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "SAST",
+        "explanation": "Static Application Security Testing analyzes source code for security flaws without running it",
+        "points": [
+          "Core concept of SAST used widely in modern software and AI systems",
+          "Important for understanding: Static Application Security Testing analyzes source code for security flaws without running it",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "SCA",
+        "explanation": "Software Composition Analysis identifies vulnerabilities in open-source dependencies",
+        "points": [
+          "Core concept of SCA used widely in modern software and AI systems",
+          "Important for understanding: Software Composition Analysis identifies vulnerabilities in open-source dependencies",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Container Scanning",
+        "explanation": "Container image scanning detects known vulnerabilities in OS packages and dependencies",
+        "points": [
+          "Core concept of Container Scanning used widely in modern software and AI systems",
+          "Important for understanding: Container image scanning detects known vulnerabilities in OS packages and dependencies",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Secret Scanning",
+        "explanation": "Secret scanning detects accidentally committed API keys and passwords in code repositories",
+        "points": [
+          "Core concept of Secret Scanning used widely in modern software and AI systems",
+          "Important for understanding: Secret scanning detects accidentally committed API keys and passwords in code repositories",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Security Headers",
+        "explanation": "HTTP security headers like CSP and HSTS instruct browsers to enforce additional protections",
+        "points": [
+          "Core concept of Security Headers used widely in modern software and AI systems",
+          "Important for understanding: HTTP security headers like CSP and HSTS instruct browsers to enforce additional protections",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Content Security Policy",
+        "explanation": "CSP prevents XSS by specifying which sources of scripts and content browsers should trust",
+        "points": [
+          "Core concept of Content Security Policy used widely in modern software and AI systems",
+          "Important for understanding: CSP prevents XSS by specifying which sources of scripts and content browsers should trust",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "HSTS",
+        "explanation": "HTTP Strict Transport Security forces browsers to only connect via HTTPS",
+        "points": [
+          "Core concept of HSTS used widely in modern software and AI systems",
+          "Important for understanding: HTTP Strict Transport Security forces browsers to only connect via HTTPS",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Cyber Kill Chain",
+        "explanation": "The cyber kill chain models the stages of an attack from reconnaissance to data exfiltration",
+        "points": [
+          "Core concept of Cyber Kill Chain used widely in modern software and AI systems",
+          "Important for understanding: The cyber kill chain models the stages of an attack from reconnaissance to data exfiltration",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "MITRE ATT&CK",
+        "explanation": "MITRE ATT&CK is a framework cataloging real-world attacker tactics and techniques",
+        "points": [
+          "Core concept of MITRE ATT&CK used widely in modern software and AI systems",
+          "Important for understanding: MITRE ATT&CK is a framework cataloging real-world attacker tactics and techniques",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Red Team",
+        "explanation": "A red team simulates real attackers to test how well an organization can be compromised",
+        "points": [
+          "Core concept of Red Team used widely in modern software and AI systems",
+          "Important for understanding: A red team simulates real attackers to test how well an organization can be compromised",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Blue Team",
+        "explanation": "A blue team defends against red team and real attacks by monitoring and responding to threats",
+        "points": [
+          "Core concept of Blue Team used widely in modern software and AI systems",
+          "Important for understanding: A blue team defends against red team and real attacks by monitoring and responding to threats",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Purple Team",
+        "explanation": "Purple teaming combines red and blue teams to improve defenses through shared knowledge",
+        "points": [
+          "Core concept of Purple Team used widely in modern software and AI systems",
+          "Important for understanding: Purple teaming combines red and blue teams to improve defenses through shared knowledge",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Honeypot",
+        "explanation": "A honeypot is a decoy system designed to attract and trap attackers to study their methods",
+        "points": [
+          "Core concept of Honeypot used widely in modern software and AI systems",
+          "Important for understanding: A honeypot is a decoy system designed to attract and trap attackers to study their methods",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Digital Forensics",
+        "explanation": "Digital forensics recovers and analyzes evidence from devices after a security incident",
+        "points": [
+          "Core concept of Digital Forensics used widely in modern software and AI systems",
+          "Important for understanding: Digital forensics recovers and analyzes evidence from devices after a security incident",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Incident Response",
+        "explanation": "Incident response is the structured process of containing and recovering from a security breach",
+        "points": [
+          "Core concept of Incident Response used widely in modern software and AI systems",
+          "Important for understanding: Incident response is the structured process of containing and recovering from a security breach",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Threat Modeling",
+        "explanation": "Threat modeling systematically identifies potential threats to a system and designs mitigations",
+        "points": [
+          "Core concept of Threat Modeling used widely in modern software and AI systems",
+          "Important for understanding: Threat modeling systematically identifies potential threats to a system and designs mitigations",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Attack Surface",
+        "explanation": "The attack surface is the total number of entry points an attacker could use to compromise a system",
+        "points": [
+          "Core concept of Attack Surface used widely in modern software and AI systems",
+          "Important for understanding: The attack surface is the total number of entry points an attacker could use to compromise a system",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Hardening",
+        "explanation": "System hardening reduces the attack surface by disabling unneeded services and applying security settings",
+        "points": [
+          "Core concept of Hardening used widely in modern software and AI systems",
+          "Important for understanding: System hardening reduces the attack surface by disabling unneeded services and applying security settings",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Patch Management",
+        "explanation": "Patch management keeps software up to date with security fixes to close known vulnerabilities",
+        "points": [
+          "Core concept of Patch Management used widely in modern software and AI systems",
+          "Important for understanding: Patch management keeps software up to date with security fixes to close known vulnerabilities",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Security Posture",
+        "explanation": "Security posture is an organization's overall readiness to detect and respond to cyber threats",
+        "points": [
+          "Core concept of Security Posture used widely in modern software and AI systems",
+          "Important for understanding: Security posture is an organization's overall readiness to detect and respond to cyber threats",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Canary Token",
+        "explanation": "Canary tokens are fake credentials that alert you when attackers find and use them",
+        "points": [
+          "Core concept of Canary Token used widely in modern software and AI systems",
+          "Important for understanding: Canary tokens are fake credentials that alert you when attackers find and use them",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Air Gap",
+        "explanation": "An air-gapped system is completely isolated from the internet to protect highly sensitive data",
+        "points": [
+          "Core concept of Air Gap used widely in modern software and AI systems",
+          "Important for understanding: An air-gapped system is completely isolated from the internet to protect highly sensitive data",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      }
+    ]
+  }
+}

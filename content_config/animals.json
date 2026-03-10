@@ -1,0 +1,406 @@
+{
+  "animals": {
+    "items": [
+      {
+        "name": "Lion",
+        "fact": "Lions live in Africa and are called the King of the Jungle"
+      },
+      {
+        "name": "Elephant",
+        "fact": "Elephants are the largest land animals and have amazing memory"
+      },
+      {
+        "name": "Giraffe",
+        "fact": "Giraffes are the tallest animals with very long necks to reach trees"
+      },
+      {
+        "name": "Tiger",
+        "fact": "Tigers are the biggest wild cats and have beautiful stripes"
+      },
+      {
+        "name": "Dolphin",
+        "fact": "Dolphins are very smart and love to play in the ocean"
+      },
+      {
+        "name": "Penguin",
+        "fact": "Penguins cannot fly but they are amazing swimmers"
+      },
+      {
+        "name": "Panda",
+        "fact": "Giant Pandas eat bamboo and are very rare and special"
+      },
+      {
+        "name": "Kangaroo",
+        "fact": "Kangaroos carry their babies in a special pouch on their tummy"
+      },
+      {
+        "name": "Cheetah",
+        "fact": "Cheetahs are the fastest animals running at 75 miles per hour"
+      },
+      {
+        "name": "Parrot",
+        "fact": "Parrots are colorful birds that can learn to talk like humans"
+      },
+      {
+        "name": "Zebra",
+        "fact": "Every zebra has a unique stripe pattern just like a fingerprint"
+      },
+      {
+        "name": "Gorilla",
+        "fact": "Gorillas are the largest primates and share 98% DNA with humans"
+      },
+      {
+        "name": "Polar Bear",
+        "fact": "Polar bears have white fur and live on the Arctic ice"
+      },
+      {
+        "name": "Crocodile",
+        "fact": "Crocodiles are ancient reptiles that have been on Earth for millions of years"
+      },
+      {
+        "name": "Flamingo",
+        "fact": "Flamingos are pink because of the shrimp and algae they eat"
+      },
+      {
+        "name": "Hippopotamus",
+        "fact": "Hippos spend most of the day in water to stay cool and protected"
+      },
+      {
+        "name": "Koala",
+        "fact": "Koalas sleep up to 22 hours a day and eat eucalyptus leaves"
+      },
+      {
+        "name": "Chimpanzee",
+        "fact": "Chimpanzees use tools like sticks and rocks to find and crack food"
+      },
+      {
+        "name": "Wolf",
+        "fact": "Wolves live in family groups called packs and howl to communicate"
+      },
+      {
+        "name": "Shark",
+        "fact": "Sharks have been swimming in the oceans for over 400 million years"
+      },
+      {
+        "name": "Octopus",
+        "fact": "Octopuses have three hearts and can change color in an instant"
+      },
+      {
+        "name": "Eagle",
+        "fact": "Eagles have incredibly sharp eyesight and can spot prey from miles away"
+      },
+      {
+        "name": "Peacock",
+        "fact": "Male peacocks have stunning blue and green feathers they fan out to impress females"
+      },
+      {
+        "name": "Rhinoceros",
+        "fact": "Rhinos have thick skin and a large horn made of keratin on their nose"
+      },
+      {
+        "name": "Chameleon",
+        "fact": "Chameleons can change their skin color to blend in with their surroundings"
+      },
+      {
+        "name": "Whale",
+        "fact": "Blue whales are the largest animals ever known to live on Earth"
+      },
+      {
+        "name": "Bat",
+        "fact": "Bats are the only mammals that can truly fly and use echolocation"
+      },
+      {
+        "name": "Sloth",
+        "fact": "Sloths move so slowly that algae grows on their fur"
+      },
+      {
+        "name": "Meerkat",
+        "fact": "Meerkats take turns standing guard to watch for danger in the desert"
+      },
+      {
+        "name": "Porcupine",
+        "fact": "Porcupines have sharp quills that protect them from predators"
+      },
+      {
+        "name": "Jaguar",
+        "fact": "Jaguars are powerful swimmers and love to hunt near rivers"
+      },
+      {
+        "name": "Ostrich",
+        "fact": "Ostriches are the largest birds in the world but cannot fly"
+      },
+      {
+        "name": "Camel",
+        "fact": "Camels store fat in their humps to survive long trips in the desert"
+      },
+      {
+        "name": "Hedgehog",
+        "fact": "Hedgehogs roll into a spiky ball when they feel threatened"
+      },
+      {
+        "name": "Sea Turtle",
+        "fact": "Sea turtles return to the same beach where they were born to lay eggs"
+      },
+      {
+        "name": "Orca",
+        "fact": "Orcas are also called killer whales and are highly intelligent hunters"
+      },
+      {
+        "name": "Lemur",
+        "fact": "Lemurs are found only on the island of Madagascar and love sunbathing"
+      },
+      {
+        "name": "Crab",
+        "fact": "Crabs walk sideways and have hard shells called exoskeletons"
+      },
+      {
+        "name": "Raccoon",
+        "fact": "Raccoons have very dexterous paws and often wash their food before eating"
+      },
+      {
+        "name": "Fox",
+        "fact": "Foxes are clever animals that can adapt to many different environments"
+      },
+      {
+        "name": "Manatee",
+        "fact": "Manatees are gentle sea mammals sometimes called sea cows"
+      },
+      {
+        "name": "Toucan",
+        "fact": "Toucans have enormous colorful beaks that help them reach fruit"
+      },
+      {
+        "name": "Wombat",
+        "fact": "Wombats produce cube-shaped droppings which is unique in the animal kingdom"
+      },
+      {
+        "name": "Lynx",
+        "fact": "Lynxes have thick fur and large padded paws that act like snowshoes"
+      },
+      {
+        "name": "Manta Ray",
+        "fact": "Manta rays glide gracefully through the ocean like underwater birds"
+      },
+      {
+        "name": "Platypus",
+        "fact": "The platypus is one of the few mammals that lays eggs"
+      },
+      {
+        "name": "Snow Leopard",
+        "fact": "Snow leopards live high in the mountains and have very long fluffy tails"
+      },
+      {
+        "name": "Bison",
+        "fact": "Bison are the largest land animals in North America and can sprint fast"
+      },
+      {
+        "name": "Firefly",
+        "fact": "Fireflies produce their own light through a chemical reaction in their bodies"
+      },
+      {
+        "name": "Narwhal",
+        "fact": "Narwhals have a long spiral tusk that can grow over 10 feet long"
+      },
+      {
+        "name": "Axolotl",
+        "fact": "Axolotls can regrow lost limbs, gills, and even parts of their hearts"
+      },
+      {
+        "name": "Mandrill",
+        "fact": "Mandrills are the most colorful mammals with bright red and blue faces"
+      },
+      {
+        "name": "Stingray",
+        "fact": "Stingrays glide along the ocean floor and have a venomous tail spine"
+      },
+      {
+        "name": "Capybara",
+        "fact": "Capybaras are the world's largest rodents and love to swim"
+      },
+      {
+        "name": "Caracal",
+        "fact": "Caracals have tall pointed ears with black tufts on the tips"
+      },
+      {
+        "name": "Pangolin",
+        "fact": "Pangolins are covered in overlapping scales and roll into a ball for defense"
+      },
+      {
+        "name": "Moose",
+        "fact": "Moose are the largest members of the deer family with massive antlers"
+      },
+      {
+        "name": "Puffin",
+        "fact": "Puffins can flap their wings up to 400 times per minute to fly"
+      },
+      {
+        "name": "Armadillo",
+        "fact": "Armadillos have a hard bony shell and can roll into a protective ball"
+      },
+      {
+        "name": "Tasmanian Devil",
+        "fact": "Tasmanian Devils have one of the strongest bites of any mammal their size"
+      },
+      {
+        "name": "Quokka",
+        "fact": "Quokkas are small marsupials known as the happiest animals in the world"
+      },
+      {
+        "name": "Binturong",
+        "fact": "Binturongs smell like popcorn due to a chemical they produce"
+      },
+      {
+        "name": "Sunfish",
+        "fact": "The ocean sunfish is the world's heaviest bony fish, weighing over a ton"
+      },
+      {
+        "name": "Albatross",
+        "fact": "Albatrosses can glide for thousands of miles without flapping their wings"
+      },
+      {
+        "name": "Anaconda",
+        "fact": "Anacondas are the world's heaviest snakes and live in South American swamps"
+      },
+      {
+        "name": "Frog",
+        "fact": "Frogs absorb water through their skin instead of drinking it"
+      },
+      {
+        "name": "Jellyfish",
+        "fact": "Jellyfish have no brain, heart, or bones but have survived millions of years"
+      },
+      {
+        "name": "Hummingbird",
+        "fact": "Hummingbirds can flap their wings up to 80 times per second"
+      },
+      {
+        "name": "Mongoose",
+        "fact": "Mongooses are famous for being immune to snake venom"
+      },
+      {
+        "name": "Bonobo",
+        "fact": "Bonobos are peaceful primates that share nearly all their DNA with humans"
+      },
+      {
+        "name": "Starfish",
+        "fact": "Starfish can regrow lost arms and have no brain or blood"
+      },
+      {
+        "name": "Harpy Eagle",
+        "fact": "Harpy eagles are the most powerful eagles with talons the size of bear claws"
+      },
+      {
+        "name": "Kiwi Bird",
+        "fact": "The kiwi bird is the only bird with nostrils at the tip of its beak"
+      },
+      {
+        "name": "Coyote",
+        "fact": "Coyotes are adaptable wild dogs found across North America"
+      },
+      {
+        "name": "Lobster",
+        "fact": "Lobsters can live over 100 years and do not naturally age biologically"
+      },
+      {
+        "name": "Dung Beetle",
+        "fact": "Dung beetles navigate using the Milky Way and can roll balls 10 times heavier than themselves"
+      },
+      {
+        "name": "Honey Badger",
+        "fact": "Honey badgers are fearless and can fight off animals much larger than themselves"
+      },
+      {
+        "name": "Flying Squirrel",
+        "fact": "Flying squirrels glide through the air using flaps of skin between their legs"
+      },
+      {
+        "name": "Electric Eel",
+        "fact": "Electric eels can generate up to 600 volts of electricity"
+      },
+      {
+        "name": "Tapir",
+        "fact": "Tapirs have a flexible snout they use to grab leaves and branches"
+      },
+      {
+        "name": "Ibis",
+        "fact": "The sacred ibis was worshipped in ancient Egypt as a symbol of wisdom"
+      },
+      {
+        "name": "Walrus",
+        "fact": "Walruses use their tusks to pull themselves up onto ice floes"
+      },
+      {
+        "name": "Mantis Shrimp",
+        "fact": "Mantis shrimp can punch with the force of a bullet and see 16 types of color"
+      },
+      {
+        "name": "Okapi",
+        "fact": "Okapis look like zebra-giraffe hybrids and are the giraffe's only living relative"
+      },
+      {
+        "name": "Proboscis Monkey",
+        "fact": "Male proboscis monkeys have enormous noses that help attract mates"
+      },
+      {
+        "name": "Surinam Toad",
+        "fact": "Surinam toads carry eggs embedded in the skin of their back"
+      },
+      {
+        "name": "Aye-Aye",
+        "fact": "Aye-ayes are nocturnal primates with an extremely long thin middle finger to find grubs"
+      },
+      {
+        "name": "Saiga Antelope",
+        "fact": "Saiga antelopes have unusual bulbous noses that filter and warm cold air"
+      },
+      {
+        "name": "Blobfish",
+        "fact": "Blobfish look squishy at the surface but are perfectly shaped for deep-sea pressure"
+      },
+      {
+        "name": "Secretary Bird",
+        "fact": "Secretary birds are tall eagles that hunt by stomping on snakes with their powerful feet"
+      },
+      {
+        "name": "Gharial",
+        "fact": "Gharials have long narrow snouts lined with over 100 teeth for catching fish"
+      },
+      {
+        "name": "Tardigrade",
+        "fact": "Tardigrades are microscopic animals that can survive in outer space"
+      },
+      {
+        "name": "Shoebill",
+        "fact": "Shoebills have enormous shoe-shaped bills and stare without blinking"
+      },
+      {
+        "name": "Komodo Dragon",
+        "fact": "Komodo dragons are the world's largest lizards and can run at 12 mph"
+      },
+      {
+        "name": "Vampire Bat",
+        "fact": "Vampire bats are the only mammals that feed entirely on blood"
+      },
+      {
+        "name": "African Wild Dog",
+        "fact": "African wild dogs have a nearly 80% hunting success rate, the highest of any predator"
+      },
+      {
+        "name": "Blue-Ringed Octopus",
+        "fact": "The tiny blue-ringed octopus carries enough venom to kill 26 adult humans"
+      },
+      {
+        "name": "Wolverine",
+        "fact": "Wolverines are pound-for-pound one of the most ferocious animals in the wild"
+      },
+      {
+        "name": "Musk Ox",
+        "fact": "Musk oxen have shaggy coats so thick they can survive Arctic temperatures of minus 40 degrees"
+      },
+      {
+        "name": "Aardvark",
+        "fact": "Aardvarks have sticky tongues and eat thousands of termites and ants each night"
+      }
+    ]
+  }
+}

@@ -1,0 +1,406 @@
+{
+  "planets": {
+    "items": [
+      {
+        "name": "Mercury",
+        "fact": "Mercury is the smallest planet and closest to the Sun with extreme temperature swings"
+      },
+      {
+        "name": "Venus",
+        "fact": "Venus is the hottest planet at 465\u00b0C and spins backwards compared to most planets"
+      },
+      {
+        "name": "Earth",
+        "fact": "Earth is the only planet known to have life and liquid water on its surface"
+      },
+      {
+        "name": "Mars",
+        "fact": "Mars is called the Red Planet and has the largest volcano in the solar system"
+      },
+      {
+        "name": "Jupiter",
+        "fact": "Jupiter is the largest planet and its Great Red Spot is a storm bigger than Earth"
+      },
+      {
+        "name": "Saturn",
+        "fact": "Saturn has beautiful rings made of ice and rock visible from Earth with a small telescope"
+      },
+      {
+        "name": "Uranus",
+        "fact": "Uranus rotates on its side as if it was knocked over by a giant collision long ago"
+      },
+      {
+        "name": "Neptune",
+        "fact": "Neptune is the windiest planet with storms reaching speeds of 2100 km per hour"
+      },
+      {
+        "name": "Pluto",
+        "fact": "Pluto was reclassified as a dwarf planet in 2006 and has a heart-shaped nitrogen plain"
+      },
+      {
+        "name": "Ceres",
+        "fact": "Ceres is the largest object in the asteroid belt between Mars and Jupiter"
+      },
+      {
+        "name": "Eris",
+        "fact": "Eris is a distant dwarf planet even slightly larger than Pluto"
+      },
+      {
+        "name": "Makemake",
+        "fact": "Makemake is a dwarf planet in the Kuiper Belt named after a creation deity"
+      },
+      {
+        "name": "Haumea",
+        "fact": "Haumea spins so fast it is squashed into an egg shape unlike any other body"
+      },
+      {
+        "name": "Sedna",
+        "fact": "Sedna has an extremely elongated orbit taking over 11,000 years to go around the Sun"
+      },
+      {
+        "name": "Quaoar",
+        "fact": "Quaoar is a Kuiper Belt object that surprisingly has its own ring system"
+      },
+      {
+        "name": "Orcus",
+        "fact": "Orcus is sometimes called anti-Pluto because its orbit mirrors Pluto's almost exactly"
+      },
+      {
+        "name": "Varuna",
+        "fact": "Varuna is a large trans-Neptunian object with a very fast rotation period"
+      },
+      {
+        "name": "Ixion",
+        "fact": "Ixion is a plutino dwarf planet candidate in resonance with Neptune's orbit"
+      },
+      {
+        "name": "Gonggong",
+        "fact": "Gonggong is a large red Kuiper Belt object with a small moon called Xiangliu"
+      },
+      {
+        "name": "Planet Nine",
+        "fact": "Planet Nine is a hypothetical giant planet thought to be lurking unseen in the outer solar system"
+      },
+      {
+        "name": "Hot Jupiter",
+        "fact": "Hot Jupiters are gas giant exoplanets orbiting very close to their stars incredibly fast"
+      },
+      {
+        "name": "Super Earth",
+        "fact": "Super Earths are rocky exoplanets larger than Earth but smaller than Neptune"
+      },
+      {
+        "name": "Ocean World",
+        "fact": "Ocean worlds are planets or moons entirely covered by deep global oceans"
+      },
+      {
+        "name": "Lava Planet",
+        "fact": "Lava worlds are exoplanets so close to their stars that the surface is molten rock"
+      },
+      {
+        "name": "Diamond Planet",
+        "fact": "Some exoplanets are thought to have interiors made largely of diamond-like carbon"
+      },
+      {
+        "name": "Rogue Planet",
+        "fact": "Rogue planets drift through space without any star to orbit, frozen and dark"
+      },
+      {
+        "name": "Water World",
+        "fact": "GJ 1214 b is a water world with a thick steamy atmosphere and possible deep ocean"
+      },
+      {
+        "name": "Pulsar Planet",
+        "fact": "The first confirmed exoplanets ever found orbit a pulsar, a rapidly spinning dead star"
+      },
+      {
+        "name": "Proxima b",
+        "fact": "Proxima Centauri b is the closest known exoplanet to Earth just 4 light-years away"
+      },
+      {
+        "name": "Kepler-452b",
+        "fact": "Kepler-452b is often called Earth's cousin as it orbits a sun-like star in the habitable zone"
+      },
+      {
+        "name": "TRAPPIST-1e",
+        "fact": "TRAPPIST-1e is one of seven Earth-sized planets orbiting an ultra-cool dwarf star"
+      },
+      {
+        "name": "HD 189733b",
+        "fact": "HD 189733b is a vivid blue planet where it rains molten glass sideways in 8700 km/h winds"
+      },
+      {
+        "name": "55 Cancri e",
+        "fact": "55 Cancri e is a lava world that may have a surface of molten rock and carbon"
+      },
+      {
+        "name": "HAT-P-7b",
+        "fact": "HAT-P-7b is a massive hot Jupiter where it rains rubies and sapphires"
+      },
+      {
+        "name": "WASP-17b",
+        "fact": "WASP-17b is one of the largest known exoplanets with a density lower than balsa wood"
+      },
+      {
+        "name": "GJ 436b",
+        "fact": "GJ 436b is a hot Neptune with a gigantic comet-like tail of hydrogen streaming from it"
+      },
+      {
+        "name": "Kepler-16b",
+        "fact": "Kepler-16b orbits two stars at once like the fictional Tatooine from Star Wars"
+      },
+      {
+        "name": "PSR B1257+12 b",
+        "fact": "PSR B1257+12 b was the very first exoplanet ever confirmed, discovered in 1992"
+      },
+      {
+        "name": "Tau Ceti e",
+        "fact": "Tau Ceti e is a super Earth orbiting a sun-like star just 12 light-years away"
+      },
+      {
+        "name": "Wolf 1061c",
+        "fact": "Wolf 1061c is one of the closest potentially habitable exoplanets at 14 light-years"
+      },
+      {
+        "name": "Gliese 667Cc",
+        "fact": "Gliese 667Cc may be in the habitable zone of a triple star system"
+      },
+      {
+        "name": "K2-18b",
+        "fact": "K2-18b may have a hydrogen-rich atmosphere and possible ocean beneath"
+      },
+      {
+        "name": "LHS 1140b",
+        "fact": "LHS 1140b is a rocky super Earth in the habitable zone with a thick atmosphere"
+      },
+      {
+        "name": "TOI 700d",
+        "fact": "TOI 700d is a nearby Earth-sized planet in the habitable zone of a small red star"
+      },
+      {
+        "name": "Ross 128b",
+        "fact": "Ross 128b is a temperate Earth-mass planet orbiting a quiet red dwarf star"
+      },
+      {
+        "name": "Teegarden b",
+        "fact": "Teegarden b receives similar energy from its star as Earth does from the Sun"
+      },
+      {
+        "name": "LP 890-9c",
+        "fact": "LP 890-9c is one of the most promising habitable zone rocky planets found to date"
+      },
+      {
+        "name": "Barnard b",
+        "fact": "A planet candidate was reported around Barnard's Star just 6 light-years from Earth"
+      },
+      {
+        "name": "OGLE-2005-BLG",
+        "fact": "OGLE microlensing planets are discovered when their gravity bends distant starlight"
+      },
+      {
+        "name": "HR 8799b",
+        "fact": "HR 8799b was one of the first exoplanets to be directly photographed in visible light"
+      },
+      {
+        "name": "Beta Pic b",
+        "fact": "Beta Pictoris b was photographed orbiting inside a visible debris disk around its star"
+      },
+      {
+        "name": "Fomalhaut b",
+        "fact": "Fomalhaut b was photographed near a striking ring-shaped debris disk"
+      },
+      {
+        "name": "HIP 65426b",
+        "fact": "HIP 65426b was the first exoplanet directly imaged by the James Webb Space Telescope"
+      },
+      {
+        "name": "Qatar-1b",
+        "fact": "Qatar-1b was one of the first exoplanets discovered through the Qatar Exoplanet Survey"
+      },
+      {
+        "name": "KELT-9b",
+        "fact": "KELT-9b is the hottest known exoplanet at over 4,000 degrees, hotter than most stars"
+      },
+      {
+        "name": "WASP-96b",
+        "fact": "WASP-96b's atmosphere was analyzed by James Webb revealing water vapor and clouds"
+      },
+      {
+        "name": "WASP-121b",
+        "fact": "WASP-121b has iron and titanium vapor in its upper atmosphere detected by spectroscopy"
+      },
+      {
+        "name": "LTT 9779b",
+        "fact": "LTT 9779b has a metallic atmosphere and reflects 80% of starlight making it highly shiny"
+      },
+      {
+        "name": "COCONUTS-2b",
+        "fact": "COCONUTS-2b is the coldest and closest directly-imaged exoplanet to Earth known"
+      },
+      {
+        "name": "Luhman 16",
+        "fact": "Luhman 16 is the closest brown dwarf system just 6.5 light-years from Earth"
+      },
+      {
+        "name": "WD 1856b",
+        "fact": "WD 1856b orbits a white dwarf star having somehow survived the star's red giant phase"
+      },
+      {
+        "name": "TOI-1231b",
+        "fact": "TOI-1231b is a Neptune-sized exoplanet that may have water clouds in its atmosphere"
+      },
+      {
+        "name": "GJ 3470b",
+        "fact": "GJ 3470b is a warm Neptune losing its atmosphere to stellar radiation"
+      },
+      {
+        "name": "GJ 1132b",
+        "fact": "GJ 1132b may have rebuilt a secondary atmosphere from volcanic activity after losing its original"
+      },
+      {
+        "name": "K2-141b",
+        "fact": "K2-141b is a lava world with a supersonic silicate wind blowing across its surface"
+      },
+      {
+        "name": "Kepler-22b",
+        "fact": "Kepler-22b was the first confirmed exoplanet in the habitable zone of a sun-like star"
+      },
+      {
+        "name": "Kepler-69c",
+        "fact": "Kepler-69c is a super Earth orbiting in the habitable zone of a sun-like star"
+      },
+      {
+        "name": "Kepler-62e",
+        "fact": "Kepler-62e could be a water world with a global ocean and no land"
+      },
+      {
+        "name": "Kepler-186f",
+        "fact": "Kepler-186f was the first Earth-size exoplanet found in the habitable zone of any star"
+      },
+      {
+        "name": "Kepler-438b",
+        "fact": "Kepler-438b was once considered the most Earth-like exoplanet found with Earth Similarity Index of 0.88"
+      },
+      {
+        "name": "Kepler-442b",
+        "fact": "Kepler-442b orbits a star cooler than the Sun but still receives the right amount of energy"
+      },
+      {
+        "name": "Kepler-1649c",
+        "fact": "Kepler-1649c is one of the most Earth-sized and habitable zone matching planets found"
+      },
+      {
+        "name": "TOI-700e",
+        "fact": "TOI-700e is an inner habitable zone planet discovered alongside its sibling TOI-700d"
+      },
+      {
+        "name": "55 Cancri f",
+        "fact": "55 Cancri f is a giant planet that orbits in its star's habitable zone"
+      },
+      {
+        "name": "Upsilon Andromedae d",
+        "fact": "Upsilon Andromedae d was one of the first multiplanet systems discovered around a normal star"
+      },
+      {
+        "name": "Pi Mensae c",
+        "fact": "Pi Mensae c is a super Earth orbiting a star just 60 light-years away"
+      },
+      {
+        "name": "L 98-59b",
+        "fact": "L 98-59b is one of the smallest exoplanets to have its atmosphere studied by JWST"
+      },
+      {
+        "name": "TRAPPIST-1f",
+        "fact": "TRAPPIST-1f is one of the most studied exoplanets and a prime target for habitability research"
+      },
+      {
+        "name": "TRAPPIST-1g",
+        "fact": "TRAPPIST-1g is the second outermost of the seven TRAPPIST-1 planets"
+      },
+      {
+        "name": "TRAPPIST-1b",
+        "fact": "TRAPPIST-1b was found by JWST to have no thick atmosphere making it a bare rock"
+      },
+      {
+        "name": "GJ 876b",
+        "fact": "GJ 876b was the first gas giant exoplanet discovered around a red dwarf star"
+      },
+      {
+        "name": "51 Pegasi b",
+        "fact": "51 Pegasi b was the first exoplanet discovered around a sun-like star in 1995"
+      },
+      {
+        "name": "HD 209458b",
+        "fact": "HD 209458b also known as Osiris was the first exoplanet seen transiting its star"
+      },
+      {
+        "name": "TrES-1b",
+        "fact": "TrES-1b was the first exoplanet found using a small amateur-sized telescope network"
+      },
+      {
+        "name": "HAT-P-1b",
+        "fact": "HAT-P-1b is a bloated hot Jupiter with an extremely low density for its size"
+      },
+      {
+        "name": "XO-1b",
+        "fact": "XO-1b is a hot Jupiter discovered using a small wide-field telescope in New Mexico"
+      },
+      {
+        "name": "COROT-7b",
+        "fact": "CoRoT-7b was the first rocky exoplanet with a measured radius found outside our system"
+      },
+      {
+        "name": "Kepler-10b",
+        "fact": "Kepler-10b was the first confirmed rocky planet found by the Kepler space telescope"
+      },
+      {
+        "name": "Kepler-11b",
+        "fact": "Kepler-11 has six transiting planets all crammed closer to their star than Earth is to the Sun"
+      },
+      {
+        "name": "55 Cancri b",
+        "fact": "55 Cancri b was one of the earliest known exoplanets around a sun-like star"
+      },
+      {
+        "name": "Tau Bootis b",
+        "fact": "Tau Bootis b is a massive hot Jupiter orbiting very close to its bright host star"
+      },
+      {
+        "name": "70 Virginis b",
+        "fact": "70 Virginis b was one of the first exoplanets found and initially called a Goldilocks planet"
+      },
+      {
+        "name": "47 Ursae Majoris b",
+        "fact": "47 Ursae Majoris b was one of the first Jupiter analogs found in a wide stable orbit"
+      },
+      {
+        "name": "Rho Coronae Borealis b",
+        "fact": "Rho CrB b was notable as one of the first hot Jupiters discovered in the 1990s"
+      },
+      {
+        "name": "Kepler-47c",
+        "fact": "Kepler-47c orbits two stars in a stable circumbinary orbit in the habitable zone"
+      },
+      {
+        "name": "GJ 504b",
+        "fact": "GJ 504b is a directly imaged pink-magenta gas giant larger than Jupiter"
+      },
+      {
+        "name": "MOA-2007-BLG-192b",
+        "fact": "This super Earth orbits a tiny brown dwarf star and was found by gravitational microlensing"
+      },
+      {
+        "name": "OGLE-2016-BLG-1195Lb",
+        "fact": "This is one of the coldest known rocky exoplanets orbiting far from its host star"
+      },
+      {
+        "name": "PSO J318.5-22",
+        "fact": "PSO J318 is a rogue gas giant drifting alone without a star about 80 light-years away"
+      },
+      {
+        "name": "Oph 11b",
+        "fact": "Ophiuchus 11b is one of the youngest directly imaged planets still glowing from formation heat"
+      }
+    ]
+  }
+}

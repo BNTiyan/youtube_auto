@@ -1,0 +1,1106 @@
+{
+  "devops": {
+    "items": [
+      {
+        "name": "DevOps",
+        "explanation": "DevOps combines development and operations to deliver software faster and more reliably",
+        "points": [
+          "Core concept of DevOps used widely in modern software and AI systems",
+          "Important for understanding: DevOps combines development and operations to deliver software faster and more reliably",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "CI/CD",
+        "explanation": "Continuous Integration and Delivery automates building, testing, and deploying code changes",
+        "points": [
+          "Core concept of CI/CD used widely in modern software and AI systems",
+          "Important for understanding: Continuous Integration and Delivery automates building, testing, and deploying code changes",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Docker",
+        "explanation": "Docker packages apps and their dependencies into portable containers that run anywhere",
+        "points": [
+          "Core concept of Docker used widely in modern software and AI systems",
+          "Important for understanding: Docker packages apps and their dependencies into portable containers that run anywhere",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Kubernetes",
+        "explanation": "Kubernetes orchestrates containers at scale handling deployment, scaling, and self-healing",
+        "points": [
+          "Core concept of Kubernetes used widely in modern software and AI systems",
+          "Important for understanding: Kubernetes orchestrates containers at scale handling deployment, scaling, and self-healing",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Infrastructure as Code",
+        "explanation": "IaC manages servers and cloud resources using version-controlled code instead of manual steps",
+        "points": [
+          "Core concept of Infrastructure as Code used widely in modern software and AI systems",
+          "Important for understanding: IaC manages servers and cloud resources using version-controlled code instead of manual steps",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Terraform",
+        "explanation": "Terraform is the most popular IaC tool for provisioning cloud infrastructure declaratively",
+        "points": [
+          "Core concept of Terraform used widely in modern software and AI systems",
+          "Important for understanding: Terraform is the most popular IaC tool for provisioning cloud infrastructure declaratively",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Ansible",
+        "explanation": "Ansible automates server configuration and application deployment using YAML playbooks",
+        "points": [
+          "Core concept of Ansible used widely in modern software and AI systems",
+          "Important for understanding: Ansible automates server configuration and application deployment using YAML playbooks",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "GitHub Actions",
+        "explanation": "GitHub Actions automates CI/CD workflows directly inside your GitHub repository",
+        "points": [
+          "Core concept of GitHub Actions used widely in modern software and AI systems",
+          "Important for understanding: GitHub Actions automates CI/CD workflows directly inside your GitHub repository",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Jenkins",
+        "explanation": "Jenkins is the most widely used open-source CI/CD automation server",
+        "points": [
+          "Core concept of Jenkins used widely in modern software and AI systems",
+          "Important for understanding: Jenkins is the most widely used open-source CI/CD automation server",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Monitoring",
+        "explanation": "Monitoring tracks system health, performance metrics, and alerts when things go wrong",
+        "points": [
+          "Core concept of Monitoring used widely in modern software and AI systems",
+          "Important for understanding: Monitoring tracks system health, performance metrics, and alerts when things go wrong",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Observability",
+        "explanation": "Observability uses logs, metrics, and traces to understand internal system behavior",
+        "points": [
+          "Core concept of Observability used widely in modern software and AI systems",
+          "Important for understanding: Observability uses logs, metrics, and traces to understand internal system behavior",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Prometheus",
+        "explanation": "Prometheus is an open-source metrics collection and alerting system for cloud-native apps",
+        "points": [
+          "Core concept of Prometheus used widely in modern software and AI systems",
+          "Important for understanding: Prometheus is an open-source metrics collection and alerting system for cloud-native apps",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Grafana",
+        "explanation": "Grafana visualizes metrics and logs in beautiful dashboards for system monitoring",
+        "points": [
+          "Core concept of Grafana used widely in modern software and AI systems",
+          "Important for understanding: Grafana visualizes metrics and logs in beautiful dashboards for system monitoring",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "ELK Stack",
+        "explanation": "Elasticsearch, Logstash, and Kibana together collect, process, and visualize application logs",
+        "points": [
+          "Core concept of ELK Stack used widely in modern software and AI systems",
+          "Important for understanding: Elasticsearch, Logstash, and Kibana together collect, process, and visualize application logs",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Helm",
+        "explanation": "Helm is the package manager for Kubernetes that simplifies deploying complex applications",
+        "points": [
+          "Core concept of Helm used widely in modern software and AI systems",
+          "Important for understanding: Helm is the package manager for Kubernetes that simplifies deploying complex applications",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Service Mesh",
+        "explanation": "A service mesh handles inter-service communication, security, and observability transparently",
+        "points": [
+          "Core concept of Service Mesh used widely in modern software and AI systems",
+          "Important for understanding: A service mesh handles inter-service communication, security, and observability transparently",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Istio",
+        "explanation": "Istio is a popular open-source service mesh that adds traffic management and zero-trust security",
+        "points": [
+          "Core concept of Istio used widely in modern software and AI systems",
+          "Important for understanding: Istio is a popular open-source service mesh that adds traffic management and zero-trust security",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "GitOps",
+        "explanation": "GitOps uses Git as the single source of truth for all infrastructure and deployment changes",
+        "points": [
+          "Core concept of GitOps used widely in modern software and AI systems",
+          "Important for understanding: GitOps uses Git as the single source of truth for all infrastructure and deployment changes",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "ArgoCD",
+        "explanation": "ArgoCD continuously syncs Kubernetes clusters to match the desired state in Git",
+        "points": [
+          "Core concept of ArgoCD used widely in modern software and AI systems",
+          "Important for understanding: ArgoCD continuously syncs Kubernetes clusters to match the desired state in Git",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Continuous Integration",
+        "explanation": "CI automatically builds and tests code every time a developer pushes a change",
+        "points": [
+          "Core concept of Continuous Integration used widely in modern software and AI systems",
+          "Important for understanding: CI automatically builds and tests code every time a developer pushes a change",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Continuous Delivery",
+        "explanation": "CD automatically prepares code to be released to production after passing all tests",
+        "points": [
+          "Core concept of Continuous Delivery used widely in modern software and AI systems",
+          "Important for understanding: CD automatically prepares code to be released to production after passing all tests",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Continuous Deployment",
+        "explanation": "Continuous deployment automatically pushes every passing change directly to production",
+        "points": [
+          "Core concept of Continuous Deployment used widely in modern software and AI systems",
+          "Important for understanding: Continuous deployment automatically pushes every passing change directly to production",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Container Registry",
+        "explanation": "A container registry stores and distributes Docker images for deployment",
+        "points": [
+          "Core concept of Container Registry used widely in modern software and AI systems",
+          "Important for understanding: A container registry stores and distributes Docker images for deployment",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Dockerfile",
+        "explanation": "A Dockerfile is a script of instructions for building a Docker container image",
+        "points": [
+          "Core concept of Dockerfile used widely in modern software and AI systems",
+          "Important for understanding: A Dockerfile is a script of instructions for building a Docker container image",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Pod",
+        "explanation": "A Kubernetes Pod is the smallest deployable unit containing one or more containers",
+        "points": [
+          "Core concept of Pod used widely in modern software and AI systems",
+          "Important for understanding: A Kubernetes Pod is the smallest deployable unit containing one or more containers",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Deployment",
+        "explanation": "A Kubernetes Deployment manages how many replicas of a Pod should run and updates them",
+        "points": [
+          "Core concept of Deployment used widely in modern software and AI systems",
+          "Important for understanding: A Kubernetes Deployment manages how many replicas of a Pod should run and updates them",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Service",
+        "explanation": "A Kubernetes Service provides a stable network address to route traffic to Pods",
+        "points": [
+          "Core concept of Service used widely in modern software and AI systems",
+          "Important for understanding: A Kubernetes Service provides a stable network address to route traffic to Pods",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Ingress",
+        "explanation": "Kubernetes Ingress manages external HTTP traffic routing into cluster services",
+        "points": [
+          "Core concept of Ingress used widely in modern software and AI systems",
+          "Important for understanding: Kubernetes Ingress manages external HTTP traffic routing into cluster services",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "ConfigMap",
+        "explanation": "ConfigMaps store non-secret configuration data that Kubernetes Pods can consume",
+        "points": [
+          "Core concept of ConfigMap used widely in modern software and AI systems",
+          "Important for understanding: ConfigMaps store non-secret configuration data that Kubernetes Pods can consume",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Secret",
+        "explanation": "Kubernetes Secrets store sensitive data like passwords and API keys securely",
+        "points": [
+          "Core concept of Secret used widely in modern software and AI systems",
+          "Important for understanding: Kubernetes Secrets store sensitive data like passwords and API keys securely",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Namespace",
+        "explanation": "Kubernetes namespaces logically isolate resources within the same cluster",
+        "points": [
+          "Core concept of Namespace used widely in modern software and AI systems",
+          "Important for understanding: Kubernetes namespaces logically isolate resources within the same cluster",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Rolling Update",
+        "explanation": "Rolling updates gradually replace old Pod versions with new ones with zero downtime",
+        "points": [
+          "Core concept of Rolling Update used widely in modern software and AI systems",
+          "Important for understanding: Rolling updates gradually replace old Pod versions with new ones with zero downtime",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Horizontal Pod Autoscaling",
+        "explanation": "HPA automatically scales Pod replicas up or down based on CPU or memory metrics",
+        "points": [
+          "Core concept of Horizontal Pod Autoscaling used widely in modern software and AI systems",
+          "Important for understanding: HPA automatically scales Pod replicas up or down based on CPU or memory metrics",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Vertical Pod Autoscaling",
+        "explanation": "VPA automatically adjusts CPU and memory requests for Pods based on actual usage",
+        "points": [
+          "Core concept of Vertical Pod Autoscaling used widely in modern software and AI systems",
+          "Important for understanding: VPA automatically adjusts CPU and memory requests for Pods based on actual usage",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Resource Limits",
+        "explanation": "Resource limits cap how much CPU and memory a Kubernetes container can consume",
+        "points": [
+          "Core concept of Resource Limits used widely in modern software and AI systems",
+          "Important for understanding: Resource limits cap how much CPU and memory a Kubernetes container can consume",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Liveness Probe",
+        "explanation": "Liveness probes detect and restart Pods that are stuck or deadlocked",
+        "points": [
+          "Core concept of Liveness Probe used widely in modern software and AI systems",
+          "Important for understanding: Liveness probes detect and restart Pods that are stuck or deadlocked",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Readiness Probe",
+        "explanation": "Readiness probes prevent traffic from reaching Pods that are still starting up",
+        "points": [
+          "Core concept of Readiness Probe used widely in modern software and AI systems",
+          "Important for understanding: Readiness probes prevent traffic from reaching Pods that are still starting up",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Persistent Volume",
+        "explanation": "Persistent Volumes give Kubernetes Pods durable storage that survives Pod restarts",
+        "points": [
+          "Core concept of Persistent Volume used widely in modern software and AI systems",
+          "Important for understanding: Persistent Volumes give Kubernetes Pods durable storage that survives Pod restarts",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "StatefulSet",
+        "explanation": "StatefulSets manage Pods with stable identities and persistent storage for databases",
+        "points": [
+          "Core concept of StatefulSet used widely in modern software and AI systems",
+          "Important for understanding: StatefulSets manage Pods with stable identities and persistent storage for databases",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "DaemonSet",
+        "explanation": "DaemonSets ensure one Pod runs on every node for tasks like log collection or monitoring",
+        "points": [
+          "Core concept of DaemonSet used widely in modern software and AI systems",
+          "Important for understanding: DaemonSets ensure one Pod runs on every node for tasks like log collection or monitoring",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "CronJob",
+        "explanation": "Kubernetes CronJobs run scheduled tasks on a cron schedule inside the cluster",
+        "points": [
+          "Core concept of CronJob used widely in modern software and AI systems",
+          "Important for understanding: Kubernetes CronJobs run scheduled tasks on a cron schedule inside the cluster",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "RBAC",
+        "explanation": "Role-Based Access Control restricts what actions Kubernetes users and services can perform",
+        "points": [
+          "Core concept of RBAC used widely in modern software and AI systems",
+          "Important for understanding: Role-Based Access Control restricts what actions Kubernetes users and services can perform",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Network Policy",
+        "explanation": "Network policies control which Pods are allowed to communicate with each other",
+        "points": [
+          "Core concept of Network Policy used widely in modern software and AI systems",
+          "Important for understanding: Network policies control which Pods are allowed to communicate with each other",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Cert Manager",
+        "explanation": "Cert-manager automates TLS certificate issuance and renewal inside Kubernetes",
+        "points": [
+          "Core concept of Cert Manager used widely in modern software and AI systems",
+          "Important for understanding: Cert-manager automates TLS certificate issuance and renewal inside Kubernetes",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Kustomize",
+        "explanation": "Kustomize layers environment-specific Kubernetes config on top of base manifests without templating",
+        "points": [
+          "Core concept of Kustomize used widely in modern software and AI systems",
+          "Important for understanding: Kustomize layers environment-specific Kubernetes config on top of base manifests without templating",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "CI Pipeline",
+        "explanation": "A CI pipeline runs lint, test, build, and security checks on every code commit automatically",
+        "points": [
+          "Core concept of CI Pipeline used widely in modern software and AI systems",
+          "Important for understanding: A CI pipeline runs lint, test, build, and security checks on every code commit automatically",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Artifact",
+        "explanation": "A CI artifact is a build output like a Docker image or binary stored for deployment",
+        "points": [
+          "Core concept of Artifact used widely in modern software and AI systems",
+          "Important for understanding: A CI artifact is a build output like a Docker image or binary stored for deployment",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Environment",
+        "explanation": "Environments are isolated deployments like dev, staging, and production with separate configs",
+        "points": [
+          "Core concept of Environment used widely in modern software and AI systems",
+          "Important for understanding: Environments are isolated deployments like dev, staging, and production with separate configs",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Secrets Management",
+        "explanation": "Secrets managers like Vault and AWS Secrets Manager store and rotate credentials securely",
+        "points": [
+          "Core concept of Secrets Management used widely in modern software and AI systems",
+          "Important for understanding: Secrets managers like Vault and AWS Secrets Manager store and rotate credentials securely",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "HashiCorp Vault",
+        "explanation": "Vault centrally manages secrets, encrypts data, and issues short-lived credentials",
+        "points": [
+          "Core concept of HashiCorp Vault used widely in modern software and AI systems",
+          "Important for understanding: Vault centrally manages secrets, encrypts data, and issues short-lived credentials",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Packer",
+        "explanation": "Packer automates building identical machine images for multiple cloud platforms",
+        "points": [
+          "Core concept of Packer used widely in modern software and AI systems",
+          "Important for understanding: Packer automates building identical machine images for multiple cloud platforms",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Pulumi",
+        "explanation": "Pulumi lets you write Infrastructure as Code using familiar programming languages",
+        "points": [
+          "Core concept of Pulumi used widely in modern software and AI systems",
+          "Important for understanding: Pulumi lets you write Infrastructure as Code using familiar programming languages",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "AWS CDK",
+        "explanation": "AWS CDK defines cloud infrastructure using programming languages that compile to CloudFormation",
+        "points": [
+          "Core concept of AWS CDK used widely in modern software and AI systems",
+          "Important for understanding: AWS CDK defines cloud infrastructure using programming languages that compile to CloudFormation",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "CloudFormation",
+        "explanation": "AWS CloudFormation provisions infrastructure declaratively through JSON or YAML templates",
+        "points": [
+          "Core concept of CloudFormation used widely in modern software and AI systems",
+          "Important for understanding: AWS CloudFormation provisions infrastructure declaratively through JSON or YAML templates",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Crossplane",
+        "explanation": "Crossplane extends Kubernetes to provision and manage cloud resources from any provider",
+        "points": [
+          "Core concept of Crossplane used widely in modern software and AI systems",
+          "Important for understanding: Crossplane extends Kubernetes to provision and manage cloud resources from any provider",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Blue-green Deployment",
+        "explanation": "Blue-green spins up an identical environment and switches traffic over instantly",
+        "points": [
+          "Core concept of Blue-green Deployment used widely in modern software and AI systems",
+          "Important for understanding: Blue-green spins up an identical environment and switches traffic over instantly",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Canary Deployment",
+        "explanation": "Canary deployments send a small traffic percentage to new versions to test before full rollout",
+        "points": [
+          "Core concept of Canary Deployment used widely in modern software and AI systems",
+          "Important for understanding: Canary deployments send a small traffic percentage to new versions to test before full rollout",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Feature Toggle",
+        "explanation": "Feature toggles enable or disable features at runtime without new deployments",
+        "points": [
+          "Core concept of Feature Toggle used widely in modern software and AI systems",
+          "Important for understanding: Feature toggles enable or disable features at runtime without new deployments",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Observability Stack",
+        "explanation": "An observability stack combines metrics, logs, and traces for full system visibility",
+        "points": [
+          "Core concept of Observability Stack used widely in modern software and AI systems",
+          "Important for understanding: An observability stack combines metrics, logs, and traces for full system visibility",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "OpenTelemetry",
+        "explanation": "OpenTelemetry is the open standard for collecting traces, metrics, and logs from applications",
+        "points": [
+          "Core concept of OpenTelemetry used widely in modern software and AI systems",
+          "Important for understanding: OpenTelemetry is the open standard for collecting traces, metrics, and logs from applications",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Jaeger",
+        "explanation": "Jaeger is an open-source distributed tracing system for monitoring microservices",
+        "points": [
+          "Core concept of Jaeger used widely in modern software and AI systems",
+          "Important for understanding: Jaeger is an open-source distributed tracing system for monitoring microservices",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Zipkin",
+        "explanation": "Zipkin is a distributed tracing system helping find where latency problems occur in services",
+        "points": [
+          "Core concept of Zipkin used widely in modern software and AI systems",
+          "Important for understanding: Zipkin is a distributed tracing system helping find where latency problems occur in services",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Datadog",
+        "explanation": "Datadog is a cloud monitoring platform combining metrics, logs, traces, and dashboards",
+        "points": [
+          "Core concept of Datadog used widely in modern software and AI systems",
+          "Important for understanding: Datadog is a cloud monitoring platform combining metrics, logs, traces, and dashboards",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "New Relic",
+        "explanation": "New Relic provides full-stack observability and AI-powered alerts for engineering teams",
+        "points": [
+          "Core concept of New Relic used widely in modern software and AI systems",
+          "Important for understanding: New Relic provides full-stack observability and AI-powered alerts for engineering teams",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "PagerDuty",
+        "explanation": "PagerDuty routes alerts to on-call engineers and manages incident response workflows",
+        "points": [
+          "Core concept of PagerDuty used widely in modern software and AI systems",
+          "Important for understanding: PagerDuty routes alerts to on-call engineers and manages incident response workflows",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Runbook",
+        "explanation": "A runbook documents step-by-step procedures for handling specific operational incidents",
+        "points": [
+          "Core concept of Runbook used widely in modern software and AI systems",
+          "Important for understanding: A runbook documents step-by-step procedures for handling specific operational incidents",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Postmortem",
+        "explanation": "A blameless postmortem analyzes what caused an incident to prevent it from happening again",
+        "points": [
+          "Core concept of Postmortem used widely in modern software and AI systems",
+          "Important for understanding: A blameless postmortem analyzes what caused an incident to prevent it from happening again",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "SRE",
+        "explanation": "Site Reliability Engineering applies software engineering to operations and reliability problems",
+        "points": [
+          "Core concept of SRE used widely in modern software and AI systems",
+          "Important for understanding: Site Reliability Engineering applies software engineering to operations and reliability problems",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Error Budget",
+        "explanation": "An error budget defines how much downtime is acceptable before new releases are paused",
+        "points": [
+          "Core concept of Error Budget used widely in modern software and AI systems",
+          "Important for understanding: An error budget defines how much downtime is acceptable before new releases are paused",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "SLO",
+        "explanation": "Service Level Objectives define measurable reliability targets that teams commit to meeting",
+        "points": [
+          "Core concept of SLO used widely in modern software and AI systems",
+          "Important for understanding: Service Level Objectives define measurable reliability targets that teams commit to meeting",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "SLI",
+        "explanation": "Service Level Indicators are the specific metrics used to measure SLO performance",
+        "points": [
+          "Core concept of SLI used widely in modern software and AI systems",
+          "Important for understanding: Service Level Indicators are the specific metrics used to measure SLO performance",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "On-call Rotation",
+        "explanation": "On-call rotations share after-hours incident response duties across the engineering team",
+        "points": [
+          "Core concept of On-call Rotation used widely in modern software and AI systems",
+          "Important for understanding: On-call rotations share after-hours incident response duties across the engineering team",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Incident Management",
+        "explanation": "Incident management is the process of detecting, responding to, and resolving production issues",
+        "points": [
+          "Core concept of Incident Management used widely in modern software and AI systems",
+          "Important for understanding: Incident management is the process of detecting, responding to, and resolving production issues",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Mean Time to Recover",
+        "explanation": "MTTR measures the average time from incident detection to full service restoration",
+        "points": [
+          "Core concept of Mean Time to Recover used widely in modern software and AI systems",
+          "Important for understanding: MTTR measures the average time from incident detection to full service restoration",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Mean Time Between Failures",
+        "explanation": "MTBF measures the average time a system operates before experiencing a failure",
+        "points": [
+          "Core concept of Mean Time Between Failures used widely in modern software and AI systems",
+          "Important for understanding: MTBF measures the average time a system operates before experiencing a failure",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Immutable Infrastructure",
+        "explanation": "Immutable infrastructure replaces servers entirely instead of patching them in place",
+        "points": [
+          "Core concept of Immutable Infrastructure used widely in modern software and AI systems",
+          "Important for understanding: Immutable infrastructure replaces servers entirely instead of patching them in place",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "GitLab CI",
+        "explanation": "GitLab CI is a built-in CI/CD system integrated directly into the GitLab platform",
+        "points": [
+          "Core concept of GitLab CI used widely in modern software and AI systems",
+          "Important for understanding: GitLab CI is a built-in CI/CD system integrated directly into the GitLab platform",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "CircleCI",
+        "explanation": "CircleCI is a cloud CI/CD platform known for fast builds and easy parallelism",
+        "points": [
+          "Core concept of CircleCI used widely in modern software and AI systems",
+          "Important for understanding: CircleCI is a cloud CI/CD platform known for fast builds and easy parallelism",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Buildkite",
+        "explanation": "Buildkite runs CI pipelines on your own infrastructure with a cloud-based control plane",
+        "points": [
+          "Core concept of Buildkite used widely in modern software and AI systems",
+          "Important for understanding: Buildkite runs CI pipelines on your own infrastructure with a cloud-based control plane",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Tekton",
+        "explanation": "Tekton is a Kubernetes-native CI/CD framework for building pipelines as custom resources",
+        "points": [
+          "Core concept of Tekton used widely in modern software and AI systems",
+          "Important for understanding: Tekton is a Kubernetes-native CI/CD framework for building pipelines as custom resources",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Argo Workflows",
+        "explanation": "Argo Workflows runs DAG and step-based pipelines as Kubernetes-native workflows",
+        "points": [
+          "Core concept of Argo Workflows used widely in modern software and AI systems",
+          "Important for understanding: Argo Workflows runs DAG and step-based pipelines as Kubernetes-native workflows",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Container Security",
+        "explanation": "Container security scans images for vulnerabilities and enforces policies at runtime",
+        "points": [
+          "Core concept of Container Security used widely in modern software and AI systems",
+          "Important for understanding: Container security scans images for vulnerabilities and enforces policies at runtime",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Trivy",
+        "explanation": "Trivy is an open-source vulnerability scanner for containers, file systems, and IaC configs",
+        "points": [
+          "Core concept of Trivy used widely in modern software and AI systems",
+          "Important for understanding: Trivy is an open-source vulnerability scanner for containers, file systems, and IaC configs",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "OPA",
+        "explanation": "Open Policy Agent enforces security and compliance policies across cloud-native systems",
+        "points": [
+          "Core concept of OPA used widely in modern software and AI systems",
+          "Important for understanding: Open Policy Agent enforces security and compliance policies across cloud-native systems",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Falco",
+        "explanation": "Falco detects suspicious runtime behavior in Kubernetes containers in real time",
+        "points": [
+          "Core concept of Falco used widely in modern software and AI systems",
+          "Important for understanding: Falco detects suspicious runtime behavior in Kubernetes containers in real time",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Supply Chain Security",
+        "explanation": "Supply chain security verifies the integrity of code and dependencies from source to production",
+        "points": [
+          "Core concept of Supply Chain Security used widely in modern software and AI systems",
+          "Important for understanding: Supply chain security verifies the integrity of code and dependencies from source to production",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "SBOM",
+        "explanation": "A Software Bill of Materials lists every component and dependency in a software artifact",
+        "points": [
+          "Core concept of SBOM used widely in modern software and AI systems",
+          "Important for understanding: A Software Bill of Materials lists every component and dependency in a software artifact",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Sigstore",
+        "explanation": "Sigstore provides free tools to cryptographically sign and verify software artifacts",
+        "points": [
+          "Core concept of Sigstore used widely in modern software and AI systems",
+          "Important for understanding: Sigstore provides free tools to cryptographically sign and verify software artifacts",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Multi-cloud",
+        "explanation": "Multi-cloud uses services from multiple cloud providers to avoid vendor lock-in",
+        "points": [
+          "Core concept of Multi-cloud used widely in modern software and AI systems",
+          "Important for understanding: Multi-cloud uses services from multiple cloud providers to avoid vendor lock-in",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Hybrid Cloud",
+        "explanation": "Hybrid cloud combines on-premises infrastructure with public cloud services",
+        "points": [
+          "Core concept of Hybrid Cloud used widely in modern software and AI systems",
+          "Important for understanding: Hybrid cloud combines on-premises infrastructure with public cloud services",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Cost Optimization",
+        "explanation": "Cloud cost optimization right-sizes resources and eliminates waste to reduce infrastructure spend",
+        "points": [
+          "Core concept of Cost Optimization used widely in modern software and AI systems",
+          "Important for understanding: Cloud cost optimization right-sizes resources and eliminates waste to reduce infrastructure spend",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Platform Engineering",
+        "explanation": "Platform engineering builds internal developer platforms to improve team productivity and deployment speed",
+        "points": [
+          "Core concept of Platform Engineering used widely in modern software and AI systems",
+          "Important for understanding: Platform engineering builds internal developer platforms to improve team productivity and deployment speed",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Internal Developer Platform",
+        "explanation": "An IDP is a self-service layer that abstracts infrastructure complexity from application developers",
+        "points": [
+          "Core concept of Internal Developer Platform used widely in modern software and AI systems",
+          "Important for understanding: An IDP is a self-service layer that abstracts infrastructure complexity from application developers",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Backstage",
+        "explanation": "Backstage is Spotify's open-source developer portal for managing services and documentation",
+        "points": [
+          "Core concept of Backstage used widely in modern software and AI systems",
+          "Important for understanding: Backstage is Spotify's open-source developer portal for managing services and documentation",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Dora Metrics",
+        "explanation": "DORA metrics measure DevOps performance through deploy frequency, lead time, failure rate, and MTTR",
+        "points": [
+          "Core concept of Dora Metrics used widely in modern software and AI systems",
+          "Important for understanding: DORA metrics measure DevOps performance through deploy frequency, lead time, failure rate, and MTTR",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Shift Left Testing",
+        "explanation": "Shift left testing moves quality checks earlier in the pipeline to catch bugs before deployment",
+        "points": [
+          "Core concept of Shift Left Testing used widely in modern software and AI systems",
+          "Important for understanding: Shift left testing moves quality checks earlier in the pipeline to catch bugs before deployment",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Progressive Delivery",
+        "explanation": "Progressive delivery releases features to increasing user percentages based on real-time health signals",
+        "points": [
+          "Core concept of Progressive Delivery used widely in modern software and AI systems",
+          "Important for understanding: Progressive delivery releases features to increasing user percentages based on real-time health signals",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Policy as Code",
+        "explanation": "Policy as code enforces compliance and security rules automatically in CI/CD pipelines",
+        "points": [
+          "Core concept of Policy as Code used widely in modern software and AI systems",
+          "Important for understanding: Policy as code enforces compliance and security rules automatically in CI/CD pipelines",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Ephemeral Environments",
+        "explanation": "Ephemeral environments spin up a full preview deployment per pull request and destroy it after merge",
+        "points": [
+          "Core concept of Ephemeral Environments used widely in modern software and AI systems",
+          "Important for understanding: Ephemeral environments spin up a full preview deployment per pull request and destroy it after merge",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      },
+      {
+        "name": "Dependency Scanning",
+        "explanation": "Dependency scanning finds known vulnerabilities in third-party libraries automatically in CI",
+        "points": [
+          "Core concept of Dependency Scanning used widely in modern software and AI systems",
+          "Important for understanding: Dependency scanning finds known vulnerabilities in third-party libraries automatically in CI",
+          "Commonly applied in real-world applications and production systems",
+          "Often combined with related technologies to build scalable solutions",
+          "Key knowledge area for developers, engineers, and AI practitioners"
+        ]
+      }
+    ]
+  }
+}

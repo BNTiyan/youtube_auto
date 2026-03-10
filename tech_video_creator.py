@@ -19,6 +19,8 @@ import json
 import argparse
 import textwrap
 import tempfile
+import random
+import glob
 from io import BytesIO
 from typing import Optional
 
@@ -585,7 +587,7 @@ def create_points_slide(
     marker_font  = load_font(30)
     row_h        = 95
     row_start_y  = uh + 52
-    use_points   = [p for p in points if p][:3]
+    use_points   = [p for p in points if p][:5]
 
     for i, point in enumerate(use_points):
         ry = row_start_y + i * row_h
@@ -703,8 +705,8 @@ def create_single_concept_video(
                 image=item_img,
             )
             points_mp3 = os.path.join(tmp, "points.mp3")
-            # Build a natural-sounding TTS from the first 3 points
-            pts_tts = [p for p in raw_points if p][:3]
+            # Build a natural-sounding TTS from the first 5 points
+            pts_tts = [p for p in raw_points if p][:5]
             pts_text = " ".join(f"Point {i+1}: {p}" for i, p in enumerate(pts_tts))
             create_tts(
                 f"Here are the key things to know about {name}. {pts_text}",
@@ -866,7 +868,7 @@ Examples:
     parser.add_argument("--cat",        default=None,
                         help="Category for --item, e.g. 'rag'")
     # Common options
-    parser.add_argument("--config",     default="tech_content_config.json")
+    parser.add_argument("--config",     default="tech_content_config")
     parser.add_argument("--output-dir", default="tech_videos")
     parser.add_argument("--lang",       default="en")
     parser.add_argument("--items",      type=int, default=0,
@@ -881,11 +883,36 @@ Examples:
         print("    Free key: https://www.pexels.com/api/\n")
         use_images = False
 
-    if not os.path.exists(args.config):
-        print(f"❌  Config not found: {args.config}")
+    config_path = args.config
+    if os.path.isdir(args.config):
+        json_files = sorted(glob.glob(os.path.join(args.config, "*.json")))
+        if not json_files:
+            print(f"❌  No JSON config files found in directory: {args.config}")
+            return
+        
+        state_file = os.path.join(args.config, ".last_config_idx.txt")
+        idx = 0
+        if os.path.exists(state_file):
+            try:
+                with open(state_file) as sf:
+                    idx = (int(sf.read().strip()) + 1) % len(json_files)
+            except Exception:
+                pass
+        
+        config_path = json_files[idx]
+        try:
+            with open(state_file, "w") as sf:
+                sf.write(str(idx))
+        except Exception:
+            pass
+            
+        print(f"🔄  Sequentially selected config: {os.path.basename(config_path)}")
+
+    if not os.path.exists(config_path):
+        print(f"❌  Config not found: {config_path}")
         return
 
-    with open(args.config) as f:
+    with open(config_path) as f:
         config = json.load(f)
 
     # ── SINGLE-CONCEPT MODE ───────────────────────────────────────────────────

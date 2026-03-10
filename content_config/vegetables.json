@@ -1,0 +1,406 @@
+{
+  "vegetables": {
+    "items": [
+      {
+        "name": "Carrot",
+        "fact": "Carrots are orange and help make your eyes strong and healthy"
+      },
+      {
+        "name": "Broccoli",
+        "fact": "Broccoli looks like tiny trees and is packed with vitamins"
+      },
+      {
+        "name": "Tomato",
+        "fact": "Tomatoes are actually a fruit but we eat them like a vegetable"
+      },
+      {
+        "name": "Potato",
+        "fact": "Potatoes grow underground and can be made into many yummy dishes"
+      },
+      {
+        "name": "Corn",
+        "fact": "Each corn cob has hundreds of tiny yellow kernels on it"
+      },
+      {
+        "name": "Spinach",
+        "fact": "Spinach makes you strong and healthy just like Popeye the sailor"
+      },
+      {
+        "name": "Pea",
+        "fact": "Tiny green peas grow snugly inside a long green pod"
+      },
+      {
+        "name": "Cucumber",
+        "fact": "Cucumbers are cool and refreshing and mostly made of water"
+      },
+      {
+        "name": "Pepper",
+        "fact": "Peppers come in red, yellow, orange, and green colors"
+      },
+      {
+        "name": "Pumpkin",
+        "fact": "Pumpkins are big orange vegetables used to make jack-o-lanterns"
+      },
+      {
+        "name": "Onion",
+        "fact": "Onions make your eyes water when you cut them due to a special chemical"
+      },
+      {
+        "name": "Garlic",
+        "fact": "Garlic is used in cooking all over the world and is good for your health"
+      },
+      {
+        "name": "Cauliflower",
+        "fact": "Cauliflower looks like a white version of broccoli and is very nutritious"
+      },
+      {
+        "name": "Cabbage",
+        "fact": "Cabbages are round leafy vegetables that can be purple or green"
+      },
+      {
+        "name": "Eggplant",
+        "fact": "Eggplants are shiny purple vegetables also known as aubergine"
+      },
+      {
+        "name": "Zucchini",
+        "fact": "Zucchinis are green summer squashes that grow very quickly"
+      },
+      {
+        "name": "Asparagus",
+        "fact": "Asparagus grows as tall spears and is one of the first vegetables to grow in spring"
+      },
+      {
+        "name": "Celery",
+        "fact": "Celery makes a crunchy snack and is almost all water and fiber"
+      },
+      {
+        "name": "Radish",
+        "fact": "Radishes are small spicy root vegetables that can be red or white"
+      },
+      {
+        "name": "Beetroot",
+        "fact": "Beetroot turns your hands and tongue a bright red or purple color"
+      },
+      {
+        "name": "Sweet Potato",
+        "fact": "Sweet potatoes are orange inside and packed with vitamins and nutrients"
+      },
+      {
+        "name": "Artichoke",
+        "fact": "The artichoke is actually a flower bud that we eat before it blooms"
+      },
+      {
+        "name": "Leek",
+        "fact": "Leeks look like giant green onions and taste mild and sweet when cooked"
+      },
+      {
+        "name": "Kale",
+        "fact": "Kale is one of the most nutritious leafy green vegetables you can eat"
+      },
+      {
+        "name": "Brussels Sprout",
+        "fact": "Brussels sprouts look like tiny cabbages and grow along a long thick stalk"
+      },
+      {
+        "name": "Turnip",
+        "fact": "Turnips are round white root vegetables with a slightly peppery taste"
+      },
+      {
+        "name": "Parsnip",
+        "fact": "Parsnips look like white carrots and taste sweet and nutty when roasted"
+      },
+      {
+        "name": "Fennel",
+        "fact": "Fennel has a mild licorice flavor and every part of it can be eaten"
+      },
+      {
+        "name": "Bok Choy",
+        "fact": "Bok choy is a Chinese cabbage with crunchy white stems and tender green leaves"
+      },
+      {
+        "name": "Kohlrabi",
+        "fact": "Kohlrabi looks like a small alien spaceship and tastes like mild broccoli"
+      },
+      {
+        "name": "Watercress",
+        "fact": "Watercress grows in fresh water streams and is one of the oldest eaten leaf vegetables"
+      },
+      {
+        "name": "Arugula",
+        "fact": "Arugula has a peppery spicy taste and is popular in salads"
+      },
+      {
+        "name": "Swiss Chard",
+        "fact": "Swiss chard has dark green leaves with bright red, yellow, or white stems"
+      },
+      {
+        "name": "Collard Greens",
+        "fact": "Collard greens are a staple of Southern cooking and very rich in calcium"
+      },
+      {
+        "name": "Mustard Greens",
+        "fact": "Mustard greens taste spicy and peppery and are common in Asian cuisine"
+      },
+      {
+        "name": "Okra",
+        "fact": "Okra is a green pod vegetable that gets sticky when cooked, great for thickening soups"
+      },
+      {
+        "name": "Bean Sprout",
+        "fact": "Bean sprouts are tiny germinated beans crunchy and fresh in stir-fries"
+      },
+      {
+        "name": "Snow Pea",
+        "fact": "Snow peas are flat pods where you eat the whole pod crunchy and sweet"
+      },
+      {
+        "name": "Green Bean",
+        "fact": "Green beans are long pods picked young and eaten whole cooked or raw"
+      },
+      {
+        "name": "Butternut Squash",
+        "fact": "Butternut squash has a sweet nutty flavor and turns bright orange when ripe"
+      },
+      {
+        "name": "Acorn Squash",
+        "fact": "Acorn squash is shaped like an acorn and has sweet orange flesh"
+      },
+      {
+        "name": "Delicata Squash",
+        "fact": "Delicata squash has cream and green striped skin that is edible when cooked"
+      },
+      {
+        "name": "Romanesco",
+        "fact": "Romanesco is a striking bright green vegetable that forms a perfect natural fractal pattern"
+      },
+      {
+        "name": "Sunchoke",
+        "fact": "Sunchokes are also called Jerusalem artichokes and taste sweet and nutty"
+      },
+      {
+        "name": "Taro",
+        "fact": "Taro is a starchy root vegetable used in Hawaiian poi and Asian cooking"
+      },
+      {
+        "name": "Jicama",
+        "fact": "Jicama is a crunchy white root vegetable that tastes like a cross between apple and potato"
+      },
+      {
+        "name": "Water Chestnut",
+        "fact": "Water chestnuts are crunchy aquatic vegetables that stay crispy even when cooked"
+      },
+      {
+        "name": "Lotus Root",
+        "fact": "Lotus root has a beautiful lace pattern when sliced and is crunchy to eat"
+      },
+      {
+        "name": "Daikon",
+        "fact": "Daikon is a giant white Japanese radish with a mild flavor"
+      },
+      {
+        "name": "Celeriac",
+        "fact": "Celeriac is the root of the celery plant with a mild celery-like flavor"
+      },
+      {
+        "name": "Samphire",
+        "fact": "Samphire is a crunchy sea vegetable that naturally tastes salty"
+      },
+      {
+        "name": "Dandelion Greens",
+        "fact": "Dandelion greens are edible and packed with more nutrients than many garden vegetables"
+      },
+      {
+        "name": "Nettles",
+        "fact": "Stinging nettles sting when raw but lose their sting completely when cooked"
+      },
+      {
+        "name": "Purslane",
+        "fact": "Purslane is a common weed that is actually highly nutritious and edible"
+      },
+      {
+        "name": "Sorrel",
+        "fact": "Sorrel has a sour lemony taste because it contains oxalic acid"
+      },
+      {
+        "name": "Pak Choi",
+        "fact": "Pak choi is a tender Asian green great for quick stir-frying"
+      },
+      {
+        "name": "Enoki Mushroom",
+        "fact": "Enoki mushrooms are long thin white mushrooms with tiny caps"
+      },
+      {
+        "name": "Shiitake",
+        "fact": "Shiitake mushrooms have a rich savory flavor and boost the immune system"
+      },
+      {
+        "name": "Portobello",
+        "fact": "Portobello mushrooms are large enough to grill like a burger patty"
+      },
+      {
+        "name": "Oyster Mushroom",
+        "fact": "Oyster mushrooms grow in fan-shaped clusters and have a delicate seafood-like taste"
+      },
+      {
+        "name": "Truffle",
+        "fact": "Truffles are rare underground fungi worth more than gold by weight"
+      },
+      {
+        "name": "Chive",
+        "fact": "Chives are the smallest members of the onion family used as a fresh herb garnish"
+      },
+      {
+        "name": "Shallot",
+        "fact": "Shallots taste milder and sweeter than onions and are popular in French cooking"
+      },
+      {
+        "name": "Spring Onion",
+        "fact": "Spring onions are young onions harvested before the bulb fully forms"
+      },
+      {
+        "name": "Rapini",
+        "fact": "Rapini or broccoli rabe has a pleasantly bitter taste popular in Italian cuisine"
+      },
+      {
+        "name": "Fiddlehead Fern",
+        "fact": "Fiddlehead ferns are young coiled fern fronds harvested in spring"
+      },
+      {
+        "name": "Bamboo Shoot",
+        "fact": "Bamboo shoots are young bamboo sprouts eaten as a crunchy vegetable in Asia"
+      },
+      {
+        "name": "Galangal",
+        "fact": "Galangal looks like ginger but tastes sharper and more piney"
+      },
+      {
+        "name": "Turmeric",
+        "fact": "Turmeric is a bright yellow root that stains everything it touches and is very healthy"
+      },
+      {
+        "name": "Lemongrass",
+        "fact": "Lemongrass is a tropical grass that smells and tastes like fresh lemon"
+      },
+      {
+        "name": "Bitter Melon",
+        "fact": "Bitter melon is a bumpy green vegetable that tastes very bitter but is medicinal"
+      },
+      {
+        "name": "Moringa",
+        "fact": "Moringa leaves are called miracle leaves because they are packed with nutrients"
+      },
+      {
+        "name": "Chayote",
+        "fact": "Chayote is a pear-shaped green vegetable with a crunchy mild flavor"
+      },
+      {
+        "name": "Plantain",
+        "fact": "Plantains look like bananas but are starchy and eaten cooked not raw"
+      },
+      {
+        "name": "Yam",
+        "fact": "True yams can grow over a meter long and are an important food in West Africa"
+      },
+      {
+        "name": "Cassava",
+        "fact": "Cassava is a starchy root that is the main ingredient in tapioca"
+      },
+      {
+        "name": "Breadfruit",
+        "fact": "Breadfruit is a starchy tropical vegetable that can replace bread and potatoes"
+      },
+      {
+        "name": "Nopales",
+        "fact": "Nopales are the edible pads of the prickly pear cactus popular in Mexico"
+      },
+      {
+        "name": "Calabash",
+        "fact": "Calabash is a gourd used as both a vegetable and a natural container"
+      },
+      {
+        "name": "Malanga",
+        "fact": "Malanga is a tropical root vegetable with a nutty earthy flavor"
+      },
+      {
+        "name": "Amaranth Leaves",
+        "fact": "Amaranth leaves are edible greens from the same plant that produces amaranth grain"
+      },
+      {
+        "name": "Kabocha",
+        "fact": "Kabocha is a Japanese pumpkin with green skin and very sweet dense flesh"
+      },
+      {
+        "name": "Yard Long Bean",
+        "fact": "Yard long beans can actually grow up to 18 inches in length"
+      },
+      {
+        "name": "Winged Bean",
+        "fact": "The winged bean has four frilly wings along its pod and is entirely edible"
+      },
+      {
+        "name": "Tiger Nut",
+        "fact": "Tiger nuts are not nuts but tiny root tubers that are sweet and crunchy"
+      },
+      {
+        "name": "Chinese Broccoli",
+        "fact": "Chinese broccoli has thick stems and bitter flat leaves popular in Asian cooking"
+      },
+      {
+        "name": "Sea Beans",
+        "fact": "Sea beans grow near the ocean and taste naturally salty without adding salt"
+      },
+      {
+        "name": "Ground Cherry",
+        "fact": "Ground cherries are small yellow fruits inside papery husks with a sweet pineapple taste"
+      },
+      {
+        "name": "Romanesco Broccoli",
+        "fact": "Romanesco broccoli forms a natural fractal spiral pattern and is bright lime green"
+      },
+      {
+        "name": "Purple Cauliflower",
+        "fact": "Purple cauliflower gets its color from anthocyanins the same pigment as blueberries"
+      },
+      {
+        "name": "Radicchio",
+        "fact": "Radicchio is a red leafy vegetable with a pleasantly bitter taste used in Italian salads"
+      },
+      {
+        "name": "Endive",
+        "fact": "Endive is a crisp slightly bitter lettuce used in elegant salads and appetizers"
+      },
+      {
+        "name": "Mizuna",
+        "fact": "Mizuna is a Japanese mustard green with feathery leaves and a mild peppery taste"
+      },
+      {
+        "name": "Tatsoi",
+        "fact": "Tatsoi forms a beautiful flat rosette of dark spoon-shaped leaves"
+      },
+      {
+        "name": "Perilla",
+        "fact": "Perilla is a fragrant Asian herb leaf used in Japanese and Korean cooking"
+      },
+      {
+        "name": "Agretti",
+        "fact": "Agretti is an Italian coastal green tasting slightly salty and resembling chives"
+      },
+      {
+        "name": "Scorzonera",
+        "fact": "Scorzonera is a black-skinned root vegetable with a mild oyster-like flavor"
+      },
+      {
+        "name": "Salsify",
+        "fact": "Salsify is a long white root vegetable nicknamed the oyster plant for its mild taste"
+      },
+      {
+        "name": "Yacon",
+        "fact": "Yacon is a South American root that tastes surprisingly sweet like apple and pear"
+      },
+      {
+        "name": "Oca",
+        "fact": "Oca is a colorful tuber from the Andes eaten as a potato substitute in South America"
+      }
+    ]
+  }
+}

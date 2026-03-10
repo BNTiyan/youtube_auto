@@ -19,6 +19,8 @@ import sys
 import json
 import argparse
 import time
+import glob
+import re
 from google import genai
 import httplib2
 
@@ -124,8 +126,8 @@ Rules:
                 time.sleep(retry_delay)
                 retry_delay *= 2  # Exponential backoff
             else:
-                print(f"❌  Gemini API failed after {max_retries} attempts: {e}")
-                sys.exit(1)
+                print(f"  ⚠️   Gemini API failed after {max_retries} attempts. Falling back to local JSON data...")
+                return None
 
     # Strip markdown fences if present
     if raw.startswith("```"):
@@ -142,13 +144,75 @@ Rules:
     except json.JSONDecodeError as e:
         print(f"❌  Error parsing JSON from Gemini: {e}")
         print(f"Raw response: {raw}")
-        sys.exit(1)
+        return None
 
     print(f"\n📝  Generated Title     : {metadata['title']}")
     print(f"🏷️   Generated Tags      : {', '.join(metadata['tags'][:5])}...")
     print(f"📄  Description Preview : {metadata['description'][:120]}...")
 
     return metadata
+
+
+def generate_metadata_fallback(video_topic: str, niche: str, tone: str) -> dict:
+    """
+    Fallback: Try to find the item in local JSON configs to gather keywords/info.
+    """
+    print(f"  🔍  Attempting local JSON lookup for: {video_topic}")
+    
+    # Clean topic name (e.g. "Lion (Filename context: Lion_Learning.mp4)" -> "Lion")
+    clean_topic = video_topic
+    match = re.search(r"context: ([^_]+)", video_topic)
+    if match:
+        clean_topic = match.group(1).strip()
+    else:
+        # Just grab the first word or handle simple string
+        clean_topic = video_topic.split()[0].strip()
+
+    # Directories to search
+    config_dirs = ["content_config", "tech_content_config"]
+    item_data = None
+    
+    for d in config_dirs:
+        if not os.path.isdir(d):
+            continue
+        for fpath in glob.glob(os.path.join(d, "*.json")):
+            try:
+                with open(fpath) as f:
+                    cfg = json.load(f)
+                # Check for direct key match (case insensitive)
+                for key, data in cfg.items():
+                    if key.lower() == clean_topic.lower():
+                        item_data = data
+                        break
+                if item_data: break
+            except Exception:
+                continue
+        if item_data: break
+        
+    if item_data:
+        print(f"  ✅  Found '{clean_topic}' in local JSON!")
+        explanation = item_data.get("explanation", f"A video about {clean_topic}.")
+        points = item_data.get("points", [])
+        
+        description = f"{explanation}\n\n"
+        if points:
+            description += "Key learning points:\n"
+            for p in points:
+                description += f"• {p}\n"
+        description += f"\n#Youtube #Learning #Education #{clean_topic} #{niche.replace(' ', '')}"
+        
+        return {
+            "title": f"All About {clean_topic} | {niche} Learning",
+            "description": description,
+            "tags": [clean_topic.lower(), niche.lower(), "learning", "education", "facts"]
+        }
+    
+    print(f"  ⚠️   No local JSON found for '{clean_topic}'. Using basic metadata.")
+    return {
+        "title": f"{clean_topic} - {niche} Education",
+        "description": f"Learn about {clean_topic} in this {tone} video.\n\n#Youtube #Education #{clean_topic}",
+        "tags": [clean_topic.lower(), "education", "learning"]
+    }
 
 
 # ─── YOUTUBE UPLOAD ──────────────────────────────────────────────────────────
@@ -354,6 +418,13 @@ def main():
             niche=args.niche,
             tone=args.tone,
         )
+        
+        if metadata is None:
+            metadata = generate_metadata_fallback(
+                video_topic=topic_context,
+                niche=args.niche,
+                tone=args.tone,
+            )
 
         meta_path = os.path.splitext(video_path)[0] + "_metadata.json"
         with open(meta_path, "w") as f:

@@ -102,19 +102,23 @@ Rules:
 
     print("\n🤖  Generating metadata with Gemini AI...")
     
-    max_retries = 3
-    retry_delay = 5  # Initial delay in seconds
+    max_retries = 4
+    retry_delay = 10  # Initial delay in seconds
     
     for attempt in range(max_retries):
         try:
             response = client.models.generate_content(
-                model='gemini-2.0-flash',  # Ensure model name is correct (user had 2.5-flash which might be invalid or experimental)
+                model='gemini-2.5-flash',
                 contents=prompt
             )
             raw = response.text.strip()
             break  # Success!
         except Exception as e:
-            if attempt < max_retries - 1:
+            err_msg = str(e)
+            if "429" in err_msg or "RESOURCE_EXHAUSTED" in err_msg:
+                print(f"  ⚠️   Gemini Quota Exceeded (429). Waiting 65s to reset...")
+                time.sleep(65)
+            elif attempt < max_retries - 1:
                 print(f"  ⚠️   Gemini API busy (attempt {attempt+1}/{max_retries}): {e}")
                 print(f"      Retrying in {retry_delay}s...")
                 time.sleep(retry_delay)

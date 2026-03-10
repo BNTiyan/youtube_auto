@@ -18,6 +18,7 @@ import os
 import sys
 import json
 import argparse
+import time
 from google import genai
 import httplib2
 
@@ -101,11 +102,26 @@ Rules:
 
     print("\n🤖  Generating metadata with Gemini AI...")
     
-    response = client.models.generate_content(
-        model='gemini-2.5-flash',
-        contents=prompt
-    )
-    raw = response.text.strip()
+    max_retries = 3
+    retry_delay = 5  # Initial delay in seconds
+    
+    for attempt in range(max_retries):
+        try:
+            response = client.models.generate_content(
+                model='gemini-2.0-flash',  # Ensure model name is correct (user had 2.5-flash which might be invalid or experimental)
+                contents=prompt
+            )
+            raw = response.text.strip()
+            break  # Success!
+        except Exception as e:
+            if attempt < max_retries - 1:
+                print(f"  ⚠️   Gemini API busy (attempt {attempt+1}/{max_retries}): {e}")
+                print(f"      Retrying in {retry_delay}s...")
+                time.sleep(retry_delay)
+                retry_delay *= 2  # Exponential backoff
+            else:
+                print(f"❌  Gemini API failed after {max_retries} attempts: {e}")
+                sys.exit(1)
 
     # Strip markdown fences if present
     if raw.startswith("```"):

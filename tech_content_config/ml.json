@@ -1,0 +1,324 @@
+{
+    "ml_and_cv": {
+        "Logistic Regression": {
+            "explanation": "Simple linear model used for binary classification with probabilistic output",
+            "points": [
+                "Uses sigmoid function to map linear combination to probability between 0 and 1",
+                "Interpretable — coefficients show feature importance and direction of impact",
+                "Trained with maximum likelihood estimation and gradient descent",
+                "Regularization (L1/L2) prevents overfitting and performs feature selection",
+                "Baseline model for most binary classification problems before trying complex models"
+            ]
+        },
+        "Decision Tree": {
+            "explanation": "Tree-based model that makes decisions by splitting features based on thresholds",
+            "points": [
+                "Non-parametric — no assumptions about data distribution",
+                "Splits chosen to maximize information gain or Gini impurity reduction",
+                "Prone to overfitting — needs pruning or depth/max_leaf_nodes limits",
+                "Very interpretable — can be visualized as a flowchart",
+                "Foundation for ensemble methods like Random Forest and Gradient Boosting"
+            ]
+        },
+        "Random Forest": {
+            "explanation": "Ensemble of decision trees using bagging and feature randomness for better accuracy",
+            "points": [
+                "Reduces overfitting compared to single decision tree via averaging predictions",
+                "Feature importance score helps understand which variables drive decisions",
+                "Handles missing values and mixed data types naturally",
+                "Out-of-bag (OOB) error provides internal validation without separate test set",
+                "One of the strongest off-the-shelf models for tabular data"
+            ]
+        },
+        "Gradient Boosting": {
+            "explanation": "Sequential ensemble technique that builds trees to correct previous errors",
+            "points": [
+                "Optimizes arbitrary differentiable loss functions via gradient descent in function space",
+                "XGBoost, LightGBM, CatBoost are popular high-performance implementations",
+                "Strong regularization options (learning rate, subsampling, tree pruning)",
+                "Usually outperforms Random Forest on structured/tabular data",
+                "Feature importance and partial dependence plots aid interpretability"
+            ]
+        },
+        "Support Vector Machine": {
+            "explanation": "Powerful classifier that finds the optimal hyperplane with maximum margin",
+            "points": [
+                "Maximizes margin between classes using support vectors",
+                "Kernel trick allows non-linear classification without explicit transformation",
+                "Common kernels: linear, RBF (Gaussian), polynomial, sigmoid",
+                "Effective in high-dimensional spaces (text classification, bioinformatics)",
+                "C parameter controls trade-off between margin and misclassification"
+            ]
+        },
+        "Neural Network": {
+            "explanation": "Interconnected nodes organized in layers that learn complex patterns",
+            "points": [
+                "Universal function approximators — can model any continuous function",
+                "Trained with backpropagation and gradient descent variants (Adam, RMSprop)",
+                "Activation functions (ReLU, GELU, Swish) introduce non-linearity",
+                "Deep networks require regularization (dropout, weight decay, batch norm)",
+                "Foundation for almost all modern deep learning architectures"
+            ]
+        },
+        "Convolutional Neural Network": {
+            "explanation": "Specialized neural network for grid-like data like images using convolution",
+            "points": [
+                "Convolution + pooling layers extract hierarchical spatial features",
+                "Parameter sharing and sparse connectivity reduce computation and parameters",
+                "Local receptive fields capture translation-invariant patterns",
+                "Architectures: LeNet, AlexNet, VGG, ResNet, EfficientNet, ConvNeXt",
+                "Dominates computer vision tasks since 2012 ImageNet breakthrough"
+            ]
+        },
+        "Recurrent Neural Network": {
+            "explanation": "Neural network designed for sequential data with loops in the architecture",
+            "points": [
+                "Maintains hidden state that captures information from previous timesteps",
+                "Vanishing/exploding gradients problem addressed by LSTM and GRU",
+                "Used for time series, NLP, speech recognition before transformers",
+                "Bidirectional RNNs capture context from both directions",
+                "Mostly replaced by transformers in NLP but still used in some time-series tasks"
+            ]
+        },
+        "LSTM": {
+            "explanation": "Long Short-Term Memory cell that addresses vanishing gradient problem in RNNs",
+            "points": [
+                "Three gates (forget, input, output) control information flow",
+                "Cell state acts as conveyor belt — long-term dependencies preserved",
+                "Widely used in speech recognition, machine translation, time series",
+                "Peephole connections and coupled input-forget gate are common variants",
+                "Still relevant in resource-constrained or sequential modeling tasks"
+            ]
+        },
+        "GRU": {
+            "explanation": "Gated Recurrent Unit — simplified LSTM with fewer parameters",
+            "points": [
+                "Two gates (update, reset) instead of three — computationally lighter",
+                "Often performs similarly to LSTM with faster training",
+                "Popular in mobile/edge devices and real-time applications",
+                "Reset gate controls how much past information to forget",
+                "Update gate decides how much past information to carry forward"
+            ]
+        },
+        "Transformer": {
+            "explanation": "Architecture based entirely on attention mechanisms — no recurrence or convolution",
+            "points": [
+                "Self-attention allows modeling long-range dependencies efficiently",
+                "Multi-head attention captures different types of relationships",
+                "Positional encoding adds sequence order information",
+                "Foundation of nearly all state-of-the-art NLP and vision models since 2017",
+                "Scales very well with data and compute (scaling laws)"
+            ]
+        },
+        "BERT": {
+            "explanation": "Bidirectional Encoder Representations from Transformers — pre-trained language model",
+            "points": [
+                "Trained with masked language modeling and next sentence prediction",
+                "Bidirectional context understanding — major improvement over left-to-right models",
+                "Fine-tuning achieves SOTA on most NLP tasks in 2018–2019",
+                "Variants: RoBERTa, ALBERT, DistilBERT, ELECTRA, DeBERTa",
+                "Still widely used as backbone for many downstream tasks"
+            ]
+        },
+        "Vision Transformer": {
+            "explanation": "Transformer architecture applied directly to image patches instead of convolutions",
+            "points": [
+                "Splits image into fixed-size patches → treats as sequence",
+                "ViT (2020) showed transformers can outperform CNNs with enough data",
+                "Variants: Swin Transformer, DeiT, CaiT, BEiT, MAE",
+                "Strong scaling behavior — larger models + more data = better performance",
+                "Now dominant in many computer vision benchmarks"
+            ]
+        },
+        "YOLO": {
+            "explanation": "You Only Look Once — real-time object detection family of models",
+            "points": [
+                "Single-stage detector — predicts bounding boxes and classes in one pass",
+                "YOLOv1 (2015) → YOLOv8/YOLOv10 (2024–2025) — massive speed/accuracy improvements",
+                "Anchor-free versions (YOLOv5+, YOLOv8) improved generalization",
+                "Widely used in autonomous driving, surveillance, robotics",
+                "Balances speed and accuracy better than two-stage detectors"
+            ]
+        },
+        "Faster R-CNN": {
+            "explanation": "Two-stage object detection model with Region Proposal Network",
+            "points": [
+                "Region Proposal Network (RPN) generates candidate boxes efficiently",
+                "Second stage classifies and refines boxes",
+                "Introduced ROI pooling → ROI Align improved accuracy",
+                "Mask R-CNN extension adds instance segmentation",
+                "Strong baseline for many detection and segmentation tasks"
+            ]
+        },
+        "EfficientNet": {
+            "explanation": "Family of CNNs that scale depth, width, and resolution optimally",
+            "points": [
+                "Compound scaling method — balances all dimensions together",
+                "EfficientNet-B7 outperformed previous SOTA with 8.4× fewer parameters",
+                "EfficientNetV2 improved training speed and regularization",
+                "Widely used backbone for classification and detection",
+                "Mobile-friendly variants (EfficientNet-Lite)"
+            ]
+        },
+        "ResNet": {
+            "explanation": "Residual Network — introduced skip connections to enable very deep CNNs",
+            "points": [
+                "Residual blocks — shortcut connections solve vanishing gradient problem",
+                "ResNet-50/101/152 became de-facto backbones after 2015",
+                "ResNeXt introduced cardinality (grouped convolutions)",
+                "ResNet-D improved stem and downsampling",
+                "Still widely used in 2025 due to maturity and speed"
+            ]
+        },
+        "MobileNet": {
+            "explanation": "Lightweight CNN architecture optimized for mobile and edge devices",
+            "points": [
+                "Depthwise separable convolutions reduce parameters and computation",
+                "MobileNetV3 + h-swish + squeeze-and-excitation → very efficient",
+                "Used in on-device vision (face detection, OCR, AR)",
+                "Quantization and pruning friendly",
+                "Backbone for many edge AI applications"
+            ]
+        },
+        "GAN": {
+            "explanation": "Generative Adversarial Network — two networks competing to generate realistic data",
+            "points": [
+                "Generator vs Discriminator minimax game",
+                "DCGAN, StyleGAN, BigGAN, StyleGAN3, Diffusion models largely replaced pure GANs",
+                "Mode collapse and training instability are classic challenges",
+                "Conditional GANs (cGAN) generate specific classes/styles",
+                "Still used in image-to-image translation (CycleGAN, Pix2Pix)"
+            ]
+        },
+        "Diffusion Model": {
+            "explanation": "Generative model that learns to reverse a noising process to create data",
+            "points": [
+                "State-of-the-art image/video generation in 2025 (Stable Diffusion, DALL·E 3, Imagen 3)",
+                "Denoising Diffusion Probabilistic Models (DDPM) foundation",
+                "Latent diffusion (LDM) makes training feasible",
+                "Classifier-free guidance improves prompt adherence",
+                "Fast samplers (DDIM, Heun, LCM, Consistency Models) enable real-time generation"
+            ]
+        },
+        "Vision-Language Model": {
+            "explanation": "Models trained jointly on images and text for multimodal understanding",
+            "points": [
+                "CLIP (2021) — contrastive learning on 400M image-text pairs",
+                "Flamingo, BLIP, BLIP-2, LLaVA, Kosmos-2, Qwen-VL, InternVL",
+                "Enable zero-shot classification, image captioning, visual question answering",
+                "Most use frozen vision encoder + LLM with projection layer",
+                "Scaling laws apply strongly — bigger models + more data = much better performance"
+            ]
+        },
+        "Segment Anything Model": {
+            "explanation": "Foundation model for image segmentation — segments anything with prompts",
+            "points": [
+                "SAM (2023) — trained on 1B+ masks on 11M images",
+                "Promptable — point, box, mask, text (with extensions)",
+                "Zero-shot generalization to unseen objects/domains",
+                "SAM 2 (2024) extends to video segmentation",
+                "Ecosystem: MobileSAM, FastSAM, Grounding DINO + SAM"
+            ]
+        },
+        "YOLO-World": {
+            "explanation": "Real-time open-vocabulary object detection model",
+            "points": [
+                "Combines YOLO architecture with CLIP-style text encoder",
+                "Detects arbitrary objects given text prompt (zero-shot)",
+                "Very fast inference — real-time on edge devices",
+                "Popular for robotics, autonomous driving, video surveillance",
+                "Easily fine-tuned on custom classes"
+            ]
+        },
+        "U-Net": {
+            "explanation": "Classic architecture for biomedical image segmentation with encoder-decoder structure",
+            "points": [
+                "Symmetric encoder-decoder with skip connections",
+                "Still widely used in medical imaging and diffusion models",
+                "Attention U-Net, UNet++, TransUNet, Swin-UNet are modern variants",
+                "Very effective with limited labeled data",
+                "Backbone of many segmentation pipelines"
+            ]
+        },
+        "Mask R-CNN": {
+            "explanation": "Extension of Faster R-CNN that adds instance segmentation branch",
+            "points": [
+                "Detects objects + generates pixel-level masks",
+                "ROI Align instead of ROI Pooling improves mask accuracy",
+                "Used in COCO dataset and many real-world applications",
+                "Detectron2 and MMDetection provide strong implementations",
+                "Foundation for many modern segmentation models"
+            ]
+        },
+        "Swin Transformer": {
+            "explanation": "Hierarchical vision transformer with shifted windows for efficient computation",
+            "points": [
+                "Shifted window attention reduces complexity from quadratic to linear",
+                "Hierarchical feature maps — works well with detection/segmentation",
+                "SOTA performance on ImageNet and COCO in 2021–2022",
+                "Swin V2 improved stability and scaling",
+                "Widely used backbone in 2025"
+            ]
+        },
+        "ConvNeXt": {
+            "explanation": "Modernized CNN that competes with transformers using updated design choices",
+            "points": [
+                "Modernized ResNet with transformer-inspired improvements",
+                "Large kernel sizes, layer normalization, patchify stem",
+                "ConvNeXt V2 added GRN and global response normalization",
+                "Often matches or beats Swin Transformer with less compute",
+                "Faster inference than transformers — popular on edge"
+            ]
+        },
+        "YOLOv8": {
+            "explanation": "Ultralytics YOLOv8 — state-of-the-art real-time object detection model",
+            "points": [
+                "Anchor-free detection head",
+                "Mosaic augmentation + mixup training",
+                "Supports detection, segmentation, classification, pose estimation",
+                "Very fast on CPU and GPU",
+                "Active community and ecosystem (Ultralytics HUB)"
+            ]
+        },
+        "Grounding DINO": {
+            "explanation": "Open-set object detection model that detects objects given text prompts",
+            "points": [
+                "Combines DINO detector with grounded pre-training",
+                "Zero-shot detection — detects arbitrary objects via text",
+                "Excellent when combined with Segment Anything Model",
+                "Strong performance on COCO novel classes",
+                "Widely used in open-vocabulary pipelines"
+            ]
+        },
+        "CLIP": {
+            "explanation": "Contrastive Language-Image Pretraining — foundation for vision-language understanding",
+            "points": [
+                "Trained on 400 million image-text pairs",
+                "Zero-shot classification — matches text to image embeddings",
+                "Foundation for Stable Diffusion, DALL·E, Flamingo, LLaVA",
+                "OpenCLIP and OpenCLIP-ViT variants improve performance",
+                "Scaling laws still hold — bigger CLIP = better downstream performance"
+            ]
+        },
+        "Stable Diffusion": {
+            "explanation": "Latent diffusion model that generates high-quality images from text",
+            "points": [
+                "Latent diffusion — operates in lower-dimensional latent space",
+                "Stable Diffusion 1.5 → SDXL → SD3 → Flux.1 (2024–2025)",
+                "Open-source ecosystem — ControlNet, LoRA, IP-Adapter",
+                "Fine-tuning techniques: DreamBooth, Textual Inversion",
+                "Still dominant open-source image generation model in 2025"
+            ]
+        },
+        "DINOv2": {
+            "explanation": "Self-supervised vision transformer that produces excellent feature representations",
+            "points": [
+                "Self-distillation with no labels — knowledge distillation on large unlabeled data",
+                "Excellent frozen backbone for segmentation, detection, retrieval",
+                "DINOv2-g/14 is among the strongest open vision backbones",
+                "Registers (extra tokens) improve patch-level representations",
+                "Widely used in 2025 for vision foundation models"
+            ]
+        }
+    }
+}

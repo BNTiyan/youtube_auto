@@ -1,1106 +1,462 @@
 {
-  "cloud": {
-    "items": [
-      {
-        "name": "Cloud Computing",
-        "explanation": "Cloud computing delivers computing resources over the internet on demand at any scale",
-        "points": [
-          "Core concept of Cloud Computing used widely in modern software and AI systems",
-          "Important for understanding: Cloud computing delivers computing resources over the internet on demand at any scale",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "AWS",
-        "explanation": "Amazon Web Services is the world's largest cloud platform with over 200 services",
-        "points": [
-          "Core concept of AWS used widely in modern software and AI systems",
-          "Important for understanding: Amazon Web Services is the world's largest cloud platform with over 200 services",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Google Cloud",
-        "explanation": "Google Cloud Platform offers cloud services powered by Google's global infrastructure",
-        "points": [
-          "Core concept of Google Cloud used widely in modern software and AI systems",
-          "Important for understanding: Google Cloud Platform offers cloud services powered by Google's global infrastructure",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Microsoft Azure",
-        "explanation": "Azure is Microsoft's cloud platform tightly integrated with enterprise Windows products",
-        "points": [
-          "Core concept of Microsoft Azure used widely in modern software and AI systems",
-          "Important for understanding: Azure is Microsoft's cloud platform tightly integrated with enterprise Windows products",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Serverless",
-        "explanation": "Serverless lets you run code without managing servers \u2014 you pay only per execution",
-        "points": [
-          "Core concept of Serverless used widely in modern software and AI systems",
-          "Important for understanding: Serverless lets you run code without managing servers \u2014 you pay only per execution",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "AWS Lambda",
-        "explanation": "Lambda is AWS's serverless compute service that runs code in response to events",
-        "points": [
-          "Core concept of AWS Lambda used widely in modern software and AI systems",
-          "Important for understanding: Lambda is AWS's serverless compute service that runs code in response to events",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "S3",
-        "explanation": "AWS S3 is virtually unlimited object storage for files, images, backups, and data lakes",
-        "points": [
-          "Core concept of S3 used widely in modern software and AI systems",
-          "Important for understanding: AWS S3 is virtually unlimited object storage for files, images, backups, and data lakes",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "EC2",
-        "explanation": "AWS EC2 provides resizable virtual machines in the cloud for any workload",
-        "points": [
-          "Core concept of EC2 used widely in modern software and AI systems",
-          "Important for understanding: AWS EC2 provides resizable virtual machines in the cloud for any workload",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "VPC",
-        "explanation": "A Virtual Private Cloud is your own isolated network section within a public cloud",
-        "points": [
-          "Core concept of VPC used widely in modern software and AI systems",
-          "Important for understanding: A Virtual Private Cloud is your own isolated network section within a public cloud",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "IAM",
-        "explanation": "Identity and Access Management controls who can do what across all your cloud resources",
-        "points": [
-          "Core concept of IAM used widely in modern software and AI systems",
-          "Important for understanding: Identity and Access Management controls who can do what across all your cloud resources",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "CDN",
-        "explanation": "A Content Delivery Network caches content at edge locations worldwide for fast delivery",
-        "points": [
-          "Core concept of CDN used widely in modern software and AI systems",
-          "Important for understanding: A Content Delivery Network caches content at edge locations worldwide for fast delivery",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "CloudFront",
-        "explanation": "AWS CloudFront is a global CDN that speeds up delivery of websites, APIs, and media",
-        "points": [
-          "Core concept of CloudFront used widely in modern software and AI systems",
-          "Important for understanding: AWS CloudFront is a global CDN that speeds up delivery of websites, APIs, and media",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Auto Scaling",
-        "explanation": "Auto scaling automatically adds or removes compute instances based on demand",
-        "points": [
-          "Core concept of Auto Scaling used widely in modern software and AI systems",
-          "Important for understanding: Auto scaling automatically adds or removes compute instances based on demand",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Elastic Load Balancing",
-        "explanation": "ELB distributes incoming traffic across multiple healthy EC2 instances automatically",
-        "points": [
-          "Core concept of Elastic Load Balancing used widely in modern software and AI systems",
-          "Important for understanding: ELB distributes incoming traffic across multiple healthy EC2 instances automatically",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "RDS",
-        "explanation": "AWS RDS is a managed relational database service supporting MySQL, Postgres, and more",
-        "points": [
-          "Core concept of RDS used widely in modern software and AI systems",
-          "Important for understanding: AWS RDS is a managed relational database service supporting MySQL, Postgres, and more",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Aurora",
-        "explanation": "Aurora is AWS's cloud-native database offering up to 5x MySQL performance",
-        "points": [
-          "Core concept of Aurora used widely in modern software and AI systems",
-          "Important for understanding: Aurora is AWS's cloud-native database offering up to 5x MySQL performance",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "DynamoDB",
-        "explanation": "DynamoDB is AWS's serverless NoSQL database with single-digit millisecond response times",
-        "points": [
-          "Core concept of DynamoDB used widely in modern software and AI systems",
-          "Important for understanding: DynamoDB is AWS's serverless NoSQL database with single-digit millisecond response times",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "ElastiCache",
-        "explanation": "ElastiCache provides managed Redis and Memcached caching in the cloud",
-        "points": [
-          "Core concept of ElastiCache used widely in modern software and AI systems",
-          "Important for understanding: ElastiCache provides managed Redis and Memcached caching in the cloud",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "SQS",
-        "explanation": "AWS SQS is a managed message queue for decoupling distributed application components",
-        "points": [
-          "Core concept of SQS used widely in modern software and AI systems",
-          "Important for understanding: AWS SQS is a managed message queue for decoupling distributed application components",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "SNS",
-        "explanation": "AWS SNS is a pub-sub messaging service for fan-out notifications to many subscribers",
-        "points": [
-          "Core concept of SNS used widely in modern software and AI systems",
-          "Important for understanding: AWS SNS is a pub-sub messaging service for fan-out notifications to many subscribers",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "EventBridge",
-        "explanation": "EventBridge is a serverless event bus connecting AWS services and SaaS apps with routing rules",
-        "points": [
-          "Core concept of EventBridge used widely in modern software and AI systems",
-          "Important for understanding: EventBridge is a serverless event bus connecting AWS services and SaaS apps with routing rules",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Kinesis",
-        "explanation": "AWS Kinesis processes real-time streaming data from millions of sources simultaneously",
-        "points": [
-          "Core concept of Kinesis used widely in modern software and AI systems",
-          "Important for understanding: AWS Kinesis processes real-time streaming data from millions of sources simultaneously",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "ECS",
-        "explanation": "AWS ECS is a managed container orchestration service for running Docker containers",
-        "points": [
-          "Core concept of ECS used widely in modern software and AI systems",
-          "Important for understanding: AWS ECS is a managed container orchestration service for running Docker containers",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "EKS",
-        "explanation": "AWS EKS is a managed Kubernetes service removing the burden of running control planes",
-        "points": [
-          "Core concept of EKS used widely in modern software and AI systems",
-          "Important for understanding: AWS EKS is a managed Kubernetes service removing the burden of running control planes",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Fargate",
-        "explanation": "AWS Fargate runs containers without managing any underlying servers or clusters",
-        "points": [
-          "Core concept of Fargate used widely in modern software and AI systems",
-          "Important for understanding: AWS Fargate runs containers without managing any underlying servers or clusters",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "App Runner",
-        "explanation": "AWS App Runner deploys containerized web apps automatically from code or images",
-        "points": [
-          "Core concept of App Runner used widely in modern software and AI systems",
-          "Important for understanding: AWS App Runner deploys containerized web apps automatically from code or images",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "API Gateway AWS",
-        "explanation": "AWS API Gateway creates, manages, and secures REST, HTTP, and WebSocket APIs at scale",
-        "points": [
-          "Core concept of API Gateway AWS used widely in modern software and AI systems",
-          "Important for understanding: AWS API Gateway creates, manages, and secures REST, HTTP, and WebSocket APIs at scale",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Route 53",
-        "explanation": "AWS Route 53 is a scalable DNS service with health checking and traffic routing",
-        "points": [
-          "Core concept of Route 53 used widely in modern software and AI systems",
-          "Important for understanding: AWS Route 53 is a scalable DNS service with health checking and traffic routing",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "CloudWatch",
-        "explanation": "CloudWatch collects logs, metrics, and alarms for all AWS resources in one place",
-        "points": [
-          "Core concept of CloudWatch used widely in modern software and AI systems",
-          "Important for understanding: CloudWatch collects logs, metrics, and alarms for all AWS resources in one place",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "CloudTrail",
-        "explanation": "CloudTrail logs every API call made in your AWS account for auditing and compliance",
-        "points": [
-          "Core concept of CloudTrail used widely in modern software and AI systems",
-          "Important for understanding: CloudTrail logs every API call made in your AWS account for auditing and compliance",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Secrets Manager AWS",
-        "explanation": "AWS Secrets Manager stores, rotates, and manages database passwords and API keys",
-        "points": [
-          "Core concept of Secrets Manager AWS used widely in modern software and AI systems",
-          "Important for understanding: AWS Secrets Manager stores, rotates, and manages database passwords and API keys",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "KMS",
-        "explanation": "AWS Key Management Service creates and controls encryption keys for protecting data",
-        "points": [
-          "Core concept of KMS used widely in modern software and AI systems",
-          "Important for understanding: AWS Key Management Service creates and controls encryption keys for protecting data",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "WAF",
-        "explanation": "AWS WAF filters malicious web traffic to protect your applications from attacks",
-        "points": [
-          "Core concept of WAF used widely in modern software and AI systems",
-          "Important for understanding: AWS WAF filters malicious web traffic to protect your applications from attacks",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Shield",
-        "explanation": "AWS Shield provides automatic DDoS protection for all AWS resources",
-        "points": [
-          "Core concept of Shield used widely in modern software and AI systems",
-          "Important for understanding: AWS Shield provides automatic DDoS protection for all AWS resources",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "GuardDuty",
-        "explanation": "GuardDuty uses ML to continuously monitor AWS accounts for malicious activity",
-        "points": [
-          "Core concept of GuardDuty used widely in modern software and AI systems",
-          "Important for understanding: GuardDuty uses ML to continuously monitor AWS accounts for malicious activity",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Regions",
-        "explanation": "Cloud regions are geographic areas with multiple isolated data centers for redundancy",
-        "points": [
-          "Core concept of Regions used widely in modern software and AI systems",
-          "Important for understanding: Cloud regions are geographic areas with multiple isolated data centers for redundancy",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Availability Zones",
-        "explanation": "Availability Zones are isolated data centers within a region for high availability",
-        "points": [
-          "Core concept of Availability Zones used widely in modern software and AI systems",
-          "Important for understanding: Availability Zones are isolated data centers within a region for high availability",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Edge Locations",
-        "explanation": "Edge locations are CDN points of presence around the world that cache content close to users",
-        "points": [
-          "Core concept of Edge Locations used widely in modern software and AI systems",
-          "Important for understanding: Edge locations are CDN points of presence around the world that cache content close to users",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Spot Instances",
-        "explanation": "Spot instances are spare cloud capacity offered at up to 90% discount for interruptible workloads",
-        "points": [
-          "Core concept of Spot Instances used widely in modern software and AI systems",
-          "Important for understanding: Spot instances are spare cloud capacity offered at up to 90% discount for interruptible workloads",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Reserved Instances",
-        "explanation": "Reserved instances commit to 1 or 3 years of cloud usage for significant cost savings",
-        "points": [
-          "Core concept of Reserved Instances used widely in modern software and AI systems",
-          "Important for understanding: Reserved instances commit to 1 or 3 years of cloud usage for significant cost savings",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Savings Plans",
-        "explanation": "AWS Savings Plans offer flexible discounts for consistent cloud compute usage",
-        "points": [
-          "Core concept of Savings Plans used widely in modern software and AI systems",
-          "Important for understanding: AWS Savings Plans offer flexible discounts for consistent cloud compute usage",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Cloud Cost Management",
-        "explanation": "Cloud cost management uses tools and practices to control and optimize cloud spending",
-        "points": [
-          "Core concept of Cloud Cost Management used widely in modern software and AI systems",
-          "Important for understanding: Cloud cost management uses tools and practices to control and optimize cloud spending",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "FinOps",
-        "explanation": "FinOps is the practice of bringing financial accountability to variable cloud spending",
-        "points": [
-          "Core concept of FinOps used widely in modern software and AI systems",
-          "Important for understanding: FinOps is the practice of bringing financial accountability to variable cloud spending",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Shared Responsibility Model",
-        "explanation": "Shared responsibility defines what the cloud provider secures versus what customers secure",
-        "points": [
-          "Core concept of Shared Responsibility Model used widely in modern software and AI systems",
-          "Important for understanding: Shared responsibility defines what the cloud provider secures versus what customers secure",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Cloud Native",
-        "explanation": "Cloud-native apps are designed from the ground up to use cloud services and scale elastically",
-        "points": [
-          "Core concept of Cloud Native used widely in modern software and AI systems",
-          "Important for understanding: Cloud-native apps are designed from the ground up to use cloud services and scale elastically",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Twelve-Factor App",
-        "explanation": "The Twelve-Factor methodology defines best practices for building scalable cloud-native apps",
-        "points": [
-          "Core concept of Twelve-Factor App used widely in modern software and AI systems",
-          "Important for understanding: The Twelve-Factor methodology defines best practices for building scalable cloud-native apps",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Google Cloud Run",
-        "explanation": "Cloud Run is Google's serverless container service that scales to zero when idle",
-        "points": [
-          "Core concept of Google Cloud Run used widely in modern software and AI systems",
-          "Important for understanding: Cloud Run is Google's serverless container service that scales to zero when idle",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Google Cloud Functions",
-        "explanation": "Cloud Functions is Google's FaaS offering for running event-driven serverless code",
-        "points": [
-          "Core concept of Google Cloud Functions used widely in modern software and AI systems",
-          "Important for understanding: Cloud Functions is Google's FaaS offering for running event-driven serverless code",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "BigTable",
-        "explanation": "BigTable is Google's massively scalable NoSQL database used internally for Search and Maps",
-        "points": [
-          "Core concept of BigTable used widely in modern software and AI systems",
-          "Important for understanding: BigTable is Google's massively scalable NoSQL database used internally for Search and Maps",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Pub/Sub",
-        "explanation": "Google Cloud Pub/Sub is a globally distributed messaging service for async event pipelines",
-        "points": [
-          "Core concept of Pub/Sub used widely in modern software and AI systems",
-          "Important for understanding: Google Cloud Pub/Sub is a globally distributed messaging service for async event pipelines",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Azure Functions",
-        "explanation": "Azure Functions is Microsoft's serverless compute service integrated with the Microsoft ecosystem",
-        "points": [
-          "Core concept of Azure Functions used widely in modern software and AI systems",
-          "Important for understanding: Azure Functions is Microsoft's serverless compute service integrated with the Microsoft ecosystem",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Azure Blob Storage",
-        "explanation": "Azure Blob Storage is Microsoft's object storage service for unstructured data",
-        "points": [
-          "Core concept of Azure Blob Storage used widely in modern software and AI systems",
-          "Important for understanding: Azure Blob Storage is Microsoft's object storage service for unstructured data",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Azure DevOps",
-        "explanation": "Azure DevOps provides pipelines, boards, and repos for end-to-end software delivery",
-        "points": [
-          "Core concept of Azure DevOps used widely in modern software and AI systems",
-          "Important for understanding: Azure DevOps provides pipelines, boards, and repos for end-to-end software delivery",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Cloudflare Workers",
-        "explanation": "Cloudflare Workers run JavaScript at edge locations worldwide with sub-millisecond cold starts",
-        "points": [
-          "Core concept of Cloudflare Workers used widely in modern software and AI systems",
-          "Important for understanding: Cloudflare Workers run JavaScript at edge locations worldwide with sub-millisecond cold starts",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Vercel",
-        "explanation": "Vercel is a frontend cloud platform that deploys web apps globally with instant previews",
-        "points": [
-          "Core concept of Vercel used widely in modern software and AI systems",
-          "Important for understanding: Vercel is a frontend cloud platform that deploys web apps globally with instant previews",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Netlify",
-        "explanation": "Netlify is a developer platform for building, deploying, and scaling modern web projects",
-        "points": [
-          "Core concept of Netlify used widely in modern software and AI systems",
-          "Important for understanding: Netlify is a developer platform for building, deploying, and scaling modern web projects",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Heroku",
-        "explanation": "Heroku pioneered PaaS making it simple to deploy apps without managing infrastructure",
-        "points": [
-          "Core concept of Heroku used widely in modern software and AI systems",
-          "Important for understanding: Heroku pioneered PaaS making it simple to deploy apps without managing infrastructure",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Fly.io",
-        "explanation": "Fly.io runs containerized apps close to users by deploying to micro-VMs worldwide",
-        "points": [
-          "Core concept of Fly.io used widely in modern software and AI systems",
-          "Important for understanding: Fly.io runs containerized apps close to users by deploying to micro-VMs worldwide",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Railway",
-        "explanation": "Railway is a modern PaaS that makes deploying apps and databases simple for developers",
-        "points": [
-          "Core concept of Railway used widely in modern software and AI systems",
-          "Important for understanding: Railway is a modern PaaS that makes deploying apps and databases simple for developers",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Render",
-        "explanation": "Render is a cloud platform combining the simplicity of Heroku with competitive pricing",
-        "points": [
-          "Core concept of Render used widely in modern software and AI systems",
-          "Important for understanding: Render is a cloud platform combining the simplicity of Heroku with competitive pricing",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Supabase Cloud",
-        "explanation": "Supabase hosts open-source PostgreSQL with real-time and auth as a managed cloud service",
-        "points": [
-          "Core concept of Supabase Cloud used widely in modern software and AI systems",
-          "Important for understanding: Supabase hosts open-source PostgreSQL with real-time and auth as a managed cloud service",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "PlanetScale Cloud",
-        "explanation": "PlanetScale is a serverless MySQL database with branching for schema change workflows",
-        "points": [
-          "Core concept of PlanetScale Cloud used widely in modern software and AI systems",
-          "Important for understanding: PlanetScale is a serverless MySQL database with branching for schema change workflows",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Neon",
-        "explanation": "Neon is a serverless Postgres that separates compute from storage and scales to zero",
-        "points": [
-          "Core concept of Neon used widely in modern software and AI systems",
-          "Important for understanding: Neon is a serverless Postgres that separates compute from storage and scales to zero",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Turso",
-        "explanation": "Turso is an edge-hosted SQLite database replicated globally for low-latency reads",
-        "points": [
-          "Core concept of Turso used widely in modern software and AI systems",
-          "Important for understanding: Turso is an edge-hosted SQLite database replicated globally for low-latency reads",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Upstash",
-        "explanation": "Upstash provides serverless Redis and Kafka pay-per-request with no idle costs",
-        "points": [
-          "Core concept of Upstash used widely in modern software and AI systems",
-          "Important for understanding: Upstash provides serverless Redis and Kafka pay-per-request with no idle costs",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Cloudflare D1",
-        "explanation": "Cloudflare D1 is a serverless SQLite database running at the network edge",
-        "points": [
-          "Core concept of Cloudflare D1 used widely in modern software and AI systems",
-          "Important for understanding: Cloudflare D1 is a serverless SQLite database running at the network edge",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Cloudflare R2",
-        "explanation": "Cloudflare R2 is S3-compatible object storage with zero egress fees",
-        "points": [
-          "Core concept of Cloudflare R2 used widely in modern software and AI systems",
-          "Important for understanding: Cloudflare R2 is S3-compatible object storage with zero egress fees",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Object Storage",
-        "explanation": "Object storage keeps files as flat objects with metadata rather than in folder hierarchies",
-        "points": [
-          "Core concept of Object Storage used widely in modern software and AI systems",
-          "Important for understanding: Object storage keeps files as flat objects with metadata rather than in folder hierarchies",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Block Storage",
-        "explanation": "Block storage presents raw disk volumes to servers like a physical hard drive",
-        "points": [
-          "Core concept of Block Storage used widely in modern software and AI systems",
-          "Important for understanding: Block storage presents raw disk volumes to servers like a physical hard drive",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "File Storage",
-        "explanation": "File storage exposes shared NFS or SMB file systems that multiple instances can mount",
-        "points": [
-          "Core concept of File Storage used widely in modern software and AI systems",
-          "Important for understanding: File storage exposes shared NFS or SMB file systems that multiple instances can mount",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Multi-region",
-        "explanation": "Multi-region deployments run your app in multiple geographic regions for global reliability",
-        "points": [
-          "Core concept of Multi-region used widely in modern software and AI systems",
-          "Important for understanding: Multi-region deployments run your app in multiple geographic regions for global reliability",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Disaster Recovery",
-        "explanation": "Disaster recovery plans restore systems after catastrophic failures using backups and replication",
-        "points": [
-          "Core concept of Disaster Recovery used widely in modern software and AI systems",
-          "Important for understanding: Disaster recovery plans restore systems after catastrophic failures using backups and replication",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Recovery Point Objective",
-        "explanation": "RPO is the maximum acceptable amount of data loss measured in time after a disaster",
-        "points": [
-          "Core concept of Recovery Point Objective used widely in modern software and AI systems",
-          "Important for understanding: RPO is the maximum acceptable amount of data loss measured in time after a disaster",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Recovery Time Objective",
-        "explanation": "RTO is the maximum acceptable time to restore service after a disaster occurs",
-        "points": [
-          "Core concept of Recovery Time Objective used widely in modern software and AI systems",
-          "Important for understanding: RTO is the maximum acceptable time to restore service after a disaster occurs",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Warm Standby",
-        "explanation": "Warm standby keeps a scaled-down copy of production running that scales up on failover",
-        "points": [
-          "Core concept of Warm Standby used widely in modern software and AI systems",
-          "Important for understanding: Warm standby keeps a scaled-down copy of production running that scales up on failover",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Hot Standby",
-        "explanation": "Hot standby keeps a full-scale replica running ready to take over instantly on failure",
-        "points": [
-          "Core concept of Hot Standby used widely in modern software and AI systems",
-          "Important for understanding: Hot standby keeps a full-scale replica running ready to take over instantly on failure",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Cold Standby",
-        "explanation": "Cold standby stores backups but requires time to provision and restore on failure",
-        "points": [
-          "Core concept of Cold Standby used widely in modern software and AI systems",
-          "Important for understanding: Cold standby stores backups but requires time to provision and restore on failure",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Data Residency",
-        "explanation": "Data residency laws require certain data to stay within specific country borders",
-        "points": [
-          "Core concept of Data Residency used widely in modern software and AI systems",
-          "Important for understanding: Data residency laws require certain data to stay within specific country borders",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Compliance",
-        "explanation": "Cloud compliance meets regulatory standards like GDPR, HIPAA, and SOC2 for data protection",
-        "points": [
-          "Core concept of Compliance used widely in modern software and AI systems",
-          "Important for understanding: Cloud compliance meets regulatory standards like GDPR, HIPAA, and SOC2 for data protection",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "SOC2",
-        "explanation": "SOC2 certification proves a cloud service meets security and availability trust standards",
-        "points": [
-          "Core concept of SOC2 used widely in modern software and AI systems",
-          "Important for understanding: SOC2 certification proves a cloud service meets security and availability trust standards",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "GDPR",
-        "explanation": "GDPR is EU regulation requiring proper handling and protection of personal data",
-        "points": [
-          "Core concept of GDPR used widely in modern software and AI systems",
-          "Important for understanding: GDPR is EU regulation requiring proper handling and protection of personal data",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "HIPAA",
-        "explanation": "HIPAA requires cloud services handling US medical records to meet strict security standards",
-        "points": [
-          "Core concept of HIPAA used widely in modern software and AI systems",
-          "Important for understanding: HIPAA requires cloud services handling US medical records to meet strict security standards",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Zero Trust",
-        "explanation": "Zero trust security assumes no user or system is trusted by default even inside the network",
-        "points": [
-          "Core concept of Zero Trust used widely in modern software and AI systems",
-          "Important for understanding: Zero trust security assumes no user or system is trusted by default even inside the network",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Private Link",
-        "explanation": "Private Link connects cloud services to your VPC privately without traffic hitting the public internet",
-        "points": [
-          "Core concept of Private Link used widely in modern software and AI systems",
-          "Important for understanding: Private Link connects cloud services to your VPC privately without traffic hitting the public internet",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "VPN",
-        "explanation": "A VPN creates an encrypted private tunnel between your network and the cloud",
-        "points": [
-          "Core concept of VPN used widely in modern software and AI systems",
-          "Important for understanding: A VPN creates an encrypted private tunnel between your network and the cloud",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Direct Connect",
-        "explanation": "AWS Direct Connect provides dedicated private network connections from your data center to AWS",
-        "points": [
-          "Core concept of Direct Connect used widely in modern software and AI systems",
-          "Important for understanding: AWS Direct Connect provides dedicated private network connections from your data center to AWS",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "PoP",
-        "explanation": "A Point of Presence is a cloud edge location where traffic enters the provider's backbone network",
-        "points": [
-          "Core concept of PoP used widely in modern software and AI systems",
-          "Important for understanding: A Point of Presence is a cloud edge location where traffic enters the provider's backbone network",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Egress Cost",
-        "explanation": "Egress costs are fees cloud providers charge for data leaving their network to the internet",
-        "points": [
-          "Core concept of Egress Cost used widely in modern software and AI systems",
-          "Important for understanding: Egress costs are fees cloud providers charge for data leaving their network to the internet",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "eBPF",
-        "explanation": "eBPF runs sandboxed programs in the Linux kernel enabling powerful cloud networking and security",
-        "points": [
-          "Core concept of eBPF used widely in modern software and AI systems",
-          "Important for understanding: eBPF runs sandboxed programs in the Linux kernel enabling powerful cloud networking and security",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "WebAssembly Cloud",
-        "explanation": "WebAssembly on the cloud runs portable sandboxed code at the edge with near-native performance",
-        "points": [
-          "Core concept of WebAssembly Cloud used widely in modern software and AI systems",
-          "Important for understanding: WebAssembly on the cloud runs portable sandboxed code at the edge with near-native performance",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Cloud Migration",
-        "explanation": "Cloud migration moves applications and data from on-premises data centers to the cloud",
-        "points": [
-          "Core concept of Cloud Migration used widely in modern software and AI systems",
-          "Important for understanding: Cloud migration moves applications and data from on-premises data centers to the cloud",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Lift and Shift",
-        "explanation": "Lift and shift moves applications to the cloud without changing their architecture",
-        "points": [
-          "Core concept of Lift and Shift used widely in modern software and AI systems",
-          "Important for understanding: Lift and shift moves applications to the cloud without changing their architecture",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Re-platforming",
-        "explanation": "Re-platforming makes minor cloud optimizations during migration like switching to managed databases",
-        "points": [
-          "Core concept of Re-platforming used widely in modern software and AI systems",
-          "Important for understanding: Re-platforming makes minor cloud optimizations during migration like switching to managed databases",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Re-architecting",
-        "explanation": "Re-architecting redesigns applications to fully leverage cloud-native services and patterns",
-        "points": [
-          "Core concept of Re-architecting used widely in modern software and AI systems",
-          "Important for understanding: Re-architecting redesigns applications to fully leverage cloud-native services and patterns",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Cloud Bursting",
-        "explanation": "Cloud bursting runs workloads on-premises normally and spills to the cloud during peak demand",
-        "points": [
-          "Core concept of Cloud Bursting used widely in modern software and AI systems",
-          "Important for understanding: Cloud bursting runs workloads on-premises normally and spills to the cloud during peak demand",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Managed Service",
-        "explanation": "Managed services let the cloud provider handle provisioning, patching, and scaling for you",
-        "points": [
-          "Core concept of Managed Service used widely in modern software and AI systems",
-          "Important for understanding: Managed services let the cloud provider handle provisioning, patching, and scaling for you",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Serverless Framework",
-        "explanation": "Serverless Framework is an open-source tool for deploying serverless functions across cloud providers",
-        "points": [
-          "Core concept of Serverless Framework used widely in modern software and AI systems",
-          "Important for understanding: Serverless Framework is an open-source tool for deploying serverless functions across cloud providers",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "AWS SAM",
-        "explanation": "AWS Serverless Application Model simplifies building and deploying serverless apps on AWS",
-        "points": [
-          "Core concept of AWS SAM used widely in modern software and AI systems",
-          "Important for understanding: AWS Serverless Application Model simplifies building and deploying serverless apps on AWS",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Infrastructure Drift",
-        "explanation": "Infrastructure drift is when live cloud resources deviate from the IaC definition over time",
-        "points": [
-          "Core concept of Infrastructure Drift used widely in modern software and AI systems",
-          "Important for understanding: Infrastructure drift is when live cloud resources deviate from the IaC definition over time",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Cloud Security Posture",
-        "explanation": "CSPM tools continuously monitor cloud configurations for security misconfigurations",
-        "points": [
-          "Core concept of Cloud Security Posture used widely in modern software and AI systems",
-          "Important for understanding: CSPM tools continuously monitor cloud configurations for security misconfigurations",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      }
+  "Cloud Computing": {
+    "explanation": "Cloud computing delivers computing resources over the internet on demand at any scale",
+    "points": [
+      "Eliminates upfront capital expense for hardware and enables pay-as-you-go pricing",
+      "Provides elasticity — scale from zero to thousands of instances in minutes",
+      "Three main service models: IaaS, PaaS, SaaS cover different levels of management",
+      "Global infrastructure with regions and availability zones ensures low latency and high availability",
+      "Foundation for modern AI/ML workloads, big data, containers, and serverless applications"
+    ]
+  },
+  "AWS": {
+    "explanation": "Amazon Web Services is the world's largest cloud platform with over 200 services",
+    "points": [
+      "Pioneered public cloud in 2006 and still holds largest market share",
+      "Most comprehensive service catalog including compute, storage, databases, AI/ML, IoT",
+      "Global infrastructure with 30+ geographic regions and 100+ Availability Zones",
+      "Dominates enterprise adoption due to maturity, reliability and extensive partner ecosystem",
+      "Revenue engine of Amazon — consistently high-margin and fast-growing"
+    ]
+  },
+  "Google Cloud": {
+    "explanation": "Google Cloud Platform offers cloud services powered by Google's global infrastructure",
+    "points": [
+      "Built on same infrastructure that runs Google Search, YouTube, Gmail, Maps",
+      "Excels in data analytics (BigQuery), Kubernetes (GKE), and AI/ML capabilities",
+      "Strongest networking performance and lowest egress fees among major providers",
+      "Rapidly gaining enterprise traction with Anthos multi-cloud/hybrid platform",
+      "Focus on open-source contributions (Kubernetes, Istio, TensorFlow)"
+    ]
+  },
+  "Microsoft Azure": {
+    "explanation": "Azure is Microsoft's cloud platform tightly integrated with enterprise Windows products",
+    "points": [
+      "Deep integration with Active Directory, Office 365, Power BI, Dynamics 365",
+      "Strong hybrid cloud story with Azure Arc and Azure Stack",
+      "Fastest-growing major cloud provider in recent years",
+      "Leading in Windows Server, SQL Server, .NET workloads in the cloud",
+      "Significant government and regulated industry adoption"
+    ]
+  },
+  "Serverless": {
+    "explanation": "Serverless lets you run code without managing servers — you pay only per execution",
+    "points": [
+      "Automatic scaling from zero to thousands of concurrent executions",
+      "Pay-per-request pricing model eliminates idle capacity costs",
+      "Event-driven architecture perfect for microservices and API backends",
+      "Cold start latency remains primary performance consideration",
+      "Enables developers to focus purely on business logic instead of infrastructure"
+    ]
+  },
+  "AWS Lambda": {
+    "explanation": "Lambda is AWS's serverless compute service that runs code in response to events",
+    "points": [
+      "Supports many languages including Node.js, Python, Java, Go, .NET, Rust",
+      "Triggers from 200+ AWS services plus custom events via EventBridge",
+      "15-minute maximum execution time and 10 GB memory limit (2025)",
+      "Provisioned concurrency eliminates cold starts for latency-sensitive workloads",
+      "Powers massive portions of Alexa, iRobot, Coca-Cola vending machines, etc."
+    ]
+  },
+  "S3": {
+    "explanation": "AWS S3 is virtually unlimited object storage for files, images, backups, and data lakes",
+    "points": [
+      "11 nines (99.999999999%) durability for standard storage class",
+      "Multiple storage classes (Standard, Intelligent-Tiering, Glacier) for cost optimization",
+      "Event notifications, replication, versioning, object lock for compliance",
+      "Powers static websites, big data lakes, backups, media serving worldwide",
+      "S3 Select and Athena enable querying data in-place without moving it"
+    ]
+  },
+  "EC2": {
+    "explanation": "AWS EC2 provides resizable virtual machines in the cloud for any workload",
+    "points": [
+      "Instance types optimized for compute, memory, storage, GPU, HPC, etc.",
+      "Spot Instances up to 90% discount for fault-tolerant workloads",
+      "Bare metal instances for direct hardware access",
+      "Graviton processors (Arm-based) offer better price/performance",
+      "Still the foundational compute primitive for most serious AWS deployments"
+    ]
+  },
+  "VPC": {
+    "explanation": "A Virtual Private Cloud is your own isolated network section within a public cloud",
+    "points": [
+      "Complete control over IP addressing, subnets, route tables, gateways",
+      "Security groups (stateful firewall) and network ACLs (stateless)",
+      "Private connectivity options: VPN, Direct Connect, PrivateLink",
+      "Flow Logs for network monitoring and forensics",
+      "Foundation for secure, multi-tier application architectures"
+    ]
+  },
+  "IAM": {
+    "explanation": "Identity and Access Management controls who can do what across all your cloud resources",
+    "points": [
+      "Least privilege principle is core design philosophy",
+      "Roles, policies, groups, users, temporary credentials via STS",
+      "Identity federation with SAML, OIDC, AWS SSO",
+      "IAM Access Analyzer finds unused permissions and external access",
+      "Fine-grained resource-level permissions for most services"
+    ]
+  },
+  "CDN": {
+    "explanation": "A Content Delivery Network caches content at edge locations worldwide for fast delivery",
+    "points": [
+      "Reduces latency by serving content from location closest to user",
+      "Handles traffic spikes without overloading origin servers",
+      "Improves security with DDoS mitigation and WAF integration",
+      "Caches both static assets and dynamic content with edge computing",
+      "Critical for global applications, video streaming, gaming, APIs"
+    ]
+  },
+  "CloudFront": {
+    "explanation": "AWS CloudFront is a global CDN that speeds up delivery of websites, APIs, and media",
+    "points": [
+      "200+ edge locations worldwide for extremely low latency",
+      "Lambda@Edge and CloudFront Functions for edge compute",
+      "Field-level encryption and HTTPS enforcement",
+      "Real-time metrics and logging integration with CloudWatch",
+      "Free tier includes 1 TB/month data transfer (2025)"
+    ]
+  },
+  "Auto Scaling": {
+    "explanation": "Auto scaling automatically adds or removes compute instances based on demand",
+    "points": [
+      "Target tracking, step scaling, scheduled scaling policies",
+      "Works with EC2, ECS, DynamoDB, Aurora, Lambda (provisioned concurrency)",
+      "Predictive scaling uses ML to anticipate load patterns",
+      "Instance refresh for rolling updates with zero downtime",
+      "Critical for cost optimization and handling unpredictable traffic"
+    ]
+  },
+  "Elastic Load Balancing": {
+    "explanation": "ELB distributes incoming traffic across multiple healthy EC2 instances automatically",
+    "points": [
+      "Three types: Application Load Balancer (HTTP/HTTPS), Network Load Balancer (TCP/UDP), Gateway Load Balancer",
+      "ALB supports path-based routing, host-based routing, WebSockets",
+      "Health checks automatically remove unhealthy targets",
+      "Sticky sessions, SSL termination, connection draining",
+      "Integrated with Auto Scaling groups for dynamic scaling"
+    ]
+  },
+  "RDS": {
+    "explanation": "AWS RDS is a managed relational database service supporting MySQL, Postgres, and more",
+    "points": [
+      "Automates backups, patching, replication, failover",
+      "Multi-AZ deployment for high availability",
+      "Read replicas for horizontal scaling of reads",
+      "Performance Insights for query optimization",
+      "Supported engines: MySQL, PostgreSQL, MariaDB, Oracle, SQL Server"
+    ]
+  },
+  "Aurora": {
+    "explanation": "Aurora is AWS's cloud-native database offering up to 5x MySQL performance",
+    "points": [
+      "MySQL and PostgreSQL compatible",
+      "Separates compute from storage — scales storage automatically",
+      "15 read replicas, global databases for cross-region replication",
+      "Serverless option with auto-pause and pay-per-second billing",
+      "Up to 90% cost reduction compared to commercial databases"
+    ]
+  },
+  "DynamoDB": {
+    "explanation": "DynamoDB is AWS's serverless NoSQL database with single-digit millisecond response times",
+    "points": [
+      "Fully managed, scales throughput and storage automatically",
+      "On-demand capacity mode eliminates provisioning",
+      "Global tables for multi-region replication",
+      "DAX in-memory cache for microsecond latency",
+      "Used by Alexa, iRobot, Duolingo, Lyft at massive scale"
+    ]
+  },
+  "ElastiCache": {
+    "explanation": "ElastiCache provides managed Redis and Memcached caching in the cloud",
+    "points": [
+      "Fully managed Redis (clustered/non-clustered) and Memcached",
+      "Multi-AZ with automatic failover for Redis",
+      "Online cluster resizing and engine upgrades",
+      "Used for session stores, leaderboards, real-time analytics",
+      "Redis 7 support with new data structures and functions"
+    ]
+  },
+  "SQS": {
+    "explanation": "AWS SQS is a managed message queue for decoupling distributed application components",
+    "points": [
+      "Standard queue (high throughput) vs FIFO queue (exactly-once + ordering)",
+      "At-least-once delivery with visibility timeout",
+      "Dead-letter queues for failed messages",
+      "Used for workload buffering, task queuing, fan-out patterns",
+      "Scales transparently to millions of messages per second"
+    ]
+  },
+  "SNS": {
+    "explanation": "AWS SNS is a pub-sub messaging service for fan-out notifications to many subscribers",
+    "points": [
+      "Supports push notifications to mobile, SMS, email, Lambda, SQS, HTTP",
+      "Message filtering at subscriber level",
+      "FIFO topics for ordered delivery",
+      "Used for alerts, fan-out, mobile push, workflow orchestration",
+      "High durability with multiple retries"
+    ]
+  },
+  "EventBridge": {
+    "explanation": "EventBridge is a serverless event bus connecting AWS services and SaaS apps with routing rules",
+    "points": [
+      "Schema registry and schema discovery",
+      "Event pattern matching and content-based routing",
+      "SaaS integrations (Shopify, Datadog, PagerDuty, etc.)",
+      "Archive and replay capabilities",
+      "Successor to CloudWatch Events with much more power"
+    ]
+  },
+  "Kinesis": {
+    "explanation": "AWS Kinesis processes real-time streaming data from millions of sources simultaneously",
+    "points": [
+      "Kinesis Data Streams for custom processing",
+      "Kinesis Data Firehose for easy loading to S3/Redshift",
+      "Kinesis Data Analytics for SQL processing of streams",
+      "Kinesis Video Streams for video ingestion",
+      "Used by Netflix, Hulu, Adobe, many IoT applications"
+    ]
+  },
+  "ECS": {
+    "explanation": "AWS ECS is a managed container orchestration service for running Docker containers",
+    "points": [
+      "Two launch types: EC2 and Fargate (serverless)",
+      "Tight integration with other AWS services",
+      "Task definitions and services for long-running workloads",
+      "AWS Copilot CLI simplifies deployment",
+      "Large enterprise deployments still common despite Kubernetes growth"
+    ]
+  },
+  "EKS": {
+    "explanation": "AWS EKS is a managed Kubernetes service removing the burden of running control planes",
+    "points": [
+      "Certified Kubernetes conformant",
+      "Fargate and EC2 worker node options",
+      "AWS-managed control plane with automatic upgrades",
+      "Tight integration with IAM, VPC, CloudWatch",
+      "Popular for teams already invested in Kubernetes"
+    ]
+  },
+  "Fargate": {
+    "explanation": "AWS Fargate runs containers without managing any underlying servers or clusters",
+    "points": [
+      "Serverless compute for ECS and EKS",
+      "Pay only for vCPU and memory used by containers",
+      "No need to provision or manage EC2 instances",
+      "Improved security with isolated kernel per task",
+      "Increasingly preferred for new container deployments"
+    ]
+  },
+  "App Runner": {
+    "explanation": "AWS App Runner deploys containerized web apps automatically from code or images",
+    "points": [
+      "Fully managed service — no infrastructure to configure",
+      "Supports source code from GitHub or container images",
+      "Automatic scaling, load balancing, SSL",
+      "Built-in CI/CD from container registry or Git",
+      "Simplest way to run web applications on AWS"
+    ]
+  },
+  "API Gateway AWS": {
+    "explanation": "AWS API Gateway creates, manages, and secures REST, HTTP, and WebSocket APIs at scale",
+    "points": [
+      "Multiple API types: REST, HTTP (cheaper), WebSocket",
+      "Throttling, caching, usage plans, API keys",
+      "Lambda, HTTP, VPC Link integration targets",
+      "Canary deployments and access logging",
+      "Foundation for most serverless APIs on AWS"
+    ]
+  },
+  "Route 53": {
+    "explanation": "AWS Route 53 is a scalable DNS service with health checking and traffic routing",
+    "points": [
+      "Domain registration, DNS routing, health checks",
+      "Latency-based, geolocation, weighted, failover routing policies",
+      "Alias records for AWS resources (no extra charge)",
+      "Traffic flow visual editor for complex routing",
+      "Used by Netflix, Airbnb, many high-traffic sites"
+    ]
+  },
+  "CloudWatch": {
+    "explanation": "CloudWatch collects logs, metrics, and alarms for all AWS resources in one place",
+    "points": [
+      "Metrics, logs, events, alarms, dashboards, Synthetics",
+      "Container Insights and Lambda Insights",
+      "Application Insights for automatic problem detection",
+      "CloudWatch Logs Insights for powerful querying",
+      "Essential for monitoring and observability on AWS"
+    ]
+  },
+  "CloudTrail": {
+    "explanation": "CloudTrail logs every API call made in your AWS account for auditing and compliance",
+    "points": [
+      "Logs management events and data events",
+      "Multi-region trails and organization trails",
+      "Integration with CloudWatch Logs and EventBridge",
+      "Lake option for long-term storage and analytics",
+      "Critical for security auditing and compliance"
+    ]
+  },
+  "Secrets Manager AWS": {
+    "explanation": "AWS Secrets Manager stores, rotates, and manages database passwords and API keys",
+    "points": [
+      "Automatic rotation for RDS, Redshift, Aurora",
+      "Fine-grained IAM access control",
+      "Replication across regions for DR",
+      "Lambda-based custom rotation support",
+      "Eliminates hard-coded credentials in code"
+    ]
+  },
+  "KMS": {
+    "explanation": "AWS Key Management Service creates and controls encryption keys for protecting data",
+    "points": [
+      "Customer Master Keys (CMKs) — customer or AWS-managed",
+      "Envelope encryption pattern for large data",
+      "Automatic key rotation for customer-managed keys",
+      "Cross-account key sharing and multi-region keys",
+      "Integrated with most AWS services"
+    ]
+  },
+  "WAF": {
+    "explanation": "AWS WAF filters malicious web traffic to protect your applications from attacks",
+    "points": [
+      "Web ACLs with managed rules (AWS Managed Rules, third-party)",
+      "Rate-based rules for DDoS protection",
+      "Geo-restriction and IP allow/block lists",
+      "Integration with CloudFront, ALB, API Gateway",
+      "Fraud Control for account takeover prevention"
+    ]
+  },
+  "Shield": {
+    "explanation": "AWS Shield provides automatic DDoS protection for all AWS resources",
+    "points": [
+      "Standard protection free for all AWS customers",
+      "Shield Advanced adds 24/7 DDoS Response Team and cost protection",
+      "Layer 3/4 protection always on",
+      "Layer 7 protection via integration with WAF",
+      "Automatic detection and mitigation"
+    ]
+  },
+  "GuardDuty": {
+    "explanation": "GuardDuty uses ML to continuously monitor AWS accounts for malicious activity",
+    "points": [
+      "Analyzes CloudTrail, VPC Flow Logs, DNS logs",
+      "Detects reconnaissance, instance compromise, credential abuse",
+      "Findings prioritized by severity",
+      "Automated response via EventBridge",
+      "Multi-account support through organizations"
+    ]
+  },
+  "Regions": {
+    "explanation": "Cloud regions are geographic areas with multiple isolated data centers for redundancy",
+    "points": [
+      "Each region is isolated from others for fault tolerance",
+      "Compliance and data residency requirements often dictate region choice",
+      "New services often launch in us-east-1 first",
+      "Inter-region latency typically 50–200 ms",
+      "Replication across regions required for global applications"
+    ]
+  },
+  "Availability Zones": {
+    "explanation": "Availability Zones are isolated data centers within a region for high availability",
+    "points": [
+      "Each AZ has independent power, cooling, networking",
+      "Minimum 2–6 AZs per region",
+      "Multi-AZ deployments provide automatic failover",
+      "Synchronous replication possible within region",
+      "Critical for achieving high availability SLAs"
+    ]
+  },
+  "Edge Locations": {
+    "explanation": "Edge locations are CDN points of presence around the world that cache content close to users",
+    "points": [
+      "Over 400 edge locations globally (CloudFront)",
+      "Reduce latency and origin load",
+      "Also run Lambda@Edge and CloudFront Functions",
+      "DDoS mitigation occurs at edge",
+      "Essential for global content delivery performance"
+    ]
+  },
+  "Spot Instances": {
+    "explanation": "Spot instances are spare cloud capacity offered at up to 90% discount for interruptible workloads",
+    "points": [
+      "Ideal for batch jobs, big data, CI/CD, stateless workloads",
+      "Spot Fleet and Spot Fleet Requests for diversification",
+      "Defined-duration Spot blocks for predictable time",
+      "Hibernation support for stateful workloads",
+      "Savings Plans can now apply to Spot usage"
+    ]
+  },
+  "Reserved Instances": {
+    "explanation": "Reserved instances commit to 1 or 3 years of cloud usage for significant cost savings",
+    "points": [
+      "Standard, Convertible, Scheduled RI types",
+      "All Upfront, Partial Upfront, No Upfront payment options",
+      "Convertible RIs allow changing instance type/family",
+      "Significant savings for predictable steady-state workloads",
+      "Being supplemented by Savings Plans for more flexibility"
+    ]
+  },
+  "Savings Plans": {
+    "explanation": "AWS Savings Plans offer flexible discounts for consistent cloud compute usage",
+    "points": [
+      "Compute Savings Plans — most flexible, applies to EC2, Fargate, Lambda",
+      "EC2 Instance Savings Plans — specific instance family commitment",
+      "Up to 72% savings vs On-Demand",
+      "1-year and 3-year terms",
+      "Recommended as primary discount mechanism (2025)"
+    ]
+  },
+  "Cloud Cost Management": {
+    "explanation": "Cloud cost management uses tools and practices to control and optimize cloud spending",
+    "points": [
+      "Tagging strategy is foundation of cost allocation",
+      "AWS Cost Explorer, Budgets, Cost Anomaly Detection",
+      "Third-party tools: CloudHealth, Cloudability, Harness",
+      "FinOps cultural practice gaining widespread adoption",
+      "Right-sizing, reserved capacity, spot usage are primary levers"
+    ]
+  },
+  "FinOps": {
+    "explanation": "FinOps is the practice of bringing financial accountability to variable cloud spending",
+    "points": [
+      "Three phases: Inform → Optimize → Operate",
+      "Cross-functional collaboration between engineering, finance, leadership",
+      "Focus on unit economics and business value of cloud spend",
+      "FinOps Foundation standards and certification program",
+      "Becoming table stakes for large cloud deployments"
+    ]
+  },
+  "Shared Responsibility Model": {
+    "explanation": "Shared responsibility defines what the cloud provider secures versus what customers secure",
+    "points": [
+      "Provider responsible for security *of* the cloud (hardware, facilities)",
+      "Customer responsible for security *in* the cloud (data, configs, IAM)",
+      "Varies by service type: IaaS → most customer responsibility",
+      "SaaS → most provider responsibility",
+      "Critical concept for compliance and security planning"
+    ]
+  },
+  "Cloud Native": {
+    "explanation": "Cloud-native apps are designed from the ground up to use cloud services and scale elastically",
+    "points": [
+      "CNCF definition includes containers, microservices, immutability, declarative APIs",
+      "Built with Kubernetes, service mesh, observability stack",
+      "Designed for automation, resilience, elasticity",
+      "12-factor principles still relevant",
+      "Goal is to maximize cloud benefits vs lift-and-shift"
+    ]
+  },
+  "Twelve-Factor App": {
+    "explanation": "The Twelve-Factor methodology defines best practices for building scalable cloud-native apps",
+    "points": [
+      "Codebase — one codebase tracked in revision control",
+      "Dependencies — declare and isolate",
+      "Config — store in environment",
+      "Backing services — treat as attached resources",
+      "Processes — execute as stateless processes"
     ]
   }
 }

@@ -1,406 +1,1002 @@
 {
-  "colors": {
-    "items": [
-      {
-        "name": "Red",
-        "fact": "Red is the color of fire, roses, and is used on stop signs to mean danger or stop"
-      },
-      {
-        "name": "Blue",
-        "fact": "Blue is the color of the sky and ocean and is the most popular favorite color worldwide"
-      },
-      {
-        "name": "Yellow",
-        "fact": "Yellow is the color of the sun and makes people feel happy and cheerful"
-      },
-      {
-        "name": "Green",
-        "fact": "Green is the color of plants and nature and is associated with growth and life"
-      },
-      {
-        "name": "Orange",
-        "fact": "Orange is a warm color that is a mix of red and yellow"
-      },
-      {
-        "name": "Purple",
-        "fact": "Purple was historically the most expensive dye and was only worn by royalty"
-      },
-      {
-        "name": "Pink",
-        "fact": "Pink is made by mixing red and white together in various proportions"
-      },
-      {
-        "name": "Brown",
-        "fact": "Brown is a warm earthy color found in soil, wood, and chocolate"
-      },
-      {
-        "name": "Black",
-        "fact": "Black is the absence of visible light and absorbs all colors of the spectrum"
-      },
-      {
-        "name": "White",
-        "fact": "White reflects all colors of light and is associated with purity and cleanliness"
-      },
-      {
-        "name": "Gray",
-        "fact": "Gray is a neutral color between black and white found in clouds and rocks"
-      },
-      {
-        "name": "Cyan",
-        "fact": "Cyan is a bright blue-green color used in color printing alongside magenta and yellow"
-      },
-      {
-        "name": "Magenta",
-        "fact": "Magenta is a vivid pink-purple used in printing and does not appear in the rainbow"
-      },
-      {
-        "name": "Turquoise",
-        "fact": "Turquoise is a blue-green color named after the precious gemstone"
-      },
-      {
-        "name": "Indigo",
-        "fact": "Indigo is a deep blue-violet that sits between blue and violet in the rainbow"
-      },
-      {
-        "name": "Violet",
-        "fact": "Violet is the last color in the visible spectrum with the shortest wavelength"
-      },
-      {
-        "name": "Maroon",
-        "fact": "Maroon is a dark brownish-red color named after the French word for chestnut"
-      },
-      {
-        "name": "Navy Blue",
-        "fact": "Navy blue is a very dark shade of blue traditionally used for military uniforms"
-      },
-      {
-        "name": "Teal",
-        "fact": "Teal is a blue-green color named after the colored stripe on a duck called a teal"
-      },
-      {
-        "name": "Lime",
-        "fact": "Lime green is a vivid yellow-green color as bright as a fresh lime fruit"
-      },
-      {
-        "name": "Olive",
-        "fact": "Olive is a dark yellow-green color resembling ripe olive fruits"
-      },
-      {
-        "name": "Coral",
-        "fact": "Coral is a warm pink-orange color inspired by the colors of sea coral reefs"
-      },
-      {
-        "name": "Salmon",
-        "fact": "Salmon is a pinkish-orange color named after the flesh of the salmon fish"
-      },
-      {
-        "name": "Peach",
-        "fact": "Peach is a soft pale orange-pink color like the skin of a ripe peach fruit"
-      },
-      {
-        "name": "Lavender",
-        "fact": "Lavender is a pale soft purple named after the lavender flower"
-      },
-      {
-        "name": "Ivory",
-        "fact": "Ivory is a warm off-white color originally from elephant and walrus tusks"
-      },
-      {
-        "name": "Cream",
-        "fact": "Cream is a pale yellow-white color like the color of fresh dairy cream"
-      },
-      {
-        "name": "Beige",
-        "fact": "Beige is a very light warm tan or sandy color often used in interior design"
-      },
-      {
-        "name": "Tan",
-        "fact": "Tan is a light brown color like sun-tanned skin or leather"
-      },
-      {
-        "name": "Khaki",
-        "fact": "Khaki is a dull brownish-yellow used in military and casual clothing"
-      },
-      {
-        "name": "Gold",
-        "fact": "Gold is a rich warm yellow metallic color associated with wealth and luxury"
-      },
-      {
-        "name": "Silver",
-        "fact": "Silver is a metallic grey color associated with high technology and modernity"
-      },
-      {
-        "name": "Bronze",
-        "fact": "Bronze is a dark orange-brown metallic color of the ancient alloy of copper and tin"
-      },
-      {
-        "name": "Copper",
-        "fact": "Copper is a reddish-orange metallic color like freshly polished copper pipes"
-      },
-      {
-        "name": "Scarlet",
-        "fact": "Scarlet is a vivid bright red slightly towards orange associated with passion"
-      },
-      {
-        "name": "Crimson",
-        "fact": "Crimson is a deep rich red color used for royalty and in many national flags"
-      },
-      {
-        "name": "Burgundy",
-        "fact": "Burgundy is a dark red wine color named after the Burgundy wine region of France"
-      },
-      {
-        "name": "Vermilion",
-        "fact": "Vermilion is a bright orange-red once made from toxic mercury sulfide"
-      },
-      {
-        "name": "Amber",
-        "fact": "Amber is a warm golden yellow color like the fossilized tree resin"
-      },
-      {
-        "name": "Ochre",
-        "fact": "Ochre is an earthy yellow-brown used as one of the oldest natural pigments in art"
-      },
-      {
-        "name": "Sienna",
-        "fact": "Sienna is a reddish-brown earth pigment named after the Italian city of Siena"
-      },
-      {
-        "name": "Umber",
-        "fact": "Umber is a dark brown natural earth pigment with a slight greenish tinge"
-      },
-      {
-        "name": "Cobalt Blue",
-        "fact": "Cobalt blue is a deep vivid blue made from cobalt salts used by artists for centuries"
-      },
-      {
-        "name": "Cerulean",
-        "fact": "Cerulean is a sky blue color named after the Latin word for sky"
-      },
-      {
-        "name": "Periwinkle",
-        "fact": "Periwinkle is a soft blue-lavender color named after a small flowering plant"
-      },
-      {
-        "name": "Mauve",
-        "fact": "Mauve was the first synthetic dye color discovered in 1856 by accident"
-      },
-      {
-        "name": "Fuchsia",
-        "fact": "Fuchsia is a vivid hot pink named after the fuchsia plant's bright flowers"
-      },
-      {
-        "name": "Rose",
-        "fact": "Rose is a medium-dark pink color like the petals of a classic rose"
-      },
-      {
-        "name": "Blush",
-        "fact": "Blush is a very soft and light pink like the color of a subtle blush on cheeks"
-      },
-      {
-        "name": "Hot Pink",
-        "fact": "Hot pink is a neon vivid version of pink used widely in pop art and fashion"
-      },
-      {
-        "name": "Chartreuse",
-        "fact": "Chartreuse is a vivid yellow-green named after a French liqueur of the same color"
-      },
-      {
-        "name": "Sage",
-        "fact": "Sage is a soft grayish-green color like the herb used in cooking"
-      },
-      {
-        "name": "Mint",
-        "fact": "Mint is a fresh pale cool green color like the mint plant"
-      },
-      {
-        "name": "Emerald",
-        "fact": "Emerald is a rich vivid green color like the precious gemstone"
-      },
-      {
-        "name": "Forest Green",
-        "fact": "Forest green is a dark natural green color like the shade inside a dense forest"
-      },
-      {
-        "name": "Hunter Green",
-        "fact": "Hunter green is a very deep dark green traditionally used in outdoor hunting clothing"
-      },
-      {
-        "name": "Jade",
-        "fact": "Jade is a medium cool green color like the precious jade stone from Asia"
-      },
-      {
-        "name": "Aquamarine",
-        "fact": "Aquamarine is a light blue-green like clear tropical ocean water"
-      },
-      {
-        "name": "Sapphire",
-        "fact": "Sapphire blue is a deep brilliant blue like the precious sapphire gemstone"
-      },
-      {
-        "name": "Royal Blue",
-        "fact": "Royal blue is a vivid bright blue historically associated with royalty"
-      },
-      {
-        "name": "Midnight Blue",
-        "fact": "Midnight blue is an extremely dark blue almost black like the deep night sky"
-      },
-      {
-        "name": "Electric Blue",
-        "fact": "Electric blue is a vivid fluorescent blue like an electric spark"
-      },
-      {
-        "name": "Baby Blue",
-        "fact": "Baby blue is a very soft pale blue traditionally used for newborn boys"
-      },
-      {
-        "name": "Ice Blue",
-        "fact": "Ice blue is a pale cold blue like sunlight reflecting off frozen ice"
-      },
-      {
-        "name": "Steel Blue",
-        "fact": "Steel blue is a medium grayish-blue like polished steel"
-      },
-      {
-        "name": "Plum",
-        "fact": "Plum is a dark purple-red color like the skin of a plum fruit"
-      },
-      {
-        "name": "Lilac",
-        "fact": "Lilac is a pale soft violet-pink named after the lilac flowering bush"
-      },
-      {
-        "name": "Orchid",
-        "fact": "Orchid is a medium pink-purple color like many exotic orchid flowers"
-      },
-      {
-        "name": "Wisteria",
-        "fact": "Wisteria is a soft blue-purple color named after the cascading wisteria vine"
-      },
-      {
-        "name": "Mulberry",
-        "fact": "Mulberry is a dark reddish-purple color like the juice of mulberries"
-      },
-      {
-        "name": "Eggplant",
-        "fact": "Eggplant is a very dark purple almost black like the skin of an eggplant"
-      },
-      {
-        "name": "Taupe",
-        "fact": "Taupe is a warm brownish-gray color very popular in modern home decor"
-      },
-      {
-        "name": "Charcoal",
-        "fact": "Charcoal is a very dark gray almost black like burned charcoal"
-      },
-      {
-        "name": "Slate",
-        "fact": "Slate is a medium blue-gray color like the rock used for roofing tiles"
-      },
-      {
-        "name": "Ash",
-        "fact": "Ash is a pale grayish-white color like wood ash after a fire"
-      },
-      {
-        "name": "Snow White",
-        "fact": "Snow white is the purest brightest white like freshly fallen clean snow"
-      },
-      {
-        "name": "Pearl",
-        "fact": "Pearl is a soft iridescent white with a slightly warm tone like a real pearl"
-      },
-      {
-        "name": "Eggshell",
-        "fact": "Eggshell is a slightly off-white color with a warm yellowish tint"
-      },
-      {
-        "name": "Linen",
-        "fact": "Linen is a warm creamy white-beige color like the natural fabric"
-      },
-      {
-        "name": "Alabaster",
-        "fact": "Alabaster is a very pale warm white like the smooth translucent stone"
-      },
-      {
-        "name": "Saffron",
-        "fact": "Saffron is a vivid golden-yellow like the spice made from crocus flowers"
-      },
-      {
-        "name": "Mustard",
-        "fact": "Mustard is a deep dull yellow color like the famous condiment"
-      },
-      {
-        "name": "Lemon",
-        "fact": "Lemon yellow is a bright cool yellow like fresh lemon peel"
-      },
-      {
-        "name": "Canary",
-        "fact": "Canary yellow is a bright cheerful yellow like the feathers of a canary bird"
-      },
-      {
-        "name": "Butter",
-        "fact": "Butter yellow is a soft pale warm yellow like fresh dairy butter"
-      },
-      {
-        "name": "Pumpkin Orange",
-        "fact": "Pumpkin orange is a warm deep orange like a Halloween pumpkin"
-      },
-      {
-        "name": "Tangerine",
-        "fact": "Tangerine orange is a vivid medium orange like the tangerine fruit"
-      },
-      {
-        "name": "Apricot",
-        "fact": "Apricot is a soft pale peachy-orange like the skin of the apricot fruit"
-      },
-      {
-        "name": "Rust",
-        "fact": "Rust is a reddish-brown orange color like iron that has oxidized and rusted"
-      },
-      {
-        "name": "Cinnamon",
-        "fact": "Cinnamon is a warm reddish-brown color like the popular baking spice"
-      },
-      {
-        "name": "Caramel",
-        "fact": "Caramel is a rich golden-brown color like cooked sugar caramel"
-      },
-      {
-        "name": "Mocha",
-        "fact": "Mocha is a warm brownish-tan color like coffee mixed with chocolate"
-      },
-      {
-        "name": "Espresso",
-        "fact": "Espresso is an extremely dark rich brown almost black like strong black coffee"
-      },
-      {
-        "name": "Chocolate",
-        "fact": "Chocolate brown is a deep warm brown color like dark chocolate bars"
-      },
-      {
-        "name": "Mahogany",
-        "fact": "Mahogany is a reddish-brown color like the tropical wood used in fine furniture"
-      },
-      {
-        "name": "Cerise",
-        "fact": "Cerise is a vivid deep pinkish-red color named after the French word for cherry"
-      },
-      {
-        "name": "Cinnabar",
-        "fact": "Cinnabar is a brilliant red-orange color from the mercury sulfide mineral of the same name"
-      },
-      {
-        "name": "Hooker's Green",
-        "fact": "Hooker's Green is a dark botanical green used by artists since the 1800s"
-      },
-      {
-        "name": "Prussian Blue",
-        "fact": "Prussian blue was the first modern synthetic pigment created by accident in 1704"
-      },
-      {
-        "name": "Verdigris",
-        "fact": "Verdigris is the distinctive blue-green color that forms when copper oxidizes"
-      }
+  "Red": {
+    "explanation": "Red is the color of fire, roses, and is used on stop signs to mean danger or stop",
+    "points": [
+      "Most attention-grabbing color in the visible spectrum",
+      "Universally signals stop, danger, and urgency in traffic systems",
+      "Strongly linked to passion, love, energy, and power across cultures",
+      "First color infants typically recognize and name",
+      "Primary color in both RGB (additive) and CMYK (subtractive) models"
+    ]
+  },
+  "Blue": {
+    "explanation": "Blue is the color of the sky and ocean and is the most popular favorite color worldwide",
+    "points": [
+      "Most commonly chosen favorite color in global surveys",
+      "Produces calming and relaxing psychological effects",
+      "Dominates natural daylight and clear daytime sky appearance",
+      "Key primary color in digital screens (RGB) and printing",
+      "Symbolizes trust, loyalty, wisdom, confidence, and stability"
+    ]
+  },
+  "Yellow": {
+    "explanation": "Yellow is the color of the sun and makes people feel happy and cheerful",
+    "points": [
+      "Brightest and most luminous color to the human eye",
+      "Stimulates mental activity, optimism, and creativity",
+      "Highest visibility distance — used in warning signs and high-visibility clothing",
+      "Primary color in additive and subtractive color systems",
+      "Can cause eye strain or anxiety when overused in large areas"
+    ]
+  },
+  "Green": {
+    "explanation": "Green is the color of plants and nature and is associated with growth and life",
+    "points": [
+      "Most prevalent color in nature due to chlorophyll in vegetation",
+      "Strong association with environmentalism, renewal, and sustainability",
+      "Most restful color for the human eye — reduces strain",
+      "Centered in the visible spectrum (~495–570 nm)",
+      "Symbol of harmony, freshness, fertility, and financial success"
+    ]
+  },
+  "Orange": {
+    "explanation": "Orange is a warm color that is a mix of red and yellow",
+    "points": [
+      "Combines red's energy with yellow's cheerfulness",
+      "Highly visible — frequently used in safety vests, cones, and signage",
+      "Stimulates appetite — dominant in many food brands and restaurants",
+      "Represents enthusiasm, adventure, sociability, and warmth",
+      "Secondary color formed by combining red and yellow"
+    ]
+  },
+  "Purple": {
+    "explanation": "Purple was historically the most expensive dye and was only worn by royalty",
+    "points": [
+      "Tyrian purple dye was extremely rare and costly in antiquity",
+      "Long associated with royalty, luxury, power, and spirituality",
+      "Blends calming blue with stimulating red — creates emotional complexity",
+      "Frequently used to convey creativity, mystery, and imagination",
+      "Relatively rare in nature, enhancing its exotic and special quality"
+    ]
+  },
+  "Pink": {
+    "explanation": "Pink is made by mixing red and white together in various proportions",
+    "points": [
+      "Softer, more gentle variation of red — linked to tenderness and nurturing",
+      "Strong modern cultural association with femininity and romance",
+      "Used in marketing and branding to evoke calmness and approachability",
+      "Shown to reduce aggressive behavior in some controlled environments",
+      "Spans wide range from pale pastels to intense hot/neon shades"
+    ]
+  },
+  "Brown": {
+    "explanation": "Brown is a warm earthy color found in soil, wood, and chocolate",
+    "points": [
+      "Evokes feelings of stability, reliability, comfort, and groundedness",
+      "Very common in natural environments — feels safe and familiar",
+      "Widely used in interior design for warm, welcoming atmospheres",
+      "Produced by combining all three primary colors or complements",
+      "Dominant in food, leather, wood, rustic, and natural-themed products"
+    ]
+  },
+  "Black": {
+    "explanation": "Black is the absence of visible light and absorbs all colors of the spectrum",
+    "points": [
+      "Symbol of power, elegance, formality, mystery, and sophistication",
+      "Perfect absorber of all visible light wavelengths",
+      "Creates maximum contrast — excellent for emphasis and focus",
+      "Associated with mourning, death, and formality in many cultures",
+      "Extremely versatile — pairs effectively with nearly every color"
+    ]
+  },
+  "White": {
+    "explanation": "White reflects all colors of light and is associated with purity and cleanliness",
+    "points": [
+      "Represents purity, simplicity, innocence, peace, and cleanliness",
+      "Reflects nearly all visible light wavelengths equally",
+      "Creates illusion of space, openness, and modernity in design",
+      "Common background color to make other hues stand out clearly",
+      "Symbol of new beginnings, weddings, hospitals, and spirituality"
+    ]
+  },
+  "Gray": {
+    "explanation": "Gray is a neutral color between black and white found in clouds and rocks",
+    "points": [
+      "Most neutral color — balances both warm and cool tones",
+      "Dominant in modern, minimalist, professional, and corporate aesthetics",
+      "Can shift appearance (warm/cool) based on adjacent colors and lighting",
+      "Symbolizes maturity, intelligence, conservatism, and compromise",
+      "Extremely common in technology products, architecture, and interiors"
+    ]
+  },
+  "Cyan": {
+    "explanation": "Cyan is a bright blue-green color used in color printing alongside magenta and yellow",
+    "points": [
+      "One of the three primary colors in the CMYK printing process",
+      "Bright, refreshing, energetic — often feels aquatic or tropical",
+      "Created by combining blue and green light in similar proportions",
+      "Very common in digital interfaces and water-related branding",
+      "High visibility and strong contrast against most backgrounds"
+    ]
+  },
+  "Magenta": {
+    "explanation": "Magenta is a vivid pink-purple used in printing and does not appear in the rainbow",
+    "points": [
+      "Extra-spectral color — does not correspond to a single wavelength",
+      "Essential primary color in CMYK printing model",
+      "Extremely vibrant and attention-grabbing in visual design",
+      "Often conveys creativity, femininity, boldness, and energy",
+      "Produced by high-intensity combination of red and blue light"
+    ]
+  },
+  "Turquoise": {
+    "explanation": "Turquoise is a blue-green color named after the precious gemstone",
+    "points": [
+      "Named after the turquoise gemstone mined for thousands of years",
+      "Symbolizes protection, healing, and spiritual attunement in many cultures",
+      "Popular in jewelry, fashion, and Southwestern/Native American art",
+      "Creates refreshing, calming effect similar to tropical waters",
+      "Balances blue's calmness with green's growth energy"
+    ]
+  },
+  "Indigo": {
+    "explanation": "Indigo is a deep blue-violet that sits between blue and violet in the rainbow",
+    "points": [
+      "One of Newton's seven rainbow colors (though debated today)",
+      "Traditional natural dye from the indigo plant used for centuries",
+      "Associated with intuition, perception, and the 'third eye' in spirituality",
+      "Deep, rich tone used in denim jeans (indigo dye)",
+      "Symbol of wisdom, integrity, and inner depth"
+    ]
+  },
+  "Violet": {
+    "explanation": "Violet is the last color in the visible spectrum with the shortest wavelength",
+    "points": [
+      "Shortest wavelength in visible light (~380–450 nm)",
+      "Often confused with purple but more blue-toned in spectrum",
+      "Associated with luxury, creativity, mystery, and spirituality",
+      "Used in healing practices and chakra systems (crown chakra)",
+      "Rare in nature, making it feel ethereal and special"
+    ]
+  },
+  "Maroon": {
+    "explanation": "Maroon is a dark brownish-red color named after the French word for chestnut",
+    "points": [
+      "Derived from French 'marron' meaning chestnut",
+      "Rich, sophisticated, and slightly muted variation of red",
+      "Common in university colors, fashion, and autumn palettes",
+      "Conveys depth, strength, and understated elegance",
+      "Lower saturation makes it feel warmer and more grounded than pure red"
+    ]
+  },
+  "Navy Blue": {
+    "explanation": "Navy blue is a very dark shade of blue traditionally used for military uniforms",
+    "points": [
+      "Originated from British Royal Navy uniforms in the 18th century",
+      "Symbol of authority, trust, professionalism, and discipline",
+      "Widely used in business attire, formal wear, and corporate branding",
+      "Appears almost black in low light but retains blue character",
+      "Very versatile and pairs well with most other colors"
+    ]
+  },
+  "Teal": {
+    "explanation": "Teal is a blue-green color named after the colored stripe on a duck called a teal",
+    "points": [
+      "Named after the Eurasian teal duck's eye stripe",
+      "Sophisticated mix of blue calm and green freshness",
+      "Popular in fashion, interior design, and branding",
+      "Conveys clarity, communication, and emotional balance",
+      "Feels modern and slightly exotic compared to basic blue or green"
+    ]
+  },
+  "Lime": {
+    "explanation": "Lime green is a vivid yellow-green color as bright as a fresh lime fruit",
+    "points": [
+      "Extremely bright and energetic variation of green",
+      "High visibility — often used in safety gear and sportswear",
+      "Associated with freshness, youth, vitality, and citrus energy",
+      "Popular in digital design, gaming, and modern branding",
+      "Can be overwhelming in large amounts due to intensity"
+    ]
+  },
+  "Olive": {
+    "explanation": "Olive is a dark yellow-green color resembling ripe olive fruits",
+    "points": [
+      "Muted, earthy variation of green inspired by olives",
+      "Military and outdoor fashion staple (olive drab)",
+      "Conveys stability, wisdom, peace, and naturalness",
+      "Works well in rustic, vintage, and nature-inspired palettes",
+      "Lower saturation makes it feel calm and understated"
+    ]
+  },
+  "Coral": {
+    "explanation": "Coral is a warm pink-orange color inspired by the colors of sea coral reefs",
+    "points": [
+      "Warm, vibrant mix between pink and orange",
+      "Named after living coral reef colors (especially tropical)",
+      "Symbolizes enthusiasm, friendliness, and tropical energy",
+      "Popular in fashion, summer collections, and coastal decor",
+      "Pantone Color of the Year 2019"
+    ]
+  },
+  "Salmon": {
+    "explanation": "Salmon is a pinkish-orange color named after the flesh of the salmon fish",
+    "points": [
+      "Soft, warm tone between pink and orange",
+      "Named after cooked salmon fillet color",
+      "Conveys warmth, approachability, and gentle energy",
+      "Common in fashion, cosmetics, and interior design",
+      "Softer and more muted than bright coral or peach"
+    ]
+  },
+  "Peach": {
+    "explanation": "Peach is a soft pale orange-pink color like the skin of a ripe peach fruit",
+    "points": [
+      "Gentle, warm pastel between orange and pink",
+      "Named after the fuzzy skin of ripe peaches",
+      "Symbolizes modesty, sweetness, and gentle femininity",
+      "Very popular in cosmetics, fashion, and home decor",
+      "Creates soft, welcoming, and romantic atmosphere"
+    ]
+  },
+  "Lavender": {
+    "explanation": "Lavender is a pale soft purple named after the lavender flower",
+    "points": [
+      "Light, airy variation of purple inspired by lavender flowers",
+      "Associated with calmness, relaxation, and femininity",
+      "Widely used in aromatherapy and wellness products",
+      "Popular in spring/summer fashion and bedroom decor",
+      "Conveys grace, elegance, and gentle sophistication"
+    ]
+  },
+  "Ivory": {
+    "explanation": "Ivory is a warm off-white color originally from elephant and walrus tusks",
+    "points": [
+      "Slightly warmer and creamier than pure white",
+      "Historically sourced from elephant and walrus tusks",
+      "Symbol of luxury, purity, and classic elegance",
+      "Common in wedding dresses, piano keys, and fine stationery",
+      "Creates soft, refined alternative to stark white"
+    ]
+  },
+  "Cream": {
+    "explanation": "Cream is a pale yellow-white color like the color of fresh dairy cream",
+    "points": [
+      "Warm, soft off-white with subtle yellow undertone",
+      "Named after the top layer of unhomogenized milk",
+      "Creates cozy, inviting, and luxurious feeling",
+      "Widely used in interiors, fashion, and food presentation",
+      "Softer and more approachable than pure white"
+    ]
+  },
+  "Beige": {
+    "explanation": "Beige is a very light warm tan or sandy color often used in interior design",
+    "points": [
+      "Neutral, warm-toned light brown/gray",
+      "Extremely versatile in interior design and fashion",
+      "Conveys calm, sophistication, and understated elegance",
+      "Popular base color for walls, furniture, and clothing",
+      "Pairs well with almost every other color"
+    ]
+  },
+  "Tan": {
+    "explanation": "Tan is a light brown color like sun-tanned skin or leather",
+    "points": [
+      "Light to medium brown with warm undertones",
+      "Named after the process of tanning leather or sun-tanned skin",
+      "Conveys warmth, earthiness, and casual elegance",
+      "Common in fashion, furniture, and outdoor aesthetics",
+      "Very versatile neutral tone"
+    ]
+  },
+  "Khaki": {
+    "explanation": "Khaki is a dull brownish-yellow used in military and casual clothing",
+    "points": [
+      "Dusty, muted yellow-brown color",
+      "Originally from Urdu/Hindi word for dust/earth",
+      "Classic military uniform color (especially British and American)",
+      "Conveys practicality, reliability, and casual style",
+      "Popular in cargo pants, chinos, and outdoor wear"
+    ]
+  },
+  "Gold": {
+    "explanation": "Gold is a rich warm yellow metallic color associated with wealth and luxury",
+    "points": [
+      "Metallic yellow-orange hue of the element gold",
+      "Universal symbol of wealth, success, prestige, and luxury",
+      "Used extensively in awards, jewelry, and high-end branding",
+      "Creates feeling of warmth, quality, and celebration",
+      "Pairs beautifully with black, white, navy, and deep red"
+    ]
+  },
+  "Silver": {
+    "explanation": "Silver is a metallic grey color associated with high technology and modernity",
+    "points": [
+      "Shiny gray-white metallic hue of the element silver",
+      "Symbol of modernity, technology, sophistication, and clarity",
+      "Common in electronics, jewelry, and futuristic design",
+      "Creates cool, clean, and premium appearance",
+      "Excellent neutral that enhances other colors"
+    ]
+  },
+  "Bronze": {
+    "explanation": "Bronze is a dark orange-brown metallic color of the ancient alloy of copper and tin",
+    "points": [
+      "Warm, metallic brown from copper-tin alloy",
+      "Associated with antiquity, strength, achievement, and medals",
+      "Common in sculptures, hardware, and vintage aesthetics",
+      "Conveys durability, warmth, and timeless quality",
+      "Rich alternative to gold with more earthy character"
+    ]
+  },
+  "Copper": {
+    "explanation": "Copper is a reddish-orange metallic color like freshly polished copper pipes",
+    "points": [
+      "Warm, reddish metallic hue of the element copper",
+      "Symbol of conductivity, beauty, and industrial elegance",
+      "Popular in home decor, jewelry, and kitchenware",
+      "Develops distinctive green patina (verdigris) when oxidized",
+      "Warm and luxurious alternative to gold or silver"
+    ]
+  },
+  "Scarlet": {
+    "explanation": "Scarlet is a vivid bright red slightly towards orange associated with passion",
+    "points": [
+      "Intense, slightly orange-leaning bright red",
+      "Historically associated with sin, passion, and high status",
+      "Used in religious vestments, military uniforms, and flags",
+      "Conveys intense emotion, courage, and visibility",
+      "Very dramatic and attention-demanding"
+    ]
+  },
+  "Crimson": {
+    "explanation": "Crimson is a deep rich red color used for royalty and in many national flags",
+    "points": [
+      "Deep, slightly bluish rich red",
+      "Associated with royalty, wealth, and ceremonial importance",
+      "Common in national flags, academic regalia, and heraldry",
+      "Conveys power, dignity, and intensity",
+      "More sophisticated than bright scarlet"
+    ]
+  },
+  "Burgundy": {
+    "explanation": "Burgundy is a dark red wine color named after the Burgundy wine region of France",
+    "points": [
+      "Dark, rich red with purple undertones",
+      "Named after fine French Burgundy wines",
+      "Symbol of elegance, sophistication, and luxury",
+      "Popular in fashion, wine branding, and fall palettes",
+      "Feels mature, warm, and refined"
+    ]
+  },
+  "Vermilion": {
+    "explanation": "Vermilion is a bright orange-red once made from toxic mercury sulfide",
+    "points": [
+      "Vivid orange-leaning bright red",
+      "Historically made from toxic cinnabar (mercury sulfide)",
+      "Used in Chinese lacquerware, Indian bindi, and Renaissance art",
+      "Symbol of good fortune, passion, and energy",
+      "Extremely intense and eye-catching"
+    ]
+  },
+  "Amber": {
+    "explanation": "Amber is a warm golden yellow color like the fossilized tree resin",
+    "points": [
+      "Warm golden-orange hue of fossilized tree resin",
+      "Associated with warmth, clarity, healing, and ancient energy",
+      "Popular in jewelry, interior lighting, and fall palettes",
+      "Conveys optimism, vitality, and natural beauty",
+      "Creates cozy, glowing atmosphere"
+    ]
+  },
+  "Ochre": {
+    "explanation": "Ochre is an earthy yellow-brown used as one of the oldest natural pigments in art",
+    "points": [
+      "Natural earth pigment ranging from yellow to red-brown",
+      "One of the earliest pigments used in prehistoric cave art",
+      "Symbol of earth, stability, and ancient human creativity",
+      "Still used in art, ceramics, and natural cosmetics",
+      "Warm, grounded, and timeless color"
+    ]
+  },
+  "Sienna": {
+    "explanation": "Sienna is a reddish-brown earth pigment named after the Italian city of Siena",
+    "points": [
+      "Warm reddish-brown natural earth pigment",
+      "Named after Siena, Italy where it was historically mined",
+      "Widely used in Renaissance and classical painting",
+      "Conveys warmth, earthiness, and artistic tradition",
+      "Burnt sienna is darker and more red-toned"
+    ]
+  },
+  "Umber": {
+    "explanation": "Umber is a dark brown natural earth pigment with a slight greenish tinge",
+    "points": [
+      "Dark brown earth pigment with subtle green undertone",
+      "Named after Umbria region in Italy",
+      "Used extensively in oil painting for shadows and depth",
+      "Conveys richness, depth, and natural earthiness",
+      "Burnt umber becomes warmer and redder when heated"
+    ]
+  },
+  "Cobalt Blue": {
+    "explanation": "Cobalt blue is a deep vivid blue made from cobalt salts used by artists for centuries",
+    "points": [
+      "Intense, pure blue pigment made from cobalt compounds",
+      "Introduced in early 19th century as stable alternative to ultramarine",
+      "Prized by Impressionists and modern artists for brilliance",
+      "Symbol of depth, stability, and artistic quality",
+      "Very lightfast and chemically stable"
+    ]
+  },
+  "Cerulean": {
+    "explanation": "Cerulean is a sky blue color named after the Latin word for sky",
+    "points": [
+      "Bright sky-blue pigment from Latin 'caeruleus' meaning sky-blue",
+      "Popular with Impressionist and plein air painters",
+      "Conveys clarity, openness, and serene atmosphere",
+      "Lighter and greener-toned than cobalt blue",
+      "Excellent lightfastness and mixing properties"
+    ]
+  },
+  "Periwinkle": {
+    "explanation": "Periwinkle is a soft blue-lavender color named after a small flowering plant",
+    "points": [
+      "Soft blue-purple inspired by periwinkle flowers",
+      "Conveys gentleness, nostalgia, and subtle elegance",
+      "Popular in spring fashion, children's products, and vintage aesthetics",
+      "Calming and slightly whimsical tone",
+      "Lighter and more delicate than true lavender"
+    ]
+  },
+  "Mauve": {
+    "explanation": "Mauve was the first synthetic dye color discovered in 1856 by accident",
+    "points": [
+      "Pale purple discovered by William Perkin in 1856",
+      "First commercially successful synthetic organic dye",
+      "Started the synthetic dye industry and fashion revolution",
+      "Conveys Victorian elegance, softness, and historical charm",
+      "Lighter and pinker than modern purple tones"
+    ]
+  },
+  "Fuchsia": {
+    "explanation": "Fuchsia is a vivid hot pink named after the fuchsia plant's bright flowers",
+    "points": [
+      "Intense pink-purple named after fuchsia flowers",
+      "Extremely vibrant and energetic color",
+      "Popular in fashion, cosmetics, and bold branding",
+      "Conveys confidence, playfulness, and modernity",
+      "Very close to magenta but usually slightly redder"
+    ]
+  },
+  "Rose": {
+    "explanation": "Rose is a medium-dark pink color like the petals of a classic rose",
+    "points": [
+      "Classic medium pink inspired by rose flowers",
+      "Symbol of romantic love, beauty, and appreciation",
+      "Softer and more natural than hot pink",
+      "Widely used in cosmetics, fashion, and floral design",
+      "Conveys femininity, warmth, and elegance"
+    ]
+  },
+  "Blush": {
+    "explanation": "Blush is a very soft and light pink like the color of a subtle blush on cheeks",
+    "points": [
+      "Very pale, natural-looking pink",
+      "Named after natural cheek flush when embarrassed or excited",
+      "Conveys innocence, delicacy, and natural beauty",
+      "Extremely popular in makeup and subtle fashion",
+      "Soft and flattering on almost all skin tones"
+    ]
+  },
+  "Hot Pink": {
+    "explanation": "Hot pink is a neon vivid version of pink used widely in pop art and fashion",
+    "points": [
+      "Extremely bright, intense pink",
+      "Became iconic in 1980s fashion and pop culture",
+      "Conveys boldness, fun, confidence, and energy",
+      "Used in branding, sportswear, and statement pieces",
+      "Very high saturation and attention-grabbing"
+    ]
+  },
+  "Chartreuse": {
+    "explanation": "Chartreuse is a vivid yellow-green named after a French liqueur of the same color",
+    "points": [
+      "Bright yellow-green named after Chartreuse liqueur",
+      "Extremely vivid and attention-demanding",
+      "Conveys energy, youth, and unconventional style",
+      "Used sparingly due to high intensity",
+      "Popular in retro, psychedelic, and fashion-forward design"
+    ]
+  },
+  "Sage": {
+    "explanation": "Sage is a soft grayish-green color like the herb used in cooking",
+    "points": [
+      "Muted gray-green inspired by sage leaves",
+      "Conveys calmness, wisdom, healing, and sophistication",
+      "Extremely popular in modern interior design",
+      "Soft and grounding neutral tone",
+      "Pairs beautifully with wood, cream, and blush tones"
+    ]
+  },
+  "Mint": {
+    "explanation": "Mint is a fresh pale cool green color like the mint plant",
+    "points": [
+      "Fresh, light green inspired by mint leaves",
+      "Symbolizes freshness, coolness, and renewal",
+      "Popular in summer fashion, food packaging, and bathroom decor",
+      "Calming and invigorating at the same time",
+      "Very clean and modern appearance"
+    ]
+  },
+  "Emerald": {
+    "explanation": "Emerald is a rich vivid green color like the precious gemstone",
+    "points": [
+      "Deep, rich green of emerald gemstones",
+      "Symbol of rebirth, love, fertility, and hope",
+      "Associated with luxury, wealth, and May birthstone",
+      "Very popular in jewelry and high-end fashion",
+      "Conveys depth, elegance, and natural beauty"
+    ]
+  },
+  "Forest Green": {
+    "explanation": "Forest green is a dark natural green color like the shade inside a dense forest",
+    "points": [
+      "Deep, rich green of dense forest canopies",
+      "Conveys nature, depth, stability, and tranquility",
+      "Popular in outdoor gear, military, and classic design",
+      "Feels grounded and timeless",
+      "Excellent contrast with lighter neutrals"
+    ]
+  },
+  "Hunter Green": {
+    "explanation": "Hunter green is a very deep dark green traditionally used in outdoor hunting clothing",
+    "points": [
+      "Very dark green developed for hunting camouflage",
+      "Conveys tradition, outdoors, and quiet strength",
+      "Classic color in Ivy League and preppy fashion",
+      "Rich and sophisticated alternative to black",
+      "Excellent depth in low lighting"
+    ]
+  },
+  "Jade": {
+    "explanation": "Jade is a medium cool green color like the precious jade stone from Asia",
+    "points": [
+      "Cool, medium green of jade gemstone",
+      "Symbol of purity, harmony, wisdom, and protection in Asian cultures",
+      "Highly valued in Chinese and Mesoamerican art",
+      "Conveys balance, luck, and serenity",
+      "Slightly bluish compared to emerald"
+    ]
+  },
+  "Aquamarine": {
+    "explanation": "Aquamarine is a light blue-green like clear tropical ocean water",
+    "points": [
+      "Light blue-green named after seawater",
+      "March birthstone symbolizing youth, hope, and health",
+      "Conveys clarity, calmness, and serenity",
+      "Popular in jewelry and coastal-inspired design",
+      "Feels refreshing and clean"
+    ]
+  },
+  "Sapphire": {
+    "explanation": "Sapphire blue is a deep brilliant blue like the precious sapphire gemstone",
+    "points": [
+      "Rich, deep blue of sapphire gemstones",
+      "September birthstone symbolizing wisdom, loyalty, and nobility",
+      "Associated with royalty, truth, and divine favor",
+      "Very popular in high-end jewelry",
+      "Conveys depth, elegance, and trustworthiness"
+    ]
+  },
+  "Royal Blue": {
+    "explanation": "Royal blue is a vivid bright blue historically associated with royalty",
+    "points": [
+      "Bright, intense medium blue",
+      "Historically used in royal robes and heraldry",
+      "Symbol of prestige, confidence, and authority",
+      "Popular in sports teams, flags, and corporate branding",
+      "Striking yet approachable blue tone"
+    ]
+  },
+  "Midnight Blue": {
+    "explanation": "Midnight blue is an extremely dark blue almost black like the deep night sky",
+    "points": [
+      "Very dark blue that appears almost black",
+      "Evokes mystery, depth, elegance, and nighttime serenity",
+      "Popular in evening wear and luxury branding",
+      "Creates sophisticated alternative to pure black",
+      "Retains subtle blue character in light"
+    ]
+  },
+  "Electric Blue": {
+    "explanation": "Electric blue is a vivid fluorescent blue like an electric spark",
+    "points": [
+      "Intensely bright, almost neon blue",
+      "Associated with energy, technology, and futuristic aesthetics",
+      "Popular in 1980s fashion, gaming, and cyberpunk design",
+      "Extremely high visibility and attention-grabbing",
+      "Creates high-energy, modern appearance"
+    ]
+  },
+  "Baby Blue": {
+    "explanation": "Baby blue is a very soft pale blue traditionally used for newborn boys",
+    "points": [
+      "Very light, soft pastel blue",
+      "Traditionally associated with baby boys (though now gender-neutral)",
+      "Conveys innocence, calmness, and gentleness",
+      "Popular in nursery decor, baby products, and spring fashion",
+      "Very soothing and delicate tone"
+    ]
+  },
+  "Ice Blue": {
+    "explanation": "Ice blue is a pale cold blue like sunlight reflecting off frozen ice",
+    "points": [
+      "Very pale, cool blue with icy undertones",
+      "Evokes winter, clarity, coolness, and purity",
+      "Popular in winter fashion, cosmetics, and glacial-themed design",
+      "Feels crisp, clean, and refreshing",
+      "Slightly grayish compared to baby blue"
+    ]
+  },
+  "Steel Blue": {
+    "explanation": "Steel blue is a medium grayish-blue like polished steel",
+    "points": [
+      "Medium blue with strong gray undertones",
+      "Conveys strength, reliability, technology, and industrial elegance",
+      "Popular in corporate branding, tech products, and menswear",
+      "Balanced and professional tone",
+      "Cooler and more muted than royal blue"
+    ]
+  },
+  "Plum": {
+    "explanation": "Plum is a dark purple-red color like the skin of a plum fruit",
+    "points": [
+      "Deep purple with strong red undertones",
+      "Named after ripe plum fruit skin",
+      "Conveys richness, mystery, luxury, and sensuality",
+      "Popular in fall fashion, wine branding, and elegant decor",
+      "More red-toned than pure purple"
+    ]
+  },
+  "Lilac": {
+    "explanation": "Lilac is a pale soft violet-pink named after the lilac flowering bush",
+    "points": [
+      "Light purple-pink inspired by lilac flowers",
+      "Symbol of spring, renewal, first love, and youth",
+      "Popular in spring fashion, gardening, and feminine aesthetics",
+      "Softer and pinker than true lavender",
+      "Conveys delicacy and gentle romance"
+    ]
+  },
+  "Orchid": {
+    "explanation": "Orchid is a medium pink-purple color like many exotic orchid flowers",
+    "points": [
+      "Medium purple-pink inspired by orchid blooms",
+      "Conveys exotic beauty, luxury, strength, and refinement",
+      "Popular in fashion, cosmetics, and tropical-inspired design",
+      "More vibrant than lilac, softer than fuchsia",
+      "Feels sophisticated and slightly exotic"
+    ]
+  },
+  "Wisteria": {
+    "explanation": "Wisteria is a soft blue-purple color named after the cascading wisteria vine",
+    "points": [
+      "Soft blue-leaning purple inspired by wisteria flowers",
+      "Conveys grace, elegance, nostalgia, and romanticism",
+      "Popular in spring fashion, vintage aesthetics, and garden design",
+      "Lighter and bluer than plum or orchid",
+      "Creates dreamy, ethereal feeling"
+    ]
+  },
+  "Mulberry": {
+    "explanation": "Mulberry is a dark reddish-purple color like the juice of mulberries",
+    "points": [
+      "Deep reddish-purple inspired by mulberry fruit juice",
+      "Conveys richness, depth, sophistication, and intensity",
+      "Popular in fall/winter fashion and luxury branding",
+      "More red-toned than eggplant",
+      "Feels luxurious and slightly dramatic"
+    ]
+  },
+  "Eggplant": {
+    "explanation": "Eggplant is a very dark purple almost black like the skin of an eggplant",
+    "points": [
+      "Very deep, almost black purple",
+      "Named after the skin of eggplant (aubergine)",
+      "Conveys mystery, elegance, luxury, and depth",
+      "Popular in fashion, food branding, and modern interiors",
+      "Rich alternative to black with subtle purple character"
+    ]
+  },
+  "Taupe": {
+    "explanation": "Taupe is a warm brownish-gray color very popular in modern home decor",
+    "points": [
+      "Warm gray-brown neutral",
+      "Name derived from French word for mole (animal)",
+      "Extremely versatile in modern interior design",
+      "Conveys sophistication, calmness, and timelessness",
+      "Warmer than pure gray, cooler than beige"
+    ]
+  },
+  "Charcoal": {
+    "explanation": "Charcoal is a very dark gray almost black like burned charcoal",
+    "points": [
+      "Very deep gray, nearly black",
+      "Named after partially burned wood (charcoal)",
+      "Conveys strength, modernity, sophistication, and drama",
+      "Popular in fashion, interiors, and tech products",
+      "Softer alternative to pure black"
+    ]
+  },
+  "Slate": {
+    "explanation": "Slate is a medium blue-gray color like the rock used for roofing tiles",
+    "points": [
+      "Medium gray with distinct blue undertones",
+      "Named after slate rock used in roofing and writing tablets",
+      "Conveys stability, professionalism, and understated elegance",
+      "Popular in modern architecture and corporate design",
+      "Cooler and bluer than taupe"
+    ]
+  },
+  "Ash": {
+    "explanation": "Ash is a pale grayish-white color like wood ash after a fire",
+    "points": [
+      "Very light gray with subtle cool undertones",
+      "Named after the pale residue of burned wood",
+      "Conveys softness, minimalism, and gentle neutrality",
+      "Popular in Scandinavian and modern interior design",
+      "Softer and cooler than ivory or cream"
+    ]
+  },
+  "Snow White": {
+    "explanation": "Snow white is the purest brightest white like freshly fallen clean snow",
+    "points": [
+      "Pure, bright, cool white",
+      "Inspired by freshly fallen snow",
+      "Symbol of ultimate purity, clarity, and perfection",
+      "Creates crisp, clean, modern appearance",
+      "Very high brightness and minimal undertone"
+    ]
+  },
+  "Pearl": {
+    "explanation": "Pearl is a soft iridescent white with a slightly warm tone like a real pearl",
+    "points": [
+      "Soft white with subtle iridescent shimmer",
+      "Inspired by natural pearls",
+      "Conveys luxury, elegance, softness, and refinement",
+      "Popular in cosmetics, fashion, and bridal wear",
+      "Warmer and more luminous than pure white"
+    ]
+  },
+  "Eggshell": {
+    "explanation": "Eggshell is a slightly off-white color with a warm yellowish tint",
+    "points": [
+      "Very pale warm off-white",
+      "Named after natural chicken eggshell color",
+      "Conveys subtle warmth, tradition, and gentle elegance",
+      "Popular in interior paint colors and classic design",
+      "Softer and warmer than pure white"
+    ]
+  },
+  "Linen": {
+    "explanation": "Linen is a warm creamy white-beige color like the natural fabric",
+    "points": [
+      "Warm off-white/beige inspired by natural linen fabric",
+      "Conveys naturalness, comfort, and relaxed elegance",
+      "Popular in summer fashion, interiors, and rustic design",
+      "Slightly darker and warmer than eggshell",
+      "Feels organic and approachable"
+    ]
+  },
+  "Alabaster": {
+    "explanation": "Alabaster is a very pale warm white like the smooth translucent stone",
+    "points": [
+      "Very pale, slightly warm white",
+      "Named after fine-grained gypsum alabaster stone",
+      "Conveys purity, luxury, softness, and classical beauty",
+      "Used in sculpture, architecture, and high-end decor",
+      "Slightly warmer and more translucent-feeling than snow white"
+    ]
+  },
+  "Saffron": {
+    "explanation": "Saffron is a vivid golden-yellow like the spice made from crocus flowers",
+    "points": [
+      "Bright golden-orange-yellow from saffron spice",
+      "One of the world's most expensive spices",
+      "Symbol of wealth, spirituality, and sacredness in many cultures",
+      "Used in religious ceremonies, cooking, and luxury textiles",
+      "Warm and luxurious tone"
+    ]
+  },
+  "Mustard": {
+    "explanation": "Mustard is a deep dull yellow color like the famous condiment",
+    "points": [
+      "Deep, muted yellow-brown inspired by mustard condiment",
+      "Conveys earthiness, warmth, and vintage appeal",
+      "Popular in fall fashion, retro design, and food branding",
+      "More subdued than bright lemon or canary yellow",
+      "Feels cozy and grounded"
+    ]
+  },
+  "Lemon": {
+    "explanation": "Lemon yellow is a bright cool yellow like fresh lemon peel",
+    "points": [
+      "Bright, cool-toned yellow inspired by lemon peel",
+      "Conveys freshness, energy, optimism, and clarity",
+      "Popular in summer fashion, food packaging, and cheerful design",
+      "More acidic and cooler than gold or saffron",
+      "Very uplifting and stimulating"
+    ]
+  },
+  "Canary": {
+    "explanation": "Canary yellow is a bright cheerful yellow like the feathers of a canary bird",
+    "points": [
+      "Very bright, pure yellow inspired by canary birds",
+      "Conveys cheerfulness, optimism, and high energy",
+      "Popular in warning signs, sportswear, and cheerful branding",
+      "Extremely visible and attention-grabbing",
+      "Clear and intense without orange undertones"
+    ]
+  },
+  "Butter": {
+    "explanation": "Butter yellow is a soft pale warm yellow like fresh dairy butter",
+    "points": [
+      "Soft, warm pale yellow inspired by fresh butter",
+      "Conveys comfort, warmth, richness, and coziness",
+      "Popular in kitchens, vintage fashion, and soft interiors",
+      "Gentler and warmer than lemon or canary",
+      "Feels comforting and approachable"
+    ]
+  },
+  "Pumpkin Orange": {
+    "explanation": "Pumpkin orange is a warm deep orange like a Halloween pumpkin",
+    "points": [
+      "Rich, warm medium-deep orange",
+      "Named after ripe pumpkins",
+      "Symbol of autumn, harvest, warmth, and festivity",
+      "Popular in fall decor, Halloween, and food branding",
+      "More red-toned than bright tangerine"
+    ]
+  },
+  "Tangerine": {
+    "explanation": "Tangerine orange is a vivid medium orange like the tangerine fruit",
+    "points": [
+      "Bright, vivid medium orange inspired by tangerine fruit",
+      "Conveys energy, enthusiasm, and citrus freshness",
+      "Popular in fashion, food packaging, and cheerful design",
+      "More intense than peach, softer than pumpkin",
+      "Very uplifting and appetizing"
+    ]
+  },
+  "Apricot": {
+    "explanation": "Apricot is a soft pale peachy-orange like the skin of the apricot fruit",
+    "points": [
+      "Soft, pale orange-pink inspired by apricot fruit",
+      "Conveys warmth, gentleness, and subtle sweetness",
+      "Popular in cosmetics, spring/summer fashion, and interiors",
+      "Softer and pinker than tangerine",
+      "Feels delicate and romantic"
+    ]
+  },
+  "Rust": {
+    "explanation": "Rust is a reddish-brown orange color like iron that has oxidized and rusted",
+    "points": [
+      "Reddish-brown-orange of oxidized iron",
+      "Conveys industrial strength, age, warmth, and vintage appeal",
+      "Popular in fall palettes, industrial design, and rustic decor",
+      "Muted and earthy variation of orange",
+      "Feels grounded and timeless"
+    ]
+  },
+  "Cinnamon": {
+    "explanation": "Cinnamon is a warm reddish-brown color like the popular baking spice",
+    "points": [
+      "Warm brown with red-orange undertones",
+      "Named after cinnamon spice",
+      "Conveys warmth, comfort, spiciness, and autumn",
+      "Popular in fall fashion, food branding, and cozy interiors",
+      "Rich and appetizing tone"
+    ]
+  },
+  "Caramel": {
+    "explanation": "Caramel is a rich golden-brown color like cooked sugar caramel",
+    "points": [
+      "Rich golden-brown of melted and cooked sugar",
+      "Conveys sweetness, warmth, indulgence, and comfort",
+      "Popular in food branding, cosmetics, and cozy design",
+      "Warmer and redder than tan",
+      "Feels luxurious and delicious"
+    ]
+  },
+  "Mocha": {
+    "explanation": "Mocha is a warm brownish-tan color like coffee mixed with chocolate",
+    "points": [
+      "Warm medium brown inspired by mocha coffee drink",
+      "Conveys richness, warmth, sophistication, and comfort",
+      "Popular in fashion, cosmetics, and coffee branding",
+      "Balanced between brown and tan",
+      "Feels cozy and elegant"
+    ]
+  },
+  "Espresso": {
+    "explanation": "Espresso is an extremely dark rich brown almost black like strong black coffee",
+    "points": [
+      "Very deep, rich brown-black",
+      "Named after strong espresso coffee",
+      "Conveys intensity, sophistication, luxury, and depth",
+      "Popular in fashion, interiors, and premium branding",
+      "Almost black but with warm brown undertone"
+    ]
+  },
+  "Chocolate": {
+    "explanation": "Chocolate brown is a deep warm brown color like dark chocolate bars",
+    "points": [
+      "Deep, rich brown inspired by dark chocolate",
+      "Conveys indulgence, warmth, comfort, and decadence",
+      "Popular in food branding, fashion, and cozy interiors",
+      "Warmer and redder than espresso",
+      "Feels luxurious and comforting"
+    ]
+  },
+  "Mahogany": {
+    "explanation": "Mahogany is a reddish-brown color like the tropical wood used in fine furniture",
+    "points": [
+      "Rich reddish-brown of mahogany wood",
+      "Conveys luxury, tradition, quality, and warmth",
+      "Popular in fine furniture, musical instruments, and classic design",
+      "Deep and sophisticated tone",
+      "Redder than standard chocolate brown"
+    ]
+  },
+  "Cerise": {
+    "explanation": "Cerise is a vivid deep pinkish-red color named after the French word for cherry",
+    "points": [
+      "Vivid deep pink-red named after French word for cherry",
+      "Conveys passion, boldness, luxury, and intensity",
+      "Popular in fashion, cosmetics, and statement pieces",
+      "Brighter and pinker than burgundy",
+      "Very dramatic and eye-catching"
+    ]
+  },
+  "Cinnabar": {
+    "explanation": "Cinnabar is a brilliant red-orange color from the mercury sulfide mineral of the same name",
+    "points": [
+      "Bright red-orange of cinnabar mineral (mercury sulfide)",
+      "Historically used as vermilion pigment",
+      "Symbol of power, vitality, and good fortune in Chinese culture",
+      "Extremely vivid and intense",
+      "Toxic in natural form but beautiful color"
+    ]
+  },
+  "Hooker's Green": {
+    "explanation": "Hooker's Green is a dark botanical green used by artists since the 1800s",
+    "points": [
+      "Deep botanical green pigment developed in 19th century",
+      "Named after artist William Hooker",
+      "Popular in Victorian botanical illustrations",
+      "Rich, natural dark green with blue undertones",
+      "Excellent for rendering foliage and landscapes"
+    ]
+  },
+  "Prussian Blue": {
+    "explanation": "Prussian blue was the first modern synthetic pigment created by accident in 1704",
+    "points": [
+      "Deep, intense blue discovered accidentally in 1704",
+      "First modern synthetic pigment",
+      "Revolutionized painting by providing affordable deep blue",
+      "Used extensively by Hokusai, Picasso, and many others",
+      "Rich and slightly greenish-toned blue"
+    ]
+  },
+  "Verdigris": {
+    "explanation": "Verdigris is the distinctive blue-green color that forms when copper oxidizes",
+    "points": [
+      "Natural blue-green patina that forms on copper and brass",
+      "Name from Old French 'vert-de-gris' meaning green of grey",
+      "Used as pigment in Renaissance and medieval art",
+      "Symbol of age, antiquity, and natural transformation",
+      "Beautiful turquoise-green with slightly toxic history"
     ]
   }
 }

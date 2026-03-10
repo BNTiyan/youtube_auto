@@ -17,35 +17,86 @@ import argparse
 from datetime import datetime
 
 
-def pick_today(config: dict, field: str = "fact", category_filter: str = "") -> dict:
+def pick_today(config_dir: str, field: str = "fact", category_filter: str = "") -> dict:
     """
-    Flatten all items across categories, optionally filter to one category,
-    then select today's item by (day_of_year - 1) % total.
+    Pick ONE json from folders and fetch data from that.
+    Picks files sequentially based on alphabetical sorting.
     """
+    import glob
+    json_files = sorted(glob.glob(os.path.join(config_dir, "*.json")))
+    if not json_files:
+        raise ValueError(f"No JSON files found in {config_dir}")
+
+    state_file = os.path.join(config_dir, ".pick_state.json")
+    state = {"file_idx": 0, "file_item_idx": {}}
+    if os.path.exists(state_file):
+        try:
+            with open(state_file) as f:
+                state = json.load(f)
+        except Exception:
+            pass
+
+    # If category filter is provided, find that specific file
+    if category_filter:
+        target_file = None
+        for jf in json_files:
+            if os.path.basename(jf).replace(".json", "") == category_filter:
+                target_file = jf
+                break
+        if not target_file:
+            raise ValueError(f"Category {category_filter} not found in {config_dir}")
+        selected_file = target_file
+    else:
+        # Pick next file sequentially
+        file_idx = state.get("file_idx", 0) % len(json_files)
+        selected_file = json_files[file_idx]
+        state["file_idx"] = (file_idx + 1) % len(json_files)
+
+    cat = os.path.basename(selected_file).replace(".json", "")
+    
+    with open(selected_file) as f:
+        config_data = json.load(f)
+
+    # Normalize to list of items
     all_items = []
-    for cat, data in config.items():
-        if category_filter and cat != category_filter:
-            continue
-        for item in data.get("items", []):
-            # Support both 'fact' (kids) and 'explanation' (tech) fields
-            text = item.get(field) or item.get("fact") or item.get("explanation") or ""
-            all_items.append({"category": cat, "name": item["name"], "text": text})
-
+    if isinstance(config_data, dict) and config_data and isinstance(next(iter(config_data.values())), dict):
+        # New format: {"Lion": {"explanation": "...", "points": [...]}}
+        for k, v in config_data.items():
+            item = {"name": k}
+            item.update(v)
+            all_items.append(item)
+    elif "items" in config_data:
+        all_items = config_data["items"]
+    elif isinstance(config_data, dict) and len(config_data) > 0 and "items" in next(iter(config_data.values())):
+        all_items = next(iter(config_data.values()))["items"]
+    else:
+        all_items = config_data if isinstance(config_data, list) else []
+        
     if not all_items:
-        raise ValueError(
-            f"No items found. Config has categories: {list(config.keys())} "
-            f"(filter={category_filter!r})"
-        )
+        raise ValueError(f"No items found in {selected_file}")
 
-    doy = datetime.now().timetuple().tm_yday
-    idx = (doy - 1) % len(all_items)
-    chosen = dict(all_items[idx])   # copy so we can add metadata
+    # Sort items alphabetically by name
+    all_items.sort(key=lambda x: x["name"])
+
+    # Pick item sequentially from this file
+    item_idx = state["file_item_idx"].get(cat, 0) % len(all_items)
+    state["file_item_idx"][cat] = (item_idx + 1) % len(all_items)
+
+    try:
+        with open(state_file, "w") as f:
+            json.dump(state, f, indent=2)
+    except Exception:
+        pass
+
+    raw_item = all_items[item_idx]
+    text = raw_item.get(field) or raw_item.get("fact") or raw_item.get("explanation") or ""
+    chosen = {"category": cat, "name": raw_item["name"], "text": text}
 
     # Slug: lowercase name, spaces/hyphens → underscores
     chosen["slug"]  = chosen["name"].lower().replace(" ", "_").replace("-", "_")
-    chosen["index"] = idx
+    chosen["index"] = item_idx
     chosen["total"] = len(all_items)
-    chosen["day"]   = doy
+    chosen["day"]   = datetime.now().timetuple().tm_yday
     return chosen
 
 
@@ -68,14 +119,11 @@ Examples:
                         help="Limit rotation to this category only (optional)")
     args = parser.parse_args()
 
-    if not os.path.exists(args.config):
-        print(f"❌  Config not found: {args.config}")
+    if not os.path.exists(args.config) and not os.path.isdir(args.config):
+        print(f"❌  Config directory not found: {args.config}")
         raise SystemExit(1)
 
-    with open(args.config) as f:
-        config = json.load(f)
-
-    item = pick_today(config, field=args.field, category_filter=args.category)
+    item = pick_today(args.config, field=args.field, category_filter=args.category)
 
     print(f"📅  Day {item['day']} → slot #{item['index'] + 1} of {item['total']}")
     print(f"📂  Category : {item['category']}")

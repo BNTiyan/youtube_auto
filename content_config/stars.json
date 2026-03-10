@@ -1,406 +1,932 @@
 {
-  "stars": {
-    "items": [
-      {
-        "name": "Sun",
-        "fact": "The Sun contains 99.8% of all the mass in our solar system"
-      },
-      {
-        "name": "Sirius",
-        "fact": "Sirius is the brightest star in Earth's night sky and is twice the size of our Sun"
-      },
-      {
-        "name": "Alpha Centauri",
-        "fact": "Alpha Centauri is the nearest star system to Earth at just 4.37 light-years away"
-      },
-      {
-        "name": "Proxima Centauri",
-        "fact": "Proxima Centauri is the single closest known star to our Sun at 4.24 light-years"
-      },
-      {
-        "name": "Betelgeuse",
-        "fact": "Betelgeuse is a massive red supergiant star that will explode as a supernova one day"
-      },
-      {
-        "name": "Rigel",
-        "fact": "Rigel is a blue supergiant star 120,000 times more luminous than our Sun"
-      },
-      {
-        "name": "Vega",
-        "fact": "Vega will become Earth's pole star in about 13,000 years due to axial precession"
-      },
-      {
-        "name": "Polaris",
-        "fact": "Polaris is the North Star that always points north and barely moves in the night sky"
-      },
-      {
-        "name": "Canopus",
-        "fact": "Canopus is the second brightest star in the sky and is used to navigate spacecraft"
-      },
-      {
-        "name": "Arcturus",
-        "fact": "Arcturus is the brightest star in the northern sky and a bright orange-red giant"
-      },
-      {
-        "name": "Aldebaran",
-        "fact": "Aldebaran is a giant orange star 44 times the diameter of our Sun"
-      },
-      {
-        "name": "Antares",
-        "fact": "Antares is a red supergiant so massive that if placed where our Sun is it would reach beyond Mars"
-      },
-      {
-        "name": "Spica",
-        "fact": "Spica is a binary star system and one of the bluest and hottest visible stars"
-      },
-      {
-        "name": "Capella",
-        "fact": "Capella is actually four stars in two binary pairs all orbiting together"
-      },
-      {
-        "name": "Deneb",
-        "fact": "Deneb is so luminous it would outshine a crescent Moon if it were as close as Sirius"
-      },
-      {
-        "name": "Fomalhaut",
-        "fact": "Fomalhaut has a wide debris disk surrounding it with possible young planets forming"
-      },
-      {
-        "name": "Regulus",
-        "fact": "Regulus is a rapidly spinning star that bulges at its equator from its fast rotation"
-      },
-      {
-        "name": "Castor",
-        "fact": "Castor is a remarkable sextuple star system of six stars all bound together"
-      },
-      {
-        "name": "Pollux",
-        "fact": "Pollux is a giant orange star with a confirmed planet orbiting it"
-      },
-      {
-        "name": "Procyon",
-        "fact": "Procyon is a binary star that has a faint white dwarf companion orbiting it"
-      },
-      {
-        "name": "Epsilon Eridani",
-        "fact": "Epsilon Eridani is a young star similar to our young Sun and has a confirmed planet"
-      },
-      {
-        "name": "Tau Ceti",
-        "fact": "Tau Ceti is one of the most Sun-like stars visible to the naked eye"
-      },
-      {
-        "name": "Barnard's Star",
-        "fact": "Barnard's Star has the fastest proper motion across the sky of any known star"
-      },
-      {
-        "name": "Wolf 359",
-        "fact": "Wolf 359 is one of the faintest and smallest known red dwarf stars near the Sun"
-      },
-      {
-        "name": "Luyten's Star",
-        "fact": "Luyten's Star is a red dwarf with a potentially habitable planet in a close orbit"
-      },
-      {
-        "name": "Ross 128",
-        "fact": "Ross 128 is one of the quietest red dwarfs making its planet more habitable"
-      },
-      {
-        "name": "TRAPPIST-1",
-        "fact": "TRAPPIST-1 is an ultra-cool red dwarf hosting seven rocky planets including habitable zone ones"
-      },
-      {
-        "name": "Gliese 667C",
-        "fact": "Gliese 667C hosts multiple potentially habitable super-Earth planets around it"
-      },
-      {
-        "name": "Kepler-452",
-        "fact": "Kepler-452 is very similar to our Sun and hosts a planet often called Earth's older cousin"
-      },
-      {
-        "name": "55 Cancri A",
-        "fact": "55 Cancri A hosts five known planets including one giant in a wide orbit"
-      },
-      {
-        "name": "HR 8799",
-        "fact": "HR 8799 is a young star with four directly imaged gas giant planets around it"
-      },
-      {
-        "name": "Beta Pictoris",
-        "fact": "Beta Pictoris is surrounded by a huge dusty disk and has a planet already photographed"
-      },
-      {
-        "name": "Eta Carinae",
-        "fact": "Eta Carinae is one of the most massive stars known and will soon become a hypernova"
-      },
-      {
-        "name": "VY Canis Majoris",
-        "fact": "VY Canis Majoris is one of the largest known stars so big that light takes hours to cross it"
-      },
-      {
-        "name": "UY Scuti",
-        "fact": "UY Scuti is one of the largest known stars with a radius over 1,700 times that of the Sun"
-      },
-      {
-        "name": "Stephenson 2-18",
-        "fact": "Stephenson 2-18 is potentially the largest known star with a radius 2,150 times the Sun"
-      },
-      {
-        "name": "R136a1",
-        "fact": "R136a1 is the most massive known star at around 200 solar masses in the Milky Way"
-      },
-      {
-        "name": "Pistol Star",
-        "fact": "The Pistol Star is one of the most luminous stars known near the Milky Way's center"
-      },
-      {
-        "name": "Peony Star",
-        "fact": "The Peony Star near the galactic center may be even more luminous than the Pistol Star"
-      },
-      {
-        "name": "LBV 1806-20",
-        "fact": "LBV 1806-20 is an extremely luminous hypergiant star close to the Milky Way's core"
-      },
-      {
-        "name": "Zeta Puppis",
-        "fact": "Zeta Puppis is a hot luminous blue supergiant shedding mass in powerful stellar winds"
-      },
-      {
-        "name": "P Cygni",
-        "fact": "P Cygni is a luminous blue variable that brightened dramatically in the year 1600"
-      },
-      {
-        "name": "Rho Cassiopeiae",
-        "fact": "Rho Cassiopeiae is a yellow hypergiant one of the rarest types of stars in existence"
-      },
-      {
-        "name": "HR Carinae",
-        "fact": "HR Carinae is a luminous blue variable periodically undergoing violent eruptions"
-      },
-      {
-        "name": "W Virginis",
-        "fact": "W Virginis is a type II Cepheid variable star pulsating in size and brightness"
-      },
-      {
-        "name": "Mira",
-        "fact": "Mira is a pulsating variable star that changes from barely visible to very bright"
-      },
-      {
-        "name": "Chi Cygni",
-        "fact": "Chi Cygni is a Mira-type variable that grows to over 400 times the Sun's size"
-      },
-      {
-        "name": "RR Lyrae",
-        "fact": "RR Lyrae variables are used as distance markers across the Milky Way galaxy"
-      },
-      {
-        "name": "Delta Cephei",
-        "fact": "Delta Cephei is the prototype of Cepheid variable stars crucial for measuring distances"
-      },
-      {
-        "name": "Beta Lyrae",
-        "fact": "Beta Lyrae is a contact binary where two stars are so close they share their outer atmosphere"
-      },
-      {
-        "name": "Algol",
-        "fact": "Algol the Demon Star is an eclipsing binary that dims every 2.87 days"
-      },
-      {
-        "name": "W Ursae Majoris",
-        "fact": "W UMa is a contact binary where two stars are touching and share common envelopes"
-      },
-      {
-        "name": "AM Canum Venaticorum",
-        "fact": "AM CVn is an ultra-compact binary where white dwarf pulls helium from another star"
-      },
-      {
-        "name": "Pulsars",
-        "fact": "Pulsars are spinning neutron stars that emit beams of radio waves like a cosmic lighthouse"
-      },
-      {
-        "name": "Magnetar",
-        "fact": "Magnetars have magnetic fields a quadrillion times stronger than Earth's"
-      },
-      {
-        "name": "Neutron Star",
-        "fact": "Neutron stars are incredibly dense collapsed stars where a teaspoon would weigh a billion tons"
-      },
-      {
-        "name": "White Dwarf",
-        "fact": "White dwarfs are the dead cores of stars like our Sun that will slowly cool over billions of years"
-      },
-      {
-        "name": "Black Dwarf",
-        "fact": "Black dwarfs are theoretical cooled white dwarfs but none exist yet as the universe is too young"
-      },
-      {
-        "name": "Brown Dwarf",
-        "fact": "Brown dwarfs are failed stars too small to sustain hydrogen fusion in their cores"
-      },
-      {
-        "name": "Red Dwarf",
-        "fact": "Red dwarfs are the smallest and most common stars in the universe and can live for trillions of years"
-      },
-      {
-        "name": "Yellow Dwarf",
-        "fact": "Yellow dwarfs like our Sun are medium-sized stable stars that live for about 10 billion years"
-      },
-      {
-        "name": "Blue Giant",
-        "fact": "Blue giants are massive hot stars that live fast and die young in huge supernova explosions"
-      },
-      {
-        "name": "Red Giant",
-        "fact": "Red giants are aging stars that expand enormously as they burn the last of their hydrogen"
-      },
-      {
-        "name": "Hypergiant",
-        "fact": "Hypergiants are the rarest and most extreme class of stars with enormous mass and luminosity"
-      },
-      {
-        "name": "Protostar",
-        "fact": "Protostars are forming stars hidden in dense clouds of gas and dust before ignition"
-      },
-      {
-        "name": "T Tauri",
-        "fact": "T Tauri stars are very young unstable stars just beginning the process of nuclear fusion"
-      },
-      {
-        "name": "Herbig Ae/Be",
-        "fact": "Herbig Ae/Be stars are young intermediate-mass stars with disks of material still forming"
-      },
-      {
-        "name": "Subdwarf",
-        "fact": "Subdwarf stars are small dim stars fusing helium rather than the usual hydrogen"
-      },
-      {
-        "name": "Subgiant",
-        "fact": "Subgiant stars are just beginning the transition from main sequence to red giant phase"
-      },
-      {
-        "name": "Wolf-Rayet",
-        "fact": "Wolf-Rayet stars shed their outer layers in fierce stellar winds exposing their hot cores"
-      },
-      {
-        "name": "Carbon Star",
-        "fact": "Carbon stars have so much carbon in their atmosphere that soot-like compounds form"
-      },
-      {
-        "name": "Technetium Star",
-        "fact": "Technetium stars contain unstable radioactive technetium showing active nucleosynthesis"
-      },
-      {
-        "name": "Lithium Star",
-        "fact": "Lithium-rich giant stars are a puzzle as normal giants should destroy their lithium not keep it"
-      },
-      {
-        "name": "Barium Star",
-        "fact": "Barium stars have anomalously high amounts of heavy elements from a companion star"
-      },
-      {
-        "name": "Ap Star",
-        "fact": "Ap stars have abnormal amounts of certain elements and extremely strong magnetic fields"
-      },
-      {
-        "name": "FK Comae",
-        "fact": "FK Comae type stars are rapidly spinning giants with extreme star spot activity"
-      },
-      {
-        "name": "Flare Star",
-        "fact": "Flare stars are red dwarfs that produce powerful sudden flares brightening dramatically"
-      },
-      {
-        "name": "BY Draconis",
-        "fact": "BY Draconis stars vary in brightness due to large dark star spots on their surface"
-      },
-      {
-        "name": "FU Orionis",
-        "fact": "FU Orionis stars are young stars that suddenly brighten 100 fold due to disk accretion"
-      },
-      {
-        "name": "EX Lupi",
-        "fact": "EX Lupi stars are young stars with episodic outbursts caused by instabilities in their disk"
-      },
-      {
-        "name": "Symbiotic Star",
-        "fact": "Symbiotic stars are binary systems with a red giant and white dwarf interacting closely"
-      },
-      {
-        "name": "Cataclysmic Variable",
-        "fact": "Cataclysmic variables are binaries where a white dwarf pulls material from a companion"
-      },
-      {
-        "name": "Nova",
-        "fact": "A nova occurs when a white dwarf accretes enough material to trigger a thermonuclear explosion"
-      },
-      {
-        "name": "Supernova",
-        "fact": "A supernova explosion releases as much energy as the Sun will emit in its entire lifetime"
-      },
-      {
-        "name": "Hypernova",
-        "fact": "Hypernovae are incredibly powerful supernovae that may produce long gamma-ray bursts"
-      },
-      {
-        "name": "Kilonova",
-        "fact": "Kilonovae occur when two neutron stars collide creating all heavy elements like gold"
-      },
-      {
-        "name": "Quasar",
-        "fact": "Quasars are the most luminous objects in the universe powered by supermassive black holes"
-      },
-      {
-        "name": "Blazar",
-        "fact": "Blazars are quasars with a jet of material aimed directly at Earth"
-      },
-      {
-        "name": "Seyfert Galaxy Core",
-        "fact": "Seyfert galaxies have active galactic nuclei with bright cores visible at multiple wavelengths"
-      },
-      {
-        "name": "Microquasar",
-        "fact": "Microquasars are stellar-mass black holes that mimic quasar behavior on a smaller scale"
-      },
-      {
-        "name": "Black Hole",
-        "fact": "Black holes have gravity so strong that nothing not even light can escape from them"
-      },
-      {
-        "name": "Sagittarius A*",
-        "fact": "Sagittarius A* is the supermassive black hole at the center of our Milky Way galaxy"
-      },
-      {
-        "name": "TON 618",
-        "fact": "TON 618 is one of the most massive black holes known with 66 billion solar masses"
-      },
-      {
-        "name": "Xi Persei",
-        "fact": "Xi Persei is a hot blue giant moving rapidly through space creating a bow shock"
-      },
-      {
-        "name": "Epsilon Aurigae",
-        "fact": "Epsilon Aurigae is an eclipsed by a mysterious dark disk object every 27 years"
-      },
-      {
-        "name": "KIC 8462852",
-        "fact": "Tabby's Star dims in strange irregular patterns that still puzzle astronomers today"
-      },
-      {
-        "name": "Przybylski's Star",
-        "fact": "Przybylski's Star contains impossibly short-lived radioactive elements that should not exist"
-      },
-      {
-        "name": "Thorne-Zytkow Object",
-        "fact": "A Thorne-Zytkow object is a red giant with a neutron star hiding inside its core"
-      },
-      {
-        "name": "HV 2112",
-        "fact": "HV 2112 in the Small Magellanic Cloud may be the first confirmed Thorne-Zytkow object"
-      },
-      {
-        "name": "SDSS J0002+6230",
-        "fact": "This star has one of the fastest velocities ever measured being ejected from the galaxy"
-      }
+  "Sun": {
+    "explanation": "The Sun contains 99.8% of all the mass in our solar system",
+    "points": [
+      "The Sun is a G2V main-sequence star with a diameter of about 1.39 million kilometers and a surface temperature of roughly 5,500 °C.",
+      "It generates energy through nuclear fusion in its core, converting about 4 million tons of hydrogen into helium every second.",
+      "The Sun's mass is 333,000 times that of Earth, making it the dominant gravitational body in the solar system.",
+      "Its outer atmosphere, the corona, reaches millions of degrees Celsius and produces the solar wind that shapes planetary magnetospheres.",
+      "The Sun has an 11-year activity cycle with varying sunspots, flares, and coronal mass ejections that affect Earth's climate and technology."
+    ]
+  },
+  "Sirius": {
+    "explanation": "Sirius is the brightest star in Earth's night sky and is twice the size of our Sun",
+    "points": [
+      "Sirius is a binary system consisting of Sirius A (a main-sequence star of spectral type A1V) and the faint white dwarf Sirius B.",
+      "Sirius A is about 25 times more luminous than the Sun and has a surface temperature of around 9,940 K, giving it a brilliant white-blue color.",
+      "At a distance of 8.6 light-years, it is one of the closest bright stars to Earth and appears brightest due to its proximity and high intrinsic luminosity.",
+      "Sirius B is a white dwarf with roughly the mass of the Sun compressed into a volume similar to Earth's, making it extremely dense.",
+      "The system has a 50-year orbital period, and Sirius was known to ancient civilizations as the 'Dog Star' associated with the Nile flooding and summer heat."
+    ]
+  },
+  "Alpha Centauri": {
+    "explanation": "Alpha Centauri is the nearest star system to Earth at just 4.37 light-years away",
+    "points": [
+      "Alpha Centauri is a triple-star system consisting of Alpha Centauri A (G2V, Sun-like), Alpha Centauri B (K1V, orange dwarf), and Proxima Centauri (M5.5Ve red dwarf).",
+      "Alpha Centauri A and B form a binary pair orbiting each other every 80 years, while Proxima orbits the pair at a much greater distance.",
+      "Proxima Centauri, at 4.24 light-years, is the closest known star to the Sun and hosts at least one confirmed planet (Proxima b) in the habitable zone.",
+      "Alpha Centauri A is very similar to the Sun in mass, size, and luminosity, making it a prime target for future interstellar exploration.",
+      "The system is moving toward the Sun and will reach its closest approach in about 28,000 years at roughly 3 light-years distance."
+    ]
+  },
+  "Proxima Centauri": {
+    "explanation": "Proxima Centauri is the single closest known star to our Sun at 4.24 light-years",
+    "points": [
+      "Proxima Centauri is a small red dwarf (M5.5Ve) with only 12% of the Sun's mass and 0.0017% of its luminosity.",
+      "It is gravitationally bound to the Alpha Centauri A/B binary but orbits at about 0.21 light-years from them.",
+      "Proxima b, discovered in 2016, is an Earth-mass planet in the habitable zone, though it faces intense stellar flares.",
+      "Proxima experiences frequent flares that can increase its brightness dramatically and strip atmospheres from nearby planets.",
+      "It is the nearest star system and a primary target for future interstellar probes like Breakthrough Starshot."
+    ]
+  },
+  "Betelgeuse": {
+    "explanation": "Betelgeuse is a massive red supergiant star that will explode as a supernova one day",
+    "points": [
+      "Betelgeuse is a red supergiant of spectral type M1-2Ia-Ib located in the constellation Orion, about 640 light-years from Earth.",
+      "It has a radius approximately 600–1,000 times that of the Sun and is one of the largest known stars visible to the naked eye.",
+      "Betelgeuse is highly variable in brightness due to pulsations and mass loss, and it dimmed dramatically in 2019–2020 (the 'Great Dimming').",
+      "It is expected to explode as a Type II supernova within the next 100,000 years, potentially becoming as bright as a full Moon for weeks.",
+      "The star has already lost much of its outer envelope and is in its final evolutionary stages before core collapse."
+    ]
+  },
+  "Rigel": {
+    "explanation": "Rigel is a blue supergiant star 120,000 times more luminous than our Sun",
+    "points": [
+      "Rigel is a blue supergiant of spectral type B8 Ia located in Orion, approximately 860 light-years from Earth.",
+      "It has a surface temperature of about 12,100 K and is one of the most intrinsically luminous stars visible in the night sky.",
+      "Rigel is a multiple star system with at least four components, though Rigel A dominates the visible light.",
+      "It is losing mass rapidly through a strong stellar wind and is expected to end its life as a supernova in the relatively near future (astronomically speaking).",
+      "Rigel appears as the brightest star in Orion after Betelgeuse during certain periods due to variability in both stars."
+    ]
+  },
+  "Vega": {
+    "explanation": "Vega will become Earth's pole star in about 13,000 years due to axial precession",
+    "points": [
+      "Vega is an A0V main-sequence star located 25 light-years away in the constellation Lyra.",
+      "It is one of the brightest stars in the northern sky and has a very high rotational velocity, causing it to bulge at the equator.",
+      "Vega is surrounded by a prominent debris disk of dust and is the prototype for 'Vega-type' systems.",
+      "Due to Earth's axial precession, Vega will be the northern pole star around the year 14,000 CE.",
+      "It serves as a standard star for calibrating astronomical brightness and is one of the most studied stars in the sky."
+    ]
+  },
+  "Polaris": {
+    "explanation": "Polaris is the North Star that always points north and barely moves in the night sky",
+    "points": [
+      "Polaris (Alpha Ursae Minoris) is a yellow supergiant (F7 Ib) located about 430 light-years away.",
+      "It is very close to the north celestial pole (currently within 0.7°), making it appear nearly stationary while other stars circle around it.",
+      "Polaris is actually a triple star system, with Polaris A being a Cepheid variable that pulsates every 4 days.",
+      "It has been used for navigation for centuries and is currently the most useful pole star.",
+      "Due to precession, Polaris will gradually move away from the pole over the next few thousand years."
+    ]
+  },
+  "Canopus": {
+    "explanation": "Canopus is the second brightest star in the sky and is used to navigate spacecraft",
+    "points": [
+      "Canopus (Alpha Carinae) is a yellow-white supergiant (F0 II) located about 310 light-years away.",
+      "It is intrinsically one of the most luminous stars visible from Earth, about 10,000–15,000 times brighter than the Sun.",
+      "Canopus is too far south to be visible from most northern latitudes but is prominent in the southern hemisphere.",
+      "It has been used as a reference star for spacecraft navigation due to its brightness and stable position.",
+      "Canopus is nearing the end of its life and will eventually explode as a supernova."
+    ]
+  },
+  "Arcturus": {
+    "explanation": "Arcturus is the brightest star in the northern sky and a bright orange-red giant",
+    "points": [
+      "Arcturus (Alpha Boötis) is an orange giant star (K0 III) located about 37 light-years from Earth.",
+      "It is roughly 25 times the diameter of the Sun and 170 times more luminous.",
+      "Arcturus is relatively old and has exhausted hydrogen in its core, now fusing helium.",
+      "It has a high proper motion and is part of the Arcturus moving group of stars.",
+      "Arcturus is easy to find by following the arc of the Big Dipper's handle ('arc to Arcturus')."
+    ]
+  },
+  "Aldebaran": {
+    "explanation": "Aldebaran is a giant orange star 44 times the diameter of our Sun",
+    "points": [
+      "Aldebaran (Alpha Tauri) is a red giant (K5 III) located about 65 light-years away in the constellation Taurus.",
+      "It has a diameter about 44 times that of the Sun and is 425 times more luminous.",
+      "Aldebaran appears to be the 'eye' of Taurus the Bull and has a faint companion star.",
+      "It is losing mass through a stellar wind and is in a late stage of stellar evolution.",
+      "Aldebaran is one of the brightest stars in the winter sky and easily visible to the naked eye."
+    ]
+  },
+  "Antares": {
+    "explanation": "Antares is a red supergiant so massive that if placed where our Sun is it would reach beyond Mars",
+    "points": [
+      "Antares (Alpha Scorpii) is a red supergiant (M1.5 Iab) located about 550 light-years away in Scorpius.",
+      "Its radius is estimated at 680–800 times that of the Sun, making it one of the largest known stars.",
+      "Antares is a binary system with a hot blue companion star orbiting it.",
+      "It is highly luminous (about 10,000–12,000 times the Sun) and is losing mass rapidly.",
+      "Antares is expected to explode as a supernova in the next million years or so."
+    ]
+  },
+  "Spica": {
+    "explanation": "Spica is a binary star system and one of the bluest and hottest visible stars",
+    "points": [
+      "Spica (Alpha Virginis) is a binary system consisting of two B-type main-sequence stars located about 250 light-years away.",
+      "The primary star is a B1 III-IV star with a surface temperature of about 25,000 K.",
+      "The system is an eclipsing binary with a short orbital period of about 4 days.",
+      "Spica is one of the brightest stars in the northern sky and appears very blue-white.",
+      "It is used as a standard star for calibrating astronomical observations."
+    ]
+  },
+  "Capella": {
+    "explanation": "Capella is actually four stars in two binary pairs all orbiting together",
+    "points": [
+      "Capella (Alpha Aurigae) is a quadruple star system located about 42 light-years away.",
+      "It consists of two yellow giant stars (Capella Aa and Ab) in a close binary orbit, plus two distant red dwarfs.",
+      "The two giants are about 9–10 times the Sun's radius and are in a 104-day orbit.",
+      "Capella appears as the brightest star in the constellation Auriga and one of the brightest in the northern sky.",
+      "The system is a spectroscopic binary, meaning its components are only separable through spectroscopy."
+    ]
+  },
+  "Deneb": {
+    "explanation": "Deneb is so luminous it would outshine a crescent Moon if it were as close as Sirius",
+    "points": [
+      "Deneb (Alpha Cygni) is a blue-white supergiant (A2 Ia) located about 2,600 light-years away in Cygnus.",
+      "It is one of the most luminous stars known, with an intrinsic brightness of about 200,000 times the Sun.",
+      "Deneb is part of the Summer Triangle asterism along with Vega and Altair.",
+      "It is losing mass through a strong stellar wind and is in a late evolutionary stage.",
+      "Deneb is expected to explode as a supernova in the future."
+    ]
+  },
+  "Fomalhaut": {
+    "explanation": "Fomalhaut has a wide debris disk surrounding it with possible young planets forming",
+    "points": [
+      "Fomalhaut (Alpha Piscis Austrini) is an A3V main-sequence star located about 25 light-years away.",
+      "It is surrounded by a prominent debris disk visible in infrared light.",
+      "A planet candidate (Fomalhaut b) was imaged but later found to be a dust cloud.",
+      "Fomalhaut is one of the closest stars with a visible debris disk, similar to the Kuiper Belt.",
+      "It is relatively young (about 440 million years old) and still has planet-forming material around it."
+    ]
+  },
+  "Regulus": {
+    "explanation": "Regulus is a rapidly spinning star that bulges at its equator from its fast rotation",
+    "points": [
+      "Regulus (Alpha Leonis) is a multiple star system located about 79 light-years away in Leo.",
+      "The primary star (Regulus A) is a blue-white main-sequence star (B7V) spinning extremely rapidly.",
+      "Its equatorial radius is about 32% larger than its polar radius due to centrifugal forces.",
+      "Regulus is part of a quadruple system with three other faint companions.",
+      "It is one of the brightest stars in the constellation Leo and easy to spot in spring skies."
+    ]
+  },
+  "Castor": {
+    "explanation": "Castor is a remarkable sextuple star system of six stars all bound together",
+    "points": [
+      "Castor (Alpha Geminorum) is a six-star system located about 51 light-years away in Gemini.",
+      "It consists of three binary pairs: two A-type main-sequence stars and one faint red dwarf pair.",
+      "The components orbit each other in hierarchical orbits with periods from hours to thousands of years.",
+      "Castor appears as a single bright star to the naked eye but is easily resolved with telescopes.",
+      "It is one of the most complex multiple star systems visible to amateur astronomers."
+    ]
+  },
+  "Pollux": {
+    "explanation": "Pollux is a giant orange star with a confirmed planet orbiting it",
+    "points": [
+      "Pollux (Beta Geminorum) is an orange giant star (K0 III) located about 34 light-years away.",
+      "It is about 8 times the Sun's radius and 33 times more luminous.",
+      "Pollux has a confirmed exoplanet (Pollux b), a gas giant with about 2.9 Jupiter masses.",
+      "The planet orbits at about 1.7 AU with a period of 590 days.",
+      "Pollux is one of the brightest stars in Gemini and marks the head of the constellation."
+    ]
+  },
+  "Procyon": {
+    "explanation": "Procyon is a binary star that has a faint white dwarf companion orbiting it",
+    "points": [
+      "Procyon (Alpha Canis Minoris) is a binary system located about 11.5 light-years away.",
+      "The primary is a yellow-white main-sequence star (F5 IV-V) about 7 times more luminous than the Sun.",
+      "Procyon B is a white dwarf with roughly the mass of the Sun but the size of Earth.",
+      "The two stars orbit each other every 40 years.",
+      "Procyon is the brightest star in Canis Minor and one of the closest bright stars to Earth."
+    ]
+  },
+  "Epsilon Eridani": {
+    "explanation": "Epsilon Eridani is a young star similar to our young Sun and has a confirmed planet",
+    "points": [
+      "Epsilon Eridani is a K2V orange dwarf located about 10.5 light-years away.",
+      "It is relatively young (about 800 million years old) and has a prominent debris disk.",
+      "A confirmed planet (ε Eri b) is a gas giant orbiting at about 3.4 AU.",
+      "The star has been extensively studied as a nearby analog to the early Sun.",
+      "It is one of the closest stars with a confirmed planet and a debris disk."
+    ]
+  },
+  "Tau Ceti": {
+    "explanation": "Tau Ceti is one of the most Sun-like stars visible to the naked eye",
+    "points": [
+      "Tau Ceti (52 Ceti) is a G8.5V main-sequence star located about 11.9 light-years away.",
+      "It is very similar to the Sun in mass, size, and temperature but slightly less luminous.",
+      "Tau Ceti has been a prime target for SETI searches due to its stability and similarity to the Sun.",
+      "Multiple planet candidates have been proposed, though none are confirmed.",
+      "It is one of the closest single Sun-like stars to Earth."
+    ]
+  },
+  "Barnard's Star": {
+    "explanation": "Barnard's Star has the fastest proper motion across the sky of any known star",
+    "points": [
+      "Barnard's Star is a red dwarf (M4V) located about 6 light-years away.",
+      "It has the largest proper motion of any star (10.3 arcseconds per year).",
+      "A super-Earth planet candidate (Barnard's Star b) was announced but later disputed.",
+      "It is one of the closest stars to the Sun and the closest solitary red dwarf.",
+      "Its high velocity suggests it may be an older star passing through our neighborhood."
+    ]
+  },
+  "Wolf 359": {
+    "explanation": "Wolf 359 is one of the faintest and smallest known red dwarf stars near the Sun",
+    "points": [
+      "Wolf 359 is an M6V red dwarf located about 7.9 light-years away.",
+      "It is extremely faint (absolute magnitude ~16.6) and only about 10% the mass of the Sun.",
+      "It is known for frequent flares that can temporarily increase its brightness.",
+      "Wolf 359 was the fictional home system of the Enterprise in Star Trek.",
+      "It is one of the closest stars to Earth and a typical example of a very low-mass red dwarf."
+    ]
+  },
+  "Luyten's Star": {
+    "explanation": "Luyten's Star is a red dwarf with a potentially habitable planet in a close orbit",
+    "points": [
+      "Luyten's Star (GJ 273) is an M3.5V red dwarf located about 12.4 light-years away.",
+      "It hosts a super-Earth planet (Luyten b) in the habitable zone.",
+      "The planet receives about the same stellar flux as Earth from the Sun.",
+      "Luyten's Star is relatively quiet for a red dwarf, reducing atmospheric stripping risk.",
+      "It was one of the targets for Breakthrough Listen SETI searches."
+    ]
+  },
+  "Ross 128": {
+    "explanation": "Ross 128 is one of the quietest red dwarfs making its planet more habitable",
+    "points": [
+      "Ross 128 is an M4V red dwarf located about 11 light-years away.",
+      "It hosts a temperate super-Earth (Ross 128 b) in the habitable zone.",
+      "The star is unusually quiet for a red dwarf, with few flares.",
+      "The planet may have conditions suitable for liquid water.",
+      "It is one of the closest potentially habitable exoplanet systems."
+    ]
+  },
+  "TRAPPIST-1": {
+    "explanation": "TRAPPIST-1 is an ultra-cool red dwarf hosting seven rocky planets including habitable zone ones",
+    "points": [
+      "TRAPPIST-1 is an M8V ultra-cool dwarf located about 40 light-years away.",
+      "It hosts seven Earth-sized planets, three in the habitable zone.",
+      "All planets are likely tidally locked and orbit very close to their star.",
+      "The system is ideal for studying multi-planet atmospheres and habitability.",
+      "TRAPPIST-1 planets are among the most promising targets for JWST observations."
+    ]
+  },
+  "Gliese 667C": {
+    "explanation": "Gliese 667C hosts multiple potentially habitable super-Earth planets around it",
+    "points": [
+      "Gliese 667C is an M3V red dwarf component of a triple star system, about 23 light-years away.",
+      "It hosts at least two super-Earth planets (Gliese 667Cc and Ce) in the habitable zone.",
+      "Gliese 667Cc receives about 90% of Earth's insolation.",
+      "The star is part of a triple system, which may affect planetary stability.",
+      "It was one of the first systems with multiple habitable-zone planets."
+    ]
+  },
+  "Kepler-452": {
+    "explanation": "Kepler-452 is very similar to our Sun and hosts a planet often called Earth's older cousin",
+    "points": [
+      "Kepler-452 is a G2-type star very similar to the Sun, located about 1,800 light-years away.",
+      "It hosts Kepler-452b, a super-Earth orbiting in the habitable zone.",
+      "The planet is about 60% larger than Earth and has been in the habitable zone longer than Earth.",
+      "The star is about 1.5 billion years older than the Sun.",
+      "Kepler-452b is one of the most Earth-like planets discovered by the Kepler mission."
+    ]
+  },
+  "55 Cancri A": {
+    "explanation": "55 Cancri A hosts five known planets including one giant in a wide orbit",
+    "points": [
+      "55 Cancri A is a Sun-like G8V star located about 41 light-years away.",
+      "It hosts a system of five planets, including 55 Cancri e (a super-Earth) and a gas giant.",
+      "55 Cancri e is one of the first discovered hot super-Earths.",
+      "The system is relatively close and bright, making it good for follow-up observations.",
+      "The outer planet has a long orbital period of about 14 years."
+    ]
+  },
+  "HR 8799": {
+    "explanation": "HR 8799 is a young star with four directly imaged gas giant planets around it",
+    "points": [
+      "HR 8799 is an A5V star located about 130 light-years away.",
+      "It hosts four massive gas giant planets directly imaged by telescopes.",
+      "The planets orbit at very wide distances (14–68 AU).",
+      "The system is young (about 30 million years old) and provides a snapshot of planet formation.",
+      "It is one of the few systems with directly imaged exoplanets."
+    ]
+  },
+  "Beta Pictoris": {
+    "explanation": "Beta Pictoris is surrounded by a huge dusty disk and has a planet already photographed",
+    "points": [
+      "Beta Pictoris is an A6V star located about 63 light-years away.",
+      "It has a prominent edge-on debris disk visible in scattered light.",
+      "Beta Pictoris b is a directly imaged gas giant planet orbiting at about 9 AU.",
+      "The system is young (about 20 million years old) and actively forming planets.",
+      "It is one of the best-studied young planetary systems."
+    ]
+  },
+  "Eta Carinae": {
+    "explanation": "Eta Carinae is one of the most massive stars known and will soon become a hypernova",
+    "points": [
+      "Eta Carinae is a massive binary system located about 7,500 light-years away in the Carina Nebula.",
+      "The primary star has a mass estimated at 100–150 solar masses.",
+      "It underwent a great eruption in the 1840s, temporarily becoming the second brightest star in the sky.",
+      "The system is surrounded by the Homunculus Nebula from the eruption.",
+      "It is expected to explode as a hypernova or pair-instability supernova within the next few hundred thousand years."
+    ]
+  },
+  "VY Canis Majoris": {
+    "explanation": "VY Canis Majoris is one of the largest known stars so big that light takes hours to cross it",
+    "points": [
+      "VY Canis Majoris is a red hypergiant located about 3,900 light-years away.",
+      "Its radius is estimated at 1,400–2,000 times that of the Sun.",
+      "It is extremely luminous (about 270,000 times the Sun) but obscured by dust.",
+      "The star is losing mass rapidly and is in its final evolutionary stages.",
+      "If placed at the Sun's position, its surface would extend beyond Saturn."
+    ]
+  },
+  "UY Scuti": {
+    "explanation": "UY Scuti is one of the largest known stars with a radius over 1,700 times that of the Sun",
+    "points": [
+      "UY Scuti is a red supergiant located about 9,500 light-years away in Scutum.",
+      "Its radius is estimated at 1,700–2,000 solar radii.",
+      "It is highly variable and obscured by dust.",
+      "The star is losing mass rapidly through powerful stellar winds.",
+      "If placed at the Sun's position, its surface would extend beyond Jupiter."
+    ]
+  },
+  "Stephenson 2-18": {
+    "explanation": "Stephenson 2-18 is potentially the largest known star with a radius 2,150 times the Sun",
+    "points": [
+      "Stephenson 2-18 is a red supergiant in the open cluster Stephenson 2.",
+      "Its radius is estimated at around 2,150 solar radii (though with large uncertainty).",
+      "It is extremely luminous but heavily obscured by interstellar dust.",
+      "The star is in a very late evolutionary stage and losing mass rapidly.",
+      "Size estimates for such stars have significant uncertainties due to distance and dust."
+    ]
+  },
+  "R136a1": {
+    "explanation": "R136a1 is the most massive known star at around 200 solar masses in the Milky Way",
+    "points": [
+      "R136a1 is a Wolf-Rayet star located in the R136 cluster in the Large Magellanic Cloud.",
+      "It has a current mass of about 200 solar masses (originally ~315 solar masses).",
+      "It is extremely luminous (about 8.7 million times the Sun) and hot (surface temperature ~53,000 K).",
+      "R136a1 is losing mass at an enormous rate through powerful stellar winds.",
+      "It is expected to end its life as a pair-instability supernova or black hole."
+    ]
+  },
+  "Pistol Star": {
+    "explanation": "The Pistol Star is one of the most luminous stars known near the Milky Way's center",
+    "points": [
+      "The Pistol Star is a luminous blue variable located about 25,000 light-years away in the galactic center.",
+      "It has a luminosity of about 3.3 million times the Sun.",
+      "It is heavily obscured by dust and only visible in infrared.",
+      "The star is surrounded by the Pistol Nebula from its mass loss.",
+      "It is one of the most massive and luminous stars in the Milky Way."
+    ]
+  },
+  "Peony Star": {
+    "explanation": "The Peony Star near the galactic center may be even more luminous than the Pistol Star",
+    "points": [
+      "The Peony Star (WR 102ka) is a Wolf-Rayet star in the galactic center region.",
+      "Its luminosity is estimated at around 5 million times the Sun.",
+      "It is heavily obscured and only observable in infrared.",
+      "The star is losing mass rapidly and surrounded by a nebula.",
+      "It is one of the most extreme stars known in our galaxy."
+    ]
+  },
+  "LBV 1806-20": {
+    "explanation": "LBV 1806-20 is an extremely luminous hypergiant star close to the Milky Way's core",
+    "points": [
+      "LBV 1806-20 is a luminous blue variable located about 28,000 light-years away.",
+      "It has a luminosity of about 2–5 million times the Sun.",
+      "It is associated with a magnetar (SGR 1806-20) and a massive star cluster.",
+      "The star is extremely massive and variable.",
+      "It is one of the most luminous stars in the Milky Way."
+    ]
+  },
+  "Zeta Puppis": {
+    "explanation": "Zeta Puppis is a hot luminous blue supergiant shedding mass in powerful stellar winds",
+    "points": [
+      "Zeta Puppis (Naos) is an O4 If(n) supergiant located about 1,080 light-years away.",
+      "It has a surface temperature of about 40,000 K and is 800,000 times more luminous than the Sun.",
+      "The star has powerful stellar winds moving at over 2,500 km/s.",
+      "It is rapidly rotating and has a bow shock visible in ultraviolet.",
+      "Zeta Puppis is one of the brightest O-type stars visible from Earth."
+    ]
+  },
+  "P Cygni": {
+    "explanation": "P Cygni is a luminous blue variable that brightened dramatically in the year 1600",
+    "points": [
+      "P Cygni is a luminous blue variable (B1 Ia+) located about 5,000–7,000 light-years away.",
+      "It underwent a major eruption in 1600, increasing in brightness significantly.",
+      "The star is losing mass through strong stellar winds and is surrounded by shells.",
+      "It is one of the prototypes of the LBV class.",
+      "P Cygni profiles in spectral lines are named after this star."
+    ]
+  },
+  "Rho Cassiopeiae": {
+    "explanation": "Rho Cassiopeiae is a yellow hypergiant one of the rarest types of stars in existence",
+    "points": [
+      "Rho Cassiopeiae is a yellow hypergiant (F8-G2 Ia0) located about 3,400 light-years away.",
+      "It is one of the most luminous stars in the Milky Way (about 500,000 times the Sun).",
+      "The star undergoes rare outbursts when it ejects outer layers.",
+      "It is extremely rare and unstable, in a brief evolutionary phase.",
+      "Rho Cas is one of the few known yellow hypergiants."
+    ]
+  },
+  "HR Carinae": {
+    "explanation": "HR Carinae is a luminous blue variable periodically undergoing violent eruptions",
+    "points": [
+      "HR Carinae is an LBV located about 16,000 light-years away.",
+      "It has a luminosity of about 500,000 times the Sun.",
+      "The star has shown multiple eruptions and mass-loss episodes.",
+      "It is surrounded by a nebula from ejected material.",
+      "HR Car is one of the southern hemisphere's most studied LBVs."
+    ]
+  },
+  "W Virginis": {
+    "explanation": "W Virginis is a type II Cepheid variable star pulsating in size and brightness",
+    "points": [
+      "W Virginis is the prototype of Type II Cepheids (population II Cepheids).",
+      "It pulsates with a period of about 17 days.",
+      "These stars are older, metal-poor Cepheids found in globular clusters.",
+      "They are used as distance indicators in some contexts.",
+      "W Vir variables bridge classical Cepheids and RR Lyrae stars."
+    ]
+  },
+  "Mira": {
+    "explanation": "Mira is a pulsating variable star that changes from barely visible to very bright",
+    "points": [
+      "Mira (Omicron Ceti) is a red giant and the prototype of Mira-type long-period variables.",
+      "It pulsates with a period of about 332 days, changing brightness by a factor of 1,500.",
+      "Mira is losing mass through a strong stellar wind, creating a tail visible in ultraviolet.",
+      "It has a white dwarf companion that interacts with its wind.",
+      "Mira was the first non-supernova variable star discovered (1596)."
+    ]
+  },
+  "Chi Cygni": {
+    "explanation": "Chi Cygni is a Mira-type variable that grows to over 400 times the Sun's size",
+    "points": [
+      "Chi Cygni is a long-period variable with a period of about 408 days.",
+      "At maximum, it expands to over 400 solar radii.",
+      "It varies from magnitude +3.3 to +14.2.",
+      "Chi Cyg is one of the largest known periodic variable stars.",
+      "It is a typical late-stage red giant losing mass rapidly."
+    ]
+  },
+  "RR Lyrae": {
+    "explanation": "RR Lyrae variables are used as distance markers across the Milky Way galaxy",
+    "points": [
+      "RR Lyrae stars are horizontal branch giants that pulsate with periods of 0.2–1 day.",
+      "They have nearly constant absolute magnitude, making them excellent standard candles.",
+      "They are used to measure distances within the Milky Way and to nearby galaxies.",
+      "RR Lyrae stars are metal-poor population II stars found in globular clusters.",
+      "They are named after the prototype RR Lyrae in Lyra."
+    ]
+  },
+  "Delta Cephei": {
+    "explanation": "Delta Cephei is the prototype of Cepheid variable stars crucial for measuring distances",
+    "points": [
+      "Delta Cephei is a yellow supergiant that pulsates with a period of 5.366 days.",
+      "Cepheids have a period-luminosity relationship discovered by Henrietta Leavitt.",
+      "This relationship makes them fundamental for cosmic distance ladder.",
+      "Delta Cephei varies from magnitude +3.5 to +4.4.",
+      "It is the prototype of classical Cepheids used to measure distances to nearby galaxies."
+    ]
+  },
+  "Beta Lyrae": {
+    "explanation": "Beta Lyrae is a contact binary where two stars are so close they share their outer atmosphere",
+    "points": [
+      "Beta Lyrae is an eclipsing contact binary with a period of 12.9 days.",
+      "The two stars are B-type giants that overflow their Roche lobes.",
+      "Material streams from the secondary to the primary, forming an accretion disk.",
+      "It is the prototype of Beta Lyrae-type binaries.",
+      "The system is highly variable due to changing geometry and mass transfer."
+    ]
+  },
+  "Algol": {
+    "explanation": "Algol the Demon Star is an eclipsing binary that dims every 2.87 days",
+    "points": [
+      "Algol (Beta Persei) is an eclipsing binary with a period of 2.87 days.",
+      "The primary is a B8V star; the secondary is a K0 subgiant.",
+      "The secondary fills its Roche lobe and transfers mass to the primary.",
+      "Algol dims from magnitude +2.1 to +3.4 during eclipses.",
+      "It was one of the first variable stars recognized (1667) and is called the 'Demon Star'."
+    ]
+  },
+  "W Ursae Majoris": {
+    "explanation": "W UMa is a contact binary where two stars are touching and share common envelopes",
+    "points": [
+      "W Ursae Majoris is the prototype of W UMa-type contact binaries.",
+      "The two stars share a common envelope and have nearly equal temperatures.",
+      "They have very short periods (0.3–1 day) and continuous variation.",
+      "Mass ratios are typically close to 1.",
+      "They are common in the galaxy and represent a late stage of binary evolution."
+    ]
+  },
+  "AM Canum Venaticorum": {
+    "explanation": "AM CVn is an ultra-compact binary where white dwarf pulls helium from another star",
+    "points": [
+      "AM CVn stars are helium-rich cataclysmic variables with very short periods (5–65 minutes).",
+      "They consist of a white dwarf accreting helium from a companion.",
+      "They are progenitors of Type Ia supernovae or other explosive events.",
+      "AM CVn is the prototype of this rare class.",
+      "They emit strongly in ultraviolet and X-rays."
+    ]
+  },
+  "Pulsars": {
+    "explanation": "Pulsars are spinning neutron stars that emit beams of radio waves like a cosmic lighthouse",
+    "points": [
+      "Pulsars are rapidly rotating neutron stars with strong magnetic fields.",
+      "They emit beams of radiation from their magnetic poles that sweep past Earth.",
+      "The first pulsar (PSR B1919+21) was discovered in 1967 by Jocelyn Bell Burnell.",
+      "Millisecond pulsars are extremely stable and used as cosmic clocks.",
+      "Some pulsars emit across the electromagnetic spectrum, including X-rays and gamma rays."
+    ]
+  },
+  "Magnetar": {
+    "explanation": "Magnetars have magnetic fields a quadrillion times stronger than Earth's",
+    "points": [
+      "Magnetars are neutron stars with magnetic fields of 10^14 to 10^15 Gauss.",
+      "Their fields power soft gamma repeaters and anomalous X-ray pulsars.",
+      "Magnetar outbursts can release enormous energy in seconds.",
+      "Their fields decay rapidly compared to normal pulsars.",
+      "They are among the most magnetic objects known in the universe."
+    ]
+  },
+  "Neutron Star": {
+    "explanation": "Neutron stars are incredibly dense collapsed stars where a teaspoon would weigh a billion tons",
+    "points": [
+      "Neutron stars have masses 1.4–2 solar masses compressed into a ~10–20 km radius.",
+      "They are supported by neutron degeneracy pressure.",
+      "Surface gravity is billions of times Earth's.",
+      "They have extremely strong magnetic fields (10^8–10^15 Gauss).",
+      "They form from the core collapse of massive stars in supernova explosions."
+    ]
+  },
+  "White Dwarf": {
+    "explanation": "White dwarfs are the dead cores of stars like our Sun that will slowly cool over billions of years",
+    "points": [
+      "White dwarfs have masses up to about 1.4 solar masses (Chandrasekhar limit) but are Earth-sized.",
+      "They are supported by electron degeneracy pressure.",
+      "They slowly cool and fade over billions of years, eventually becoming black dwarfs.",
+      "Many have strong magnetic fields and some are rapidly rotating pulsars.",
+      "They are the final stage for most stars (including the Sun)."
+    ]
+  },
+  "Black Dwarf": {
+    "explanation": "Black dwarfs are theoretical cooled white dwarfs but none exist yet as the universe is too young",
+    "points": [
+      "Black dwarfs would be cold, dark remnants of white dwarfs after they cool completely.",
+      "Cooling time exceeds the current age of the universe (~13.8 billion years).",
+      "They would have temperatures near absolute zero and be barely detectable.",
+      "They represent the final stage of low- to medium-mass stellar evolution.",
+      "The universe is currently too young for any black dwarfs to exist."
+    ]
+  },
+  "Brown Dwarf": {
+    "explanation": "Brown dwarfs are failed stars too small to sustain hydrogen fusion in their cores",
+    "points": [
+      "Brown dwarfs have masses between 13 and 80 Jupiter masses.",
+      "They can briefly fuse deuterium but not hydrogen.",
+      "They cool over time and eventually resemble giant planets.",
+      "Some have methane in their atmospheres and are classified as Y dwarfs.",
+      "They bridge the gap between planets and stars."
+    ]
+  },
+  "Red Dwarf": {
+    "explanation": "Red dwarfs are the smallest and most common stars in the universe and can live for trillions of years",
+    "points": [
+      "Red dwarfs are M-type main-sequence stars with masses 0.08–0.6 solar masses.",
+      "They are fully convective and burn hydrogen very slowly.",
+      "Their lifetimes can exceed the current age of the universe by orders of magnitude.",
+      "Most nearby stars are red dwarfs (Proxima Centauri, Barnard's Star).",
+      "They often have strong flares and can strip planetary atmospheres."
+    ]
+  },
+  "Yellow Dwarf": {
+    "explanation": "Yellow dwarfs like our Sun are medium-sized stable stars that live for about 10 billion years",
+    "points": [
+      "Yellow dwarfs are G-type main-sequence stars with masses 0.8–1.2 solar masses.",
+      "They have surface temperatures of 5,300–6,000 K and are stable hydrogen burners.",
+      "The Sun is a typical G2V yellow dwarf.",
+      "They are common and long-lived enough to host complex life.",
+      "They eventually evolve into red giants and white dwarfs."
+    ]
+  },
+  "Blue Giant": {
+    "explanation": "Blue giants are massive hot stars that live fast and die young in huge supernova explosions",
+    "points": [
+      "Blue giants are O and B-type stars with masses 2–150+ solar masses.",
+      "They have surface temperatures of 10,000–50,000 K and are extremely luminous.",
+      "They have short main-sequence lifetimes (millions of years).",
+      "They end their lives in core-collapse supernovae.",
+      "Examples include Rigel, Spica, and most stars in young clusters."
+    ]
+  },
+  "Red Giant": {
+    "explanation": "Red giants are aging stars that expand enormously as they burn the last of their hydrogen",
+    "points": [
+      "Red giants have exhausted core hydrogen and now fuse helium or shell hydrogen.",
+      "They expand to 10–100+ times their original radius.",
+      "They are luminous but cool (3,500–4,500 K) with red-orange colors.",
+      "They lose mass through strong stellar winds.",
+      "They are a transitional phase before becoming white dwarfs or exploding."
+    ]
+  },
+  "Hypergiant": {
+    "explanation": "Hypergiants are the rarest and most extreme class of stars with enormous mass and luminosity",
+    "points": [
+      "Hypergiants have luminosities of 100,000–5,000,000 solar luminosities.",
+      "They are massive stars (20–150+ solar masses) in late evolutionary stages.",
+      "They are extremely unstable and lose mass rapidly.",
+      "Examples include Rho Cassiopeiae, VY Canis Majoris, and Pistol Star.",
+      "They are among the most luminous and rarest stars in galaxies."
+    ]
+  },
+  "Protostar": {
+    "explanation": "Protostars are forming stars hidden in dense clouds of gas and dust before ignition",
+    "points": [
+      "Protostars form from collapsing molecular cloud cores.",
+      "They are surrounded by accretion disks and envelopes.",
+      "They are not yet fusing hydrogen and are powered by gravitational contraction.",
+      "They are observed primarily in infrared due to dust obscuration.",
+      "Protostellar phase lasts about 10^5–10^6 years."
+    ]
+  },
+  "T Tauri": {
+    "explanation": "T Tauri stars are very young unstable stars just beginning the process of nuclear fusion",
+    "points": [
+      "T Tauri stars are pre-main-sequence stars with masses 0.5–2 solar masses.",
+      "They are highly variable due to accretion and magnetic activity.",
+      "They have strong stellar winds and bipolar outflows.",
+      "Many have protoplanetary disks (proplyds).",
+      "They are found in star-forming regions like Orion Nebula."
+    ]
+  },
+  "Herbig Ae/Be": {
+    "explanation": "Herbig Ae/Be stars are young intermediate-mass stars with disks of material still forming",
+    "points": [
+      "Herbig Ae/Be stars are pre-main-sequence stars with masses 2–8 solar masses.",
+      "They have circumstellar disks and strong emission lines.",
+      "They are surrounded by reflection nebulae.",
+      "They bridge the gap between T Tauri and massive star formation.",
+      "They often show UXOR-type variability."
+    ]
+  },
+  "Subdwarf": {
+    "explanation": "Subdwarf stars are small dim stars fusing helium rather than the usual hydrogen",
+    "points": [
+      "Subdwarfs are metal-poor Population II stars.",
+      "They lie below the main sequence due to lower metallicity.",
+      "They have higher surface gravity and bluer colors.",
+      "They are older stars with different evolutionary paths.",
+      "They are important for understanding galactic evolution."
+    ]
+  },
+  "Subgiant": {
+    "explanation": "Subgiant stars are just beginning the transition from main sequence to red giant phase",
+    "points": [
+      "Subgiants have exhausted core hydrogen but not yet started shell burning significantly.",
+      "They are brighter and larger than main-sequence stars of the same temperature.",
+      "They are in a brief evolutionary phase.",
+      "Examples include Procyon A and some stars in open clusters.",
+      "They are useful for studying stellar evolution."
+    ]
+  },
+  "Wolf-Rayet": {
+    "explanation": "Wolf-Rayet stars shed their outer layers in fierce stellar winds exposing their hot cores",
+    "points": [
+      "Wolf-Rayet stars are massive, evolved stars with strong stellar winds.",
+      "They have lost their hydrogen envelopes, exposing CNO-processed material.",
+      "They have surface temperatures of 20,000–210,000 K.",
+      "They are very luminous and have strong emission lines.",
+      "They are progenitors of Type Ib/c supernovae and gamma-ray bursts."
+    ]
+  },
+  "Carbon Star": {
+    "explanation": "Carbon stars have so much carbon in their atmosphere that soot-like compounds form",
+    "points": [
+      "Carbon stars are red giants with C/O ratio > 1.",
+      "They have strong carbon molecular bands (C2, CN).",
+      "They produce heavy elements through the s-process.",
+      "They are surrounded by carbon-rich circumstellar shells.",
+      "They are important sources of carbon in the galaxy."
+    ]
+  },
+  "Technetium Star": {
+    "explanation": "Technetium stars contain unstable radioactive technetium showing active nucleosynthesis",
+    "points": [
+      "Technetium stars show technetium-99 lines in their spectra.",
+      "Technetium has no stable isotopes and decays quickly.",
+      "Its presence indicates recent s-process nucleosynthesis.",
+      "Most are asymptotic giant branch (AGB) stars.",
+      "They provide direct evidence of stellar nucleosynthesis."
+    ]
+  },
+  "Lithium Star": {
+    "explanation": "Lithium-rich giant stars are a puzzle as normal giants should destroy their lithium not keep it",
+    "points": [
+      "Lithium-rich giants have lithium abundances 10–1000 times higher than expected.",
+      "Standard stellar evolution predicts lithium depletion.",
+      "Possible mechanisms include planet engulfment or unusual mixing.",
+      "They are rare and still poorly understood.",
+      "They provide clues to non-standard stellar processes."
+    ]
+  },
+  "Barium Star": {
+    "explanation": "Barium stars have anomalously high amounts of heavy elements from a companion star",
+    "points": [
+      "Barium stars show strong barium and s-process element lines.",
+      "They are typically giants with white dwarf companions.",
+      "Material rich in s-process elements was transferred from the companion.",
+      "They are important for studying binary evolution and nucleosynthesis.",
+      "Many are CH or CH-like stars."
+    ]
+  },
+  "Ap Star": {
+    "explanation": "Ap stars have abnormal amounts of certain elements and extremely strong magnetic fields",
+    "points": [
+      "Ap stars are chemically peculiar A-type stars with strong magnetic fields.",
+      "They show overabundances of Sr, Cr, Eu, and rare earths.",
+      "Fields range from hundreds to tens of thousands of Gauss.",
+      "Elements are stratified in their atmospheres.",
+      "They are slow rotators with strong magnetic braking."
+    ]
+  },
+  "FK Comae": {
+    "explanation": "FK Comae type stars are rapidly spinning giants with extreme star spot activity",
+    "points": [
+      "FK Com stars are rapidly rotating G/K giants.",
+      "They show strong chromospheric activity and starspots.",
+      "They may be the result of binary mergers.",
+      "They have very short rotation periods (days).",
+      "They are extreme examples of magnetic activity."
+    ]
+  },
+  "Flare Star": {
+    "explanation": "Flare stars are red dwarfs that produce powerful sudden flares brightening dramatically",
+    "points": [
+      "Flare stars are M-type dwarfs with strong magnetic activity.",
+      "They can increase brightness by factors of 10–100 in minutes.",
+      "Flares emit across UV, X-ray, and radio wavelengths.",
+      "They can affect planetary habitability.",
+      "Examples include Proxima Centauri and AD Leonis."
+    ]
+  },
+  "BY Draconis": {
+    "explanation": "BY Draconis stars vary in brightness due to large dark star spots on their surface",
+    "points": [
+      "BY Dra stars are spotted M-type dwarfs with rotation-induced variability.",
+      "They show quasi-periodic brightness changes due to starspots.",
+      "They are young and magnetically active.",
+      "They are the prototype of spotted flare stars.",
+      "They provide insights into stellar magnetism."
+    ]
+  },
+  "FU Orionis": {
+    "explanation": "FU Orionis stars are young stars that suddenly brighten 100 fold due to disk accretion",
+    "points": [
+      "FUors are pre-main-sequence stars with dramatic luminosity increases.",
+      "Brightening is caused by increased accretion from a circumstellar disk.",
+      "They can stay bright for decades to centuries.",
+      "They are rare and important for understanding disk accretion.",
+      "FU Orionis is the prototype of this class."
+    ]
+  },
+  "EX Lupi": {
+    "explanation": "EX Lupi stars are young stars with episodic outbursts caused by instabilities in their disk",
+    "points": [
+      "EXors are pre-main-sequence stars with recurrent outbursts.",
+      "Outbursts are less extreme than FUors but more frequent.",
+      "They are caused by disk instabilities or accretion events.",
+      "EX Lupi is the prototype.",
+      "They help study episodic accretion."
+    ]
+  },
+  "Symbiotic Star": {
+    "explanation": "Symbiotic stars are binary systems with a red giant and white dwarf interacting closely",
+    "points": [
+      "Symbiotic stars have a red giant transferring mass to a white dwarf.",
+      "They show emission lines from ionized nebula.",
+      "Some undergo nova-like outbursts.",
+      "They are important for understanding binary evolution.",
+      "They are rare and often variable."
+    ]
+  },
+  "Cataclysmic Variable": {
+    "explanation": "Cataclysmic variables are binaries where a white dwarf pulls material from a companion",
+    "points": [
+      "CVs consist of a white dwarf accreting from a main-sequence or giant companion.",
+      "They show outbursts (novae, dwarf novae) due to accretion disk instabilities.",
+      "They are important for understanding accretion physics.",
+      "Many have strong magnetic fields.",
+      "They are common in the galaxy."
+    ]
+  },
+  "Nova": {
+    "explanation": "A nova occurs when a white dwarf accretes enough material to trigger a thermonuclear explosion",
+    "points": [
+      "Novae are surface explosions on white dwarfs in binary systems.",
+      "They increase brightness by 10–15 magnitudes.",
+      "They are not destructive to the white dwarf.",
+      "They recur in some systems (recurrent novae).",
+      "They synthesize some heavy elements."
+    ]
+  },
+  "Supernova": {
+    "explanation": "A supernova explosion releases as much energy as the Sun will emit in its entire lifetime",
+    "points": [
+      "Supernovae are catastrophic explosions marking the death of massive stars or white dwarfs.",
+      "Type Ia from white dwarf detonation; Type II from core collapse.",
+      "They synthesize and disperse heavy elements.",
+      "They can outshine entire galaxies briefly.",
+      "They leave behind neutron stars or black holes."
+    ]
+  },
+  "Hypernova": {
+    "explanation": "Hypernovae are incredibly powerful supernovae that may produce long gamma-ray bursts",
+    "points": [
+      "Hypernovae are extreme core-collapse supernovae with energies 10–100 times normal SN.",
+      "They are associated with long GRBs.",
+      "They involve very massive, rapidly rotating stars.",
+      "They produce large amounts of nickel and other heavy elements.",
+      "They are rare and extremely energetic."
+    ]
+  },
+  "Kilonova": {
+    "explanation": "Kilonovae occur when two neutron stars collide creating all heavy elements like gold",
+    "points": [
+      "Kilonovae are electromagnetic counterparts to neutron star mergers.",
+      "They are powered by r-process nucleosynthesis.",
+      "They produce heavy elements including gold and uranium.",
+      "They are fast and fade quickly.",
+      "GW170817 was the first observed kilonova."
+    ]
+  },
+  "Quasar": {
+    "explanation": "Quasars are the most luminous objects in the universe powered by supermassive black holes",
+    "points": [
+      "Quasars are active galactic nuclei with supermassive black holes accreting matter.",
+      "They can outshine their host galaxies by factors of 100–1000.",
+      "They are seen at great distances (high redshift).",
+      "They are powered by accretion disks and relativistic jets.",
+      "They are important for understanding galaxy evolution."
+    ]
+  },
+  "Blazar": {
+    "explanation": "Blazars are quasars with a jet of material aimed directly at Earth",
+    "points": [
+      "Blazars are AGN with relativistic jets pointed nearly at the observer.",
+      "They show strong variability across wavelengths.",
+      "They emit gamma rays and can be highly polarized.",
+      "They are the most extreme class of AGN.",
+      "They are important for studying relativistic jets."
+    ]
+  },
+  "Seyfert Galaxy Core": {
+    "explanation": "Seyfert galaxies have active galactic nuclei with bright cores visible at multiple wavelengths",
+    "points": [
+      "Seyfert galaxies are spiral galaxies with active nuclei.",
+      "They have bright, point-like cores.",
+      "Type 1 have broad emission lines; Type 2 have narrow lines.",
+      "They are lower luminosity than quasars.",
+      "They are common nearby AGN."
+    ]
+  },
+  "Microquasar": {
+    "explanation": "Microquasars are stellar-mass black holes that mimic quasar behavior on a smaller scale",
+    "points": [
+      "Microquasars are X-ray binaries with relativistic jets.",
+      "They have black holes of 5–20 solar masses.",
+      "They show jet ejections and superluminal motion.",
+      "They are important for studying accretion and jet physics.",
+      "They are galactic analogs of quasars."
+    ]
+  },
+  "Black Hole": {
+    "explanation": "Black holes have gravity so strong that nothing not even light can escape from them",
+    "points": [
+      "Black holes form from the collapse of massive stars or mergers.",
+      "They have an event horizon beyond which nothing can escape.",
+      "Stellar-mass black holes are 3–100 solar masses.",
+      "Supermassive black holes are millions to billions of solar masses.",
+      "They are detected via gravitational effects and accretion disks."
+    ]
+  },
+  "Sagittarius A*": {
+    "explanation": "Sagittarius A* is the supermassive black hole at the center of our Milky Way galaxy",
+    "points": [
+      "Sagittarius A* has a mass of about 4.3 million solar masses.",
+      "It is located about 26,000 light-years from Earth.",
+      "It was imaged by the Event Horizon Telescope in 2022.",
+      "It is relatively quiet compared to other supermassive black holes.",
+      "It is orbited by stars used to measure its mass."
+    ]
+  },
+  "TON 618": {
+    "explanation": "TON 618 is one of the most massive black holes known with 66 billion solar masses",
+    "points": [
+      "TON 618 is a hyperluminous quasar powered by a 66 billion solar mass black hole.",
+      "It is one of the most massive known black holes.",
+      "It is located about 10.4 billion light-years away.",
+      "It outshines most galaxies.",
+      "It is an extreme example of early universe black hole growth."
     ]
   }
 }

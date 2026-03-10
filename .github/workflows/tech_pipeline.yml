@@ -20,7 +20,7 @@ on:
 
 # ─── Permissions ──────────────────────────────────────────────────────────────
 permissions:
-  contents: read
+  contents: write
 
 # ─── Job ──────────────────────────────────────────────────────────────────────
 jobs:
@@ -158,3 +158,13 @@ jobs:
           echo "| Uploads today | 2 (video + short) |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Run date      | $(date '+%Y-%m-%d %H:%M UTC') |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Dry run       | ${{ github.event.inputs.dry_run }} |" >> "$GITHUB_STEP_SUMMARY"
+
+      # ── 13. Commit state ──────────────────────────────────────────────────
+      - name: Commit rotation state
+        if: ${{ github.event.inputs.dry_run != 'true' }}
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add tech_content_config/.last_config_idx.txt tech_content_config/.pick_state.json || true
+          git diff --staged --quiet || git commit -m "chore: update tech pipeline rotation state [skip ci]" || true
+          git push || true

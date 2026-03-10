@@ -1,406 +1,992 @@
 {
-  "brands": {
-    "items": [
-      {
-        "name": "Apple",
-        "fact": "Apple makes iPhones, iPads, and Mac computers used all over the world"
-      },
-      {
-        "name": "Nike",
-        "fact": "Nike makes sports shoes and clothing with a famous swoosh logo"
-      },
-      {
-        "name": "McDonald's",
-        "fact": "McDonald's golden arches are one of the most recognized symbols on Earth"
-      },
-      {
-        "name": "LEGO",
-        "fact": "LEGO bricks snap together so you can build almost anything you imagine"
-      },
-      {
-        "name": "Disney",
-        "fact": "Disney creates magical movies, cartoons, and exciting theme parks"
-      },
-      {
-        "name": "Google",
-        "fact": "Google helps billions of people find information every single day"
-      },
-      {
-        "name": "Coca-Cola",
-        "fact": "Coca-Cola is one of the world's most popular and delicious drinks"
-      },
-      {
-        "name": "Microsoft",
-        "fact": "Microsoft makes Windows computers, Xbox games, and Office software"
-      },
-      {
-        "name": "Amazon",
-        "fact": "Amazon started as a bookstore and now delivers almost everything to your door"
-      },
-      {
-        "name": "YouTube",
-        "fact": "YouTube is where millions of people watch, learn, and share videos every day"
-      },
-      {
-        "name": "Samsung",
-        "fact": "Samsung makes smartphones, TVs, and even supplies chips to other tech companies"
-      },
-      {
-        "name": "Sony",
-        "fact": "Sony makes PlayStation games, cameras, music equipment, and movies"
-      },
-      {
-        "name": "Netflix",
-        "fact": "Netflix streams movies and TV shows to over 200 million subscribers worldwide"
-      },
-      {
-        "name": "Spotify",
-        "fact": "Spotify lets you listen to millions of songs and podcasts anywhere anytime"
-      },
-      {
-        "name": "Meta",
-        "fact": "Meta owns Facebook, Instagram, and WhatsApp connecting billions of people"
-      },
-      {
-        "name": "Twitter/X",
-        "fact": "Twitter, now called X, lets people share short messages with the whole world"
-      },
-      {
-        "name": "TikTok",
-        "fact": "TikTok is a short video app where anyone can become famous overnight"
-      },
-      {
-        "name": "Snapchat",
-        "fact": "Snapchat lets you send photos and videos that disappear after a few seconds"
-      },
-      {
-        "name": "Adobe",
-        "fact": "Adobe makes creative tools like Photoshop used by artists and designers worldwide"
-      },
-      {
-        "name": "Zoom",
-        "fact": "Zoom became how millions of people met for school and work during the pandemic"
-      },
-      {
-        "name": "Adidas",
-        "fact": "Adidas is Nike's biggest rival and has three famous parallel stripes"
-      },
-      {
-        "name": "Puma",
-        "fact": "Puma is a German sports brand with a leaping cat as its mascot"
-      },
-      {
-        "name": "Under Armour",
-        "fact": "Under Armour makes high-tech sports gear designed to keep athletes performing"
-      },
-      {
-        "name": "Gucci",
-        "fact": "Gucci is one of the world's most famous fashion luxury brands from Italy"
-      },
-      {
-        "name": "Louis Vuitton",
-        "fact": "Louis Vuitton is famous for luxury handbags and the iconic LV monogram pattern"
-      },
-      {
-        "name": "Chanel",
-        "fact": "Chanel is a legendary French fashion house known for the little black dress"
-      },
-      {
-        "name": "Ferrari Brand",
-        "fact": "The Ferrari prancing horse logo is one of the most coveted symbols in the world"
-      },
-      {
-        "name": "Rolex",
-        "fact": "Rolex makes the most recognized luxury watches in the world"
-      },
-      {
-        "name": "IKEA",
-        "fact": "IKEA is a Swedish furniture store where you assemble the furniture yourself at home"
-      },
-      {
-        "name": "H&M",
-        "fact": "H&M is a Swedish fashion brand making affordable trendy clothing for everyone"
-      },
-      {
-        "name": "Zara",
-        "fact": "Zara can design and deliver new fashion to stores in just two weeks"
-      },
-      {
-        "name": "Starbucks",
-        "fact": "Starbucks serves coffee to millions of customers in over 80 countries every day"
-      },
-      {
-        "name": "Subway",
-        "fact": "Subway has more locations worldwide than any other fast food restaurant"
-      },
-      {
-        "name": "Burger King",
-        "fact": "Burger King is famous for the Whopper and flame-grilling all their burgers"
-      },
-      {
-        "name": "KFC",
-        "fact": "KFC was started by Colonel Harland Sanders who began frying chicken at age 65"
-      },
-      {
-        "name": "Pizza Hut",
-        "fact": "Pizza Hut opened in 1958 and became the world's largest pizza restaurant chain"
-      },
-      {
-        "name": "Domino's",
-        "fact": "Domino's guarantees pizza delivery in 30 minutes or the order is free"
-      },
-      {
-        "name": "Walmart",
-        "fact": "Walmart is the world's largest company by revenue employing over 2 million people"
-      },
-      {
-        "name": "NVIDIA",
-        "fact": "NVIDIA makes graphics chips that power video games, AI, and scientific research"
-      },
-      {
-        "name": "Intel",
-        "fact": "Intel makes the microprocessors found in the majority of the world's computers"
-      },
-      {
-        "name": "Qualcomm",
-        "fact": "Qualcomm's chips power the cellular technology in billions of smartphones"
-      },
-      {
-        "name": "SpaceX",
-        "fact": "SpaceX builds reusable rockets and has its own satellite internet called Starlink"
-      },
-      {
-        "name": "NASA",
-        "fact": "NASA has sent humans to the Moon and probes to every planet in our solar system"
-      },
-      {
-        "name": "Red Bull",
-        "fact": "Red Bull sells over 12 billion cans per year and sponsors extreme sports worldwide"
-      },
-      {
-        "name": "Monster Energy",
-        "fact": "Monster Energy is famous for its giant M-claw logo and sponsoring action sports"
-      },
-      {
-        "name": "GoPro",
-        "fact": "GoPro makes tiny rugged cameras that athletes strap to helmets and boards"
-      },
-      {
-        "name": "DJI",
-        "fact": "DJI makes over 70% of the world's commercial drones and camera gimbals"
-      },
-      {
-        "name": "Dyson",
-        "fact": "Dyson reinvented the vacuum cleaner by removing the bag and using cyclone technology"
-      },
-      {
-        "name": "Philips",
-        "fact": "Philips is a Dutch company making everything from light bulbs to medical equipment"
-      },
-      {
-        "name": "Bosch",
-        "fact": "Bosch makes power tools, appliances, and auto parts used around the world"
-      },
-      {
-        "name": "Caterpillar",
-        "fact": "Caterpillar makes the massive yellow construction machines that build roads and buildings"
-      },
-      {
-        "name": "John Deere",
-        "fact": "John Deere's green tractors are used on farms in almost every country on Earth"
-      },
-      {
-        "name": "3M",
-        "fact": "3M invented Post-it notes, Scotch tape, and thousands of other everyday products"
-      },
-      {
-        "name": "Johnson & Johnson",
-        "fact": "Johnson & Johnson makes baby products, Band-Aids, and medicines for millions"
-      },
-      {
-        "name": "Pfizer",
-        "fact": "Pfizer is one of the world's biggest drug companies making vaccines and medicines"
-      },
-      {
-        "name": "LEGO Technic",
-        "fact": "LEGO Technic sets build complex machines with gears and motors that actually work"
-      },
-      {
-        "name": "Mattel",
-        "fact": "Mattel makes Barbie, Hot Wheels, and many of the world's most loved toys"
-      },
-      {
-        "name": "Hasbro",
-        "fact": "Hasbro makes board games like Monopoly and toys like Transformers and Nerf"
-      },
-      {
-        "name": "Nintendo",
-        "fact": "Nintendo created Mario, Zelda, and Pokemon and made gaming fun for everyone"
-      },
-      {
-        "name": "PlayStation",
-        "fact": "PlayStation is Sony's gaming brand and has sold over 500 million consoles"
-      },
-      {
-        "name": "Xbox",
-        "fact": "Xbox is Microsoft's gaming brand competing with PlayStation for gamers worldwide"
-      },
-      {
-        "name": "Roblox",
-        "fact": "Roblox lets kids create and play millions of games made by other users"
-      },
-      {
-        "name": "Minecraft",
-        "fact": "Minecraft is the best-selling video game of all time with over 238 million copies sold"
-      },
-      {
-        "name": "Fortnite",
-        "fact": "Fortnite became a worldwide phenomenon with over 350 million registered players"
-      },
-      {
-        "name": "Uber",
-        "fact": "Uber transformed transportation by letting you hail a car with just your phone"
-      },
-      {
-        "name": "Airbnb",
-        "fact": "Airbnb lets you stay in someone's home anywhere in the world as a traveler"
-      },
-      {
-        "name": "PayPal",
-        "fact": "PayPal was one of the first ways to send money safely over the internet"
-      },
-      {
-        "name": "Visa",
-        "fact": "Visa processes over 200 billion payment transactions every single year"
-      },
-      {
-        "name": "Mastercard",
-        "fact": "Mastercard processes payments in over 210 countries with its famous red and yellow circles"
-      },
-      {
-        "name": "Stripe",
-        "fact": "Stripe helps millions of websites and apps accept payments securely online"
-      },
-      {
-        "name": "Shopify",
-        "fact": "Shopify lets anyone easily set up and run their own online store"
-      },
-      {
-        "name": "Salesforce",
-        "fact": "Salesforce pioneered cloud computing software for businesses managing customers"
-      },
-      {
-        "name": "Oracle",
-        "fact": "Oracle makes database software that runs the data systems of most large companies"
-      },
-      {
-        "name": "IBM",
-        "fact": "IBM invented the personal computer, created Watson AI, and holds the most patents annually"
-      },
-      {
-        "name": "Siemens",
-        "fact": "Siemens is a giant German company making everything from trains to medical scanners"
-      },
-      {
-        "name": "Panasonic",
-        "fact": "Panasonic makes batteries for Tesla cars and electronics for daily life"
-      },
-      {
-        "name": "Toshiba",
-        "fact": "Toshiba invented the flash memory that powers USB drives and memory cards"
-      },
-      {
-        "name": "Hitachi",
-        "fact": "Hitachi builds trains, power infrastructure, and medical imaging equipment worldwide"
-      },
-      {
-        "name": "Canon",
-        "fact": "Canon makes cameras and printers and is one of Japan's most innovative companies"
-      },
-      {
-        "name": "Nikon",
-        "fact": "Nikon cameras are trusted by professional photographers all over the world"
-      },
-      {
-        "name": "Fujifilm",
-        "fact": "Fujifilm pivoted from camera film to skin care products using the same anti-aging chemistry"
-      },
-      {
-        "name": "Twitter Brand",
-        "fact": "The iconic blue bird logo represented free flowing communication before the rebrand to X"
-      },
-      {
-        "name": "Alibaba",
-        "fact": "Alibaba is China's biggest e-commerce company connecting manufacturers to buyers worldwide"
-      },
-      {
-        "name": "Tencent",
-        "fact": "Tencent owns WeChat and is one of the world's most valuable gaming and tech companies"
-      },
-      {
-        "name": "Baidu",
-        "fact": "Baidu is China's dominant search engine and a leader in AI development"
-      },
-      {
-        "name": "Xiaomi",
-        "fact": "Xiaomi makes affordable smartphones and hundreds of smart home devices"
-      },
-      {
-        "name": "Huawei",
-        "fact": "Huawei is China's largest technology company making phones, 5G networks, and more"
-      },
-      {
-        "name": "Telegram",
-        "fact": "Telegram is a messaging app known for strong privacy and huge group channels"
-      },
-      {
-        "name": "Reddit",
-        "fact": "Reddit is a vast collection of communities where people discuss almost any topic"
-      },
-      {
-        "name": "Pinterest",
-        "fact": "Pinterest is a visual inspiration board where people collect ideas for home and life"
-      },
-      {
-        "name": "LinkedIn",
-        "fact": "LinkedIn is the world's largest professional networking site for careers and business"
-      },
-      {
-        "name": "Dropbox",
-        "fact": "Dropbox made cloud file storage easy long before it became standard technology"
-      },
-      {
-        "name": "Slack",
-        "fact": "Slack transformed how teams communicate at work with organized channels and messages"
-      },
-      {
-        "name": "Notion",
-        "fact": "Notion is an all-in-one workspace for notes, tasks, and team collaboration"
-      },
-      {
-        "name": "Canva",
-        "fact": "Canva lets anyone create beautiful designs even without professional experience"
-      },
-      {
-        "name": "Twitch",
-        "fact": "Twitch is where millions of people watch others play video games live every day"
-      },
-      {
-        "name": "Discord",
-        "fact": "Discord is a chat platform that became the main hub for gaming communities worldwide"
-      },
-      {
-        "name": "Duolingo",
-        "fact": "Duolingo teaches languages through short fun lessons and a relentless encouraging owl"
-      },
-      {
-        "name": "OpenAI",
-        "fact": "OpenAI created ChatGPT which became the fastest-growing app in internet history"
-      },
-      {
-        "name": "Anthropic",
-        "fact": "Anthropic is an AI safety company that created Claude the AI assistant"
-      }
+  "Apple": {
+    "explanation": "Apple makes iPhones, iPads, and Mac computers used all over the world",
+    "points": [
+      "Known for premium design, ecosystem integration, and strong brand loyalty",
+      "Revolutionized personal technology with the iPhone in 2007",
+      "Operates the world's most valuable brand and massive retail stores",
+      "Pioneered App Store creating entirely new digital economy",
+      "Focuses on privacy, chip design (Apple Silicon), and services growth"
+    ]
+  },
+  "Nike": {
+    "explanation": "Nike makes sports shoes and clothing with a famous swoosh logo",
+    "points": [
+      "World's largest sportswear manufacturer by revenue",
+      "Iconic 'Just Do It' slogan and powerful athlete endorsements",
+      "Innovates with technologies like Air cushioning and Flyknit",
+      "Strong direct-to-consumer shift through Nike app and stores",
+      "Extensive global marketing and sponsorship of major sports events"
+    ]
+  },
+  "McDonald's": {
+    "explanation": "McDonald's golden arches are one of the most recognized symbols on Earth",
+    "points": [
+      "Largest fast-food chain by number of locations worldwide",
+      "Master of consistent global branding and operational efficiency",
+      "Pioneered fast-food drive-thru and breakfast menus",
+      "Huge real-estate portfolio through franchise model",
+      "Adapts menu heavily to local tastes in different countries"
+    ]
+  },
+  "LEGO": {
+    "explanation": "LEGO bricks snap together so you can build almost anything you imagine",
+    "points": [
+      "Danish company famous for interlocking plastic bricks since 1949",
+      "One of the world's strongest and most trusted brands",
+      "Massive licensed themes including Star Wars, Marvel, Harry Potter",
+      "LEGO Ideas platform lets fans submit and vote on official sets",
+      "Strong focus on creativity, education, and family entertainment"
+    ]
+  },
+  "Disney": {
+    "explanation": "Disney creates magical movies, cartoons, and exciting theme parks",
+    "points": [
+      "Owns Pixar, Marvel, Star Wars, National Geographic, and 20th Century",
+      "World's largest media and entertainment conglomerate",
+      "Disney+ streaming service competes directly with Netflix",
+      "Theme parks generate massive recurring revenue",
+      "Iconic characters and storytelling drive cross-media empire"
+    ]
+  },
+  "Google": {
+    "explanation": "Google helps billions of people find information every single day",
+    "points": [
+      "Dominates global search with over 90% market share",
+      "Alphabet parent company includes YouTube, Android, Chrome, Maps",
+      "Leader in AI research, cloud computing, and quantum computing",
+      "Revenue primarily from advertising across search and YouTube",
+      "Known for 'Don't be evil' motto (later changed) and innovation culture"
+    ]
+  },
+  "Coca-Cola": {
+    "explanation": "Coca-Cola is one of the world's most popular and delicious drinks",
+    "points": [
+      "Most recognized brand logo and bottle shape on Earth",
+      "Sells in over 200 countries with localized marketing",
+      "Massive advertising budget and holiday campaigns",
+      "Diversified into water, juice, energy drinks, and coffee",
+      "Strong distribution network reaches even remote locations"
+    ]
+  },
+  "Microsoft": {
+    "explanation": "Microsoft makes Windows computers, Xbox games, and Office software",
+    "points": [
+      "Dominates PC operating systems and productivity software",
+      "Azure is second-largest cloud provider after AWS",
+      "Acquired LinkedIn, GitHub, Activision Blizzard, and Mojang",
+      "Shifted to cloud-first and subscription (Microsoft 365) model",
+      "Strong enterprise focus and massive recurring revenue"
+    ]
+  },
+  "Amazon": {
+    "explanation": "Amazon started as a bookstore and now delivers almost everything to your door",
+    "points": [
+      "World's largest online retailer and cloud provider (AWS)",
+      "Prime membership drives loyalty and recurring revenue",
+      "Pioneered same-day delivery, voice shopping (Alexa), and streaming",
+      "Massive logistics network with fulfillment centers worldwide",
+      "Diversified into groceries, healthcare, satellites, and entertainment"
+    ]
+  },
+  "YouTube": {
+    "explanation": "YouTube is where millions of people watch, learn, and share videos every day",
+    "points": [
+      "Second-largest search engine after Google",
+      "Creator economy with billions paid to content creators",
+      "YouTube Premium, Music, Shorts, and TV offerings",
+      "Handles enormous scale of video uploads and streaming",
+      "Powerful recommendation algorithm drives massive watch time"
+    ]
+  },
+  "Samsung": {
+    "explanation": "Samsung makes smartphones, TVs, and even supplies chips to other tech companies",
+    "points": [
+      "World's largest smartphone and TV manufacturer",
+      "Leading supplier of memory chips, OLED displays, and processors",
+      "Galaxy ecosystem competes directly with Apple",
+      "Heavy investment in foldable phones and 5G technology",
+      "Diversified conglomerate including construction and shipbuilding"
+    ]
+  },
+  "Sony": {
+    "explanation": "Sony makes PlayStation games, cameras, music equipment, and movies",
+    "points": [
+      "PlayStation is leading gaming console brand",
+      "Dominates professional camera sensors used in most smartphones",
+      "Major music (Sony Music) and movie (Sony Pictures) player",
+      "Innovator in audio (Walkman legacy, high-res audio)",
+      "Strong brand in gaming, entertainment, and imaging"
+    ]
+  },
+  "Netflix": {
+    "explanation": "Netflix streams movies and TV shows to over 200 million subscribers worldwide",
+    "points": [
+      "Pioneered streaming video and binge-watching culture",
+      "Heavy investment in original content production",
+      "Global expansion with localized originals in many languages",
+      "Shifted from DVD rental to dominant streaming service",
+      "Competes with Disney+, Amazon Prime, HBO Max"
+    ]
+  },
+  "Spotify": {
+    "explanation": "Spotify lets you listen to millions of songs and podcasts anywhere anytime",
+    "points": [
+      "Leading music streaming service with massive user base",
+      "Freemium model with ad-supported free tier",
+      "Personalized playlists (Discover Weekly, Daily Mix)",
+      "Strong podcast business after acquiring Gimlet and Anchor",
+      "Artist tools and data insights for musicians"
+    ]
+  },
+  "Meta": {
+    "explanation": "Meta owns Facebook, Instagram, and WhatsApp connecting billions of people",
+    "points": [
+      "Largest social network family with over 3.8 billion users",
+      "Pivoted to metaverse and VR/AR with Reality Labs",
+      "Revenue almost entirely from digital advertising",
+      "Facing regulatory scrutiny over privacy and competition",
+      "WhatsApp dominant messaging app in many countries"
+    ]
+  },
+  "Twitter/X": {
+    "explanation": "Twitter, now called X, lets people share short messages with the whole world",
+    "points": [
+      "Rebranded to X under Elon Musk ownership",
+      "Real-time public conversation platform",
+      "Influential in news, politics, and celebrity culture",
+      "Monetization through ads, subscriptions (X Premium)",
+      "Controversial changes to verification and content policies"
+    ]
+  },
+  "TikTok": {
+    "explanation": "TikTok is a short video app where anyone can become famous overnight",
+    "points": [
+      "Fastest-growing social media platform in history",
+      "Powerful algorithm drives addictive For You Page",
+      "ByteDance parent company based in China",
+      "Massive cultural influence on music, dance, trends",
+      "Facing regulatory pressure in multiple countries"
+    ]
+  },
+  "Snapchat": {
+    "explanation": "Snapchat lets you send photos and videos that disappear after a few seconds",
+    "points": [
+      "Pioneered disappearing messages and Stories format",
+      "Popular with younger demographics",
+      "AR filters and lenses drive engagement",
+      "Snap Map and Spotlight features added later",
+      "Strong focus on privacy and ephemeral content"
+    ]
+  },
+  "Adobe": {
+    "explanation": "Adobe makes creative tools like Photoshop used by artists and designers worldwide",
+    "points": [
+      "Dominates creative software with Creative Cloud suite",
+      "Shifted to subscription model successfully",
+      "Acquired Figma (deal later abandoned), Magento, Marketo",
+      "AI features (Firefly) integrated across products",
+      "Essential tools for professional photographers and designers"
+    ]
+  },
+  "Zoom": {
+    "explanation": "Zoom became how millions of people met for school and work during the pandemic",
+    "points": [
+      "Exploded in popularity during COVID-19 lockdowns",
+      "Simple, reliable video conferencing platform",
+      "Zoom Phone, webinars, and team chat added later",
+      "Faced security challenges early on ('Zoombombing')",
+      "Remains dominant in video meetings market"
+    ]
+  },
+  "Adidas": {
+    "explanation": "Adidas is Nike's biggest rival and has three famous parallel stripes",
+    "points": [
+      "German sportswear brand founded in 1949",
+      "Strong in soccer with major team sponsorships",
+      "Yeezy collaboration with Kanye West drove massive growth",
+      "Focus on sustainability and recycled materials",
+      "Competes directly with Nike and Puma"
+    ]
+  },
+  "Puma": {
+    "explanation": "Puma is a German sports brand with a leaping cat as its mascot",
+    "points": [
+      "Founded by Rudolf Dassler (Adidas founder's brother)",
+      "Strong in soccer, basketball, and motorsports",
+      "Collaborations with Rihanna (Fenty), Neymar, and streetwear",
+      "Positioned as more lifestyle-oriented than competitors",
+      "Growing fast in athletic and fashion segments"
+    ]
+  },
+  "Under Armour": {
+    "explanation": "Under Armour makes high-tech sports gear designed to keep athletes performing",
+    "points": [
+      "Known for moisture-wicking performance apparel",
+      "Strong in American football and basketball",
+      "Stephen Curry signature shoes very successful",
+      "Facing intense competition from Nike and Adidas",
+      "Focus on connected fitness through app ecosystem"
+    ]
+  },
+  "Gucci": {
+    "explanation": "Gucci is one of the world's most famous fashion luxury brands from Italy",
+    "points": [
+      "Part of Kering luxury group",
+      "Known for bold patterns, logo-heavy designs",
+      "Revived under creative director Alessandro Michele",
+      "Very strong in Asia and among younger luxury buyers",
+      "High-end handbags, shoes, and ready-to-wear"
+    ]
+  },
+  "Louis Vuitton": {
+    "explanation": "Louis Vuitton is famous for luxury handbags and the iconic LV monogram pattern",
+    "points": [
+      "Flagship brand of LVMH luxury conglomerate",
+      "Most valuable luxury brand in the world",
+      "Signature monogram canvas since 1896",
+      "Collaborations with artists like Takashi Murakami, Supreme",
+      "Strong focus on craftsmanship and heritage"
+    ]
+  },
+  "Chanel": {
+    "explanation": "Chanel is a legendary French fashion house known for the little black dress",
+    "points": [
+      "Founded by Coco Chanel in 1910",
+      "Iconic No. 5 perfume and quilted handbags",
+      "Privately held, independent luxury house",
+      "Karl Lagerfeld creative director for 36 years",
+      "Symbol of timeless Parisian elegance"
+    ]
+  },
+  "Ferrari Brand": {
+    "explanation": "The Ferrari prancing horse logo is one of the most coveted symbols in the world",
+    "points": [
+      "Italian supercar manufacturer founded in 1939",
+      "Most successful team in Formula 1 history",
+      "Extremely limited production creates exclusivity",
+      "Strong resale value and collector market",
+      "Iconic red color and roaring engine sound"
+    ]
+  },
+  "Rolex": {
+    "explanation": "Rolex makes the most recognized luxury watches in the world",
+    "points": [
+      "Swiss watchmaker founded in 1905",
+      "Known for precision, durability, and status symbol",
+      "Most models maintain strong resale value",
+      "In-house movement production and testing",
+      "Iconic models: Submariner, Daytona, Datejust"
+    ]
+  },
+  "IKEA": {
+    "explanation": "IKEA is a Swedish furniture store where you assemble the furniture yourself at home",
+    "points": [
+      "Flat-pack furniture revolution revolutionized industry",
+      "Famous Swedish meatballs and low-price strategy",
+      "Massive global stores with showroom experience",
+      "Strong focus on sustainability and circular economy",
+      "Catalog and app drive massive brand reach"
+    ]
+  },
+  "H&M": {
+    "explanation": "H&M is a Swedish fashion brand making affordable trendy clothing for everyone",
+    "points": [
+      "Fast fashion leader with quick trend turnaround",
+      "Collaborations with designers like Karl Lagerfeld, Versace",
+      "Massive global store network",
+      "Facing pressure on sustainability and labor practices",
+      "H&M Home and other brand extensions"
+    ]
+  },
+  "Zara": {
+    "explanation": "Zara can design and deliver new fashion to stores in just two weeks",
+    "points": [
+      "Part of Inditex group, fast fashion pioneer",
+      "Vertical integration from design to store",
+      "Small production runs create scarcity",
+      "Minimal advertising, relies on store experience",
+      "Rapid response to trends and customer feedback"
+    ]
+  },
+  "Starbucks": {
+    "explanation": "Starbucks serves coffee to millions of customers in over 80 countries every day",
+    "points": [
+      "Transformed coffee culture worldwide",
+      "Third place concept (home-work-third place)",
+      "Strong mobile ordering and rewards program",
+      "Premium pricing and brand experience focus",
+      "Expanding into ready-to-drink and grocery"
+    ]
+  },
+  "Subway": {
+    "explanation": "Subway has more locations worldwide than any other fast food restaurant",
+    "points": [
+      "Largest restaurant chain by location count",
+      "Made-to-order sandwiches with customization",
+      "Strong franchise model",
+      "Healthier fast food positioning",
+      "Facing competition and store closures in some markets"
+    ]
+  },
+  "Burger King": {
+    "explanation": "Burger King is famous for the Whopper and flame-grilling all their burgers",
+    "points": [
+      "Second-largest burger chain after McDonald's",
+      "Flame-grilled burgers as key differentiator",
+      "Edgy, meme-heavy marketing campaigns",
+      "Part of Restaurant Brands International",
+      "Value menu and customization focus"
+    ]
+  },
+  "KFC": {
+    "explanation": "KFC was started by Colonel Harland Sanders who began frying chicken at age 65",
+    "points": [
+      "World's largest chicken restaurant chain",
+      "Secret 11 herbs and spices recipe",
+      "Very strong international presence especially Asia",
+      "Bucket meals and finger-lickin' good slogan",
+      "Part of Yum! Brands portfolio"
+    ]
+  },
+  "Pizza Hut": {
+    "explanation": "Pizza Hut opened in 1958 and became the world's largest pizza restaurant chain",
+    "points": [
+      "Pioneer of pizza delivery and chain restaurants",
+      "Known for pan pizza and stuffed crust",
+      "Strong international presence",
+      "Part of Yum! Brands",
+      "Facing competition from Domino's and local chains"
+    ]
+  },
+  "Domino's": {
+    "explanation": "Domino's guarantees pizza delivery in 30 minutes or the order is free",
+    "points": [
+      "Technology leader in pizza ordering (app, tracking)",
+      "Turnaround story with improved recipe in 2009",
+      "Strong digital sales percentage",
+      "Global expansion with localized menus",
+      "Focus on speed and consistency"
+    ]
+  },
+  "Walmart": {
+    "explanation": "Walmart is the world's largest company by revenue employing over 2 million people",
+    "points": [
+      "Largest private employer in the world",
+      "Everyday low prices strategy",
+      "Massive e-commerce growth competing with Amazon",
+      "Strong grocery and private label brands",
+      "Significant supply chain and logistics power"
+    ]
+  },
+  "NVIDIA": {
+    "explanation": "NVIDIA makes graphics chips that power video games, AI, and scientific research",
+    "points": [
+      "Dominates GPU market for gaming and AI",
+      "CUDA platform key for AI development",
+      "Massive growth from AI data center demand",
+      "Leading in autonomous vehicles and robotics",
+      "Highest-valued semiconductor company"
+    ]
+  },
+  "Intel": {
+    "explanation": "Intel makes the microprocessors found in the majority of the world's computers",
+    "points": [
+      "Longtime leader in PC processors",
+      "Facing competition from AMD and ARM",
+      "Investing heavily in foundry business",
+      "Key supplier for data centers and PCs",
+      "Pioneered Moore's Law for decades"
+    ]
+  },
+  "Qualcomm": {
+    "explanation": "Qualcomm's chips power the cellular technology in billions of smartphones",
+    "points": [
+      "Leading mobile chipset maker (Snapdragon)",
+      "Holds key 5G and cellular patents",
+      "Strong in automotive and IoT chips",
+      "Significant licensing revenue from patents",
+      "Facing competition from MediaTek and Apple silicon"
+    ]
+  },
+  "SpaceX": {
+    "explanation": "SpaceX builds reusable rockets and has its own satellite internet called Starlink",
+    "points": [
+      "First private company to send astronauts to ISS",
+      "Reusable Falcon 9 revolutionized launch costs",
+      "Starlink constellation for global broadband",
+      "Starship development for Mars missions",
+      "Elon Musk's most valuable company"
+    ]
+  },
+  "NASA": {
+    "explanation": "NASA has sent humans to the Moon and probes to every planet in our solar system",
+    "points": [
+      "United States space agency founded in 1958",
+      "Apollo Moon landings most famous achievement",
+      "James Webb Space Telescope and Mars rovers",
+      "Artemis program to return humans to Moon",
+      "Partners with private companies (SpaceX, Boeing)"
+    ]
+  },
+  "Red Bull": {
+    "explanation": "Red Bull sells over 12 billion cans per year and sponsors extreme sports worldwide",
+    "points": [
+      "Created energy drink category",
+      "Extreme sports marketing pioneer",
+      "Owns Formula 1 team and football clubs",
+      "Red Bull Stratos space jump famous",
+      "Very strong brand positioning and events"
+    ]
+  },
+  "Monster Energy": {
+    "explanation": "Monster Energy is famous for its giant M-claw logo and sponsoring action sports",
+    "points": [
+      "Second-largest energy drink brand",
+      "Heavy focus on motorsports and action sports",
+      "Large can size and variety of flavors",
+      "Strong youth marketing and sponsorships",
+      "Part of Coca-Cola distribution network"
+    ]
+  },
+  "GoPro": {
+    "explanation": "GoPro makes tiny rugged cameras that athletes strap to helmets and boards",
+    "points": [
+      "Pioneer of action cameras",
+      "Strong user-generated content ecosystem",
+      "Facing competition from DJI and smartphones",
+      "Subscription service for cloud and editing",
+      "Iconic in extreme sports community"
+    ]
+  },
+  "DJI": {
+    "explanation": "DJI makes over 70% of the world's commercial drones and camera gimbals",
+    "points": [
+      "Dominates consumer and professional drone market",
+      "High-quality cameras and stabilization technology",
+      "Mavic, Phantom, Inspire series very popular",
+      "Facing U.S. government restrictions",
+      "Expanding into agriculture and enterprise"
+    ]
+  },
+  "Dyson": {
+    "explanation": "Dyson reinvented the vacuum cleaner by removing the bag and using cyclone technology",
+    "points": [
+      "Known for bagless vacuums and bladeless fans",
+      "Strong engineering and design focus",
+      "Expensive premium positioning",
+      "Expanded into hair care and air purification",
+      "British engineering brand with global reach"
+    ]
+  },
+  "Philips": {
+    "explanation": "Philips is a Dutch company making everything from light bulbs to medical equipment",
+    "points": [
+      "Long history since 1891",
+      "Leader in lighting and healthcare technology",
+      "Sold consumer electronics division",
+      "Strong in medical imaging and patient monitoring",
+      "Focus on health technology and sustainability"
+    ]
+  },
+  "Bosch": {
+    "explanation": "Bosch makes power tools, appliances, and auto parts used around the world",
+    "points": [
+      "German engineering conglomerate",
+      "World leader in automotive components",
+      "Strong in power tools and home appliances",
+      "Significant IoT and smart home investments",
+      "Known for quality and reliability"
+    ]
+  },
+  "Caterpillar": {
+    "explanation": "Caterpillar makes the massive yellow construction machines that build roads and buildings",
+    "points": [
+      "World's largest construction equipment manufacturer",
+      "Iconic yellow color and logo",
+      "Strong dealer network worldwide",
+      "Mining, energy, and transportation equipment",
+      "Symbol of heavy industry and infrastructure"
+    ]
+  },
+  "John Deere": {
+    "explanation": "John Deere's green tractors are used on farms in almost every country on Earth",
+    "points": [
+      "Leading agricultural equipment manufacturer",
+      "Iconic green and yellow color scheme",
+      "Precision agriculture and autonomous tractors",
+      "Strong brand loyalty among farmers",
+      "Expanding into construction equipment"
+    ]
+  },
+  "3M": {
+    "explanation": "3M invented Post-it notes, Scotch tape, and thousands of other everyday products",
+    "points": [
+      "Massive innovation company with 60,000+ patents",
+      "Diversified across many industries",
+      "Post-it Notes and Scotch Tape iconic products",
+      "Strong in healthcare, safety, and electronics",
+      "Known for research and development culture"
+    ]
+  },
+  "Johnson & Johnson": {
+    "explanation": "Johnson & Johnson makes baby products, Band-Aids, and medicines for millions",
+    "points": [
+      "Largest healthcare company by revenue",
+      "Consumer health, pharmaceuticals, medical devices",
+      "Band-Aid and Tylenol household names",
+      "Strong focus on baby care products",
+      "Facing talc litigation challenges"
+    ]
+  },
+  "Pfizer": {
+    "explanation": "Pfizer is one of the world's biggest drug companies making vaccines and medicines",
+    "points": [
+      "Developed COVID-19 vaccine with BioNTech",
+      "Major player in oncology, cardiology, vaccines",
+      "Viagra and Lipitor blockbuster drugs",
+      "Strong R&D pipeline",
+      "Acquired Wyeth, Hospira, and others"
+    ]
+  },
+  "LEGO Technic": {
+    "explanation": "LEGO Technic sets build complex machines with gears and motors that actually work",
+    "points": [
+      "Advanced LEGO system for realistic mechanics",
+      "Gears, pneumatics, motors, and remote control",
+      "Popular with older children and adults",
+      "Detailed models of vehicles and machines",
+      "Bridges regular LEGO and engineering education"
+    ]
+  },
+  "Mattel": {
+    "explanation": "Mattel makes Barbie, Hot Wheels, and many of the world's most loved toys",
+    "points": [
+      "Barbie is most famous doll brand",
+      "Hot Wheels leading die-cast car brand",
+      "Fisher-Price, American Girl, Mega Bloks",
+      "Strong licensed properties portfolio",
+      "Facing changing toy market dynamics"
+    ]
+  },
+  "Hasbro": {
+    "explanation": "Hasbro makes board games like Monopoly and toys like Transformers and Nerf",
+    "points": [
+      "Monopoly, Scrabble, Dungeons & Dragons leader",
+      "Transformers, Nerf, Play-Doh, My Little Pony",
+      "Strong licensed games and movies",
+      "Digital gaming expansion",
+      "Competing with Mattel in toy market"
+    ]
+  },
+  "Nintendo": {
+    "explanation": "Nintendo created Mario, Zelda, and Pokemon and made gaming fun for everyone",
+    "points": [
+      "Iconic characters and franchises",
+      "Switch hybrid console success",
+      "Focus on fun, family-friendly gaming",
+      "Strong first-party game development",
+      "Long history from cards to video games"
+    ]
+  },
+  "PlayStation": {
+    "explanation": "PlayStation is Sony's gaming brand and has sold over 500 million consoles",
+    "points": [
+      "Leading gaming console brand",
+      "Strong exclusives (God of War, Spider-Man)",
+      "PlayStation Network and digital sales",
+      "PS5 with advanced graphics and SSD",
+      "Competing with Xbox and Nintendo Switch"
+    ]
+  },
+  "Xbox": {
+    "explanation": "Xbox is Microsoft's gaming brand competing with PlayStation for gamers worldwide",
+    "points": [
+      "Game Pass subscription service leader",
+      "Cloud gaming and cross-platform play",
+      "Acquired Bethesda, Activision Blizzard",
+      "Strong focus on ecosystem and services",
+      "Competing with PlayStation and Nintendo"
+    ]
+  },
+  "Roblox": {
+    "explanation": "Roblox lets kids create and play millions of games made by other users",
+    "points": [
+      "User-generated gaming platform",
+      "Massive creator economy",
+      "Strong among younger demographics",
+      "Cross-platform play",
+      "Facing content moderation challenges"
+    ]
+  },
+  "Minecraft": {
+    "explanation": "Minecraft is the best-selling video game of all time with over 238 million copies sold",
+    "points": [
+      "Sandbox game allowing creative building",
+      "Massive educational use",
+      "Cross-platform with huge community",
+      "Acquired by Microsoft",
+      "Continues to receive updates"
+    ]
+  },
+  "Fortnite": {
+    "explanation": "Fortnite became a worldwide phenomenon with over 350 million registered players",
+    "points": [
+      "Battle royale game with building mechanics",
+      "Cultural phenomenon with concerts and events",
+      "Free-to-play with cosmetic microtransactions",
+      "Cross-platform play",
+      "Massive brand collaborations"
+    ]
+  },
+  "Uber": {
+    "explanation": "Uber transformed transportation by letting you hail a car with just your phone",
+    "points": [
+      "Pioneer of ride-sharing economy",
+      "Global presence in hundreds of cities",
+      "Uber Eats food delivery expansion",
+      "Facing regulatory and labor challenges",
+      "Autonomous vehicle development"
+    ]
+  },
+  "Airbnb": {
+    "explanation": "Airbnb lets you stay in someone's home anywhere in the world as a traveler",
+    "points": [
+      "Pioneer of home-sharing economy",
+      "Unique stays and experiences",
+      "Strong recovery after pandemic",
+      "Facing regulatory challenges in cities",
+      "Diversifying into longer stays"
+    ]
+  },
+  "PayPal": {
+    "explanation": "PayPal was one of the first ways to send money safely over the internet",
+    "points": [
+      "Pioneer of online payments",
+      "Strong consumer and merchant protection",
+      "Venmo popular in US",
+      "Competing with Stripe and others",
+      "Crypto integration"
+    ]
+  },
+  "Visa": {
+    "explanation": "Visa processes over 200 billion payment transactions every single year",
+    "points": [
+      "Global payments network leader",
+      "Doesn't issue cards, just processes",
+      "Very high transaction approval rates",
+      "Strong fraud protection",
+      "Digital wallet and contactless growth"
+    ]
+  },
+  "Mastercard": {
+    "explanation": "Mastercard processes payments in over 210 countries with its famous red and yellow circles",
+    "points": [
+      "Second-largest payment network",
+      "Strong contactless and digital payment focus",
+      "Priceless campaign marketing",
+      "Competing closely with Visa",
+      "Expanding into data analytics"
+    ]
+  },
+  "Stripe": {
+    "explanation": "Stripe helps millions of websites and apps accept payments securely online",
+    "points": [
+      "Developer-friendly payment infrastructure",
+      "Powers many internet businesses",
+      "Simple integration and APIs",
+      "Expanding into banking and financial services",
+      "Very high valuation private company"
+    ]
+  },
+  "Shopify": {
+    "explanation": "Shopify lets anyone easily set up and run their own online store",
+    "points": [
+      "Leading e-commerce platform",
+      "Powers small to large businesses",
+      "Strong app ecosystem",
+      "Point-of-sale and omnichannel",
+      "Competing with Amazon and WooCommerce"
+    ]
+  },
+  "Salesforce": {
+    "explanation": "Salesforce pioneered cloud computing software for businesses managing customers",
+    "points": [
+      "Leading CRM platform",
+      "Cloud-based SaaS pioneer",
+      "Acquired Slack, Tableau, MuleSoft",
+      "Strong enterprise focus",
+      "AI features (Einstein)"
+    ]
+  },
+  "Oracle": {
+    "explanation": "Oracle makes database software that runs the data systems of most large companies",
+    "points": [
+      "Leading enterprise database",
+      "Cloud infrastructure growth",
+      "Acquired NetSuite, Cerner",
+      "Strong in ERP and business applications",
+      "Competing with AWS, Azure"
+    ]
+  },
+  "IBM": {
+    "explanation": "IBM invented the personal computer, created Watson AI, and holds the most patents annually",
+    "points": [
+      "Long history of innovation",
+      "Strong in enterprise services and cloud",
+      "Watson AI platform",
+      "Quantum computing leadership",
+      "Shift to hybrid cloud and AI"
+    ]
+  },
+  "Siemens": {
+    "explanation": "Siemens is a giant German company making everything from trains to medical scanners",
+    "points": [
+      "Industrial technology leader",
+      "Strong in automation and digitalization",
+      "Rail transportation and energy",
+      "Medical solutions division",
+      "Focus on sustainability"
+    ]
+  },
+  "Panasonic": {
+    "explanation": "Panasonic makes batteries for Tesla cars and electronics for daily life",
+    "points": [
+      "Major supplier for Tesla batteries",
+      "Consumer electronics legacy",
+      "Strong in automotive and industrial",
+      "Japanese quality reputation",
+      "Expanding into supply chain solutions"
+    ]
+  },
+  "Toshiba": {
+    "explanation": "Toshiba invented the flash memory that powers USB drives and memory cards",
+    "points": [
+      "Flash memory pioneer",
+      "Diversified electronics company",
+      "Facing financial challenges historically",
+      "Strong in energy and infrastructure",
+      "Competing in memory market"
+    ]
+  },
+  "Hitachi": {
+    "explanation": "Hitachi builds trains, power infrastructure, and medical imaging equipment worldwide",
+    "points": [
+      "Japanese conglomerate",
+      "Strong in rail systems",
+      "Digital transformation focus",
+      "Social innovation business",
+      "Competing in industrial tech"
+    ]
+  },
+  "Canon": {
+    "explanation": "Canon makes cameras and printers and is one of Japan's most innovative companies",
+    "points": [
+      "Leading camera manufacturer",
+      "Strong in professional lenses",
+      "Printer and office equipment",
+      "Medical and semiconductor equipment",
+      "Competing with Nikon and Sony"
+    ]
+  },
+  "Nikon": {
+    "explanation": "Nikon cameras are trusted by professional photographers all over the world",
+    "points": [
+      "Premium camera brand",
+      "Strong in DSLR and mirrorless",
+      "Excellent lens lineup",
+      "Competing with Canon and Sony",
+      "Professional sports and wildlife photography favorite"
+    ]
+  },
+  "Fujifilm": {
+    "explanation": "Fujifilm pivoted from camera film to skin care products using the same anti-aging chemistry",
+    "points": [
+      "Successful pivot from film",
+      "Strong in Instax instant cameras",
+      "Medical imaging and cosmetics",
+      "Film simulation in digital cameras",
+      "Creative and professional photography"
+    ]
+  },
+  "Alibaba": {
+    "explanation": "Alibaba is China's biggest e-commerce company connecting manufacturers to buyers worldwide",
+    "points": [
+      "Dominates Chinese e-commerce",
+      "Taobao, Tmall, AliExpress platforms",
+      "Cloud computing growth (Alibaba Cloud)",
+      "Digital payments (Alipay)",
+      "Facing regulatory pressure in China"
+    ]
+  },
+  "Tencent": {
+    "explanation": "Tencent owns WeChat and is one of the world's most valuable gaming and tech companies",
+    "points": [
+      "WeChat super app",
+      "Major gaming company (Riot, Epic stake)",
+      "Social media and payments",
+      "Strong investment portfolio",
+      "Dominant in Chinese internet"
+    ]
+  },
+  "Baidu": {
+    "explanation": "Baidu is China's dominant search engine and a leader in AI development",
+    "points": [
+      "China's Google equivalent",
+      "Strong in AI and autonomous driving",
+      "Apollo self-driving platform",
+      "Competing with Tencent and Alibaba",
+      "Facing search competition from apps"
+    ]
+  },
+  "Xiaomi": {
+    "explanation": "Xiaomi makes affordable smartphones and hundreds of smart home devices",
+    "points": [
+      "Fast-growing smartphone brand",
+      "IoT and smart home ecosystem",
+      "Value-for-money positioning",
+      "Strong in India and Europe",
+      "Competing with Samsung and Apple"
+    ]
+  },
+  "Huawei": {
+    "explanation": "Huawei is China's largest technology company making phones, 5G networks, and more",
+    "points": [
+      "Leading 5G equipment provider",
+      "Strong smartphone brand before restrictions",
+      "Facing U.S. sanctions",
+      "HarmonyOS operating system",
+      "Enterprise and cloud growth"
+    ]
+  },
+  "Telegram": {
+    "explanation": "Telegram is a messaging app known for strong privacy and huge group channels",
+    "points": [
+      "Privacy-focused messaging",
+      "Large group and channel features",
+      "Cloud-based with fast sync",
+      "Competing with WhatsApp",
+      "Controversial content moderation"
+    ]
+  },
+  "Reddit": {
+    "explanation": "Reddit is a vast collection of communities where people discuss almost any topic",
+    "points": [
+      "Front page of the internet",
+      "Subreddits for every interest",
+      "User-generated content",
+      "Strong community governance",
+      "Monetization through ads and premium"
+    ]
+  },
+  "Pinterest": {
+    "explanation": "Pinterest is a visual inspiration board where people collect ideas for home and life",
+    "points": [
+      "Visual discovery platform",
+      "Strong in lifestyle and shopping",
+      "Buyable pins and e-commerce",
+      "Female-skewed user base",
+      "Competing with Instagram"
+    ]
+  },
+  "LinkedIn": {
+    "explanation": "LinkedIn is the world's largest professional networking site for careers and business",
+    "points": [
+      "Professional networking leader",
+      "Owned by Microsoft",
+      "Recruiting and job search",
+      "Content publishing platform",
+      "B2B advertising"
+    ]
+  },
+  "Dropbox": {
+    "explanation": "Dropbox made cloud file storage easy long before it became standard technology",
+    "points": [
+      "Pioneer of consumer cloud storage",
+      "File sync and sharing",
+      "Business and team offerings",
+      "Facing competition from Google Drive",
+      "Focus on collaboration"
+    ]
+  },
+  "Slack": {
+    "explanation": "Slack transformed how teams communicate at work with organized channels and messages",
+    "points": [
+      "Leading team collaboration tool",
+      "Acquired by Salesforce",
+      "Channel-based messaging",
+      "App integrations ecosystem",
+      "Competing with Microsoft Teams"
+    ]
+  },
+  "Notion": {
+    "explanation": "Notion is an all-in-one workspace for notes, tasks, and team collaboration",
+    "points": [
+      "Flexible all-in-one tool",
+      "Popular with productivity enthusiasts",
+      "Databases and templates",
+      "Strong among startups and creators",
+      "Competing with Evernote and Confluence"
+    ]
+  },
+  "Canva": {
+    "explanation": "Canva lets anyone create beautiful designs even without professional experience",
+    "points": [
+      "Democratized graphic design",
+      "Template-based easy interface",
+      "Massive growth in education and business",
+      "Competing with Adobe",
+      "Strong freemium model"
+    ]
+  },
+  "Twitch": {
+    "explanation": "Twitch is where millions of people watch others play video games live every day",
+    "points": [
+      "Leading live streaming platform for gaming",
+      "Owned by Amazon",
+      "Creator subscriptions and bits",
+      "Expanding beyond gaming",
+      "Strong community features"
+    ]
+  },
+  "Discord": {
+    "explanation": "Discord is a chat platform that became the main hub for gaming communities worldwide",
+    "points": [
+      "Voice, video, and text chat",
+      "Strong among gamers and communities",
+      "Server-based organization",
+      "Nitro premium features",
+      "Expanding to non-gaming communities"
+    ]
+  },
+  "Duolingo": {
+    "explanation": "Duolingo teaches languages through short fun lessons and a relentless encouraging owl",
+    "points": [
+      "Gamified language learning",
+      "Free with premium option",
+      "Massive user base worldwide",
+      "Duolingo English Test",
+      "Strong viral growth"
+    ]
+  },
+  "OpenAI": {
+    "explanation": "OpenAI created ChatGPT which became the fastest-growing app in internet history",
+    "points": [
+      "Leading AI research company",
+      "ChatGPT and GPT models",
+      "DALL-E image generation",
+      "Microsoft partnership",
+      "Shift to for-profit structure"
+    ]
+  },
+  "Anthropic": {
+    "explanation": "Anthropic is an AI safety company that created Claude the AI assistant",
+    "points": [
+      "Focus on AI safety and alignment",
+      "Claude model family",
+      "Constitutional AI approach",
+      "Former OpenAI researchers",
+      "Competing with OpenAI and Google"
     ]
   }
 }

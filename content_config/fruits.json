@@ -1,406 +1,1002 @@
 {
-  "fruits": {
-    "items": [
-      {
-        "name": "Apple",
-        "fact": "Apples come in red, green, and yellow and are very healthy"
-      },
-      {
-        "name": "Banana",
-        "fact": "Bananas are yellow when ripe and give you lots of energy"
-      },
-      {
-        "name": "Mango",
-        "fact": "Mangoes are called the King of Fruits and taste delicious"
-      },
-      {
-        "name": "Strawberry",
-        "fact": "Strawberries are red, sweet, and shaped like a little heart"
-      },
-      {
-        "name": "Watermelon",
-        "fact": "Watermelons are mostly water and very refreshing in summer"
-      },
-      {
-        "name": "Grapes",
-        "fact": "Grapes grow in big bunches and can be red or green"
-      },
-      {
-        "name": "Orange",
-        "fact": "Oranges are full of Vitamin C which keeps us healthy"
-      },
-      {
-        "name": "Pineapple",
-        "fact": "Pineapples have a spiky crown and grow on low plants near the ground"
-      },
-      {
-        "name": "Cherry",
-        "fact": "Cherries are tiny red fruits that grow in pairs on trees"
-      },
-      {
-        "name": "Kiwi",
-        "fact": "Kiwi fruits are brown outside and bright green inside"
-      },
-      {
-        "name": "Peach",
-        "fact": "Peaches have fuzzy skin and sweet juicy flesh inside"
-      },
-      {
-        "name": "Pear",
-        "fact": "Pears are shaped like teardrops and are sweet and juicy"
-      },
-      {
-        "name": "Lemon",
-        "fact": "Lemons are very sour and full of Vitamin C"
-      },
-      {
-        "name": "Lime",
-        "fact": "Limes are small green citrus fruits used in drinks and cooking"
-      },
-      {
-        "name": "Coconut",
-        "fact": "Coconuts are large tropical fruits full of refreshing water inside"
-      },
-      {
-        "name": "Papaya",
-        "fact": "Papayas are tropical fruits with orange flesh and black seeds"
-      },
-      {
-        "name": "Blueberry",
-        "fact": "Blueberries are tiny blue berries packed with powerful antioxidants"
-      },
-      {
-        "name": "Raspberry",
-        "fact": "Raspberries are delicate red berries that grow on thorny bushes"
-      },
-      {
-        "name": "Blackberry",
-        "fact": "Blackberries are dark purple berries that grow wild in hedgerows"
-      },
-      {
-        "name": "Plum",
-        "fact": "Plums are juicy purple fruits that can be dried to make prunes"
-      },
-      {
-        "name": "Pomegranate",
-        "fact": "Pomegranates are filled with hundreds of tiny red jewel-like seeds"
-      },
-      {
-        "name": "Guava",
-        "fact": "Guavas have pink flesh and are extremely rich in Vitamin C"
-      },
-      {
-        "name": "Lychee",
-        "fact": "Lychees have a bumpy pink shell and a sweet white fruit inside"
-      },
-      {
-        "name": "Dragonfruit",
-        "fact": "Dragon fruit has a bright pink skin with white speckled flesh inside"
-      },
-      {
-        "name": "Passion Fruit",
-        "fact": "Passion fruits have a wrinkly purple shell and tangy yellow seeds inside"
-      },
-      {
-        "name": "Fig",
-        "fact": "Figs are one of the oldest cultivated fruits in human history"
-      },
-      {
-        "name": "Date",
-        "fact": "Dates are very sweet sticky fruits that grow on palm trees"
-      },
-      {
-        "name": "Apricot",
-        "fact": "Apricots are small orange fruits similar to peaches but less fuzzy"
-      },
-      {
-        "name": "Grapefruit",
-        "fact": "Grapefruits are large citrus fruits with a bitter sweet taste"
-      },
-      {
-        "name": "Tangerine",
-        "fact": "Tangerines are small easy-to-peel oranges with a sweet flavor"
-      },
-      {
-        "name": "Cantaloupe",
-        "fact": "Cantaloupes are round melons with orange flesh and a sweet fragrance"
-      },
-      {
-        "name": "Honeydew",
-        "fact": "Honeydew melons have pale green flesh and are very sweet"
-      },
-      {
-        "name": "Starfruit",
-        "fact": "When you cut a starfruit sideways it makes a perfect star shape"
-      },
-      {
-        "name": "Jackfruit",
-        "fact": "Jackfruit is the largest fruit that grows on a tree, sometimes over 80 pounds"
-      },
-      {
-        "name": "Durian",
-        "fact": "Durian is called the King of Tropical Fruits but has a very strong smell"
-      },
-      {
-        "name": "Rambutan",
-        "fact": "Rambutans are hairy red fruits related to lychees and very sweet inside"
-      },
-      {
-        "name": "Longan",
-        "fact": "Longans are called Dragon Eye fruit and taste like sweet honey"
-      },
-      {
-        "name": "Tamarind",
-        "fact": "Tamarind is a sour brown pod fruit used in cooking and drinks worldwide"
-      },
-      {
-        "name": "Mulberry",
-        "fact": "Mulberries look like elongated blackberries and stain your fingers purple"
-      },
-      {
-        "name": "Elderberry",
-        "fact": "Elderberries are dark purple berries used in syrups and medicine"
-      },
-      {
-        "name": "Gooseberry",
-        "fact": "Gooseberries are small tart berries that grow on spiny bushes"
-      },
-      {
-        "name": "Persimmon",
-        "fact": "Persimmons are bright orange fruits that taste like honey when very ripe"
-      },
-      {
-        "name": "Kumquat",
-        "fact": "Kumquats are tiny orange fruits you eat whole including the sweet skin"
-      },
-      {
-        "name": "Quince",
-        "fact": "Quinces are golden yellow fruits too hard to eat raw but wonderful cooked"
-      },
-      {
-        "name": "Breadfruit",
-        "fact": "Breadfruit got its name because its starchy flesh tastes like freshly baked bread"
-      },
-      {
-        "name": "Nectarine",
-        "fact": "Nectarines are like peaches but with smooth shiny skin instead of fuzzy"
-      },
-      {
-        "name": "Ugli Fruit",
-        "fact": "Ugli fruit has a wrinkled ugly outside but a sweet delicious inside"
-      },
-      {
-        "name": "Ackee",
-        "fact": "Ackee is the national fruit of Jamaica and must be ripe before eating safely"
-      },
-      {
-        "name": "Cherimoya",
-        "fact": "Cherimoya is called the custard apple because its flesh is creamy and sweet"
-      },
-      {
-        "name": "Soursop",
-        "fact": "Soursop has a spiky green skin and a creamy white interior with a tangy flavor"
-      },
-      {
-        "name": "Carambola",
-        "fact": "Carambola is another name for starfruit which makes star shapes when sliced"
-      },
-      {
-        "name": "Feijoa",
-        "fact": "Feijoas smell like tropical perfume and taste like a mix of guava and mint"
-      },
-      {
-        "name": "Mangosteen",
-        "fact": "Mangosteen is called the Queen of Fruits with a sweet tangy white interior"
-      },
-      {
-        "name": "Salak",
-        "fact": "Salak is called snake fruit because of its scaly brown skin"
-      },
-      {
-        "name": "Sapodilla",
-        "fact": "Sapodilla tastes like a pear soaked in brown sugar and caramel"
-      },
-      {
-        "name": "Cupuacu",
-        "fact": "Cupua\u00e7u is a South American fruit related to cacao with a creamy white pulp"
-      },
-      {
-        "name": "Miracle Fruit",
-        "fact": "Miracle fruit makes sour foods taste sweet after you eat it"
-      },
-      {
-        "name": "Pitahaya",
-        "fact": "Pitahaya is a yellow dragon fruit even sweeter than the pink variety"
-      },
-      {
-        "name": "Pomelo",
-        "fact": "Pomelos are the largest citrus fruit in the world with thick fluffy rind"
-      },
-      {
-        "name": "Buddha's Hand",
-        "fact": "Buddha's Hand citrus fruit has finger-like segments and smells amazing"
-      },
-      {
-        "name": "Calamansi",
-        "fact": "Calamansi are tiny citrus fruits popular in Southeast Asian cooking"
-      },
-      {
-        "name": "Cloudberry",
-        "fact": "Cloudberries grow in Arctic regions and are golden orange when ripe"
-      },
-      {
-        "name": "Boysenberry",
-        "fact": "Boysenberries are a cross between raspberries, blackberries, and loganberries"
-      },
-      {
-        "name": "Acerola",
-        "fact": "Acerola cherries have 65 times more Vitamin C than oranges"
-      },
-      {
-        "name": "Pitanga",
-        "fact": "Pitanga is a Brazilian cherry also called Surinam cherry with a ridged shape"
-      },
-      {
-        "name": "Cactus Pear",
-        "fact": "Cactus pears grow on cacti and have a sweet red or yellow flesh inside"
-      },
-      {
-        "name": "Jabuticaba",
-        "fact": "Jabuticaba is a unique fruit that grows directly on the trunk of the tree"
-      },
-      {
-        "name": "Marula",
-        "fact": "Marula fruits ferment on the tree and animals get tipsy eating them"
-      },
-      {
-        "name": "Bael",
-        "fact": "Bael fruit has a hard woody shell and a fragrant sticky pulp inside"
-      },
-      {
-        "name": "Monstera Fruit",
-        "fact": "Monstera deliciosa fruit takes over a year to ripen and tastes like pineapple"
-      },
-      {
-        "name": "Rose Apple",
-        "fact": "Rose apples are shaped like bells and have a faint rose aroma"
-      },
-      {
-        "name": "Wax Apple",
-        "fact": "Wax apples look shiny and artificial but are real crunchy fruits"
-      },
-      {
-        "name": "Loquat",
-        "fact": "Loquats are small golden fruits that grow in clusters and taste sweet-tart"
-      },
-      {
-        "name": "Jujube",
-        "fact": "Jujubes are small red fruits also called Chinese dates full of Vitamin C"
-      },
-      {
-        "name": "Pawpaw",
-        "fact": "Pawpaws are North America's largest native fruit tasting like mango custard"
-      },
-      {
-        "name": "Langsat",
-        "fact": "Langsats grow in grape-like clusters and taste sweet with a hint of grapefruit"
-      },
-      {
-        "name": "Mamey Sapote",
-        "fact": "Mamey sapote has pinkish-orange flesh that tastes like sweet potato and almond"
-      },
-      {
-        "name": "Ilama",
-        "fact": "Ilamas are tropical fruits related to cherimoya with green or pink skin"
-      },
-      {
-        "name": "Pummelo",
-        "fact": "Pummelos are ancient citrus ancestors of the modern grapefruit"
-      },
-      {
-        "name": "Natal Plum",
-        "fact": "Natal plums are red star-shaped fruits from South Africa with a sweet-tart taste"
-      },
-      {
-        "name": "Ice Cream Bean",
-        "fact": "Ice cream beans are long pods filled with cotton candy-like white pulp"
-      },
-      {
-        "name": "Rollinia",
-        "fact": "Rollinia is a tropical fruit with a bumpy yellow skin and lemony cream flesh"
-      },
-      {
-        "name": "Black Sapote",
-        "fact": "Black sapote is nicknamed the chocolate pudding fruit for its dark rich flesh"
-      },
-      {
-        "name": "Canistel",
-        "fact": "Canistel is called the egg fruit because its dry yellow flesh resembles egg yolk"
-      },
-      {
-        "name": "Abiu",
-        "fact": "Abiu is a yellow tropical fruit from the Amazon with translucent sweet flesh"
-      },
-      {
-        "name": "Mamoncillo",
-        "fact": "Mamoncillo is a small green fruit you pop open to reveal a tangy pink pulp"
-      },
-      {
-        "name": "Genip",
-        "fact": "Genips are tropical fruits with firm green skin and sweet orange flesh"
-      },
-      {
-        "name": "Jabara",
-        "fact": "Jabara is a rare Japanese citrus from Wakayama with a unique bitter-sweet flavor"
-      },
-      {
-        "name": "Kiwano",
-        "fact": "Kiwano is a horned melon from Africa with bright orange skin and green jelly inside"
-      },
-      {
-        "name": "Noni",
-        "fact": "Noni fruit has a strong smell but is used as traditional medicine across the Pacific"
-      },
-      {
-        "name": "Tamarillo",
-        "fact": "Tamarillos are also called tree tomatoes and are eaten with a spoon"
-      },
-      {
-        "name": "Naranjilla",
-        "fact": "Naranjilla is a South American fruit with a tart citrusy flavor like lime and rhubarb"
-      },
-      {
-        "name": "Pepino",
-        "fact": "Pepino melon is a South American fruit that tastes like a mix of melon and cucumber"
-      },
-      {
-        "name": "Davidson Plum",
-        "fact": "Davidson plums are Australian native fruits with deep purple skin and tart red flesh"
-      },
-      {
-        "name": "Finger Lime",
-        "fact": "Finger limes are called citrus caviar because the flesh pops in tiny juice pearls"
-      },
-      {
-        "name": "Uva Ursi",
-        "fact": "Uva ursi or bearberry produces small red fruits eaten by bears and birds"
-      },
-      {
-        "name": "Sea Buckthorn",
-        "fact": "Sea buckthorn berries are extremely sour orange berries rich in Vitamin C"
-      },
-      {
-        "name": "Barberry",
-        "fact": "Barberries are tiny tart red berries used in Persian rice dishes and jams"
-      },
-      {
-        "name": "Hackberry",
-        "fact": "Hackberries are small purple-brown wild berries with a sweet date-like flavor"
-      },
-      {
-        "name": "Salmonberry",
-        "fact": "Salmonberries are Pacific Northwest berries ranging from yellow to deep red"
-      }
+  "Apple": {
+    "explanation": "Apples come in red, green, and yellow and are very healthy",
+    "points": [
+      "Over 7,500 known apple varieties exist worldwide",
+      "Apples float due to 25% air volume inside",
+      "One medium apple provides about 4–5 grams of dietary fiber",
+      "Rich in quercetin, an antioxidant supporting heart and lung health",
+      "The phrase 'an apple a day keeps the doctor away' has roots in 19th-century Wales"
+    ]
+  },
+  "Banana": {
+    "explanation": "Bananas are yellow when ripe and give you lots of energy",
+    "points": [
+      "Bananas are botanically berries; strawberries are not",
+      "Contain natural sugars, potassium, and vitamin B6 for quick and sustained energy",
+      "Banana plants are giant herbs, not trees",
+      "Help regulate blood pressure thanks to high potassium content",
+      "Most commercial bananas are the Cavendish variety"
+    ]
+  },
+  "Mango": {
+    "explanation": "Mangoes are called the King of Fruits and taste delicious",
+    "points": [
+      "Mangoes belong to the same family as cashews and poison ivy",
+      "India produces about 40% of the world's mangoes",
+      "Very high in vitamins A and C — great for eyes and immunity",
+      "Over 1,000 mango cultivars exist globally",
+      "Unripe green mangoes are used in chutneys and pickles"
+    ]
+  },
+  "Strawberry": {
+    "explanation": "Strawberries are red, sweet, and shaped like a little heart",
+    "points": [
+      "The seeds are on the outside — an average berry has about 200",
+      "Strawberries contain more vitamin C (per gram) than oranges",
+      "Not true berries botanically — they are aggregate accessory fruits",
+      "High in anthocyanins, supporting brain and heart health",
+      "The aroma comes from over 50 different flavor compounds"
+    ]
+  },
+  "Watermelon": {
+    "explanation": "Watermelons are mostly water and very refreshing in summer",
+    "points": [
+      "92–95% water — excellent natural hydration source",
+      "Contains citrulline, which converts to arginine and improves blood flow",
+      "Native to northeast Africa; ancient Egyptians placed them in tombs",
+      "Yellow- and orange-fleshed varieties exist alongside red",
+      "The heaviest recorded watermelon weighed over 350 pounds (159 kg)"
+    ]
+  },
+  "Grapes": {
+    "explanation": "Grapes grow in big bunches and can be red or green",
+    "points": [
+      "One of the oldest cultivated crops — evidence from 8,000 years ago",
+      "Red and purple grapes contain resveratrol, linked to heart health",
+      "Used for wine, raisins, juice, jelly, and fresh eating",
+      "Seedless grapes were created through natural mutation and breeding",
+      "A single vine can produce 10–20 pounds of grapes annually"
+    ]
+  },
+  "Orange": {
+    "explanation": "Oranges are full of Vitamin C which keeps us healthy",
+    "points": [
+      "One medium orange supplies over 100% of daily vitamin C needs",
+      "Originally green in tropical climates; turn orange only in cooler weather",
+      "The sweet orange we eat today originated in China",
+      "Florida and Brazil are the top orange juice–producing regions",
+      "Peel oils are used in perfumes, cleaners, and flavorings"
+    ]
+  },
+  "Pineapple": {
+    "explanation": "Pineapples have a spiky crown and grow on low plants near the ground",
+    "points": [
+      "A pineapple is actually a multiple fruit formed from 100–200 flowers",
+      "Contains bromelain — an enzyme that tenderizes meat and aids digestion",
+      "Takes 18–24 months to grow and ripen",
+      "Named because it resembles a pine cone",
+      "Never ripens further after harvest — must be picked ripe"
+    ]
+  },
+  "Cherry": {
+    "explanation": "Cherries are tiny red fruits that grow in pairs on trees",
+    "points": [
+      "Cherries are drupes (stone fruits) related to plums and peaches",
+      "Contain melatonin — may help improve sleep quality",
+      "There are over 1,000 cherry varieties — sweet and sour types",
+      "Japan celebrates cherry blossom season (sakura) with great cultural importance",
+      "The pits contain cyanogenic compounds (but are rarely toxic in small amounts)"
+    ]
+  },
+  "Kiwi": {
+    "explanation": "Kiwi fruits are brown outside and bright green inside",
+    "points": [
+      "Originally called Chinese gooseberry; renamed kiwi in New Zealand",
+      "One kiwi provides more vitamin C than an orange",
+      "The fuzzy skin is edible and contains extra fiber and nutrients",
+      "Actinidin enzyme can tenderize meat (similar to papaya and pineapple)",
+      "Gold and baby kiwi varieties are now common in stores"
+    ]
+  },
+  "Peach": {
+    "explanation": "Peaches have fuzzy skin and sweet juicy flesh inside",
+    "points": [
+      "Peaches and nectarines are the same species — nectarines are smooth-skinned mutants",
+      "Symbol of longevity and immortality in Chinese culture",
+      "Rich in vitamins A and C plus antioxidants",
+      "The pit (stone) is almond-like and related to almonds",
+      "Georgia (USA) is nicknamed the Peach State"
+    ]
+  },
+  "Pear": {
+    "explanation": "Pears are shaped like teardrops and are sweet and juicy",
+    "points": [
+      "Pears ripen from the inside out — best to ripen at room temperature",
+      "One of the oldest cultivated fruits — mentioned in Homer’s Odyssey",
+      "High in fiber, especially in the skin",
+      "Over 3,000 known pear varieties worldwide",
+      "European pears (Bartlett) and Asian pears (crisp like apples) are main types"
+    ]
+  },
+  "Lemon": {
+    "explanation": "Lemons are very sour and full of Vitamin C",
+    "points": [
+      "Lemons were used by British sailors to prevent scurvy (hence 'limey')",
+      "Citric acid gives lemons their sour taste and preserves food",
+      "Lemon zest contains the most intense flavor (essential oils)",
+      "One lemon provides about 31 mg of vitamin C",
+      "Widely used in cleaning, beauty, and culinary applications"
+    ]
+  },
+  "Lime": {
+    "explanation": "Limes are small green citrus fruits used in drinks and cooking",
+    "points": [
+      "Limes are more acidic than lemons — key in margaritas and ceviche",
+      "Key limes are smaller and more aromatic than Persian (Tahiti) limes",
+      "Help prevent scurvy like lemons in naval history",
+      "Rich in flavonoids and vitamin C",
+      "Lime juice can curdle coconut milk in some traditional dishes"
+    ]
+  },
+  "Coconut": {
+    "explanation": "Coconuts are large tropical fruits full of refreshing water inside",
+    "points": [
+      "Coconuts are drupes — not true nuts",
+      "Coconut water is naturally sterile and used in IV drips in emergencies",
+      "All parts are used: water, flesh, oil, husk, shell, coir",
+      "Coconut palms can live 60–100 years and produce fruit continuously",
+      "Classified botanically as a fruit, not a nut"
+    ]
+  },
+  "Papaya": {
+    "explanation": "Papayas are tropical fruits with orange flesh and black seeds",
+    "points": [
+      "Contain papain enzyme — used commercially as meat tenderizer",
+      "One of the highest vitamin C fruits per serving",
+      "Seeds are edible — peppery when dried and ground",
+      "Native to Central America; now grown in most tropical regions",
+      "Green papaya is used in salads (som tam in Thailand)"
+    ]
+  },
+  "Blueberry": {
+    "explanation": "Blueberries are tiny blue berries packed with powerful antioxidants",
+    "points": [
+      "Rank among the highest antioxidant foods (especially wild varieties)",
+      "Support brain health — may delay age-related cognitive decline",
+      "Native to North America — commercial cultivation began in early 1900s",
+      "Low glycemic index — good for blood sugar control",
+      "High in anthocyanins, giving the blue color"
+    ]
+  },
+  "Raspberry": {
+    "explanation": "Raspberries are delicate red berries that grow on thorny bushes",
+    "points": [
+      "One of the highest-fiber fruits per calorie",
+      "Rich in ellagic acid — studied for potential anti-cancer properties",
+      "Come in red, black, purple, and golden varieties",
+      "Very fragile — usually harvested by hand",
+      "Leaves are used in herbal tea for centuries"
+    ]
+  },
+  "Blackberry": {
+    "explanation": "Blackberries are dark purple berries that grow wild in hedgerows",
+    "points": [
+      "Wild blackberries often sweeter than cultivated ones",
+      "High in vitamin C, K, manganese, and fiber",
+      "Historically used as natural dye and in folk medicine",
+      "Related to raspberries — aggregate fruit structure",
+      "Thorns protect the plant from herbivores"
+    ]
+  },
+  "Plum": {
+    "explanation": "Plums are juicy purple fruits that can be dried to make prunes",
+    "points": [
+      "Dried plums (prunes) are well-known for promoting digestive health",
+      "Contain sorbitol — a natural laxative",
+      "Over 2,000 plum varieties worldwide",
+      "Japanese and European plums are the two main types",
+      "Rich in vitamin K and antioxidants"
+    ]
+  },
+  "Pomegranate": {
+    "explanation": "Pomegranates are filled with hundreds of tiny red jewel-like seeds",
+    "points": [
+      "One fruit can contain 200–1,400 arils (juice sacs)",
+      "Ancient symbol of fertility, prosperity, and eternal life",
+      "Very high in punicalagins — powerful antioxidants",
+      "Mentioned in Egyptian mythology, Bible, and Quran",
+      "Arils are the edible part; rind and membranes are bitter"
+    ]
+  },
+  "Guava": {
+    "explanation": "Guavas have pink flesh and are extremely rich in Vitamin C",
+    "points": [
+      "One guava can contain 4× more vitamin C than an orange",
+      "Both skin and seeds are edible",
+      "Used in traditional medicine for diarrhea and digestion",
+      "Strong tropical aroma when ripe",
+      "High in lycopene (especially pink varieties)"
+    ]
+  },
+  "Lychee": {
+    "explanation": "Lychees have a bumpy pink shell and a sweet white fruit inside",
+    "points": [
+      "Part of the soapberry family — related to rambutan and longan",
+      "Floral, grape-like flavor with rose notes",
+      "Very high in vitamin C when fresh",
+      "Popular in Chinese desserts and fresh eating",
+      "Shell peels easily when ripe"
+    ]
+  },
+  "Dragonfruit": {
+    "explanation": "Dragon fruit has a bright pink skin with white speckled flesh inside",
+    "points": [
+      "Grows on climbing cactus plants (Hylocereus species)",
+      "Low-calorie, high-fiber, and contains vitamin C",
+      "Mild flavor — often compared to kiwi + pear",
+      "Yellow-skinned varieties are usually sweeter",
+      "Rich in betalains (antioxidants from the skin)"
+    ]
+  },
+  "Passion Fruit": {
+    "explanation": "Passion fruits have a wrinkly purple shell and tangy yellow seeds inside",
+    "points": [
+      "Wrinkled skin = fully ripe and sweetest",
+      "Seeds are edible and add crunch",
+      "High in vitamins A and C plus fiber",
+      "Name comes from passion flower resembling crucifixion symbols",
+      "Used widely in juices, desserts, and cocktails"
+    ]
+  },
+  "Fig": {
+    "explanation": "Figs are one of the oldest cultivated fruits in human history",
+    "points": [
+      "Figs are inverted flowers (syconium) — not true fruit",
+      "No visible pollination needed for common edible figs",
+      "High in fiber, potassium, and calcium",
+      "Mentioned in ancient Egyptian, Greek, and Biblical texts",
+      "Dried figs are energy-dense and long-lasting"
+    ]
+  },
+  "Date": {
+    "explanation": "Dates are very sweet sticky fruits that grow on palm trees",
+    "points": [
+      "One of the oldest cultivated tree crops — over 6,000 years",
+      "Very high in natural sugars — excellent quick energy",
+      "Rich in potassium, magnesium, and fiber",
+      "Important staple food in Middle East and North Africa",
+      "Medjool dates are large, soft, and premium"
+    ]
+  },
+  "Apricot": {
+    "explanation": "Apricots are small orange fruits similar to peaches but less fuzzy",
+    "points": [
+      "Very high in beta-carotene (vitamin A precursor)",
+      "Originated in China over 4,000 years ago",
+      "Dried apricots are popular snacks and rich in iron",
+      "Short fresh season — often preserved",
+      "Related to plums, peaches, and almonds"
+    ]
+  },
+  "Grapefruit": {
+    "explanation": "Grapefruits are large citrus fruits with a bitter sweet taste",
+    "points": [
+      "Accidental hybrid between pomelo and sweet orange",
+      "Pink and red varieties contain lycopene",
+      "Can interact with many medications (CYP3A4 inhibition)",
+      "High in vitamin C and fiber",
+      "Named because fruits grow in grape-like clusters"
+    ]
+  },
+  "Tangerine": {
+    "explanation": "Tangerines are small easy-to-peel oranges with a sweet flavor",
+    "points": [
+      "Easier to peel than oranges — loose skin",
+      "Clementines and mandarins are tangerine types",
+      "High in vitamin C and natural sweetness",
+      "Small size makes them perfect portable snacks",
+      "Sweeter and less acidic than standard oranges"
+    ]
+  },
+  "Cantaloupe": {
+    "explanation": "Cantaloupes are round melons with orange flesh and a sweet fragrance",
+    "points": [
+      "Very high in vitamin A (beta-carotene)",
+      "Hydrating — about 90% water",
+      "Netted rind distinguishes it from smooth-skinned melons",
+      "Rich in potassium and folate",
+      "Best when fragrant at the stem end"
+    ]
+  },
+  "Honeydew": {
+    "explanation": "Honeydew melons have pale green flesh and are very sweet",
+    "points": [
+      "Smooth rind — no netting like cantaloupe",
+      "High water content — excellent for hydration",
+      "Mild, sweet flavor pairs well with salty foods (e.g., prosciutto)",
+      "Good source of vitamin C and potassium",
+      "Part of the muskmelon family"
+    ]
+  },
+  "Starfruit": {
+    "explanation": "When you cut a starfruit sideways it makes a perfect star shape",
+    "points": [
+      "Also called carambola",
+      "Waxy edible skin",
+      "Tart-sweet taste — green apple + grape + citrus notes",
+      "High in vitamin C and low in calories",
+      "Caution: high oxalic acid — avoid in large amounts if kidney issues"
+    ]
+  },
+  "Jackfruit": {
+    "explanation": "Jackfruit is the largest fruit that grows on a tree, sometimes over 80 pounds",
+    "points": [
+      "World’s largest tree-borne fruit",
+      "Unripe flesh used as vegan meat substitute (pulled pork texture)",
+      "Ripe fruit is sweet and tropical",
+      "Native to South and Southeast Asia",
+      "Seeds can be boiled or roasted like nuts"
+    ]
+  },
+  "Durian": {
+    "explanation": "Durian is called the King of Tropical Fruits but has a very strong smell",
+    "points": [
+      "Banned on public transport in Singapore and some places due to odor",
+      "Custard-like flesh with divisive flavor (onion-caramel-almond mix)",
+      "High in nutrients but very calorie-dense",
+      "Often paired with mangosteen (king & queen of fruits)",
+      "Spiky husk protects creamy interior"
+    ]
+  },
+  "Rambutan": {
+    "explanation": "Rambutans are hairy red fruits related to lychees and very sweet inside",
+    "points": [
+      "Name means 'hairy' in Malay",
+      "Sweet, juicy, translucent flesh similar to lychee",
+      "High in vitamin C",
+      "Related to lychee, longan, and ackee",
+      "Hairy shell peels easily when ripe"
+    ]
+  },
+  "Longan": {
+    "explanation": "Longans are called Dragon Eye fruit and taste like sweet honey",
+    "points": [
+      "Name means 'dragon eye' in Chinese (due to seed appearance)",
+      "Smaller and milder than lychee",
+      "Dried longans used in Chinese herbal teas",
+      "Grows in clusters like grapes",
+      "Sweet with subtle floral-honey notes"
+    ]
+  },
+  "Tamarind": {
+    "explanation": "Tamarind is a sour brown pod fruit used in cooking and drinks worldwide",
+    "points": [
+      "Key ingredient in Worcestershire sauce, pad thai, and chutneys",
+      "High in tartaric acid — strong sour flavor",
+      "Rich in antioxidants, magnesium, and iron",
+      "Sticky pulp surrounds hard seeds",
+      "Ancient African fruit now grown throughout tropics"
+    ]
+  },
+  "Mulberry": {
+    "explanation": "Mulberries look like elongated blackberries and stain your fingers purple",
+    "points": [
+      "Used for centuries to feed silkworms (white mulberry)",
+      "Stain very easily — natural dye source",
+      "High in vitamin C, iron, and antioxidants",
+      "Sweet-tart flavor; white, red, and black varieties",
+      "Berries fall when ripe — often collected by shaking tree"
+    ]
+  },
+  "Elderberry": {
+    "explanation": "Elderberries are dark purple berries used in syrups and medicine",
+    "points": [
+      "Raw berries, leaves, and stems are toxic — must be cooked",
+      "Popular in cold & flu remedies (high in antioxidants)",
+      "Used in wines, jams, pies, and cordials",
+      "Elder flowers are edible and used in drinks",
+      "Native to many temperate regions"
+    ]
+  },
+  "Gooseberry": {
+    "explanation": "Gooseberries are small tart berries that grow on spiny bushes",
+    "points": [
+      "Very tart when green — sweeter when ripe (red/purple)",
+      "High in vitamin C and pectin — great for jams",
+      "Related to currants",
+      "Spiny bushes make harvesting challenging",
+      "Popular in British cuisine (gooseberry fool, pies)"
+    ]
+  },
+  "Persimmon": {
+    "explanation": "Persimmons are bright orange fruits that taste like honey when very ripe",
+    "points": [
+      "Astringent (astringent) and non-astringent (Fuyu) types",
+      "Astringent varieties must be very soft before eating",
+      "High in vitamins A, C, and fiber",
+      "Native to China — national fruit of Japan",
+      "Dried persimmons (hoshigaki) are a traditional delicacy"
+    ]
+  },
+  "Kumquat": {
+    "explanation": "Kumquats are tiny orange fruits you eat whole including the sweet skin",
+    "points": [
+      "Edible skin is sweet; flesh is tart — eaten whole",
+      "Smallest citrus fruit commonly eaten",
+      "High in vitamin C and fiber (especially skin)",
+      "Used in marmalades and liqueurs",
+      "Symbol of good luck in Chinese New Year"
+    ]
+  },
+  "Quince": {
+    "explanation": "Quinces are golden yellow fruits too hard to eat raw but wonderful cooked",
+    "points": [
+      "Very hard and astringent raw — must be cooked",
+      "Strong floral aroma when cooked",
+      "High in pectin — used in jams, jellies, and membrillo paste",
+      "Ancient fruit mentioned in Greek and Roman texts",
+      "Related to apples and pears"
+    ]
+  },
+  "Breadfruit": {
+    "explanation": "Breadfruit got its name because its starchy flesh tastes like freshly baked bread",
+    "points": [
+      "Starchy texture when cooked — used like potato or bread",
+      "High in carbohydrates, low in fat",
+      "Captain Bligh’s voyage on the Bounty was to transport breadfruit",
+      "Can be roasted, boiled, fried, or made into flour",
+      "Important staple in Pacific Islands"
+    ]
+  },
+  "Nectarine": {
+    "explanation": "Nectarines are like peaches but with smooth shiny skin instead of fuzzy",
+    "points": [
+      "Smooth-skinned genetic variant of peach",
+      "Same nutritional profile as peaches",
+      "Often slightly smaller and more aromatic",
+      "Skin is edible and adds texture",
+      "Popular in summer fruit salads"
+    ]
+  },
+  "Ugli Fruit": {
+    "explanation": "Ugli fruit has a wrinkled ugly outside but a sweet delicious inside",
+    "points": [
+      "Hybrid between grapefruit, orange, and tangerine",
+      "Thick, loose skin peels very easily",
+      "Sweet-tart flavor — less bitter than grapefruit",
+      "Name comes from 'ugly' appearance",
+      "Grown mainly in Jamaica"
+    ]
+  },
+  "Ackee": {
+    "explanation": "Ackee is the national fruit of Jamaica and must be ripe before eating safely",
+    "points": [
+      "Unripe ackee contains hypoglycin A — toxic if eaten raw/immature",
+      "National fruit of Jamaica; used in ackee & saltfish dish",
+      "Soft, creamy flesh when ripe",
+      "Related to lychee and longan",
+      "Must be fully open and ripe before consumption"
+    ]
+  },
+  "Cherimoya": {
+    "explanation": "Cherimoya is called the custard apple because its flesh is creamy and sweet",
+    "points": [
+      "Mark Twain called it 'the most delicious fruit known to man'",
+      "Custard-like texture and sweet tropical flavor",
+      "Seeds are toxic — remove before eating",
+      "High in vitamin C and B vitamins",
+      "Native to Andes mountains"
+    ]
+  },
+  "Soursop": {
+    "explanation": "Soursop has a spiky green skin and a creamy white interior with a tangy flavor",
+    "points": [
+      "Also called graviola",
+      "Used in traditional medicine (especially for cancer claims — not proven)",
+      "Flavor like pineapple-strawberry mix",
+      "Large fruit with soft spines",
+      "Leaves used for herbal tea"
+    ]
+  },
+  "Carambola": {
+    "explanation": "Carambola is another name for starfruit which makes star shapes when sliced",
+    "points": [
+      "Cross-section naturally forms a perfect star",
+      "Waxy edible skin",
+      "Tart-sweet — green apple, grape, citrus notes",
+      "High vitamin C, low calories",
+      "Caution: high oxalates — limit if kidney stones risk"
+    ]
+  },
+  "Feijoa": {
+    "explanation": "Feijoas smell like tropical perfume and taste like a mix of guava and mint",
+    "points": [
+      "Also called pineapple guava",
+      "Strong sweet aroma — pineapple, guava, mint mix",
+      "Edible sweet skin; jelly-like flesh",
+      "Native to South America, popular in New Zealand",
+      "High in vitamin C and fiber"
+    ]
+  },
+  "Mangosteen": {
+    "explanation": "Mangosteen is called the Queen of Fruits with a sweet tangy white interior",
+    "points": [
+      "Paired with durian as Queen to durian’s King",
+      "Thick purple rind; delicate white segments inside",
+      "Very high in xanthones — powerful antioxidants",
+      "Sweet-tart flavor — often described as divine",
+      "Hard to grow outside Southeast Asia"
+    ]
+  },
+  "Salak": {
+    "explanation": "Salak is called snake fruit because of its scaly brown skin",
+    "points": [
+      "Scaly brown skin resembles snake skin",
+      "Tart-sweet apple-like flesh with astringent notes",
+      "Hard brown pit inside",
+      "Popular street food in Indonesia",
+      "Grows in clusters at base of palm"
+    ]
+  },
+  "Sapodilla": {
+    "explanation": "Sapodilla tastes like a pear soaked in brown sugar and caramel",
+    "points": [
+      "Source of chicle — original chewing gum base",
+      "Caramel-pear-brown sugar flavor when ripe",
+      "High in fiber and vitamin C",
+      "Native to Central America",
+      "Latex used historically for gum"
+    ]
+  },
+  "Cupuaçu": {
+    "explanation": "Cupuaçu is a South American fruit related to cacao with a creamy white pulp",
+    "points": [
+      "Close relative of cacao (chocolate tree)",
+      "Creamy pulp used in desserts and juices",
+      "Strong chocolate-pineapple-pear flavor",
+      "Seeds used to make cupuaçu butter",
+      "Very popular in Brazil and Amazon region"
+    ]
+  },
+  "Miracle Fruit": {
+    "explanation": "Miracle fruit makes sour foods taste sweet after you eat it",
+    "points": [
+      "Miraculin protein binds to taste buds — alters sour perception",
+      "Turns lemons, limes, vinegar taste sweet for 30–60 minutes",
+      "Used in 'flavor-tripping' experiences",
+      "West African origin",
+      "Potential for low-sugar products"
+    ]
+  },
+  "Pitahaya": {
+    "explanation": "Pitahaya is a yellow dragon fruit even sweeter than the pink variety",
+    "points": [
+      "Yellow variety usually sweeter than pink/red",
+      "Grows on cactus — same family as dragon fruit",
+      "High in fiber, vitamin C, and iron",
+      "Mild kiwi-pear flavor",
+      "Antioxidants from vibrant skin"
+    ]
+  },
+  "Pomelo": {
+    "explanation": "Pomelos are the largest citrus fruit in the world with thick fluffy rind",
+    "points": [
+      "Largest citrus — can weigh up to 10 kg (22 lb)",
+      "Ancestor of grapefruit",
+      "Mild, sweet flavor — less acidic than grapefruit",
+      "Thick rind used in candied peel",
+      "Symbol of prosperity in Chinese culture"
+    ]
+  },
+  "Buddha's Hand": {
+    "explanation": "Buddha's Hand citrus fruit has finger-like segments and smells amazing",
+    "points": [
+      "No juice or pulp — mostly rind",
+      "Strong citron aroma — used as natural air freshener",
+      "Symbol of happiness, longevity, and good fortune",
+      "Common in Chinese New Year decorations",
+      "Rind used in desserts, liqueurs, and perfumes"
+    ]
+  },
+  "Calamansi": {
+    "explanation": "Calamansi are tiny citrus fruits popular in Southeast Asian cooking",
+    "points": [
+      "Hybrid between kumquat and mandarin",
+      "Very sour — used like lime/lemon",
+      "Popular in Filipino, Malaysian, Indonesian dishes",
+      "Whole fruit often squeezed into drinks",
+      "High vitamin C content"
+    ]
+  },
+  "Cloudberry": {
+    "explanation": "Cloudberries grow in Arctic regions and are golden orange when ripe",
+    "points": [
+      "Golden-orange 'Arctic gold' berry",
+      "Grows in northern bogs and tundra",
+      "High in vitamin C and ellagic acid",
+      "Used in Scandinavian liqueurs and jams",
+      "Delicate and expensive due to wild harvesting"
+    ]
+  },
+  "Boysenberry": {
+    "explanation": "Boysenberries are a cross between raspberries, blackberries, and loganberries",
+    "points": [
+      "Hybrid created by Rudolph Boysen in 1920s",
+      "Large, juicy, tart-sweet flavor",
+      "Used in jams, syrups, desserts",
+      "Dark purple when fully ripe",
+      "Higher vitamin C than many berries"
+    ]
+  },
+  "Acerola": {
+    "explanation": "Acerola cherries have 65 times more Vitamin C than oranges",
+    "points": [
+      "Highest natural vitamin C source of any fruit",
+      "Also called Barbados cherry or West Indian cherry",
+      "Small, bright red, very tart",
+      "Used in supplements and fortification",
+      "Native to Central and South America"
+    ]
+  },
+  "Pitanga": {
+    "explanation": "Pitanga is a Brazilian cherry also called Surinam cherry with a ridged shape",
+    "points": [
+      "Ridged, star-like appearance",
+      "Ranges from sweet to tart depending on variety",
+      "High in vitamin C and lycopene",
+      "Used in jellies, juices, and ice cream",
+      "Grows on fast-growing shrub"
+    ]
+  },
+  "Cactus Pear": {
+    "explanation": "Cactus pears grow on cacti and have a sweet red or yellow flesh inside",
+    "points": [
+      "Also called prickly pear or tuna",
+      "Grows on Opuntia cactus pads",
+      "Sweet, melon-like flavor with many seeds",
+      "High in fiber, vitamin C, magnesium",
+      "Spines must be removed before eating"
+    ]
+  },
+  "Jabuticaba": {
+    "explanation": "Jabuticaba is a unique fruit that grows directly on the trunk of the tree",
+    "points": [
+      "Cauliflory — fruit grows directly on trunk and branches",
+      "Grape-like dark purple berries",
+      "Sweet with slight tartness",
+      "Popular in Brazil — eaten fresh or in jelly/wine",
+      "Tree can produce multiple crops per year"
+    ]
+  },
+  "Marula": {
+    "explanation": "Marula fruits ferment on the tree and animals get tipsy eating them",
+    "points": [
+      "Ferments naturally on tree — animals reportedly get drunk",
+      "Used to make Amarula cream liqueur",
+      "High in vitamin C and antioxidants",
+      "Native to southern Africa",
+      "Both fruit and nut (kernel) are used"
+    ]
+  },
+  "Bael": {
+    "explanation": "Bael fruit has a hard woody shell and a fragrant sticky pulp inside",
+    "points": [
+      "Hard woody shell — eaten fresh or dried",
+      "Used in traditional Ayurvedic medicine",
+      "Sweet, aromatic, slightly astringent pulp",
+      "Sacred tree in Hinduism",
+      "Made into sherbet drink in India"
+    ]
+  },
+  "Monstera Fruit": {
+    "explanation": "Monstera deliciosa fruit takes over a year to ripen and tastes like pineapple",
+    "points": [
+      "Also called ceriman or Swiss cheese plant fruit",
+      "Takes 12+ months to fully ripen",
+      "Pineapple-banana-coconut flavor when ripe",
+      "Unripe fruit contains calcium oxalate — causes burning sensation",
+      "Rarely sold commercially due to long ripening time"
+    ]
+  },
+  "Rose Apple": {
+    "explanation": "Rose apples are shaped like bells and have a faint rose aroma",
+    "points": [
+      "Bell-shaped with thin skin",
+      "Crisp, juicy, mildly sweet with rose fragrance",
+      "Eaten fresh or used in salads",
+      "Common in Southeast Asia and India",
+      "Seeds are toxic if chewed"
+    ]
+  },
+  "Wax Apple": {
+    "explanation": "Wax apples look shiny and artificial but are real crunchy fruits",
+    "points": [
+      "Shiny, waxy skin — bell-shaped",
+      "Crisp, juicy, mildly sweet",
+      "Popular in Taiwan, Malaysia, India",
+      "Eaten fresh or pickled",
+      "Related to rose apple"
+    ]
+  },
+  "Loquat": {
+    "explanation": "Loquats are small golden fruits that grow in clusters and taste sweet-tart",
+    "points": [
+      "Also called Japanese plum",
+      "Sweet-tart, peach-apricot flavor",
+      "High in vitamin A and fiber",
+      "Leaves used in herbal teas",
+      "Early spring fruit in many regions"
+    ]
+  },
+  "Jujube": {
+    "explanation": "Jujubes are small red fruits also called Chinese dates full of Vitamin C",
+    "points": [
+      "Also called Chinese date or red date",
+      "High in vitamin C — more than citrus per weight",
+      "Eaten fresh, dried, or candied",
+      "Used in Chinese herbal medicine",
+      "Dried jujubes are sweet and chewy"
+    ]
+  },
+  "Pawpaw": {
+    "explanation": "Pawpaws are North America's largest native fruit tasting like mango custard",
+    "points": [
+      "Largest edible fruit native to North America",
+      "Custard-like texture — mango-banana-pineapple flavor",
+      "Short shelf life — rarely sold commercially",
+      "Pollinated by flies and beetles (not bees)",
+      "Rich in vitamins, minerals, and antioxidants"
+    ]
+  },
+  "Langsat": {
+    "explanation": "Langsats grow in grape-like clusters and taste sweet with a hint of grapefruit",
+    "points": [
+      "Grows in clusters like grapes",
+      "Sweet with slight tart grapefruit note",
+      "Translucent flesh around seed",
+      "Popular in Southeast Asia",
+      "Related to longkong and duku varieties"
+    ]
+  },
+  "Mamey Sapote": {
+    "explanation": "Mamey sapote has pinkish-orange flesh that tastes like sweet potato and almond",
+    "points": [
+      "Sweet potato–almond–chocolate flavor",
+      "Large fruit with rough brown skin",
+      "Used in milkshakes, ice cream, smoothies",
+      "Native to Mexico and Central America",
+      "High in vitamin C and fiber"
+    ]
+  },
+  "Ilama": {
+    "explanation": "Ilamas are tropical fruits related to cherimoya with green or pink skin",
+    "points": [
+      "Close relative of cherimoya and soursop",
+      "Sweet, creamy white flesh",
+      "Pink or green skin varieties",
+      "Rare outside Central America",
+      "Seeds are toxic"
+    ]
+  },
+  "Pummelo": {
+    "explanation": "Pummelos are ancient citrus ancestors of the modern grapefruit",
+    "points": [
+      "Largest citrus fruit — ancestor of grapefruit",
+      "Thick, spongy rind",
+      "Mild, sweet, less acidic than grapefruit",
+      "Popular in Southeast Asia",
+      "Used in pomelo salads"
+    ]
+  },
+  "Natal Plum": {
+    "explanation": "Natal plums are red star-shaped fruits from South Africa with a sweet-tart taste",
+    "points": [
+      "Star-shaped when viewed from top",
+      "Sweet-tart cranberry-like flavor",
+      "High in vitamin C",
+      "Used in jams and sauces",
+      "Grows on thorny shrub"
+    ]
+  },
+  "Ice Cream Bean": {
+    "explanation": "Ice cream beans are long pods filled with cotton candy-like white pulp",
+    "points": [
+      "Sweet, cotton-candy-like pulp around seeds",
+      "Pods can be 1 meter long",
+      "Popular street food in Central/South America",
+      "Seeds are not eaten",
+      "Tree fixes nitrogen in soil"
+    ]
+  },
+  "Rollinia": {
+    "explanation": "Rollinia is a tropical fruit with a bumpy yellow skin and lemony cream flesh",
+    "points": [
+      "Bumpy yellow skin when ripe",
+      "Creamy, lemony-sweet flesh",
+      "Related to cherimoya",
+      "Fragile — hard to transport",
+      "Popular in Brazil and Peru"
+    ]
+  },
+  "Black Sapote": {
+    "explanation": "Black sapote is nicknamed the chocolate pudding fruit for its dark rich flesh",
+    "points": [
+      "Dark brown-black flesh when ripe",
+      "Texture and flavor like chocolate pudding",
+      "Used in desserts and smoothies",
+      "Related to persimmon",
+      "High in vitamin C"
+    ]
+  },
+  "Canistel": {
+    "explanation": "Canistel is called the egg fruit because its dry yellow flesh resembles egg yolk",
+    "points": [
+      "Bright yellow, dry, egg-yolk-like flesh",
+      "Sweet, rich, pumpkin-like flavor",
+      "Used in milkshakes and custards",
+      "Native to Central America",
+      "High in carotenoids"
+    ]
+  },
+  "Abiu": {
+    "explanation": "Abiu is a yellow tropical fruit from the Amazon with translucent sweet flesh",
+    "points": [
+      "Translucent, milky-sweet flesh",
+      "Very sticky latex in skin — eat carefully",
+      "Caramel-vanilla flavor",
+      "Popular in Amazon and Brazil",
+      "High in vitamin C"
+    ]
+  },
+  "Mamoncillo": {
+    "explanation": "Mamoncillo is a small green fruit you pop open to reveal a tangy pink pulp",
+    "points": [
+      "Also called Spanish lime or quenepa",
+      "Sweet-tart jelly-like pulp around large seed",
+      "Eaten by sucking pulp off seed",
+      "Popular street snack in Caribbean and Latin America",
+      "High in calcium and phosphorus"
+    ]
+  },
+  "Genip": {
+    "explanation": "Genips are tropical fruits with firm green skin and sweet orange flesh",
+    "points": [
+      "Same as mamoncillo/Spanish lime",
+      "Sweet-tangy orange pulp",
+      "Popular in Puerto Rico, Dominican Republic",
+      "Eaten fresh by popping open",
+      "Kids favorite street fruit"
+    ]
+  },
+  "Jabara": {
+    "explanation": "Jabara is a rare Japanese citrus from Wakayama with a unique bitter-sweet flavor",
+    "points": [
+      "Rare citrus grown mainly in Wakayama, Japan",
+      "Bitter-sweet, aromatic flavor",
+      "Used in traditional Japanese medicine",
+      "High in flavonoids",
+      "Very limited production"
+    ]
+  },
+  "Kiwano": {
+    "explanation": "Kiwano is a horned melon from Africa with bright orange skin and green jelly inside",
+    "points": [
+      "Also called horned melon or African horned cucumber",
+      "Vibrant orange spiky skin",
+      "Green jelly flesh with seeds — cucumber-banana-lime flavor",
+      "High in vitamin C and water",
+      "Used in fruit salads and drinks"
+    ]
+  },
+  "Noni": {
+    "explanation": "Noni fruit has a strong smell but is used as traditional medicine across the Pacific",
+    "points": [
+      "Very strong, pungent smell — often called 'cheese fruit'",
+      "Used in Polynesian traditional medicine for centuries",
+      "High in antioxidants and vitamin C",
+      "Juice marketed as health supplement",
+      "Eaten ripe or drunk as juice"
+    ]
+  },
+  "Tamarillo": {
+    "explanation": "Tamarillos are also called tree tomatoes and are eaten with a spoon",
+    "points": [
+      "Also called tree tomato",
+      "Egg-shaped with red, orange, or yellow skin",
+      "Tart flesh — eaten with spoon like kiwi",
+      "High in vitamin C and A",
+      "Popular in New Zealand and South America"
+    ]
+  },
+  "Naranjilla": {
+    "explanation": "Naranjilla is a South American fruit with a tart citrusy flavor like lime and rhubarb",
+    "points": [
+      "Name means 'little orange' in Spanish",
+      "Hairy green-orange skin when ripe",
+      "Tart, lime-rhubarb-pineapple flavor",
+      "Used in juices and desserts in Colombia, Ecuador",
+      "High in vitamin C and iron"
+    ]
+  },
+  "Pepino": {
+    "explanation": "Pepino melon is a South American fruit that tastes like a mix of melon and cucumber",
+    "points": [
+      "Also called sweet cucumber",
+      "Mild, sweet, melon-cucumber flavor",
+      "Purple-striped skin when ripe",
+      "Low calorie and high water content",
+      "Popular in Peru, Chile, New Zealand"
+    ]
+  },
+  "Davidson Plum": {
+    "explanation": "Davidson plums are Australian native fruits with deep purple skin and tart red flesh",
+    "points": [
+      "Very tart — used in sauces, jams, desserts",
+      "Extremely high in antioxidants",
+      "Native to rainforests of Australia",
+      "Deep purple flesh stains heavily",
+      "Superfood status in recent years"
+    ]
+  },
+  "Finger Lime": {
+    "explanation": "Finger limes are called citrus caviar because the flesh pops in tiny juice pearls",
+    "points": [
+      "Tiny juice vesicles pop like caviar",
+      "Called 'citrus caviar' or 'Australian caviar'",
+      "Lime, lemon, grapefruit flavors depending on variety",
+      "Very expensive and sought after by chefs",
+      "Native to Australian rainforests"
+    ]
+  },
+  "Uva Ursi": {
+    "explanation": "Uva ursi or bearberry produces small red fruits eaten by bears and birds",
+    "points": [
+      "Also called bearberry",
+      "Small red berries eaten by wildlife",
+      "Leaves used in herbal medicine (urinary tract)",
+      "Berries are mealy and bland for humans",
+      "Common in northern temperate zones"
+    ]
+  },
+  "Sea Buckthorn": {
+    "explanation": "Sea buckthorn berries are extremely sour orange berries rich in Vitamin C",
+    "points": [
+      "Very high in vitamin C — more than oranges",
+      "Bright orange berries on thorny shrubs",
+      "Used in juices, oils, supplements",
+      "Grows in harsh coastal and mountain areas",
+      "Rich in omega-7 fatty acids"
+    ]
+  },
+  "Barberry": {
+    "explanation": "Barberries are tiny tart red berries used in Persian rice dishes and jams",
+    "points": [
+      "Very tart — used dried in Persian cuisine (zereshk)",
+      "Common in saffron rice dishes",
+      "High in berberine — studied for health benefits",
+      "Thorny shrub — related to Oregon grape",
+      "Used in jams and sauces"
+    ]
+  },
+  "Hackberry": {
+    "explanation": "Hackberries are small purple-brown wild berries with a sweet date-like flavor",
+    "points": [
+      "Sweet date-nut flavor when ripe",
+      "Small, hard pit inside",
+      "Used by Native Americans historically",
+      "Tree common in North America",
+      "Berries persist on tree into winter"
+    ]
+  },
+  "Salmonberry": {
+    "explanation": "Salmonberries are Pacific Northwest berries ranging from yellow to deep red",
+    "points": [
+      "Range from pale yellow to deep salmon-red",
+      "Important food for Pacific Northwest indigenous peoples",
+      "Mild, slightly tart flavor",
+      "Often eaten with salmon — hence name",
+      "Related to raspberries and blackberries"
     ]
   }
 }

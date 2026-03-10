@@ -1,406 +1,482 @@
 {
-  "cars": {
-    "items": [
-      {
-        "name": "Ferrari",
-        "fact": "Ferrari is an Italian supercar brand known for incredible speed"
-      },
-      {
-        "name": "Lamborghini",
-        "fact": "Lamborghinis are Italian supercars with a cool low wedge shape"
-      },
-      {
-        "name": "BMW",
-        "fact": "BMW is a German luxury car brand loved all around the world"
-      },
-      {
-        "name": "Tesla",
-        "fact": "Tesla makes electric cars that run on batteries instead of gas"
-      },
-      {
-        "name": "Porsche",
-        "fact": "Porsche is a German brand famous for making fast sports cars"
-      },
-      {
-        "name": "Bugatti",
-        "fact": "Bugatti makes some of the fastest and most expensive cars on Earth"
-      },
-      {
-        "name": "Rolls Royce",
-        "fact": "Rolls Royce makes the most luxurious and elegant cars in the world"
-      },
-      {
-        "name": "Ford Mustang",
-        "fact": "The Ford Mustang is a famous American muscle car with a roaring engine"
-      },
-      {
-        "name": "Toyota",
-        "fact": "Toyota is one of the world's biggest and most reliable car makers"
-      },
-      {
-        "name": "Jeep",
-        "fact": "Jeeps are tough vehicles that can drive over mountains and rough roads"
-      },
-      {
-        "name": "Mercedes-Benz",
-        "fact": "Mercedes-Benz is famous for luxury comfort and the three-pointed star logo"
-      },
-      {
-        "name": "Audi",
-        "fact": "Audi is a German car maker known for its Quattro all-wheel-drive system"
-      },
-      {
-        "name": "McLaren",
-        "fact": "McLaren builds extreme supercars originally designed for Formula One racing"
-      },
-      {
-        "name": "Aston Martin",
-        "fact": "Aston Martin is the elegant British car brand famously driven by James Bond"
-      },
-      {
-        "name": "Chevrolet Corvette",
-        "fact": "The Corvette is America's most iconic sports car produced since 1953"
-      },
-      {
-        "name": "Maserati",
-        "fact": "Maserati is an Italian luxury car brand with a legendary trident logo"
-      },
-      {
-        "name": "Bentley",
-        "fact": "Bentley makes handcrafted luxury cars that take thousands of hours to build"
-      },
-      {
-        "name": "Pagani",
-        "fact": "Pagani makes ultra-rare handmade hypercars with beautiful artistic designs"
-      },
-      {
-        "name": "Koenigsegg",
-        "fact": "Koenigsegg is a Swedish brand that holds the world record for fastest production car"
-      },
-      {
-        "name": "Rimac",
-        "fact": "Rimac builds the world's most powerful electric hypercars from Croatia"
-      },
-      {
-        "name": "Lotus",
-        "fact": "Lotus cars are lightweight British sports cars focused on pure driving feel"
-      },
-      {
-        "name": "Alfa Romeo",
-        "fact": "Alfa Romeo is a passionate Italian brand known for beautiful design and racing history"
-      },
-      {
-        "name": "Jaguar",
-        "fact": "Jaguar is a British luxury car brand famous for its leaping cat emblem"
-      },
-      {
-        "name": "Land Rover",
-        "fact": "Land Rovers are British off-road vehicles built to conquer any terrain"
-      },
-      {
-        "name": "Volvo",
-        "fact": "Volvo is famous for being the safest cars in the world"
-      },
-      {
-        "name": "Subaru",
-        "fact": "Subaru is famous for all-wheel-drive and is beloved by adventure drivers"
-      },
-      {
-        "name": "Mazda",
-        "fact": "Mazda makes sporty fun-to-drive cars including the legendary MX-5 roadster"
-      },
-      {
-        "name": "Honda",
-        "fact": "Honda makes reliable cars and is also the world's largest engine manufacturer"
-      },
-      {
-        "name": "Nissan",
-        "fact": "Nissan made the legendary GT-R supercar known as Godzilla"
-      },
-      {
-        "name": "Dodge Challenger",
-        "fact": "The Dodge Challenger is a massive American muscle car with a thunderous engine"
-      },
-      {
-        "name": "Ford F-150",
-        "fact": "The Ford F-150 has been the best-selling vehicle in the USA for over 40 years"
-      },
-      {
-        "name": "Volkswagen",
-        "fact": "Volkswagen means People's Car in German and makes cars for everyone"
-      },
-      {
-        "name": "Hyundai",
-        "fact": "Hyundai transformed from a tiny Korean brand to one of the world's largest car makers"
-      },
-      {
-        "name": "Kia",
-        "fact": "Kia started making bicycles before becoming a major global car manufacturer"
-      },
-      {
-        "name": "Chrysler",
-        "fact": "Chrysler helped define American car culture with bold designs since the 1920s"
-      },
-      {
-        "name": "Cadillac",
-        "fact": "Cadillac is America's most iconic luxury car brand known for big elegant vehicles"
-      },
-      {
-        "name": "Lincoln",
-        "fact": "Lincoln is Ford's luxury brand named after President Abraham Lincoln"
-      },
-      {
-        "name": "Rivian",
-        "fact": "Rivian makes electric adventure trucks and SUVs designed for outdoor exploration"
-      },
-      {
-        "name": "Lucid Motors",
-        "fact": "Lucid Air is an electric car with the longest range of any electric vehicle ever tested"
-      },
-      {
-        "name": "Polestar",
-        "fact": "Polestar is Volvo's pure electric performance car brand from Sweden"
-      },
-      {
-        "name": "Fisker",
-        "fact": "Fisker designs stylish electric cars with a focus on sustainability"
-      },
-      {
-        "name": "BYD",
-        "fact": "BYD is China's biggest electric car maker and sells more EVs than almost anyone"
-      },
-      {
-        "name": "Nio",
-        "fact": "Nio is a Chinese electric car brand with battery swap stations instead of charging"
-      },
-      {
-        "name": "Geely",
-        "fact": "Geely is a Chinese automaker that owns Volvo and Lotus brands"
-      },
-      {
-        "name": "Acura",
-        "fact": "Acura is Honda's luxury division making sporty premium vehicles"
-      },
-      {
-        "name": "Lexus",
-        "fact": "Lexus is Toyota's luxury brand known for whisper-quiet refined vehicles"
-      },
-      {
-        "name": "Infiniti",
-        "fact": "Infiniti is Nissan's luxury brand celebrated for powerful smooth performance"
-      },
-      {
-        "name": "Genesis",
-        "fact": "Genesis is Hyundai's luxury brand that has quickly earned global design awards"
-      },
-      {
-        "name": "Pontiac",
-        "fact": "Pontiac was a bold American car brand known for sporty muscle cars before closing in 2010"
-      },
-      {
-        "name": "Oldsmobile",
-        "fact": "Oldsmobile was one of the oldest American car brands operating for over 100 years"
-      },
-      {
-        "name": "Saab",
-        "fact": "Saab started making jet aircraft before branching into making cars"
-      },
-      {
-        "name": "Lancia",
-        "fact": "Lancia is an Italian brand with a legendary rally racing heritage"
-      },
-      {
-        "name": "De Tomaso",
-        "fact": "De Tomaso is a rare Italian sports car maker known for the powerful Pantera"
-      },
-      {
-        "name": "Vector",
-        "fact": "Vector made outrageous American supercars inspired by military jet fighters"
-      },
-      {
-        "name": "Hennessey Venom",
-        "fact": "Hennessey Venom F5 is one of the fastest cars ever built reaching 311 mph"
-      },
-      {
-        "name": "SSC Tuatara",
-        "fact": "SSC Tuatara is an American hypercar that hit over 300 mph in testing"
-      },
-      {
-        "name": "Devel Sixteen",
-        "fact": "The Devel Sixteen concept car claims an astonishing 5000 horsepower"
-      },
-      {
-        "name": "Ariel Atom",
-        "fact": "The Ariel Atom has no body panels at all and is faster than most supercars on a track"
-      },
-      {
-        "name": "Noble M600",
-        "fact": "Noble is a small British supercar maker producing raw intense driving machines"
-      },
-      {
-        "name": "Gordon Murray T50",
-        "fact": "The Gordon Murray T50 has a giant rear fan that sucks it to the road like a vacuum"
-      },
-      {
-        "name": "Mercedes AMG One",
-        "fact": "The Mercedes AMG One uses an actual Formula 1 engine in a road car"
-      },
-      {
-        "name": "Aston Martin Valkyrie",
-        "fact": "The Aston Martin Valkyrie was designed with the same aerodynamics as an F1 car"
-      },
-      {
-        "name": "Ferrari LaFerrari",
-        "fact": "The LaFerrari uses a hybrid Formula 1-derived system producing 950 horsepower"
-      },
-      {
-        "name": "Lamborghini Sian",
-        "fact": "The Lamborghini Sian is the first Lamborghini to use a hybrid system"
-      },
-      {
-        "name": "Porsche 918",
-        "fact": "The Porsche 918 Spyder is a hybrid hypercar that lapped the Nurburgring in under 7 minutes"
-      },
-      {
-        "name": "McLaren P1",
-        "fact": "The McLaren P1 is a hybrid hypercar producing 903 horsepower total"
-      },
-      {
-        "name": "Koenigsegg Jesko",
-        "fact": "The Koenigsegg Jesko Absolut is designed to reach 330 mph making it theoretically the fastest car"
-      },
-      {
-        "name": "Bugatti Chiron",
-        "fact": "The Bugatti Chiron Super Sport was the first production car to pass 300 mph"
-      },
-      {
-        "name": "Czinger 21C",
-        "fact": "The Czinger 21C is printed using 3D manufacturing technology from scratch"
-      },
-      {
-        "name": "Pininfarina Battista",
-        "fact": "The Battista is an Italian electric hypercar with 1900 horsepower"
-      },
-      {
-        "name": "Hispano Suiza",
-        "fact": "Hispano Suiza is a legendary Spanish brand revived with a stunning electric hypercar"
-      },
-      {
-        "name": "Zenvo TSR-S",
-        "fact": "The Zenvo TSR-S has an active wing that tilts sideways in corners for grip"
-      },
-      {
-        "name": "Donkervoort D8",
-        "fact": "Donkervoort is a Dutch sports car maker producing ultra lightweight track weapons"
-      },
-      {
-        "name": "Scuderia Cameron Glickenhaus",
-        "fact": "SCG makes racing cars that also have to qualify as street legal vehicles"
-      },
-      {
-        "name": "Vanderhall",
-        "fact": "Vanderhall makes three-wheeled autocycle roadsters with open cockpits"
-      },
-      {
-        "name": "Morgan",
-        "fact": "Morgan is a British car company that still handbuilds cars with ash wood frames"
-      },
-      {
-        "name": "Bristol Cars",
-        "fact": "Bristol Cars is an ultra-exclusive British brand that never advertises"
-      },
-      {
-        "name": "Caterham",
-        "fact": "Caterham makes lightweight open-wheel sports cars you can buy as a kit to build yourself"
-      },
-      {
-        "name": "Westfield",
-        "fact": "Westfield builds lightweight track-focused sports cars based on the classic Lotus Seven design"
-      },
-      {
-        "name": "BAC Mono",
-        "fact": "The BAC Mono is a single-seat road-legal race car used as a training tool"
-      },
-      {
-        "name": "Elemental RP1",
-        "fact": "The Elemental RP1 uses aerodynamic downforce equal to twice the car's own weight"
-      },
-      {
-        "name": "Ultima Evolution",
-        "fact": "The Ultima Evolution accelerates faster than a Bugatti Veyron on a budget"
-      },
-      {
-        "name": "Radical SR8",
-        "fact": "The Radical SR8 has smashed numerous lap records at circuits worldwide"
-      },
-      {
-        "name": "Caparo T1",
-        "fact": "The Caparo T1 is essentially a Formula 1 car with a roof that can be driven on the road"
-      },
-      {
-        "name": "Vuhl 05",
-        "fact": "The Vuhl 05 is a Mexican lightweight sports car weighing just 690 kg"
-      },
-      {
-        "name": "Genty Akylone",
-        "fact": "The Genty Akylone is a French hypercar with a carbon fiber body and 1000 hp"
-      },
-      {
-        "name": "Matech GT1",
-        "fact": "Matech built a Ford GT-based racing car that competed at Le Mans"
-      },
-      {
-        "name": "Glickenhaus 003",
-        "fact": "The SCG 003 raced at the Nurburgring 24 Hours as a privateer team"
-      },
-      {
-        "name": "PGO Cevennes",
-        "fact": "PGO is a small French car maker that builds retro-styled roadsters"
-      },
-      {
-        "name": "Saker Raptor",
-        "fact": "The Saker Raptor is a New Zealand track car with serious racing pedigree"
-      },
-      {
-        "name": "Praga R1",
-        "fact": "The Praga R1 is a Czech race car famous for setting lap records at premium circuits"
-      },
-      {
-        "name": "Hispano-Suiza Carmen",
-        "fact": "The Carmen is a Spanish electric luxury car reviving a legendary 1920s brand"
-      },
-      {
-        "name": "Spyker",
-        "fact": "Spyker is a Dutch luxury sports car maker with an aviation-inspired interior design"
-      },
-      {
-        "name": "Mosler MT900",
-        "fact": "The Mosler MT900 is an American lightweight supercar built for serious track performance"
-      },
-      {
-        "name": "Falcon F7",
-        "fact": "The Falcon F7 is a rare American hand-built carbon fiber sports car from Michigan"
-      },
-      {
-        "name": "Factory Five 818",
-        "fact": "Factory Five kit cars let you build your own performance roadster at home from scratch"
-      },
-      {
-        "name": "Ultima GTR",
-        "fact": "The Ultima GTR once held production car lap records at numerous famous circuits"
-      },
-      {
-        "name": "Saleen S7",
-        "fact": "The Saleen S7 was America's first true mid-engine supercar with over 750 horsepower"
-      },
-      {
-        "name": "Callaway C8",
-        "fact": "Callaway transforms Corvettes into even more extreme supercars with custom upgrades"
-      },
-      {
-        "name": "Panoz Esperante",
-        "fact": "Panoz is a rare American sports car maker known for distinctive retro styling"
-      }
+  "Ferrari": {
+    "explanation": "Ferrari is an Italian supercar brand known for incredible speed",
+    "points": [
+      "Iconic prancing horse logo and deep racing heritage from Formula 1",
+      "Produces limited numbers of hand-built supercars with exotic materials",
+      "Famous for naturally aspirated V8 and V12 engines with signature sound",
+      "Strong resale value and collector status for classic and modern models",
+      "Flagship models like SF90 Stradale blend hybrid technology with extreme performance"
+    ]
+  },
+  "Lamborghini": {
+    "explanation": "Lamborghinis are Italian supercars with a cool low wedge shape",
+    "points": [
+      "Aggressive angular design language started with the Countach in the 1970s",
+      "Signature scissor doors and powerful V10/V12 engines",
+      "Strong focus on dramatic looks and visceral driving experience",
+      "Huracán and Aventador families dominate modern lineup",
+      "Owned by Volkswagen Group but maintains distinct bold personality"
+    ]
+  },
+  "BMW": {
+    "explanation": "BMW is a German luxury car brand loved all around the world",
+    "points": [
+      "Famous 'Ultimate Driving Machine' slogan emphasizing sporty handling",
+      "Signature kidney grille design evolving dramatically in recent models",
+      "Wide range from compact 1 Series to luxury 7 Series and M performance cars",
+      "Pioneered turbocharged engines in modern era (N54, B58, S58)",
+      "Strong motorsport heritage including DTM and endurance racing"
+    ]
+  },
+  "Tesla": {
+    "explanation": "Tesla makes electric cars that run on batteries instead of gas",
+    "points": [
+      "Pioneer and leader in mass-market electric vehicles",
+      "Autopilot and Full Self-Driving hardware with over-the-air updates",
+      "Gigafactories producing batteries and vehicles at massive scale",
+      "Model 3 and Model Y are best-selling EVs worldwide",
+      "Direct-to-consumer sales model bypassing traditional dealerships"
+    ]
+  },
+  "Porsche": {
+    "explanation": "Porsche is a German brand famous for making fast sports cars",
+    "points": [
+      "911 model is one of the most iconic and longest-produced sports cars",
+      "Exceptional engineering balance of performance, comfort and daily usability",
+      "Dominates endurance racing including 24 Hours of Le Mans wins",
+      "Taycan electric sports sedan and Macan/Cayenne SUVs expand lineup",
+      "Known for precise handling and build quality"
+    ]
+  },
+  "Bugatti": {
+    "explanation": "Bugatti makes some of the fastest and most expensive cars on Earth",
+    "points": [
+      "Veyron was first production car to exceed 250 mph",
+      "Chiron Super Sport 300+ officially broke 300 mph barrier",
+      "W16 quad-turbo engine producing up to 1,600+ horsepower",
+      "Extremely limited production and ultra-high price tags",
+      "Now part of Bugatti Rimac joint venture focusing on hyper performance"
+    ]
+  },
+  "Rolls Royce": {
+    "explanation": "Rolls Royce makes the most luxurious and elegant cars in the world",
+    "points": [
+      "Hand-built in Goodwood, England with unmatched craftsmanship",
+      "Bespoke personalization program allows almost unlimited customization",
+      "Signature suicide doors and iconic Spirit of Ecstasy ornament",
+      "Phantom, Ghost, Cullinan, and Spectre (electric) models",
+      "Owned by BMW but maintains distinct ultra-luxury identity"
+    ]
+  },
+  "Ford Mustang": {
+    "explanation": "The Ford Mustang is a famous American muscle car with a roaring engine",
+    "points": [
+      "Introduced in 1964 and created the pony car segment",
+      "Iconic long hood, short deck design language",
+      "Multiple generations with V8 power and manual transmission options",
+      "Shelby GT500 variant among most powerful production cars",
+      "Strong aftermarket and enthusiast community worldwide"
+    ]
+  },
+  "Toyota": {
+    "explanation": "Toyota is one of the world's biggest and most reliable car makers",
+    "points": [
+      "Reputation for bulletproof reliability and resale value",
+      "Pioneer of hybrid technology with Prius since 1997",
+      "Largest automobile manufacturer by volume in many years",
+      "Wide range from Corolla to Land Cruiser and Supra",
+      "Strong focus on continuous improvement (Kaizen) philosophy"
+    ]
+  },
+  "Jeep": {
+    "explanation": "Jeeps are tough vehicles that can drive over mountains and rough roads",
+    "points": [
+      "Original military vehicle from World War II",
+      "Iconic Wrangler model with removable doors and roof",
+      "Trail Rated certification for off-road capability",
+      "Grand Cherokee combines luxury with off-road prowess",
+      "Part of Stellantis after Fiat-Chrysler merger"
+    ]
+  },
+  "Mercedes-Benz": {
+    "explanation": "Mercedes-Benz is famous for luxury comfort and the three-pointed star logo",
+    "points": [
+      "Invented the first automobile in 1886",
+      "S-Class sets benchmark for luxury sedan technology",
+      "AMG performance division creates high-performance models",
+      "EQ electric vehicle lineup expanding rapidly",
+      "Known for safety innovations and advanced driver assistance"
+    ]
+  },
+  "Audi": {
+    "explanation": "Audi is a German car maker known for its Quattro all-wheel-drive system",
+    "points": [
+      "Quattro permanent AWD revolutionized rally racing in 1980s",
+      "Clean, modern design language with single-frame grille",
+      "Virtual Cockpit digital instrument cluster pioneer",
+      "RS performance models highly regarded",
+      "Part of Volkswagen Group with shared technology"
+    ]
+  },
+  "McLaren": {
+    "explanation": "McLaren builds extreme supercars originally designed for Formula One racing",
+    "points": [
+      "Formula 1 championship-winning team since 1966",
+      "Carbon fiber MonoCell chassis in road cars",
+      "P1 hybrid hypercar was landmark achievement",
+      "720S, 765LT, Artura models showcase engineering",
+      "Focus on lightweight construction and track performance"
+    ]
+  },
+  "Aston Martin": {
+    "explanation": "Aston Martin is the elegant British car brand famously driven by James Bond",
+    "points": [
+      "Iconic grand tourers with beautiful design",
+      "DB lineage including DB5 from James Bond films",
+      "Valkyrie hypercar collaboration with Red Bull Racing",
+      "Owned by Lawrence Stroll with major investments",
+      "Combining luxury with increasing performance focus"
+    ]
+  },
+  "Chevrolet Corvette": {
+    "explanation": "The Corvette is America's most iconic sports car produced since 1953",
+    "points": [
+      "Mid-engine layout since C8 generation (2020)",
+      "Excellent performance-to-price ratio",
+      "Z06 and ZR1 variants push supercar territory",
+      "Strong enthusiast community and aftermarket",
+      "Transformed from cruiser to serious sports car"
+    ]
+  },
+  "Maserati": {
+    "explanation": "Maserati is an Italian luxury car brand with a legendary trident logo",
+    "points": [
+      "Trident logo from Bologna's Neptune fountain",
+      "Known for grand touring cars with Italian flair",
+      "MC20 supercar marks performance revival",
+      "Part of Stellantis group",
+      "Distinctive engine sound and elegant design"
+    ]
+  },
+  "Bentley": {
+    "explanation": "Bentley makes handcrafted luxury cars that take thousands of hours to build",
+    "points": [
+      "Ultra-luxury brand under Volkswagen Group",
+      "Hand-stitched leather and wood interiors",
+      "W12 engine legendary for smoothness and power",
+      "Continental GT and Flying Spur models",
+      "Bentayga SUV expanded market reach"
+    ]
+  },
+  "Pagani": {
+    "explanation": "Pagani makes ultra-rare handmade hypercars with beautiful artistic designs",
+    "points": [
+      "Founded by Horacio Pagani in 1992",
+      "Carbon-titanium weave and artistic interiors",
+      "Huayra and Utopia models extremely limited",
+      "AMG-sourced engines highly tuned",
+      "Each car highly personalized and collectible"
+    ]
+  },
+  "Koenigsegg": {
+    "explanation": "Koenigsegg is a Swedish brand that holds the world record for fastest production car",
+    "points": [
+      "Founded by Christian von Koenigsegg",
+      "Innovative designs like direct-drive transmission",
+      "Jesko Absolut targeting 330+ mph",
+      "Extremely limited production",
+      "Advanced aerodynamics and lightweight materials"
+    ]
+  },
+  "Rimac": {
+    "explanation": "Rimac builds the world's most powerful electric hypercars from Croatia",
+    "points": [
+      "Nevera electric hypercar with 1,914 hp",
+      "0-60 mph in under 2 seconds",
+      "Owns Bugatti through joint venture",
+      "Supplies battery tech to major automakers",
+      "Founder Mate Rimac youngest in hypercar space"
+    ]
+  },
+  "Lotus": {
+    "explanation": "Lotus cars are lightweight British sports cars focused on pure driving feel",
+    "points": [
+      "Founded by Colin Chapman with 'light is right' philosophy",
+      "Evora, Elise, Exige models legendary for handling",
+      "Emira current flagship sports car",
+      "Geely ownership bringing new resources",
+      "Returning to Formula 1 as powertrain supplier"
+    ]
+  },
+  "Alfa Romeo": {
+    "explanation": "Alfa Romeo is a passionate Italian brand known for beautiful design and racing history",
+    "points": [
+      "Founded in 1910 with racing pedigree",
+      "Quadrifoglio performance badge",
+      "Giulia and Stelvio models modern successes",
+      "Part of Stellantis group",
+      "Distinctive engine sound and handling character"
+    ]
+  },
+  "Jaguar": {
+    "explanation": "Jaguar is a British luxury car brand famous for its leaping cat emblem",
+    "points": [
+      "Elegant grand tourers and performance cars",
+      "F-Type convertible and coupe models",
+      "I-PACE electric SUV pioneer",
+      "Part of Jaguar Land Rover (Tata Motors)",
+      "Rebranding to electric-only by 2025"
+    ]
+  },
+  "Land Rover": {
+    "explanation": "Land Rovers are British off-road vehicles built to conquer any terrain",
+    "points": [
+      "Range Rover invented luxury SUV segment",
+      "Defender reborn with modern technology",
+      "Excellent off-road capability with Terrain Response",
+      "Part of Jaguar Land Rover",
+      "Luxury and capability combination"
+    ]
+  },
+  "Volvo": {
+    "explanation": "Volvo is famous for being the safest cars in the world",
+    "points": [
+      "Safety innovations leader since 1927",
+      "XC90 and XC60 top safety-rated SUVs",
+      "Recharge plug-in hybrid and electric lineup",
+      "Owned by Geely since 2010",
+      "Focus on Scandinavian design and comfort"
+    ]
+  },
+  "Subaru": {
+    "explanation": "Subaru is famous for all-wheel-drive and is beloved by adventure drivers",
+    "points": [
+      "Symmetrical all-wheel drive standard on most models",
+      "Boxer engine layout for low center of gravity",
+      "Outback and Forester popular adventure vehicles",
+      "Strong safety and reliability reputation",
+      "Partnership with Toyota on several models"
+    ]
+  },
+  "Mazda": {
+    "explanation": "Mazda makes sporty fun-to-drive cars including the legendary MX-5 roadster",
+    "points": [
+      "Zoom-Zoom brand philosophy emphasizes driving pleasure",
+      "MX-5 Miata world's best-selling roadster",
+      "Skyactiv technology for efficiency and performance",
+      "Premium positioning with beautiful design",
+      "Rotary engine heritage (RX-7, RX-8)"
+    ]
+  },
+  "Honda": {
+    "explanation": "Honda makes reliable cars and is also the world's largest engine manufacturer",
+    "points": [
+      "Civic and Accord legendary reliability",
+      "VTEC variable valve timing technology",
+      "Strong motorsport heritage (F1, MotoGP)",
+      "Hybrid and electric vehicle expansion",
+      "Acura luxury division"
+    ]
+  },
+  "Nissan": {
+    "explanation": "Nissan made the legendary GT-R supercar known as Godzilla",
+    "points": [
+      "GT-R high-performance icon since 1969",
+      "Skyline heritage in Japan",
+      "Leaf pioneer mass-market EV",
+      "Part of Renault-Nissan-Mitsubishi Alliance",
+      "Ariya electric crossover expansion"
+    ]
+  },
+  "Dodge Challenger": {
+    "explanation": "The Dodge Challenger is a massive American muscle car with a thunderous engine",
+    "points": [
+      "Retro design paying homage to 1970s original",
+      "Hemi V8 engines up to 807 hp in Demon",
+      "Widebody and Hellcat variants",
+      "Strong drag racing heritage",
+      "Part of Stellantis group"
+    ]
+  },
+  "Ford F-150": {
+    "explanation": "The Ford F-150 has been the best-selling vehicle in the USA for over 40 years",
+    "points": [
+      "America's best-selling truck for decades",
+      "Aluminum body revolution in 2015",
+      "Lightning electric version introduced",
+      "Wide range of configurations and trims",
+      "Toughness and capability focus"
+    ]
+  },
+  "Volkswagen": {
+    "explanation": "Volkswagen means People's Car in German and makes cars for everyone",
+    "points": [
+      "Beetle and Golf iconic models",
+      "Largest European automaker",
+      "ID. electric vehicle family",
+      "Dieselgate scandal impact",
+      "Wide brand portfolio including Audi, Porsche"
+    ]
+  },
+  "Hyundai": {
+    "explanation": "Hyundai transformed from a tiny Korean brand to one of the world's largest car makers",
+    "points": [
+      "Remarkable quality and design improvement",
+      "Ioniq electric and hybrid leadership",
+      "Genesis luxury division success",
+      "Strong warranty offerings",
+      "N performance models highly regarded"
+    ]
+  },
+  "Kia": {
+    "explanation": "Kia started making bicycles before becoming a major global car manufacturer",
+    "points": [
+      "Part of Hyundai Motor Group",
+      "Bold design language transformation",
+      "EV6 and EV9 electric models acclaimed",
+      "Long warranty competitive advantage",
+      "Stinger and Telluride successful models"
+    ]
+  },
+  "Chrysler": {
+    "explanation": "Chrysler helped define American car culture with bold designs since the 1920s",
+    "points": [
+      "Part of Stellantis group",
+      "Pacifica minivan market leader",
+      "300 sedan with distinctive styling",
+      "Historical Airflow and Hemi engine innovations",
+      "Limited current lineup focus"
+    ]
+  },
+  "Cadillac": {
+    "explanation": "Cadillac is America's most iconic luxury car brand known for big elegant vehicles",
+    "points": [
+      "Standard of the World historical slogan",
+      "Escalade dominant luxury SUV",
+      "Lyriq electric vehicle pioneer",
+      "V-Series performance models",
+      "Revitalized design direction"
+    ]
+  },
+  "Lincoln": {
+    "explanation": "Lincoln is Ford's luxury brand named after President Abraham Lincoln",
+    "points": [
+      "Navigator full-size luxury SUV",
+      "Aviator and Corsair models",
+      "Quiet luxury positioning",
+      "Co-Pilot360 safety technology",
+      "Revival under recent leadership"
+    ]
+  },
+  "Rivian": {
+    "explanation": "Rivian makes electric adventure trucks and SUVs designed for outdoor exploration",
+    "points": [
+      "R1T electric pickup and R1S SUV",
+      "Amazon delivery van contract",
+      "Off-road capability focus",
+      "Adventure-oriented brand identity",
+      "Strong early adopter following"
+    ]
+  },
+  "Lucid Motors": {
+    "explanation": "Lucid Air is an electric car with the longest range of any electric vehicle ever tested",
+    "points": [
+      "Lucid Air Dream Edition over 500 miles range",
+      "Former Tesla engineers leadership",
+      "Premium luxury electric sedan",
+      "Gravity SUV upcoming",
+      "Saudi investment backing"
+    ]
+  },
+  "Polestar": {
+    "explanation": "Polestar is Volvo's pure electric performance car brand from Sweden",
+    "points": [
+      "Polestar 2 popular premium EV",
+      "Polestar 1 hybrid grand tourer",
+      "Polestar 3 and 4 SUVs",
+      "Sustainability focus in materials",
+      "Volvo and Geely backing"
+    ]
+  },
+  "Fisker": {
+    "explanation": "Fisker designs stylish electric cars with a focus on sustainability",
+    "points": [
+      "Ocean electric SUV with unique design",
+      "Henrik Fisker previous Karma experience",
+      "Sustainable interior materials",
+      "Facing production and delivery challenges",
+      "Competitive pricing strategy"
+    ]
+  },
+  "BYD": {
+    "explanation": "BYD is China's biggest electric car maker and sells more EVs than almost anyone",
+    "points": [
+      "World's largest EV manufacturer by volume",
+      "Blade battery technology safety advantage",
+      "Vertical integration including batteries",
+      "Expanding globally including Europe",
+      "Strong domestic market dominance"
+    ]
+  },
+  "Nio": {
+    "explanation": "Nio is a Chinese electric car brand with battery swap stations instead of charging",
+    "points": [
+      "Battery swapping infrastructure pioneer",
+      "Premium ET7 and ES8 models",
+      "NIO House lifestyle centers",
+      "Strong community focus in China",
+      "Expanding to Europe"
+    ]
+  },
+  "Geely": {
+    "explanation": "Geely is a Chinese automaker that owns Volvo and Lotus brands",
+    "points": [
+      "Owns Volvo Cars and Lotus",
+      "Polestar and Lynk & Co brands",
+      "Strong domestic Chinese market",
+      "Investing in electric and smart technology",
+      "Global expansion strategy"
+    ]
+  },
+  "Acura": {
+    "explanation": "Acura is Honda's luxury division making sporty premium vehicles",
+    "points": [
+      "First Japanese luxury brand in US",
+      "Integra and TLX sport sedans",
+      "MDX and RDX SUVs",
+      "Type S performance variants",
+      "Precision Crafted Performance slogan"
+    ]
+  },
+  "Lexus": {
+    "explanation": "Lexus is Toyota's luxury brand known for whisper-quiet refined vehicles",
+    "points": [
+      "Highest reliability in luxury segment",
+      "LS flagship sedan and RX bestseller",
+      "F performance models",
+      "Hybrid leadership in luxury",
+      "Omotenashi Japanese hospitality philosophy"
+    ]
+  },
+  "Infiniti": {
+    "explanation": "Infiniti is Nissan's luxury brand celebrated for powerful smooth performance",
+    "points": [
+      "QX60 and QX80 SUVs",
+      "Powerful V6 and V8 engines",
+      "Sensory luxury positioning",
+      "Challenges in recent years",
+      "Redesigned models upcoming"
+    ]
+  },
+  "Genesis": {
+    "explanation": "Genesis is Hyundai's luxury brand that has quickly earned global design awards",
+    "points": [
+      "Separate luxury brand since 2015",
+      "G90 flagship and GV80 SUV",
+      "Excellent warranty coverage",
+      "Award-winning design and quality",
+      "Rapidly gaining market share"
     ]
   }
 }

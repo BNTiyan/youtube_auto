@@ -1,406 +1,1002 @@
 {
-  "shapes": {
-    "items": [
-      {
-        "name": "Circle",
-        "fact": "A circle has no corners or edges and is perfectly round in every direction"
-      },
-      {
-        "name": "Square",
-        "fact": "A square has four equal sides and four right angles of exactly 90 degrees"
-      },
-      {
-        "name": "Triangle",
-        "fact": "A triangle has three sides and the angles inside always add up to 180 degrees"
-      },
-      {
-        "name": "Rectangle",
-        "fact": "A rectangle has four right angles but opposite sides are equal not all four"
-      },
-      {
-        "name": "Pentagon",
-        "fact": "A pentagon has five sides and five corners and is the shape of a home base in baseball"
-      },
-      {
-        "name": "Hexagon",
-        "fact": "A hexagon has six sides and honeybees build perfect hexagons in their hives"
-      },
-      {
-        "name": "Heptagon",
-        "fact": "A heptagon has seven sides and some coins like the British 50p use this shape"
-      },
-      {
-        "name": "Octagon",
-        "fact": "An octagon has eight sides and is the shape of a stop sign"
-      },
-      {
-        "name": "Nonagon",
-        "fact": "A nonagon has nine sides and nine angles inside"
-      },
-      {
-        "name": "Decagon",
-        "fact": "A decagon has ten equal sides and ten angles"
-      },
-      {
-        "name": "Oval",
-        "fact": "An oval is like a stretched circle and is also called an ellipse"
-      },
-      {
-        "name": "Diamond",
-        "fact": "A diamond shape is a square turned 45 degrees on its corner"
-      },
-      {
-        "name": "Star",
-        "fact": "A five-pointed star is called a pentagram and has been used in flags worldwide"
-      },
-      {
-        "name": "Heart",
-        "fact": "The heart shape is a universal symbol of love used in all cultures"
-      },
-      {
-        "name": "Crescent",
-        "fact": "A crescent is the shape of the Moon when it is partly lit by the Sun"
-      },
-      {
-        "name": "Trapezoid",
-        "fact": "A trapezoid has one pair of parallel sides and is like a triangle with the top cut off"
-      },
-      {
-        "name": "Parallelogram",
-        "fact": "A parallelogram has two pairs of parallel sides that lean to one side"
-      },
-      {
-        "name": "Rhombus",
-        "fact": "A rhombus has four equal sides like a square but the angles are not 90 degrees"
-      },
-      {
-        "name": "Sphere",
-        "fact": "A sphere is a perfectly round 3D ball where every point on the surface is equidistant"
-      },
-      {
-        "name": "Cube",
-        "fact": "A cube has six square faces twelve edges and eight corners all equal"
-      },
-      {
-        "name": "Cylinder",
-        "fact": "A cylinder is like a can with two circular ends and one curved surface"
-      },
-      {
-        "name": "Cone",
-        "fact": "A cone has a circular base that narrows to a sharp point at the top"
-      },
-      {
-        "name": "Pyramid",
-        "fact": "A pyramid has a square base and four triangular faces meeting at a point"
-      },
-      {
-        "name": "Torus",
-        "fact": "A torus is the mathematical name for a donut shape with a hole in the middle"
-      },
-      {
-        "name": "Tetrahedron",
-        "fact": "A tetrahedron has four triangular faces and is the simplest 3D solid shape"
-      },
-      {
-        "name": "Octahedron",
-        "fact": "An octahedron has eight triangular faces and looks like two pyramids stuck together"
-      },
-      {
-        "name": "Dodecahedron",
-        "fact": "A dodecahedron has twelve pentagonal faces and is one of the five Platonic solids"
-      },
-      {
-        "name": "Icosahedron",
-        "fact": "An icosahedron has twenty triangular faces and looks like a fancy soccer ball"
-      },
-      {
-        "name": "Prism",
-        "fact": "A prism has two identical parallel faces connected by rectangular sides"
-      },
-      {
-        "name": "Ellipsoid",
-        "fact": "An ellipsoid is like a stretched sphere such as the shape of a rugby ball"
-      },
-      {
-        "name": "Mobius Strip",
-        "fact": "A Mobius strip has only one surface and one edge and is impossible to paint both sides"
-      },
-      {
-        "name": "Helix",
-        "fact": "A helix is a three-dimensional spiral like a coiled spring or DNA strand"
-      },
-      {
-        "name": "Spiral",
-        "fact": "A spiral is a curve that moves away from a center point getting wider and wider"
-      },
-      {
-        "name": "Fractal",
-        "fact": "Fractals are shapes that repeat the same pattern at every level of magnification"
-      },
-      {
-        "name": "Parabola",
-        "fact": "A parabola is a U-shaped curve used in satellite dishes and headlights to focus beams"
-      },
-      {
-        "name": "Hyperbola",
-        "fact": "A hyperbola is two mirror-image curved branches facing each other"
-      },
-      {
-        "name": "Catenary",
-        "fact": "A catenary is the natural curve a hanging chain or cable makes under gravity"
-      },
-      {
-        "name": "Cross",
-        "fact": "A cross shape is formed by two lines or rectangles intersecting at right angles"
-      },
-      {
-        "name": "Arrow",
-        "fact": "Arrow shapes point in a direction and have been used for navigation since ancient times"
-      },
-      {
-        "name": "Kite",
-        "fact": "A kite shape has two pairs of adjacent equal sides forming a bird-like diamond"
-      },
-      {
-        "name": "Chevron",
-        "fact": "A chevron is a V-shaped zigzag pattern used in military ranks and road signs"
-      },
-      {
-        "name": "Trefoil",
-        "fact": "A trefoil is a three-lobed leaf shape used in architecture and as a symbol of the trinity"
-      },
-      {
-        "name": "Quatrefoil",
-        "fact": "A quatrefoil has four overlapping circles creating a four-leaf clover pattern"
-      },
-      {
-        "name": "Vesica Piscis",
-        "fact": "A vesica piscis is formed by two overlapping circles with sacred geometric significance"
-      },
-      {
-        "name": "Lemniscate",
-        "fact": "A lemniscate is the figure-eight infinity symbol that never ends"
-      },
-      {
-        "name": "Cardioid",
-        "fact": "A cardioid is a heart-shaped mathematical curve formed by a circle rolling around another"
-      },
-      {
-        "name": "Reuleaux Triangle",
-        "fact": "A Reuleaux triangle is a curved triangle that rolls smoothly like a circle"
-      },
-      {
-        "name": "Deltoid",
-        "fact": "A deltoid is a concave kite shape produced when a small circle rolls inside a larger one"
-      },
-      {
-        "name": "Astroid",
-        "fact": "An astroid is a four-pointed star shape with curved edges traced by a rolling circle"
-      },
-      {
-        "name": "Lune",
-        "fact": "A lune is a crescent-shaped region bounded by two arcs"
-      },
-      {
-        "name": "Annulus",
-        "fact": "An annulus is the ring-shaped region between two concentric circles"
-      },
-      {
-        "name": "Quadrant",
-        "fact": "A quadrant is one quarter of a circle like a pie slice cut at 90 degrees"
-      },
-      {
-        "name": "Sector",
-        "fact": "A sector is a pie-slice portion of a circle between two radii"
-      },
-      {
-        "name": "Segment",
-        "fact": "A segment is a region of a circle cut off by a straight chord"
-      },
-      {
-        "name": "Frustum",
-        "fact": "A frustum is a cone or pyramid with the top cut off creating a flat top surface"
-      },
-      {
-        "name": "Bipyramid",
-        "fact": "A bipyramid is two pyramids joined at their square bases back to back"
-      },
-      {
-        "name": "Antiprism",
-        "fact": "An antiprism is like a prism but with one face rotated and triangles connecting the sides"
-      },
-      {
-        "name": "Prism Hexagonal",
-        "fact": "A hexagonal prism looks like a pencil before it is sharpened"
-      },
-      {
-        "name": "Stellated Octahedron",
-        "fact": "A stellated octahedron looks like the Star of David in three dimensions"
-      },
-      {
-        "name": "Klein Bottle",
-        "fact": "A Klein bottle is a one-sided surface with no inside or outside possible only in 4D"
-      },
-      {
-        "name": "Hypercube",
-        "fact": "A hypercube or tesseract is the four-dimensional equivalent of a cube"
-      },
-      {
-        "name": "Penrose Triangle",
-        "fact": "The Penrose triangle is an impossible shape that cannot exist in three dimensions"
-      },
-      {
-        "name": "Golden Spiral",
-        "fact": "The golden spiral grows in proportion to the golden ratio and appears throughout nature"
-      },
-      {
-        "name": "Fibonacci Spiral",
-        "fact": "The Fibonacci spiral is based on Fibonacci numbers and matches the golden spiral closely"
-      },
-      {
-        "name": "Apollonius Circle",
-        "fact": "An Apollonius circle is defined by all points that maintain a fixed ratio of distances"
-      },
-      {
-        "name": "Epicycloid",
-        "fact": "An epicycloid is the path traced by a point on a circle rolling around another circle"
-      },
-      {
-        "name": "Hypocycloid",
-        "fact": "A hypocycloid is traced by a point on a small circle rolling inside a larger circle"
-      },
-      {
-        "name": "Trochoid",
-        "fact": "A trochoid is the path traced by a point on a circle rolling along a straight line"
-      },
-      {
-        "name": "Cycloid",
-        "fact": "A cycloid is the fastest sliding path between two points under gravity ignoring friction"
-      },
-      {
-        "name": "Archimedean Spiral",
-        "fact": "An Archimedean spiral grows by equal amounts for each turn unlike the golden spiral"
-      },
-      {
-        "name": "Fermat Spiral",
-        "fact": "A Fermat spiral grows so that each turn encloses equal area making it efficient in nature"
-      },
-      {
-        "name": "Logarithmic Spiral",
-        "fact": "A logarithmic spiral maintains the same angle to its radius at every point"
-      },
-      {
-        "name": "Witch of Agnesi",
-        "fact": "The Witch of Agnesi is a bell-shaped curve with a funny name from a translation error"
-      },
-      {
-        "name": "Sinusoidal Spiral",
-        "fact": "Sinusoidal spirals include shapes from circles to lemniscates depending on a single number"
-      },
-      {
-        "name": "Rose Curve",
-        "fact": "A rose curve is a beautiful petal-shaped mathematical curve created from a simple equation"
-      },
-      {
-        "name": "Lissajous Figure",
-        "fact": "Lissajous figures are beautiful looping curves formed by two perpendicular oscillations"
-      },
-      {
-        "name": "Superellipse",
-        "fact": "A superellipse is the shape between an ellipse and a rectangle used in modern furniture design"
-      },
-      {
-        "name": "Stadion",
-        "fact": "A stadion is a rectangle with two semicircles on the ends like a running track shape"
-      },
-      {
-        "name": "Reuleaux Polygon",
-        "fact": "Reuleaux polygons are shapes of constant width based on regular polygons"
-      },
-      {
-        "name": "Tensegrity",
-        "fact": "Tensegrity structures are made of floating compressed rods held together only by tension"
-      },
-      {
-        "name": "Polyhedron",
-        "fact": "A polyhedron is any solid 3D shape with flat faces straight edges and sharp vertices"
-      },
-      {
-        "name": "Zonohedron",
-        "fact": "A zonohedron is a convex polyhedron where every face is a parallelogram"
-      },
-      {
-        "name": "Stellation",
-        "fact": "A stellation is made by extending a polyhedron's faces until they meet creating star shapes"
-      },
-      {
-        "name": "Convex Hull",
-        "fact": "The convex hull is the smallest convex shape that contains a set of points like a rubber band stretched around pegs"
-      },
-      {
-        "name": "Voronoi Cell",
-        "fact": "Voronoi cells divide space based on which seed point is nearest creating organic-looking patterns"
-      },
-      {
-        "name": "Penrose Tiling",
-        "fact": "Penrose tiles are two shapes that can tile a floor infinitely without ever repeating"
-      },
-      {
-        "name": "Squircle",
-        "fact": "A squircle is an intermediate shape between a square and a circle used in smartphone icons"
-      },
-      {
-        "name": "Biangle",
-        "fact": "A biangle or digon has only two sides and two angles and exists on spherical geometry"
-      },
-      {
-        "name": "Hemicube",
-        "fact": "A hemicube is an abstract polyhedron made by identifying opposite faces of a cube"
-      },
-      {
-        "name": "Flat Torus",
-        "fact": "A flat torus is a square where opposite edges are considered to be the same edge"
-      },
-      {
-        "name": "Manifold",
-        "fact": "A manifold is any shape that looks flat and normal when you zoom in very close"
-      },
-      {
-        "name": "Geodesic Dome",
-        "fact": "A geodesic dome is a spherical structure built from triangles invented by Buckminster Fuller"
-      },
-      {
-        "name": "Frustum Cone",
-        "fact": "A conical frustum is the shape of a bucket or drinking cup wider at the top"
-      },
-      {
-        "name": "Torus Knot",
-        "fact": "Torus knots are mathematical knots that wind around a torus surface like a twisted pretzel"
-      },
-      {
-        "name": "Gyroid",
-        "fact": "A gyroid is a complex saddle-shaped periodic surface with no straight lines at all"
-      },
-      {
-        "name": "Schwarz Surface",
-        "fact": "Schwarz minimal surfaces are infinitely repeating soap-film-like mathematical surfaces"
-      },
-      {
-        "name": "Hyperboloid",
-        "fact": "A hyperboloid is a cooling tower shape made entirely from straight lines criss-crossing"
-      },
-      {
-        "name": "Oloid",
-        "fact": "An oloid is a solid that rolls and wobbles unpredictably contacting its entire surface with the ground"
-      },
-      {
-        "name": "Spindle Torus",
-        "fact": "A spindle torus is a torus where the tube is so fat it self-intersects at the center"
-      },
-      {
-        "name": "Horn Torus",
-        "fact": "A horn torus is where the inner circle of a donut shape collapses to a single point"
-      }
+  "Circle": {
+    "explanation": "A circle has no corners or edges and is perfectly round in every direction",
+    "points": [
+      "All points on the circumference are exactly the same distance from the center (radius)",
+      "Has the maximum area for a given perimeter of any 2D shape",
+      "360 degrees or 2π radians — basis for angles and trigonometry",
+      "Never ends — infinite symmetry in every direction",
+      "Appears in nature (planets, ripples, eyes) due to equal force distribution"
+    ]
+  },
+  "Square": {
+    "explanation": "A square has four equal sides and four right angles of exactly 90 degrees",
+    "points": [
+      "All four sides and all four angles are perfectly equal",
+      "Diagonals are equal and bisect each other at 90 degrees",
+      "Area = side²; perimeter = 4 × side",
+      "Most stable and space-efficient tiling shape for floors and grids",
+      "Symbol of stability, order, and equality in many cultures"
+    ]
+  },
+  "Triangle": {
+    "explanation": "A triangle has three sides and the angles inside always add up to 180 degrees",
+    "points": [
+      "Sum of interior angles is always exactly 180° (triangle angle theorem)",
+      "Strongest geometric shape — used in bridges, towers, and trusses",
+      "Types: equilateral (all equal), isosceles (two equal), scalene (all different)",
+      "Basis of trigonometry (sine, cosine, tangent functions)",
+      "Smallest polygon that can enclose area"
+    ]
+  },
+  "Rectangle": {
+    "explanation": "A rectangle has four right angles but opposite sides are equal not all four",
+    "points": [
+      "All angles are exactly 90° — opposite sides equal and parallel",
+      "Area = length × width; perimeter = 2(length + width)",
+      "Most common shape in human-made objects (screens, books, rooms)",
+      "Diagonals are equal and bisect each other",
+      "Special case: when length = width → becomes a square"
+    ]
+  },
+  "Pentagon": {
+    "explanation": "A pentagon has five sides and five corners and is the shape of a home base in baseball",
+    "points": [
+      "Regular pentagon has all sides and angles equal (108° interior angles)",
+      "Appears in nature (starfish, flowers) and architecture (Pentagon building)",
+      "Golden ratio (φ ≈ 1.618) is found in diagonals to side ratio",
+      "Cannot tile the plane by itself without gaps",
+      "Home plate in baseball is a regular pentagon with a triangle attached"
+    ]
+  },
+  "Hexagon": {
+    "explanation": "A hexagon has six sides and honeybees build perfect hexagons in their hives",
+    "points": [
+      "Most efficient shape for tiling plane with least perimeter (honeycomb proof)",
+      "Interior angles = 120° in regular hexagon",
+      "Appears in snowflakes, benzene rings, and soccer ball panels",
+      "Can be divided into 6 equilateral triangles",
+      "Strong structural shape — used in nuts, bolts, and aerospace"
+    ]
+  },
+  "Heptagon": {
+    "explanation": "A heptagon has seven sides and some coins like the British 50p use this shape",
+    "points": [
+      "Regular heptagon cannot be constructed with compass and straightedge alone",
+      "Interior angles ≈ 128.57°",
+      "British 50p and 20p coins are curved heptagons (constant width)",
+      "Appears in some viruses and architecture (heptagonal domes)",
+      "One of the most difficult regular polygons to draw accurately"
+    ]
+  },
+  "Octagon": {
+    "explanation": "An octagon has eight sides and is the shape of a stop sign",
+    "points": [
+      "Regular octagon interior angles = 135°",
+      "Stop signs use octagon because it stands out from other road signs",
+      "Can be formed by cutting corners off a square",
+      "Used in UFC cage, architecture, and mirrors",
+      "Area formula involves side length and √(2 + √2)"
+    ]
+  },
+  "Nonagon": {
+    "explanation": "A nonagon has nine sides and nine angles inside",
+    "points": [
+      "Regular nonagon interior angles = 140°",
+      "Appears in some religious architecture and symbols",
+      "Cannot be constructed exactly with compass and straightedge",
+      "Used in some coin designs and decorative patterns",
+      "Nine-fold symmetry is rare in nature"
+    ]
+  },
+  "Decagon": {
+    "explanation": "A decagon has ten equal sides and ten angles",
+    "points": [
+      "Regular decagon interior angles = 144°",
+      "Closely related to golden ratio and pentagon",
+      "Used in some dice (10-sided) and architecture",
+      "Can be constructed with compass and straightedge",
+      "Appears in some viruses and molecular structures"
+    ]
+  },
+  "Oval": {
+    "explanation": "An oval is like a stretched circle and is also called an ellipse",
+    "points": [
+      "Mathematically an ellipse — two focal points define the curve",
+      "No straight lines — smooth continuous curve",
+      "Used in racetracks, eggs, and sports stadiums",
+      "Area = π × a × b (a = semi-major, b = semi-minor axis)",
+      "Planetary orbits are ellipses (Kepler's first law)"
+    ]
+  },
+  "Diamond": {
+    "explanation": "A diamond shape is a square turned 45 degrees on its corner",
+    "points": [
+      "Also called rhombus when all sides equal",
+      "Diagonals are perpendicular bisectors",
+      "Common in playing cards, baseball fields, and jewelry cuts",
+      "Symbol of strength, clarity, and value",
+      "Can tile the plane perfectly"
+    ]
+  },
+  "Star": {
+    "explanation": "A five-pointed star is called a pentagram and has been used in flags worldwide",
+    "points": [
+      "Regular pentagram is a five-pointed star {5/2} Schläfli symbol",
+      "Contains golden ratio proportions throughout",
+      "Used in flags (USA, China, Turkey, etc.) and mysticism",
+      "Can be drawn with one continuous line",
+      "Appears in nature (starfish, some flowers)"
+    ]
+  },
+  "Heart": {
+    "explanation": "The heart shape is a universal symbol of love used in all cultures",
+    "points": [
+      "Stylized version of human heart — two lobes and point",
+      "Became romantic symbol in Middle Ages",
+      "Used in cards, emojis, tattoos, and branding",
+      "Mathematically can be approximated with cardioid curve",
+      "Almost universal across cultures for love and emotion"
+    ]
+  },
+  "Crescent": {
+    "explanation": "A crescent is the shape of the Moon when it is partly lit by the Sun",
+    "points": [
+      "Appears during waxing and waning Moon phases",
+      "Used in flags (Turkey, Pakistan, Malaysia, etc.) and symbols",
+      "Mathematically a lune — intersection of two circles",
+      "Symbol of growth, change, and Islam",
+      "Also seen in nature (banana, croissant)"
+    ]
+  },
+  "Trapezoid": {
+    "explanation": "A trapezoid has one pair of parallel sides and is like a triangle with the top cut off",
+    "points": [
+      "Exactly one pair of parallel sides (in American definition)",
+      "Median connects midpoints of non-parallel sides",
+      "Area = (sum of parallel sides) × height / 2",
+      "Common in architecture (arches, bridges, tables)",
+      "Can be isosceles (non-parallel sides equal)"
+    ]
+  },
+  "Parallelogram": {
+    "explanation": "A parallelogram has two pairs of parallel sides that lean to one side",
+    "points": [
+      "Opposite sides equal and parallel",
+      "Opposite angles equal; consecutive angles sum to 180°",
+      "Area = base × height (not side length)",
+      "Special cases: rectangle, rhombus, square",
+      "Vectors AB and AD define the shape"
+    ]
+  },
+  "Rhombus": {
+    "explanation": "A rhombus has four equal sides like a square but the angles are not 90 degrees",
+    "points": [
+      "All four sides exactly equal length",
+      "Diagonals bisect each other at 90° and bisect vertex angles",
+      "Area = (d1 × d2) / 2 (product of diagonals)",
+      "Special case of parallelogram",
+      "Used in kites, diamonds, and some crystals"
+    ]
+  },
+  "Sphere": {
+    "explanation": "A sphere is a perfectly round 3D ball where every point on the surface is equidistant",
+    "points": [
+      "All points on surface equidistant from center (radius)",
+      "Maximum volume for given surface area of any 3D shape",
+      "Surface area = 4πr²; volume = (4/3)πr³",
+      "Planets, stars, bubbles, and droplets are approximately spherical",
+      "Great circles are shortest paths on surface (geodesics)"
+    ]
+  },
+  "Cube": {
+    "explanation": "A cube has six square faces twelve edges and eight corners all equal",
+    "points": [
+      "All faces are identical squares",
+      "Volume = side³; surface area = 6 × side²",
+      "Most symmetric Platonic solid",
+      "Used in dice, Rubik’s cube, sugar cubes",
+      "Dual of octahedron"
+    ]
+  },
+  "Cylinder": {
+    "explanation": "A cylinder is like a can with two circular ends and one curved surface",
+    "points": [
+      "Two parallel circular bases connected by curved surface",
+      "Volume = πr²h; lateral surface area = 2πrh",
+      "Used in engines, pipes, cans, columns",
+      "Cross-section is always a circle",
+      "Right circular cylinder is most common"
+    ]
+  },
+  "Cone": {
+    "explanation": "A cone has a circular base that narrows to a sharp point at the top",
+    "points": [
+      "One circular base tapering to apex",
+      "Volume = (1/3)πr²h; surface area = πr(r + l) where l = slant height",
+      "Used in ice cream cones, party hats, volcanoes",
+      "Cross-sections are circles, ellipses, parabolas, hyperbolas",
+      "Conic section — formed by plane cutting cone"
+    ]
+  },
+  "Pyramid": {
+    "explanation": "A pyramid has a square base and four triangular faces meeting at a point",
+    "points": [
+      "Polygonal base with triangular faces to apex",
+      "Volume = (1/3) × base area × height",
+      "Famous in Egypt (Great Pyramid of Giza)",
+      "Can have triangular, square, pentagonal bases, etc.",
+      "Used in architecture and crystal structures"
+    ]
+  },
+  "Torus": {
+    "explanation": "A torus is the mathematical name for a donut shape with a hole in the middle",
+    "points": [
+      "Surface of revolution of circle around axis",
+      "Topology: genus 1 (one hole)",
+      "Used in physics (magnetic fields), architecture, and donuts",
+      "Can be embedded in 3D without self-intersection",
+      "Major radius (R) and minor radius (r) define size"
+    ]
+  },
+  "Tetrahedron": {
+    "explanation": "A tetrahedron has four triangular faces and is the simplest 3D solid shape",
+    "points": [
+      "Simplest polyhedron — 4 vertices, 4 faces, 6 edges",
+      "Regular tetrahedron has all equilateral triangular faces",
+      "Used in molecules (methane), dice (4-sided)",
+      "Dual of itself",
+      "Strongest structural shape for minimal material"
+    ]
+  },
+  "Octahedron": {
+    "explanation": "An octahedron has eight triangular faces and looks like two pyramids stuck together",
+    "points": [
+      "Regular octahedron — 6 vertices, 8 faces, 12 edges",
+      "Dual of cube",
+      "Used in dice (8-sided), crystal structures",
+      "Cross-section can be square, hexagon, triangle",
+      "Can be formed by two square pyramids joined at base"
+    ]
+  },
+  "Dodecahedron": {
+    "explanation": "A dodecahedron has twelve pentagonal faces and is one of the five Platonic solids",
+    "points": [
+      "Regular dodecahedron — 20 vertices, 12 pentagonal faces, 30 edges",
+      "One of five Platonic solids",
+      "Used in some dice (12-sided), cosmology models",
+      "Dual of icosahedron",
+      "Ancient Greek philosophers considered it symbol of cosmos"
+    ]
+  },
+  "Icosahedron": {
+    "explanation": "An icosahedron has twenty triangular faces and looks like a fancy soccer ball",
+    "points": [
+      "Regular icosahedron — 12 vertices, 20 triangular faces, 30 edges",
+      "Most spherical Platonic solid",
+      "Basis for soccer ball (truncated icosahedron)",
+      "Dual of dodecahedron",
+      "Appears in viruses and geodesic domes"
+    ]
+  },
+  "Prism": {
+    "explanation": "A prism has two identical parallel faces connected by rectangular sides",
+    "points": [
+      "Two parallel congruent bases + rectangular lateral faces",
+      "Volume = base area × height",
+      "Named by base: triangular prism, hexagonal prism, etc.",
+      "Used in optics, architecture, and packaging",
+      "Right prism vs oblique prism"
+    ]
+  },
+  "Ellipsoid": {
+    "explanation": "An ellipsoid is like a stretched sphere such as the shape of a rugby ball",
+    "points": [
+      "3D version of ellipse — three axes (a, b, c)",
+      "Earth and planets are oblate spheroids (flattened at poles)",
+      "Volume = (4/3)πabc",
+      "Used in geodesy, computer graphics, and design",
+      "Special cases: sphere (a=b=c), spheroid (two equal)"
+    ]
+  },
+  "Mobius Strip": {
+    "explanation": "A Mobius strip has only one surface and one edge and is impossible to paint both sides",
+    "points": [
+      "Non-orientable surface — only one side",
+      "One continuous edge and one surface",
+      "Cut lengthwise → becomes one longer loop",
+      "Used in conveyor belts, math topology, art",
+      "Discovered independently by Möbius and Listing in 1858"
+    ]
+  },
+  "Helix": {
+    "explanation": "A helix is a three-dimensional spiral like a coiled spring or DNA strand",
+    "points": [
+      "Constant radius spiral along axis",
+      "DNA double helix — right-handed spiral",
+      "Used in springs, screws, DNA, staircases",
+      "Pitch = distance per turn",
+      "Left-handed vs right-handed helices"
+    ]
+  },
+  "Spiral": {
+    "explanation": "A spiral is a curve that moves away from a center point getting wider and wider",
+    "points": [
+      "Types: Archimedean (constant spacing), logarithmic (constant angle)",
+      "Appears in galaxies, seashells, hurricanes",
+      "Golden spiral approximates logarithmic spiral with golden ratio",
+      "Used in art, architecture, and nature patterns",
+      "Never closes — infinite expansion"
+    ]
+  },
+  "Fractal": {
+    "explanation": "Fractals are shapes that repeat the same pattern at every level of magnification",
+    "points": [
+      "Self-similar — looks similar at any scale",
+      "Infinite detail — non-integer dimension",
+      "Examples: Mandelbrot set, coastlines, snowflakes",
+      "Used in computer graphics, nature modeling, chaos theory",
+      "Coastline paradox — length increases with measurement scale"
+    ]
+  },
+  "Parabola": {
+    "explanation": "A parabola is a U-shaped curve used in satellite dishes and headlights to focus beams",
+    "points": [
+      "Defined as points equidistant from focus and directrix",
+      "Reflects parallel rays to focus (satellite dishes, headlights)",
+      "Equation y = ax² + bx + c",
+      "Used in projectile motion paths",
+      "Appears in nature (water fountains, hanging chains ≈ catenary)"
+    ]
+  },
+  "Hyperbola": {
+    "explanation": "A hyperbola is two mirror-image curved branches facing each other",
+    "points": [
+      "Defined as points where difference of distances to two foci is constant",
+      "Used in navigation (LORAN), orbits, cooling towers",
+      "Asymptotes — straight lines branches approach",
+      "Equation (x²/a²) - (y²/b²) = 1",
+      "Conic section — plane cuts cone parallel to axis"
+    ]
+  },
+  "Catenary": {
+    "explanation": "A catenary is the natural curve a hanging chain or cable makes under gravity",
+    "points": [
+      "Equation y = a cosh(x/a)",
+      "Stronger than parabola for load-bearing (arches, suspension bridges)",
+      "Gateway Arch in St. Louis is inverted catenary",
+      "Minimal surface of revolution (catenoid)",
+      "Appears in spider webs, power lines"
+    ]
+  },
+  "Cross": {
+    "explanation": "A cross shape is formed by two lines or rectangles intersecting at right angles",
+    "points": [
+      "Most common forms: Latin cross, Greek cross, Celtic cross",
+      "Universal symbol in Christianity, medicine, flags",
+      "Used in coordinates (x-axis and y-axis)",
+      "Can be rotated 45° to form diamond cross",
+      "Simple and powerful visual symbol"
+    ]
+  },
+  "Arrow": {
+    "explanation": "Arrow shapes point in a direction and have been used for navigation since ancient times",
+    "points": [
+      "Consists of shaft, head (triangle), and sometimes fletching",
+      "Universal symbol for direction and motion",
+      "Used in signs, UI, flowcharts, archery",
+      "Can be one-way or two-way (bidirectional)",
+      "Ancient origins in hunting and warfare"
+    ]
+  },
+  "Kite": {
+    "explanation": "A kite shape has two pairs of adjacent equal sides forming a bird-like diamond",
+    "points": [
+      "Two pairs of adjacent equal sides",
+      "One pair of opposite angles equal",
+      "Diagonals perpendicular — one bisected",
+      "Used in kites, toys, and geometry",
+      "Special case of rhombus when all sides equal"
+    ]
+  },
+  "Chevron": {
+    "explanation": "A chevron is a V-shaped zigzag pattern used in military ranks and road signs",
+    "points": [
+      "Inverted V shape — often repeated",
+      "Used in heraldry, military insignia, warning signs",
+      "Symbol of rank (more chevrons = higher rank)",
+      "Common in road markings (chevron alignment signs)",
+      "Can be inverted or mirrored"
+    ]
+  },
+  "Trefoil": {
+    "explanation": "A trefoil is a three-lobed leaf shape used in architecture and as a symbol of the trinity",
+    "points": [
+      "Three overlapping circles or lobes",
+      "Symbol of Holy Trinity in Christianity",
+      "Used in Gothic architecture (trefoil arches)",
+      "Appears in clover leaves and logos",
+      "Can be interlaced or simple"
+    ]
+  },
+  "Quatrefoil": {
+    "explanation": "A quatrefoil has four overlapping circles creating a four-leaf clover pattern",
+    "points": [
+      "Four lobes — like four-leaf clover",
+      "Common in Gothic and Renaissance architecture",
+      "Symbol of good luck (four-leaf clover)",
+      "Used in windows, tiles, and decorative patterns",
+      "Can be square or circular based"
+    ]
+  },
+  "Vesica Piscis": {
+    "explanation": "A vesica piscis is formed by two overlapping circles with sacred geometric significance",
+    "points": [
+      "Intersection of two circles of equal radius",
+      "Forms lens/almandine shape",
+      "Sacred in Christian art (ichthys symbol)",
+      "Basis for many geometric constructions",
+      "Ratio of width to height = √3"
+    ]
+  },
+  "Lemniscate": {
+    "explanation": "A lemniscate is the figure-eight infinity symbol that never ends",
+    "points": [
+      "Figure-eight curve — symbol of infinity (∞)",
+      "Equation (x² + y²)² = a²(x² - y²)",
+      "Discovered by Bernoulli in 1694",
+      "Used in mathematics, magic, and mysticism",
+      "Has two foci like ellipse"
+    ]
+  },
+  "Cardioid": {
+    "explanation": "A cardioid is a heart-shaped mathematical curve formed by a circle rolling around another",
+    "points": [
+      "Heart-shaped curve with one cusp",
+      "Generated by circle rolling around fixed circle",
+      "Equation r = a(1 + cos θ)",
+      "Used in acoustics, optics, and gear design",
+      "Has reflective property like parabola"
+    ]
+  },
+  "Reuleaux Triangle": {
+    "explanation": "A Reuleaux triangle is a curved triangle that rolls smoothly like a circle",
+    "points": [
+      "Constant width — same diameter in every direction",
+      "Formed from intersection of three circles",
+      "Used in some rotary engines (Wankel) and drill bits",
+      "Rolls smoothly between parallel lines",
+      "Not a true circle but has same width"
+    ]
+  },
+  "Deltoid": {
+    "explanation": "A deltoid is a concave kite shape produced when a small circle rolls inside a larger one",
+    "points": [
+      "Three-cusped hypocycloid",
+      "Generated by circle rolling inside circle 3× radius",
+      "Used in some gear designs and math art",
+      "Has three cusps (sharp points)",
+      "Also called tricuspoid"
+    ]
+  },
+  "Astroid": {
+    "explanation": "An astroid is a four-pointed star shape with curved edges traced by a rolling circle",
+    "points": [
+      "Four-cusped hypocycloid",
+      "Generated by circle rolling inside 4× radius circle",
+      "Equation x²/³ + y²/³ = a²/³",
+      "Used in math, architecture, and jewelry",
+      "Has four cusps and diamond-like symmetry"
+    ]
+  },
+  "Lune": {
+    "explanation": "A lune is a crescent-shaped region bounded by two arcs",
+    "points": [
+      "Area between two circular arcs",
+      "Used in spherical geometry",
+      "Appears in Moon phases and flags",
+      "Can be used to square the circle (Hippocrates)",
+      "Symmetric when arcs equal radius"
+    ]
+  },
+  "Annulus": {
+    "explanation": "An annulus is the ring-shaped region between two concentric circles",
+    "points": [
+      "Area between two concentric circles",
+      "Area = π(R² - r²)",
+      "Used in washers, rings, and planetary rings",
+      "Constant width if thickness uniform",
+      "Appears in tree rings and growth patterns"
+    ]
+  },
+  "Quadrant": {
+    "explanation": "A quadrant is one quarter of a circle like a pie slice cut at 90 degrees",
+    "points": [
+      "90° sector of circle",
+      "Area = (πr²)/4",
+      "Used in graphing (four quadrants)",
+      "Navigation and astronomy (quadrant instrument)",
+      "Basis of Cartesian coordinate system"
+    ]
+  },
+  "Sector": {
+    "explanation": "A sector is a pie-slice portion of a circle between two radii",
+    "points": [
+      "Area = (θ/360) × πr² or (θ/2) r² in radians",
+      "Used in pie charts, clocks, and fans",
+      "Minor sector (<180°), major sector (>180°)",
+      "Angle θ defines size",
+      "Arc length = (θ/360) × 2πr"
+    ]
+  },
+  "Segment": {
+    "explanation": "A segment is a region of a circle cut off by a straight chord",
+    "points": [
+      "Area between chord and arc",
+      "Used in architecture (arches) and math",
+      "Formula involves inverse trig functions",
+      "Minor segment (< semicircle), major segment",
+      "Appears in lenses and circular windows"
+    ]
+  },
+  "Frustum": {
+    "explanation": "A frustum is a cone or pyramid with the top cut off creating a flat top surface",
+    "points": [
+      "Truncated cone or pyramid",
+      "Volume = (h/3)π(R² + Rr + r²) for cone",
+      "Used in buckets, lampshades, cooling towers",
+      "Has two parallel bases (different sizes)",
+      "Lateral surface is trapezoidal"
+    ]
+  },
+  "Bipyramid": {
+    "explanation": "A bipyramid is two pyramids joined at their square bases back to back",
+    "points": [
+      "Two pyramids glued at base",
+      "Used in dice (octahedron = square bipyramid)",
+      "Can have triangular, pentagonal, etc. bases",
+      "Dual of prism",
+      "Symmetric around equatorial plane"
+    ]
+  },
+  "Antiprism": {
+    "explanation": "An antiprism is like a prism but with one face rotated and triangles connecting the sides",
+    "points": [
+      "Two parallel regular polygon bases rotated relative to each other",
+      "Lateral faces are equilateral triangles",
+      "More spherical than prism",
+      "Used in chemistry (molecular geometry)",
+      "Uniform antiprisms are Archimedean solids"
+    ]
+  },
+  "Prism Hexagonal": {
+    "explanation": "A hexagonal prism looks like a pencil before it is sharpened",
+    "points": [
+      "Two parallel hexagonal bases",
+      "Six rectangular lateral faces",
+      "Used in pencils, bolts, and crystals",
+      "Volume = base area × height",
+      "Regular hexagonal prism has perfect hexagonal bases"
+    ]
+  },
+  "Stellated Octahedron": {
+    "explanation": "A stellated octahedron looks like the Star of David in three dimensions",
+    "points": [
+      "Compound of two dual tetrahedra",
+      "Looks like 3D Star of David",
+      "One of Kepler-Poinsot polyhedra",
+      "Self-intersecting surfaces",
+      "Used in art and mysticism"
+    ]
+  },
+  "Klein Bottle": {
+    "explanation": "A Klein bottle is a one-sided surface with no inside or outside possible only in 4D",
+    "points": [
+      "Non-orientable surface like Möbius strip but closed",
+      "No distinct inside/outside",
+      "Cannot be embedded in 3D without self-intersection",
+      "Named after Felix Klein",
+      "4D equivalent of Möbius strip"
+    ]
+  },
+  "Hypercube": {
+    "explanation": "A hypercube or tesseract is the four-dimensional equivalent of a cube",
+    "points": [
+      "4D analog of cube",
+      "8 cubic cells, 24 square faces, 32 edges, 16 vertices",
+      "Projection to 3D looks like cube within cube",
+      "Used in physics (string theory), graphics, math",
+      "General n-dimensional hypercube = n-cube"
+    ]
+  },
+  "Penrose Triangle": {
+    "explanation": "The Penrose triangle is an impossible shape that cannot exist in three dimensions",
+    "points": [
+      "Optical illusion — impossible triangle",
+      "Created by Oscar Reutersvärd (1934), popularized by Penrose",
+      "Used in Escher art and logos",
+      "Cannot be built in 3D without breaking",
+      "Demonstrates non-transitive geometry"
+    ]
+  },
+  "Golden Spiral": {
+    "explanation": "The golden spiral grows in proportion to the golden ratio and appears throughout nature",
+    "points": [
+      "Logarithmic spiral with growth factor φ (≈1.618)",
+      "Approximated by quarter-circle Fibonacci squares",
+      "Appears in nautilus shells, galaxies, hurricanes",
+      "Related to golden ratio and Fibonacci sequence",
+      "Aesthetic and harmonious proportions"
+    ]
+  },
+  "Fibonacci Spiral": {
+    "explanation": "The Fibonacci spiral is based on Fibonacci numbers and matches the golden spiral closely",
+    "points": [
+      "Quarter-circle arcs with radii following Fibonacci sequence",
+      "Approximates golden spiral",
+      "Appears in sunflower seeds, pinecones, pineapple",
+      "Demonstrates Fibonacci in nature",
+      "Used in art, design, and photography"
+    ]
+  },
+  "Apollonius Circle": {
+    "explanation": "An Apollonius circle is defined by all points that maintain a fixed ratio of distances",
+    "points": [
+      "Set of points with constant distance ratio to two fixed points",
+      "Used in geometry and inversive geometry",
+      "Special case: when ratio = 1 → perpendicular bisector",
+      "Named after Apollonius of Perga",
+      "Important in circle packing and fractals"
+    ]
+  },
+  "Epicycloid": {
+    "explanation": "An epicycloid is the path traced by a point on a circle rolling around another circle",
+    "points": [
+      "Generated by circle rolling outside fixed circle",
+      "Cardioid = 1:1 ratio, nephroid = 2:1 ratio",
+      "Used in gear design and math art",
+      "Special case: roulette curve",
+      "Appears in planetary motion models"
+    ]
+  },
+  "Hypocycloid": {
+    "explanation": "A hypocycloid is traced by a point on a small circle rolling inside a larger circle",
+    "points": [
+      "Astroid = 4 cusps, deltoid = 3 cusps",
+      "Used in gears (cycloidal gears)",
+      "Deltoid = 3:1 ratio, astroid = 4:1 ratio",
+      "Can form straight line (Tusi couple)",
+      "Important in geometry and mechanisms"
+    ]
+  },
+  "Trochoid": {
+    "explanation": "A trochoid is the path traced by a point on a circle rolling along a straight line",
+    "points": [
+      "Cycloid = point on rim, curtate cycloid = inside, prolate = outside",
+      "Cycloid is brachistochrone (fastest descent curve)",
+      "Used in gears, cams, and architecture",
+      "Famous in brachistochrone problem",
+      "Generates arches and arches in buildings"
+    ]
+  },
+  "Cycloid": {
+    "explanation": "A cycloid is the fastest sliding path between two points under gravity ignoring friction",
+    "points": [
+      "Brachistochrone curve — fastest descent under gravity",
+      "Tautochrone — same travel time regardless of starting point",
+      "Generated by circle rolling on line",
+      "Used in clocks (cycloidal pendulums)",
+      "Arches in architecture approximate cycloids"
+    ]
+  },
+  "Archimedean Spiral": {
+    "explanation": "An Archimedean spiral grows by equal amounts for each turn unlike the golden spiral",
+    "points": [
+      "Constant separation between arms",
+      "Equation r = a + bθ",
+      "Used in springs, records, and some galaxies",
+      "Equal spacing — not logarithmic",
+      "Named after Archimedes"
+    ]
+  },
+  "Fermat Spiral": {
+    "explanation": "A Fermat spiral grows so that each turn encloses equal area making it efficient in nature",
+    "points": [
+      "Parabolic spiral — r² = a²θ",
+      "Seeds in sunflowers follow Fermat spiral",
+      "Equal area per turn — efficient packing",
+      "Used in phyllotaxis (plant growth patterns)",
+      "Approximately golden spiral"
+    ]
+  },
+  "Logarithmic Spiral": {
+    "explanation": "A logarithmic spiral maintains the same angle to its radius at every point",
+    "points": [
+      "Constant angle to radius vector (equiangular spiral)",
+      "Self-similar — looks same at any scale",
+      "Appears in nautilus, galaxies, spider webs",
+      "Equation r = ae^(bθ)",
+      "Bernoulli called it 'spira mirabilis'"
+    ]
+  },
+  "Witch of Agnesi": {
+    "explanation": "The Witch of Agnesi is a bell-shaped curve with a funny name from a translation error",
+    "points": [
+      "Equation y = 8a³/(x² + 4a²)",
+      "Named after Maria Gaetana Agnesi",
+      "Translation error turned 'versiera' (curve) into 'witch'",
+      "Used in probability, physics, and engineering",
+      "Has horizontal asymptote y=0"
+    ]
+  },
+  "Sinusoidal Spiral": {
+    "explanation": "Sinusoidal spirals include shapes from circles to lemniscates depending on a single number",
+    "points": [
+      "General form r^n = a^n cos(nθ)",
+      "n=1 → cardioid, n=2 → lemniscate, n→∞ → circle",
+      "Includes many famous curves",
+      "Used in math art and polar equations",
+      "Parameter n controls shape"
+    ]
+  },
+  "Rose Curve": {
+    "explanation": "A rose curve is a beautiful petal-shaped mathematical curve created from a simple equation",
+    "points": [
+      "Equation r = a cos(kθ) or sin(kθ)",
+      "k petals if k odd, 2k if k even",
+      "Used in art, design, and polar plots",
+      "Beautiful symmetry",
+      "Named for flower-like appearance"
+    ]
+  },
+  "Lissajous Figure": {
+    "explanation": "Lissajous figures are beautiful looping curves formed by two perpendicular oscillations",
+    "points": [
+      "Parametric curve x = A sin(at + δ), y = B sin(bt)",
+      "Used in oscilloscopes and laser shows",
+      "Ratio of frequencies determines shape",
+      "Named after Jules Lissajous",
+      "Beautiful when frequencies rational"
+    ]
+  },
+  "Superellipse": {
+    "explanation": "A superellipse is the shape between an ellipse and a rectangle used in modern furniture design",
+    "points": [
+      "Equation (|x|/a)^n + (|y|/b)^n = 1",
+      "n>2 → more rectangular, n<2 → pinched",
+      "Used in design (Piet Hein tables, stadiums)",
+      "Also called Lamé curve",
+      "Smooth transition between ellipse and rectangle"
+    ]
+  },
+  "Stadion": {
+    "explanation": "A stadion is a rectangle with two semicircles on the ends like a running track shape",
+    "points": [
+      "Also called capsule or racetrack shape",
+      "Two semicircles + rectangle",
+      "Used in running tracks, pills, stadiums",
+      "Constant width in some orientations",
+      "Smooth perimeter"
+    ]
+  },
+  "Reuleaux Polygon": {
+    "explanation": "Reuleaux polygons are shapes of constant width based on regular polygons",
+    "points": [
+      "Constant width — same diameter in all directions",
+      "Reuleaux triangle most famous",
+      "Used in rotary engines, coins, drill bits",
+      "Rolls smoothly like circle",
+      "Not circular but constant width"
+    ]
+  },
+  "Tensegrity": {
+    "explanation": "Tensegrity structures are made of floating compressed rods held together only by tension",
+    "points": [
+      "Isolated components in compression, continuous tension",
+      "Invented by Buckminster Fuller",
+      "Used in sculptures, bridges, biology (cells)",
+      "Very efficient use of materials",
+      "Appears to defy gravity"
+    ]
+  },
+  "Polyhedron": {
+    "explanation": "A polyhedron is any solid 3D shape with flat faces straight edges and sharp vertices",
+    "points": [
+      "Flat polygonal faces, straight edges, vertices",
+      "Convex vs concave vs star polyhedra",
+      "Euler characteristic V - E + F = 2 for convex",
+      "Platonic solids are regular polyhedra",
+      "Used in architecture, games, chemistry"
+    ]
+  },
+  "Zonohedron": {
+    "explanation": "A zonohedron is a convex polyhedron where every face is a parallelogram",
+    "points": [
+      "All faces parallelograms",
+      "Generated by Minkowski sum of line segments",
+      "Rhombic dodecahedron is common example",
+      "Used in crystallography",
+      "Has central symmetry"
+    ]
+  },
+  "Stellation": {
+    "explanation": "A stellation is made by extending a polyhedron's faces until they meet creating star shapes",
+    "points": [
+      "Extending faces to form new polyhedra",
+      "Kepler-Poinsot polyhedra are stellations of Platonic solids",
+      "Creates star polyhedra",
+      "Used in art and geometry",
+      "Can be infinite in some cases"
+    ]
+  },
+  "Convex Hull": {
+    "explanation": "The convex hull is the smallest convex shape that contains a set of points like a rubber band stretched around pegs",
+    "points": [
+      "Smallest convex set containing all points",
+      "Like rubber band around pins",
+      "Used in computer graphics, GIS, collision detection",
+      "Algorithms: Graham scan, Jarvis march",
+      "Boundary is convex polygon"
+    ]
+  },
+  "Voronoi Cell": {
+    "explanation": "Voronoi cells divide space based on which seed point is nearest creating organic-looking patterns",
+    "points": [
+      "Region closer to its seed than any other",
+      "Creates natural-looking divisions",
+      "Used in maps, art, robotics, biology",
+      "Dual of Delaunay triangulation",
+      "Appears in giraffe patterns, leaf cells"
+    ]
+  },
+  "Penrose Tiling": {
+    "explanation": "Penrose tiles are two shapes that can tile a floor infinitely without ever repeating",
+    "points": [
+      "Aperiodic tiling — no translational symmetry",
+      "Two rhombi (fat and thin) with matching rules",
+      "Shows five-fold symmetry",
+      "Used in quasicrystals and art",
+      "Discovered by Roger Penrose"
+    ]
+  },
+  "Squircle": {
+    "explanation": "A squircle is an intermediate shape between a square and a circle used in smartphone icons",
+    "points": [
+      "Superellipse with n ≈ 4",
+      "Used in iOS icons, Samsung icons",
+      "Smoother than square, rounder than circle",
+      "Equation (|x|/a)^n + (|y|/b)^n = 1",
+      "Modern design trend"
+    ]
+  },
+  "Biangle": {
+    "explanation": "A biangle or digon has only two sides and two angles and exists on spherical geometry",
+    "points": [
+      "Two-sided polygon — digon",
+      "Exists on sphere or hyperbolic plane",
+      "Two semicircles sharing diameter",
+      "Angles >180° possible",
+      "Degenerate in Euclidean geometry"
+    ]
+  },
+  "Hemicube": {
+    "explanation": "A hemicube is an abstract polyhedron made by identifying opposite faces of a cube",
+    "points": [
+      "Half-cube — projective polyhedron",
+      "Three square faces meeting at each vertex",
+      "Used in projective geometry",
+      "Topological sphere with crosscaps",
+      "Abstract — cannot be realized in 3D without intersection"
+    ]
+  },
+  "Flat Torus": {
+    "explanation": "A flat torus is a square where opposite edges are considered to be the same edge",
+    "points": [
+      "Square with opposite sides identified",
+      "No curvature — flat metric",
+      "Used in video games (Pac-Man screen wrap)",
+      "Topology of torus in 2D",
+      "Can tile plane periodically"
+    ]
+  },
+  "Manifold": {
+    "explanation": "A manifold is any shape that looks flat and normal when you zoom in very close",
+    "points": [
+      "Locally Euclidean space",
+      "Examples: plane, sphere, torus, Klein bottle",
+      "Used in general relativity (spacetime manifold)",
+      "Can be 2D, 3D, 4D, etc.",
+      "Differentiable, topological, smooth manifolds"
+    ]
+  },
+  "Geodesic Dome": {
+    "explanation": "A geodesic dome is a spherical structure built from triangles invented by Buckminster Fuller",
+    "points": [
+      "Approximates sphere with triangular faces",
+      "Very strong for weight — used in biospheres",
+      "Invented/popularized by Buckminster Fuller",
+      "Used in Epcot, radar stations, greenhouses",
+      "Distributes stress evenly"
+    ]
+  },
+  "Frustum Cone": {
+    "explanation": "A conical frustum is the shape of a bucket or drinking cup wider at the top",
+    "points": [
+      "Truncated cone",
+      "Volume = (h/3)π(R² + Rr + r²)",
+      "Used in buckets, lampshades, funnels",
+      "Lateral surface is trapezoidal",
+      "Common in everyday objects"
+    ]
+  },
+  "Torus Knot": {
+    "explanation": "Torus knots are mathematical knots that wind around a torus surface like a twisted pretzel",
+    "points": [
+      "Knot wrapped around torus",
+      "Classified by (p,q) — winds p times one way, q the other",
+      "Trefoil knot = (2,3), cinquefoil = (2,5)",
+      "Used in math, art, and jewelry",
+      "Can be periodic or non-periodic"
+    ]
+  },
+  "Gyroid": {
+    "explanation": "A gyroid is a complex saddle-shaped periodic surface with no straight lines at all",
+    "points": [
+      "Minimal surface — zero mean curvature",
+      "Triply periodic — repeats in three directions",
+      "Found in butterfly wings and soap films",
+      "No straight lines or flat areas",
+      "Used in materials science and 3D printing"
+    ]
+  },
+  "Schwarz Surface": {
+    "explanation": "Schwarz minimal surfaces are infinitely repeating soap-film-like mathematical surfaces",
+    "points": [
+      "Minimal surfaces — zero mean curvature",
+      "Triply periodic",
+      "Schwarz P, D, H surfaces famous",
+      "Used in materials and architecture",
+      "Incredibly complex yet elegant"
+    ]
+  },
+  "Hyperboloid": {
+    "explanation": "A hyperboloid is a cooling tower shape made entirely from straight lines criss-crossing",
+    "points": [
+      "Ruled surface — made of straight lines",
+      "Used in cooling towers (hyperbolic shape)",
+      "Equation (x²/a²) + (y²/b²) - (z²/c²) = 1",
+      "Strong structure with minimal material",
+      "Double hyperboloid or one-sheet"
+    ]
+  },
+  "Oloid": {
+    "explanation": "An oloid is a solid that rolls and wobbles unpredictably contacting its entire surface with the ground",
+    "points": [
+      "Developed by Paul Schatz",
+      "Two circles at 90° generate surface",
+      "Rolls with unpredictable wobble",
+      "Touches entire surface when rolling",
+      "Used in mixers and toys"
+    ]
+  },
+  "Spindle Torus": {
+    "explanation": "A spindle torus is a torus where the tube is so fat it self-intersects at the center",
+    "points": [
+      "Self-intersecting torus",
+      "Tube radius > center radius",
+      "Looks like two horns intersecting",
+      "Used in math visualization",
+      "Degenerate case of torus"
+    ]
+  },
+  "Horn Torus": {
+    "explanation": "A horn torus is where the inner circle of a donut shape collapses to a single point",
+    "points": [
+      "Tube radius = center radius",
+      "Inner equator collapses to point",
+      "Looks like horn or apple shape",
+      "Self-intersecting at center",
+      "Mathematical curiosity"
     ]
   }
 }

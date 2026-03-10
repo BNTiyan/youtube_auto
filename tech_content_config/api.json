@@ -1,1106 +1,1002 @@
 {
-  "api": {
-    "items": [
-      {
-        "name": "API",
-        "explanation": "An API is an interface that lets different software applications communicate with each other",
-        "points": [
-          "Core concept of API used widely in modern software and AI systems",
-          "Important for understanding: An API is an interface that lets different software applications communicate with each other",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "REST API",
-        "explanation": "REST APIs use standard HTTP methods to create, read, update, and delete web resources",
-        "points": [
-          "Core concept of REST API used widely in modern software and AI systems",
-          "Important for understanding: REST APIs use standard HTTP methods to create, read, update, and delete web resources",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "GraphQL",
-        "explanation": "GraphQL lets clients request exactly the data they need in one flexible query",
-        "points": [
-          "Core concept of GraphQL used widely in modern software and AI systems",
-          "Important for understanding: GraphQL lets clients request exactly the data they need in one flexible query",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "gRPC",
-        "explanation": "gRPC is a high-performance RPC framework from Google using Protocol Buffers over HTTP/2",
-        "points": [
-          "Core concept of gRPC used widely in modern software and AI systems",
-          "Important for understanding: gRPC is a high-performance RPC framework from Google using Protocol Buffers over HTTP/2",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "WebSocket",
-        "explanation": "WebSockets provide persistent two-way communication channels between client and server",
-        "points": [
-          "Core concept of WebSocket used widely in modern software and AI systems",
-          "Important for understanding: WebSockets provide persistent two-way communication channels between client and server",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Webhook",
-        "explanation": "Webhooks push real-time event data to your server URL when something happens in another app",
-        "points": [
-          "Core concept of Webhook used widely in modern software and AI systems",
-          "Important for understanding: Webhooks push real-time event data to your server URL when something happens in another app",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "HTTP Methods",
-        "explanation": "GET, POST, PUT, PATCH, and DELETE are the HTTP verbs that define what an API request does",
-        "points": [
-          "Core concept of HTTP Methods used widely in modern software and AI systems",
-          "Important for understanding: GET, POST, PUT, PATCH, and DELETE are the HTTP verbs that define what an API request does",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Status Codes",
-        "explanation": "HTTP status codes like 200, 404, and 500 tell the client what happened to its request",
-        "points": [
-          "Core concept of Status Codes used widely in modern software and AI systems",
-          "Important for understanding: HTTP status codes like 200, 404, and 500 tell the client what happened to its request",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Authentication",
-        "explanation": "API authentication verifies who is making a request using API keys, tokens, or OAuth",
-        "points": [
-          "Core concept of Authentication used widely in modern software and AI systems",
-          "Important for understanding: API authentication verifies who is making a request using API keys, tokens, or OAuth",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Rate Limiting",
-        "explanation": "Rate limiting restricts how many API requests a client can make in a given time window",
-        "points": [
-          "Core concept of Rate Limiting used widely in modern software and AI systems",
-          "Important for understanding: Rate limiting restricts how many API requests a client can make in a given time window",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Endpoint",
-        "explanation": "An API endpoint is a specific URL that represents a resource or action in the API",
-        "points": [
-          "Core concept of Endpoint used widely in modern software and AI systems",
-          "Important for understanding: An API endpoint is a specific URL that represents a resource or action in the API",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Request Body",
-        "explanation": "The request body carries data sent to the API usually in JSON format for POST and PUT",
-        "points": [
-          "Core concept of Request Body used widely in modern software and AI systems",
-          "Important for understanding: The request body carries data sent to the API usually in JSON format for POST and PUT",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Response Body",
-        "explanation": "The response body contains the data the API returns after processing the request",
-        "points": [
-          "Core concept of Response Body used widely in modern software and AI systems",
-          "Important for understanding: The response body contains the data the API returns after processing the request",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Headers",
-        "explanation": "HTTP headers pass metadata like content type, authorization tokens, and cache rules",
-        "points": [
-          "Core concept of Headers used widely in modern software and AI systems",
-          "Important for understanding: HTTP headers pass metadata like content type, authorization tokens, and cache rules",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Query Parameters",
-        "explanation": "Query parameters are key-value pairs appended to URLs to filter or customize API responses",
-        "points": [
-          "Core concept of Query Parameters used widely in modern software and AI systems",
-          "Important for understanding: Query parameters are key-value pairs appended to URLs to filter or customize API responses",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Path Parameters",
-        "explanation": "Path parameters are variable parts of the URL that identify specific resources",
-        "points": [
-          "Core concept of Path Parameters used widely in modern software and AI systems",
-          "Important for understanding: Path parameters are variable parts of the URL that identify specific resources",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Pagination",
-        "explanation": "Pagination splits large API responses into pages to avoid returning too much data at once",
-        "points": [
-          "Core concept of Pagination used widely in modern software and AI systems",
-          "Important for understanding: Pagination splits large API responses into pages to avoid returning too much data at once",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "OAuth 2.0",
-        "explanation": "OAuth 2.0 lets users authorize apps to access their data without sharing passwords",
-        "points": [
-          "Core concept of OAuth 2.0 used widely in modern software and AI systems",
-          "Important for understanding: OAuth 2.0 lets users authorize apps to access their data without sharing passwords",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "JWT",
-        "explanation": "JSON Web Tokens are compact signed tokens used to securely transmit authentication claims",
-        "points": [
-          "Core concept of JWT used widely in modern software and AI systems",
-          "Important for understanding: JSON Web Tokens are compact signed tokens used to securely transmit authentication claims",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "API Key",
-        "explanation": "API keys are simple secret strings that authenticate clients making requests to an API",
-        "points": [
-          "Core concept of API Key used widely in modern software and AI systems",
-          "Important for understanding: API keys are simple secret strings that authenticate clients making requests to an API",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "HTTPS",
-        "explanation": "HTTPS encrypts all data between client and server so it cannot be intercepted",
-        "points": [
-          "Core concept of HTTPS used widely in modern software and AI systems",
-          "Important for understanding: HTTPS encrypts all data between client and server so it cannot be intercepted",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "TLS",
-        "explanation": "TLS is the encryption protocol that secures HTTPS connections between client and server",
-        "points": [
-          "Core concept of TLS used widely in modern software and AI systems",
-          "Important for understanding: TLS is the encryption protocol that secures HTTPS connections between client and server",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "CORS",
-        "explanation": "CORS controls which web origins are allowed to make requests to your API",
-        "points": [
-          "Core concept of CORS used widely in modern software and AI systems",
-          "Important for understanding: CORS controls which web origins are allowed to make requests to your API",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "JSON",
-        "explanation": "JSON is the universal lightweight data format for sending structured data between systems",
-        "points": [
-          "Core concept of JSON used widely in modern software and AI systems",
-          "Important for understanding: JSON is the universal lightweight data format for sending structured data between systems",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "XML",
-        "explanation": "XML is an older structured data format used in legacy APIs and enterprise systems",
-        "points": [
-          "Core concept of XML used widely in modern software and AI systems",
-          "Important for understanding: XML is an older structured data format used in legacy APIs and enterprise systems",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Protocol Buffers",
-        "explanation": "Protobuf is Google's binary serialization format much smaller and faster than JSON",
-        "points": [
-          "Core concept of Protocol Buffers used widely in modern software and AI systems",
-          "Important for understanding: Protobuf is Google's binary serialization format much smaller and faster than JSON",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "OpenAPI Spec",
-        "explanation": "OpenAPI is the standard specification for documenting RESTful APIs in a machine-readable format",
-        "points": [
-          "Core concept of OpenAPI Spec used widely in modern software and AI systems",
-          "Important for understanding: OpenAPI is the standard specification for documenting RESTful APIs in a machine-readable format",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Swagger",
-        "explanation": "Swagger tools generate interactive API documentation and client SDKs from OpenAPI specs",
-        "points": [
-          "Core concept of Swagger used widely in modern software and AI systems",
-          "Important for understanding: Swagger tools generate interactive API documentation and client SDKs from OpenAPI specs",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "API Gateway",
-        "explanation": "An API gateway is a single entry point that routes requests, handles auth, and manages traffic",
-        "points": [
-          "Core concept of API Gateway used widely in modern software and AI systems",
-          "Important for understanding: An API gateway is a single entry point that routes requests, handles auth, and manages traffic",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Reverse Proxy",
-        "explanation": "A reverse proxy sits in front of servers to handle routing, load balancing, and security",
-        "points": [
-          "Core concept of Reverse Proxy used widely in modern software and AI systems",
-          "Important for understanding: A reverse proxy sits in front of servers to handle routing, load balancing, and security",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Load Balancer",
-        "explanation": "A load balancer distributes incoming API requests across multiple servers for reliability",
-        "points": [
-          "Core concept of Load Balancer used widely in modern software and AI systems",
-          "Important for understanding: A load balancer distributes incoming API requests across multiple servers for reliability",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Caching",
-        "explanation": "API response caching stores results so repeated identical requests are served instantly",
-        "points": [
-          "Core concept of Caching used widely in modern software and AI systems",
-          "Important for understanding: API response caching stores results so repeated identical requests are served instantly",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Idempotency",
-        "explanation": "An idempotent API call can be safely repeated multiple times without different side effects",
-        "points": [
-          "Core concept of Idempotency used widely in modern software and AI systems",
-          "Important for understanding: An idempotent API call can be safely repeated multiple times without different side effects",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Versioning",
-        "explanation": "API versioning lets you update your API without breaking existing clients using the old version",
-        "points": [
-          "Core concept of Versioning used widely in modern software and AI systems",
-          "Important for understanding: API versioning lets you update your API without breaking existing clients using the old version",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Deprecation",
-        "explanation": "API deprecation signals that an endpoint will be removed giving developers time to migrate",
-        "points": [
-          "Core concept of Deprecation used widely in modern software and AI systems",
-          "Important for understanding: API deprecation signals that an endpoint will be removed giving developers time to migrate",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Throttling",
-        "explanation": "Throttling slows down or blocks API requests that exceed defined usage limits",
-        "points": [
-          "Core concept of Throttling used widely in modern software and AI systems",
-          "Important for understanding: Throttling slows down or blocks API requests that exceed defined usage limits",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Circuit Breaker",
-        "explanation": "A circuit breaker stops calling a failing API temporarily to prevent cascading failures",
-        "points": [
-          "Core concept of Circuit Breaker used widely in modern software and AI systems",
-          "Important for understanding: A circuit breaker stops calling a failing API temporarily to prevent cascading failures",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Retry Logic",
-        "explanation": "Retry logic automatically resends failed API requests with exponential backoff",
-        "points": [
-          "Core concept of Retry Logic used widely in modern software and AI systems",
-          "Important for understanding: Retry logic automatically resends failed API requests with exponential backoff",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Timeout",
-        "explanation": "API timeouts cancel requests that take too long to prevent hanging indefinitely",
-        "points": [
-          "Core concept of Timeout used widely in modern software and AI systems",
-          "Important for understanding: API timeouts cancel requests that take too long to prevent hanging indefinitely",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "SDK",
-        "explanation": "An SDK is a pre-built library in your language that makes calling an API much easier",
-        "points": [
-          "Core concept of SDK used widely in modern software and AI systems",
-          "Important for understanding: An SDK is a pre-built library in your language that makes calling an API much easier",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Postman",
-        "explanation": "Postman is the most popular tool for testing, documenting, and collaborating on APIs",
-        "points": [
-          "Core concept of Postman used widely in modern software and AI systems",
-          "Important for understanding: Postman is the most popular tool for testing, documenting, and collaborating on APIs",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Insomnia",
-        "explanation": "Insomnia is a REST and GraphQL API testing client with a clean developer-friendly interface",
-        "points": [
-          "Core concept of Insomnia used widely in modern software and AI systems",
-          "Important for understanding: Insomnia is a REST and GraphQL API testing client with a clean developer-friendly interface",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "cURL",
-        "explanation": "cURL is a command-line tool for making HTTP requests to test APIs from the terminal",
-        "points": [
-          "Core concept of cURL used widely in modern software and AI systems",
-          "Important for understanding: cURL is a command-line tool for making HTTP requests to test APIs from the terminal",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Mock API",
-        "explanation": "Mock APIs simulate real API responses so frontend development can proceed without a backend",
-        "points": [
-          "Core concept of Mock API used widely in modern software and AI systems",
-          "Important for understanding: Mock APIs simulate real API responses so frontend development can proceed without a backend",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "API Contract",
-        "explanation": "An API contract is the agreed specification of inputs, outputs, and behavior between teams",
-        "points": [
-          "Core concept of API Contract used widely in modern software and AI systems",
-          "Important for understanding: An API contract is the agreed specification of inputs, outputs, and behavior between teams",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Consumer-driven Contracts",
-        "explanation": "Consumer-driven contracts let API consumers define the exact responses they need from providers",
-        "points": [
-          "Core concept of Consumer-driven Contracts used widely in modern software and AI systems",
-          "Important for understanding: Consumer-driven contracts let API consumers define the exact responses they need from providers",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "API Testing",
-        "explanation": "API testing validates that endpoints return correct responses for valid and invalid inputs",
-        "points": [
-          "Core concept of API Testing used widely in modern software and AI systems",
-          "Important for understanding: API testing validates that endpoints return correct responses for valid and invalid inputs",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Integration Testing",
-        "explanation": "Integration tests verify that multiple services work correctly together end-to-end",
-        "points": [
-          "Core concept of Integration Testing used widely in modern software and AI systems",
-          "Important for understanding: Integration tests verify that multiple services work correctly together end-to-end",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Load Testing",
-        "explanation": "Load testing simulates high traffic to find how much a system can handle before degrading",
-        "points": [
-          "Core concept of Load Testing used widely in modern software and AI systems",
-          "Important for understanding: Load testing simulates high traffic to find how much a system can handle before degrading",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Chaos Engineering",
-        "explanation": "Chaos engineering deliberately breaks things to find weaknesses before real failures occur",
-        "points": [
-          "Core concept of Chaos Engineering used widely in modern software and AI systems",
-          "Important for understanding: Chaos engineering deliberately breaks things to find weaknesses before real failures occur",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Service Mesh",
-        "explanation": "A service mesh handles service-to-service communication, security, and observability automatically",
-        "points": [
-          "Core concept of Service Mesh used widely in modern software and AI systems",
-          "Important for understanding: A service mesh handles service-to-service communication, security, and observability automatically",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Microservices",
-        "explanation": "Microservices split a large app into small independent services that communicate over APIs",
-        "points": [
-          "Core concept of Microservices used widely in modern software and AI systems",
-          "Important for understanding: Microservices split a large app into small independent services that communicate over APIs",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Monolith",
-        "explanation": "A monolith is a single large application where all components are deployed together",
-        "points": [
-          "Core concept of Monolith used widely in modern software and AI systems",
-          "Important for understanding: A monolith is a single large application where all components are deployed together",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Event-driven API",
-        "explanation": "Event-driven APIs emit events when things change letting subscribers react in real time",
-        "points": [
-          "Core concept of Event-driven API used widely in modern software and AI systems",
-          "Important for understanding: Event-driven APIs emit events when things change letting subscribers react in real time",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Server-Sent Events",
-        "explanation": "SSE lets servers push updates to clients over a single persistent HTTP connection",
-        "points": [
-          "Core concept of Server-Sent Events used widely in modern software and AI systems",
-          "Important for understanding: SSE lets servers push updates to clients over a single persistent HTTP connection",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Long Polling",
-        "explanation": "Long polling holds a request open until the server has new data to send back",
-        "points": [
-          "Core concept of Long Polling used widely in modern software and AI systems",
-          "Important for understanding: Long polling holds a request open until the server has new data to send back",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "SOAP",
-        "explanation": "SOAP is an older XML-based API protocol still used in legacy enterprise systems",
-        "points": [
-          "Core concept of SOAP used widely in modern software and AI systems",
-          "Important for understanding: SOAP is an older XML-based API protocol still used in legacy enterprise systems",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "RPC",
-        "explanation": "Remote Procedure Call lets you call a function on a remote server as if it were local",
-        "points": [
-          "Core concept of RPC used widely in modern software and AI systems",
-          "Important for understanding: Remote Procedure Call lets you call a function on a remote server as if it were local",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Serialization",
-        "explanation": "Serialization converts objects into a transmittable format like JSON or binary for API calls",
-        "points": [
-          "Core concept of Serialization used widely in modern software and AI systems",
-          "Important for understanding: Serialization converts objects into a transmittable format like JSON or binary for API calls",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Deserialization",
-        "explanation": "Deserialization converts received bytes or JSON back into a usable object in memory",
-        "points": [
-          "Core concept of Deserialization used widely in modern software and AI systems",
-          "Important for understanding: Deserialization converts received bytes or JSON back into a usable object in memory",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Content Negotiation",
-        "explanation": "Content negotiation lets clients specify what format they want the API to return",
-        "points": [
-          "Core concept of Content Negotiation used widely in modern software and AI systems",
-          "Important for understanding: Content negotiation lets clients specify what format they want the API to return",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "HATEOAS",
-        "explanation": "HATEOAS includes links in API responses guiding clients on what actions they can take next",
-        "points": [
-          "Core concept of HATEOAS used widely in modern software and AI systems",
-          "Important for understanding: HATEOAS includes links in API responses guiding clients on what actions they can take next",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "API Composition",
-        "explanation": "API composition aggregates data from multiple microservices into a single response",
-        "points": [
-          "Core concept of API Composition used widely in modern software and AI systems",
-          "Important for understanding: API composition aggregates data from multiple microservices into a single response",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "BFF Pattern",
-        "explanation": "Backend for Frontend creates a dedicated API tailored to each client type like mobile or web",
-        "points": [
-          "Core concept of BFF Pattern used widely in modern software and AI systems",
-          "Important for understanding: Backend for Frontend creates a dedicated API tailored to each client type like mobile or web",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "API Monetization",
-        "explanation": "API monetization charges developers for usage enabling APIs to be a revenue stream",
-        "points": [
-          "Core concept of API Monetization used widely in modern software and AI systems",
-          "Important for understanding: API monetization charges developers for usage enabling APIs to be a revenue stream",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Developer Portal",
-        "explanation": "A developer portal provides API docs, sandbox, and key management for external developers",
-        "points": [
-          "Core concept of Developer Portal used widely in modern software and AI systems",
-          "Important for understanding: A developer portal provides API docs, sandbox, and key management for external developers",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Sandbox",
-        "explanation": "An API sandbox is a test environment where developers can experiment without real-world consequences",
-        "points": [
-          "Core concept of Sandbox used widely in modern software and AI systems",
-          "Important for understanding: An API sandbox is a test environment where developers can experiment without real-world consequences",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Webhook Retry",
-        "explanation": "Webhook retry logic resends failed event deliveries with backoff to ensure no data is lost",
-        "points": [
-          "Core concept of Webhook Retry used widely in modern software and AI systems",
-          "Important for understanding: Webhook retry logic resends failed event deliveries with backoff to ensure no data is lost",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Idempotency Key",
-        "explanation": "An idempotency key lets clients safely retry API requests without creating duplicate operations",
-        "points": [
-          "Core concept of Idempotency Key used widely in modern software and AI systems",
-          "Important for understanding: An idempotency key lets clients safely retry API requests without creating duplicate operations",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "API Latency",
-        "explanation": "API latency is the time from sending a request to receiving the first byte of response",
-        "points": [
-          "Core concept of API Latency used widely in modern software and AI systems",
-          "Important for understanding: API latency is the time from sending a request to receiving the first byte of response",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "P99 Latency",
-        "explanation": "P99 latency is the response time that 99 percent of requests complete within",
-        "points": [
-          "Core concept of P99 Latency used widely in modern software and AI systems",
-          "Important for understanding: P99 latency is the response time that 99 percent of requests complete within",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "SLA",
-        "explanation": "A Service Level Agreement guarantees minimum API uptime and performance metrics to customers",
-        "points": [
-          "Core concept of SLA used widely in modern software and AI systems",
-          "Important for understanding: A Service Level Agreement guarantees minimum API uptime and performance metrics to customers",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Uptime",
-        "explanation": "Uptime is the percentage of time an API is available and responding correctly",
-        "points": [
-          "Core concept of Uptime used widely in modern software and AI systems",
-          "Important for understanding: Uptime is the percentage of time an API is available and responding correctly",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Zero Downtime Deploy",
-        "explanation": "Zero downtime deployment updates the API without dropping any requests from clients",
-        "points": [
-          "Core concept of Zero Downtime Deploy used widely in modern software and AI systems",
-          "Important for understanding: Zero downtime deployment updates the API without dropping any requests from clients",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Blue-Green Deployment",
-        "explanation": "Blue-green deploys a new API version alongside the old one then switches traffic instantly",
-        "points": [
-          "Core concept of Blue-Green Deployment used widely in modern software and AI systems",
-          "Important for understanding: Blue-green deploys a new API version alongside the old one then switches traffic instantly",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Canary Release",
-        "explanation": "A canary release routes a small percentage of traffic to a new API version first",
-        "points": [
-          "Core concept of Canary Release used widely in modern software and AI systems",
-          "Important for understanding: A canary release routes a small percentage of traffic to a new API version first",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Feature Flags",
-        "explanation": "Feature flags turn API features on or off without deploying new code",
-        "points": [
-          "Core concept of Feature Flags used widely in modern software and AI systems",
-          "Important for understanding: Feature flags turn API features on or off without deploying new code",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "API Observability",
-        "explanation": "API observability tracks logs, metrics, and traces to understand how your API behaves in production",
-        "points": [
-          "Core concept of API Observability used widely in modern software and AI systems",
-          "Important for understanding: API observability tracks logs, metrics, and traces to understand how your API behaves in production",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Distributed Tracing",
-        "explanation": "Distributed tracing follows a request across multiple services to pinpoint where it slows down",
-        "points": [
-          "Core concept of Distributed Tracing used widely in modern software and AI systems",
-          "Important for understanding: Distributed tracing follows a request across multiple services to pinpoint where it slows down",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "API Security",
-        "explanation": "API security protects against injection, broken auth, excessive data exposure, and DDoS attacks",
-        "points": [
-          "Core concept of API Security used widely in modern software and AI systems",
-          "Important for understanding: API security protects against injection, broken auth, excessive data exposure, and DDoS attacks",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "OWASP API Top 10",
-        "explanation": "OWASP API Top 10 lists the most critical API security risks developers must protect against",
-        "points": [
-          "Core concept of OWASP API Top 10 used widely in modern software and AI systems",
-          "Important for understanding: OWASP API Top 10 lists the most critical API security risks developers must protect against",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Mutual TLS",
-        "explanation": "Mutual TLS requires both client and server to present certificates proving their identity",
-        "points": [
-          "Core concept of Mutual TLS used widely in modern software and AI systems",
-          "Important for understanding: Mutual TLS requires both client and server to present certificates proving their identity",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "API Analytics",
-        "explanation": "API analytics track usage patterns, popular endpoints, and error rates for business insights",
-        "points": [
-          "Core concept of API Analytics used widely in modern software and AI systems",
-          "Important for understanding: API analytics track usage patterns, popular endpoints, and error rates for business insights",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Async API",
-        "explanation": "AsyncAPI is a specification standard for documenting event-driven and message-based APIs",
-        "points": [
-          "Core concept of Async API used widely in modern software and AI systems",
-          "Important for understanding: AsyncAPI is a specification standard for documenting event-driven and message-based APIs",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "GraphQL Subscription",
-        "explanation": "GraphQL subscriptions use WebSockets to push real-time updates when data changes",
-        "points": [
-          "Core concept of GraphQL Subscription used widely in modern software and AI systems",
-          "Important for understanding: GraphQL subscriptions use WebSockets to push real-time updates when data changes",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "DataLoader",
-        "explanation": "DataLoader batches and caches GraphQL data fetches to prevent N+1 query performance issues",
-        "points": [
-          "Core concept of DataLoader used widely in modern software and AI systems",
-          "Important for understanding: DataLoader batches and caches GraphQL data fetches to prevent N+1 query performance issues",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Federation",
-        "explanation": "GraphQL federation combines multiple independent GraphQL APIs into one unified schema",
-        "points": [
-          "Core concept of Federation used widely in modern software and AI systems",
-          "Important for understanding: GraphQL federation combines multiple independent GraphQL APIs into one unified schema",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Introspection",
-        "explanation": "GraphQL introspection lets clients query the schema to discover available types and operations",
-        "points": [
-          "Core concept of Introspection used widely in modern software and AI systems",
-          "Important for understanding: GraphQL introspection lets clients query the schema to discover available types and operations",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Field Resolvers",
-        "explanation": "GraphQL field resolvers are functions that fetch or compute the value of each schema field",
-        "points": [
-          "Core concept of Field Resolvers used widely in modern software and AI systems",
-          "Important for understanding: GraphQL field resolvers are functions that fetch or compute the value of each schema field",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "API Governance",
-        "explanation": "API governance enforces standards, naming conventions, and security policies across all APIs",
-        "points": [
-          "Core concept of API Governance used widely in modern software and AI systems",
-          "Important for understanding: API governance enforces standards, naming conventions, and security policies across all APIs",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Streaming API",
-        "explanation": "Streaming APIs send data incrementally as it becomes available instead of waiting for the full response",
-        "points": [
-          "Core concept of Streaming API used widely in modern software and AI systems",
-          "Important for understanding: Streaming APIs send data incrementally as it becomes available instead of waiting for the full response",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Batch API",
-        "explanation": "Batch APIs accept many requests in one call to reduce round trips and improve throughput",
-        "points": [
-          "Core concept of Batch API used widely in modern software and AI systems",
-          "Important for understanding: Batch APIs accept many requests in one call to reduce round trips and improve throughput",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "API Composition Pattern",
-        "explanation": "API composition aggregates multiple microservice calls into one response on the server side",
-        "points": [
-          "Core concept of API Composition Pattern used widely in modern software and AI systems",
-          "Important for understanding: API composition aggregates multiple microservice calls into one response on the server side",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Back-pressure",
-        "explanation": "Back-pressure signals an overwhelmed API to slow down the rate incoming requests are sent",
-        "points": [
-          "Core concept of Back-pressure used widely in modern software and AI systems",
-          "Important for understanding: Back-pressure signals an overwhelmed API to slow down the rate incoming requests are sent",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "API Deprecation Policy",
-        "explanation": "A deprecation policy gives developers adequate notice and migration time before removing API features",
-        "points": [
-          "Core concept of API Deprecation Policy used widely in modern software and AI systems",
-          "Important for understanding: A deprecation policy gives developers adequate notice and migration time before removing API features",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Contract Testing",
-        "explanation": "Contract tests verify both API provider and consumer honor the agreed schema and behavior",
-        "points": [
-          "Core concept of Contract Testing used widely in modern software and AI systems",
-          "Important for understanding: Contract tests verify both API provider and consumer honor the agreed schema and behavior",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "API Schema Validation",
-        "explanation": "Schema validation automatically rejects requests that do not conform to the API specification",
-        "points": [
-          "Core concept of API Schema Validation used widely in modern software and AI systems",
-          "Important for understanding: Schema validation automatically rejects requests that do not conform to the API specification",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Optimistic UI",
-        "explanation": "Optimistic UI assumes API calls succeed and updates the interface before getting confirmation",
-        "points": [
-          "Core concept of Optimistic UI used widely in modern software and AI systems",
-          "Important for understanding: Optimistic UI assumes API calls succeed and updates the interface before getting confirmation",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "API Portal",
-        "explanation": "An API portal provides documentation, sandbox testing, key management, and usage analytics",
-        "points": [
-          "Core concept of API Portal used widely in modern software and AI systems",
-          "Important for understanding: An API portal provides documentation, sandbox testing, key management, and usage analytics",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Webhook Security",
-        "explanation": "Webhook security verifies delivery authenticity using HMAC signatures on the payload",
-        "points": [
-          "Core concept of Webhook Security used widely in modern software and AI systems",
-          "Important for understanding: Webhook security verifies delivery authenticity using HMAC signatures on the payload",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      }
+  "API": {
+    "explanation": "An API is an interface that lets different software applications communicate with each other",
+    "points": [
+      "Acts as a contract between producer and consumer defining how requests and responses should work",
+      "Enables modularity, reusability, and integration across services, platforms, and organizations",
+      "Powers virtually every modern mobile app, web application, cloud service, and AI system",
+      "Can be public (open to anyone), partner (limited access), or private (internal only)",
+      "Proper design dramatically affects developer experience, security, scalability, and maintainability"
+    ]
+  },
+  "REST API": {
+    "explanation": "REST APIs use standard HTTP methods to create, read, update, and delete web resources",
+    "points": [
+      "Follows stateless, cacheable, uniform interface principles defined by Roy Fielding",
+      "Uses HTTP verbs (GET, POST, PUT, PATCH, DELETE) to perform CRUD operations on resources",
+      "Resources identified by URLs; responses typically in JSON (sometimes XML)",
+      "Most widely adopted API style due to simplicity, tooling support, and HTTP ecosystem",
+      "Common patterns include resource nesting, query params for filtering, and HATEOAS for discoverability"
+    ]
+  },
+  "GraphQL": {
+    "explanation": "GraphQL lets clients request exactly the data they need in one flexible query",
+    "points": [
+      "Single endpoint usually /graphql accepts complex, nested queries in POST body",
+      "Strongly typed schema with introspection enables powerful tooling and auto-completion",
+      "Eliminates over-fetching and under-fetching problems common in REST",
+      "Supports real-time updates via subscriptions over WebSockets",
+      "Batching, caching, and N+1 problem solutions (DataLoader) critical for performance"
+    ]
+  },
+  "gRPC": {
+    "explanation": "gRPC is a high-performance RPC framework from Google using Protocol Buffers over HTTP/2",
+    "points": [
+      "Uses binary Protocol Buffers for compact, efficient serialization",
+      "Supports four RPC types: unary, server streaming, client streaming, bidirectional",
+      "Built-in features: deadlines, cancellation, metadata, load balancing, authentication",
+      "Excellent for microservices, mobile clients, and low-latency internal communication",
+      "Code generation produces strongly-typed clients and servers in many languages"
+    ]
+  },
+  "WebSocket": {
+    "explanation": "WebSockets provide persistent two-way communication channels between client and server",
+    "points": [
+      "Upgrades from HTTP via handshake, then uses full-duplex binary/text frames",
+      "Ideal for real-time applications: chat, live updates, gaming, collaborative editing",
+      "Lower overhead than repeated HTTP polling or long-polling",
+      "Requires explicit connection management, heartbeats, and reconnection logic",
+      "Often secured with WSS (WebSocket Secure) using TLS"
+    ]
+  },
+  "Webhook": {
+    "explanation": "Webhooks push real-time event data to your server URL when something happens in another app",
+    "points": [
+      "Event-driven alternative to polling — server pushes updates instead of client asking",
+      "Common payload: JSON with event type, timestamp, data, and signature for verification",
+      "Requires public HTTPS endpoint, retry handling, and duplicate detection (idempotency)",
+      "Used extensively by Stripe, GitHub, Twilio, Shopify, Slack for notifications",
+      "Security best practice: verify HMAC signature using shared secret"
+    ]
+  },
+  "HTTP Methods": {
+    "explanation": "GET, POST, PUT, PATCH, and DELETE are the HTTP verbs that define what an API request does",
+    "points": [
+      "GET: retrieve resource (safe, idempotent, cacheable)",
+      "POST: create resource or trigger action (not idempotent)",
+      "PUT: replace entire resource (idempotent)",
+      "PATCH: partially update resource (idempotent when designed correctly)",
+      "DELETE: remove resource (idempotent)"
+    ]
+  },
+  "Status Codes": {
+    "explanation": "HTTP status codes like 200, 404, and 500 tell the client what happened to its request",
+    "points": [
+      "2xx: success (200 OK, 201 Created, 204 No Content)",
+      "3xx: redirection (301 Moved Permanently, 304 Not Modified)",
+      "4xx: client error (400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 429 Too Many Requests)",
+      "5xx: server error (500 Internal Server Error, 502 Bad Gateway, 503 Service Unavailable)",
+      "Consistent, semantic use of status codes dramatically improves debuggability"
+    ]
+  },
+  "Authentication": {
+    "explanation": "API authentication verifies who is making a request using API keys, tokens, or OAuth",
+    "points": [
+      "API Key: simple, good for server-to-server or low-risk public APIs",
+      "Bearer Token (JWT): stateless, contains claims, widely used with OAuth",
+      "OAuth 2.0: delegated authorization with access & refresh tokens",
+      "Mutual TLS: strong client + server identity verification via certificates",
+      "Best practice: never put credentials in URL; always use Authorization header"
+    ]
+  },
+  "Rate Limiting": {
+    "explanation": "Rate limiting restricts how many API requests a client can make in a given time window",
+    "points": [
+      "Common algorithms: token bucket, leaky bucket, fixed/sliding window",
+      "Protects against abuse, DDoS, cost explosion, and ensures fair usage",
+      "Usually enforced per API key, IP, or user account",
+      "Returns 429 Too Many Requests with Retry-After header",
+      "Advanced: per-endpoint, per-method, burst allowance, hierarchical limits"
+    ]
+  },
+  "Endpoint": {
+    "explanation": "An API endpoint is a specific URL that represents a resource or action in the API",
+    "points": [
+      "Follows RESTful conventions: /users, /users/{id}, /orders/{id}/items",
+      "Should be noun-centric (resources) rather than verb-centric",
+      "Versioning often in path (/v1/users), header, or subdomain",
+      "Consistent naming, pluralization, and hierarchy improve developer experience",
+      "Well-designed endpoints are intuitive, discoverable, and minimize client complexity"
+    ]
+  },
+  "Request Body": {
+    "explanation": "The request body carries data sent to the API usually in JSON format for POST and PUT",
+    "points": [
+      "Content-Type header must match payload (application/json most common)",
+      "Size limits typically enforced (1–10 MB common)",
+      "Validation should happen early (schema, required fields, format)",
+      "Large payloads often better handled via multipart or presigned URLs",
+      "Never log full request bodies containing sensitive data"
+    ]
+  },
+  "Response Body": {
+    "explanation": "The response body contains the data the API returns after processing the request",
+    "points": [
+      "Standard envelope pattern: { data, meta, errors } improves consistency",
+      "Errors should include code, message, details, and possibly retry info",
+      "Use consistent date/time format (ISO 8601) and numeric types",
+      "Pagination metadata (next, prev, total) critical for list endpoints",
+      "Minimize payload size for performance; use fields filtering when possible"
+    ]
+  },
+  "Headers": {
+    "explanation": "HTTP headers pass metadata like content type, authorization tokens, and cache rules",
+    "points": [
+      "Authorization: Bearer <token>, API key, Basic Auth",
+      "Content-Type / Accept: negotiate format (json, xml, etc.)",
+      "Cache-Control, ETag, Last-Modified: enable efficient caching",
+      "X-Request-ID / Correlation-ID: enable distributed tracing",
+      "Custom headers should use X- prefix or register official ones"
+    ]
+  },
+  "Query Parameters": {
+    "explanation": "Query parameters are key-value pairs appended to URLs to filter or customize API responses",
+    "points": [
+      "Common uses: filtering (?status=active), sorting (?sort=-created_at), pagination (?page=2&limit=50)",
+      "Should be optional and have sensible defaults",
+      "Arrays often repeated (?tag=urgent&tag=bug) or comma-separated",
+      "Sensitive data should never go in query strings (logged in servers, visible in URLs)",
+      "Excessive query params can make URLs hard to read — prefer body for complex filters"
+    ]
+  },
+  "Path Parameters": {
+    "explanation": "Path parameters are variable parts of the URL that identify specific resources",
+    "points": [
+      "Common pattern: /users/{userId}, /orders/{orderId}/items/{itemId}",
+      "Usually mapped to URL segments via framework routing",
+      "Should be required and uniquely identify the resource",
+      "Validation (format, existence) should happen early",
+      "Keep paths clean and hierarchical for readability"
+    ]
+  },
+  "Pagination": {
+    "explanation": "Pagination splits large API responses into pages to avoid returning too much data at once",
+    "points": [
+      "Styles: offset/limit (?page=1&limit=20), cursor-based (?after=abc123)",
+      "Cursor / keyset pagination better for large datasets and stable sorting",
+      "Include total count, next/previous links, or cursors in response",
+      "Default limit usually 20–100; allow higher with caution",
+      "Inconsistent pagination causes poor developer experience and performance issues"
+    ]
+  },
+  "OAuth 2.0": {
+    "explanation": "OAuth 2.0 lets users authorize apps to access their data without sharing passwords",
+    "points": [
+      "Grant types: authorization code (most secure), PKCE (SPAs), client credentials (machine-to-machine)",
+      "Tokens: access token (short-lived), refresh token (long-lived)",
+      "Scopes define granular permissions (read:profile, write:posts)",
+      "OpenID Connect extends OAuth for authentication (ID token)",
+      "Authorization server, resource server, client roles clearly separated"
+    ]
+  },
+  "JWT": {
+    "explanation": "JSON Web Tokens are compact signed tokens used to securely transmit authentication claims",
+    "points": [
+      "Three parts: header.payload.signature (base64url encoded)",
+      "Can be stateless (no session lookup) when properly signed/verified",
+      "Claims: iss, sub, aud, exp, nbf, iat, jti, custom data",
+      "Never put sensitive data in payload — it's only base64, not encrypted",
+      "Refresh tokens should be opaque and stored server-side for security"
+    ]
+  },
+  "API Key": {
+    "explanation": "API keys are simple secret strings that authenticate clients making requests to an API",
+    "points": [
+      "Usually long random strings passed in header (X-API-Key) or query (?api_key=…)",
+      "Good for server-to-server communication or public read-only APIs",
+      "Should be rotatable, revocable, and scoped to specific permissions",
+      "Never commit to git or expose in client-side code",
+      "Rate limiting and usage quotas almost always tied to API keys"
+    ]
+  },
+  "HTTPS": {
+    "explanation": "HTTPS encrypts all data between client and server so it cannot be intercepted",
+    "points": [
+      "HTTP + TLS/SSL encryption layer",
+      "Prevents man-in-the-middle attacks, eavesdropping, tampering",
+      "Modern requirement: all public APIs must use HTTPS",
+      "HSTS header forces browsers to always use HTTPS",
+      "Free certificates available via Let's Encrypt since 2015"
+    ]
+  },
+  "TLS": {
+    "explanation": "TLS is the encryption protocol that secures HTTPS connections between client and server",
+    "points": [
+      "Current recommended version: TLS 1.3 (faster, more secure)",
+      "TLS 1.0/1.1 deprecated; TLS 1.2 still widely supported but phasing out",
+      "Strong ciphers, forward secrecy, and certificate validation essential",
+      "Mutual TLS (mTLS) authenticates both client and server",
+      "Certificate management, rotation, and revocation critical for security"
+    ]
+  },
+  "CORS": {
+    "explanation": "CORS controls which web origins are allowed to make requests to your API",
+    "points": [
+      "Browser security feature preventing cross-origin requests by default",
+      "Key headers: Access-Control-Allow-Origin, Allow-Methods, Allow-Headers, Allow-Credentials",
+      "Preflight (OPTIONS) request required for non-simple requests",
+      "Wildcard (*) allowed only without credentials",
+      "Misconfigured CORS is a frequent cause of frontend API errors"
+    ]
+  },
+  "JSON": {
+    "explanation": "JSON is the universal lightweight data format for sending structured data between systems",
+    "points": [
+      "Simple, human-readable, language-independent",
+      "Native support in virtually every programming language",
+      "Numbers, strings, booleans, arrays, objects, null",
+      "Standard date format: ISO 8601 strings (not native Date type)",
+      "Large numbers may lose precision (use strings for IDs, money)"
+    ]
+  },
+  "XML": {
+    "explanation": "XML is an older structured data format used in legacy APIs and enterprise systems",
+    "points": [
+      "Verbose, schema-capable (XSD), namespace support",
+      "Still used in SOAP, SAML, RSS, some financial/healthcare systems",
+      "Larger payloads and slower parsing compared to JSON",
+      "XPath, XSLT, XML namespaces add power but complexity",
+      "Most modern APIs prefer JSON unless legacy compatibility required"
+    ]
+  },
+  "Protocol Buffers": {
+    "explanation": "Protobuf is Google's binary serialization format much smaller and faster than JSON",
+    "points": [
+      "Schema-first (.proto files) → generates code in many languages",
+      "Backward and forward compatible field evolution",
+      "Used heavily in gRPC, internal microservices, mobile apps",
+      "5–10× smaller and 5–10× faster than equivalent JSON",
+      "Binary format → not human-readable without tools"
+    ]
+  },
+  "OpenAPI Spec": {
+    "explanation": "OpenAPI is the standard specification for documenting RESTful APIs in a machine-readable format",
+    "points": [
+      "Formerly Swagger 2.0; current version OpenAPI 3.0 / 3.1",
+      "YAML or JSON document describing paths, operations, parameters, schemas",
+      "Enables auto-generated docs (Swagger UI), client SDKs, server stubs, validation",
+      "Industry standard supported by almost every API framework",
+      "OpenAPI Generator creates clients in 50+ languages from spec"
+    ]
+  },
+  "Swagger": {
+    "explanation": "Swagger tools generate interactive API documentation and client SDKs from OpenAPI specs",
+    "points": [
+      "Swagger UI: interactive documentation interface",
+      "Swagger Codegen / OpenAPI Generator: client & server code generation",
+      "Swagger Editor: visual editor for OpenAPI specs",
+      "Integrated into Spring Boot, FastAPI, NestJS, Go, etc.",
+      "Try-it-out feature lets developers test endpoints directly"
+    ]
+  },
+  "API Gateway": {
+    "explanation": "An API gateway is a single entry point that routes requests, handles auth, and manages traffic",
+    "points": [
+      "Popular solutions: AWS API Gateway, Kong, Apigee, Tyk, Traefik, Zuul",
+      "Handles authentication, rate limiting, caching, request transformation",
+      "Routes to multiple backend microservices",
+      "Central place for monitoring, logging, and analytics",
+      "Can add latency; must be highly available and performant"
+    ]
+  },
+  "Reverse Proxy": {
+    "explanation": "A reverse proxy sits in front of servers to handle routing, load balancing, and security",
+    "points": [
+      "Popular: NGINX, HAProxy, Traefik, Envoy, Caddy",
+      "Terminates TLS, compresses responses, serves static files",
+      "Hides backend server details from clients",
+      "Can cache responses, rewrite URLs, add headers",
+      "Essential component in most production API deployments"
+    ]
+  },
+  "Load Balancer": {
+    "explanation": "A load balancer distributes incoming API requests across multiple servers for reliability",
+    "points": [
+      "Algorithms: round-robin, least connections, IP hash, consistent hashing",
+      "Layers: L4 (TCP) vs L7 (HTTP/HTTPS)",
+      "Health checks ensure only healthy instances receive traffic",
+      "Cloud-native: AWS ALB/NLB/ELB, GCP Load Balancer, Azure Load Balancer",
+      "Critical for horizontal scaling and high availability"
+    ]
+  },
+  "Caching": {
+    "explanation": "API response caching stores results so repeated identical requests are served instantly",
+    "points": [
+      "Levels: CDN (Cloudflare, Akamai), gateway, in-memory (Redis), HTTP cache headers",
+      "Cache-Control, ETag, Last-Modified guide client & intermediary caching",
+      "Cache invalidation remains one of the hardest problems in computer science",
+      "Cache key design critical (include all variable params, headers)",
+      "Cache-aside, read-through, write-through patterns common"
+    ]
+  },
+  "Idempotency": {
+    "explanation": "An idempotent API call can be safely repeated multiple times without different side effects",
+    "points": [
+      "GET, PUT, DELETE, PATCH usually idempotent by design",
+      "POST often not idempotent (creates new resource each time)",
+      "Idempotency-Key header pattern for safe retries on non-idempotent operations",
+      "Critical for payments, order creation, user signup",
+      "Server stores key + result for short period to return same response"
+    ]
+  },
+  "Versioning": {
+    "explanation": "API versioning lets you update your API without breaking existing clients using the old version",
+    "points": [
+      "Common approaches: URL path (/v1/), header (Accept: application/vnd.myapi.v2+json), query param",
+      "Semantic versioning (SemVer) for major/minor/patch changes",
+      "Date-based versioning (2024-03-01) used by Stripe, Twilio",
+      "Avoid forever support of old versions — use deprecation periods",
+      "Good versioning strategy reduces client migration pain"
+    ]
+  },
+  "Deprecation": {
+    "explanation": "API deprecation signals that an endpoint will be removed giving developers time to migrate",
+    "points": [
+      "Use Deprecation header or sunset date in response",
+      "Typical timeline: announce → 6–12 months → block → remove",
+      "Communicate via developer portal, email, changelog",
+      "Provide migration guides and replacement endpoints",
+      "Monitor usage of deprecated endpoints to plan sunset"
+    ]
+  },
+  "Throttling": {
+    "explanation": "Throttling slows down or blocks API requests that exceed defined usage limits",
+    "points": [
+      "Different from rate limiting — can dynamically slow responses instead of hard block",
+      "Used during overload to protect backend while giving fair access",
+      "429 + Retry-After header signals client to slow down",
+      "Can be combined with queueing for burst tolerance",
+      "Essential for public APIs with unpredictable traffic"
+    ]
+  },
+  "Circuit Breaker": {
+    "explanation": "A circuit breaker stops calling a failing API temporarily to prevent cascading failures",
+    "points": [
+      "States: closed (normal), open (fail fast), half-open (test recovery)",
+      "Popular libraries: Resilience4j, Polly, Hystrix (legacy)",
+      "Prevents overwhelming failing downstream service",
+      "Usually combined with fallback, timeout, and retry",
+      "Critical pattern in microservices architectures"
+    ]
+  },
+  "Retry Logic": {
+    "explanation": "Retry logic automatically resends failed API requests with exponential backoff",
+    "points": [
+      "Exponential backoff + jitter prevents thundering herd",
+      "Classify errors: retryable (429, 503) vs non-retryable (400, 401)",
+      "Max attempts, total timeout, per-attempt timeout",
+      "Idempotency key required for safe retries on mutating calls",
+      "Client-side resilience pattern that dramatically improves reliability"
+    ]
+  },
+  "Timeout": {
+    "explanation": "API timeouts cancel requests that take too long to prevent hanging indefinitely",
+    "points": [
+      "Client timeout < server timeout < gateway timeout",
+      "Typical values: 5–30 seconds for most APIs",
+      "Always set connect timeout separately from read timeout",
+      "504 Gateway Timeout when upstream times out",
+      "Timeouts are the most common cause of cascading failures"
+    ]
+  },
+  "SDK": {
+    "explanation": "An SDK is a pre-built library in your language that makes calling an API much easier",
+    "points": [
+      "Generated from OpenAPI spec or hand-written for better ergonomics",
+      "Handles auth, retries, pagination, error parsing, request signing",
+      "Official SDKs usually exist for JavaScript, Python, Java, Go, .NET, etc.",
+      "Greatly improves developer experience and reduces bugs",
+      "Should be versioned alongside API and well-documented"
+    ]
+  },
+  "Postman": {
+    "explanation": "Postman is the most popular tool for testing, documenting, and collaborating on APIs",
+    "points": [
+      "Collections shareable via links or workspaces",
+      "Environments for dev/staging/prod variables",
+      "Mock servers, monitors, Newman CLI for CI/CD",
+      "Supports REST, GraphQL, WebSocket, gRPC",
+      "Team collaboration features in paid plans"
+    ]
+  },
+  "Insomnia": {
+    "explanation": "Insomnia is a REST and GraphQL API testing client with a clean developer-friendly interface",
+    "points": [
+      "Open-source core with paid enterprise features",
+      "Excellent GraphQL support including schema introspection",
+      "Environments, git sync, plugin ecosystem",
+      "Lightweight alternative to Postman",
+      "Strong focus on design-first workflows"
+    ]
+  },
+  "cURL": {
+    "explanation": "cURL is a command-line tool for making HTTP requests to test APIs from the terminal",
+    "points": [
+      "Universal availability on Linux, macOS, Windows (via Git Bash)",
+      "Supports all HTTP methods, headers, JSON bodies, auth types",
+      "Verbose mode (-v) shows full request/response for debugging",
+      "Scriptable — foundation of many API testing scripts",
+      "Postman can export requests as cURL commands"
+    ]
+  },
+  "Mock API": {
+    "explanation": "Mock APIs simulate real API responses so frontend development can proceed without a backend",
+    "points": [
+      "Tools: Mockoon, WireMock, json-server, Prism, Beeceptor",
+      "Define expected responses, delays, status codes, dynamic data",
+      "Critical for parallel frontend/backend development",
+      "Can use OpenAPI spec to generate realistic mocks",
+      "Also useful for demoing, testing edge cases, CI"
+    ]
+  },
+  "API Contract": {
+    "explanation": "An API contract is the agreed specification of inputs, outputs, and behavior between teams",
+    "points": [
+      "Usually OpenAPI/AsyncAPI document or Protobuf schema",
+      "Enables parallel development, contract testing, documentation",
+      "Consumer-driven contracts (CDC) let consumers define expectations",
+      "Versioned and reviewed like code",
+      "Reduces integration surprises and rework"
+    ]
+  },
+  "Consumer-driven Contracts": {
+    "explanation": "Consumer-driven contracts let API consumers define the exact responses they need from providers",
+    "points": [
+      "Tools: Pact, Spring Cloud Contract, Schemathesis",
+      "Consumers write tests → generate contract → provider verifies",
+      "Ensures provider doesn't break consumer expectations",
+      "Particularly valuable in microservices with independent teams",
+      "Reduces integration test flakiness"
+    ]
+  },
+  "API Testing": {
+    "explanation": "API testing validates that endpoints return correct responses for valid and invalid inputs",
+    "points": [
+      "Unit (individual endpoint), integration (multiple services), contract, security, performance",
+      "Tools: Postman/Newman, RestAssured, Supertest, Karate, Dredd",
+      "Test happy path, error cases, edge cases, auth failures",
+      "Schema validation + response assertions critical",
+      "Run in CI/CD pipeline for regression protection"
+    ]
+  },
+  "Integration Testing": {
+    "explanation": "Integration tests verify that multiple services work correctly together end-to-end",
+    "points": [
+      "Test real network calls between services (not mocks)",
+      "Usually slower and more brittle than unit tests",
+      "Use test doubles for external systems (payment, email)",
+      "Contract tests can reduce need for full integration tests",
+      "Run less frequently than unit tests in CI"
+    ]
+  },
+  "Load Testing": {
+    "explanation": "Load testing simulates high traffic to find how much a system can handle before degrading",
+    "points": [
+      "Tools: k6, Locust, JMeter, Gatling, Artillery",
+      "Measure throughput, latency (p50, p95, p99), error rate",
+      "Ramp-up, steady state, spike, soak tests",
+      "Identify bottlenecks: DB, CPU, memory, network, locks",
+      "Should be part of performance budget in CI/CD"
+    ]
+  },
+  "Chaos Engineering": {
+    "explanation": "Chaos engineering deliberately breaks things to find weaknesses before real failures occur",
+    "points": [
+      "Principles from Netflix Chaos Monkey family",
+      "Tools: Chaos Mesh, LitmusChaos, Gremlin, PowerfulSeal",
+      "Common experiments: kill pods, delay network, CPU/memory stress, partition",
+      "Blast radius control and rollback critical",
+      "Builds confidence in system resilience"
+    ]
+  },
+  "Service Mesh": {
+    "explanation": "A service mesh handles service-to-service communication, security, and observability automatically",
+    "points": [
+      "Popular: Istio, Linkerd, Consul Connect, AWS App Mesh",
+      "Sidecar proxies (Envoy) per service",
+      "mTLS, traffic shifting, circuit breaking, retries, observability all automatic",
+      "Greatly reduces boilerplate in microservices",
+      "Adds latency and complexity — weigh benefits carefully"
+    ]
+  },
+  "Microservices": {
+    "explanation": "Microservices split a large app into small independent services that communicate over APIs",
+    "points": [
+      "Benefits: independent scaling, technology choice, team autonomy, resilience",
+      "Challenges: distributed complexity, data consistency, observability, deployment coordination",
+      "Usually deployed with containers + orchestration (Kubernetes)",
+      "API gateway or service mesh almost always required",
+      "Not always better than well-modularized monolith"
+    ]
+  },
+  "Monolith": {
+    "explanation": "A monolith is a single large application where all components are deployed together",
+    "points": [
+      "Simpler development, debugging, deployment, and transactions",
+      "Easier refactoring across modules",
+      "Scaling requires replicating entire app",
+      "Modern monoliths can be modular and highly maintainable",
+      "Many successful companies start as monolith and split later (monolith-first)"
+    ]
+  },
+  "Event-driven API": {
+    "explanation": "Event-driven APIs emit events when things change letting subscribers react in real time",
+    "points": [
+      "Usually use webhooks, message queues (Kafka, RabbitMQ), or pub/sub (Google Pub/Sub)",
+      "Decouples producers and consumers",
+      "Enables reactive, scalable architectures",
+      "Requires reliable delivery, ordering guarantees, idempotency",
+      "AsyncAPI specification standardizing documentation"
+    ]
+  },
+  "Server-Sent Events": {
+    "explanation": "SSE lets servers push updates to clients over a single persistent HTTP connection",
+    "points": [
+      "Simpler than WebSocket for unidirectional push",
+      "Text-based event stream format",
+      "Auto-reconnect built into browsers",
+      "Good for live feeds, notifications, stock prices",
+      "Less flexible than WebSocket (no client→server messages)"
+    ]
+  },
+  "Long Polling": {
+    "explanation": "Long polling holds a request open until the server has new data to send back",
+    "points": [
+      "Fallback when WebSocket/SSE not available",
+      "Higher resource usage than WebSocket",
+      "Requires careful timeout and reconnection logic",
+      "Used in older chat systems and legacy apps",
+      "Mostly replaced by modern real-time protocols"
+    ]
+  },
+  "SOAP": {
+    "explanation": "SOAP is an older XML-based API protocol still used in legacy enterprise systems",
+    "points": [
+      "Envelope with header + body, WSDL contract",
+      "Built-in security (WS-Security), transactions, reliable messaging",
+      "Very verbose and complex compared to REST/JSON",
+      "Still common in banking, government, healthcare",
+      "Modern replacements: REST or gRPC preferred"
+    ]
+  },
+  "RPC": {
+    "explanation": "Remote Procedure Call lets you call a function on a remote server as if it were local",
+    "points": [
+      "gRPC is modern, high-performance RPC",
+      "Older: XML-RPC, JSON-RPC, Thrift",
+      "Procedure-oriented rather than resource-oriented (unlike REST)",
+      "Strong typing and code generation common",
+      "Good for internal services where performance matters"
+    ]
+  },
+  "Serialization": {
+    "explanation": "Serialization converts objects into a transmittable format like JSON or binary for API calls",
+    "points": [
+      "Formats: JSON, XML, Protobuf, Avro, MessagePack, CBOR",
+      "Trade-offs: human readability vs size vs speed vs schema evolution",
+      "Date/time, big integers, enums need careful handling",
+      "Security: never deserialize untrusted data without validation",
+      "Performance bottleneck in high-throughput APIs"
+    ]
+  },
+  "Deserialization": {
+    "explanation": "Deserialization converts received bytes or JSON back into a usable object in memory",
+    "points": [
+      "Vulnerable to injection attacks if not done safely",
+      "Use schema validation before full deserialization",
+      "Known issues: Java ObjectInputStream, PHP unserialize, YAML !! tags",
+      "Safe libraries: Jackson, Gson, msgpack, Protobuf",
+      "Always validate and sanitize untrusted input"
+    ]
+  },
+  "Content Negotiation": {
+    "explanation": "Content negotiation lets clients specify what format they want the API to return",
+    "points": [
+      "Via Accept header (application/json, application/xml)",
+      "Server responds with Content-Type",
+      "Quality factors (q=0.8) allow preference ordering",
+      "Fallback to default format if no match",
+      "Less common today — most APIs are JSON-only"
+    ]
+  },
+  "HATEOAS": {
+    "explanation": "HATEOAS includes links in API responses guiding clients on what actions they can take next",
+    "points": [
+      "Hypermedia as the Engine of Application State — REST maturity level 3",
+      "Example: { \"order\": {...}, \"_links\": { \"pay\": { \"href\": \"/orders/123/pay\" }}}",
+      "Enables discoverable, self-documenting APIs",
+      "Rarely fully implemented due to complexity",
+      "Tools: Spring HATEOAS, HAL, JSON API specification"
+    ]
+  },
+  "API Composition": {
+    "explanation": "API composition aggregates data from multiple microservices into a single response",
+    "points": [
+      "Patterns: server-side aggregation, BFF (Backend for Frontend), GraphQL federation",
+      "Reduces client round-trips and complexity",
+      "Can become performance bottleneck if not cached",
+      "Error handling and partial failures need careful design",
+      "Popular in e-commerce, dashboards, mobile apps"
+    ]
+  },
+  "BFF Pattern": {
+    "explanation": "Backend for Frontend creates a dedicated API tailored to each client type like mobile or web",
+    "points": [
+      "One BFF per client type (web, iOS, Android, partner)",
+      "Aggregates, transforms, and optimizes data for specific UI needs",
+      "Reduces client complexity and over-fetching",
+      "Owned by frontend team in some organizations",
+      "Can lead to code duplication if not managed carefully"
+    ]
+  },
+  "API Monetization": {
+    "explanation": "API monetization charges developers for usage enabling APIs to be a revenue stream",
+    "points": [
+      "Models: freemium, pay-per-call, subscription tiers, revenue share",
+      "Stripe Billing, Zuora, RapidAPI marketplace common platforms",
+      "Usage metering: per request, per compute unit, per data volume",
+      "Developer experience critical for adoption",
+      "Requires strong analytics, billing integration, and support"
+    ]
+  },
+  "Developer Portal": {
+    "explanation": "A developer portal provides API docs, sandbox, and key management for external developers",
+    "points": [
+      "Popular platforms: Redocly, Stoplight, ReadMe, Bump.sh, Backstage",
+      "Features: interactive docs, API console, usage dashboard, forums",
+      "Self-service onboarding and key provisioning",
+      "SEO-optimized landing page for discoverability",
+      "Analytics on which docs are most viewed"
+    ]
+  },
+  "Sandbox": {
+    "explanation": "An API sandbox is a test environment where developers can experiment without real-world consequences",
+    "points": [
+      "Separate base URL, test credentials, fake data",
+      "No real charges, emails, or side effects",
+      "Often pre-populated with sample data",
+      "Critical for safe experimentation and demos",
+      "Should mirror production as closely as possible"
+    ]
+  },
+  "Webhook Retry": {
+    "explanation": "Webhook retry logic resends failed event deliveries with backoff to ensure no data is lost",
+    "points": [
+      "Typical: exponential backoff, max attempts (5–10), dead-letter queue",
+      "Respect HTTP status codes (429 → longer delay)",
+      "Idempotency key in payload prevents duplicates",
+      "Monitor delivery success rate",
+      "Many platforms (Stripe, SendGrid) provide configurable retry rules"
+    ]
+  },
+  "Idempotency Key": {
+    "explanation": "An idempotency key lets clients safely retry API requests without creating duplicate operations",
+    "points": [
+      "Client generates unique key per operation",
+      "Server stores key + response for short period (24h common)",
+      "Returns same response for same key",
+      "Essential for payments, order creation, transfers",
+      "Stripe, PayPal, Square use this pattern"
+    ]
+  },
+  "API Latency": {
+    "explanation": "API latency is the time from sending a request to receiving the first byte of response",
+    "points": [
+      "Includes network RTT + server processing time",
+      "Measured at p50, p95, p99 percentiles",
+      "Typical good values: <100ms p50, <500ms p99 for most APIs",
+      "Affected by geography, cold starts, DB queries, external calls",
+      "Critical UX factor for mobile and interactive apps"
+    ]
+  },
+  "P99 Latency": {
+    "explanation": "P99 latency is the response time that 99 percent of requests complete within",
+    "points": [
+      "Tail latency — focuses on worst 1% of requests",
+      "Much more important than average for user experience",
+      "Outliers often caused by GC pauses, slow DB queries, network blips",
+      "Goal: keep p99 under 1–2 seconds for most APIs",
+      "Requires careful monitoring and chaos testing"
+    ]
+  },
+  "SLA": {
+    "explanation": "A Service Level Agreement guarantees minimum API uptime and performance metrics to customers",
+    "points": [
+      "Typical: 99.9% uptime (“three nines”), 500ms p95 latency",
+      "Includes error budget concept",
+      "Violations trigger credits or refunds",
+      "Separate internal SLOs stricter than external SLA",
+      "Requires robust monitoring and alerting"
+    ]
+  },
+  "Uptime": {
+    "explanation": "Uptime is the percentage of time an API is available and responding correctly",
+    "points": [
+      "Calculated as (total time – downtime) / total time × 100",
+      "Five nines (99.999%) ≈ 5 minutes downtime/year",
+      "Measured via synthetic monitoring (uptime checks)",
+      "Includes planned maintenance if not communicated",
+      "Public status page shows current/historical uptime"
+    ]
+  },
+  "Zero Downtime Deploy": {
+    "explanation": "Zero downtime deployment updates the API without dropping any requests from clients",
+    "points": [
+      "Strategies: blue-green, rolling updates, canary releases",
+      "Requires backward-compatible changes or feature flags",
+      "Health checks and readiness probes essential",
+      "Kubernetes, ECS, Nomad support native rolling updates",
+      "Goal for high-availability services"
+    ]
+  },
+  "Blue-Green Deployment": {
+    "explanation": "Blue-green deploys a new API version alongside the old one then switches traffic instantly",
+    "points": [
+      "Blue = live, green = new version",
+      "Instant rollback by switching back to blue",
+      "Requires double capacity during deployment",
+      "DNS or load balancer switchover",
+      "Popular in cloud environments with auto-scaling groups"
+    ]
+  },
+  "Canary Release": {
+    "explanation": "A canary release routes a small percentage of traffic to a new API version first",
+    "points": [
+      "Monitor metrics before full rollout",
+      "Gradual: 1% → 10% → 50% → 100%",
+      "Easy rollback by shifting traffic back",
+      "Supported natively by Istio, Flagger, Kubernetes",
+      "Reduces blast radius of bad releases"
+    ]
+  },
+  "Feature Flags": {
+    "explanation": "Feature flags turn API features on or off without deploying new code",
+    "points": [
+      "Tools: LaunchDarkly, Unleash, Flagsmith, ConfigCat",
+      "Granular targeting: user, percentage, region, environment",
+      "Enables dark launches, A/B testing, kill switches",
+      "Critical for safe continuous deployment",
+      "Must clean up old flags to avoid technical debt"
+    ]
+  },
+  "API Observability": {
+    "explanation": "API observability tracks logs, metrics, and traces to understand how your API behaves in production",
+    "points": [
+      "Three pillars: logs (what happened), metrics (how much), traces (how long, where)",
+      "Tools: Prometheus + Grafana, Datadog, New Relic, Honeycomb, OpenTelemetry",
+      "Golden signals: latency, traffic, errors, saturation",
+      "Structured logging (JSON) with correlation IDs",
+      "Enables proactive alerting and debugging"
+    ]
+  },
+  "Distributed Tracing": {
+    "explanation": "Distributed tracing follows a request across multiple services to pinpoint where it slows down",
+    "points": [
+      "Span = unit of work; trace = end-to-end request",
+      "Context propagation via headers (Traceparent, B3, W3C)",
+      "OpenTelemetry standard unifying Jaeger, Zipkin, etc.",
+      "Critical for microservices debugging",
+      "Sampling strategies needed at scale"
+    ]
+  },
+  "API Security": {
+    "explanation": "API security protects against injection, broken auth, excessive data exposure, and DDoS attacks",
+    "points": [
+      "OWASP API Security Top 10 primary reference",
+      "Defense in depth: auth, input validation, rate limiting, WAF",
+      "Never trust client input — validate everything",
+      "Regular security audits and penetration testing",
+      "Security must be part of design, not bolt-on"
+    ]
+  },
+  "OWASP API Top 10": {
+    "explanation": "OWASP API Top 10 lists the most critical API security risks developers must protect against",
+    "points": [
+      "2023 version: Broken Object Level Authorization #1",
+      "Excessive Data Exposure, Mass Assignment, Injection still major",
+      "Broken Authentication, Security Misconfiguration, Improper Assets Management",
+      "Updated regularly based on real-world data",
+      "Primary checklist for API security reviews"
+    ]
+  },
+  "Mutual TLS": {
+    "explanation": "Mutual TLS requires both client and server to present certificates proving their identity",
+    "points": [
+      "Strongest form of API authentication for machine-to-machine",
+      "No shared secrets — cryptographic identity",
+      "Certificate rotation and revocation required",
+      "Common in financial services, healthcare, government",
+      "Harder to manage at scale than token auth"
+    ]
+  },
+  "API Analytics": {
+    "explanation": "API analytics track usage patterns, popular endpoints, and error rates for business insights",
+    "points": [
+      "Measure adoption, growth, top consumers, error trends",
+      "Tools: Moesif, Google Analytics for APIs, Datadog API monitoring",
+      "Helps prioritize features, detect abuse, plan capacity",
+      "Segment by key, app, developer, geography",
+      "Critical for monetized and partner APIs"
+    ]
+  },
+  "AsyncAPI": {
+    "explanation": "AsyncAPI is a specification standard for documenting event-driven and message-based APIs",
+    "points": [
+      "Similar to OpenAPI but for async protocols (Kafka, MQTT, AMQP, WebSocket)",
+      "Describes channels, messages, schemas, security",
+      "Generates docs, code, tests similar to OpenAPI",
+      "Growing adoption for event-driven architectures",
+      "AsyncAPI Initiative community-driven"
+    ]
+  },
+  "GraphQL Subscription": {
+    "explanation": "GraphQL subscriptions use WebSockets to push real-time updates when data changes",
+    "points": [
+      "subscription { messageAdded(channelId: \"1\") { text } }",
+      "Server maintains WebSocket connection per client",
+      "Pub/sub pattern under the hood (Redis, Kafka, in-memory)",
+      "Authentication and authorization per subscription",
+      "Backpressure and connection limits important"
+    ]
+  },
+  "DataLoader": {
+    "explanation": "DataLoader batches and caches GraphQL data fetches to prevent N+1 query performance issues",
+    "points": [
+      "Created by Facebook for GraphQL-js",
+      "Batches identical requests in same tick",
+      "Caches results within single request",
+      "Essential for relational data in GraphQL",
+      "Available in most GraphQL server libraries"
+    ]
+  },
+  "Federation": {
+    "explanation": "GraphQL federation combines multiple independent GraphQL APIs into one unified schema",
+    "points": [
+      "Apollo Federation most popular implementation",
+      "Each service defines its part of graph with @key, @extends",
+      "Gateway stitches schemas and routes queries",
+      "Enables microservices-style GraphQL",
+      "Schema composition and ownership challenges"
+    ]
+  },
+  "Introspection": {
+    "explanation": "GraphQL introspection lets clients query the schema to discover available types and operations",
+    "points": [
+      "__schema and __type special fields",
+      "Powers GraphiQL, Playground, auto-completion",
+      "Can be disabled in production for security",
+      "Introspection query size can be large",
+      "Used by codegen tools for type-safe clients"
+    ]
+  },
+  "Field Resolvers": {
+    "explanation": "GraphQL field resolvers are functions that fetch or compute the value of each schema field",
+    "points": [
+      "Root resolver → field resolvers → nested resolvers",
+      "Can be sync or async",
+      "Context, args, info parameters available",
+      "Place for auth checks, data loading, business logic",
+      "Performance bottleneck if N+1 not handled"
+    ]
+  },
+  "API Governance": {
+    "explanation": "API governance enforces standards, naming conventions, and security policies across all APIs",
+    "points": [
+      "Style guides, naming conventions, error formats",
+      "Linting of OpenAPI specs (Spectral, vacuum)",
+      "Review process for new APIs and major changes",
+      "Central catalog/discovery of all APIs",
+      "Balances consistency with team autonomy"
+    ]
+  },
+  "Streaming API": {
+    "explanation": "Streaming APIs send data incrementally as it becomes available instead of waiting for the full response",
+    "points": [
+      "Transfer-Encoding: chunked or gRPC streaming",
+      "Good for large datasets, logs, video, search-as-you-type",
+      "Client must handle partial responses",
+      "Backpressure support important",
+      "HTTP/2 and HTTP/3 improve streaming efficiency"
+    ]
+  },
+  "Batch API": {
+    "explanation": "Batch APIs accept many requests in one call to reduce round trips and improve throughput",
+    "points": [
+      "Example: Google Batch API, JSON-RPC batch",
+      "Single response with array of results or errors",
+      "Partial success handling critical",
+      "Greatly reduces latency for mobile clients",
+      "Size limits and individual request timeouts apply"
+    ]
+  },
+  "API Composition Pattern": {
+    "explanation": "API composition aggregates multiple microservice calls into one response on the server side",
+    "points": [
+      "Reduces client-side orchestration",
+      "Can be done in gateway, dedicated composition service, or BFF",
+      "Caching and parallel fetching important for performance",
+      "Error propagation and partial responses need design",
+      "Common in e-commerce product detail pages"
+    ]
+  },
+  "Back-pressure": {
+    "explanation": "Back-pressure signals an overwhelmed API to slow down the rate incoming requests are sent",
+    "points": [
+      "Reactive Streams, gRPC flow control, HTTP/2 flow control",
+      "Prevents memory exhaustion and cascading failures",
+      "Better than dropping requests or 503",
+      "Requires client cooperation",
+      "Essential in streaming and high-throughput systems"
+    ]
+  },
+  "API Deprecation Policy": {
+    "explanation": "A deprecation policy gives developers adequate notice and migration time before removing API features",
+    "points": [
+      "Typical: 6–12 months notice for breaking changes",
+      "Announce via changelog, email, developer portal",
+      "Provide migration guides and tools",
+      "Monitor usage to identify affected clients",
+      "Sunset date after which access is blocked"
+    ]
+  },
+  "Contract Testing": {
+    "explanation": "Contract tests verify both API provider and consumer honor the agreed schema and behavior",
+    "points": [
+      "Pact, Spring Cloud Contract, Dredd, Schemathesis",
+      "Consumer publishes expected contract → provider verifies",
+      "Catches breaking changes early",
+      "Reduces need for heavy integration tests",
+      "Works well with CI/CD pipelines"
+    ]
+  },
+  "API Schema Validation": {
+    "explanation": "Schema validation automatically rejects requests that do not conform to the API specification",
+    "points": [
+      "OpenAPI → validate request/response against spec",
+      "Tools: express-openapi-validator, swagger-validator, spectral",
+      "Early rejection saves processing time",
+      "Better error messages than runtime failures",
+      "Can be strict or lenient depending on stage"
+    ]
+  },
+  "Optimistic UI": {
+    "explanation": "Optimistic UI assumes API calls succeed and updates the interface before getting confirmation",
+    "points": [
+      "Greatly improves perceived performance",
+      "Rollback on failure with error message",
+      "Used by Twitter/X, GitHub, Figma, Notion",
+      "Requires conflict resolution strategy",
+      "Pair with undo stack for best experience"
+    ]
+  },
+  "API Portal": {
+    "explanation": "An API portal provides documentation, sandbox testing, key management, and usage analytics",
+    "points": [
+      "Often built on top of OpenAPI spec",
+      "Self-service onboarding experience",
+      "Showcases use cases, tutorials, code samples",
+      "Usage dashboard for developers",
+      "Critical for public and partner APIs"
+    ]
+  },
+  "Webhook Security": {
+    "explanation": "Webhook security verifies delivery authenticity using HMAC signatures on the payload",
+    "points": [
+      "HMAC-SHA256 of payload with shared secret",
+      "Timestamp in signature prevents replay attacks",
+      "Verify before processing payload",
+      "Standard practice by Stripe, GitHub, Twilio",
+      "Reject unsigned or invalid signature immediately"
     ]
   }
 }

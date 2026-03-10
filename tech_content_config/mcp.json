@@ -1,1106 +1,432 @@
 {
-  "mcp": {
-    "items": [
-      {
-        "name": "MCP",
-        "explanation": "Model Context Protocol is an open standard connecting AI models to external tools and data",
-        "points": [
-          "Core concept of MCP used widely in modern software and AI systems",
-          "Important for understanding: Model Context Protocol is an open standard connecting AI models to external tools and data",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "MCP Server",
-        "explanation": "An MCP server exposes tools, resources, and prompts that any compatible AI client can use",
-        "points": [
-          "Core concept of MCP Server used widely in modern software and AI systems",
-          "Important for understanding: An MCP server exposes tools, resources, and prompts that any compatible AI client can use",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "MCP Client",
-        "explanation": "MCP clients like Claude Desktop connect to servers to access their capabilities and data",
-        "points": [
-          "Core concept of MCP Client used widely in modern software and AI systems",
-          "Important for understanding: MCP clients like Claude Desktop connect to servers to access their capabilities and data",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Tools",
-        "explanation": "MCP Tools let AI models execute functions like file operations, API calls, and web searches",
-        "points": [
-          "Core concept of Tools used widely in modern software and AI systems",
-          "Important for understanding: MCP Tools let AI models execute functions like file operations, API calls, and web searches",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Resources",
-        "explanation": "MCP Resources expose data sources like files, databases, and APIs to AI models",
-        "points": [
-          "Core concept of Resources used widely in modern software and AI systems",
-          "Important for understanding: MCP Resources expose data sources like files, databases, and APIs to AI models",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Prompts",
-        "explanation": "MCP Prompts are reusable prompt templates that standardize AI model behavior across apps",
-        "points": [
-          "Core concept of Prompts used widely in modern software and AI systems",
-          "Important for understanding: MCP Prompts are reusable prompt templates that standardize AI model behavior across apps",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Sampling",
-        "explanation": "MCP Sampling lets servers request LLM completions through the connected client",
-        "points": [
-          "Core concept of Sampling used widely in modern software and AI systems",
-          "Important for understanding: MCP Sampling lets servers request LLM completions through the connected client",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Transport",
-        "explanation": "MCP supports stdio and HTTP with SSE transports for client-server communication",
-        "points": [
-          "Core concept of Transport used widely in modern software and AI systems",
-          "Important for understanding: MCP supports stdio and HTTP with SSE transports for client-server communication",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Claude Desktop",
-        "explanation": "Claude Desktop natively supports MCP letting you connect local and remote MCP servers",
-        "points": [
-          "Core concept of Claude Desktop used widely in modern software and AI systems",
-          "Important for understanding: Claude Desktop natively supports MCP letting you connect local and remote MCP servers",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "MCP SDK",
-        "explanation": "The official MCP SDK lets developers build servers and clients in Python and TypeScript",
-        "points": [
-          "Core concept of MCP SDK used widely in modern software and AI systems",
-          "Important for understanding: The official MCP SDK lets developers build servers and clients in Python and TypeScript",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Tool Call",
-        "explanation": "A tool call is when an AI model invokes an MCP tool and waits for the result",
-        "points": [
-          "Core concept of Tool Call used widely in modern software and AI systems",
-          "Important for understanding: A tool call is when an AI model invokes an MCP tool and waits for the result",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Tool Result",
-        "explanation": "A tool result is the data returned by an MCP server after executing a tool call",
-        "points": [
-          "Core concept of Tool Result used widely in modern software and AI systems",
-          "Important for understanding: A tool result is the data returned by an MCP server after executing a tool call",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Tool Schema",
-        "explanation": "Tool schemas define tool names, descriptions, and input parameters using JSON Schema",
-        "points": [
-          "Core concept of Tool Schema used widely in modern software and AI systems",
-          "Important for understanding: Tool schemas define tool names, descriptions, and input parameters using JSON Schema",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "SSE Transport",
-        "explanation": "Server-Sent Events transport lets remote MCP servers stream updates to clients over HTTP",
-        "points": [
-          "Core concept of SSE Transport used widely in modern software and AI systems",
-          "Important for understanding: Server-Sent Events transport lets remote MCP servers stream updates to clients over HTTP",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Stdio Transport",
-        "explanation": "Stdio transport runs MCP servers as local processes communicating through standard input and output",
-        "points": [
-          "Core concept of Stdio Transport used widely in modern software and AI systems",
-          "Important for understanding: Stdio transport runs MCP servers as local processes communicating through standard input and output",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "MCP Host",
-        "explanation": "An MCP host is the application like Claude Desktop that manages client connections to servers",
-        "points": [
-          "Core concept of MCP Host used widely in modern software and AI systems",
-          "Important for understanding: An MCP host is the application like Claude Desktop that manages client connections to servers",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Tool Discovery",
-        "explanation": "Tool discovery lets AI clients automatically list all tools available on a connected MCP server",
-        "points": [
-          "Core concept of Tool Discovery used widely in modern software and AI systems",
-          "Important for understanding: Tool discovery lets AI clients automatically list all tools available on a connected MCP server",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Resource URI",
-        "explanation": "Each MCP resource has a unique URI that clients use to read its current content",
-        "points": [
-          "Core concept of Resource URI used widely in modern software and AI systems",
-          "Important for understanding: Each MCP resource has a unique URI that clients use to read its current content",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Resource Templates",
-        "explanation": "Resource templates are URI patterns that expose dynamic parameterized data sources",
-        "points": [
-          "Core concept of Resource Templates used widely in modern software and AI systems",
-          "Important for understanding: Resource templates are URI patterns that expose dynamic parameterized data sources",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Capability Negotiation",
-        "explanation": "MCP clients and servers negotiate supported capabilities during the initialization handshake",
-        "points": [
-          "Core concept of Capability Negotiation used widely in modern software and AI systems",
-          "Important for understanding: MCP clients and servers negotiate supported capabilities during the initialization handshake",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "JSON-RPC",
-        "explanation": "MCP uses JSON-RPC 2.0 as its message format for all client-server communication",
-        "points": [
-          "Core concept of JSON-RPC used widely in modern software and AI systems",
-          "Important for understanding: MCP uses JSON-RPC 2.0 as its message format for all client-server communication",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Tool Annotation",
-        "explanation": "MCP tool annotations describe whether tools are read-only or can modify external state",
-        "points": [
-          "Core concept of Tool Annotation used widely in modern software and AI systems",
-          "Important for understanding: MCP tool annotations describe whether tools are read-only or can modify external state",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "MCP Inspector",
-        "explanation": "The MCP Inspector is a developer tool to test and debug MCP servers interactively",
-        "points": [
-          "Core concept of MCP Inspector used widely in modern software and AI systems",
-          "Important for understanding: The MCP Inspector is a developer tool to test and debug MCP servers interactively",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Roots",
-        "explanation": "Roots tell MCP servers which directories or resources the client wants them to focus on",
-        "points": [
-          "Core concept of Roots used widely in modern software and AI systems",
-          "Important for understanding: Roots tell MCP servers which directories or resources the client wants them to focus on",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Server-side Prompts",
-        "explanation": "Server-side prompts let MCP servers expose templated prompts users can invoke in their AI client",
-        "points": [
-          "Core concept of Server-side Prompts used widely in modern software and AI systems",
-          "Important for understanding: Server-side prompts let MCP servers expose templated prompts users can invoke in their AI client",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Elicitation",
-        "explanation": "MCP elicitation lets servers ask the user for additional information mid-task through the client",
-        "points": [
-          "Core concept of Elicitation used widely in modern software and AI systems",
-          "Important for understanding: MCP elicitation lets servers ask the user for additional information mid-task through the client",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Progress Notification",
-        "explanation": "Progress notifications let MCP servers report long-running task progress back to clients",
-        "points": [
-          "Core concept of Progress Notification used widely in modern software and AI systems",
-          "Important for understanding: Progress notifications let MCP servers report long-running task progress back to clients",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Cancellation",
-        "explanation": "MCP supports cancellation tokens so clients can interrupt long-running server operations",
-        "points": [
-          "Core concept of Cancellation used widely in modern software and AI systems",
-          "Important for understanding: MCP supports cancellation tokens so clients can interrupt long-running server operations",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Logging",
-        "explanation": "MCP servers can send structured log messages to clients for debugging and observability",
-        "points": [
-          "Core concept of Logging used widely in modern software and AI systems",
-          "Important for understanding: MCP servers can send structured log messages to clients for debugging and observability",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Pagination",
-        "explanation": "MCP pagination returns large resource or tool lists in manageable batches via cursor tokens",
-        "points": [
-          "Core concept of Pagination used widely in modern software and AI systems",
-          "Important for understanding: MCP pagination returns large resource or tool lists in manageable batches via cursor tokens",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Authentication MCP",
-        "explanation": "MCP servers can require OAuth 2.1 authentication before granting AI clients access",
-        "points": [
-          "Core concept of Authentication MCP used widely in modern software and AI systems",
-          "Important for understanding: MCP servers can require OAuth 2.1 authentication before granting AI clients access",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Remote MCP Server",
-        "explanation": "Remote MCP servers run in the cloud and connect over HTTP giving AI access to remote services",
-        "points": [
-          "Core concept of Remote MCP Server used widely in modern software and AI systems",
-          "Important for understanding: Remote MCP servers run in the cloud and connect over HTTP giving AI access to remote services",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Local MCP Server",
-        "explanation": "Local MCP servers run on your machine with stdio transport and access local files and apps",
-        "points": [
-          "Core concept of Local MCP Server used widely in modern software and AI systems",
-          "Important for understanding: Local MCP servers run on your machine with stdio transport and access local files and apps",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "MCP Registry",
-        "explanation": "MCP registries are directories of published servers that users can discover and install easily",
-        "points": [
-          "Core concept of MCP Registry used widely in modern software and AI systems",
-          "Important for understanding: MCP registries are directories of published servers that users can discover and install easily",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Smithery",
-        "explanation": "Smithery is a popular marketplace for discovering and deploying MCP servers",
-        "points": [
-          "Core concept of Smithery used widely in modern software and AI systems",
-          "Important for understanding: Smithery is a popular marketplace for discovering and deploying MCP servers",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "MCP over REST",
-        "explanation": "MCP can be layered over REST APIs to expose existing HTTP services as AI-callable tools",
-        "points": [
-          "Core concept of MCP over REST used widely in modern software and AI systems",
-          "Important for understanding: MCP can be layered over REST APIs to expose existing HTTP services as AI-callable tools",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Tool Composition",
-        "explanation": "Tool composition chains multiple MCP tool calls together to complete complex multi-step tasks",
-        "points": [
-          "Core concept of Tool Composition used widely in modern software and AI systems",
-          "Important for understanding: Tool composition chains multiple MCP tool calls together to complete complex multi-step tasks",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Context Injection",
-        "explanation": "MCP resources inject relevant live data into the AI's context automatically before it responds",
-        "points": [
-          "Core concept of Context Injection used widely in modern software and AI systems",
-          "Important for understanding: MCP resources inject relevant live data into the AI's context automatically before it responds",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "File System Server",
-        "explanation": "The official MCP filesystem server exposes local files and directories as readable resources",
-        "points": [
-          "Core concept of File System Server used widely in modern software and AI systems",
-          "Important for understanding: The official MCP filesystem server exposes local files and directories as readable resources",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Git MCP Server",
-        "explanation": "Git MCP servers expose repository history, branches, and diffs as tools for AI code assistants",
-        "points": [
-          "Core concept of Git MCP Server used widely in modern software and AI systems",
-          "Important for understanding: Git MCP servers expose repository history, branches, and diffs as tools for AI code assistants",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "GitHub MCP Server",
-        "explanation": "The GitHub MCP server lets AI create issues, pull requests, and manage code repositories",
-        "points": [
-          "Core concept of GitHub MCP Server used widely in modern software and AI systems",
-          "Important for understanding: The GitHub MCP server lets AI create issues, pull requests, and manage code repositories",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Database MCP Server",
-        "explanation": "Database MCP servers let AI query PostgreSQL, MySQL, or SQLite to answer data questions",
-        "points": [
-          "Core concept of Database MCP Server used widely in modern software and AI systems",
-          "Important for understanding: Database MCP servers let AI query PostgreSQL, MySQL, or SQLite to answer data questions",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Browser MCP Server",
-        "explanation": "Browser MCP servers give AI tools to navigate web pages, click elements, and extract content",
-        "points": [
-          "Core concept of Browser MCP Server used widely in modern software and AI systems",
-          "Important for understanding: Browser MCP servers give AI tools to navigate web pages, click elements, and extract content",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Slack MCP Server",
-        "explanation": "Slack MCP servers let AI read channels, send messages, and search workspace history",
-        "points": [
-          "Core concept of Slack MCP Server used widely in modern software and AI systems",
-          "Important for understanding: Slack MCP servers let AI read channels, send messages, and search workspace history",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Google Drive MCP",
-        "explanation": "Google Drive MCP servers let AI read, create, and organize files in Google Drive",
-        "points": [
-          "Core concept of Google Drive MCP used widely in modern software and AI systems",
-          "Important for understanding: Google Drive MCP servers let AI read, create, and organize files in Google Drive",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Notion MCP Server",
-        "explanation": "Notion MCP servers expose pages, databases, and blocks for AI to read and update",
-        "points": [
-          "Core concept of Notion MCP Server used widely in modern software and AI systems",
-          "Important for understanding: Notion MCP servers expose pages, databases, and blocks for AI to read and update",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Jira MCP Server",
-        "explanation": "Jira MCP servers let AI create tickets, update issues, and query project boards",
-        "points": [
-          "Core concept of Jira MCP Server used widely in modern software and AI systems",
-          "Important for understanding: Jira MCP servers let AI create tickets, update issues, and query project boards",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Kubernetes MCP Server",
-        "explanation": "Kubernetes MCP servers give AI tools to inspect pods, deployments, and cluster resources",
-        "points": [
-          "Core concept of Kubernetes MCP Server used widely in modern software and AI systems",
-          "Important for understanding: Kubernetes MCP servers give AI tools to inspect pods, deployments, and cluster resources",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "AWS MCP Server",
-        "explanation": "AWS MCP servers let AI query and manage cloud resources using AWS APIs as tools",
-        "points": [
-          "Core concept of AWS MCP Server used widely in modern software and AI systems",
-          "Important for understanding: AWS MCP servers let AI query and manage cloud resources using AWS APIs as tools",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Memory MCP Server",
-        "explanation": "Memory MCP servers give AI persistent long-term memory by storing and retrieving facts",
-        "points": [
-          "Core concept of Memory MCP Server used widely in modern software and AI systems",
-          "Important for understanding: Memory MCP servers give AI persistent long-term memory by storing and retrieving facts",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Web Search MCP",
-        "explanation": "Web search MCP servers give AI the ability to search the internet for current information",
-        "points": [
-          "Core concept of Web Search MCP used widely in modern software and AI systems",
-          "Important for understanding: Web search MCP servers give AI the ability to search the internet for current information",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Image Generation MCP",
-        "explanation": "Image generation MCP servers let AI create images by calling DALL-E or Stable Diffusion tools",
-        "points": [
-          "Core concept of Image Generation MCP used widely in modern software and AI systems",
-          "Important for understanding: Image generation MCP servers let AI create images by calling DALL-E or Stable Diffusion tools",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Sequential Thinking MCP",
-        "explanation": "Sequential thinking MCP servers give AI a tool to reason step by step through complex problems",
-        "points": [
-          "Core concept of Sequential Thinking MCP used widely in modern software and AI systems",
-          "Important for understanding: Sequential thinking MCP servers give AI a tool to reason step by step through complex problems",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Multi-server Setup",
-        "explanation": "AI clients can connect to multiple MCP servers simultaneously to access many tools at once",
-        "points": [
-          "Core concept of Multi-server Setup used widely in modern software and AI systems",
-          "Important for understanding: AI clients can connect to multiple MCP servers simultaneously to access many tools at once",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Tool Namespacing",
-        "explanation": "Tool namespacing prevents name collisions when multiple MCP servers expose similarly named tools",
-        "points": [
-          "Core concept of Tool Namespacing used widely in modern software and AI systems",
-          "Important for understanding: Tool namespacing prevents name collisions when multiple MCP servers expose similarly named tools",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Structured Output",
-        "explanation": "MCP tools can return structured JSON so AI models parse results precisely",
-        "points": [
-          "Core concept of Structured Output used widely in modern software and AI systems",
-          "Important for understanding: MCP tools can return structured JSON so AI models parse results precisely",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Binary Resources",
-        "explanation": "MCP resources can return binary content like images as base64-encoded data",
-        "points": [
-          "Core concept of Binary Resources used widely in modern software and AI systems",
-          "Important for understanding: MCP resources can return binary content like images as base64-encoded data",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Prompt Arguments",
-        "explanation": "MCP prompts accept named arguments that get interpolated into the prompt template",
-        "points": [
-          "Core concept of Prompt Arguments used widely in modern software and AI systems",
-          "Important for understanding: MCP prompts accept named arguments that get interpolated into the prompt template",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Server Configuration",
-        "explanation": "MCP server configuration in claude_desktop_config.json defines which servers launch with the client",
-        "points": [
-          "Core concept of Server Configuration used widely in modern software and AI systems",
-          "Important for understanding: MCP server configuration in claude_desktop_config.json defines which servers launch with the client",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Environment Variables MCP",
-        "explanation": "MCP servers receive credentials and config via environment variables for secure secret management",
-        "points": [
-          "Core concept of Environment Variables MCP used widely in modern software and AI systems",
-          "Important for understanding: MCP servers receive credentials and config via environment variables for secure secret management",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Tool Use Latency",
-        "explanation": "Tool use latency is the delay between an AI calling an MCP tool and receiving its result",
-        "points": [
-          "Core concept of Tool Use Latency used widely in modern software and AI systems",
-          "Important for understanding: Tool use latency is the delay between an AI calling an MCP tool and receiving its result",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Parallel Tool Calls",
-        "explanation": "AI models can invoke multiple MCP tools in parallel to complete tasks faster",
-        "points": [
-          "Core concept of Parallel Tool Calls used widely in modern software and AI systems",
-          "Important for understanding: AI models can invoke multiple MCP tools in parallel to complete tasks faster",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Tool Error Handling",
-        "explanation": "MCP defines standard error codes so clients handle server failures gracefully",
-        "points": [
-          "Core concept of Tool Error Handling used widely in modern software and AI systems",
-          "Important for understanding: MCP defines standard error codes so clients handle server failures gracefully",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Idempotent Tools",
-        "explanation": "Idempotent MCP tools safely repeat the same call without causing duplicate side effects",
-        "points": [
-          "Core concept of Idempotent Tools used widely in modern software and AI systems",
-          "Important for understanding: Idempotent MCP tools safely repeat the same call without causing duplicate side effects",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Read-only Tools",
-        "explanation": "Read-only MCP tools fetch information without modifying any external state",
-        "points": [
-          "Core concept of Read-only Tools used widely in modern software and AI systems",
-          "Important for understanding: Read-only MCP tools fetch information without modifying any external state",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Write Tools",
-        "explanation": "Write MCP tools create, update, or delete data in external systems",
-        "points": [
-          "Core concept of Write Tools used widely in modern software and AI systems",
-          "Important for understanding: Write MCP tools create, update, or delete data in external systems",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "MCP Specification",
-        "explanation": "The MCP specification is a published open standard maintained by Anthropic on GitHub",
-        "points": [
-          "Core concept of MCP Specification used widely in modern software and AI systems",
-          "Important for understanding: The MCP specification is a published open standard maintained by Anthropic on GitHub",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Tool Versioning",
-        "explanation": "MCP servers can version their tools so clients handle updates without breaking existing workflows",
-        "points": [
-          "Core concept of Tool Versioning used widely in modern software and AI systems",
-          "Important for understanding: MCP servers can version their tools so clients handle updates without breaking existing workflows",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Graceful Degradation",
-        "explanation": "AI apps should work with reduced capability when MCP tools are unavailable or return errors",
-        "points": [
-          "Core concept of Graceful Degradation used widely in modern software and AI systems",
-          "Important for understanding: AI apps should work with reduced capability when MCP tools are unavailable or return errors",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Agentic Workflows",
-        "explanation": "MCP enables agentic workflows where AI autonomously calls tools in sequence to complete goals",
-        "points": [
-          "Core concept of Agentic Workflows used widely in modern software and AI systems",
-          "Important for understanding: MCP enables agentic workflows where AI autonomously calls tools in sequence to complete goals",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Human in the Loop",
-        "explanation": "MCP supports human approval steps where the user confirms before a tool makes external changes",
-        "points": [
-          "Core concept of Human in the Loop used widely in modern software and AI systems",
-          "Important for understanding: MCP supports human approval steps where the user confirms before a tool makes external changes",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Tool Trust",
-        "explanation": "Tool trust levels determine which MCP tools can run automatically versus requiring user confirmation",
-        "points": [
-          "Core concept of Tool Trust used widely in modern software and AI systems",
-          "Important for understanding: Tool trust levels determine which MCP tools can run automatically versus requiring user confirmation",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Composable AI Systems",
-        "explanation": "MCP lets developers compose powerful AI systems by mixing specialized servers like building blocks",
-        "points": [
-          "Core concept of Composable AI Systems used widely in modern software and AI systems",
-          "Important for understanding: MCP lets developers compose powerful AI systems by mixing specialized servers like building blocks",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "API Gateway MCP",
-        "explanation": "API gateway MCP servers wrap internal REST APIs to make them accessible as AI tools",
-        "points": [
-          "Core concept of API Gateway MCP used widely in modern software and AI systems",
-          "Important for understanding: API gateway MCP servers wrap internal REST APIs to make them accessible as AI tools",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Rate Limiting MCP",
-        "explanation": "MCP servers should rate-limit tool calls to protect backend APIs from being overwhelmed",
-        "points": [
-          "Core concept of Rate Limiting MCP used widely in modern software and AI systems",
-          "Important for understanding: MCP servers should rate-limit tool calls to protect backend APIs from being overwhelmed",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Tool Documentation",
-        "explanation": "Good MCP tool descriptions are critical \u2014 AI models use them to decide which tool to call",
-        "points": [
-          "Core concept of Tool Documentation used widely in modern software and AI systems",
-          "Important for understanding: Good MCP tool descriptions are critical \u2014 AI models use them to decide which tool to call",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "MCP Proxy",
-        "explanation": "An MCP proxy aggregates multiple upstream servers into one connection for client simplicity",
-        "points": [
-          "Core concept of MCP Proxy used widely in modern software and AI systems",
-          "Important for understanding: An MCP proxy aggregates multiple upstream servers into one connection for client simplicity",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Server Health Checks",
-        "explanation": "AI clients should verify MCP server connectivity before sending tool requests to avoid failures",
-        "points": [
-          "Core concept of Server Health Checks used widely in modern software and AI systems",
-          "Important for understanding: AI clients should verify MCP server connectivity before sending tool requests to avoid failures",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Mock MCP Server",
-        "explanation": "Mock MCP servers simulate real tools during testing so AI apps can be developed safely",
-        "points": [
-          "Core concept of Mock MCP Server used widely in modern software and AI systems",
-          "Important for understanding: Mock MCP servers simulate real tools during testing so AI apps can be developed safely",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "MCP Middleware",
-        "explanation": "MCP middleware intercepts tool calls to add logging, caching, or authentication",
-        "points": [
-          "Core concept of MCP Middleware used widely in modern software and AI systems",
-          "Important for understanding: MCP middleware intercepts tool calls to add logging, caching, or authentication",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Dynamic Tool Registration",
-        "explanation": "Dynamic registration lets MCP servers update their available tools without restarting",
-        "points": [
-          "Core concept of Dynamic Tool Registration used widely in modern software and AI systems",
-          "Important for understanding: Dynamic registration lets MCP servers update their available tools without restarting",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Context Preservation",
-        "explanation": "MCP resource subscriptions keep the AI's context fresh with live updates from servers",
-        "points": [
-          "Core concept of Context Preservation used widely in modern software and AI systems",
-          "Important for understanding: MCP resource subscriptions keep the AI's context fresh with live updates from servers",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Streaming Tool Results",
-        "explanation": "Long-running tools can stream partial results back progressively via MCP progress notifications",
-        "points": [
-          "Core concept of Streaming Tool Results used widely in modern software and AI systems",
-          "Important for understanding: Long-running tools can stream partial results back progressively via MCP progress notifications",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "MCP Analytics",
-        "explanation": "MCP analytics track which tools are called, how often, and which produce errors in production",
-        "points": [
-          "Core concept of MCP Analytics used widely in modern software and AI systems",
-          "Important for understanding: MCP analytics track which tools are called, how often, and which produce errors in production",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "OpenAPI to MCP",
-        "explanation": "Tools can auto-generate MCP server wrappers from OpenAPI specifications for any REST API",
-        "points": [
-          "Core concept of OpenAPI to MCP used widely in modern software and AI systems",
-          "Important for understanding: Tools can auto-generate MCP server wrappers from OpenAPI specifications for any REST API",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "LLM Tool Selection",
-        "explanation": "LLMs select which MCP tool to invoke based on tool descriptions and the user's goal",
-        "points": [
-          "Core concept of LLM Tool Selection used widely in modern software and AI systems",
-          "Important for understanding: LLMs select which MCP tool to invoke based on tool descriptions and the user's goal",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "ReAct Pattern",
-        "explanation": "The ReAct pattern has LLMs alternate between reasoning and MCP tool actions to solve tasks",
-        "points": [
-          "Core concept of ReAct Pattern used widely in modern software and AI systems",
-          "Important for understanding: The ReAct pattern has LLMs alternate between reasoning and MCP tool actions to solve tasks",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Plan and Execute",
-        "explanation": "Plan-and-execute agents first create a full plan then run MCP tools step by step",
-        "points": [
-          "Core concept of Plan and Execute used widely in modern software and AI systems",
-          "Important for understanding: Plan-and-execute agents first create a full plan then run MCP tools step by step",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "MCP Community",
-        "explanation": "The MCP community has built hundreds of open-source servers covering nearly every service",
-        "points": [
-          "Core concept of MCP Community used widely in modern software and AI systems",
-          "Important for understanding: The MCP community has built hundreds of open-source servers covering nearly every service",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Metadata in Tools",
-        "explanation": "MCP tool metadata provides hints to clients about cost, risk, and read-write behavior",
-        "points": [
-          "Core concept of Metadata in Tools used widely in modern software and AI systems",
-          "Important for understanding: MCP tool metadata provides hints to clients about cost, risk, and read-write behavior",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "MCP Versioning",
-        "explanation": "MCP protocol versioning ensures backward compatibility as the specification evolves",
-        "points": [
-          "Core concept of MCP Versioning used widely in modern software and AI systems",
-          "Important for understanding: MCP protocol versioning ensures backward compatibility as the specification evolves",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Error Propagation",
-        "explanation": "MCP propagates server errors back to the LLM so it can retry or report the failure gracefully",
-        "points": [
-          "Core concept of Error Propagation used widely in modern software and AI systems",
-          "Important for understanding: MCP propagates server errors back to the LLM so it can retry or report the failure gracefully",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Tool Chaining",
-        "explanation": "Tool chaining passes the output of one MCP tool directly as the input to the next in sequence",
-        "points": [
-          "Core concept of Tool Chaining used widely in modern software and AI systems",
-          "Important for understanding: Tool chaining passes the output of one MCP tool directly as the input to the next in sequence",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "MCP in VS Code",
-        "explanation": "VS Code Copilot supports MCP allowing AI code assistants to use custom developer tools",
-        "points": [
-          "Core concept of MCP in VS Code used widely in modern software and AI systems",
-          "Important for understanding: VS Code Copilot supports MCP allowing AI code assistants to use custom developer tools",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Permission Model",
-        "explanation": "MCP permission models let users grant or revoke specific tool access on a per-server basis",
-        "points": [
-          "Core concept of Permission Model used widely in modern software and AI systems",
-          "Important for understanding: MCP permission models let users grant or revoke specific tool access on a per-server basis",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Stateful Servers",
-        "explanation": "Stateful MCP servers maintain session state between tool calls within the same conversation",
-        "points": [
-          "Core concept of Stateful Servers used widely in modern software and AI systems",
-          "Important for understanding: Stateful MCP servers maintain session state between tool calls within the same conversation",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Stateless Servers",
-        "explanation": "Stateless MCP servers treat every tool call independently with no memory between requests",
-        "points": [
-          "Core concept of Stateless Servers used widely in modern software and AI systems",
-          "Important for understanding: Stateless MCP servers treat every tool call independently with no memory between requests",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "MCP Middleware Chain",
-        "explanation": "Multiple middleware layers can transform MCP requests for logging, validation, and caching",
-        "points": [
-          "Core concept of MCP Middleware Chain used widely in modern software and AI systems",
-          "Important for understanding: Multiple middleware layers can transform MCP requests for logging, validation, and caching",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Context Window Budget",
-        "explanation": "MCP resources should be size-aware so injected context does not overflow the model's context window",
-        "points": [
-          "Core concept of Context Window Budget used widely in modern software and AI systems",
-          "Important for understanding: MCP resources should be size-aware so injected context does not overflow the model's context window",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      },
-      {
-        "name": "Tool Testing Framework",
-        "explanation": "MCP tool testing frameworks simulate client requests to verify server behavior automatically",
-        "points": [
-          "Core concept of Tool Testing Framework used widely in modern software and AI systems",
-          "Important for understanding: MCP tool testing frameworks simulate client requests to verify server behavior automatically",
-          "Commonly applied in real-world applications and production systems",
-          "Often combined with related technologies to build scalable solutions",
-          "Key knowledge area for developers, engineers, and AI practitioners"
-        ]
-      }
+  "MCP": {
+    "explanation": "Model Context Protocol is an open standard connecting AI models to external tools and data",
+    "points": [
+      "Open protocol created by Anthropic to standardize how LLMs connect to tools, data, and actions",
+      "Enables AI agents to read files, call APIs, search the web, query databases, and more — all through one consistent interface",
+      "Designed to be transport-agnostic (stdio for local, HTTP/SSE for remote)",
+      "Already adopted by Claude Desktop, Cursor, Continue.dev, and many open-source projects",
+      "Goal is to become the universal USB-C-like connector for AI capabilities"
+    ]
+  },
+  "MCP Server": {
+    "explanation": "An MCP server exposes tools, resources, and prompts that any compatible AI client can use",
+    "points": [
+      "Lightweight process or cloud service that implements the MCP spec",
+      "Advertises its capabilities (tools, resources, prompts) during handshake",
+      "Can run locally (stdio) or remotely (HTTP + SSE)",
+      "Examples: filesystem server, Git server, Slack server, database bridge",
+      "Security boundary — each server controls exactly what it exposes"
+    ]
+  },
+  "MCP Client": {
+    "explanation": "MCP clients like Claude Desktop connect to servers to access their capabilities and data",
+    "points": [
+      "Any LLM frontend that speaks the MCP protocol (Claude Desktop, VS Code extensions, custom agents)",
+      "Discovers available servers and their tools/resources/prompts automatically",
+      "Handles tool calls, resource reads, progress updates, and cancellations",
+      "Manages multiple simultaneous server connections",
+      "Responsible for user consent and permission flows"
+    ]
+  },
+  "Tools": {
+    "explanation": "MCP Tools let AI models execute functions like file operations, API calls, and web searches",
+    "points": [
+      "Functions the model can call — defined with JSON Schema for name, description, parameters",
+      "Can be read-only (get data) or write-capable (create, update, delete)",
+      "Executed by the server — model never runs code directly",
+      "Support parallel calls, streaming results, progress reporting, and cancellation",
+      "Annotated with annotations (read-only, destructive, high-latency, etc.)"
+    ]
+  },
+  "Resources": {
+    "explanation": "MCP Resources expose data sources like files, databases, and APIs to AI models",
+    "points": [
+      "Read-only data endpoints — files, database views, API responses, live feeds",
+      "Accessed via URI (static or templated with parameters)",
+      "Can be injected automatically into context or fetched on demand",
+      "Support pagination, binary content (base64), and subscriptions for live updates",
+      "Examples: local filesystem, Google Drive folder, Notion database, Git repo"
+    ]
+  },
+  "Prompts": {
+    "explanation": "MCP Prompts are reusable prompt templates that standardize AI model behavior across apps",
+    "points": [
+      "Server-provided prompt templates with named arguments",
+      "Users select them from a menu in the client UI",
+      "Arguments get interpolated → consistent behavior across clients",
+      "Great for domain-specific agents (code review, legal doc analysis, medical note summarization)",
+      "Can include instructions, few-shot examples, tool-use guidelines"
+    ]
+  },
+  "Sampling": {
+    "explanation": "MCP Sampling lets servers request LLM completions through the connected client",
+    "points": [
+      "Server → client request: “please generate text with these instructions”",
+      "Enables server-side chaining, reflection, critique, or planning",
+      "Client decides model, temperature, max tokens, etc.",
+      "Used for agentic loops, self-critique, multi-agent systems",
+      "Keeps heavy reasoning on the powerful client side"
+    ]
+  },
+  "Transport": {
+    "explanation": "MCP supports stdio and HTTP with SSE transports for client-server communication",
+    "points": [
+      "stdio → local servers (fast, secure, no network)",
+      "HTTP + SSE → remote/cloud servers (streaming, discoverable)",
+      "Both use JSON-RPC 2.0 message format",
+      "Capability negotiation happens at connection start",
+      "Future transports possible (WebSocket, gRPC, etc.)"
+    ]
+  },
+  "Claude Desktop": {
+    "explanation": "Claude Desktop natively supports MCP letting you connect local and remote MCP servers",
+    "points": [
+      "First major client with built-in MCP support (Anthropic)",
+      "Connects to local stdio servers and remote HTTP/SSE servers",
+      "Shows server list, tools, resources, prompts in UI",
+      "Handles permissions, progress, cancellations, logs",
+      "Primary way most users experience MCP today"
+    ]
+  },
+  "MCP SDK": {
+    "explanation": "The official MCP SDK lets developers build servers and clients in Python and TypeScript",
+    "points": [
+      "Official libraries: Python (mcp), TypeScript (@anthropic-ai/mcp)",
+      "Handles protocol details: handshake, JSON-RPC, SSE, errors",
+      "Provides high-level abstractions: @tool, @resource, @prompt decorators",
+      "Includes reference servers (filesystem, memory, sequential-thinking)",
+      "Open source on GitHub under Anthropic organization"
+    ]
+  },
+  "Tool Call": {
+    "explanation": "A tool call is when an AI model invokes an MCP tool and waits for the result",
+    "points": [
+      "Model decides to call a tool based on user request and available tools",
+      "Client sends structured JSON-RPC request to the correct server",
+      "Server executes the function and returns result (or error)",
+      "Model receives result and continues reasoning or responds to user",
+      "Supports parallel calls — multiple tools at once"
+    ]
+  },
+  "Tool Result": {
+    "explanation": "A tool result is the data returned by an MCP server after executing a tool call",
+    "points": [
+      "Structured JSON response containing success data or error details",
+      "Can include text, numbers, arrays, objects, base64 binary",
+      "Server can stream partial results for long operations",
+      "Model incorporates result into context for next reasoning step",
+      "Errors include standard codes (e.g., invalid_input, timeout, permission_denied)"
+    ]
+  },
+  "Tool Schema": {
+    "explanation": "Tool schemas define tool names, descriptions, and input parameters using JSON Schema",
+    "points": [
+      "JSON Schema draft 2020-12 used for parameters (type, properties, required, etc.)",
+      "Description field is critical — model uses it to decide when to call",
+      "Annotations add metadata: read-only, destructive, high-latency, cost",
+      "Supports complex types: objects, arrays, enums, oneOf, anyOf",
+      "Servers can update schemas dynamically without restarting"
+    ]
+  },
+  "SSE Transport": {
+    "explanation": "Server-Sent Events transport lets remote MCP servers stream updates to clients over HTTP",
+    "points": [
+      "HTTP long-polling alternative — unidirectional server → client streaming",
+      "Used for progress notifications, partial tool results, live resource updates",
+      "Single persistent connection — efficient for real-time feedback",
+      "Standard event types: message, error, progress, cancellation",
+      "Fallback for clients that don’t support WebSocket"
+    ]
+  },
+  "Stdio Transport": {
+    "explanation": "Stdio transport runs MCP servers as local processes communicating through standard input and output",
+    "points": [
+      "Fastest and most secure transport — no network involved",
+      "Client spawns server process and pipes stdin/stdout",
+      "Ideal for filesystem access, local Git, local DBs",
+      "Servers exit when client disconnects (or can persist)",
+      "Zero-latency communication compared to HTTP"
+    ]
+  },
+  "MCP Host": {
+    "explanation": "An MCP host is the application like Claude Desktop that manages client connections to servers",
+    "points": [
+      "Central coordinator — launches, connects, monitors servers",
+      "Handles user-facing UI: server list, permissions, tool selection",
+      "Manages multiple connections (local + remote)",
+      "Forwards tool calls and receives results",
+      "Implements security: user consent, trust levels, revocation"
+    ]
+  },
+  "Tool Discovery": {
+    "explanation": "Tool discovery lets AI clients automatically list all tools available on a connected MCP server",
+    "points": [
+      "Client calls list_tools method during/after handshake",
+      "Server returns array of tool definitions (name, description, schema, annotations)",
+      "Dynamic — tools can appear/disappear without reconnecting",
+      "Model uses descriptions to decide which tools are relevant",
+      "Foundation for zero-configuration agentic behavior"
+    ]
+  },
+  "Resource URI": {
+    "explanation": "Each MCP resource has a unique URI that clients use to read its current content",
+    "points": [
+      "URI format: mcp://server-id/path/to/resource",
+      "Static URIs for fixed files/databases, templated URIs for dynamic data",
+      "Client calls read_resource(uri) to fetch content",
+      "Supports caching hints and ETag-like versioning",
+      "Binary resources returned as base64"
+    ]
+  },
+  "Resource Templates": {
+    "explanation": "Resource templates are URI patterns that expose dynamic parameterized data sources",
+    "points": [
+      "URI pattern like mcp://server/git/{repo}/commit/{hash}",
+      "Parameters passed in path or query string",
+      "Server renders dynamic content based on parameters",
+      "Great for Git commits, DB queries, API endpoints",
+      "Client discovers templates during handshake"
+    ]
+  },
+  "Capability Negotiation": {
+    "explanation": "MCP clients and servers negotiate supported capabilities during the initialization handshake",
+    "points": [
+      "Both sides send capability objects on connect",
+      "Includes supported transports, versions, features (sampling, subscriptions)",
+      "Ensures compatibility before any real work",
+      "Future-proof — new capabilities added without breaking old clients",
+      "Server can reject connection if required capabilities missing"
+    ]
+  },
+  "JSON-RPC": {
+    "explanation": "MCP uses JSON-RPC 2.0 as its message format for all client-server communication",
+    "points": [
+      "Standard JSON-RPC 2.0 — requests, responses, notifications, batches",
+      "Method names prefixed (e.g., mcp.list_tools, mcp.read_resource)",
+      "Errors follow JSON-RPC standard codes + MCP-specific codes",
+      "Supports streaming via SSE for long responses",
+      "Lightweight and widely supported"
+    ]
+  },
+  "Tool Annotation": {
+    "explanation": "MCP tool annotations describe whether tools are read-only or can modify external state",
+    "points": [
+      "Metadata flags: read_only, destructive, high_latency, high_cost",
+      "Helps client decide auto-run vs user confirmation",
+      "Can include estimated latency and cost in tokens",
+      "Used for trust model and safety layers",
+      "Annotations visible to model and user"
+    ]
+  },
+  "MCP Inspector": {
+    "explanation": "The MCP Inspector is a developer tool to test and debug MCP servers interactively",
+    "points": [
+      "Web-based GUI for testing MCP servers",
+      "Connects to local or remote servers",
+      "Lets you call tools, read resources, send prompts manually",
+      "Shows raw JSON-RPC messages, errors, logs",
+      "Essential for server developers — like Postman for MCP"
+    ]
+  },
+  "Roots": {
+    "explanation": "Roots tell MCP servers which directories or resources the client wants them to focus on",
+    "points": [
+      "Client declares “root” URIs at connection (e.g., project folder, Git repo)",
+      "Server restricts all paths to subtree of declared roots",
+      "Prevents accidental access outside intended scope",
+      "Multiple roots allowed (e.g., /home/user/project + /home/user/notes)",
+      "Security and context-limiting feature"
+    ]
+  },
+  "Server-side Prompts": {
+    "explanation": "Server-side prompts let MCP servers expose templated prompts users can invoke in their AI client",
+    "points": [
+      "Server defines reusable prompt templates with arguments",
+      "Client shows them in UI (dropdown or command palette)",
+      "User selects prompt + fills arguments → model gets full prompt",
+      "Great for consistent workflows (code review, doc generation)",
+      "Server can include tool-use instructions in prompt"
+    ]
+  },
+  "Elicitation": {
+    "explanation": "MCP elicitation lets servers ask the user for additional information mid-task through the client",
+    "points": [
+      "Server sends elicit message during tool execution",
+      "Client shows user prompt (text input, file picker, etc.)",
+      "User response sent back to server as tool result",
+      "Enables interactive tools (e.g., “which branch?”, “enter API key”)",
+      "Keeps human in loop for ambiguous or sensitive steps"
+    ]
+  },
+  "Progress Notification": {
+    "explanation": "Progress notifications let MCP servers report long-running task progress back to clients",
+    "points": [
+      "Server sends periodic progress messages (percentage, status, message)",
+      "Client displays progress bar or spinner with text",
+      "Used for file uploads, long queries, indexing, training",
+      "Supports cancellation token — user can stop operation",
+      "Improves UX for tools that take >2–3 seconds"
+    ]
+  },
+  "Cancellation": {
+    "explanation": "MCP supports cancellation tokens so clients can interrupt long-running server operations",
+    "points": [
+      "Client passes cancellation token with tool call",
+      "Server checks token periodically during execution",
+      "User clicks “cancel” → client signals cancellation",
+      "Server should stop work and return cancelled error",
+      "Prevents runaway operations and improves UX"
+    ]
+  },
+  "Logging": {
+    "explanation": "MCP servers can send structured log messages to clients for debugging and observability",
+    "points": [
+      "Server sends log messages (info, debug, warning, error)",
+      "Client can show in console, save to file, or forward to telemetry",
+      "Structured JSON logs — includes timestamp, level, message",
+      "Great for diagnosing tool failures or slow performance",
+      "Optional — servers can disable when not needed"
+    ]
+  },
+  "Pagination": {
+    "explanation": "MCP pagination returns large resource or tool lists in manageable batches via cursor tokens",
+    "points": [
+      "list_tools, list_resources, read_resource support pagination",
+      "Server returns cursor token for next page",
+      "Client requests next batch with cursor",
+      "Prevents memory overload on large directories/repos",
+      "Cursor opaque — server controls pagination logic"
+    ]
+  },
+  "Authentication MCP": {
+    "explanation": "MCP servers can require OAuth 2.1 authentication before granting AI clients access",
+    "points": [
+      "Server can request OAuth flow during handshake",
+      "Client opens browser for user login → gets token",
+      "Token sent in Authorization header for subsequent calls",
+      "Supports refresh tokens and scopes",
+      "Standard way to secure remote/cloud MCP servers"
+    ]
+  },
+  "Remote MCP Server": {
+    "explanation": "Remote MCP servers run in the cloud and connect over HTTP giving AI access to remote services",
+    "points": [
+      "Hosted on Vercel, Cloudflare, Fly.io, etc.",
+      "Use HTTP + SSE transport",
+      "Require authentication (OAuth usually)",
+      "Expose cloud services: GitHub, Notion, Slack, Google Drive",
+      "Discoverable via registries (Smithery, etc.)"
+    ]
+  },
+  "Local MCP Server": {
+    "explanation": "Local MCP servers run on your machine with stdio transport and access local files and apps",
+    "points": [
+      "Run as subprocess via stdio transport",
+      "Full access to local filesystem, Git, databases, apps",
+      "No network latency — very fast",
+      "No authentication needed (localhost)",
+      "Examples: filesystem, Git, local DB, local browser"
+    ]
+  },
+  "MCP Registry": {
+    "explanation": "MCP registries are directories of published servers that users can discover and install easily",
+    "points": [
+      "Central place to find community and official MCP servers",
+      "Includes metadata: name, description, author, capabilities",
+      "One-click install in Claude Desktop and other clients",
+      "Examples: Smithery, Anthropic registry, community repos",
+      "Helps ecosystem growth — like npm for MCP"
+    ]
+  },
+  "Smithery": {
+    "explanation": "Smithery is a popular marketplace for discovering and deploying MCP servers",
+    "points": [
+      "First major MCP server registry/marketplace",
+      "Browse, search, one-click install servers",
+      "Includes both community and verified servers",
+      "Shows popularity, last updated, capabilities",
+      "Handles remote server deployment (Vercel integration)"
+    ]
+  },
+  "MCP over REST": {
+    "explanation": "MCP can be layered over REST APIs to expose existing HTTP services as AI-callable tools",
+    "points": [
+      "Wrap existing REST API as MCP server",
+      "Auto-generate tool schemas from OpenAPI spec",
+      "Model calls tools → server translates to HTTP request",
+      "Enables instant AI access to any REST service",
+      "Tools like openapi-to-mcp automate conversion"
+    ]
+  },
+  "Tool Composition": {
+    "explanation": "Tool composition chains multiple MCP tool calls together to complete complex multi-step tasks",
+    "points": [
+      "Model calls tool A → uses result to call tool B → etc.",
+      "Enables multi-step reasoning and workflows",
+      "Server can also compose tools internally",
+      "Examples: search → read page → summarize → save",
+      "Foundation for agentic behavior"
+    ]
+  },
+  "Context Injection": {
+    "explanation": "MCP resources inject relevant live data into the AI's context automatically before it responds",
+    "points": [
+      "Host auto-injects resource content before model sees prompt",
+      "Keeps context fresh — no stale data",
+      "Used for project files, recent Git changes, Notion notes",
+      "Reduces manual copy-paste by user",
+      "Configurable per conversation or globally"
+    ]
+  },
+  "File System Server": {
+    "explanation": "The official MCP filesystem server exposes local files and directories as readable resources",
+    "points": [
+      "Official reference server — ships with Claude Desktop",
+      "Exposes local folders as MCP resources",
+      "Model can read any file in allowed roots",
+      "Supports binary files (images base64)",
+      "Security via root declarations"
+    ]
+  },
+  "Git MCP Server": {
+    "explanation": "Git MCP servers expose repository history, branches, and diffs as tools for AI code assistants",
+    "points": [
+      "Local Git repo access via MCP",
+      "Tools: get_commit, get_diff, list_branches, checkout",
+      "Resources: file contents at any commit",
+      "Enables AI code review, debugging, refactoring",
+      "Common in Cursor, Continue.dev, Claude Desktop"
+    ]
+  },
+  "GitHub MCP Server": {
+    "explanation": "The GitHub MCP server lets AI create issues, pull requests, and manage code repositories",
+    "points": [
+      "Remote GitHub access via OAuth",
+      "Tools: create_issue, create_pr, comment, search_repos",
+      "Resources: repo files, issues, PRs",
+      "Popular for AI-powered GitHub workflows",
+      "Official + community versions available"
+    ]
+  },
+  "Database MCP Server": {
+    "explanation": "Database MCP servers let AI query PostgreSQL, MySQL, or SQLite to answer data questions",
+    "points": [
+      "Exposes SQL query tool + schema resource",
+      "Supports PostgreSQL, MySQL, SQLite, DuckDB",
+      "Model writes SQL → server executes safely",
+      "Great for business intelligence, data analysis",
+      "Row limits and read-only mode for safety"
+    ]
+  },
+  "Browser MCP Server": {
+    "explanation": "Browser MCP servers give AI tools to navigate web pages, click elements, and extract content",
+    "points": [
+      "Headless browser control via MCP",
+      "Tools: navigate, click, type, screenshot, extract_text",
+      "Enables web research, form filling, scraping",
+      "Used in agentic web automation",
+      "Security: runs in sandbox or user browser"
     ]
   }
 }

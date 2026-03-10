@@ -1,406 +1,502 @@
 {
-  "airplanes": {
-    "items": [
-      {
-        "name": "Boeing 747",
-        "fact": "The Boeing 747 is called the Queen of the Skies and carries hundreds of passengers"
-      },
-      {
-        "name": "Airbus A380",
-        "fact": "The A380 is the world's largest passenger airplane with two full decks"
-      },
-      {
-        "name": "Concorde",
-        "fact": "The Concorde could fly faster than the speed of sound"
-      },
-      {
-        "name": "Fighter Jet",
-        "fact": "Fighter jets fly at incredible speeds and protect countries in the sky"
-      },
-      {
-        "name": "Helicopter",
-        "fact": "Helicopters can hover in one place and fly in any direction"
-      },
-      {
-        "name": "Hot Air Balloon",
-        "fact": "Hot air balloons float high using warm air trapped inside a huge bag"
-      },
-      {
-        "name": "Space Shuttle",
-        "fact": "Space Shuttles carried brave astronauts all the way to outer space"
-      },
-      {
-        "name": "Seaplane",
-        "fact": "Seaplanes are special planes that can land on both water and land"
-      },
-      {
-        "name": "Biplane",
-        "fact": "Biplanes have two sets of wings and were flown by pilots long ago"
-      },
-      {
-        "name": "Drone",
-        "fact": "Drones are small flying machines controlled by remote control"
-      },
-      {
-        "name": "Boeing 787 Dreamliner",
-        "fact": "The Boeing 787 is made of composite materials making it lighter and more fuel efficient"
-      },
-      {
-        "name": "Airbus A350",
-        "fact": "The Airbus A350 is one of the most advanced and fuel-efficient airliners ever built"
-      },
-      {
-        "name": "F-22 Raptor",
-        "fact": "The F-22 Raptor is a stealth fighter jet invisible to most radar systems"
-      },
-      {
-        "name": "F-35 Lightning",
-        "fact": "The F-35 is a multi-role fighter jet used by many countries around the world"
-      },
-      {
-        "name": "B-2 Spirit Bomber",
-        "fact": "The B-2 Spirit is a stealth bomber that looks like a flying wing from above"
-      },
-      {
-        "name": "SR-71 Blackbird",
-        "fact": "The SR-71 Blackbird is the fastest air-breathing jet ever built at Mach 3.2"
-      },
-      {
-        "name": "U-2 Spy Plane",
-        "fact": "The U-2 flies so high it can photograph the ground from the edge of space"
-      },
-      {
-        "name": "C-130 Hercules",
-        "fact": "The C-130 Hercules is the most versatile military transport aircraft ever made"
-      },
-      {
-        "name": "CH-47 Chinook",
-        "fact": "The Chinook helicopter has two massive rotors and can lift incredibly heavy loads"
-      },
-      {
-        "name": "V-22 Osprey",
-        "fact": "The Osprey can rotate its engines to fly like a plane or hover like a helicopter"
-      },
-      {
-        "name": "Lockheed C-5 Galaxy",
-        "fact": "The C-5 Galaxy can carry 70 cars at once in its enormous cargo bay"
-      },
-      {
-        "name": "Antonov AN-225",
-        "fact": "The AN-225 Mriya was the world's largest aircraft ever built with six engines"
-      },
-      {
-        "name": "Harrier Jump Jet",
-        "fact": "The Harrier can take off and land vertically without needing a runway"
-      },
-      {
-        "name": "Boeing B-17",
-        "fact": "The B-17 Flying Fortress was the legendary World War Two heavy bomber"
-      },
-      {
-        "name": "Spitfire",
-        "fact": "The Spitfire was Britain's legendary World War Two fighter with elliptical wings"
-      },
-      {
-        "name": "Zero Fighter",
-        "fact": "The Mitsubishi Zero was Japan's dominant fighter aircraft in World War Two"
-      },
-      {
-        "name": "P-51 Mustang",
-        "fact": "The P-51 Mustang was an American fighter that could escort bombers all the way to Berlin"
-      },
-      {
-        "name": "Lancaster Bomber",
-        "fact": "The Lancaster Bomber delivered the famous bouncing bombs that destroyed German dams"
-      },
-      {
-        "name": "Messerschmitt Bf109",
-        "fact": "The Bf 109 was Germany's main fighter aircraft and one of the most produced fighters ever"
-      },
-      {
-        "name": "Wright Flyer",
-        "fact": "The Wright Flyer made the world's first powered airplane flight in 1903"
-      },
-      {
-        "name": "Fokker Triplane",
-        "fact": "The Fokker Triplane had three wings and was flown by the famous Red Baron"
-      },
-      {
-        "name": "Douglas DC-3",
-        "fact": "The DC-3 revolutionized commercial aviation and is one of the most important planes ever built"
-      },
-      {
-        "name": "Boeing 737",
-        "fact": "The Boeing 737 is the most popular commercial jet airplane ever built"
-      },
-      {
-        "name": "Airbus A320",
-        "fact": "The Airbus A320 was the first airliner to use fly-by-wire computer controls"
-      },
-      {
-        "name": "Cessna 172",
-        "fact": "The Cessna 172 Skyhawk is the most produced aircraft in history with over 44,000 built"
-      },
-      {
-        "name": "Piper Cub",
-        "fact": "The Piper Cub is a simple yellow training aircraft that taught thousands to fly"
-      },
-      {
-        "name": "Gulfstream G700",
-        "fact": "The Gulfstream G700 is the world's largest and most luxurious business jet"
-      },
-      {
-        "name": "Bombardier Global 7500",
-        "fact": "The Global 7500 can fly non-stop from New York to Sydney without refueling"
-      },
-      {
-        "name": "Dassault Falcon",
-        "fact": "Dassault Falcon jets are elegant French business aircraft known for efficiency"
-      },
-      {
-        "name": "Embraer E-Jet",
-        "fact": "Embraer E-Jets are Brazilian regional jets popular for shorter routes"
-      },
-      {
-        "name": "ATR 72",
-        "fact": "The ATR 72 is a turboprop aircraft that can land on very short unpaved runways"
-      },
-      {
-        "name": "De Havilland Beaver",
-        "fact": "The Beaver is a rugged Canadian bush plane designed to land on water and rough strips"
-      },
-      {
-        "name": "Sikorsky Black Hawk",
-        "fact": "The Black Hawk helicopter is the US Army's most important troop transport"
-      },
-      {
-        "name": "AH-64 Apache",
-        "fact": "The Apache attack helicopter is equipped with a cannon radar and Hellfire missiles"
-      },
-      {
-        "name": "MQ-9 Reaper",
-        "fact": "The MQ-9 Reaper is an armed military drone that flies long missions without a pilot"
-      },
-      {
-        "name": "RQ-4 Global Hawk",
-        "fact": "The Global Hawk is a huge surveillance drone that can fly for over 30 hours"
-      },
-      {
-        "name": "X-15",
-        "fact": "The X-15 rocket plane flew to the edge of space setting speed and altitude records"
-      },
-      {
-        "name": "X-29",
-        "fact": "The X-29 was an experimental aircraft with forward-swept wings looking backwards"
-      },
-      {
-        "name": "Bell X-1",
-        "fact": "The Bell X-1 was the first plane to break the sound barrier in 1947"
-      },
-      {
-        "name": "Northrop YB-49",
-        "fact": "The YB-49 Flying Wing was a futuristic 1940s bomber that inspired the B-2 stealth design"
-      },
-      {
-        "name": "Caproni Ca.60",
-        "fact": "The Caproni Ca.60 was a massive nine-wing flying boat that could carry 100 passengers"
-      },
-      {
-        "name": "Solar Impulse",
-        "fact": "Solar Impulse 2 flew around the world powered only by solar energy"
-      },
-      {
-        "name": "Gossamer Condor",
-        "fact": "The Gossamer Condor was the first human-powered aircraft to complete a figure eight course"
-      },
-      {
-        "name": "Rutan Voyager",
-        "fact": "The Rutan Voyager was the first aircraft to fly around the world non-stop without refueling"
-      },
-      {
-        "name": "Electra Flyer",
-        "fact": "The Electra Flyer is an electric-powered ultralight aircraft for recreational flight"
-      },
-      {
-        "name": "Airbus Beluga XL",
-        "fact": "The Beluga XL looks like a giant white whale and carries aircraft parts between factories"
-      },
-      {
-        "name": "Stratolaunch",
-        "fact": "The Stratolaunch has the widest wingspan of any aircraft ever built at 385 feet"
-      },
-      {
-        "name": "Dream Chaser",
-        "fact": "Dream Chaser is a mini space plane designed to ferry crew to the space station"
-      },
-      {
-        "name": "SpaceShipTwo",
-        "fact": "SpaceShipTwo is a commercial space plane taking tourists to the edge of space"
-      },
-      {
-        "name": "Boom Overture",
-        "fact": "Boom Overture is a new supersonic airliner designed to fly passengers at Mach 1.7"
-      },
-      {
-        "name": "Airbus ZEROe",
-        "fact": "Airbus ZEROe is a concept hydrogen-powered aircraft designed to produce no carbon emissions"
-      },
-      {
-        "name": "Lilium Jet",
-        "fact": "The Lilium Jet is an all-electric vertical takeoff air taxi with 36 motors"
-      },
-      {
-        "name": "Joby Aviation",
-        "fact": "Joby is building a quiet electric air taxi that can fly like a plane and take off vertically"
-      },
-      {
-        "name": "Archer Midnight",
-        "fact": "Archer Midnight is an electric air taxi designed for urban transportation"
-      },
-      {
-        "name": "Wisk Aero",
-        "fact": "Wisk is building a self-flying autonomous air taxi for future cities"
-      },
-      {
-        "name": "Blade Helicopter",
-        "fact": "Blade operates shared helicopter flights between city centers and airports"
-      },
-      {
-        "name": "Volocopter",
-        "fact": "Volocopter is a German multicopter air taxi with 18 rotors for safety"
-      },
-      {
-        "name": "EHang 216",
-        "fact": "EHang 216 is a Chinese autonomous air taxi that can carry two passengers"
-      },
-      {
-        "name": "Airbus A220",
-        "fact": "The Airbus A220 was originally made by Bombardier as the CSeries jet"
-      },
-      {
-        "name": "Boeing 777X",
-        "fact": "The Boeing 777X has folding wingtips that fold up so the plane can fit in airport gates"
-      },
-      {
-        "name": "Airbus A330neo",
-        "fact": "The A330neo uses new engines to improve fuel efficiency by 25 percent"
-      },
-      {
-        "name": "Boeing 767",
-        "fact": "The Boeing 767 was the first aircraft to gain extended-range twin-engine approval over oceans"
-      },
-      {
-        "name": "Tupolev Tu-144",
-        "fact": "The Tupolev Tu-144 was the Soviet Union's supersonic airliner and flew before Concorde"
-      },
-      {
-        "name": "Ilyushin Il-76",
-        "fact": "The Ilyushin Il-76 is a heavy military transport jet used all around the world"
-      },
-      {
-        "name": "Antonov An-2",
-        "fact": "The Antonov An-2 biplane is the world's largest single-engine biplane still in operation"
-      },
-      {
-        "name": "Convair B-36",
-        "fact": "The B-36 Peacemaker had 10 engines and was so large it needed its own zip code at its base"
-      },
-      {
-        "name": "North American B-25",
-        "fact": "The B-25 Mitchell was a medium bomber used in the famous Doolittle Raid over Tokyo"
-      },
-      {
-        "name": "Hawker Hurricane",
-        "fact": "The Hurricane destroyed more enemy aircraft than the Spitfire during the Battle of Britain"
-      },
-      {
-        "name": "Sopwith Camel",
-        "fact": "The Sopwith Camel was the most successful fighter of World War One shooting down 1294 aircraft"
-      },
-      {
-        "name": "de Havilland Comet",
-        "fact": "The de Havilland Comet was the world's first commercial jet airliner entering service in 1952"
-      },
-      {
-        "name": "Lockheed Constellation",
-        "fact": "The Constellation was a glamorous triple-tailed airliner that made flying glamorous in the 1950s"
-      },
-      {
-        "name": "Douglas DC-8",
-        "fact": "The DC-8 was the first jetliner to break the sound barrier in a dive in 1961"
-      },
-      {
-        "name": "Vickers Viscount",
-        "fact": "The Vickers Viscount was the world's first turboprop airliner and was extremely successful"
-      },
-      {
-        "name": "BAC One-Eleven",
-        "fact": "The BAC 1-11 was a British short-haul jet that pioneered rear-mounted engines on airliners"
-      },
-      {
-        "name": "Fokker F27",
-        "fact": "The Fokker F27 Friendship turboprop is one of the most successful regional aircraft ever made"
-      },
-      {
-        "name": "Dornier Do 228",
-        "fact": "The Dornier 228 is a versatile small transport used in the most remote locations on Earth"
-      },
-      {
-        "name": "Pilatus PC-12",
-        "fact": "The Pilatus PC-12 is a Swiss turboprop that can land on unpaved grass and dirt strips"
-      },
-      {
-        "name": "Quest Kodiak",
-        "fact": "The Quest Kodiak is designed for missionaries and remote communities in extreme terrain"
-      },
-      {
-        "name": "De Havilland Twin Otter",
-        "fact": "The Twin Otter STOL aircraft can take off in under 1000 feet and land almost anywhere"
-      },
-      {
-        "name": "Shorts 360",
-        "fact": "The Shorts 360 looks boxy and unusual but was a practical and reliable regional transport"
-      },
-      {
-        "name": "CASA 235",
-        "fact": "The CASA CN-235 is a Spanish military transport also used for maritime patrol duties"
-      },
-      {
-        "name": "Dornier Do 17",
-        "fact": "The Dornier Do 17 was nicknamed the Flying Pencil for its extremely slender fuselage"
-      },
-      {
-        "name": "Short Sunderland",
-        "fact": "The Short Sunderland was a huge flying boat that patrolled the Atlantic for submarines"
-      },
-      {
-        "name": "Heinkel He 111",
-        "fact": "The He 111 was Germany's main medium bomber in World War Two with a distinctive greenhouse nose"
-      },
-      {
-        "name": "Vought F4U Corsair",
-        "fact": "The Corsair had distinctive inverted gull wings and was feared by Japanese pilots"
-      },
-      {
-        "name": "Grumman F6F Hellcat",
-        "fact": "The Hellcat became the most successful naval fighter of World War Two in the Pacific"
-      },
-      {
-        "name": "Republic P-47 Thunderbolt",
-        "fact": "The massive P-47 Thunderbolt was one of the heaviest fighter planes of World War Two"
-      },
-      {
-        "name": "Bristol Beaufighter",
-        "fact": "The Beaufighter was a versatile twin-engine night fighter and torpedo bomber"
-      },
-      {
-        "name": "Handley Page Victor",
-        "fact": "The Victor was a V-bomber that served as a nuclear deterrent during the Cold War"
-      },
-      {
-        "name": "English Electric Lightning",
-        "fact": "The Lightning was Britain's only aircraft capable of climbing vertically like a rocket"
-      }
+  "AWS": {
+    "explanation": "Amazon Web Services is the world's largest cloud platform with over 200 services",
+    "points": [
+      "Core concept of AWS used widely in modern software and AI systems",
+      "Important for understanding: Amazon Web Services is the world's largest cloud platform with over 200 services",
+      "Commonly applied in real-world applications and production systems",
+      "Often combined with related technologies to build scalable solutions",
+      "Key knowledge area for developers, engineers, and AI practitioners"
+    ]
+  },
+  "Boeing 747": {
+    "explanation": "The Boeing 747 is called the Queen of the Skies and carries hundreds of passengers",
+    "points": [
+      "Iconic wide-body aircraft known as the Queen of the Skies",
+      "Revolutionized long-haul commercial aviation since 1970",
+      "Commonly used for both passenger and cargo configurations",
+      "Features a distinctive hump on the upper deck",
+      "Still remains in service with many airlines worldwide"
+    ]
+  },
+  "Airbus A380": {
+    "explanation": "The A380 is the world's largest passenger airplane with two full decks",
+    "points": [
+      "Largest passenger airliner ever built with double-deck design",
+      "Can carry up to 853 passengers in high-density configuration",
+      "Designed for high-capacity hub-to-hub routes",
+      "Known for its quiet cabin and spacious interior",
+      "Production ended in 2021 but many remain in service"
+    ]
+  },
+  "Concorde": {
+    "explanation": "The Concorde could fly faster than the speed of sound",
+    "points": [
+      "First and only supersonic passenger-carrying airliner in regular service",
+      "Cruised at Mach 2.04 (over 2,100 km/h)",
+      "Operated by British Airways and Air France for 27 years",
+      "Reduced transatlantic flight time to under 4 hours",
+      "Retired in 2003 due to high costs and noise regulations"
+    ]
+  },
+  "F-22 Raptor": {
+    "explanation": "The F-22 Raptor is a stealth fighter jet invisible to most radar systems",
+    "points": [
+      "Fifth-generation air superiority fighter with stealth technology",
+      "Supercruise capability without afterburners",
+      "Advanced sensor fusion and situational awareness",
+      "Only operational fifth-gen fighter with internal weapons bays",
+      "Produced in limited numbers due to high cost"
+    ]
+  },
+  "F-35 Lightning": {
+    "explanation": "The F-35 is a multi-role fighter jet used by many countries around the world",
+    "points": [
+      "Most widely used fifth-generation fighter in the world",
+      "Three main variants: conventional, STOVL, and carrier-based",
+      "Advanced stealth, sensor fusion, and network-centric warfare",
+      "Designed for multi-role missions including air-to-air and air-to-ground",
+      "Operated by over 20 nations and continuing production"
+    ]
+  },
+  "SR-71 Blackbird": {
+    "explanation": "The SR-71 Blackbird is the fastest air-breathing jet ever built at Mach 3.2",
+    "points": [
+      "Fastest manned air-breathing aircraft ever flown",
+      "Cruised at over Mach 3.2 and 85,000 feet altitude",
+      "Used for strategic reconnaissance during the Cold War",
+      "Never shot down or intercepted by enemy forces",
+      "Retired in 1998 but holds many speed and altitude records"
+    ]
+  },
+  "C-130 Hercules": {
+    "explanation": "The C-130 Hercules is the most versatile military transport aircraft ever made",
+    "points": [
+      "Longest continuous production run of any military aircraft",
+      "Capable of operating from rough, dirt strips and unprepared fields",
+      "Used for cargo, troop transport, aerial refueling, gunship, and more",
+      "Over 2,500 built and still in production",
+      "Operated by more than 70 countries worldwide"
+    ]
+  },
+  "Antonov AN-225": {
+    "explanation": "The AN-225 Mriya was the world's largest aircraft ever built with six engines",
+    "points": [
+      "Heaviest aircraft ever flown with maximum takeoff weight of 640 tons",
+      "Designed to carry the Soviet Buran space shuttle",
+      "Unique six-engine configuration and massive wingspan",
+      "Destroyed during the 2022 conflict in Ukraine",
+      "Held numerous world records for payload and size"
+    ]
+  },
+  "Wright Flyer": {
+    "explanation": "The Wright Flyer made the world's first powered airplane flight in 1903",
+    "points": [
+      "First successful powered, controlled, and sustained heavier-than-air flight",
+      "Flew 120 feet in 12 seconds on December 17, 1903",
+      "Piloted by Orville Wright with Wilbur running alongside",
+      "Marked the birth of modern aviation",
+      "Original aircraft is preserved in the National Air and Space Museum"
+    ]
+  },
+  "Cessna 172": {
+    "explanation": "The Cessna 172 Skyhawk is the most produced aircraft in history with over 44,000 built",
+    "points": [
+      "Most produced aircraft model of all time",
+      "Primary trainer for generations of pilots worldwide",
+      "Simple, reliable, and easy to fly design",
+      "Still in production after more than 65 years",
+      "Widely used for flight training, personal flying, and utility roles"
+    ]
+  },
+  "Boeing 737": {
+    "explanation": "The Boeing 737 is the most popular commercial jet airplane ever built",
+    "points": [
+      "Best-selling commercial jet airliner in history",
+      "Over 11,000 delivered and thousands more on order",
+      "Multiple generations from Classic to MAX series",
+      "Dominates the narrow-body short-to-medium haul market",
+      "Continues to be upgraded with newer engines and technology"
+    ]
+  },
+  "Airbus A320": {
+    "explanation": "The Airbus A320 was the first airliner to use fly-by-wire computer controls",
+    "points": [
+      "Pioneered full fly-by-wire flight control systems in commercial aviation",
+      "Family includes A318, A319, A320, and A321 variants",
+      "Extremely successful narrow-body aircraft family",
+      "A320neo variant offers significant fuel savings",
+      "Competes directly with the Boeing 737 family"
+    ]
+  },
+  "Harrier Jump Jet": {
+    "explanation": "The Harrier can take off and land vertically without needing a runway",
+    "points": [
+      "First operational vertical/short takeoff and landing (V/STOL) jet fighter",
+      "Used vectored-thrust Pegasus engine for vertical flight",
+      "Famous for Falklands War operations from small ships",
+      "Later developed into the AV-8B Harrier II",
+      "Being replaced by the F-35B in many forces"
+    ]
+  },
+  "Spitfire": {
+    "explanation": "The Spitfire was Britain's legendary World War Two fighter with elliptical wings",
+    "points": [
+      "Iconic British fighter of World War II",
+      "Famous elliptical wing design for excellent performance",
+      "Played key role in the Battle of Britain",
+      "Multiple variants produced throughout the war",
+      "Still flown today by enthusiasts and museums"
+    ]
+  },
+  "P-51 Mustang": {
+    "explanation": "The P-51 Mustang was an American fighter that could escort bombers all the way to Berlin",
+    "points": [
+      "Long-range escort fighter that changed the air war over Europe",
+      "Excellent performance with Merlin engine",
+      "Famous for distinctive bubble canopy in later variants",
+      "One of the most effective piston-engine fighters ever built",
+      "Still used in air races today"
+    ]
+  },
+  "B-2 Spirit Bomber": {
+    "explanation": "The B-2 Spirit is a stealth bomber that looks like a flying wing from above",
+    "points": [
+      "Most advanced stealth bomber in service",
+      "Flying wing design with no vertical tail surfaces",
+      "Can carry both conventional and nuclear weapons",
+      "Extremely low radar cross-section",
+      "Only 21 aircraft were ever built"
+    ]
+  },
+  "Apache AH-64": {
+    "explanation": "The Apache attack helicopter is equipped with a cannon radar and Hellfire missiles",
+    "points": [
+      "World's premier attack helicopter",
+      "Advanced targeting systems including Longbow radar",
+      "Armed with Hellfire missiles, rockets, and 30mm cannon",
+      "Proven combat record in multiple conflicts",
+      "Continuously upgraded with latest sensors and weapons"
+    ]
+  },
+  "Black Hawk": {
+    "explanation": "The Black Hawk helicopter is the US Army's most important troop transport",
+    "points": [
+      "Primary utility helicopter of the US Army",
+      "Highly versatile for troop transport, medevac, and special operations",
+      "Proven in combat since 1980s",
+      "Multiple variants including MH-60 for special forces",
+      "Exported to dozens of countries worldwide"
+    ]
+  },
+  "MQ-9 Reaper": {
+    "explanation": "The MQ-9 Reaper is an armed military drone that flies long missions without a pilot",
+    "points": [
+      "Largest and most capable armed UAV in US service",
+      "Can carry Hellfire missiles and precision-guided bombs",
+      "Endurance of over 27 hours",
+      "Used extensively for intelligence, surveillance, and strike missions",
+      "Operated remotely by pilots thousands of miles away"
+    ]
+  },
+  "Solar Impulse": {
+    "explanation": "Solar Impulse 2 flew around the world powered only by solar energy",
+    "points": [
+      "First aircraft to circumnavigate the globe using only solar power",
+      "Flew 40,000+ km over 16 months",
+      "Massive wingspan with solar panels covering surfaces",
+      "Demonstrated potential of renewable energy in aviation",
+      "Pioneered extreme endurance solar-powered flight"
+    ]
+  },
+  "Airbus Beluga XL": {
+    "explanation": "The Beluga XL looks like a giant white whale and carries aircraft parts between factories",
+    "points": [
+      "Specialized transport aircraft for oversized cargo",
+      "Distinctive whale-like appearance with enlarged fuselage",
+      "Used to transport Airbus aircraft sections between factories",
+      "Larger successor to the original Beluga ST",
+      "Unique purpose-built design for aviation logistics"
+    ]
+  },
+  "Stratolaunch": {
+    "explanation": "The Stratolaunch has the widest wingspan of any aircraft ever built at 385 feet",
+    "points": [
+      "Widest wingspan of any aircraft ever flown (385 ft / 117 m)",
+      "Designed as an air-launch platform for rockets",
+      "Twin-fuselage design with six engines",
+      "First flight completed in 2019",
+      "Intended for hypersonic and space launch missions"
+    ]
+  },
+  "Boom Overture": {
+    "explanation": "Boom Overture is a new supersonic airliner designed to fly passengers at Mach 1.7",
+    "points": [
+      "Modern supersonic passenger jet under development",
+      "Designed to cruise at Mach 1.7 over water",
+      "Plans to make supersonic travel more affordable",
+      "Sustainable aviation fuel compatible",
+      "Aiming to return commercial supersonic flight"
+    ]
+  },
+  "Lilium Jet": {
+    "explanation": "The Lilium Jet is an all-electric vertical takeoff air taxi with 36 motors",
+    "points": [
+      "All-electric vertical takeoff and landing (eVTOL) aircraft",
+      "Uses 36 electric ducted fans for propulsion",
+      "Designed for urban air mobility and air taxi service",
+      "Can carry up to 6 passengers plus pilot",
+      "Targeting regional flights up to 155 miles"
+    ]
+  },
+  "Joby Aviation": {
+    "explanation": "Joby is building a quiet electric air taxi that can fly like a plane and take off vertically",
+    "points": [
+      "Leading developer of electric vertical takeoff and landing aircraft",
+      "Six-rotor eVTOL design for urban air mobility",
+      "Extremely quiet operation compared to helicopters",
+      "FAA certification process underway",
+      "Planning commercial air taxi service in multiple cities"
+    ]
+  },
+  "Boeing 787 Dreamliner": {
+    "explanation": "The Boeing 787 is made of composite materials making it lighter and more fuel efficient",
+    "points": [
+      "First major airliner to use composite materials for most of structure",
+      "20-25% better fuel efficiency than previous generation",
+      "Larger windows and higher cabin pressure for passenger comfort",
+      "Long-range capability with twin-engine efficiency",
+      "Popular wide-body aircraft on many international routes"
+    ]
+  },
+  "Airbus A350": {
+    "explanation": "The Airbus A350 is one of the most advanced and fuel-efficient airliners ever built",
+    "points": [
+      "Modern long-range wide-body airliner",
+      "Over 50% composite materials for weight savings",
+      "Advanced aerodynamics and Rolls-Royce engines",
+      "Excellent passenger comfort with larger windows and humidity",
+      "Competing directly with the Boeing 777 and 787"
+    ]
+  },
+  "de Havilland Comet": {
+    "explanation": "The de Havilland Comet was the world's first commercial jet airliner entering service in 1952",
+    "points": [
+      "First jet airliner to enter commercial service",
+      "Revolutionary design in early 1950s",
+      "Experienced early fatigue issues leading to grounding",
+      "Later versions became reliable after redesign",
+      "Paved the way for modern jet travel"
+    ]
+  },
+  "Douglas DC-3": {
+    "explanation": "The DC-3 revolutionized commercial aviation and is one of the most important planes ever built",
+    "points": [
+      "Most influential civil aircraft ever built",
+      "Made air travel reliable and profitable for first time",
+      "Over 16,000 produced including military versions",
+      "Many still flying today in remote areas",
+      "Known as Dakota or C-47 in military service"
+    ]
+  },
+  "V-22 Osprey": {
+    "explanation": "The Osprey can rotate its engines to fly like a plane or hover like a helicopter",
+    "points": [
+      "Tiltrotor aircraft combining helicopter and airplane capabilities",
+      "High speed and long range compared to helicopters",
+      "Used by US Marines, Air Force, and Navy",
+      "Controversial development but now proven in combat",
+      "Unique capability for rapid troop deployment"
+    ]
+  },
+  "CH-47 Chinook": {
+    "explanation": "The Chinook helicopter has two massive rotors and can lift incredibly heavy loads",
+    "points": [
+      "Tandem-rotor heavy-lift helicopter",
+      "Excellent lifting capacity for its size",
+      "Used for troop transport, artillery movement, and disaster relief",
+      "Continuously upgraded since 1960s",
+      "Operated by many countries worldwide"
+    ]
+  },
+  "U-2 Spy Plane": {
+    "explanation": "The U-2 flies so high it can photograph the ground from the edge of space",
+    "points": [
+      "High-altitude reconnaissance aircraft",
+      "Operates above 70,000 feet near edge of space",
+      "Famous for 1960 incident when shot down over Soviet Union",
+      "Still in service with modern sensors",
+      "Provides critical intelligence collection"
+    ]
+  },
+  "Fokker Triplane": {
+    "explanation": "The Fokker Triplane had three wings and was flown by the famous Red Baron",
+    "points": [
+      "Iconic World War I German fighter aircraft",
+      "Associated with Manfred von Richthofen (Red Baron)",
+      "Excellent maneuverability due to three-wing design",
+      "Limited production but legendary status",
+      "Distinctive red color scheme"
+    ]
+  },
+  "Sopwith Camel": {
+    "explanation": "The Sopwith Camel was the most successful fighter of World War One shooting down 1294 aircraft",
+    "points": [
+      "Most successful Allied fighter of World War I",
+      "Credited with shooting down 1,294 enemy aircraft",
+      "Difficult to fly due to powerful rotary engine torque",
+      "Famous for maneuverability in dogfights",
+      "Helped establish air superiority in 1917-1918"
+    ]
+  },
+  "P-47 Thunderbolt": {
+    "explanation": "The massive P-47 Thunderbolt was one of the heaviest fighter planes of World War Two",
+    "points": [
+      "Heaviest single-engine fighter of World War II",
+      "Known for rugged construction and ability to take punishment",
+      "Excellent ground-attack capabilities",
+      "Nicknamed 'Jug' for its shape",
+      "Very successful in both air-to-air and air-to-ground roles"
+    ]
+  },
+  "F4U Corsair": {
+    "explanation": "The Corsair had distinctive inverted gull wings and was feared by Japanese pilots",
+    "points": [
+      "Famous inverted gull wing design",
+      "Outstanding performance in Pacific theater",
+      "Feared by Japanese pilots who called it 'Whistling Death'",
+      "Used by US Marines and Navy extensively",
+      "Later successful in Korean War"
+    ]
+  },
+  "B-17 Flying Fortress": {
+    "explanation": "The B-17 Flying Fortress was the legendary World War Two heavy bomber",
+    "points": [
+      "Iconic American heavy bomber of World War II",
+      "Famous for ability to sustain heavy battle damage",
+      "Carried large bomb loads over long distances",
+      "Over 12,700 built during the war",
+      "Key role in daylight strategic bombing campaign"
+    ]
+  },
+  "Lancaster Bomber": {
+    "explanation": "The Lancaster Bomber delivered the famous bouncing bombs that destroyed German dams",
+    "points": [
+      "Most successful British heavy bomber of World War II",
+      "Famous for Operation Chastise (Dambusters raid)",
+      "Could carry very large bomb loads including Grand Slam",
+      "Over 7,300 built",
+      "Key part of RAF Bomber Command night offensive"
+    ]
+  },
+  "Messerschmitt Bf 109": {
+    "explanation": "The Bf 109 was Germany's main fighter aircraft and one of the most produced fighters ever",
+    "points": [
+      "Most produced fighter aircraft of World War II",
+      "Backbone of Luftwaffe fighter force",
+      "Multiple variants throughout the war",
+      "Famous aces scored hundreds of victories in Bf 109s",
+      "Remained competitive until end of war"
+    ]
+  },
+  "Mitsubishi Zero": {
+    "explanation": "The Mitsubishi Zero was Japan's dominant fighter aircraft in World War Two",
+    "points": [
+      "Most famous Japanese fighter of World War II",
+      "Exceptional range and maneuverability early in war",
+      "Caught Allies by surprise in 1941-42",
+      "Later outclassed by newer Allied fighters",
+      "Iconic symbol of Japanese aviation"
+    ]
+  },
+  "Bell X-1": {
+    "explanation": "The Bell X-1 was the first plane to break the sound barrier in 1947",
+    "points": [
+      "First aircraft to exceed speed of sound in level flight",
+      "Chuck Yeager broke sound barrier on October 14, 1947",
+      "Rocket-powered research aircraft",
+      "Launched from B-29 mother ship",
+      "Pioneered supersonic flight research"
+    ]
+  },
+  "X-15": {
+    "explanation": "The X-15 rocket plane flew to the edge of space setting speed and altitude records",
+    "points": [
+      "Fastest manned aircraft ever (Mach 6.70)",
+      "Highest altitude by manned aircraft (354,200 ft)",
+      "Helped develop technologies for space program",
+      "Pilots earned astronaut wings on some flights",
+      "Most successful X-plane program"
+    ]
+  },
+  "Gulfstream G700": {
+    "explanation": "The Gulfstream G700 is the world's largest and most luxurious business jet",
+    "points": [
+      "Largest and most luxurious business jet currently produced",
+      "Ultra-long-range capability (7,750 nautical miles)",
+      "Spacious cabin with up to five living areas",
+      "Advanced avionics and high-speed performance",
+      "Flagship of Gulfstream business jet line"
+    ]
+  },
+  "Bombardier Global 7500": {
+    "explanation": "The Global 7500 can fly non-stop from New York to Sydney without refueling",
+    "points": [
+      "Longest-range business jet in production",
+      "Can fly 7,700 nautical miles non-stop",
+      "Four-zone cabin with master suite option",
+      "Advanced wing design for efficiency",
+      "Competes with Gulfstream G700"
+    ]
+  },
+  "ATR 72": {
+    "explanation": "The ATR 72 is a turboprop aircraft that can land on very short unpaved runways",
+    "points": [
+      "Most popular regional turboprop airliner",
+      "Excellent short-field performance",
+      "Used extensively on routes with short runways",
+      "High fuel efficiency for regional routes",
+      "Over 1,600 ATR aircraft delivered"
+    ]
+  },
+  "Pilatus PC-12": {
+    "explanation": "The Pilatus PC-12 is a Swiss turboprop that can land on unpaved grass and dirt strips",
+    "points": [
+      "Best-selling single-engine turboprop",
+      "Exceptional short-field and rough-field capability",
+      "Used for corporate, air ambulance, and cargo roles",
+      "High reliability and single-pilot certification",
+      "Very versatile utility aircraft"
+    ]
+  },
+  "De Havilland Twin Otter": {
+    "explanation": "The Twin Otter STOL aircraft can take off in under 1000 feet and land almost anywhere",
+    "points": [
+      "Classic STOL (Short Takeoff and Landing) aircraft",
+      "Can operate from extremely short and unprepared strips",
+      "Used worldwide in remote locations",
+      "New production version (DHC-6 Series 400) available",
+      "Proven reliability in extreme conditions"
+    ]
+  },
+  "Airbus A220": {
+    "explanation": "The Airbus A220 was originally made by Bombardier as the CSeries jet",
+    "points": [
+      "Modern small narrow-body airliner",
+      "Originally developed as Bombardier CSeries",
+      "Excellent fuel efficiency and passenger comfort",
+      "Range suitable for transcontinental routes",
+      "Growing popularity with major airlines"
+    ]
+  },
+  "Boeing 777X": {
+    "explanation": "The Boeing 777X has folding wingtips that fold up so the plane can fit in airport gates",
+    "points": [
+      "Latest generation of Boeing 777 family",
+      "Folding wingtips to fit existing gates",
+      "Composite wings and new GE9X engines",
+      "Longest and largest twin-engine airliner",
+      "Designed for ultra-long-haul routes"
     ]
   }
 }

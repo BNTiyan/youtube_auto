@@ -1,406 +1,1002 @@
 {
-  "planets": {
-    "items": [
-      {
-        "name": "Mercury",
-        "fact": "Mercury is the smallest planet and closest to the Sun with extreme temperature swings"
-      },
-      {
-        "name": "Venus",
-        "fact": "Venus is the hottest planet at 465\u00b0C and spins backwards compared to most planets"
-      },
-      {
-        "name": "Earth",
-        "fact": "Earth is the only planet known to have life and liquid water on its surface"
-      },
-      {
-        "name": "Mars",
-        "fact": "Mars is called the Red Planet and has the largest volcano in the solar system"
-      },
-      {
-        "name": "Jupiter",
-        "fact": "Jupiter is the largest planet and its Great Red Spot is a storm bigger than Earth"
-      },
-      {
-        "name": "Saturn",
-        "fact": "Saturn has beautiful rings made of ice and rock visible from Earth with a small telescope"
-      },
-      {
-        "name": "Uranus",
-        "fact": "Uranus rotates on its side as if it was knocked over by a giant collision long ago"
-      },
-      {
-        "name": "Neptune",
-        "fact": "Neptune is the windiest planet with storms reaching speeds of 2100 km per hour"
-      },
-      {
-        "name": "Pluto",
-        "fact": "Pluto was reclassified as a dwarf planet in 2006 and has a heart-shaped nitrogen plain"
-      },
-      {
-        "name": "Ceres",
-        "fact": "Ceres is the largest object in the asteroid belt between Mars and Jupiter"
-      },
-      {
-        "name": "Eris",
-        "fact": "Eris is a distant dwarf planet even slightly larger than Pluto"
-      },
-      {
-        "name": "Makemake",
-        "fact": "Makemake is a dwarf planet in the Kuiper Belt named after a creation deity"
-      },
-      {
-        "name": "Haumea",
-        "fact": "Haumea spins so fast it is squashed into an egg shape unlike any other body"
-      },
-      {
-        "name": "Sedna",
-        "fact": "Sedna has an extremely elongated orbit taking over 11,000 years to go around the Sun"
-      },
-      {
-        "name": "Quaoar",
-        "fact": "Quaoar is a Kuiper Belt object that surprisingly has its own ring system"
-      },
-      {
-        "name": "Orcus",
-        "fact": "Orcus is sometimes called anti-Pluto because its orbit mirrors Pluto's almost exactly"
-      },
-      {
-        "name": "Varuna",
-        "fact": "Varuna is a large trans-Neptunian object with a very fast rotation period"
-      },
-      {
-        "name": "Ixion",
-        "fact": "Ixion is a plutino dwarf planet candidate in resonance with Neptune's orbit"
-      },
-      {
-        "name": "Gonggong",
-        "fact": "Gonggong is a large red Kuiper Belt object with a small moon called Xiangliu"
-      },
-      {
-        "name": "Planet Nine",
-        "fact": "Planet Nine is a hypothetical giant planet thought to be lurking unseen in the outer solar system"
-      },
-      {
-        "name": "Hot Jupiter",
-        "fact": "Hot Jupiters are gas giant exoplanets orbiting very close to their stars incredibly fast"
-      },
-      {
-        "name": "Super Earth",
-        "fact": "Super Earths are rocky exoplanets larger than Earth but smaller than Neptune"
-      },
-      {
-        "name": "Ocean World",
-        "fact": "Ocean worlds are planets or moons entirely covered by deep global oceans"
-      },
-      {
-        "name": "Lava Planet",
-        "fact": "Lava worlds are exoplanets so close to their stars that the surface is molten rock"
-      },
-      {
-        "name": "Diamond Planet",
-        "fact": "Some exoplanets are thought to have interiors made largely of diamond-like carbon"
-      },
-      {
-        "name": "Rogue Planet",
-        "fact": "Rogue planets drift through space without any star to orbit, frozen and dark"
-      },
-      {
-        "name": "Water World",
-        "fact": "GJ 1214 b is a water world with a thick steamy atmosphere and possible deep ocean"
-      },
-      {
-        "name": "Pulsar Planet",
-        "fact": "The first confirmed exoplanets ever found orbit a pulsar, a rapidly spinning dead star"
-      },
-      {
-        "name": "Proxima b",
-        "fact": "Proxima Centauri b is the closest known exoplanet to Earth just 4 light-years away"
-      },
-      {
-        "name": "Kepler-452b",
-        "fact": "Kepler-452b is often called Earth's cousin as it orbits a sun-like star in the habitable zone"
-      },
-      {
-        "name": "TRAPPIST-1e",
-        "fact": "TRAPPIST-1e is one of seven Earth-sized planets orbiting an ultra-cool dwarf star"
-      },
-      {
-        "name": "HD 189733b",
-        "fact": "HD 189733b is a vivid blue planet where it rains molten glass sideways in 8700 km/h winds"
-      },
-      {
-        "name": "55 Cancri e",
-        "fact": "55 Cancri e is a lava world that may have a surface of molten rock and carbon"
-      },
-      {
-        "name": "HAT-P-7b",
-        "fact": "HAT-P-7b is a massive hot Jupiter where it rains rubies and sapphires"
-      },
-      {
-        "name": "WASP-17b",
-        "fact": "WASP-17b is one of the largest known exoplanets with a density lower than balsa wood"
-      },
-      {
-        "name": "GJ 436b",
-        "fact": "GJ 436b is a hot Neptune with a gigantic comet-like tail of hydrogen streaming from it"
-      },
-      {
-        "name": "Kepler-16b",
-        "fact": "Kepler-16b orbits two stars at once like the fictional Tatooine from Star Wars"
-      },
-      {
-        "name": "PSR B1257+12 b",
-        "fact": "PSR B1257+12 b was the very first exoplanet ever confirmed, discovered in 1992"
-      },
-      {
-        "name": "Tau Ceti e",
-        "fact": "Tau Ceti e is a super Earth orbiting a sun-like star just 12 light-years away"
-      },
-      {
-        "name": "Wolf 1061c",
-        "fact": "Wolf 1061c is one of the closest potentially habitable exoplanets at 14 light-years"
-      },
-      {
-        "name": "Gliese 667Cc",
-        "fact": "Gliese 667Cc may be in the habitable zone of a triple star system"
-      },
-      {
-        "name": "K2-18b",
-        "fact": "K2-18b may have a hydrogen-rich atmosphere and possible ocean beneath"
-      },
-      {
-        "name": "LHS 1140b",
-        "fact": "LHS 1140b is a rocky super Earth in the habitable zone with a thick atmosphere"
-      },
-      {
-        "name": "TOI 700d",
-        "fact": "TOI 700d is a nearby Earth-sized planet in the habitable zone of a small red star"
-      },
-      {
-        "name": "Ross 128b",
-        "fact": "Ross 128b is a temperate Earth-mass planet orbiting a quiet red dwarf star"
-      },
-      {
-        "name": "Teegarden b",
-        "fact": "Teegarden b receives similar energy from its star as Earth does from the Sun"
-      },
-      {
-        "name": "LP 890-9c",
-        "fact": "LP 890-9c is one of the most promising habitable zone rocky planets found to date"
-      },
-      {
-        "name": "Barnard b",
-        "fact": "A planet candidate was reported around Barnard's Star just 6 light-years from Earth"
-      },
-      {
-        "name": "OGLE-2005-BLG",
-        "fact": "OGLE microlensing planets are discovered when their gravity bends distant starlight"
-      },
-      {
-        "name": "HR 8799b",
-        "fact": "HR 8799b was one of the first exoplanets to be directly photographed in visible light"
-      },
-      {
-        "name": "Beta Pic b",
-        "fact": "Beta Pictoris b was photographed orbiting inside a visible debris disk around its star"
-      },
-      {
-        "name": "Fomalhaut b",
-        "fact": "Fomalhaut b was photographed near a striking ring-shaped debris disk"
-      },
-      {
-        "name": "HIP 65426b",
-        "fact": "HIP 65426b was the first exoplanet directly imaged by the James Webb Space Telescope"
-      },
-      {
-        "name": "Qatar-1b",
-        "fact": "Qatar-1b was one of the first exoplanets discovered through the Qatar Exoplanet Survey"
-      },
-      {
-        "name": "KELT-9b",
-        "fact": "KELT-9b is the hottest known exoplanet at over 4,000 degrees, hotter than most stars"
-      },
-      {
-        "name": "WASP-96b",
-        "fact": "WASP-96b's atmosphere was analyzed by James Webb revealing water vapor and clouds"
-      },
-      {
-        "name": "WASP-121b",
-        "fact": "WASP-121b has iron and titanium vapor in its upper atmosphere detected by spectroscopy"
-      },
-      {
-        "name": "LTT 9779b",
-        "fact": "LTT 9779b has a metallic atmosphere and reflects 80% of starlight making it highly shiny"
-      },
-      {
-        "name": "COCONUTS-2b",
-        "fact": "COCONUTS-2b is the coldest and closest directly-imaged exoplanet to Earth known"
-      },
-      {
-        "name": "Luhman 16",
-        "fact": "Luhman 16 is the closest brown dwarf system just 6.5 light-years from Earth"
-      },
-      {
-        "name": "WD 1856b",
-        "fact": "WD 1856b orbits a white dwarf star having somehow survived the star's red giant phase"
-      },
-      {
-        "name": "TOI-1231b",
-        "fact": "TOI-1231b is a Neptune-sized exoplanet that may have water clouds in its atmosphere"
-      },
-      {
-        "name": "GJ 3470b",
-        "fact": "GJ 3470b is a warm Neptune losing its atmosphere to stellar radiation"
-      },
-      {
-        "name": "GJ 1132b",
-        "fact": "GJ 1132b may have rebuilt a secondary atmosphere from volcanic activity after losing its original"
-      },
-      {
-        "name": "K2-141b",
-        "fact": "K2-141b is a lava world with a supersonic silicate wind blowing across its surface"
-      },
-      {
-        "name": "Kepler-22b",
-        "fact": "Kepler-22b was the first confirmed exoplanet in the habitable zone of a sun-like star"
-      },
-      {
-        "name": "Kepler-69c",
-        "fact": "Kepler-69c is a super Earth orbiting in the habitable zone of a sun-like star"
-      },
-      {
-        "name": "Kepler-62e",
-        "fact": "Kepler-62e could be a water world with a global ocean and no land"
-      },
-      {
-        "name": "Kepler-186f",
-        "fact": "Kepler-186f was the first Earth-size exoplanet found in the habitable zone of any star"
-      },
-      {
-        "name": "Kepler-438b",
-        "fact": "Kepler-438b was once considered the most Earth-like exoplanet found with Earth Similarity Index of 0.88"
-      },
-      {
-        "name": "Kepler-442b",
-        "fact": "Kepler-442b orbits a star cooler than the Sun but still receives the right amount of energy"
-      },
-      {
-        "name": "Kepler-1649c",
-        "fact": "Kepler-1649c is one of the most Earth-sized and habitable zone matching planets found"
-      },
-      {
-        "name": "TOI-700e",
-        "fact": "TOI-700e is an inner habitable zone planet discovered alongside its sibling TOI-700d"
-      },
-      {
-        "name": "55 Cancri f",
-        "fact": "55 Cancri f is a giant planet that orbits in its star's habitable zone"
-      },
-      {
-        "name": "Upsilon Andromedae d",
-        "fact": "Upsilon Andromedae d was one of the first multiplanet systems discovered around a normal star"
-      },
-      {
-        "name": "Pi Mensae c",
-        "fact": "Pi Mensae c is a super Earth orbiting a star just 60 light-years away"
-      },
-      {
-        "name": "L 98-59b",
-        "fact": "L 98-59b is one of the smallest exoplanets to have its atmosphere studied by JWST"
-      },
-      {
-        "name": "TRAPPIST-1f",
-        "fact": "TRAPPIST-1f is one of the most studied exoplanets and a prime target for habitability research"
-      },
-      {
-        "name": "TRAPPIST-1g",
-        "fact": "TRAPPIST-1g is the second outermost of the seven TRAPPIST-1 planets"
-      },
-      {
-        "name": "TRAPPIST-1b",
-        "fact": "TRAPPIST-1b was found by JWST to have no thick atmosphere making it a bare rock"
-      },
-      {
-        "name": "GJ 876b",
-        "fact": "GJ 876b was the first gas giant exoplanet discovered around a red dwarf star"
-      },
-      {
-        "name": "51 Pegasi b",
-        "fact": "51 Pegasi b was the first exoplanet discovered around a sun-like star in 1995"
-      },
-      {
-        "name": "HD 209458b",
-        "fact": "HD 209458b also known as Osiris was the first exoplanet seen transiting its star"
-      },
-      {
-        "name": "TrES-1b",
-        "fact": "TrES-1b was the first exoplanet found using a small amateur-sized telescope network"
-      },
-      {
-        "name": "HAT-P-1b",
-        "fact": "HAT-P-1b is a bloated hot Jupiter with an extremely low density for its size"
-      },
-      {
-        "name": "XO-1b",
-        "fact": "XO-1b is a hot Jupiter discovered using a small wide-field telescope in New Mexico"
-      },
-      {
-        "name": "COROT-7b",
-        "fact": "CoRoT-7b was the first rocky exoplanet with a measured radius found outside our system"
-      },
-      {
-        "name": "Kepler-10b",
-        "fact": "Kepler-10b was the first confirmed rocky planet found by the Kepler space telescope"
-      },
-      {
-        "name": "Kepler-11b",
-        "fact": "Kepler-11 has six transiting planets all crammed closer to their star than Earth is to the Sun"
-      },
-      {
-        "name": "55 Cancri b",
-        "fact": "55 Cancri b was one of the earliest known exoplanets around a sun-like star"
-      },
-      {
-        "name": "Tau Bootis b",
-        "fact": "Tau Bootis b is a massive hot Jupiter orbiting very close to its bright host star"
-      },
-      {
-        "name": "70 Virginis b",
-        "fact": "70 Virginis b was one of the first exoplanets found and initially called a Goldilocks planet"
-      },
-      {
-        "name": "47 Ursae Majoris b",
-        "fact": "47 Ursae Majoris b was one of the first Jupiter analogs found in a wide stable orbit"
-      },
-      {
-        "name": "Rho Coronae Borealis b",
-        "fact": "Rho CrB b was notable as one of the first hot Jupiters discovered in the 1990s"
-      },
-      {
-        "name": "Kepler-47c",
-        "fact": "Kepler-47c orbits two stars in a stable circumbinary orbit in the habitable zone"
-      },
-      {
-        "name": "GJ 504b",
-        "fact": "GJ 504b is a directly imaged pink-magenta gas giant larger than Jupiter"
-      },
-      {
-        "name": "MOA-2007-BLG-192b",
-        "fact": "This super Earth orbits a tiny brown dwarf star and was found by gravitational microlensing"
-      },
-      {
-        "name": "OGLE-2016-BLG-1195Lb",
-        "fact": "This is one of the coldest known rocky exoplanets orbiting far from its host star"
-      },
-      {
-        "name": "PSO J318.5-22",
-        "fact": "PSO J318 is a rogue gas giant drifting alone without a star about 80 light-years away"
-      },
-      {
-        "name": "Oph 11b",
-        "fact": "Ophiuchus 11b is one of the youngest directly imaged planets still glowing from formation heat"
-      }
+  "Mercury": {
+    "explanation": "Mercury is the smallest planet and closest to the Sun with extreme temperature swings",
+    "points": [
+      "Smallest planet in the Solar System – diameter only ~4,879 km",
+      "Closest planet to the Sun with an average distance of ~58 million km",
+      "Extreme temperature variation: up to ~430 °C on the day side, down to ~-180 °C at night",
+      "No substantial atmosphere – surface exposed directly to solar radiation and space",
+      "Has the shortest orbital period (year) of only 88 Earth days"
+    ]
+  },
+  "Venus": {
+    "explanation": "Venus is the hottest planet at 465°C and spins backwards compared to most planets",
+    "points": [
+      "Hottest planet in the Solar System with surface temperature averaging ~465 °C",
+      "Retrograde rotation – spins clockwise (opposite direction to most planets)",
+      "Very slow rotation: one day on Venus lasts longer than one year (~243 Earth days vs 225 Earth days)",
+      "Thick carbon dioxide atmosphere creates extreme greenhouse effect",
+      "Surface pressure ~92 times that of Earth – equivalent to being 900 m underwater"
+    ]
+  },
+  "Earth": {
+    "explanation": "Earth is the only planet known to have life and liquid water on its surface",
+    "points": [
+      "Only known astronomical object confirmed to harbor life",
+      "71% of surface covered by liquid water – unique in the inner Solar System",
+      "Has a strong magnetic field generated by molten iron-nickel core",
+      "Atmosphere rich in nitrogen (78%) and oxygen (21%) – supports complex life",
+      "Plate tectonics and active geology distinguish it from other rocky planets"
+    ]
+  },
+  "Mars": {
+    "explanation": "Mars is called the Red Planet and has the largest volcano in the solar system",
+    "points": [
+      "Iron oxide (rust) on surface gives characteristic red color",
+      "Olympus Mons – tallest known volcano and mountain in Solar System (~22 km high)",
+      "Has the longest canyon system (Valles Marineris) – over 4,000 km long",
+      "Thin atmosphere mostly carbon dioxide – surface pressure ~0.6% of Earth's",
+      "Evidence of ancient liquid water – dry river valleys, lakebeds, polar ice caps"
+    ]
+  },
+  "Jupiter": {
+    "explanation": "Jupiter is the largest planet and its Great Red Spot is a storm bigger than Earth",
+    "points": [
+      "Largest planet – diameter ~11 times Earth, mass ~318 times Earth",
+      "Great Red Spot – anticyclonic storm larger than Earth, active for at least 350 years",
+      "Strongest magnetic field of any planet – creates intense radiation belts",
+      "Shortest day – rotates once every ~10 hours (fastest rotation)",
+      "Has at least 95 known moons – including four large Galilean moons"
+    ]
+  },
+  "Saturn": {
+    "explanation": "Saturn has beautiful rings made of ice and rock visible from Earth with a small telescope",
+    "points": [
+      "Most prominent and complex ring system in the Solar System",
+      "Rings mostly composed of water ice particles with some rocky material",
+      "Least dense planet – average density lower than water (would float in a bathtub)",
+      "Has at least 146 known moons – including large moon Titan with thick atmosphere",
+      "Hexagonal storm pattern at north pole – unique atmospheric feature"
+    ]
+  },
+  "Uranus": {
+    "explanation": "Uranus rotates on its side as if it was knocked over by a giant collision long ago",
+    "points": [
+      "Extreme axial tilt of ~98° – essentially rolls on its side during orbit",
+      "Likely caused by massive collision early in Solar System history",
+      "Coldest planetary atmosphere – minimum temperature ~−224 °C",
+      "Faint ring system and 27 known moons (mostly named after Shakespeare characters)",
+      "Blue-green color from methane in atmosphere absorbing red light"
+    ]
+  },
+  "Neptune": {
+    "explanation": "Neptune is the windiest planet with storms reaching speeds of 2100 km per hour",
+    "points": [
+      "Strongest sustained winds of any planet – up to ~2,100 km/h",
+      "Deep blue color from methane absorption in atmosphere",
+      "Dynamic weather – Great Dark Spot storm observed by Voyager 2 in 1989",
+      "Strong internal heat source – radiates 2.6 times more heat than it receives",
+      "14 known moons – largest is Triton, which orbits retrograde"
+    ]
+  },
+  "Pluto": {
+    "explanation": "Pluto was reclassified as a dwarf planet in 2006 and has a heart-shaped nitrogen plain",
+    "points": [
+      "Reclassified from planet to dwarf planet by IAU in 2006",
+      "Tombaugh Regio – large heart-shaped nitrogen ice plain on surface",
+      "Largest known trans-Neptunian object in Kuiper Belt",
+      "Has five moons – largest Charon is about half Pluto's size (binary system)",
+      "Thin nitrogen-methane atmosphere that freezes onto surface when farther from Sun"
+    ]
+  },
+  "Ceres": {
+    "explanation": "Ceres is the largest object in the asteroid belt between Mars and Jupiter",
+    "points": [
+      "Largest object in the asteroid belt – diameter ~940 km",
+      "Only dwarf planet in the inner Solar System",
+      "Bright spots (faculae) on surface – salt deposits from subsurface brine",
+      "Has water ice – possibly more fresh water than all of Earth's freshwater",
+      "Visited by Dawn spacecraft (2015–2018) – first dwarf planet orbited"
+    ]
+  },
+  "Eris": {
+    "explanation": "Eris is a distant dwarf planet even slightly larger than Pluto",
+    "points": [
+      "Most massive known dwarf planet – ~27% more massive than Pluto",
+      "Slightly larger diameter than Pluto (~2,326 km vs ~2,377 km)",
+      "Highly eccentric orbit – ranges from 38 to 97 AU from Sun",
+      "Has one moon – Dysnomia",
+      "Discovery (2005) triggered the redefinition of “planet”"
+    ]
+  },
+  "Makemake": {
+    "explanation": "Makemake is a dwarf planet in the Kuiper Belt named after a creation deity",
+    "points": [
+      "Named after Rapa Nui (Easter Island) creator god",
+      "Second-brightest Kuiper Belt object after Pluto",
+      "Very low albedo before discovery of atmosphere – now known to have thin methane atmosphere",
+      "No known moons (as of 2025)",
+      "Highly elongated orbit – 310–490 years orbital period"
+    ]
+  },
+  "Haumea": {
+    "explanation": "Haumea spins so fast it is squashed into an egg shape unlike any other body",
+    "points": [
+      "Fastest-rotating large body in Solar System – ~4-hour day",
+      "Extreme elongation due to rapid spin – longest/shortest axes ratio ~2:1",
+      "Has two small moons – Hiʻiaka and Namaka",
+      "Ring system discovered in 2017 – first Kuiper Belt object with rings",
+      "Surface covered in crystalline water ice – unusually pure"
+    ]
+  },
+  "Sedna": {
+    "explanation": "Sedna has an extremely elongated orbit taking over 11,000 years to go around the Sun",
+    "points": [
+      "Most distant known object in Solar System with confirmed orbit (~84 AU average)",
+      "Extreme orbital period ~11,400 years – perihelion ~76 AU, aphelion ~937 AU",
+      "Reddish color – possibly due to tholins (organic compounds)",
+      "Possible inner Oort Cloud object or detached disk member",
+      "No known moons – very small (diameter ~1,000 km)"
+    ]
+  },
+  "Quaoar": {
+    "explanation": "Quaoar is a Kuiper Belt object that surprisingly has its own ring system",
+    "points": [
+      "First Kuiper Belt object found to have a ring system (2023)",
+      "Ring lies outside Roche limit – very unusual",
+      "Has one moon – Weywot",
+      "Diameter ~1,100–1,300 km – near hydrostatic equilibrium",
+      "Named after Tongva creator deity"
+    ]
+  },
+  "Orcus": {
+    "explanation": "Orcus is sometimes called anti-Pluto because its orbit mirrors Pluto's almost exactly",
+    "points": [
+      "Plutino – in 2:3 orbital resonance with Neptune like Pluto",
+      "Orbit almost exactly opposite Pluto – called “anti-Pluto”",
+      "Has one moon – Vanth",
+      "Surface rich in water ice and possibly ammonium compounds",
+      "Diameter ~900–1,000 km"
+    ]
+  },
+  "Varuna": {
+    "explanation": "Varuna is a large trans-Neptunian object with a very fast rotation period",
+    "points": [
+      "Very fast rotation – ~6.3 hour day",
+      "Elongated shape due to spin – not in hydrostatic equilibrium",
+      "Diameter ~600–700 km",
+      "Named after Hindu god of water and celestial ocean",
+      "One of the brightest classical Kuiper Belt objects"
+    ]
+  },
+  "Ixion": {
+    "explanation": "Ixion is a plutino dwarf planet candidate in resonance with Neptune's orbit",
+    "points": [
+      "Plutino – 2:3 resonance with Neptune",
+      "Reddish surface – likely tholins",
+      "Diameter ~710 km – possible dwarf planet",
+      "Named after Greek mythological figure punished in Tartarus",
+      "Among the largest plutinos after Pluto"
+    ]
+  },
+  "Gonggong": {
+    "explanation": "Gonggong is a large red Kuiper Belt object with a small moon called Xiangliu",
+    "points": [
+      "Very red surface – high concentration of tholins",
+      "Has one moon – Xiangliu (discovered 2010)",
+      "Diameter ~1,230 km – likely dwarf planet",
+      "Named after Chinese water god who caused great floods",
+      "Highly inclined and eccentric orbit"
+    ]
+  },
+  "Planet Nine": {
+    "explanation": "Planet Nine is a hypothetical giant planet thought to be lurking unseen in the outer solar system",
+    "points": [
+      "Hypothetical super-Earth or ice giant ~5–10 Earth masses",
+      "Proposed to explain clustering of extreme trans-Neptunian orbits",
+      "Predicted orbit: 400–800 AU from Sun, period 10,000–20,000 years",
+      "Not yet discovered – only indirect gravitational evidence",
+      "If real, would be the fifth-largest planet in Solar System"
+    ]
+  },
+  "Hot Jupiter": {
+    "explanation": "Hot Jupiters are gas giant exoplanets orbiting very close to their stars incredibly fast",
+    "points": [
+      "Gas giants orbiting extremely close to parent star (<0.05 AU)",
+      "Orbital periods typically 1–10 days – very hot surfaces",
+      "First type of exoplanet discovered around Sun-like stars (1995)",
+      "Many have dayside temperatures >1,000 °C",
+      "Often tidally locked – one side always faces star"
+    ]
+  },
+  "Super Earth": {
+    "explanation": "Super Earths are rocky exoplanets larger than Earth but smaller than Neptune",
+    "points": [
+      "Mass 1–10× Earth – radius 1.2–2.5× Earth",
+      "May be rocky, ocean worlds, or mini-Neptunes",
+      "Most common type of planet discovered by Kepler mission",
+      "Some lie in habitable zones of their stars",
+      "Can have very high gravity – up to several times Earth's"
+    ]
+  },
+  "Ocean World": {
+    "explanation": "Ocean worlds are planets or moons entirely covered by deep global oceans",
+    "points": [
+      "Planets/moons with global subsurface or surface oceans (often beneath ice)",
+      "Examples include Europa, Enceladus, Ganymede, Titan, and some exoplanets",
+      "Potential for life due to liquid water and possible chemical energy sources",
+      "Many are tidally heated by parent planet (e.g., Jupiter's moons)",
+      "Could have oceans hundreds of kilometers deep"
+    ]
+  },
+  "Lava Planet": {
+    "explanation": "Lava worlds are exoplanets so close to their stars that the surface is molten rock",
+    "points": [
+      "Rocky planets with dayside surface temperatures high enough to melt rock",
+      "Surface may be covered in magma oceans",
+      "Examples include CoRoT-7b, K2-141b, and 55 Cancri e",
+      "Extreme stellar irradiation strips atmospheres in many cases",
+      "Some may have lava “weather” – silicate vapor clouds and rain"
+    ]
+  },
+  "Diamond Planet": {
+    "explanation": "Some exoplanets are thought to have interiors made largely of diamond-like carbon",
+    "points": [
+      "High-pressure carbon planets where carbon crystallizes into diamond",
+      "55 Cancri e is the most famous candidate – may be carbon-rich",
+      "Formed from carbon-oxygen rich protoplanetary disks",
+      "Could have thick diamond layers beneath graphite or other forms",
+      "Very high density compared to Earth-like rocky planets"
+    ]
+  },
+  "Rogue Planet": {
+    "explanation": "Rogue planets drift through space without any star to orbit, frozen and dark",
+    "points": [
+      "Free-floating planets not bound to any star",
+      "Likely ejected from original planetary systems",
+      "Extremely cold surface temperatures (~−200 °C or lower)",
+      "Some may retain internal heat or have thick hydrogen atmospheres",
+      "Examples include PSO J318.5-22 and several microlensing discoveries"
+    ]
+  },
+  "Water World": {
+    "explanation": "GJ 1214 b is a water world with a thick steamy atmosphere and possible deep ocean",
+    "points": [
+      "GJ 1214 b – classic example of a water-rich mini-Neptune / super-Earth",
+      "Thick hydrogen-helium atmosphere with large water vapor component",
+      "Possible global ocean beneath atmosphere – hundreds of km deep",
+      "High surface pressure – water may be in exotic states (hot ice)",
+      "Temperature ~200–300 °C at cloud tops"
+    ]
+  },
+  "Pulsar Planet": {
+    "explanation": "The first confirmed exoplanets ever found orbit a pulsar, a rapidly spinning dead star",
+    "points": [
+      "PSR B1257+12 system – first confirmed exoplanets (1992)",
+      "Orbit millisecond pulsar – remnant of supernova",
+      "Planets likely formed from supernova debris disk",
+      "Extreme radiation environment – unlikely to host life",
+      "Three rocky planets detected via pulsar timing"
+    ]
+  },
+  "Proxima b": {
+    "explanation": "Proxima Centauri b is the closest known exoplanet to Earth just 4 light-years away",
+    "points": [
+      "Closest known exoplanet to our Solar System (~4.24 light-years)",
+      "Orbits in habitable zone of red dwarf Proxima Centauri",
+      "Mass ~1.17 Earth masses – likely rocky",
+      "Tidally locked – one side always faces star",
+      "Subject to strong stellar flares from its red dwarf host"
+    ]
+  },
+  "Kepler-452b": {
+    "explanation": "Kepler-452b is often called Earth's cousin as it orbits a sun-like star in the habitable zone",
+    "points": [
+      "Orbits G-type (Sun-like) star – very similar to our Sun",
+      "Receives ~10% more stellar energy than Earth",
+      "Radius ~1.6× Earth – likely rocky or mini-Neptune",
+      "Orbital period ~385 days – very Earth-like year",
+      "Age of system ~6 billion years – older than Solar System"
+    ]
+  },
+  "TRAPPIST-1e": {
+    "explanation": "TRAPPIST-1e is one of seven Earth-sized planets orbiting an ultra-cool dwarf star",
+    "points": [
+      "One of seven roughly Earth-sized planets in TRAPPIST-1 system",
+      "Receives similar amount of starlight as Earth from its star",
+      "Likely rocky – radius and mass suggest Earth-like density",
+      "Possibly tidally locked – extreme day/night temperature contrast",
+      "Prime target for JWST atmospheric studies"
+    ]
+  },
+  "HD 189733b": {
+    "explanation": "HD 189733b is a vivid blue planet where it rains molten glass sideways in 8700 km/h winds",
+    "points": [
+      "Deep blue color due to silicate particles in atmosphere",
+      "Extreme winds ~8,700 km/h – glass rain sideways",
+      "Hot Jupiter with dayside temperature ~1,200 °C",
+      "Sodium and water vapor detected in atmosphere",
+      "One of the first exoplanets with detailed atmospheric map"
+    ]
+  },
+  "55 Cancri e": {
+    "explanation": "55 Cancri e is a lava world that may have a surface of molten rock and carbon",
+    "points": [
+      "Super-Earth / mini-Neptune with dayside ~2,400 °C",
+      "Likely covered in magma ocean",
+      "Possible carbon-rich composition – diamond layers theorized",
+      "Very short orbital period – 18 hours",
+      "Phase curve shows heat redistribution from dayside to nightside"
+    ]
+  },
+  "HAT-P-7b": {
+    "explanation": "HAT-P-7b is a massive hot Jupiter where it rains rubies and sapphires",
+    "points": [
+      "Albedo ~0.5 – highly reflective (shiny)",
+      "Possible corundum (aluminum oxide) clouds – ruby/sapphire rain",
+      "Dayside temperature ~2,200–2,800 °C",
+      "Strong thermal inversion in atmosphere",
+      "One of the brightest hot Jupiters observed"
+    ]
+  },
+  "WASP-17b": {
+    "explanation": "WASP-17b is one of the largest known exoplanets with a density lower than balsa wood",
+    "points": [
+      "One of the largest and lowest-density exoplanets known",
+      "Radius ~1.99 Jupiter radii, mass ~0.49 Jupiter masses",
+      "Very inflated – extremely low density (~0.19 g/cm³)",
+      "Hot Jupiter with 3.7-day orbit",
+      "Retrograde orbit – likely result of dynamical interactions"
+    ]
+  },
+  "GJ 436b": {
+    "explanation": "GJ 436b is a hot Neptune with a gigantic comet-like tail of hydrogen streaming from it",
+    "points": [
+      "Warm Neptune losing atmosphere rapidly",
+      "Huge hydrogen tail – extends far behind planet",
+      "Mass loss rate ~1,000 tons per second",
+      "Helium detected in escaping atmosphere",
+      "Orbiting red dwarf star ~33 light-years away"
+    ]
+  },
+  "Kepler-16b": {
+    "explanation": "Kepler-16b orbits two stars at once like the fictional Tatooine from Star Wars",
+    "points": [
+      "First confirmed circumbinary planet – orbits two stars",
+      "Gas giant similar to Saturn in mass",
+      "Stable orbit around binary star pair",
+      "Orbital period ~229 days",
+      "Popularly called “Tatooine planet”"
+    ]
+  },
+  "PSR B1257+12 b": {
+    "explanation": "PSR B1257+12 b was the very first exoplanet ever confirmed, discovered in 1992",
+    "points": [
+      "First confirmed exoplanet (1992) – predates 51 Peg b",
+      "Orbits millisecond pulsar PSR B1257+12",
+      "Rocky planet ~0.02 Earth masses",
+      "Extreme radiation environment from pulsar",
+      "Part of first multi-planet system discovered"
+    ]
+  },
+  "Tau Ceti e": {
+    "explanation": "Tau Ceti e is a super Earth orbiting a sun-like star just 12 light-years away",
+    "points": [
+      "Super-Earth orbiting nearby Sun-like star (~11.9 light-years)",
+      "Mass ~4.3–6.7 Earth masses",
+      "Close orbit – receives more energy than Venus",
+      "One of the nearest potentially rocky exoplanets",
+      "Still debated whether rocky or gaseous"
+    ]
+  },
+  "Wolf 1061c": {
+    "explanation": "Wolf 1061c is one of the closest potentially habitable exoplanets at 14 light-years",
+    "points": [
+      "Orbits in conservative habitable zone of red dwarf Wolf 1061",
+      "Mass ~4 Earth masses – likely rocky",
+      "Distance ~14 light-years – one of the nearest habitable-zone candidates",
+      "Orbital period ~17.9 days",
+      "Red dwarf host means potential tidal locking"
+    ]
+  },
+  "Gliese 667Cc": {
+    "explanation": "Gliese 667Cc may be in the habitable zone of a triple star system",
+    "points": [
+      "Orbits one component of triple red dwarf system",
+      "Mass ~3.8–4.5 Earth masses",
+      "Within habitable zone – receives ~90% of Earth's stellar energy",
+      "Potential rocky super-Earth",
+      "Triple star environment – complex seasonal effects possible"
+    ]
+  },
+  "K2-18b": {
+    "explanation": "K2-18b may have a hydrogen-rich atmosphere and possible ocean beneath",
+    "points": [
+      "Hycean candidate – possible hydrogen atmosphere + global ocean",
+      "Radius ~2.6× Earth, mass ~8.6× Earth",
+      "Water vapor and methane detected in atmosphere",
+      "Orbital period ~33 days around red dwarf",
+      "Prime target for JWST habitability studies"
+    ]
+  },
+  "LHS 1140b": {
+    "explanation": "LHS 1140b is a rocky super Earth in the habitable zone with a thick atmosphere",
+    "points": [
+      "Dense rocky planet – mass ~6.5 Earth masses, radius ~1.7 Earth radii",
+      "Receives similar stellar energy as Earth",
+      "Likely retains thick atmosphere despite red dwarf host",
+      "Strong candidate for liquid water surface",
+      "One of the best targets for atmospheric characterization"
+    ]
+  },
+  "TOI 700d": {
+    "explanation": "TOI 700d is a nearby Earth-sized planet in the habitable zone of a small red star",
+    "points": [
+      "Earth-sized planet (~1.1–1.2 Earth radii)",
+      "Orbits in habitable zone of quiet red dwarf TOI 700",
+      "Distance ~101 light-years",
+      "Likely rocky – prime target for JWST",
+      "One of the first Earth-sized habitable-zone planets found by TESS"
+    ]
+  },
+  "Ross 128b": {
+    "explanation": "Ross 128b is a temperate Earth-mass planet orbiting a quiet red dwarf star",
+    "points": [
+      "Mass ~1.4–1.8 Earth masses – likely rocky",
+      "Receives ~1.38× Earth's stellar flux",
+      "Orbits very quiet red dwarf – low flare activity",
+      "Distance ~11 light-years – one of the closest temperate planets",
+      "Potential for liquid water on surface"
+    ]
+  },
+  "Teegarden b": {
+    "explanation": "Teegarden b receives similar energy from its star as Earth does from the Sun",
+    "points": [
+      "Mass ~1.05 Earth masses – very Earth-like",
+      "Stellar flux almost identical to Earth's (~1.15×)",
+      "Orbits very quiet red dwarf Teegarden's Star",
+      "Distance ~12.5 light-years",
+      "High Earth Similarity Index – one of the most Earth-like candidates"
+    ]
+  },
+  "LP 890-9c": {
+    "explanation": "LP 890-9c is one of the most promising habitable zone rocky planets found to date",
+    "points": [
+      "Radius ~1.37× Earth, mass ~2–8 Earth masses (estimated)",
+      "Receives ~1.0–1.2× Earth's stellar energy",
+      "Orbits quiet red dwarf LP 890-9",
+      "Very promising for follow-up observations",
+      "Part of SPECULOOS discovery – two temperate planets in system"
+    ]
+  },
+  "Barnard b": {
+    "explanation": "A planet candidate was reported around Barnard's Star just 6 light-years from Earth",
+    "points": [
+      "Candidate super-Earth around nearest solitary red dwarf (~6 light-years)",
+      "Mass ~0.4 Earth masses (if real)",
+      "Cold orbit – receives ~2–3% of Earth's stellar energy",
+      "Discovery via radial velocity – still debated",
+      "If confirmed, one of the closest exoplanets"
+    ]
+  },
+  "OGLE-2005-BLG": {
+    "explanation": "OGLE microlensing planets are discovered when their gravity bends distant starlight",
+    "points": [
+      "OGLE-2005-BLG-390Lb – first cold rocky exoplanet found via microlensing",
+      "Mass ~5.5 Earth masses",
+      "Very distant orbit – ~5 AU from host star",
+      "Technique detects planets down to Earth mass at large distances",
+      "Host star likely red dwarf or brown dwarf"
+    ]
+  },
+  "HR 8799b": {
+    "explanation": "HR 8799b was one of the first exoplanets to be directly photographed in visible light",
+    "points": [
+      "One of the first directly imaged exoplanets (2008)",
+      "Gas giant ~7 Jupiter masses",
+      "Orbits at ~68 AU from young A-type star",
+      "Bright in infrared – still forming and glowing from heat",
+      "Part of four-planet directly imaged system"
+    ]
+  },
+  "Beta Pic b": {
+    "explanation": "Beta Pictoris b was photographed orbiting inside a visible debris disk around its star",
+    "points": [
+      "First exoplanet directly imaged inside a debris disk (2008)",
+      "Gas giant ~8–15 Jupiter masses",
+      "Orbits at ~9 AU from young A-type star",
+      "Still forming – very hot (~1,300 °C)",
+      "Helps study planet formation in real time"
+    ]
+  },
+  "Fomalhaut b": {
+    "explanation": "Fomalhaut b was photographed near a striking ring-shaped debris disk",
+    "points": [
+      "First exoplanet directly imaged near debris disk (2008)",
+      "Very large orbit (~115 AU)",
+      "Later observations suggest it may be a dust cloud or evaporating protoplanet",
+      "Star Fomalhaut is bright and nearby (~25 light-years)",
+      "Helped understand planet-disk interactions"
+    ]
+  },
+  "HIP 65426b": {
+    "explanation": "HIP 65426b was the first exoplanet directly imaged by the James Webb Space Telescope",
+    "points": [
+      "First planet directly imaged by JWST (2022)",
+      "Gas giant ~6–12 Jupiter masses",
+      "Orbits at ~100 AU from young A-type star",
+      "Very hot – still glowing from formation",
+      "Important for JWST exoplanet imaging calibration"
+    ]
+  },
+  "Qatar-1b": {
+    "explanation": "Qatar-1b was one of the first exoplanets discovered through the Qatar Exoplanet Survey",
+    "points": [
+      "Hot Jupiter discovered by Qatar Exoplanet Survey (2010)",
+      "Orbital period ~1.42 days",
+      "Radius ~1.16 Jupiter radii, mass ~1.33 Jupiter masses",
+      "Orbiting K-type star",
+      "One of the earliest discoveries from Middle Eastern astronomy programs"
+    ]
+  },
+  "KELT-9b": {
+    "explanation": "KELT-9b is the hottest known exoplanet at over 4,000 degrees, hotter than most stars",
+    "points": [
+      "Hottest known exoplanet – dayside ~4,300 °C",
+      "Hotter than most stars – molecules dissociate on dayside",
+      "Hot Jupiter orbiting hot A-type star",
+      "Very short orbit – 1.48 days",
+      "Atmosphere may contain atomic iron and titanium"
+    ]
+  },
+  "WASP-96b": {
+    "explanation": "WASP-96b's atmosphere was analyzed by James Webb revealing water vapor and clouds",
+    "points": [
+      "First exoplanet atmosphere spectrum published by JWST (2022)",
+      "Clear detection of water vapor",
+      "Evidence of clouds and possible haze",
+      "Hot Saturn-sized planet with 3.2-day orbit",
+      "Important benchmark for JWST transmission spectroscopy"
+    ]
+  },
+  "WASP-121b": {
+    "explanation": "WASP-121b has iron and titanium vapor in its upper atmosphere detected by spectroscopy",
+    "points": [
+      "Hot Jupiter with strong atmospheric escape",
+      "Atomic iron, titanium, and vanadium detected in upper atmosphere",
+      "Dayside temperature ~2,500–3,000 °C",
+      "Heavy metals vaporized and present in gas phase",
+      "One of the best-studied ultra-hot Jupiters"
+    ]
+  },
+  "LTT 9779b": {
+    "explanation": "LTT 9779b has a metallic atmosphere and reflects 80% of starlight making it highly shiny",
+    "points": [
+      "Highest albedo known for hot Neptune (~0.8)",
+      "Metallic clouds likely cause high reflectivity",
+      "Very short orbit – 0.79 days",
+      "Dayside temperature ~2,000 °C",
+      "Transition object between hot Jupiter and ultra-hot Neptune"
+    ]
+  },
+  "COCONUTS-2b": {
+    "explanation": "COCONUTS-2b is the coldest and closest directly-imaged exoplanet to Earth known",
+    "points": [
+      "Coldest directly imaged exoplanet – ~160–190 K",
+      "Very wide orbit (~6,400 AU)",
+      "Mass ~6 Jupiter masses",
+      "Distance to Earth ~35 light-years (closest imaged planet)",
+      "Likely formed by gravitational collapse"
+    ]
+  },
+  "Luhman 16": {
+    "explanation": "Luhman 16 is the closest brown dwarf system just 6.5 light-years from Earth",
+    "points": [
+      "Third-closest system to Earth (~6.5 light-years)",
+      "Binary brown dwarfs (Luhman 16A and 16B)",
+      "No confirmed planets yet, but excellent target for future searches",
+      "Very cool temperatures – ~1,200–1,500 K",
+      "Discovered via WISE telescope (2013)"
+    ]
+  },
+  "WD 1856b": {
+    "explanation": "WD 1856b orbits a white dwarf star having somehow survived the star's red giant phase",
+    "points": [
+      "Jupiter-sized planet orbiting white dwarf at ~0.02 AU",
+      "Survived host star's red giant phase without being engulfed",
+      "Likely migrated inward after star became white dwarf",
+      "Very cold planet now (~200 K)",
+      "First planet confirmed to orbit white dwarf"
+    ]
+  },
+  "TOI-1231b": {
+    "explanation": "TOI-1231b is a Neptune-sized exoplanet that may have water clouds in its atmosphere",
+    "points": [
+      "Sub-Neptune / mini-Neptune with radius ~3.5× Earth",
+      "Temperature ~330 K – cool enough for water clouds",
+      "Orbiting quiet M dwarf ~90 light-years away",
+      "One of the best targets for JWST transmission spectroscopy",
+      "Possible hazy or cloudy atmosphere"
+    ]
+  },
+  "GJ 3470b": {
+    "explanation": "GJ 3470b is a warm Neptune losing its atmosphere to stellar radiation",
+    "points": [
+      "Warm Neptune losing hydrogen envelope rapidly",
+      "Large escaping atmosphere detected via Lyman-alpha",
+      "Mass loss rate one of the highest observed",
+      "Orbiting red dwarf at ~0.03 AU",
+      "Transition object – may lose envelope completely"
+    ]
+  },
+  "GJ 1132b": {
+    "explanation": "GJ 1132b may have rebuilt a secondary atmosphere from volcanic activity after losing its original",
+    "points": [
+      "Rocky super-Earth ~1.6 Earth radii",
+      "Possible secondary atmosphere from volcanism",
+      "Original H/He envelope likely lost to stellar radiation",
+      "Orbiting red dwarf ~41 light-years away",
+      "Prime target for JWST to study rocky planet atmospheres"
+    ]
+  },
+  "K2-141b": {
+    "explanation": "K2-141b is a lava world with a supersonic silicate wind blowing across its surface",
+    "points": [
+      "Extreme lava planet – dayside ~2,000–3,000 °C",
+      "Supersonic winds carry vaporized rock from dayside to nightside",
+      "Possible mineral clouds and rock rain on cooler side",
+      "Very short orbit – 0.28 days",
+      "One of the most extreme rocky exoplanets known"
+    ]
+  },
+  "Kepler-22b": {
+    "explanation": "Kepler-22b was the first confirmed exoplanet in the habitable zone of a sun-like star",
+    "points": [
+      "First habitable-zone planet found by Kepler (2011)",
+      "Radius ~2.4× Earth – likely mini-Neptune or water world",
+      "Orbits G-type star similar to Sun",
+      "Receives ~80% of Earth's stellar flux",
+      "Orbital period ~290 days"
+    ]
+  },
+  "Kepler-69c": {
+    "explanation": "Kepler-69c is a super Earth orbiting in the habitable zone of a sun-like star",
+    "points": [
+      "Radius ~1.7× Earth – possible super-Venus or rocky",
+      "Receives ~2.3× Earth's stellar flux (hot side of HZ)",
+      "Orbits G-type star",
+      "Orbital period ~242 days",
+      "Early candidate for habitability studies"
+    ]
+  },
+  "Kepler-62e": {
+    "explanation": "Kepler-62e could be a water world with a global ocean and no land",
+    "points": [
+      "Super-Earth / mini-Neptune in habitable zone",
+      "Radius ~1.6× Earth",
+      "Likely ocean world or water-rich planet",
+      "Receives ~20% less stellar flux than Earth",
+      "Orbits K-type star – orbital period ~122 days"
+    ]
+  },
+  "Kepler-186f": {
+    "explanation": "Kepler-186f was the first Earth-size exoplanet found in the habitable zone of any star",
+    "points": [
+      "First Earth-sized planet in habitable zone (2014)",
+      "Radius ~1.1× Earth – likely rocky",
+      "Receives ~32% of Earth's stellar flux",
+      "Orbits red dwarf star",
+      "Orbital period ~130 days"
+    ]
+  },
+  "Kepler-438b": {
+    "explanation": "Kepler-438b was once considered the most Earth-like exoplanet found with Earth Similarity Index of 0.88",
+    "points": [
+      "Very high Earth Similarity Index (~0.88)",
+      "Radius ~1.12× Earth – likely rocky",
+      "Receives ~70% of Earth's stellar flux",
+      "Orbits red dwarf – potential tidal locking",
+      "High flare activity from host star may affect habitability"
+    ]
+  },
+  "Kepler-442b": {
+    "explanation": "Kepler-442b orbits a star cooler than the Sun but still receives the right amount of energy",
+    "points": [
+      "One of the most Earth-like planets by stellar flux received",
+      "Radius ~1.34× Earth",
+      "Receives ~66–70% of Earth's energy",
+      "Orbits K-type star – orbital period ~112 days",
+      "High Earth Similarity Index (~0.84–0.86)"
+    ]
+  },
+  "Kepler-1649c": {
+    "explanation": "Kepler-1649c is one of the most Earth-sized and habitable zone matching planets found",
+    "points": [
+      "Radius ~1.06× Earth – very close to Earth size",
+      "Receives ~75% of Earth's stellar flux",
+      "Orbits red dwarf star",
+      "Orbital period ~19.5 days",
+      "Re-analyzed from Kepler data – previously overlooked"
+    ]
+  },
+  "TOI-700e": {
+    "explanation": "TOI-700e is an inner habitable zone planet discovered alongside its sibling TOI-700d",
+    "points": [
+      "Earth-sized planet in inner habitable zone of TOI-700",
+      "Radius ~0.95× Earth",
+      "Receives slightly more energy than Earth",
+      "Part of three-planet system around quiet red dwarf",
+      "Excellent JWST target for atmospheric study"
+    ]
+  },
+  "55 Cancri f": {
+    "explanation": "55 Cancri f is a giant planet that orbits in its star's habitable zone",
+    "points": [
+      "Gas giant / ice giant in habitable zone",
+      "Mass ~0.14–0.28 Jupiter masses",
+      "Receives Earth-like stellar flux",
+      "Orbits bright nearby star (~41 light-years)",
+      "Part of one of the closest multi-planet systems"
+    ]
+  },
+  "Upsilon Andromedae d": {
+    "explanation": "Upsilon Andromedae d was one of the first multiplanet systems discovered around a normal star",
+    "points": [
+      "Part of first multi-planet system around Sun-like star (1999)",
+      "Gas giant ~10 Jupiter masses",
+      "Wide orbit – ~2.5 AU",
+      "Stable despite eccentric companion planets",
+      "One of the earliest known Jupiter analogs"
+    ]
+  },
+  "Pi Mensae c": {
+    "explanation": "Pi Mensae c is a super Earth orbiting a star just 60 light-years away",
+    "points": [
+      "Super-Earth / mini-Neptune ~4.8 Earth masses",
+      "Orbital period ~6.3 days – very close orbit",
+      "Around nearby bright star (~59 light-years)",
+      "Possible atmosphere detectable",
+      "Host star has known long-period giant planet"
+    ]
+  },
+  "L 98-59b": {
+    "explanation": "L 98-59b is one of the smallest exoplanets to have its atmosphere studied by JWST",
+    "points": [
+      "Small rocky planet ~0.9 Earth radii",
+      "Very close orbit around red dwarf",
+      "JWST transmission spectrum obtained – one of the smallest targets",
+      "Possible thin atmosphere or bare rock",
+      "Part of multi-planet system"
+    ]
+  },
+  "TRAPPIST-1f": {
+    "explanation": "TRAPPIST-1f is one of the most studied exoplanets and a prime target for habitability research",
+    "points": [
+      "One of seven Earth-sized planets in TRAPPIST-1 system",
+      "Outer habitable-zone planet – cooler side",
+      "Likely rocky or water-rich",
+      "Extensive JWST observations ongoing",
+      "Possible tidal heating from resonances"
+    ]
+  },
+  "TRAPPIST-1g": {
+    "explanation": "TRAPPIST-1g is the second outermost of the seven TRAPPIST-1 planets",
+    "points": [
+      "Outermost of the seven TRAPPIST-1 planets",
+      "Radius ~1.13× Earth",
+      "Receives less stellar energy than Mars",
+      "Possible icy surface or thin atmosphere",
+      "Important for understanding system dynamics"
+    ]
+  },
+  "TRAPPIST-1b": {
+    "explanation": "TRAPPIST-1b was found by JWST to have no thick atmosphere making it a bare rock",
+    "points": [
+      "Innermost planet of TRAPPIST-1 system",
+      "JWST observations (2023) showed no thick atmosphere",
+      "Likely bare rocky surface",
+      "Very hot dayside – extreme stellar irradiation",
+      "Tidally locked"
+    ]
+  },
+  "GJ 876b": {
+    "explanation": "GJ 876b was the first gas giant exoplanet discovered around a red dwarf star",
+    "points": [
+      "First gas giant found around red dwarf (1998)",
+      "Mass ~2.3 Jupiter masses",
+      "Orbital period ~61 days",
+      "Part of resonant multi-planet system",
+      "Helped understand planet formation around M dwarfs"
+    ]
+  },
+  "51 Pegasi b": {
+    "explanation": "51 Pegasi b was the first exoplanet discovered around a sun-like star in 1995",
+    "points": [
+      "First exoplanet around main-sequence Sun-like star (1995)",
+      "Hot Jupiter – 4-day orbit",
+      "Mass ~0.47 Jupiter masses",
+      "Revolutionized exoplanet science – showed planets close to stars",
+      "Won Nobel Prize in Physics 2019 (Mayor & Queloz)"
+    ]
+  },
+  "HD 209458b": {
+    "explanation": "HD 209458b also known as Osiris was the first exoplanet seen transiting its star",
+    "points": [
+      "First transiting exoplanet (1999)",
+      "First atmosphere detected (sodium, hydrogen escape)",
+      "Hot Jupiter with evaporating atmosphere – comet-like tail",
+      "Named Osiris – losing mass like mythological figure",
+      "Radius inflated due to heat"
+    ]
+  },
+  "TrES-1b": {
+    "explanation": "TrES-1b was the first exoplanet found using a small amateur-sized telescope network",
+    "points": [
+      "First planet discovered by Trans-atlantic Exoplanet Survey (2004)",
+      "Hot Jupiter with 3-day orbit",
+      "Demonstrated small telescopes could find planets",
+      "Pioneered wide-field transit surveys",
+      "Mass ~0.76 Jupiter masses"
+    ]
+  },
+  "HAT-P-1b": {
+    "explanation": "HAT-P-1b is a bloated hot Jupiter with an extremely low density for its size",
+    "points": [
+      "One of the most inflated hot Jupiters",
+      "Radius ~1.38 Jupiter radii, mass ~0.45 Jupiter masses",
+      "Very low density – ~0.35 g/cm³",
+      "Orbiting bright star – easy to study",
+      "Helped understand planet inflation mechanisms"
+    ]
+  },
+  "XO-1b": {
+    "explanation": "XO-1b is a hot Jupiter discovered using a small wide-field telescope in New Mexico",
+    "points": [
+      "Discovered by XO Project – small telescope in Hawaii/New Mexico",
+      "Hot Jupiter with 3.94-day orbit",
+      "Mass ~0.9 Jupiter masses",
+      "Bright host star – good for follow-up",
+      "Early amateur-professional collaboration success"
+    ]
+  },
+  "COROT-7b": {
+    "explanation": "CoRoT-7b was the first rocky exoplanet with a measured radius found outside our system",
+    "points": [
+      "First confirmed rocky exoplanet (2009)",
+      "Radius ~1.58× Earth",
+      "Very close orbit – 0.85-day period",
+      "Surface temperature ~1,800–2,600 °C",
+      "Likely lava world"
+    ]
+  },
+  "Kepler-10b": {
+    "explanation": "Kepler-10b was the first confirmed rocky planet found by the Kepler space telescope",
+    "points": [
+      "First rocky planet confirmed by Kepler (2011)",
+      "Radius ~1.47× Earth, mass ~3.3–5.8 Earth masses",
+      "Very short orbit – 0.84 days",
+      "Extreme dayside temperature ~1,400 °C",
+      "Helped validate Kepler's small-planet detections"
+    ]
+  },
+  "Kepler-11b": {
+    "explanation": "Kepler-11 has six transiting planets all crammed closer to their star than Earth is to the Sun",
+    "points": [
+      "First system with six transiting planets",
+      "All six planets orbit closer than Mercury",
+      "Very compact system – demonstrates planet migration",
+      "Includes small rocky planets and mini-Neptunes",
+      "Important for understanding multi-planet dynamics"
+    ]
+  },
+  "55 Cancri b": {
+    "explanation": "55 Cancri b was one of the earliest known exoplanets around a sun-like star",
+    "points": [
+      "One of the first hot Jupiters discovered (1996)",
+      "Mass ~0.83 Jupiter masses",
+      "Short orbit – 14.65 days",
+      "Part of one of the nearest multi-planet systems (~41 light-years)",
+      "Host star very bright – excellent for characterization"
+    ]
+  },
+  "Tau Bootis b": {
+    "explanation": "Tau Bootis b is a massive hot Jupiter orbiting very close to its bright host star",
+    "points": [
+      "Massive hot Jupiter ~5.9 Jupiter masses",
+      "Very short orbit – 3.31 days",
+      "Bright host star – early detection via radial velocity",
+      "Strongly irradiated – high temperature",
+      "Helped early understanding of hot Jupiter formation"
+    ]
+  },
+  "70 Virginis b": {
+    "explanation": "70 Virginis b was one of the first exoplanets found and initially called a Goldilocks planet",
+    "points": [
+      "One of the first exoplanets discovered (1996)",
+      "Mass ~7.4 Jupiter masses",
+      "Wide orbit ~0.48 AU – more temperate than hot Jupiters",
+      "Early candidate for habitable conditions (before better data)",
+      "Orbiting G-type star"
+    ]
+  },
+  "47 Ursae Majoris b": {
+    "explanation": "47 Ursae Majoris b was one of the first Jupiter analogs found in a wide stable orbit",
+    "points": [
+      "Jupiter-like planet in wide orbit ~2.1 AU",
+      "Mass ~2.5–4 Jupiter masses",
+      "Stable orbit around Sun-like star",
+      "Early example of Jupiter analog",
+      "Part of multi-planet system"
+    ]
+  },
+  "Rho Coronae Borealis b": {
+    "explanation": "Rho CrB b was notable as one of the first hot Jupiters discovered in the 1990s",
+    "points": [
+      "One of the first hot Jupiters (1997)",
+      "Mass ~1 Jupiter mass",
+      "Short orbit ~39.8 days",
+      "Orbiting bright G-type star",
+      "Helped establish hot Jupiter population"
+    ]
+  },
+  "Kepler-47c": {
+    "explanation": "Kepler-47c orbits two stars in a stable circumbinary orbit in the habitable zone",
+    "points": [
+      "First circumbinary planet in habitable zone",
+      "Gas giant ~4.6 Earth radii",
+      "Stable orbit around binary star pair",
+      "Receives Earth-like flux from two stars",
+      "Demonstrates habitable zone stability in binary systems"
+    ]
+  },
+  "GJ 504b": {
+    "explanation": "GJ 504b is a directly imaged pink-magenta gas giant larger than Jupiter",
+    "points": [
+      "One of the first directly imaged planets (2013)",
+      "Pink-magenta color – unusual for gas giants",
+      "Mass ~4–10 Jupiter masses",
+      "Very wide orbit ~44 AU",
+      "Still forming – young system"
+    ]
+  },
+  "MOA-2007-BLG-192b": {
+    "explanation": "This super Earth orbits a tiny brown dwarf star and was found by gravitational microlensing",
+    "points": [
+      "Super-Earth ~3.3 Earth masses",
+      "Orbits very low-mass brown dwarf / late M dwarf",
+      "Discovered via gravitational microlensing",
+      "Cold planet – far from host",
+      "Demonstrates microlensing sensitivity to low-mass hosts"
+    ]
+  },
+  "OGLE-2016-BLG-1195Lb": {
+    "explanation": "This is one of the coldest known rocky exoplanets orbiting far from its host star",
+    "points": [
+      "Earth-mass planet (~1.4 Earth masses)",
+      "Very cold – ~−223 °C (similar to Pluto)",
+      "Wide orbit ~2 AU around ultra-cool dwarf",
+      "Discovered via microlensing",
+      "One of the most distant and coldest rocky planets known"
+    ]
+  },
+  "PSO J318.5-22": {
+    "explanation": "PSO J318 is a rogue gas giant drifting alone without a star about 80 light-years away",
+    "points": [
+      "Rogue planet – no host star",
+      "Gas giant ~6 Jupiter masses",
+      "Very young – still glowing from formation heat",
+      "Temperature ~1,100 K",
+      "Drifting through space ~80 light-years away"
+    ]
+  },
+  "Oph 11b": {
+    "explanation": "Ophiuchus 11b is one of the youngest directly imaged planets still glowing from formation heat",
+    "points": [
+      "Very young gas giant (~1–3 million years old)",
+      "Still glowing strongly in infrared",
+      "Mass ~2–8 Jupiter masses",
+      "Wide orbit around brown dwarf pair",
+      "Helps understand early planet formation"
     ]
   }
 }

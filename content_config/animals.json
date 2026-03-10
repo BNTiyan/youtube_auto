@@ -1,406 +1,372 @@
 {
-  "animals": {
-    "items": [
-      {
-        "name": "Lion",
-        "fact": "Lions live in Africa and are called the King of the Jungle"
-      },
-      {
-        "name": "Elephant",
-        "fact": "Elephants are the largest land animals and have amazing memory"
-      },
-      {
-        "name": "Giraffe",
-        "fact": "Giraffes are the tallest animals with very long necks to reach trees"
-      },
-      {
-        "name": "Tiger",
-        "fact": "Tigers are the biggest wild cats and have beautiful stripes"
-      },
-      {
-        "name": "Dolphin",
-        "fact": "Dolphins are very smart and love to play in the ocean"
-      },
-      {
-        "name": "Penguin",
-        "fact": "Penguins cannot fly but they are amazing swimmers"
-      },
-      {
-        "name": "Panda",
-        "fact": "Giant Pandas eat bamboo and are very rare and special"
-      },
-      {
-        "name": "Kangaroo",
-        "fact": "Kangaroos carry their babies in a special pouch on their tummy"
-      },
-      {
-        "name": "Cheetah",
-        "fact": "Cheetahs are the fastest animals running at 75 miles per hour"
-      },
-      {
-        "name": "Parrot",
-        "fact": "Parrots are colorful birds that can learn to talk like humans"
-      },
-      {
-        "name": "Zebra",
-        "fact": "Every zebra has a unique stripe pattern just like a fingerprint"
-      },
-      {
-        "name": "Gorilla",
-        "fact": "Gorillas are the largest primates and share 98% DNA with humans"
-      },
-      {
-        "name": "Polar Bear",
-        "fact": "Polar bears have white fur and live on the Arctic ice"
-      },
-      {
-        "name": "Crocodile",
-        "fact": "Crocodiles are ancient reptiles that have been on Earth for millions of years"
-      },
-      {
-        "name": "Flamingo",
-        "fact": "Flamingos are pink because of the shrimp and algae they eat"
-      },
-      {
-        "name": "Hippopotamus",
-        "fact": "Hippos spend most of the day in water to stay cool and protected"
-      },
-      {
-        "name": "Koala",
-        "fact": "Koalas sleep up to 22 hours a day and eat eucalyptus leaves"
-      },
-      {
-        "name": "Chimpanzee",
-        "fact": "Chimpanzees use tools like sticks and rocks to find and crack food"
-      },
-      {
-        "name": "Wolf",
-        "fact": "Wolves live in family groups called packs and howl to communicate"
-      },
-      {
-        "name": "Shark",
-        "fact": "Sharks have been swimming in the oceans for over 400 million years"
-      },
-      {
-        "name": "Octopus",
-        "fact": "Octopuses have three hearts and can change color in an instant"
-      },
-      {
-        "name": "Eagle",
-        "fact": "Eagles have incredibly sharp eyesight and can spot prey from miles away"
-      },
-      {
-        "name": "Peacock",
-        "fact": "Male peacocks have stunning blue and green feathers they fan out to impress females"
-      },
-      {
-        "name": "Rhinoceros",
-        "fact": "Rhinos have thick skin and a large horn made of keratin on their nose"
-      },
-      {
-        "name": "Chameleon",
-        "fact": "Chameleons can change their skin color to blend in with their surroundings"
-      },
-      {
-        "name": "Whale",
-        "fact": "Blue whales are the largest animals ever known to live on Earth"
-      },
-      {
-        "name": "Bat",
-        "fact": "Bats are the only mammals that can truly fly and use echolocation"
-      },
-      {
-        "name": "Sloth",
-        "fact": "Sloths move so slowly that algae grows on their fur"
-      },
-      {
-        "name": "Meerkat",
-        "fact": "Meerkats take turns standing guard to watch for danger in the desert"
-      },
-      {
-        "name": "Porcupine",
-        "fact": "Porcupines have sharp quills that protect them from predators"
-      },
-      {
-        "name": "Jaguar",
-        "fact": "Jaguars are powerful swimmers and love to hunt near rivers"
-      },
-      {
-        "name": "Ostrich",
-        "fact": "Ostriches are the largest birds in the world but cannot fly"
-      },
-      {
-        "name": "Camel",
-        "fact": "Camels store fat in their humps to survive long trips in the desert"
-      },
-      {
-        "name": "Hedgehog",
-        "fact": "Hedgehogs roll into a spiky ball when they feel threatened"
-      },
-      {
-        "name": "Sea Turtle",
-        "fact": "Sea turtles return to the same beach where they were born to lay eggs"
-      },
-      {
-        "name": "Orca",
-        "fact": "Orcas are also called killer whales and are highly intelligent hunters"
-      },
-      {
-        "name": "Lemur",
-        "fact": "Lemurs are found only on the island of Madagascar and love sunbathing"
-      },
-      {
-        "name": "Crab",
-        "fact": "Crabs walk sideways and have hard shells called exoskeletons"
-      },
-      {
-        "name": "Raccoon",
-        "fact": "Raccoons have very dexterous paws and often wash their food before eating"
-      },
-      {
-        "name": "Fox",
-        "fact": "Foxes are clever animals that can adapt to many different environments"
-      },
-      {
-        "name": "Manatee",
-        "fact": "Manatees are gentle sea mammals sometimes called sea cows"
-      },
-      {
-        "name": "Toucan",
-        "fact": "Toucans have enormous colorful beaks that help them reach fruit"
-      },
-      {
-        "name": "Wombat",
-        "fact": "Wombats produce cube-shaped droppings which is unique in the animal kingdom"
-      },
-      {
-        "name": "Lynx",
-        "fact": "Lynxes have thick fur and large padded paws that act like snowshoes"
-      },
-      {
-        "name": "Manta Ray",
-        "fact": "Manta rays glide gracefully through the ocean like underwater birds"
-      },
-      {
-        "name": "Platypus",
-        "fact": "The platypus is one of the few mammals that lays eggs"
-      },
-      {
-        "name": "Snow Leopard",
-        "fact": "Snow leopards live high in the mountains and have very long fluffy tails"
-      },
-      {
-        "name": "Bison",
-        "fact": "Bison are the largest land animals in North America and can sprint fast"
-      },
-      {
-        "name": "Firefly",
-        "fact": "Fireflies produce their own light through a chemical reaction in their bodies"
-      },
-      {
-        "name": "Narwhal",
-        "fact": "Narwhals have a long spiral tusk that can grow over 10 feet long"
-      },
-      {
-        "name": "Axolotl",
-        "fact": "Axolotls can regrow lost limbs, gills, and even parts of their hearts"
-      },
-      {
-        "name": "Mandrill",
-        "fact": "Mandrills are the most colorful mammals with bright red and blue faces"
-      },
-      {
-        "name": "Stingray",
-        "fact": "Stingrays glide along the ocean floor and have a venomous tail spine"
-      },
-      {
-        "name": "Capybara",
-        "fact": "Capybaras are the world's largest rodents and love to swim"
-      },
-      {
-        "name": "Caracal",
-        "fact": "Caracals have tall pointed ears with black tufts on the tips"
-      },
-      {
-        "name": "Pangolin",
-        "fact": "Pangolins are covered in overlapping scales and roll into a ball for defense"
-      },
-      {
-        "name": "Moose",
-        "fact": "Moose are the largest members of the deer family with massive antlers"
-      },
-      {
-        "name": "Puffin",
-        "fact": "Puffins can flap their wings up to 400 times per minute to fly"
-      },
-      {
-        "name": "Armadillo",
-        "fact": "Armadillos have a hard bony shell and can roll into a protective ball"
-      },
-      {
-        "name": "Tasmanian Devil",
-        "fact": "Tasmanian Devils have one of the strongest bites of any mammal their size"
-      },
-      {
-        "name": "Quokka",
-        "fact": "Quokkas are small marsupials known as the happiest animals in the world"
-      },
-      {
-        "name": "Binturong",
-        "fact": "Binturongs smell like popcorn due to a chemical they produce"
-      },
-      {
-        "name": "Sunfish",
-        "fact": "The ocean sunfish is the world's heaviest bony fish, weighing over a ton"
-      },
-      {
-        "name": "Albatross",
-        "fact": "Albatrosses can glide for thousands of miles without flapping their wings"
-      },
-      {
-        "name": "Anaconda",
-        "fact": "Anacondas are the world's heaviest snakes and live in South American swamps"
-      },
-      {
-        "name": "Frog",
-        "fact": "Frogs absorb water through their skin instead of drinking it"
-      },
-      {
-        "name": "Jellyfish",
-        "fact": "Jellyfish have no brain, heart, or bones but have survived millions of years"
-      },
-      {
-        "name": "Hummingbird",
-        "fact": "Hummingbirds can flap their wings up to 80 times per second"
-      },
-      {
-        "name": "Mongoose",
-        "fact": "Mongooses are famous for being immune to snake venom"
-      },
-      {
-        "name": "Bonobo",
-        "fact": "Bonobos are peaceful primates that share nearly all their DNA with humans"
-      },
-      {
-        "name": "Starfish",
-        "fact": "Starfish can regrow lost arms and have no brain or blood"
-      },
-      {
-        "name": "Harpy Eagle",
-        "fact": "Harpy eagles are the most powerful eagles with talons the size of bear claws"
-      },
-      {
-        "name": "Kiwi Bird",
-        "fact": "The kiwi bird is the only bird with nostrils at the tip of its beak"
-      },
-      {
-        "name": "Coyote",
-        "fact": "Coyotes are adaptable wild dogs found across North America"
-      },
-      {
-        "name": "Lobster",
-        "fact": "Lobsters can live over 100 years and do not naturally age biologically"
-      },
-      {
-        "name": "Dung Beetle",
-        "fact": "Dung beetles navigate using the Milky Way and can roll balls 10 times heavier than themselves"
-      },
-      {
-        "name": "Honey Badger",
-        "fact": "Honey badgers are fearless and can fight off animals much larger than themselves"
-      },
-      {
-        "name": "Flying Squirrel",
-        "fact": "Flying squirrels glide through the air using flaps of skin between their legs"
-      },
-      {
-        "name": "Electric Eel",
-        "fact": "Electric eels can generate up to 600 volts of electricity"
-      },
-      {
-        "name": "Tapir",
-        "fact": "Tapirs have a flexible snout they use to grab leaves and branches"
-      },
-      {
-        "name": "Ibis",
-        "fact": "The sacred ibis was worshipped in ancient Egypt as a symbol of wisdom"
-      },
-      {
-        "name": "Walrus",
-        "fact": "Walruses use their tusks to pull themselves up onto ice floes"
-      },
-      {
-        "name": "Mantis Shrimp",
-        "fact": "Mantis shrimp can punch with the force of a bullet and see 16 types of color"
-      },
-      {
-        "name": "Okapi",
-        "fact": "Okapis look like zebra-giraffe hybrids and are the giraffe's only living relative"
-      },
-      {
-        "name": "Proboscis Monkey",
-        "fact": "Male proboscis monkeys have enormous noses that help attract mates"
-      },
-      {
-        "name": "Surinam Toad",
-        "fact": "Surinam toads carry eggs embedded in the skin of their back"
-      },
-      {
-        "name": "Aye-Aye",
-        "fact": "Aye-ayes are nocturnal primates with an extremely long thin middle finger to find grubs"
-      },
-      {
-        "name": "Saiga Antelope",
-        "fact": "Saiga antelopes have unusual bulbous noses that filter and warm cold air"
-      },
-      {
-        "name": "Blobfish",
-        "fact": "Blobfish look squishy at the surface but are perfectly shaped for deep-sea pressure"
-      },
-      {
-        "name": "Secretary Bird",
-        "fact": "Secretary birds are tall eagles that hunt by stomping on snakes with their powerful feet"
-      },
-      {
-        "name": "Gharial",
-        "fact": "Gharials have long narrow snouts lined with over 100 teeth for catching fish"
-      },
-      {
-        "name": "Tardigrade",
-        "fact": "Tardigrades are microscopic animals that can survive in outer space"
-      },
-      {
-        "name": "Shoebill",
-        "fact": "Shoebills have enormous shoe-shaped bills and stare without blinking"
-      },
-      {
-        "name": "Komodo Dragon",
-        "fact": "Komodo dragons are the world's largest lizards and can run at 12 mph"
-      },
-      {
-        "name": "Vampire Bat",
-        "fact": "Vampire bats are the only mammals that feed entirely on blood"
-      },
-      {
-        "name": "African Wild Dog",
-        "fact": "African wild dogs have a nearly 80% hunting success rate, the highest of any predator"
-      },
-      {
-        "name": "Blue-Ringed Octopus",
-        "fact": "The tiny blue-ringed octopus carries enough venom to kill 26 adult humans"
-      },
-      {
-        "name": "Wolverine",
-        "fact": "Wolverines are pound-for-pound one of the most ferocious animals in the wild"
-      },
-      {
-        "name": "Musk Ox",
-        "fact": "Musk oxen have shaggy coats so thick they can survive Arctic temperatures of minus 40 degrees"
-      },
-      {
-        "name": "Aardvark",
-        "fact": "Aardvarks have sticky tongues and eat thousands of termites and ants each night"
-      }
+  "Lion": {
+    "explanation": "Lions live in Africa and are called the King of the Jungle",
+    "points": [
+      "Only truly social big cat living in prides with complex social structures",
+      "Males have distinctive manes that signal health and strength",
+      "Apex predator known for cooperative hunting strategies",
+      "Symbol of courage and royalty in many cultures worldwide",
+      "Facing population decline due to habitat loss and human conflict"
+    ]
+  },
+  "Elephant": {
+    "explanation": "Elephants are the largest land animals and have amazing memory",
+    "points": [
+      "African and Asian species differ in size, ears, and tusks",
+      "Highly intelligent with strong family bonds led by matriarchs",
+      "Use infrasound for long-distance communication",
+      "Consume up to 300 pounds of food per day",
+      "Keystone species that shape ecosystems through feeding and digging"
+    ]
+  },
+  "Giraffe": {
+    "explanation": "Giraffes are the tallest animals with very long necks to reach trees",
+    "points": [
+      "Long neck contains only seven vertebrae, same as humans",
+      "Have the highest blood pressure of any animal to reach brain",
+      "Sleep only 10-30 minutes per day in short naps",
+      "Tongues up to 18-20 inches long and prehensile",
+      "Vulnerable species due to habitat loss and poaching"
+    ]
+  },
+  "Tiger": {
+    "explanation": "Tigers are the biggest wild cats and have beautiful stripes",
+    "points": [
+      "Each tiger's stripe pattern is unique like a fingerprint",
+      "Powerful solitary hunters capable of taking large prey",
+      "Subspecies include Bengal, Siberian, and Sumatran",
+      "Excellent swimmers unlike most cats",
+      "Endangered with fewer than 4,000 remaining in the wild"
+    ]
+  },
+  "Dolphin": {
+    "explanation": "Dolphins are very smart and love to play in the ocean",
+    "points": [
+      "Highly intelligent with large brains and complex social behaviors",
+      "Use echolocation to navigate and hunt in dark waters",
+      "Known for acrobatic leaps and playful interactions with humans",
+      "Live in pods with strong family bonds",
+      "Some species show self-awareness via mirror tests"
+    ]
+  },
+  "Penguin": {
+    "explanation": "Penguins cannot fly but they are amazing swimmers",
+    "points": [
+      "Wings evolved into flippers for underwater propulsion",
+      "Most species live in Southern Hemisphere, not just Antarctica",
+      "Emperor penguins endure extreme cold to breed",
+      "Dive to depths over 1,800 feet in some species",
+      "Excellent at tobogganing on ice for fast travel"
+    ]
+  },
+  "Panda": {
+    "explanation": "Giant Pandas eat bamboo and are very rare and special",
+    "points": [
+      "Specialized wrist bone acts as a 'thumb' for grasping bamboo",
+      "Eat up to 40 pounds of bamboo daily due to low nutrition",
+      "Solitary except during brief mating season",
+      "Iconic black-and-white coloration provides camouflage",
+      "Vulnerable species with conservation success in recent years"
+    ]
+  },
+  "Kangaroo": {
+    "explanation": "Kangaroos carry their babies in a special pouch on their tummy",
+    "points": [
+      "Powerful hind legs enable hopping up to 35 mph",
+      "Joeys are born very underdeveloped and crawl to pouch",
+      "Can pause pregnancy development until conditions improve",
+      "Large species like red kangaroo are the biggest marsupials",
+      "Use tail for balance and powerful kicks in defense"
+    ]
+  },
+  "Cheetah": {
+    "explanation": "Cheetahs are the fastest animals running at 75 miles per hour",
+    "points": [
+      "Acceleration from 0-60 mph in under 3 seconds",
+      "Distinctive black tear marks reduce sun glare",
+      "Hunt during day using speed and quick bursts",
+      "Semi-retractable claws provide traction like running spikes",
+      "Vulnerable due to low genetic diversity"
+    ]
+  },
+  "Parrot": {
+    "explanation": "Parrots are colorful birds that can learn to talk like humans",
+    "points": [
+      "Excellent mimics capable of learning hundreds of words",
+      "Zygodactyl feet with two toes forward and two backward",
+      "Highly intelligent with problem-solving abilities",
+      "Long lifespans often 50+ years in larger species",
+      "Vibrant feathers used in courtship displays"
+    ]
+  },
+  "Zebra": {
+    "explanation": "Every zebra has a unique stripe pattern just like a fingerprint",
+    "points": [
+      "Stripes may serve for camouflage, thermoregulation, or insect deterrence",
+      "Live in small harems led by a dominant stallion",
+      "Excellent eyesight and strong kicks for defense",
+      "Highly social with complex communication",
+      "Three main species: plains, mountain, and Grevy's"
+    ]
+  },
+  "Gorilla": {
+    "explanation": "Gorillas are the largest primates and share 98% DNA with humans",
+    "points": [
+      "Silverback males lead family groups and protect them",
+      "Primarily herbivorous with massive strength",
+      "Use tools and show emotional intelligence",
+      "Mountain and lowland subspecies differ in habitat",
+      "Critically endangered due to poaching and habitat loss"
+    ]
+  },
+  "Polar Bear": {
+    "explanation": "Polar bears have white fur and live on the Arctic ice",
+    "points": [
+      "Fur appears white but is actually translucent",
+      "Largest land carnivore with powerful swimming ability",
+      "Thick blubber layer for insulation and energy storage",
+      "Hunt primarily seals from sea ice platforms",
+      "Vulnerable to climate change and melting Arctic ice"
+    ]
+  },
+  "Crocodile": {
+    "explanation": "Crocodiles are ancient reptiles that have been on Earth for millions of years",
+    "points": [
+      "Powerful jaws with bite force over 3,700 pounds",
+      "Excellent parents that guard nests and carry hatchlings",
+      "Can live 70-100 years in the wild",
+      "Saltwater species can tolerate ocean travel",
+      "Apex predators in many aquatic ecosystems"
+    ]
+  },
+  "Flamingo": {
+    "explanation": "Flamingos are pink because of the shrimp and algae they eat",
+    "points": [
+      "Filter feeders using specialized beaks to strain food",
+      "Stand on one leg to conserve body heat",
+      "Live in large colonies for protection and breeding",
+      "Chicks are born gray and gain color from diet",
+      "Several species found in saline lakes worldwide"
+    ]
+  },
+  "Hippopotamus": {
+    "explanation": "Hippos spend most of the day in water to stay cool and protected",
+    "points": [
+      "Semi-aquatic with eyes, ears, and nostrils on top of head",
+      "Produce red 'sweat' as natural sunscreen",
+      "Highly territorial males defend stretches of river",
+      "Can run up to 19 mph on land despite size",
+      "One of Africa's most dangerous animals"
+    ]
+  },
+  "Koala": {
+    "explanation": "Koalas sleep up to 22 hours a day and eat eucalyptus leaves",
+    "points": [
+      "Specialized digestive system handles toxic eucalyptus",
+      "Fingerprints almost identical to humans",
+      "Marsupial with pouch facing backward",
+      "Spend most time in eucalyptus trees",
+      "Vulnerable due to habitat loss and disease"
+    ]
+  },
+  "Chimpanzee": {
+    "explanation": "Chimpanzees use tools like sticks and rocks to find and crack food",
+    "points": [
+      "Share about 98.7% DNA with humans",
+      "Live in complex social groups with hierarchies",
+      "Use and modify tools for hunting and foraging",
+      "Capable of learning sign language",
+      "Endangered due to habitat destruction and bushmeat trade"
+    ]
+  },
+  "Wolf": {
+    "explanation": "Wolves live in family groups called packs and howl to communicate",
+    "points": [
+      "Highly social with strong family bonds",
+      "Howling maintains territory and pack cohesion",
+      "Apex predators that hunt in coordinated packs",
+      "Gray wolf is most widespread large wild land mammal",
+      "Important for ecosystem balance as keystone species"
+    ]
+  },
+  "Shark": {
+    "explanation": "Sharks have been swimming in the oceans for over 400 million years",
+    "points": [
+      "Cartilaginous skeletons instead of bone",
+      "Multiple rows of replaceable teeth",
+      "Highly efficient senses including electroreception",
+      "Some species give live birth, others lay eggs",
+      "Many species threatened by overfishing"
+    ]
+  },
+  "Octopus": {
+    "explanation": "Octopuses have three hearts and can change color in an instant",
+    "points": [
+      "Blue blood due to copper-based hemocyanin",
+      "Highly intelligent with problem-solving and tool use",
+      "Camouflage via chromatophores in skin",
+      "Eight arms with suckers and taste sensors",
+      "Short lifespan of 1-5 years for most species"
+    ]
+  },
+  "Eagle": {
+    "explanation": "Eagles have incredibly sharp eyesight and can spot prey from miles away",
+    "points": [
+      "Vision up to 8 times sharper than humans",
+      "Powerful talons and hooked beaks for hunting",
+      "Build massive nests reused for years",
+      "Bald eagle is national symbol of the United States",
+      "Apex avian predators in many ecosystems"
+    ]
+  },
+  "Peacock": {
+    "explanation": "Male peacocks have stunning blue and green feathers they fan out to impress females",
+    "points": [
+      "Elaborate tail display called a train",
+      "Females (peahens) choose mates based on display quality",
+      "Iridescent feathers created by structural coloration",
+      "Indian peafowl most common species",
+      "Symbol of beauty and immortality in many cultures"
+    ]
+  },
+  "Rhinoceros": {
+    "explanation": "Rhinos have thick skin and a large horn made of keratin on their nose",
+    "points": [
+      "Horn made of same material as human fingernails",
+      "Poor eyesight but excellent hearing and smell",
+      "Five surviving species, three critically endangered",
+      "Charge at up to 30 mph when threatened",
+      "Poaching for horns remains major threat"
+    ]
+  },
+  "Chameleon": {
+    "explanation": "Chameleons can change their skin color to blend in with their surroundings",
+    "points": [
+      "Color change for communication, temperature, and mood",
+      "Independently moving eyes for 360° vision",
+      "Long sticky tongue can be twice body length",
+      "Many species live in trees with prehensile tail",
+      "Some can shoot tongue faster than human blink"
+    ]
+  },
+  "Whale": {
+    "explanation": "Blue whales are the largest animals ever known to live on Earth",
+    "points": [
+      "Blue whale heart size of small car",
+      "Can produce sounds louder than jet engine",
+      "Filter feeders consuming tons of krill daily",
+      "Migrate thousands of miles between feeding and breeding grounds",
+      "Many species recovering after whaling ban"
+    ]
+  },
+  "Bat": {
+    "explanation": "Bats are the only mammals that can truly fly and use echolocation",
+    "points": [
+      "Echolocation allows navigation in complete darkness",
+      "Consume vast numbers of insects nightly",
+      "Some species pollinate plants or disperse seeds",
+      "Vampire bats feed on blood with anticoagulant saliva",
+      "Important for pest control and ecosystems"
+    ]
+  },
+  "Sloth": {
+    "explanation": "Sloths move so slowly that algae grows on their fur",
+    "points": [
+      "Spend most life hanging upside down in trees",
+      "Algae provides camouflage and nutrients",
+      "Extremely slow metabolism and low body temperature",
+      "Come down to ground only once a week to defecate",
+      "Three-toed and two-toed species differ significantly"
+    ]
+  },
+  "Meerkat": {
+    "explanation": "Meerkats take turns standing guard to watch for danger in the desert",
+    "points": [
+      "Highly social living in mobs of up to 50",
+      "Sentinels stand tall to scan for predators",
+      "Teach young foraging and hunting skills",
+      "Immune to certain snake venoms",
+      "Thrive in harsh Kalahari Desert environment"
+    ]
+  },
+  "Porcupine": {
+    "explanation": "Porcupines have sharp quills that protect them from predators",
+    "points": [
+      "Quills are modified hairs with barbed tips",
+      "Cannot shoot quills but they detach easily",
+      "Nocturnal herbivores with strong chewing ability",
+      "Climb trees and swim well",
+      "Different species in Africa, Asia, and Americas"
+    ]
+  },
+  "Jaguar": {
+    "explanation": "Jaguars are powerful swimmers and love to hunt near rivers",
+    "points": [
+      "Strongest bite relative to size of any big cat",
+      "Unique spotted coat with rosettes",
+      "Excellent climbers and swimmers",
+      "Hunt caimans, capybaras, and fish",
+      "Near threatened with shrinking habitat"
+    ]
+  },
+  "Ostrich": {
+    "explanation": "Ostriches are the largest birds in the world but cannot fly",
+    "points": [
+      "Fastest bird on land reaching 43 mph",
+      "Largest eyes of any land animal",
+      "Males incubate eggs at night",
+      "Powerful kicks used in defense",
+      "Double-winged structure for balance"
+    ]
+  },
+  "Camel": {
+    "explanation": "Camels store fat in their humps to survive long trips in the desert",
+    "points": [
+      "Humps store fat, not water",
+      "Can drink 30 gallons in minutes",
+      "Long eyelashes and nostrils that close",
+      "Bactrian (two-hump) and dromedary (one-hump) species",
+      "Well adapted to extreme desert conditions"
+    ]
+  },
+  "Hedgehog": {
+    "explanation": "Hedgehogs roll into a spiky ball when they feel threatened",
+    "points": [
+      "Nocturnal insectivores with keen sense of smell",
+      "Spines are modified hairs",
+      "Hibernation in colder climates",
+      "Popular in gardens for pest control",
+      "Different species in Europe, Africa, and Asia"
+    ]
+  },
+  "Sea Turtle": {
+    "explanation": "Sea turtles return to the same beach where they were born to lay eggs",
+    "points": [
+      "Navigate using magnetic fields",
+      "Seven living species worldwide",
+      "Females lay 100+ eggs per clutch",
+      "Long migrations between feeding and nesting grounds",
+      "Many species endangered due to bycatch and pollution"
+    ]
+  },
+  "Orca": {
+    "explanation": "Orcas are also called killer whales and are highly intelligent hunters",
+    "points": [
+      "Largest member of dolphin family",
+      "Distinct pods with unique dialects",
+      "Apex predators with diverse hunting techniques",
+      "Some ecotypes specialize in fish or marine mammals",
+      "Highly social with strong family bonds"
+    ]
+  },
+  "Lemur": {
+    "explanation": "Lemurs are found only on the island of Madagascar and love sunbathing",
+    "points": [
+      "Primitive primates with wet noses",
+      "Ring-tailed lemurs most recognizable species",
+      "Sun worship behavior in morning",
+      "Highly diverse with over 100 species",
+      "Many critically endangered due to habitat loss"
     ]
   }
 }

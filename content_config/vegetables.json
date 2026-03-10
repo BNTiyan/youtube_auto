@@ -1,406 +1,1002 @@
 {
-  "vegetables": {
-    "items": [
-      {
-        "name": "Carrot",
-        "fact": "Carrots are orange and help make your eyes strong and healthy"
-      },
-      {
-        "name": "Broccoli",
-        "fact": "Broccoli looks like tiny trees and is packed with vitamins"
-      },
-      {
-        "name": "Tomato",
-        "fact": "Tomatoes are actually a fruit but we eat them like a vegetable"
-      },
-      {
-        "name": "Potato",
-        "fact": "Potatoes grow underground and can be made into many yummy dishes"
-      },
-      {
-        "name": "Corn",
-        "fact": "Each corn cob has hundreds of tiny yellow kernels on it"
-      },
-      {
-        "name": "Spinach",
-        "fact": "Spinach makes you strong and healthy just like Popeye the sailor"
-      },
-      {
-        "name": "Pea",
-        "fact": "Tiny green peas grow snugly inside a long green pod"
-      },
-      {
-        "name": "Cucumber",
-        "fact": "Cucumbers are cool and refreshing and mostly made of water"
-      },
-      {
-        "name": "Pepper",
-        "fact": "Peppers come in red, yellow, orange, and green colors"
-      },
-      {
-        "name": "Pumpkin",
-        "fact": "Pumpkins are big orange vegetables used to make jack-o-lanterns"
-      },
-      {
-        "name": "Onion",
-        "fact": "Onions make your eyes water when you cut them due to a special chemical"
-      },
-      {
-        "name": "Garlic",
-        "fact": "Garlic is used in cooking all over the world and is good for your health"
-      },
-      {
-        "name": "Cauliflower",
-        "fact": "Cauliflower looks like a white version of broccoli and is very nutritious"
-      },
-      {
-        "name": "Cabbage",
-        "fact": "Cabbages are round leafy vegetables that can be purple or green"
-      },
-      {
-        "name": "Eggplant",
-        "fact": "Eggplants are shiny purple vegetables also known as aubergine"
-      },
-      {
-        "name": "Zucchini",
-        "fact": "Zucchinis are green summer squashes that grow very quickly"
-      },
-      {
-        "name": "Asparagus",
-        "fact": "Asparagus grows as tall spears and is one of the first vegetables to grow in spring"
-      },
-      {
-        "name": "Celery",
-        "fact": "Celery makes a crunchy snack and is almost all water and fiber"
-      },
-      {
-        "name": "Radish",
-        "fact": "Radishes are small spicy root vegetables that can be red or white"
-      },
-      {
-        "name": "Beetroot",
-        "fact": "Beetroot turns your hands and tongue a bright red or purple color"
-      },
-      {
-        "name": "Sweet Potato",
-        "fact": "Sweet potatoes are orange inside and packed with vitamins and nutrients"
-      },
-      {
-        "name": "Artichoke",
-        "fact": "The artichoke is actually a flower bud that we eat before it blooms"
-      },
-      {
-        "name": "Leek",
-        "fact": "Leeks look like giant green onions and taste mild and sweet when cooked"
-      },
-      {
-        "name": "Kale",
-        "fact": "Kale is one of the most nutritious leafy green vegetables you can eat"
-      },
-      {
-        "name": "Brussels Sprout",
-        "fact": "Brussels sprouts look like tiny cabbages and grow along a long thick stalk"
-      },
-      {
-        "name": "Turnip",
-        "fact": "Turnips are round white root vegetables with a slightly peppery taste"
-      },
-      {
-        "name": "Parsnip",
-        "fact": "Parsnips look like white carrots and taste sweet and nutty when roasted"
-      },
-      {
-        "name": "Fennel",
-        "fact": "Fennel has a mild licorice flavor and every part of it can be eaten"
-      },
-      {
-        "name": "Bok Choy",
-        "fact": "Bok choy is a Chinese cabbage with crunchy white stems and tender green leaves"
-      },
-      {
-        "name": "Kohlrabi",
-        "fact": "Kohlrabi looks like a small alien spaceship and tastes like mild broccoli"
-      },
-      {
-        "name": "Watercress",
-        "fact": "Watercress grows in fresh water streams and is one of the oldest eaten leaf vegetables"
-      },
-      {
-        "name": "Arugula",
-        "fact": "Arugula has a peppery spicy taste and is popular in salads"
-      },
-      {
-        "name": "Swiss Chard",
-        "fact": "Swiss chard has dark green leaves with bright red, yellow, or white stems"
-      },
-      {
-        "name": "Collard Greens",
-        "fact": "Collard greens are a staple of Southern cooking and very rich in calcium"
-      },
-      {
-        "name": "Mustard Greens",
-        "fact": "Mustard greens taste spicy and peppery and are common in Asian cuisine"
-      },
-      {
-        "name": "Okra",
-        "fact": "Okra is a green pod vegetable that gets sticky when cooked, great for thickening soups"
-      },
-      {
-        "name": "Bean Sprout",
-        "fact": "Bean sprouts are tiny germinated beans crunchy and fresh in stir-fries"
-      },
-      {
-        "name": "Snow Pea",
-        "fact": "Snow peas are flat pods where you eat the whole pod crunchy and sweet"
-      },
-      {
-        "name": "Green Bean",
-        "fact": "Green beans are long pods picked young and eaten whole cooked or raw"
-      },
-      {
-        "name": "Butternut Squash",
-        "fact": "Butternut squash has a sweet nutty flavor and turns bright orange when ripe"
-      },
-      {
-        "name": "Acorn Squash",
-        "fact": "Acorn squash is shaped like an acorn and has sweet orange flesh"
-      },
-      {
-        "name": "Delicata Squash",
-        "fact": "Delicata squash has cream and green striped skin that is edible when cooked"
-      },
-      {
-        "name": "Romanesco",
-        "fact": "Romanesco is a striking bright green vegetable that forms a perfect natural fractal pattern"
-      },
-      {
-        "name": "Sunchoke",
-        "fact": "Sunchokes are also called Jerusalem artichokes and taste sweet and nutty"
-      },
-      {
-        "name": "Taro",
-        "fact": "Taro is a starchy root vegetable used in Hawaiian poi and Asian cooking"
-      },
-      {
-        "name": "Jicama",
-        "fact": "Jicama is a crunchy white root vegetable that tastes like a cross between apple and potato"
-      },
-      {
-        "name": "Water Chestnut",
-        "fact": "Water chestnuts are crunchy aquatic vegetables that stay crispy even when cooked"
-      },
-      {
-        "name": "Lotus Root",
-        "fact": "Lotus root has a beautiful lace pattern when sliced and is crunchy to eat"
-      },
-      {
-        "name": "Daikon",
-        "fact": "Daikon is a giant white Japanese radish with a mild flavor"
-      },
-      {
-        "name": "Celeriac",
-        "fact": "Celeriac is the root of the celery plant with a mild celery-like flavor"
-      },
-      {
-        "name": "Samphire",
-        "fact": "Samphire is a crunchy sea vegetable that naturally tastes salty"
-      },
-      {
-        "name": "Dandelion Greens",
-        "fact": "Dandelion greens are edible and packed with more nutrients than many garden vegetables"
-      },
-      {
-        "name": "Nettles",
-        "fact": "Stinging nettles sting when raw but lose their sting completely when cooked"
-      },
-      {
-        "name": "Purslane",
-        "fact": "Purslane is a common weed that is actually highly nutritious and edible"
-      },
-      {
-        "name": "Sorrel",
-        "fact": "Sorrel has a sour lemony taste because it contains oxalic acid"
-      },
-      {
-        "name": "Pak Choi",
-        "fact": "Pak choi is a tender Asian green great for quick stir-frying"
-      },
-      {
-        "name": "Enoki Mushroom",
-        "fact": "Enoki mushrooms are long thin white mushrooms with tiny caps"
-      },
-      {
-        "name": "Shiitake",
-        "fact": "Shiitake mushrooms have a rich savory flavor and boost the immune system"
-      },
-      {
-        "name": "Portobello",
-        "fact": "Portobello mushrooms are large enough to grill like a burger patty"
-      },
-      {
-        "name": "Oyster Mushroom",
-        "fact": "Oyster mushrooms grow in fan-shaped clusters and have a delicate seafood-like taste"
-      },
-      {
-        "name": "Truffle",
-        "fact": "Truffles are rare underground fungi worth more than gold by weight"
-      },
-      {
-        "name": "Chive",
-        "fact": "Chives are the smallest members of the onion family used as a fresh herb garnish"
-      },
-      {
-        "name": "Shallot",
-        "fact": "Shallots taste milder and sweeter than onions and are popular in French cooking"
-      },
-      {
-        "name": "Spring Onion",
-        "fact": "Spring onions are young onions harvested before the bulb fully forms"
-      },
-      {
-        "name": "Rapini",
-        "fact": "Rapini or broccoli rabe has a pleasantly bitter taste popular in Italian cuisine"
-      },
-      {
-        "name": "Fiddlehead Fern",
-        "fact": "Fiddlehead ferns are young coiled fern fronds harvested in spring"
-      },
-      {
-        "name": "Bamboo Shoot",
-        "fact": "Bamboo shoots are young bamboo sprouts eaten as a crunchy vegetable in Asia"
-      },
-      {
-        "name": "Galangal",
-        "fact": "Galangal looks like ginger but tastes sharper and more piney"
-      },
-      {
-        "name": "Turmeric",
-        "fact": "Turmeric is a bright yellow root that stains everything it touches and is very healthy"
-      },
-      {
-        "name": "Lemongrass",
-        "fact": "Lemongrass is a tropical grass that smells and tastes like fresh lemon"
-      },
-      {
-        "name": "Bitter Melon",
-        "fact": "Bitter melon is a bumpy green vegetable that tastes very bitter but is medicinal"
-      },
-      {
-        "name": "Moringa",
-        "fact": "Moringa leaves are called miracle leaves because they are packed with nutrients"
-      },
-      {
-        "name": "Chayote",
-        "fact": "Chayote is a pear-shaped green vegetable with a crunchy mild flavor"
-      },
-      {
-        "name": "Plantain",
-        "fact": "Plantains look like bananas but are starchy and eaten cooked not raw"
-      },
-      {
-        "name": "Yam",
-        "fact": "True yams can grow over a meter long and are an important food in West Africa"
-      },
-      {
-        "name": "Cassava",
-        "fact": "Cassava is a starchy root that is the main ingredient in tapioca"
-      },
-      {
-        "name": "Breadfruit",
-        "fact": "Breadfruit is a starchy tropical vegetable that can replace bread and potatoes"
-      },
-      {
-        "name": "Nopales",
-        "fact": "Nopales are the edible pads of the prickly pear cactus popular in Mexico"
-      },
-      {
-        "name": "Calabash",
-        "fact": "Calabash is a gourd used as both a vegetable and a natural container"
-      },
-      {
-        "name": "Malanga",
-        "fact": "Malanga is a tropical root vegetable with a nutty earthy flavor"
-      },
-      {
-        "name": "Amaranth Leaves",
-        "fact": "Amaranth leaves are edible greens from the same plant that produces amaranth grain"
-      },
-      {
-        "name": "Kabocha",
-        "fact": "Kabocha is a Japanese pumpkin with green skin and very sweet dense flesh"
-      },
-      {
-        "name": "Yard Long Bean",
-        "fact": "Yard long beans can actually grow up to 18 inches in length"
-      },
-      {
-        "name": "Winged Bean",
-        "fact": "The winged bean has four frilly wings along its pod and is entirely edible"
-      },
-      {
-        "name": "Tiger Nut",
-        "fact": "Tiger nuts are not nuts but tiny root tubers that are sweet and crunchy"
-      },
-      {
-        "name": "Chinese Broccoli",
-        "fact": "Chinese broccoli has thick stems and bitter flat leaves popular in Asian cooking"
-      },
-      {
-        "name": "Sea Beans",
-        "fact": "Sea beans grow near the ocean and taste naturally salty without adding salt"
-      },
-      {
-        "name": "Ground Cherry",
-        "fact": "Ground cherries are small yellow fruits inside papery husks with a sweet pineapple taste"
-      },
-      {
-        "name": "Romanesco Broccoli",
-        "fact": "Romanesco broccoli forms a natural fractal spiral pattern and is bright lime green"
-      },
-      {
-        "name": "Purple Cauliflower",
-        "fact": "Purple cauliflower gets its color from anthocyanins the same pigment as blueberries"
-      },
-      {
-        "name": "Radicchio",
-        "fact": "Radicchio is a red leafy vegetable with a pleasantly bitter taste used in Italian salads"
-      },
-      {
-        "name": "Endive",
-        "fact": "Endive is a crisp slightly bitter lettuce used in elegant salads and appetizers"
-      },
-      {
-        "name": "Mizuna",
-        "fact": "Mizuna is a Japanese mustard green with feathery leaves and a mild peppery taste"
-      },
-      {
-        "name": "Tatsoi",
-        "fact": "Tatsoi forms a beautiful flat rosette of dark spoon-shaped leaves"
-      },
-      {
-        "name": "Perilla",
-        "fact": "Perilla is a fragrant Asian herb leaf used in Japanese and Korean cooking"
-      },
-      {
-        "name": "Agretti",
-        "fact": "Agretti is an Italian coastal green tasting slightly salty and resembling chives"
-      },
-      {
-        "name": "Scorzonera",
-        "fact": "Scorzonera is a black-skinned root vegetable with a mild oyster-like flavor"
-      },
-      {
-        "name": "Salsify",
-        "fact": "Salsify is a long white root vegetable nicknamed the oyster plant for its mild taste"
-      },
-      {
-        "name": "Yacon",
-        "fact": "Yacon is a South American root that tastes surprisingly sweet like apple and pear"
-      },
-      {
-        "name": "Oca",
-        "fact": "Oca is a colorful tuber from the Andes eaten as a potato substitute in South America"
-      }
+  "Carrot": {
+    "explanation": "Carrots are orange and help make your eyes strong and healthy",
+    "points": [
+      "Rich in beta-carotene, which the body converts to vitamin A essential for vision",
+      "The orange color comes from high levels of carotenoids, powerful antioxidants",
+      "Originally purple in Afghanistan; orange variety developed in 17th-century Netherlands",
+      "Can be eaten raw, cooked, juiced, or as baby carrots (peeled and shaped)",
+      "Leaves and stems are also edible and used in some cuisines"
+    ]
+  },
+  "Broccoli": {
+    "explanation": "Broccoli looks like tiny trees and is packed with vitamins",
+    "points": [
+      "Belongs to the cabbage family (Brassicaceae) and is a cruciferous vegetable",
+      "Very high in vitamin C, vitamin K, folate, and fiber",
+      "Contains sulforaphane, a compound studied for potential cancer-fighting properties",
+      "The edible part is actually the flower buds before they open",
+      "Purple and white varieties exist alongside the common green"
+    ]
+  },
+  "Tomato": {
+    "explanation": "Tomatoes are actually a fruit but we eat them like a vegetable",
+    "points": [
+      "Botanically a berry (fruit) because it develops from the ovary of a flower",
+      "Classified as a vegetable for culinary and legal purposes in many countries",
+      "Major source of lycopene, a powerful antioxidant linked to heart health",
+      "Thousands of varieties exist — cherry, beefsteak, plum, heirloom, etc.",
+      "Native to western South America; introduced to Europe in the 16th century"
+    ]
+  },
+  "Potato": {
+    "explanation": "Potatoes grow underground and can be made into many yummy dishes",
+    "points": [
+      "World's fourth-largest food crop after maize, rice, and wheat",
+      "Starchy tuber that stores energy for the plant",
+      "Contains resistant starch when cooled (great for gut health)",
+      "Over 4,000 varieties worldwide with colors including purple, red, yellow",
+      "Ireland's Great Famine (1845–1852) was caused by potato blight"
+    ]
+  },
+  "Corn": {
+    "explanation": "Each corn cob has hundreds of tiny yellow kernels on it",
+    "points": [
+      "Also called maize — one of the most produced grains globally",
+      "Kernels are actually fruits (caryopses) on a cob (spike)",
+      "Sweet corn is harvested immature; field corn is dried for feed and products",
+      "Originated in Mexico ~9,000 years ago from teosinte plant",
+      "Corn silk (stigmas) is used in traditional medicine"
+    ]
+  },
+  "Spinach": {
+    "explanation": "Spinach makes you strong and healthy just like Popeye the sailor",
+    "points": [
+      "Extremely nutrient-dense — high in iron, vitamins A, C, K, folate, magnesium",
+      "Popeye association began in 1930s cartoons (partly due to iron myth)",
+      "Contains oxalates that can reduce calcium absorption",
+      "Eaten raw in salads or cooked (reduces oxalate content)",
+      "Native to Persia; spread to Europe in Middle Ages"
+    ]
+  },
+  "Pea": {
+    "explanation": "Tiny green peas grow snugly inside a long green pod",
+    "points": [
+      "Legume family — fixes nitrogen in soil like beans",
+      "Snow peas and snap peas are eaten whole with pod",
+      "Mendel used pea plants for his famous genetics experiments",
+      "High in protein, fiber, vitamin C, and vitamin K",
+      "Fresh, frozen, canned, or dried (split peas)"
+    ]
+  },
+  "Cucumber": {
+    "explanation": "Cucumbers are cool and refreshing and mostly made of water",
+    "points": [
+      "95% water — excellent for hydration",
+      "Botanically a fruit (berry) like tomato and squash",
+      "Contains cucurbitacins — can taste bitter in stressed plants",
+      "Used in pickles, salads, spa treatments, and skincare",
+      "Native to India; cultivated for over 3,000 years"
+    ]
+  },
+  "Pepper": {
+    "explanation": "Peppers come in red, yellow, orange, and green colors",
+    "points": [
+      "Bell peppers are the mild, large variety; chili peppers are spicy",
+      "Color changes as they ripen — green → yellow/orange → red",
+      "Very high in vitamin C (more than oranges per weight)",
+      "Capsaicin in spicy peppers creates heat sensation",
+      "Native to Central and South America"
+    ]
+  },
+  "Pumpkin": {
+    "explanation": "Pumpkins are big orange vegetables used to make jack-o-lanterns",
+    "points": [
+      "Winter squash — large fruits of Cucurbita species",
+      "All parts edible: flesh, seeds (pepitas), flowers, leaves",
+      "High in beta-carotene, vitamin A, fiber",
+      "Used in pies, soups, Halloween carving, and livestock feed",
+      "Native to North America; cultivated for thousands of years"
+    ]
+  },
+  "Onion": {
+    "explanation": "Onions make your eyes water when you cut them due to a special chemical",
+    "points": [
+      "Syn-propanethial-S-oxide gas released when cut irritates eyes",
+      "Contains quercetin, a powerful antioxidant",
+      "Layers protect the bulb and store energy",
+      "Varieties: yellow, white, red, sweet, shallots, green onions",
+      "One of the oldest cultivated vegetables — over 7,000 years"
+    ]
+  },
+  "Garlic": {
+    "explanation": "Garlic is used in cooking all over the world and is good for your health",
+    "points": [
+      "Contains allicin — released when crushed, responsible for smell and benefits",
+      "Strong antimicrobial properties — used medicinally for centuries",
+      "High in sulfur compounds linked to heart health",
+      "Bulb is made of cloves; green shoots (garlic scapes) also edible",
+      "Native to Central Asia; used since ancient Egypt"
+    ]
+  },
+  "Cauliflower": {
+    "explanation": "Cauliflower looks like a white version of broccoli and is very nutritious",
+    "points": [
+      "Cruciferous vegetable — same family as broccoli and cabbage",
+      "High in vitamin C, vitamin K, folate, fiber",
+      "Colored varieties exist: purple, green, orange",
+      "Head is actually undeveloped flower buds",
+      "Very versatile — rice, pizza crust, mashed, roasted"
+    ]
+  },
+  "Cabbage": {
+    "explanation": "Cabbages are round leafy vegetables that can be purple or green",
+    "points": [
+      "Cruciferous — high in vitamin C, vitamin K, fiber",
+      "Fermented cabbage = sauerkraut (probiotic-rich)",
+      "Varieties: green, red/purple, Savoy, Napa/Chinese",
+      "Very hardy — stores well for months",
+      "Symbol of prosperity in some cultures"
+    ]
+  },
+  "Eggplant": {
+    "explanation": "Eggplants are shiny purple vegetables also known as aubergine",
+    "points": [
+      "Botanically a berry — nightshade family (like tomato, potato)",
+      "Sponge-like flesh absorbs flavors and oil when cooking",
+      "High in nasunin — antioxidant concentrated in purple skin",
+      "Common in Mediterranean, Indian, and Middle Eastern cuisine",
+      "Originally from India; name 'eggplant' from white egg-shaped varieties"
+    ]
+  },
+  "Zucchini": {
+    "explanation": "Zucchinis are green summer squashes that grow very quickly",
+    "points": [
+      "Summer squash — harvested immature while skin is tender",
+      "Grows extremely fast — can double in size overnight",
+      "Flowers are edible and considered a delicacy",
+      "Mild flavor — used raw, grilled, spiralized, or in bread",
+      "Yellow and striped varieties also common"
+    ]
+  },
+  "Asparagus": {
+    "explanation": "Asparagus grows as tall spears and is one of the first vegetables to grow in spring",
+    "points": [
+      "Perennial plant — produces for 15–20 years once established",
+      "High in folate, vitamin K, fiber, and antioxidants",
+      "Contains asparagine — gives urine distinctive smell in some people",
+      "White asparagus grown underground to prevent greening",
+      "Purple asparagus has higher antioxidant content"
+    ]
+  },
+  "Celery": {
+    "explanation": "Celery makes a crunchy snack and is almost all water and fiber",
+    "points": [
+      "95% water — very low calorie (negative-calorie myth)",
+      "High in fiber, vitamin K, potassium",
+      "Seeds used as spice (celery seed)",
+      "Stalks, leaves, and root (celeriac) all edible",
+      "Ancient medicinal use for hypertension"
+    ]
+  },
+  "Radish": {
+    "explanation": "Radishes are small spicy root vegetables that can be red or white",
+    "points": [
+      "Cruciferous — fast-growing (ready in 3–4 weeks)",
+      "Spicy flavor from glucosinolates (same as mustard)",
+      "Varieties: red globe, daikon (large white), watermelon radish",
+      "Leaves are edible and nutritious",
+      "Used raw, pickled, or cooked"
+    ]
+  },
+  "Beetroot": {
+    "explanation": "Beetroot turns your hands and tongue a bright red or purple color",
+    "points": [
+      "Rich in nitrates — can help lower blood pressure",
+      "High in betalains — unique antioxidants giving red/purple color",
+      "Leaves (beet greens) more nutritious than root",
+      "Varieties: red, golden, white, striped (Chioggia)",
+      "Used in borscht, salads, and natural food coloring"
+    ]
+  },
+  "Sweet Potato": {
+    "explanation": "Sweet potatoes are orange inside and packed with vitamins and nutrients",
+    "points": [
+      "Not related to regular potato — different plant family",
+      "Extremely high in vitamin A (beta-carotene) — one of best sources",
+      "Varieties: orange, purple, white, yellow",
+      "Lower glycemic index than white potatoes",
+      "Used in pies, fries, mash, and desserts"
+    ]
+  },
+  "Artichoke": {
+    "explanation": "The artichoke is actually a flower bud that we eat before it blooms",
+    "points": [
+      "Edible flower bud of thistle family",
+      "Heart (base) is the prized part; leaves have edible flesh at base",
+      "High in fiber, antioxidants, and cynarin (aids liver function)",
+      "California produces ~99% of U.S. artichokes",
+      "Baby artichokes are fully edible (no choke)"
+    ]
+  },
+  "Leek": {
+    "explanation": "Leeks look like giant green onions and taste mild and sweet when cooked",
+    "points": [
+      "Milder, sweeter cousin of onion",
+      "Used in soups (vichyssoise), stews, and Welsh cuisine",
+      "High in vitamin K and manganese",
+      "White part most commonly used; green tops can be used for stock",
+      "National emblem of Wales"
+    ]
+  },
+  "Kale": {
+    "explanation": "Kale is one of the most nutritious leafy green vegetables you can eat",
+    "points": [
+      "Extremely nutrient-dense — high in vitamins A, C, K, antioxidants",
+      "Varieties: curly, lacinato (dinosaur), red Russian",
+      "Contains oxalates — cooking reduces them",
+      "Used raw in salads, chips, smoothies, soups",
+      "Ancient vegetable — grown by Greeks and Romans"
+    ]
+  },
+  "Brussels Sprout": {
+    "explanation": "Brussels sprouts look like tiny cabbages and grow along a long thick stalk",
+    "points": [
+      "Cruciferous — high in vitamin C, vitamin K, fiber",
+      "Contain sulforaphane and glucosinolates (cancer-fighting compounds)",
+      "Sweetens after first frost due to starch conversion",
+      "Grows in clusters along tall stalk",
+      "Name from Brussels, Belgium where they were widely cultivated"
+    ]
+  },
+  "Turnip": {
+    "explanation": "Turnips are round white root vegetables with a slightly peppery taste",
+    "points": [
+      "Root and greens both edible",
+      "Milder when young; stronger flavor when mature",
+      "High in vitamin C and fiber",
+      "Used in stews, roasts, mash, and pickles",
+      "Ancient vegetable — mentioned in Roman texts"
+    ]
+  },
+  "Parsnip": {
+    "explanation": "Parsnips look like white carrots and taste sweet and nutty when roasted",
+    "points": [
+      "Sweetness increases after frost (starch to sugar conversion)",
+      "Related to carrot and parsley",
+      "High in fiber, vitamin C, folate",
+      "Used in soups, roasts, purees",
+      "Popular in Europe before potato became dominant"
+    ]
+  },
+  "Fennel": {
+    "explanation": "Fennel has a mild licorice flavor and every part of it can be eaten",
+    "points": [
+      "All parts edible: bulb, stalks, fronds, seeds",
+      "Anethole gives licorice/anise flavor",
+      "High in vitamin C, fiber, potassium",
+      "Seeds used as spice and digestive aid",
+      "Used in Mediterranean and Indian cooking"
+    ]
+  },
+  "Bok Choy": {
+    "explanation": "Bok choy is a Chinese cabbage with crunchy white stems and tender green leaves",
+    "points": [
+      "Also called pak choi or Chinese white cabbage",
+      "High in vitamins A, C, K, calcium",
+      "Stems stay crunchy even when cooked",
+      "Used in stir-fries, soups, dumplings",
+      "Baby bok choy is smaller and more tender"
+    ]
+  },
+  "Kohlrabi": {
+    "explanation": "Kohlrabi looks like a small alien spaceship and tastes like mild broccoli",
+    "points": [
+      "Stem swells into edible bulb above ground",
+      "Crisp, juicy texture — mild cabbage/broccoli flavor",
+      "High in vitamin C and fiber",
+      "Eaten raw in salads or cooked",
+      "Name means 'cabbage turnip' in German"
+    ]
+  },
+  "Watercress": {
+    "explanation": "Watercress grows in fresh water streams and is one of the oldest eaten leaf vegetables",
+    "points": [
+      "Highest nutrient density score of any food (CDC study)",
+      "High in vitamin K, vitamin C, antioxidants",
+      "Peppery, slightly bitter flavor",
+      "Grows in clean flowing water — needs constant moisture",
+      "Used by ancient Greeks and Romans medicinally"
+    ]
+  },
+  "Arugula": {
+    "explanation": "Arugula has a peppery spicy taste and is popular in salads",
+    "points": [
+      "Also called rocket or rucola",
+      "High in vitamin K, vitamin A, folate",
+      "Peppery flavor from glucosinolates",
+      "Used raw in salads, on pizza, in pesto",
+      "Ancient Roman aphrodisiac"
+    ]
+  },
+  "Swiss Chard": {
+    "explanation": "Swiss chard has dark green leaves with bright red, yellow, or white stems",
+    "points": [
+      "Very high in vitamin K, vitamin A, magnesium",
+      "Stems and leaves both edible — stems often cooked separately",
+      "Rainbow chard has colorful stems",
+      "Related to beets",
+      "Used in Mediterranean and Italian cooking"
+    ]
+  },
+  "Collard Greens": {
+    "explanation": "Collard greens are a staple of Southern cooking and very rich in calcium",
+    "points": [
+      "High in calcium, vitamin K, vitamin A",
+      "Tough leaves — usually slow-cooked or braised",
+      "Traditional Southern dish with ham hock or bacon",
+      "Related to kale and cabbage",
+      "One of the oldest cultivated greens"
+    ]
+  },
+  "Mustard Greens": {
+    "explanation": "Mustard greens taste spicy and peppery and are common in Asian cuisine",
+    "points": [
+      "Very high in vitamin K, vitamin A, antioxidants",
+      "Spicy flavor from mustard oils",
+      "Used in Indian saag, Southern cooking, Chinese dishes",
+      "Young leaves milder and eaten raw",
+      "Seeds used to make mustard condiment"
+    ]
+  },
+  "Okra": {
+    "explanation": "Okra is a green pod vegetable that gets sticky when cooked, great for thickening soups",
+    "points": [
+      "Mucilage (sticky substance) when cooked — natural thickener",
+      "High in fiber, vitamin C, folate",
+      "Used in gumbo, bhindi masala, stews",
+      "Pods contain tiny seeds",
+      "Native to Africa; widely grown in warm climates"
+    ]
+  },
+  "Bean Sprout": {
+    "explanation": "Bean sprouts are tiny germinated beans crunchy and fresh in stir-fries",
+    "points": [
+      "Mung bean sprouts most common",
+      "High in vitamin C, low calorie",
+      "Crunchy texture preserved when lightly cooked",
+      "Used in Asian stir-fries, salads, spring rolls",
+      "Germination increases nutrient availability"
+    ]
+  },
+  "Snow Pea": {
+    "explanation": "Snow peas are flat pods where you eat the whole pod crunchy and sweet",
+    "points": [
+      "Eaten whole before peas fully develop",
+      "High in vitamin C, vitamin K, fiber",
+      "Sweet and crisp — no string in some varieties",
+      "Common in Chinese stir-fries",
+      "Related to garden peas"
+    ]
+  },
+  "Green Bean": {
+    "explanation": "Green beans are long pods picked young and eaten whole cooked or raw",
+    "points": [
+      "Also called snap beans or string beans",
+      "High in fiber, vitamin C, vitamin K",
+      "Stringless varieties now common",
+      "Used in casseroles, salads, stir-fries",
+      "Harvested immature — pods crisp"
+    ]
+  },
+  "Butternut Squash": {
+    "explanation": "Butternut squash has a sweet nutty flavor and turns bright orange when ripe",
+    "points": [
+      "Winter squash — high in vitamin A, vitamin C, fiber",
+      "Sweet, nutty flavor — excellent roasted",
+      "Smooth skin when ripe",
+      "Long storage life",
+      "Used in soups, pies, risottos"
+    ]
+  },
+  "Acorn Squash": {
+    "explanation": "Acorn squash is shaped like an acorn and has sweet orange flesh",
+    "points": [
+      "Dark green with orange flesh",
+      "High in vitamin A, vitamin C",
+      "Often stuffed and baked",
+      "Ridged shape — distinctive appearance",
+      "Smaller than many winter squashes"
+    ]
+  },
+  "Delicata Squash": {
+    "explanation": "Delicata squash has cream and green striped skin that is edible when cooked",
+    "points": [
+      "Thin, edible skin — no peeling needed",
+      "Sweet, creamy flesh — tastes like sweet potato",
+      "High in vitamin A",
+      "Popular in fall cooking",
+      "Small size — easy to handle"
+    ]
+  },
+  "Romanesco": {
+    "explanation": "Romanesco is a striking bright green vegetable that forms a perfect natural fractal pattern",
+    "points": [
+      "Natural fractal — self-similar spirals",
+      "Related to cauliflower and broccoli",
+      "Mild nutty flavor — crunchier than cauliflower",
+      "High in vitamin C",
+      "Visually stunning — used in gourmet presentations"
+    ]
+  },
+  "Sunchoke": {
+    "explanation": "Sunchokes are also called Jerusalem artichokes and taste sweet and nutty",
+    "points": [
+      "Tubers of sunflower plant",
+      "High in inulin — prebiotic fiber",
+      "Sweet, nutty flavor — good raw or cooked",
+      "Not related to artichokes",
+      "Can cause gas in some people (inulin)"
+    ]
+  },
+  "Taro": {
+    "explanation": "Taro is a starchy root vegetable used in Hawaiian poi and Asian cooking",
+    "points": [
+      "Must be cooked — raw contains calcium oxalate crystals",
+      "High in fiber, vitamin E, magnesium",
+      "Used in poi (Hawaiian staple), chips, stews",
+      "Large leaves also edible when cooked",
+      "Major crop in Pacific Islands and Asia"
+    ]
+  },
+  "Jicama": {
+    "explanation": "Jicama is a crunchy white root vegetable that tastes like a cross between apple and potato",
+    "points": [
+      "Crisp, juicy, mildly sweet — apple-like texture",
+      "High in vitamin C, fiber",
+      "Eaten raw in salads, slaws, with lime and chili",
+      "Skin is tough — must be peeled",
+      "Native to Mexico and Central America"
+    ]
+  },
+  "Water Chestnut": {
+    "explanation": "Water chestnuts are crunchy aquatic vegetables that stay crispy even when cooked",
+    "points": [
+      "Corms of aquatic plant — not nuts",
+      "Stay crisp when cooked — unique texture",
+      "Used in Asian stir-fries, stuffing, salads",
+      "Mild sweet flavor",
+      "Grown in flooded fields"
+    ]
+  },
+  "Lotus Root": {
+    "explanation": "Lotus root has a beautiful lace pattern when sliced and is crunchy to eat",
+    "points": [
+      "Rhizome of lotus plant — decorative holes",
+      "Crunchy texture — used in stir-fries, soups",
+      "High in vitamin C, fiber",
+      "Symbol of purity in Buddhism",
+      "Used in Chinese, Japanese, Indian cooking"
+    ]
+  },
+  "Daikon": {
+    "explanation": "Daikon is a giant white Japanese radish with a mild flavor",
+    "points": [
+      "Large white radish — can be 20+ inches long",
+      "Milder than red radishes",
+      "Used in pickles, soups, salads, grated as garnish",
+      "High in vitamin C, digestive enzymes",
+      "Common in Japanese, Korean, Chinese cuisine"
+    ]
+  },
+  "Celeriac": {
+    "explanation": "Celeriac is the root of the celery plant with a mild celery-like flavor",
+    "points": [
+      "Knobby, ugly exterior — smooth white interior",
+      "Mild celery flavor — used in soups, mash, remoulade",
+      "High in vitamin K, phosphorus",
+      "Stores well for months",
+      "Popular in European cooking"
+    ]
+  },
+  "Samphire": {
+    "explanation": "Samphire is a crunchy sea vegetable that naturally tastes salty",
+    "points": [
+      "Grows in salt marshes — naturally salty flavor",
+      "Crunchy succulent texture",
+      "High in minerals and omega-3s",
+      "Popular in British and European coastal cuisine",
+      "Also called sea asparagus"
+    ]
+  },
+  "Dandelion Greens": {
+    "explanation": "Dandelion greens are edible and packed with more nutrients than many garden vegetables",
+    "points": [
+      "Extremely nutrient-dense — high in vitamin K, A, C",
+      "Bitter flavor — often blanched or cooked",
+      "Used in salads, teas, wine",
+      "Entire plant edible: leaves, flowers, roots",
+      "Considered weed but cultivated in some regions"
+    ]
+  },
+  "Nettles": {
+    "explanation": "Stinging nettles sting when raw but lose their sting completely when cooked",
+    "points": [
+      "Stinging hairs contain formic acid — sting disappears when cooked",
+      "Very high in iron, calcium, vitamins",
+      "Used in soups, teas, pesto",
+      "Traditional spring tonic in many cultures",
+      "Young leaves best — older become tough"
+    ]
+  },
+  "Purslane": {
+    "explanation": "Purslane is a common weed that is actually highly nutritious and edible",
+    "points": [
+      "Highest omega-3 content of any leafy vegetable",
+      "Succulent, slightly lemony flavor",
+      "High in vitamin A, C, magnesium",
+      "Used raw in salads or cooked",
+      "Common weed worldwide — often overlooked"
+    ]
+  },
+  "Sorrel": {
+    "explanation": "Sorrel has a sour lemony taste because it contains oxalic acid",
+    "points": [
+      "Sharp, lemony flavor from oxalic acid",
+      "High in vitamin A, vitamin C",
+      "Used in soups, sauces, salads",
+      "French sorrel most common variety",
+      "Caution: high oxalic acid — moderate consumption"
+    ]
+  },
+  "Pak Choi": {
+    "explanation": "Pak choi is a tender Asian green great for quick stir-frying",
+    "points": [
+      "Also called bok choy",
+      "Crisp white stems, tender green leaves",
+      "High in calcium, vitamin A",
+      "Quick cooking — stir-fry, steam, soup",
+      "Baby pak choi more tender"
+    ]
+  },
+  "Enoki Mushroom": {
+    "explanation": "Enoki mushrooms are long thin white mushrooms with tiny caps",
+    "points": [
+      "Long, thin stems — grown in clusters",
+      "Mild flavor — crunchy texture",
+      "Used in soups, hot pots, salads",
+      "Cultivated in Japan — wild version darker",
+      "Low calorie, high in antioxidants"
+    ]
+  },
+  "Shiitake": {
+    "explanation": "Shiitake mushrooms have a rich savory flavor and boost the immune system",
+    "points": [
+      "Umami-rich flavor — meaty texture",
+      "Contains lentinan — studied for immune support",
+      "Used dried or fresh — strong flavor when dried",
+      "Cultivated for over 1,000 years in Asia",
+      "Second most cultivated mushroom worldwide"
+    ]
+  },
+  "Portobello": {
+    "explanation": "Portobello mushrooms are large enough to grill like a burger patty",
+    "points": [
+      "Mature crimini mushroom — large cap",
+      "Meaty texture — popular vegetarian burger substitute",
+      "Rich, earthy flavor",
+      "High in B vitamins, selenium",
+      "Gills edible but can darken dishes"
+    ]
+  },
+  "Oyster Mushroom": {
+    "explanation": "Oyster mushrooms grow in fan-shaped clusters and have a delicate seafood-like taste",
+    "points": [
+      "Fan or oyster-shaped caps",
+      "Mild, slightly seafood-like flavor",
+      "Varieties: pearl, pink, yellow, blue",
+      "Easy to cultivate — grows on straw, coffee grounds",
+      "High in protein and fiber"
+    ]
+  },
+  "Truffle": {
+    "explanation": "Truffles are rare underground fungi worth more than gold by weight",
+    "points": [
+      "Grow underground in symbiosis with tree roots",
+      "Extremely expensive — white truffles most prized",
+      "Strong aroma — used sparingly in cuisine",
+      "Hunted with pigs or dogs",
+      "Black truffles more common and affordable"
+    ]
+  },
+  "Chive": {
+    "explanation": "Chives are the smallest members of the onion family used as a fresh herb garnish",
+    "points": [
+      "Mild onion flavor — used as herb",
+      "Edible purple flowers",
+      "High in vitamin K",
+      "Grows easily in gardens",
+      "Common garnish on potatoes, eggs, soups"
+    ]
+  },
+  "Shallot": {
+    "explanation": "Shallots taste milder and sweeter than onions and are popular in French cooking",
+    "points": [
+      "Milder, sweeter than regular onions",
+      "Used extensively in French and Southeast Asian cooking",
+      "Cloves grow in clusters like garlic",
+      "High in antioxidants",
+      "Delicate flavor — good raw or cooked"
+    ]
+  },
+  "Spring Onion": {
+    "explanation": "Spring onions are young onions harvested before the bulb fully forms",
+    "points": [
+      "Also called scallions or green onions",
+      "Whole plant edible — mild flavor",
+      "Used raw or cooked as garnish",
+      "High in vitamin K, vitamin C",
+      "Common in Asian, Mexican, and American cuisine"
+    ]
+  },
+  "Rapini": {
+    "explanation": "Rapini or broccoli rabe has a pleasantly bitter taste popular in Italian cuisine",
+    "points": [
+      "Bitter flavor — related to turnip, not broccoli",
+      "Used in Italian dishes (orecchiette with rapini)",
+      "High in vitamin A, vitamin K",
+      "Stems, leaves, buds all edible",
+      "Quick cooking — blanching reduces bitterness"
+    ]
+  },
+  "Fiddlehead Fern": {
+    "explanation": "Fiddlehead ferns are young coiled fern fronds harvested in spring",
+    "points": [
+      "Young coiled fronds — must be cooked",
+      "Unique nutty, asparagus-like flavor",
+      "High in antioxidants, omega-3s",
+      "Seasonal delicacy in spring",
+      "Only certain fern species safe to eat"
+    ]
+  },
+  "Bamboo Shoot": {
+    "explanation": "Bamboo shoots are young bamboo sprouts eaten as a crunchy vegetable in Asia",
+    "points": [
+      "Young shoots harvested before emerging",
+      "Must be cooked to remove bitterness",
+      "Crunchy texture — used in stir-fries, soups",
+      "High in fiber, low calorie",
+      "Major ingredient in Asian cuisine"
+    ]
+  },
+  "Galangal": {
+    "explanation": "Galangal looks like ginger but tastes sharper and more piney",
+    "points": [
+      "Related to ginger — harder and more fibrous",
+      "Piney, citrusy flavor — used in Thai cooking",
+      "Used fresh, dried, or powdered",
+      "Medicinal properties in traditional medicine",
+      "Greater and lesser varieties"
+    ]
+  },
+  "Turmeric": {
+    "explanation": "Turmeric is a bright yellow root that stains everything it touches and is very healthy",
+    "points": [
+      "Contains curcumin — powerful anti-inflammatory compound",
+      "Bright yellow color from curcuminoids",
+      "Used in curries, golden milk, dyes",
+      "Bioavailability increases with black pepper",
+      "Ancient medicinal use in Ayurveda"
+    ]
+  },
+  "Lemongrass": {
+    "explanation": "Lemongrass is a tropical grass that smells and tastes like fresh lemon",
+    "points": [
+      "Citrusy, lemony flavor — no acidity",
+      "Used in Thai, Vietnamese, Indian cooking",
+      "Stalks bruised to release oils",
+      "Repels insects naturally",
+      "Used in teas and essential oils"
+    ]
+  },
+  "Bitter Melon": {
+    "explanation": "Bitter melon is a bumpy green vegetable that tastes very bitter but is medicinal",
+    "points": [
+      "Extremely bitter — used to balance sweet dishes",
+      "Contains compounds that may help regulate blood sugar",
+      "Used in Indian, Chinese, Caribbean cooking",
+      "High in vitamin C, antioxidants",
+      "Popular in diabetes management in traditional medicine"
+    ]
+  },
+  "Moringa": {
+    "explanation": "Moringa leaves are called miracle leaves because they are packed with nutrients",
+    "points": [
+      "Extremely nutrient-dense — high in protein, vitamins, minerals",
+      "Leaves, pods, seeds all edible",
+      "Used in traditional medicine for centuries",
+      "Drought-resistant — grown in arid regions",
+      "Called 'drumstick tree' for long pods"
+    ]
+  },
+  "Chayote": {
+    "explanation": "Chayote is a pear-shaped green vegetable with a crunchy mild flavor",
+    "points": [
+      "Mild flavor — similar to zucchini/cucumber",
+      "Entire fruit edible — seed soft when cooked",
+      "High in vitamin C, fiber",
+      "Used in Latin American, Asian cooking",
+      "Grows on vigorous vines"
+    ]
+  },
+  "Plantain": {
+    "explanation": "Plantains look like bananas but are starchy and eaten cooked not raw",
+    "points": [
+      "Starchy — not sweet like dessert bananas",
+      "Used green (savory) or ripe (sweet)",
+      "Fried, boiled, mashed — tostones, mofongo",
+      "Major staple in Africa, Caribbean, Latin America",
+      "Higher in potassium than bananas"
+    ]
+  },
+  "Yam": {
+    "explanation": "True yams can grow over a meter long and are an important food in West Africa",
+    "points": [
+      "True yams (Dioscorea) different from sweet potatoes",
+      "Very large tubers — some over 2 meters long",
+      "Starchy staple in West Africa",
+      "High in potassium, vitamin C",
+      "Boiled, pounded into fufu"
+    ]
+  },
+  "Cassava": {
+    "explanation": "Cassava is a starchy root that is the main ingredient in tapioca",
+    "points": [
+      "Major staple in Africa, South America",
+      "Must be properly prepared — contains cyanogenic compounds",
+      "Source of tapioca starch and pearls",
+      "Used in garri, fufu, bread",
+      "Drought-tolerant crop"
+    ]
+  },
+  "Breadfruit": {
+    "explanation": "Breadfruit is a starchy tropical vegetable that can replace bread and potatoes",
+    "points": [
+      "Starchy fruit — cooked like potato or bread",
+      "High in carbohydrates, fiber",
+      "Captain Bligh's voyage to transport breadfruit",
+      "Used boiled, roasted, fried",
+      "Major staple in Pacific Islands"
+    ]
+  },
+  "Nopales": {
+    "explanation": "Nopales are the edible pads of the prickly pear cactus popular in Mexico",
+    "points": [
+      "Cactus pads — spines removed",
+      "High in fiber, vitamins, antioxidants",
+      "Used in salads, tacos, scrambled eggs",
+      "Mucilage gives slight slimy texture when cooked",
+      "Popular in Mexican cuisine"
+    ]
+  },
+  "Calabash": {
+    "explanation": "Calabash is a gourd used as both a vegetable and a natural container",
+    "points": [
+      "Hard shell when mature — used as bottle, bowl",
+      "Young fruit eaten as vegetable",
+      "Used in Asian, African, Caribbean cooking",
+      "Seeds and leaves also edible",
+      "Symbol in many cultures"
+    ]
+  },
+  "Malanga": {
+    "explanation": "Malanga is a tropical root vegetable with a nutty earthy flavor",
+    "points": [
+      "Related to taro — similar texture",
+      "Nutty, earthy flavor",
+      "Used in soups, stews, fritters",
+      "Popular in Caribbean, Central America",
+      "High in starch"
+    ]
+  },
+  "Amaranth Leaves": {
+    "explanation": "Amaranth leaves are edible greens from the same plant that produces amaranth grain",
+    "points": [
+      "Highly nutritious — high in vitamins A, C, iron",
+      "Used in Indian, African, Caribbean cooking",
+      "Called callaloo in Caribbean",
+      "Seeds used as grain",
+      "Heat-tolerant crop"
+    ]
+  },
+  "Kabocha": {
+    "explanation": "Kabocha is a Japanese pumpkin with green skin and very sweet dense flesh",
+    "points": [
+      "Sweet, dry flesh — chestnut-like flavor",
+      "Edible skin when cooked",
+      "High in beta-carotene, vitamin C",
+      "Used in tempura, soups, desserts",
+      "Popular in Japan and Korea"
+    ]
+  },
+  "Yard Long Bean": {
+    "explanation": "Yard long beans can actually grow up to 18 inches in length",
+    "points": [
+      "Also called asparagus bean",
+      "Pods grow very long — 12–18 inches",
+      "Used in stir-fries, curries",
+      "Mild flavor — similar to green beans",
+      "Heat-tolerant legume"
+    ]
+  },
+  "Winged Bean": {
+    "explanation": "The winged bean has four frilly wings along its pod and is entirely edible",
+    "points": [
+      "All parts edible: pods, leaves, flowers, tubers",
+      "High in protein — called 'poor man's meat'",
+      "Pods have four frilly wings",
+      "Tropical legume — high yield",
+      "Used in Southeast Asian cuisine"
+    ]
+  },
+  "Tiger Nut": {
+    "explanation": "Tiger nuts are not nuts but tiny root tubers that are sweet and crunchy",
+    "points": [
+      "Not nut — sedge tuber",
+      "Sweet, nutty flavor — crunchy texture",
+      "High in fiber, prebiotics",
+      "Used in horchata de chufa (Spain)",
+      "Ancient food — found in Egyptian tombs"
+    ]
+  },
+  "Chinese Broccoli": {
+    "explanation": "Chinese broccoli has thick stems and bitter flat leaves popular in Asian cooking",
+    "points": [
+      "Also called gai lan",
+      "Thick stems, blue-green leaves",
+      "Slightly bitter — used in stir-fries, oyster sauce",
+      "High in vitamin A, vitamin C",
+      "Popular in Cantonese cuisine"
+    ]
+  },
+  "Sea Beans": {
+    "explanation": "Sea beans grow near the ocean and taste naturally salty without adding salt",
+    "points": [
+      "Also called glasswort or pickleweed",
+      "Naturally salty — no added salt needed",
+      "Crunchy succulent texture",
+      "High in minerals",
+      "Used in seafood dishes"
+    ]
+  },
+  "Ground Cherry": {
+    "explanation": "Ground cherries are small yellow fruits inside papery husks with a sweet pineapple taste",
+    "points": [
+      "Also called husk cherry",
+      "Sweet tropical flavor — pineapple-tomato mix",
+      "Ripe when they fall to ground",
+      "Used in salads, salsas, desserts",
+      "Related to tomatillo"
+    ]
+  },
+  "Romanesco Broccoli": {
+    "explanation": "Romanesco broccoli forms a natural fractal spiral pattern and is bright lime green",
+    "points": [
+      "Perfect natural fractal pattern",
+      "Milder, nuttier than regular broccoli",
+      "High in vitamin C",
+      "Visually stunning — gourmet vegetable",
+      "Related to cauliflower"
+    ]
+  },
+  "Purple Cauliflower": {
+    "explanation": "Purple cauliflower gets its color from anthocyanins the same pigment as blueberries",
+    "points": [
+      "Color from anthocyanins — same as blueberries",
+      "Similar nutrition to white cauliflower + antioxidants",
+      "Milder flavor than white variety",
+      "Vibrant color retained when lightly cooked",
+      "Increasingly popular in gourmet markets"
+    ]
+  },
+  "Radicchio": {
+    "explanation": "Radicchio is a red leafy vegetable with a pleasantly bitter taste used in Italian salads",
+    "points": [
+      "Bitter flavor — balances rich dishes",
+      "Used in Italian salads, risotto, grilled",
+      "High in antioxidants",
+      "Varieties: Treviso, Chioggia",
+      "Related to chicory"
+    ]
+  },
+  "Endive": {
+    "explanation": "Endive is a crisp slightly bitter lettuce used in elegant salads and appetizers",
+    "points": [
+      "Crisp, slightly bitter leaves",
+      "Belgian endive grown in dark — white/yellow tips",
+      "Used in salads, appetizers, braised",
+      "High in fiber, vitamin K",
+      "Related to chicory and radicchio"
+    ]
+  },
+  "Mizuna": {
+    "explanation": "Mizuna is a Japanese mustard green with feathery leaves and a mild peppery taste",
+    "points": [
+      "Feathery leaves — mild mustard flavor",
+      "Used in salads, stir-fries, Japanese cuisine",
+      "High in vitamin C, antioxidants",
+      "Fast-growing salad green",
+      "Popular in mesclun mixes"
+    ]
+  },
+  "Tatsoi": {
+    "explanation": "Tatsoi forms a beautiful flat rosette of dark spoon-shaped leaves",
+    "points": [
+      "Dark green spoon-shaped leaves",
+      "Mild mustard flavor — good raw or cooked",
+      "High in calcium, vitamin A",
+      "Cold-hardy — grows in fall/winter",
+      "Used in Asian cooking"
+    ]
+  },
+  "Perilla": {
+    "explanation": "Perilla is a fragrant Asian herb leaf used in Japanese and Korean cooking",
+    "points": [
+      "Also called shiso",
+      "Green and red varieties",
+      "Aromatic — mint-basil-cinnamon notes",
+      "Used as wrap, garnish, in kimchi",
+      "High in antioxidants"
+    ]
+  },
+  "Agretti": {
+    "explanation": "Agretti is an Italian coastal green tasting slightly salty and resembling chives",
+    "points": [
+      "Also called barba di frate (monk's beard)",
+      "Naturally salty flavor",
+      "Crunchy succulent texture",
+      "Used in Italian salads, pasta",
+      "Grows in coastal areas"
+    ]
+  },
+  "Scorzonera": {
+    "explanation": "Scorzonera is a black-skinned root vegetable with a mild oyster-like flavor",
+    "points": [
+      "Black skin — white flesh",
+      "Mild oyster-like flavor",
+      "Used in European cooking",
+      "Related to salsify",
+      "High in inulin"
+    ]
+  },
+  "Salsify": {
+    "explanation": "Salsify is a long white root vegetable nicknamed the oyster plant for its mild taste",
+    "points": [
+      "Oyster-like flavor when cooked",
+      "Long black or white roots",
+      "Used in soups, roasts",
+      "High in inulin",
+      "Ancient vegetable — used by Greeks and Romans"
+    ]
+  },
+  "Yacon": {
+    "explanation": "Yacon is a South American root that tastes surprisingly sweet like apple and pear",
+    "points": [
+      "Sweet, crisp, juicy — apple-pear flavor",
+      "High in fructooligosaccharides — prebiotic",
+      "Low calorie — used in weight loss diets",
+      "Eaten raw or cooked",
+      "Native to Andes"
+    ]
+  },
+  "Oca": {
+    "explanation": "Oca is a colorful tuber from the Andes eaten as a potato substitute in South America",
+    "points": [
+      "Brightly colored tubers — red, yellow, pink",
+      "Tangy, lemony flavor when raw",
+      "Sweetens when exposed to sunlight after harvest",
+      "Used boiled, roasted, in salads",
+      "Important Andean crop"
     ]
   }
 }

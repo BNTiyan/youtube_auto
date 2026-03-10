@@ -66,9 +66,9 @@ jobs:
         run: |
           OVERRIDE_CAT="${{ github.event.inputs.category }}"
           if [ -n "$OVERRIDE_CAT" ]; then
-            python pick_item.py --config content_config.json --field fact --category "$OVERRIDE_CAT"
+            python pick_item.py --config content_config --field fact --category "$OVERRIDE_CAT"
           else
-            python pick_item.py --config content_config.json --field fact
+            python pick_item.py --config content_config --field fact
           fi
 
       # ── 7. Generate regular landscape video (1280×720) ────────────────────
@@ -81,7 +81,7 @@ jobs:
           python video_creator.py \
             --item       "$ITEM_NAME" \
             --cat        "$ITEM_CAT"  \
-            --config     content_config.json \
+            --config     content_config \
             --output-dir videos
 
       # ── 8. Generate short portrait video (1080×1920) ──────────────────────

@@ -495,35 +495,63 @@ Examples:
     
     config_path = args.config
     if os.path.isdir(args.config):
-        json_files = sorted(glob.glob(os.path.join(args.config, "*.json")))
-        if json_files:
-            state_file = os.path.join(args.config, ".last_config_idx.txt")
-            idx = 0
-            if os.path.exists(state_file):
+        if args.cat and os.path.exists(os.path.join(args.config, f"{args.cat}.json")):
+            config_path = os.path.join(args.config, f"{args.cat}.json")
+        else:
+            json_files = sorted(glob.glob(os.path.join(args.config, "*.json")))
+            if json_files:
+                state_file = os.path.join(args.config, ".last_config_idx.txt")
+                idx = 0
+                if os.path.exists(state_file):
+                    try:
+                        with open(state_file) as sf:
+                            idx = (int(sf.read().strip()) + 1) % len(json_files)
+                    except Exception:
+                        pass
+                
+                config_path = json_files[idx]
                 try:
-                    with open(state_file) as sf:
-                        idx = (int(sf.read().strip()) + 1) % len(json_files)
+                    with open(state_file, "w") as sf:
+                        sf.write(str(idx))
                 except Exception:
                     pass
-            
-            config_path = json_files[idx]
-            try:
-                with open(state_file, "w") as sf:
-                    sf.write(str(idx))
-            except Exception:
-                pass
-                
-            print(f"🔄  Sequentially selected config: {os.path.basename(config_path)}")
+                    
+                print(f"🔄  Sequentially selected config: {os.path.basename(config_path)}")
 
     if os.path.exists(config_path):
+        cat_from_file = os.path.basename(config_path).replace(".json", "")
         with open(config_path) as f:
-            cfg = json.load(f)
-        cat = args.cat.lower()
-        if cat in cfg:
+            raw_cfg = json.load(f)
+        
+        # Normalize
+        config = {}
+        is_multi = False
+        for k, v in raw_cfg.items():
+            if isinstance(v, dict) and "items" in v:
+                is_multi = True
+                break
+        
+        if is_multi:
+            config = raw_cfg
+        else:
+            items = []
+            if isinstance(raw_cfg, dict) and raw_cfg and isinstance(next(iter(raw_cfg.values())), dict):
+                for name, data in raw_cfg.items():
+                    item = {"name": name}
+                    item.update(data)
+                    items.append(item)
+            elif "items" in raw_cfg:
+                items = raw_cfg["items"]
+            else:
+                items = raw_cfg if isinstance(raw_cfg, list) else []
+            config = {cat_from_file: {"items": items}}
+
+        cat = args.cat.lower() if args.cat else cat_from_file
+        if cat in config:
             field = "explanation" if args.style == "tech" else "fact"
             item_data = next(
-                (it for it in cfg[cat]["items"]
-                 if it["name"].lower() == args.item.lower()),
+                (it for it in config[cat].get("items", [])
+                 if it.get("name", "").lower() == args.item.lower()),
                 None,
             )
             if item_data:

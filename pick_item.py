@@ -3,9 +3,9 @@
 Daily Item Picker — selects ONE item per day using a flat rotation across all categories.
 
 Usage (local):
-    python pick_item.py --config content_config.json
-    python pick_item.py --config tech_content_config.json --field explanation
-    python pick_item.py --config content_config.json --category animals
+    python pick_item.py --config content_config
+    python pick_item.py --config tech_content_config --field explanation
+    python pick_item.py --config content_config --category animals
 
 In GitHub Actions the outputs are written to $GITHUB_OUTPUT automatically.
 Outputs: category, name, text, slug, index, total
@@ -140,13 +140,13 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python pick_item.py --config content_config.json
-  python pick_item.py --config tech_content_config.json --field explanation
-  python pick_item.py --config content_config.json --category animals
+  python pick_item.py --config content_config
+  python pick_item.py --config tech_content_config --field explanation
+  python pick_item.py --config content_config --category animals
         """,
     )
-    parser.add_argument("--config",   default="content_config.json",
-                        help="JSON content config (default: content_config.json)")
+    parser.add_argument("--config",   default="content_config",
+                        help="Path to content config directory (default: content_config)")
     parser.add_argument("--field",    default="fact",
                         help="Item text field to extract: fact (kids) or explanation (tech)")
     parser.add_argument("--category", default="",

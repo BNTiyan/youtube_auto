@@ -104,10 +104,12 @@ Rules:
 
     print("\n🤖  Generating metadata with Gemini AI...")
     
-    max_retries = 4
+    max_retries = 3
     retry_delay = 10  # Initial delay in seconds
-    
-    for attempt in range(max_retries):
+    attempt = 0
+    raw = None
+
+    while attempt < max_retries:
         try:
             response = client.models.generate_content(
                 model='gemini-2.5-flash',
@@ -118,16 +120,23 @@ Rules:
         except Exception as e:
             err_msg = str(e)
             if "429" in err_msg or "RESOURCE_EXHAUSTED" in err_msg:
-                print(f"  ⚠️   Gemini Quota Exceeded (429). Waiting 65s to reset...")
+                # Don't count this as an attempt — just wait and retry
+                print(f"  ⚠️   Gemini Quota Exceeded (429). Waiting 65s for quota reset...")
                 time.sleep(65)
-            elif attempt < max_retries - 1:
-                print(f"  ⚠️   Gemini API busy (attempt {attempt+1}/{max_retries}): {e}")
-                print(f"      Retrying in {retry_delay}s...")
-                time.sleep(retry_delay)
-                retry_delay *= 2  # Exponential backoff
+                continue  # Retry same attempt
             else:
-                print(f"  ⚠️   Gemini API failed after {max_retries} attempts. Falling back to local JSON data...")
-                return None
+                attempt += 1
+                if attempt < max_retries:
+                    print(f"  ⚠️   Gemini API busy (attempt {attempt}/{max_retries}): {e}")
+                    print(f"      Retrying in {retry_delay}s...")
+                    time.sleep(retry_delay)
+                    retry_delay *= 2  # Exponential backoff
+                else:
+                    print(f"  ⚠️   Gemini API failed after {max_retries} attempts. Using local JSON fallback...")
+                    return None
+
+    if raw is None:
+        return None
 
     # Strip markdown fences if present
     if raw.startswith("```"):

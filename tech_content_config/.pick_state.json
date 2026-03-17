@@ -1,5 +1,5 @@
 {
-  "file_idx": 8,
+  "file_idx": 9,
   "file_item_idx": {
     "ai": 1,
     "api": 1,
@@ -8,6 +8,7 @@
     "devops": 1,
     "llm": 1,
     "mcp": 1,
-    "ml": 0
+    "ml": 0,
+    "rag": 1
   }
 }

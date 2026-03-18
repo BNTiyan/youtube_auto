@@ -46,7 +46,9 @@ jobs:
 
       # ── 3. System dependencies ─────────────────────────────────────────────
       - name: Install ffmpeg
-        run: sudo apt-get install -y ffmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
 
       # ── 4. Python dependencies ─────────────────────────────────────────────
       - name: Install Python dependencies

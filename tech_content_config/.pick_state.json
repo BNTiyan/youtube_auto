@@ -1,9 +1,9 @@
 {
-  "file_idx": 2,
+  "file_idx": 3,
   "file_item_idx": {
     "ai": 2,
     "api": 2,
-    "cloud": 1,
+    "cloud": 2,
     "database": 1,
     "devops": 1,
     "llm": 1,

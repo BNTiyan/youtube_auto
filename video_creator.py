@@ -351,7 +351,7 @@ def create_single_item_video(
         )
         intro_mp3 = os.path.join(tmp, "intro.mp3")
         create_tts(f"Hello friends! Today we are going to learn about {name}!", intro_mp3, lang)
-        clips.append(make_clip(intro_slide, intro_mp3, animate=(item_img is not None)))
+        clips.append(make_clip(intro_slide, intro_mp3, theme=theme, category=category, animate=(item_img is not None)))
 
         # ── Main content slide ────────────────────────────────────────────────
         print("  Creating main slide...")
@@ -363,7 +363,7 @@ def create_single_item_video(
         )
         main_mp3 = os.path.join(tmp, "main.mp3")
         create_tts(f"{name}. {fact}", main_mp3, lang)
-        clips.append(make_clip(main_slide, main_mp3, animate=(item_img is not None)))
+        clips.append(make_clip(main_slide, main_mp3, theme=theme, category=category, animate=(item_img is not None)))
 
         # ── Outro slide ───────────────────────────────────────────────────────
         print("  Creating outro slide...")
@@ -373,7 +373,7 @@ def create_single_item_video(
             f"Great job! Now you know about {name}! Come back tomorrow for another fun fact!",
             outro_mp3, lang,
         )
-        clips.append(make_clip(outro_slide, outro_mp3, animate=False))
+        clips.append(make_clip(outro_slide, outro_mp3, theme=theme, category=category, animate=False, decorative=True))
 
         # ── Render ────────────────────────────────────────────────────────────
         print(f"\n  Rendering → {output_path}")
@@ -408,9 +408,186 @@ def create_tts(text: str, out_path: str, lang: str = "en") -> None:
     create_kids_tts(text, out_path, lang)
 
 
+# ── PLAYFUL KIDS OVERLAY ANIMATION ────────────────────────────────────────────
+
+def _draw_star(draw, cx: float, cy: float, radius: float, fill) -> None:
+    points = []
+    inner_radius = radius * 0.45
+    for i in range(10):
+        angle = np.pi / 5 * i - np.pi / 2
+        r = radius if i % 2 == 0 else inner_radius
+        points.append((cx + np.cos(angle) * r, cy + np.sin(angle) * r))
+    draw.polygon(points, fill=fill)
+
+
+def _draw_bird(draw, x: float, y: float, scale: float, fill) -> None:
+    wing_w = 28 * scale
+    wing_h = 16 * scale
+    width = max(2, int(3 * scale))
+    draw.arc([x - wing_w, y - wing_h, x, y + wing_h], start=205, end=340, fill=fill, width=width)
+    draw.arc([x, y - wing_h, x + wing_w, y + wing_h], start=200, end=335, fill=fill, width=width)
+
+
+def _draw_cloud(draw, x: float, y: float, scale: float, fill) -> None:
+    puffs = [
+        (x - 28 * scale, y + 2 * scale, 18 * scale),
+        (x - 4 * scale, y - 10 * scale, 24 * scale),
+        (x + 24 * scale, y + 2 * scale, 19 * scale),
+    ]
+    for px, py, r in puffs:
+        draw.ellipse([px - r, py - r, px + r, py + r], fill=fill)
+    draw.rounded_rectangle(
+        [x - 48 * scale, y - 6 * scale, x + 46 * scale, y + 24 * scale],
+        radius=max(4, int(12 * scale)),
+        fill=fill,
+    )
+
+
+def _draw_plane(draw, x: float, y: float, scale: float, fill) -> None:
+    body = [
+        (x - 26 * scale, y + 2 * scale),
+        (x + 12 * scale, y - 7 * scale),
+        (x + 26 * scale, y),
+        (x + 12 * scale, y + 7 * scale),
+    ]
+    wing = [
+        (x - 2 * scale, y),
+        (x - 16 * scale, y - 15 * scale),
+        (x + 3 * scale, y - 4 * scale),
+        (x + 8 * scale, y + 12 * scale),
+    ]
+    tail = [
+        (x - 20 * scale, y + 2 * scale),
+        (x - 31 * scale, y - 10 * scale),
+        (x - 14 * scale, y),
+    ]
+    draw.polygon(body, fill=fill)
+    draw.polygon(wing, fill=fill)
+    draw.polygon(tail, fill=fill)
+
+
+def _draw_leaf(draw, x: float, y: float, scale: float, fill) -> None:
+    draw.ellipse([x - 18 * scale, y - 10 * scale, x + 18 * scale, y + 10 * scale], fill=fill)
+    draw.line([x - 14 * scale, y + 8 * scale, x + 14 * scale, y - 8 * scale], fill=(255, 255, 255, 80), width=max(1, int(2 * scale)))
+
+
+def _draw_wheel(draw, x: float, y: float, scale: float, fill, inner_fill) -> None:
+    r = 18 * scale
+    draw.ellipse([x - r, y - r, x + r, y + r], fill=fill)
+    inner_r = 7 * scale
+    draw.ellipse([x - inner_r, y - inner_r, x + inner_r, y + inner_r], fill=inner_fill)
+
+
+def _draw_car(draw, x: float, y: float, scale: float, fill) -> None:
+    draw.rounded_rectangle(
+        [x - 34 * scale, y - 14 * scale, x + 34 * scale, y + 10 * scale],
+        radius=max(4, int(8 * scale)),
+        fill=fill,
+    )
+    draw.polygon(
+        [(x - 18 * scale, y - 14 * scale), (x - 2 * scale, y - 28 * scale), (x + 18 * scale, y - 28 * scale), (x + 28 * scale, y - 14 * scale)],
+        fill=fill,
+    )
+    _draw_wheel(draw, x - 18 * scale, y + 12 * scale, scale, (40, 40, 40, 220), (220, 220, 220, 200))
+    _draw_wheel(draw, x + 18 * scale, y + 12 * scale, scale, (40, 40, 40, 220), (220, 220, 220, 200))
+
+
+def _draw_fruit(draw, x: float, y: float, scale: float, fill, leaf_fill) -> None:
+    draw.ellipse([x - 20 * scale, y - 22 * scale, x + 20 * scale, y + 22 * scale], fill=fill)
+    draw.rectangle([x - 2 * scale, y - 30 * scale, x + 2 * scale, y - 16 * scale], fill=(90, 55, 20, 210))
+    _draw_leaf(draw, x + 10 * scale, y - 23 * scale, scale * 0.65, leaf_fill)
+
+
+def _draw_vegetable(draw, x: float, y: float, scale: float, fill, leaf_fill) -> None:
+    draw.ellipse([x - 17 * scale, y - 26 * scale, x + 17 * scale, y + 26 * scale], fill=fill)
+    for dx in (-8, 0, 8):
+        _draw_leaf(draw, x + dx * scale * 0.5, y - 28 * scale, scale * 0.55, leaf_fill)
+
+
+def _draw_brand_badge(draw, x: float, y: float, scale: float, fill, accent) -> None:
+    size = 26 * scale
+    draw.rounded_rectangle([x - size, y - size, x + size, y + size], radius=max(6, int(10 * scale)), fill=fill)
+    _draw_star(draw, x, y, 11 * scale, accent)
+
+
+def _apply_kids_overlay(clip, theme: dict, category: str):
+    width, height = clip.size
+    accent_rgba = (*theme["accent"], 155)
+    soft_white = (255, 255, 255, 120)
+    bubble_fill = (*theme["accent"], 85)
+    shape_fill = (*theme["text"], 72)
+    category = category.lower()
+
+    def _overlay(get_frame, t):
+        frame = Image.fromarray(get_frame(t)).convert("RGBA")
+        draw = ImageDraw.Draw(frame, "RGBA")
+
+        if category == "animals":
+            for i, (base_x, base_y) in enumerate(((110, 90), (width - 120, 110), (width - 210, 70))):
+                pulse = 0.75 + 0.25 * np.sin(t * 2.3 + i * 1.2)
+                drift_y = 8 * np.sin(t * 1.7 + i)
+                _draw_star(draw, base_x, base_y + drift_y, 14 * pulse, accent_rgba)
+            for i, base_y in enumerate((92, 145, 185)):
+                x = ((t * (150 + i * 24) + i * 220) % (width + 180)) - 90
+                y = base_y + 12 * np.sin(t * 2.4 + i * 0.7)
+                _draw_bird(draw, x, y, 0.8 + i * 0.12, soft_white)
+        elif category == "airplanes":
+            for i, base_y in enumerate((86, 136)):
+                x = ((t * (145 + i * 18) + i * 280) % (width + 200)) - 100
+                _draw_cloud(draw, x, base_y + 6 * np.sin(t * 1.4 + i), 0.9 + i * 0.12, (255, 255, 255, 92))
+            for i, base_y in enumerate((120, 180)):
+                x = ((t * (210 + i * 30) + i * 350) % (width + 220)) - 110
+                _draw_plane(draw, x, base_y + 10 * np.sin(t * 1.9 + i), 0.9 + i * 0.12, accent_rgba)
+        elif category == "cars":
+            for i, lane_y in enumerate((height - 126, height - 76)):
+                x = ((t * (220 + i * 35) + i * 300) % (width + 240)) - 120
+                _draw_car(draw, x, lane_y + 4 * np.sin(t * 3.0 + i), 0.72 + i * 0.08, (*theme["accent"], 170))
+        elif category == "fruits":
+            fruit_colors = [(255, 120, 120, 170), (255, 195, 90, 170), (255, 90, 140, 170)]
+            for i, base_x in enumerate((95, 165, width - 165, width - 95)):
+                y = 125 + ((t * (34 + i * 4) + i * 100) % (height - 240))
+                wobble = 14 * np.sin(t * 1.8 + i)
+                _draw_fruit(draw, base_x + wobble, y, 0.72, fruit_colors[i % len(fruit_colors)], (*theme["accent"], 150))
+        elif category == "vegetables":
+            veg_colors = [(110, 205, 100, 170), (255, 145, 80, 170), (150, 220, 120, 170)]
+            for i, base_x in enumerate((95, 165, width - 165, width - 95)):
+                y = 135 + ((t * (30 + i * 4) + i * 110) % (height - 250))
+                wobble = 12 * np.sin(t * 1.9 + i)
+                _draw_vegetable(draw, base_x + wobble, y, 0.74, veg_colors[i % len(veg_colors)], (*theme["accent"], 145))
+        elif category == "brands":
+            for i, base_x in enumerate((95, 165, width - 165, width - 95)):
+                y = 130 + ((t * (34 + i * 5) + i * 92) % (height - 245))
+                wobble = 14 * np.sin(t * 1.7 + i)
+                _draw_brand_badge(draw, base_x + wobble, y, 0.78, (*theme["card"], 170), (*theme["accent"], 170))
+        else:
+            for i, (base_x, base_y) in enumerate(((110, 90), (width - 120, 110), (width - 210, 70))):
+                pulse = 0.75 + 0.25 * np.sin(t * 2.3 + i * 1.2)
+                drift_y = 8 * np.sin(t * 1.7 + i)
+                _draw_star(draw, base_x, base_y + drift_y, 14 * pulse, accent_rgba)
+            for i, base_x in enumerate((90, 170, width - 170, width - 95)):
+                y = 120 + ((t * (38 + i * 6) + i * 95) % (height - 220))
+                wobble = 18 * np.sin(t * 1.6 + i * 0.8)
+                r = 12 + 4 * np.sin(t * 2.1 + i)
+                if i % 2 == 0:
+                    draw.ellipse([base_x + wobble - r, y - r, base_x + wobble + r, y + r], fill=bubble_fill)
+                else:
+                    side = 18 + 4 * np.sin(t * 1.4 + i)
+                    draw.rounded_rectangle(
+                        [base_x + wobble - side, y - side, base_x + wobble + side, y + side],
+                        radius=8,
+                        fill=shape_fill,
+                    )
+
+        return np.array(frame.convert("RGB"))
+
+    if hasattr(clip, "fl"):
+        return clip.fl(_overlay)
+    return clip.transform(_overlay)
+
+
 # ── CLIP ASSEMBLY ─────────────────────────────────────────────────────────────
 
-def make_clip(slide: np.ndarray, audio_path: str, animate: bool = False):
+def make_clip(slide: np.ndarray, audio_path: str, theme: dict, category: str, animate: bool = False, decorative: bool = True):
     """
     Build a single slide video clip.
 
@@ -427,6 +604,8 @@ def make_clip(slide: np.ndarray, audio_path: str, animate: bool = False):
         pan_pixels=20,
         fadein_duration=0.30,
     )
+    if decorative:
+        clip = _apply_kids_overlay(clip, theme, category)
     return _set_audio(clip, audio)
 
 
@@ -454,7 +633,7 @@ def create_kids_video(
         intro_slide = create_intro_slide(category, total, theme, image=intro_img)
         intro_mp3   = os.path.join(tmp, "intro.mp3")
         create_tts(f"Hello friends! Let's learn about {category}! Get ready!", intro_mp3, lang)
-        clips.append(make_clip(intro_slide, intro_mp3, animate=(intro_img is not None)))
+        clips.append(make_clip(intro_slide, intro_mp3, theme=theme, category=category, animate=(intro_img is not None)))
 
         # ── Item slides ──
         for i, item in enumerate(items, 1):
@@ -473,7 +652,7 @@ def create_kids_video(
                                     counter=counter, image=item_img)
             mp3_path = os.path.join(tmp, f"item_{i}.mp3")
             create_tts(f"{name}. {fact}", mp3_path, lang)
-            clips.append(make_clip(slide, mp3_path, animate=(item_img is not None)))
+            clips.append(make_clip(slide, mp3_path, theme=theme, category=category, animate=(item_img is not None)))
 
         # ── Outro ──
         print("  Creating outro...")
@@ -483,7 +662,7 @@ def create_kids_video(
             f"Amazing work! You learned about {total} {category}! Come back tomorrow for more!",
             outro_mp3, lang,
         )
-        clips.append(make_clip(outro_slide, outro_mp3, animate=False))
+        clips.append(make_clip(outro_slide, outro_mp3, theme=theme, category=category, animate=False, decorative=True))
 
         # ── Render ──
         print(f"\n  Rendering → {output_path}")

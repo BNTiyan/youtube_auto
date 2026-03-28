@@ -8,6 +8,9 @@ import asyncio
 from gtts import gTTS
 
 KIDS_TTS_VOICE = "en-US-AnaNeural"
+KIDS_TTS_RATE = "+18%"
+KIDS_TTS_PITCH = "+6Hz"
+KIDS_TTS_VOLUME = "+8%"
 _LANG_TO_VOICE = {
     "en": "en-US-AnaNeural",
     "en-GB": "en-GB-SoniaNeural",
@@ -18,12 +21,19 @@ _LANG_TO_VOICE = {
 async def _async_edge_tts(text: str, path: str, voice: str) -> None:
     import edge_tts
 
-    await edge_tts.Communicate(text, voice).save(path)
+    await edge_tts.Communicate(
+        text,
+        voice,
+        rate=KIDS_TTS_RATE,
+        pitch=KIDS_TTS_PITCH,
+        volume=KIDS_TTS_VOLUME,
+    ).save(path)
 
 
 def create_kids_tts(text: str, out_path: str, lang: str = "en") -> None:
     """
-    Prefer Microsoft's neural child-like voice, with gTTS as fallback.
+    Prefer Microsoft's neural child-like voice with a brighter, more upbeat
+    delivery, with gTTS as fallback.
     """
     voice = _LANG_TO_VOICE.get(lang, KIDS_TTS_VOICE)
     try:

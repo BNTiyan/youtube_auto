@@ -22,6 +22,7 @@ import time
 import glob
 import re
 from google import genai
+import requests
 import httplib2
 
 from googleapiclient.discovery import build
@@ -30,6 +31,26 @@ from googleapiclient.errors import HttpError
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from google.oauth2.credentials import Credentials
+
+
+# ─── GOOGLE SITEMAP PING ─────────────────────────────────────────────────────
+
+def ping_google_sitemap(sitemap_url="https://bts.navadishatechnologies.org/sitemap.xml"):
+    """
+    Notify Google that the sitemap has been updated.
+    This encourages Google to re-crawl the site.
+    """
+    ping_url = f"https://www.google.com/ping?sitemap={sitemap_url}"
+    print(f"\n📡  Pinging Google with updated sitemap: {sitemap_url}")
+    try:
+        response = requests.get(ping_url, timeout=10)
+        if response.status_code == 200:
+            print("✅  Google successfully notified!")
+        else:
+            print(f"⚠️   Google ping returned status: {response.status_code}")
+    except Exception as e:
+        print(f"❌  Failed to ping Google: {e}")
+
 
 # ─── CONFIG ──────────────────────────────────────────────────────────────────
 
@@ -459,6 +480,8 @@ def main():
                 privacy=args.privacy,
                 made_for_kids=args.made_for_kids,
             )
+            # Ping Google Search Console after successful upload
+            ping_google_sitemap()
         except Exception as e:
             print(f"❌  Failed to upload {filename}: {e}")
 

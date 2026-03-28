@@ -28,13 +28,14 @@ from typing import Optional
 import numpy as np
 import requests
 from PIL import Image, ImageDraw, ImageFont
-from gtts import gTTS
+from animation_utils import build_animated_clip
+from tts_utils import create_kids_tts
 
 # ── moviepy v1 / v2 compat ────────────────────────────────────────────────────
 try:
-    from moviepy.editor import ImageClip, AudioFileClip, concatenate_videoclips
+    from moviepy.editor import AudioFileClip, concatenate_videoclips
 except (ImportError, ModuleNotFoundError):
-    from moviepy import ImageClip, AudioFileClip, concatenate_videoclips
+    from moviepy import AudioFileClip, concatenate_videoclips
 
 
 def _set_audio(clip, audio):
@@ -678,7 +679,7 @@ def create_single_concept_video(
             f"Today we are breaking down {name} — an essential {category} concept.",
             intro_mp3, lang,
         )
-        clips.append(make_clip(intro_slide, intro_mp3))
+        clips.append(make_clip(intro_slide, intro_mp3, animate=(item_img is not None)))
 
         # ── Slide 2: Concept explanation ──────────────────────────────────────
         print("  Creating concept slide...")
@@ -694,7 +695,7 @@ def create_single_concept_video(
             f"This is one of the core ideas in {category} that every developer should know.",
             main_mp3, lang,
         )
-        clips.append(make_clip(main_slide, main_mp3))
+        clips.append(make_clip(main_slide, main_mp3, animate=(item_img is not None)))
 
         # ── Slide 3: Key points ───────────────────────────────────────────────
         if raw_points:
@@ -713,7 +714,7 @@ def create_single_concept_video(
                 f"Here are the key things to know about {name}. {pts_text}",
                 points_mp3, lang,
             )
-            clips.append(make_clip(points_slide, points_mp3))
+            clips.append(make_clip(points_slide, points_mp3, animate=(item_img is not None)))
 
         # ── Slide 4: Outro ────────────────────────────────────────────────────
         print("  Creating outro slide...")
@@ -724,7 +725,7 @@ def create_single_concept_video(
             f"Subscribe to NavaDisha for a new {category} concept every single day. See you tomorrow!",
             outro_mp3, lang,
         )
-        clips.append(make_clip(outro_slide, outro_mp3))
+        clips.append(make_clip(outro_slide, outro_mp3, animate=False))
 
         # ── Render ────────────────────────────────────────────────────────────
         print(f"\n  Rendering → {output_path}")
@@ -758,15 +759,23 @@ def create_single_concept_video(
 # ── AUDIO ─────────────────────────────────────────────────────────────────────
 
 def create_tts(text: str, out_path: str, lang: str = "en") -> None:
-    gTTS(text=text, lang=lang, slow=False).save(out_path)
+    create_kids_tts(text, out_path, lang)
 
 
 # ── CLIP ASSEMBLY ─────────────────────────────────────────────────────────────
 
-def make_clip(slide: np.ndarray, audio_path: str):
+def make_clip(slide: np.ndarray, audio_path: str, animate: bool = False):
     audio = AudioFileClip(audio_path)
     duration = max(audio.duration + PAUSE_AFTER_AUDIO, MIN_SLIDE_DURATION)
-    return _set_audio(ImageClip(slide, duration=duration), audio)
+    clip = build_animated_clip(
+        slide,
+        duration=duration,
+        animate=animate,
+        zoom_ratio=0.05,
+        pan_pixels=16,
+        fadein_duration=0.35,
+    )
+    return _set_audio(clip, audio)
 
 
 # ── MAIN VIDEO BUILDER ────────────────────────────────────────────────────────
@@ -793,7 +802,7 @@ def create_tech_video(
         intro_mp3   = os.path.join(tmp, "intro.mp3")
         create_tts(f"Welcome! In this video you'll learn {total} key {category} concepts. Let's dive in!",
                    intro_mp3, lang)
-        clips.append(make_clip(intro_slide, intro_mp3))
+        clips.append(make_clip(intro_slide, intro_mp3, animate=(intro_img is not None)))
 
         # ── Concept slides ──
         for i, item in enumerate(items, 1):
@@ -812,7 +821,7 @@ def create_tech_video(
                                          theme=theme, counter=counter, image=item_img)
             mp3_path = os.path.join(tmp, f"item_{i}.mp3")
             create_tts(f"{name}. {explanation}", mp3_path, lang)
-            clips.append(make_clip(slide, mp3_path))
+            clips.append(make_clip(slide, mp3_path, animate=(item_img is not None)))
 
         # ── Outro ──
         print("  Creating outro...")
@@ -823,7 +832,7 @@ def create_tech_video(
             "Come back tomorrow for another tech learning concept!",
             outro_mp3, lang,
         )
-        clips.append(make_clip(outro_slide, outro_mp3))
+        clips.append(make_clip(outro_slide, outro_mp3, animate=False))
 
         # ── Render ──
         print(f"\n  Rendering → {output_path}")

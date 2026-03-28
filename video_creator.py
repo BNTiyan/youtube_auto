@@ -25,18 +25,17 @@ import shutil
 from io import BytesIO
 from typing import Optional
 
-import asyncio
-
 import numpy as np
 import requests
 from PIL import Image, ImageDraw, ImageFont
-from gtts import gTTS          # fallback TTS when edge-tts is unavailable
+from animation_utils import build_animated_clip
+from tts_utils import create_kids_tts
 
 # ── moviepy v1 / v2 compat ────────────────────────────────────────────────────
 try:
-    from moviepy.editor import ImageClip, AudioFileClip, concatenate_videoclips
+    from moviepy.editor import AudioFileClip, concatenate_videoclips
 except (ImportError, ModuleNotFoundError):
-    from moviepy import ImageClip, AudioFileClip, concatenate_videoclips
+    from moviepy import AudioFileClip, concatenate_videoclips
 
 
 def _set_audio(clip, audio):
@@ -57,16 +56,6 @@ TEXT_H  = HEIGHT - IMAGE_H   # = 300 px text band at bottom
 GRAD_H  = 90           # gradient blend zone at bottom of photo
 
 PEXELS_API_KEY = os.environ.get("PEXELS_API_KEY", "")
-
-# ── Kids TTS voice ────────────────────────────────────────────────────────────
-# en-US-AnaNeural  = Microsoft neural child voice (girl, ~8 years old) ⭐
-# Falls back to gTTS if edge-tts is not installed or network is unavailable.
-KIDS_TTS_VOICE  = "en-US-AnaNeural"
-_LANG_TO_VOICE  = {
-    "en":    "en-US-AnaNeural",
-    "en-GB": "en-GB-SoniaNeural",
-    "en-AU": "en-AU-NatashaNeural",
-}
 
 # Extra search words appended to item name per category
 CATEGORY_SEARCH_SUFFIX = {
@@ -415,62 +404,8 @@ def create_single_item_video(
     return output_path
 
 
-# ── AUDIO — Microsoft edge-tts kids voice (gTTS fallback) ────────────────────
-
-async def _async_edge_tts(text: str, path: str, voice: str) -> None:
-    import edge_tts
-    await edge_tts.Communicate(text, voice).save(path)
-
-
 def create_tts(text: str, out_path: str, lang: str = "en") -> None:
-    """
-    Generate TTS narration.
-    Primary  : Microsoft edge-tts with AnaNeural (real child voice, no API key needed).
-    Fallback : gTTS if edge-tts is unavailable or network fails.
-    """
-    voice = _LANG_TO_VOICE.get(lang, KIDS_TTS_VOICE)
-    try:
-        asyncio.run(_async_edge_tts(text, out_path, voice))
-        return
-    except Exception as e:
-        print(f"    ⚠️  edge-tts failed ({e}), falling back to gTTS")
-    gTTS(text=text, lang=lang, slow=False).save(out_path)
-
-
-# ── KEN BURNS ZOOM ANIMATION ──────────────────────────────────────────────────
-
-def _ken_burns(clip, zoom_ratio: float = 0.06):
-    """
-    Slowly zoom in over the clip duration — the classic Ken Burns effect.
-    zoom_ratio=0.06 → image grows from 100 % to 106 % by the last frame.
-    Applied only to photo slides; text-only slides stay static.
-    """
-    duration = clip.duration
-    w, h = clip.size                        # moviepy: (width, height)
-
-    def _zoom(get_frame, t):
-        frame    = get_frame(t)
-        progress = min(t / duration, 1.0)
-        zoom     = 1.0 + zoom_ratio * progress   # 1.00 → 1.06
-        new_w    = max(1, int(w / zoom))
-        new_h    = max(1, int(h / zoom))
-        x1 = (w - new_w) // 2
-        y1 = (h - new_h) // 2
-        cropped  = frame[y1: y1 + new_h, x1: x1 + new_w]
-        return np.array(Image.fromarray(cropped).resize((w, h), Image.LANCZOS))
-
-    # moviepy v1 uses .fl(); v2 renamed it to .transform() — same signature
-    if hasattr(clip, 'fl'):
-        return clip.fl(_zoom)
-    return clip.transform(_zoom)
-
-
-def _fadein(clip, duration: float = 0.30):
-    """Apply a fade-in; silently no-ops if moviepy version doesn't support it."""
-    try:
-        return clip.fadein(duration)
-    except Exception:
-        return clip
+    create_kids_tts(text, out_path, lang)
 
 
 # ── CLIP ASSEMBLY ─────────────────────────────────────────────────────────────
@@ -484,12 +419,14 @@ def make_clip(slide: np.ndarray, audio_path: str, animate: bool = False):
     """
     audio    = AudioFileClip(audio_path)
     duration = max(audio.duration + PAUSE_AFTER_AUDIO, MIN_SLIDE_DURATION)
-    clip     = ImageClip(slide, duration=duration)
-
-    if animate:
-        clip = _ken_burns(clip, zoom_ratio=0.06)
-
-    clip = _fadein(clip, 0.30)              # smooth fade-in on every slide
+    clip = build_animated_clip(
+        slide,
+        duration=duration,
+        animate=animate,
+        zoom_ratio=0.06,
+        pan_pixels=20,
+        fadein_duration=0.30,
+    )
     return _set_audio(clip, audio)
 
 

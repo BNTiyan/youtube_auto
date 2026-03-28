@@ -42,6 +42,7 @@ from youtube_auto import (
     get_youtube_service,
     generate_metadata_with_gemini,
     upload_video,
+    ping_google_sitemap,
 )
 from googleapiclient.errors import HttpError
 
@@ -280,6 +281,15 @@ def run_all_channels(config: dict, target_channel: str | None, dry_run: bool):
         count = run_channel(channel, youtube, dry_run=dry_run)
         log(f"   Uploaded {count} video(s) for {channel['name']}")
         total_uploaded += count
+
+    if total_uploaded > 0 and not dry_run:
+        # Automatically ping Google Search Console after success
+        log("📡  Automated upload successful. Sending ping to Google Search...")
+        try:
+            ping_google_sitemap()
+        except NameError:
+            # handle case where function isn't imported correctly if necessary
+            pass
 
     log(f"\n🎉  Session complete. Total uploaded: {total_uploaded}")
     log("=" * 50)

@@ -28,13 +28,14 @@ from typing import Optional
 import numpy as np
 import requests
 from PIL import Image, ImageDraw, ImageFont
-from gtts import gTTS
+from animation_utils import build_animated_clip
+from tts_utils import create_kids_tts
 
 # ── moviepy v1 / v2 compat ────────────────────────────────────────────────────
 try:
-    from moviepy.editor import ImageClip, AudioFileClip, concatenate_videoclips
+    from moviepy.editor import AudioFileClip, concatenate_videoclips
 except (ImportError, ModuleNotFoundError):
-    from moviepy import ImageClip, AudioFileClip, concatenate_videoclips
+    from moviepy import AudioFileClip, concatenate_videoclips
 
 
 def _set_audio(clip, audio):
@@ -328,13 +329,21 @@ def create_short_slide(
 # ── AUDIO + CLIP ──────────────────────────────────────────────────────────────
 
 def make_tts(text: str, path: str, lang: str = "en") -> None:
-    gTTS(text=text, lang=lang, slow=False).save(path)
+    create_kids_tts(text, path, lang)
 
 
-def make_clip(slide: np.ndarray, audio_path: str):
+def make_clip(slide: np.ndarray, audio_path: str, animate: bool = False):
     audio    = AudioFileClip(audio_path)
     duration = max(audio.duration + PAUSE_AFTER_AUDIO, MIN_SLIDE_SEC)
-    return _set_audio(ImageClip(slide, duration=duration), audio)
+    clip = build_animated_clip(
+        slide,
+        duration=duration,
+        animate=animate,
+        zoom_ratio=0.08,
+        pan_pixels=28,
+        fadein_duration=0.25,
+    )
+    return _set_audio(clip, audio)
 
 
 # ── SHORT VIDEO BUILDER ───────────────────────────────────────────────────────
@@ -386,7 +395,7 @@ def create_short(
         )
         intro_mp3 = os.path.join(tmp, "intro.mp3")
         make_tts(intro_tts, intro_mp3, lang)
-        clips.append(make_clip(intro_slide, intro_mp3))
+        clips.append(make_clip(intro_slide, intro_mp3, animate=(img is not None)))
 
         # ── Slide 2: Main content ─────────────────────────────────────────────
         print("  Building main slide…")
@@ -403,7 +412,7 @@ def create_short(
         )
         main_mp3 = os.path.join(tmp, "main.mp3")
         make_tts(main_tts_text, main_mp3, lang)
-        clips.append(make_clip(main_slide, main_mp3))
+        clips.append(make_clip(main_slide, main_mp3, animate=(img is not None)))
 
         # ── Slide 3: Outro (solid colour — no photo distraction) ──────────────
         print("  Building outro slide…")
@@ -423,7 +432,7 @@ def create_short(
         )
         outro_mp3 = os.path.join(tmp, "outro.mp3")
         make_tts(outro_tts, outro_mp3, lang)
-        clips.append(make_clip(outro_slide, outro_mp3))
+        clips.append(make_clip(outro_slide, outro_mp3, animate=False))
 
         # ── Render ────────────────────────────────────────────────────────────
         print(f"\n  Rendering {WIDTH}×{HEIGHT} Short → {output_path}")

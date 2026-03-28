@@ -1,6 +1,6 @@
 # YouTube Auto — AI-Powered Video Creation & Upload
 
-Fully automated YouTube channel system that **generates educational slideshow videos** with text-to-speech narration and **uploads them daily** using Gemini AI for SEO-optimized metadata.
+Fully automated YouTube channel system that **generates educational animated slideshow videos** with child-style text-to-speech narration and **uploads them daily** using Gemini AI for SEO-optimized metadata.
 
 Two separate channels, two separate daily pipelines running on GitHub Actions.
 
@@ -24,7 +24,7 @@ Two separate channels, two separate daily pipelines running on GitHub Actions.
 
 Each pipeline:
 1. Picks today's category via day-of-year rotation
-2. Generates an MP4 slideshow with TTS narration (Pillow + gTTS + moviepy)
+2. Generates an animated MP4 slideshow with child-style TTS narration (Pillow + edge-tts/gTTS + moviepy)
 3. Generates SEO metadata (title, description, hashtags) via **Gemini AI**
 4. Uploads directly to YouTube
 
@@ -142,8 +142,9 @@ youtube_auto/
 │       └── tech_pipeline.yml        ← GitHub Actions: Tech channel (9:10 AM EST)
 │
 ├── youtube_auto.py                  ← Core: upload + update via YouTube API + Gemini
-├── video_creator.py                 ← Kids: colorful slideshow generator
-├── tech_video_creator.py            ← Tech: dark professional slideshow generator
+├── video_creator.py                 ← Kids: colorful animated slideshow generator
+├── tech_video_creator.py            ← Tech: dark professional animated slideshow generator
+├── animation_utils.py               ← Shared slide zoom/pan/fade helpers
 ├── scheduler.py                     ← Local: daily upload scheduler with state tracking
 │
 ├── content_config.json              ← Kids content: 6 categories × 10 items

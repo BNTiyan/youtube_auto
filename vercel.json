@@ -1,3 +1,13 @@
 {
-  "cleanUrls": true
+  "version": 2,
+  "cleanUrls": true,
+  "builds": [
+    { "src": "api/video-request.js", "use": "@vercel/node" },
+    { "src": "public/**", "use": "@vercel/static" }
+  ],
+  "routes": [
+    { "src": "/api/video-request", "dest": "api/video-request.js" },
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/public/index.html" }
+  ]
 }

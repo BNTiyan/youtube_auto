@@ -18,6 +18,15 @@ on:
         description: 'Optional notes, caption snippet, or angle to guide the video'
         required: false
         default: ''
+      privacy:
+        description: 'Upload privacy'
+        required: false
+        type: choice
+        options:
+          - private
+          - unlisted
+          - public
+        default: private
       source_url:
         description: 'Optional public source URL or feed to use as the primary topic source'
         required: false
@@ -127,6 +136,7 @@ jobs:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_SLUG: ${{ steps.latest.outputs.topic_slug }}
           TOPIC_HEADLINE: ${{ steps.latest.outputs.topic_headline }}
+          PRIVACY: ${{ github.event.inputs.privacy || 'private' }}
         run: |
           VIDEO="latest_videos/${TOPIC_SLUG}_learning.mp4"
           python youtube_auto.py "$VIDEO" \
@@ -134,7 +144,7 @@ jobs:
             --niche    "Latest AI and Technology News Explained" \
             --tone     "timely, clear and educational for developers and tech enthusiasts" \
             --category 28 \
-            --privacy  public
+            --privacy  "$PRIVACY"
 
       - name: Upload short to YouTube
         if: ${{ github.event.inputs.dry_run != 'true' }}
@@ -142,6 +152,7 @@ jobs:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_SLUG: ${{ steps.latest.outputs.topic_slug }}
           TOPIC_HEADLINE: ${{ steps.latest.outputs.topic_headline }}
+          PRIVACY: ${{ github.event.inputs.privacy || 'private' }}
         run: |
           VIDEO="latest_shorts/${TOPIC_SLUG}_short.mp4"
           python youtube_auto.py "$VIDEO" \
@@ -149,7 +160,7 @@ jobs:
             --niche    "Latest AI and Technology News Shorts" \
             --tone     "timely, clear and educational for developers. Short vertical video." \
             --category 28 \
-            --privacy  public
+            --privacy  "$PRIVACY"
 
       - name: Dry run notice
         if: ${{ github.event.inputs.dry_run == 'true' }}
@@ -178,5 +189,6 @@ jobs:
           echo "| Summary | ${TOPIC_SUMMARY} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Regular video | \`${TOPIC_SLUG}_learning.mp4\` |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Short | \`${TOPIC_SLUG}_short.mp4\` |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Privacy | ${{ github.event.inputs.privacy || 'private' }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Run date | $(date '+%Y-%m-%d %H:%M UTC') |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Dry run | ${{ github.event.inputs.dry_run }} |" >> "$GITHUB_STEP_SUMMARY"

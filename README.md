@@ -23,6 +23,7 @@ Two separate channels, two separate daily pipelines running on GitHub Actions.
 | Tech Learning — Daily Upload | **9:10 AM EST** every day | `.github/workflows/tech_pipeline.yml` |
 | Latest Tech Topic — Daily Upload | **9:40 AM EST** every day | `.github/workflows/latest_topic_pipeline.yml` |
 | GitHub Page Video Requests | Manual via GitHub Page + issue workflow | `.github/workflows/video_request_issue.yml` + `docs/index.html` |
+| Vercel Video Request Portal | Manual via Vercel form + secure API | `public/index.html` + `api/video-request.js` |
 
 Each pipeline:
 1. Picks today's category via day-of-year rotation
@@ -139,6 +140,31 @@ People can submit:
 The page opens a structured GitHub issue, and the `video_request_issue.yml`
 workflow picks it up and generates the requested video.
 
+### Private repo option with Vercel
+If you want to keep the GitHub repo private, deploy this repo to Vercel instead and use the built-in form/API:
+
+Files:
+- `public/index.html` — shareable request page
+- `api/video-request.js` — secure serverless endpoint that triggers GitHub Actions
+- `vercel.json` — Vercel config
+
+Set these Vercel environment variables:
+- `GITHUB_TOKEN` — GitHub token that can trigger Actions workflows in this repo
+- `GITHUB_OWNER` — repo owner, for example `BNTiyan`
+- `GITHUB_REPO` — repo name, for example `youtube_auto`
+- `GITHUB_WORKFLOW_ID` — optional, default is `latest_topic_pipeline.yml`
+- `GITHUB_REF` — optional branch, default is `main`
+- `VIDEO_REQUEST_ACCESS_CODE` — optional shared code to protect the form
+
+The Vercel form submits:
+1. Topic
+2. Source text
+3. Optional notes
+4. Privacy
+5. Dry run
+
+The backend triggers the existing `latest_topic_pipeline.yml` workflow in GitHub Actions.
+
 ### Upload manually
 ```bash
 # Upload a folder
@@ -180,6 +206,9 @@ youtube_auto/
 ├── animation_utils.py               ← Shared slide zoom/pan/fade helpers
 ├── latest_topic_pipeline.py         ← Fetches today's headlines and builds a tech explainer package
 ├── docs/index.html                  ← GitHub Pages form for video requests
+├── public/index.html                ← Vercel-hosted request form for private repo setup
+├── api/video-request.js             ← Vercel serverless API to trigger GitHub workflow
+├── vercel.json                      ← Vercel project config
 ├── scheduler.py                     ← Local: daily upload scheduler with state tracking
 │
 ├── content_config.json              ← Kids content: 6 categories × 10 items

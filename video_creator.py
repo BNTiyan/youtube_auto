@@ -28,8 +28,8 @@ from typing import Optional
 import numpy as np
 import requests
 from PIL import Image, ImageDraw, ImageFont
-from animation_utils import build_animated_clip
-from tts_utils import create_kids_tts
+from animation_utils import build_animated_clip, safe_clip_duration
+from tts_utils import create_kids_tts, join_spoken_lines
 
 # ── moviepy v1 / v2 compat ────────────────────────────────────────────────────
 try:
@@ -350,7 +350,14 @@ def create_single_item_video(
             image=item_img,
         )
         intro_mp3 = os.path.join(tmp, "intro.mp3")
-        create_tts(f"Hello friends! Today we are going to learn about {name}!", intro_mp3, lang)
+        create_tts(
+            join_spoken_lines(
+                f"Hi friends. Today we're learning about {name}",
+                "Let's get started",
+            ),
+            intro_mp3,
+            lang,
+        )
         clips.append(make_clip(intro_slide, intro_mp3, theme=theme, category=category, animate=(item_img is not None)))
 
         # ── Main content slide ────────────────────────────────────────────────
@@ -362,7 +369,14 @@ def create_single_item_video(
             image=item_img,
         )
         main_mp3 = os.path.join(tmp, "main.mp3")
-        create_tts(f"{name}. {fact}", main_mp3, lang)
+        create_tts(
+            join_spoken_lines(
+                f"This is {name}",
+                fact,
+            ),
+            main_mp3,
+            lang,
+        )
         clips.append(make_clip(main_slide, main_mp3, theme=theme, category=category, animate=(item_img is not None)))
 
         # ── Outro slide ───────────────────────────────────────────────────────
@@ -370,8 +384,12 @@ def create_single_item_video(
         outro_slide = create_outro_slide(category, theme)
         outro_mp3   = os.path.join(tmp, "outro.mp3")
         create_tts(
-            f"Great job! Now you know about {name}! Come back tomorrow for another fun fact!",
-            outro_mp3, lang,
+            join_spoken_lines(
+                f"Great job. Now you know about {name}",
+                "Come back tomorrow for another fun fact",
+            ),
+            outro_mp3,
+            lang,
         )
         clips.append(make_clip(outro_slide, outro_mp3, theme=theme, category=category, animate=False, decorative=True))
 
@@ -595,7 +613,7 @@ def make_clip(slide: np.ndarray, audio_path: str, theme: dict, category: str, an
     animate=False → static image + fade-in          (use for text-only slides)
     """
     audio    = AudioFileClip(audio_path)
-    duration = max(audio.duration + PAUSE_AFTER_AUDIO, MIN_SLIDE_DURATION)
+    duration = safe_clip_duration(audio.duration, PAUSE_AFTER_AUDIO, MIN_SLIDE_DURATION)
     clip = build_animated_clip(
         slide,
         duration=duration,
@@ -632,7 +650,14 @@ def create_kids_video(
             intro_img = fetch_pexels_image(f"{category} {suffix} collection")
         intro_slide = create_intro_slide(category, total, theme, image=intro_img)
         intro_mp3   = os.path.join(tmp, "intro.mp3")
-        create_tts(f"Hello friends! Let's learn about {category}! Get ready!", intro_mp3, lang)
+        create_tts(
+            join_spoken_lines(
+                f"Hi friends. Let's learn about {category}",
+                f"We have {total} fun things to explore today",
+            ),
+            intro_mp3,
+            lang,
+        )
         clips.append(make_clip(intro_slide, intro_mp3, theme=theme, category=category, animate=(intro_img is not None)))
 
         # ── Item slides ──
@@ -651,7 +676,14 @@ def create_kids_video(
             slide    = create_slide(title=name, fact=fact, theme=theme,
                                     counter=counter, image=item_img)
             mp3_path = os.path.join(tmp, f"item_{i}.mp3")
-            create_tts(f"{name}. {fact}", mp3_path, lang)
+            create_tts(
+                join_spoken_lines(
+                    f"Number {i}. {name}",
+                    fact,
+                ),
+                mp3_path,
+                lang,
+            )
             clips.append(make_clip(slide, mp3_path, theme=theme, category=category, animate=(item_img is not None)))
 
         # ── Outro ──
@@ -659,8 +691,12 @@ def create_kids_video(
         outro_slide = create_outro_slide(category, theme)
         outro_mp3   = os.path.join(tmp, "outro.mp3")
         create_tts(
-            f"Amazing work! You learned about {total} {category}! Come back tomorrow for more!",
-            outro_mp3, lang,
+            join_spoken_lines(
+                f"Amazing work. You learned about {total} {category}",
+                "Come back tomorrow for more",
+            ),
+            outro_mp3,
+            lang,
         )
         clips.append(make_clip(outro_slide, outro_mp3, theme=theme, category=category, animate=False, decorative=True))
 

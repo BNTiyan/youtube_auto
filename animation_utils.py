@@ -51,6 +51,18 @@ def _fadein(clip, duration: float = 0.30):
         return clip
 
 
+def safe_clip_duration(
+    audio_duration: float,
+    pause_after_audio: float,
+    min_duration: float,
+    tail_buffer: float = 0.60,
+):
+    """
+    Add a little safety margin after narration so clips don't cut on MP3 edges.
+    """
+    return max(float(audio_duration) + pause_after_audio + tail_buffer, min_duration)
+
+
 def build_animated_clip(
     slide,
     duration: float,

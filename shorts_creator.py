@@ -28,8 +28,8 @@ from typing import Optional
 import numpy as np
 import requests
 from PIL import Image, ImageDraw, ImageFont
-from animation_utils import build_animated_clip
-from tts_utils import create_kids_tts
+from animation_utils import build_animated_clip, safe_clip_duration
+from tts_utils import create_kids_tts, join_spoken_lines
 
 # ── moviepy v1 / v2 compat ────────────────────────────────────────────────────
 try:
@@ -334,7 +334,7 @@ def make_tts(text: str, path: str, lang: str = "en") -> None:
 
 def make_clip(slide: np.ndarray, audio_path: str, animate: bool = False):
     audio    = AudioFileClip(audio_path)
-    duration = max(audio.duration + PAUSE_AFTER_AUDIO, MIN_SLIDE_SEC)
+    duration = safe_clip_duration(audio.duration, PAUSE_AFTER_AUDIO, MIN_SLIDE_SEC)
     clip = build_animated_clip(
         slide,
         duration=duration,
@@ -383,11 +383,18 @@ def create_short(
         if style == "kids":
             intro_title    = "Did you know? 🤔"
             intro_subtitle = f"Today: {name}!"
-            intro_tts      = f"Hello friends! Did you know? Today we are learning about {name}!"
+            intro_tts      = join_spoken_lines(
+                "Hi friends. Did you know",
+                f"Today we're learning about {name}",
+            )
         else:
             intro_title    = "Today's Concept"
             intro_subtitle = name
-            intro_tts      = f"Today's concept: {name} — a key {category} topic. Let's dive in!"
+            intro_tts      = join_spoken_lines(
+                f"Today's concept is {name}",
+                f"It's a key topic in {category}",
+                "Let's dive in",
+            )
 
         intro_slide = create_short_slide(
             title=intro_title, subtitle=intro_subtitle,
@@ -402,10 +409,10 @@ def create_short(
         use_pts = [p for p in points if p][:2]
         if use_pts:
             main_subtitle = "  •  ".join(use_pts)
-            main_tts_text = f"{name}. {'. '.join(use_pts)}"
+            main_tts_text = join_spoken_lines(name, ". ".join(use_pts))
         else:
             main_subtitle = text
-            main_tts_text = f"{name}. {text}"
+            main_tts_text = join_spoken_lines(name, text)
         main_slide = create_short_slide(
             title=name, subtitle=main_subtitle,
             theme=theme, top_label=top_label, image=img,
@@ -419,12 +426,17 @@ def create_short(
         if style == "kids":
             outro_title    = "Great Job! ⭐"
             outro_subtitle = "Come back tomorrow!"
-            outro_tts      = f"Amazing! Now you know about {name}. Come back tomorrow for more!"
+            outro_tts      = join_spoken_lines(
+                f"Amazing. Now you know about {name}",
+                "Come back tomorrow for more",
+            )
         else:
             outro_title    = "See You Tomorrow!"
             outro_subtitle = f"One {category.upper()} concept every day"
-            outro_tts      = (f"Great work! Now you understand {name}. "
-                              "See you tomorrow for another concept!")
+            outro_tts      = join_spoken_lines(
+                f"Great work. Now you understand {name}",
+                "See you tomorrow for another concept",
+            )
 
         outro_slide = create_short_slide(
             title=outro_title, subtitle=outro_subtitle,

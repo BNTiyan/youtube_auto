@@ -8,7 +8,7 @@ YOUTUBE_SCOPES = [
 ]
 
 def main():
-    channel = sys.argv[1] if len(sys.argv) > 1 else "kids"
+    channel = sys.argv[1] if len(sys.argv) > 1 else "tech"
     client_secrets = f"client_secrets_{channel}.json"
     token_file = f"youtube_token_{channel}.json"
     

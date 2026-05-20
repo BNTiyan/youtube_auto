@@ -28,8 +28,8 @@ from typing import Optional
 import numpy as np
 import requests
 from PIL import Image, ImageDraw, ImageFont
-from animation_utils import build_animated_clip
-from tts_utils import create_kids_tts
+from animation_utils import build_animated_clip, safe_clip_duration
+from tts_utils import create_kids_tts, join_spoken_lines
 
 # ── moviepy v1 / v2 compat ────────────────────────────────────────────────────
 try:
@@ -675,9 +675,13 @@ def create_single_concept_video(
         )
         intro_mp3 = os.path.join(tmp, "intro.mp3")
         create_tts(
-            f"Welcome to NavaDisha Tech Learning! "
-            f"Today we are breaking down {name} — an essential {category} concept.",
-            intro_mp3, lang,
+            join_spoken_lines(
+                f"Welcome to NavaDisha Tech Learning",
+                f"Today we're breaking down {name}",
+                f"It's an important idea in {category}",
+            ),
+            intro_mp3,
+            lang,
         )
         clips.append(make_clip(intro_slide, intro_mp3, animate=(item_img is not None)))
 
@@ -691,9 +695,13 @@ def create_single_concept_video(
         )
         main_mp3 = os.path.join(tmp, "main.mp3")
         create_tts(
-            f"So, what is {name}? {explanation} "
-            f"This is one of the core ideas in {category} that every developer should know.",
-            main_mp3, lang,
+            join_spoken_lines(
+                f"So, what is {name}",
+                explanation,
+                f"It's one of the core ideas in {category}",
+            ),
+            main_mp3,
+            lang,
         )
         clips.append(make_clip(main_slide, main_mp3, animate=(item_img is not None)))
 
@@ -709,10 +717,14 @@ def create_single_concept_video(
             points_mp3 = os.path.join(tmp, "points.mp3")
             # Build a natural-sounding TTS from the first 5 points
             pts_tts = [p for p in raw_points if p][:5]
-            pts_text = " ".join(f"Point {i+1}: {p}" for i, p in enumerate(pts_tts))
+            pts_text = " ".join(f"First, {p}" if i == 0 else f"Next, {p}" for i, p in enumerate(pts_tts))
             create_tts(
-                f"Here are the key things to know about {name}. {pts_text}",
-                points_mp3, lang,
+                join_spoken_lines(
+                    f"Here are the key things to know about {name}",
+                    pts_text,
+                ),
+                points_mp3,
+                lang,
             )
             clips.append(make_clip(points_slide, points_mp3, animate=(item_img is not None)))
 
@@ -721,9 +733,12 @@ def create_single_concept_video(
         outro_slide = create_tech_outro(category, theme)
         outro_mp3   = os.path.join(tmp, "outro.mp3")
         create_tts(
-            f"And that is {name} explained! "
-            f"Subscribe to NavaDisha for a new {category} concept every single day. See you tomorrow!",
-            outro_mp3, lang,
+            join_spoken_lines(
+                f"And that's {name} in simple terms",
+                f"Come back for another {category} concept tomorrow",
+            ),
+            outro_mp3,
+            lang,
         )
         clips.append(make_clip(outro_slide, outro_mp3, animate=False))
 
@@ -766,7 +781,7 @@ def create_tts(text: str, out_path: str, lang: str = "en") -> None:
 
 def make_clip(slide: np.ndarray, audio_path: str, animate: bool = False):
     audio = AudioFileClip(audio_path)
-    duration = max(audio.duration + PAUSE_AFTER_AUDIO, MIN_SLIDE_DURATION)
+    duration = safe_clip_duration(audio.duration, PAUSE_AFTER_AUDIO, MIN_SLIDE_DURATION)
     clip = build_animated_clip(
         slide,
         duration=duration,
@@ -800,8 +815,14 @@ def create_tech_video(
             intro_img = fetch_pexels_image(f"{category} technology concept")
         intro_slide = create_tech_intro(category, total, theme, image=intro_img)
         intro_mp3   = os.path.join(tmp, "intro.mp3")
-        create_tts(f"Welcome! In this video you'll learn {total} key {category} concepts. Let's dive in!",
-                   intro_mp3, lang)
+        create_tts(
+            join_spoken_lines(
+                f"Welcome. In this video, you'll learn {total} key {category} concepts",
+                "Let's dive in",
+            ),
+            intro_mp3,
+            lang,
+        )
         clips.append(make_clip(intro_slide, intro_mp3, animate=(intro_img is not None)))
 
         # ── Concept slides ──
@@ -820,7 +841,14 @@ def create_tech_video(
             slide    = create_tech_slide(term=name, explanation=explanation,
                                          theme=theme, counter=counter, image=item_img)
             mp3_path = os.path.join(tmp, f"item_{i}.mp3")
-            create_tts(f"{name}. {explanation}", mp3_path, lang)
+            create_tts(
+                join_spoken_lines(
+                    name,
+                    explanation,
+                ),
+                mp3_path,
+                lang,
+            )
             clips.append(make_clip(slide, mp3_path, animate=(item_img is not None)))
 
         # ── Outro ──
@@ -828,9 +856,12 @@ def create_tech_video(
         outro_slide = create_tech_outro(category, theme)
         outro_mp3   = os.path.join(tmp, "outro.mp3")
         create_tts(
-            f"Great work! You've learned {total} {category} concepts. "
-            "Come back tomorrow for another tech learning concept!",
-            outro_mp3, lang,
+            join_spoken_lines(
+                f"Great work. You learned {total} {category} concepts today",
+                "Come back tomorrow for another tech lesson",
+            ),
+            outro_mp3,
+            lang,
         )
         clips.append(make_clip(outro_slide, outro_mp3, animate=False))
 

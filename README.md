@@ -21,12 +21,19 @@ Two separate channels, two separate daily pipelines running on GitHub Actions.
 |---|---|---|
 | Kids Learning — Daily Upload | **9:00 AM EST** every day | `.github/workflows/kids_pipeline.yml` |
 | Tech Learning — Daily Upload | **9:10 AM EST** every day | `.github/workflows/tech_pipeline.yml` |
+| Latest Tech Topic — Daily Upload | **9:40 AM EST** every day | `.github/workflows/latest_topic_pipeline.yml` |
 
 Each pipeline:
 1. Picks today's category via day-of-year rotation
 2. Generates an animated MP4 slideshow with child-style TTS narration (Pillow + edge-tts/gTTS + moviepy)
 3. Generates SEO metadata (title, description, hashtags) via **Gemini AI**
 4. Uploads directly to YouTube
+
+The latest-topic pipeline differs slightly:
+1. Fetches recent AI/tech headlines from Google News RSS
+2. Uses Gemini AI to choose the best topic for today and turn it into a teachable explainer package
+3. Generates one regular tech video plus one Short from that package
+4. Uploads both to YouTube
 
 ### Manual trigger
 Go to **Actions → Kids/Tech Learning — Daily Upload → Run workflow** in GitHub to trigger immediately and optionally override the category.
@@ -106,6 +113,15 @@ python tech_video_creator.py all             # ai, llm, rag, database, mcp
 python tech_video_creator.py llm             # single category
 ```
 
+### Generate today's latest-topic package
+```bash
+python latest_topic_pipeline.py --source-topic "OpenAI launched a new coding feature" --source-notes "Saw this idea on Instagram today"
+python latest_topic_pipeline.py
+python latest_topic_pipeline.py --source-url "https://example.com/feed-or-profile"
+export LATEST_TOPIC_SOURCE_URL="https://example.com/feed-or-profile"
+bash run_latest_pipeline.sh
+```
+
 ### Upload manually
 ```bash
 # Upload a folder
@@ -145,6 +161,7 @@ youtube_auto/
 ├── video_creator.py                 ← Kids: colorful animated slideshow generator
 ├── tech_video_creator.py            ← Tech: dark professional animated slideshow generator
 ├── animation_utils.py               ← Shared slide zoom/pan/fade helpers
+├── latest_topic_pipeline.py         ← Fetches today's headlines and builds a tech explainer package
 ├── scheduler.py                     ← Local: daily upload scheduler with state tracking
 │
 ├── content_config.json              ← Kids content: 6 categories × 10 items
@@ -157,6 +174,7 @@ youtube_auto/
 │
 ├── run_kids_pipeline.sh             ← Local manual run (kids)
 ├── run_tech_pipeline.sh             ← Local manual run (tech)
+├── run_latest_pipeline.sh           ← Local manual run (latest daily topic)
 └── requirements.txt
 ```
 

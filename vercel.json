@@ -3,7 +3,7 @@
   "cleanUrls": true,
   "builds": [
     { "src": "api/video-request.js", "use": "@vercel/node" },
-    { "src": "public/**", "use": "@vercel/static" }
+    { "src": "index.html", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/api/video-request", "dest": "api/video-request.js" },

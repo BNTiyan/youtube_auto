@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Video Request Portal</title>
+  <style>
+    :root {
+      --bg: #f5efe5;
+      --panel: #fffaf2;
+      --ink: #1f2a37;
+      --muted: #5f6b7a;
+      --line: #dfd2bf;
+      --accent: #b45309;
+      --accent-2: #0f766e;
+      --ok: #166534;
+      --error: #b91c1c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(180, 83, 9, 0.12), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(15, 118, 110, 0.12), transparent 28%),
+        var(--bg);
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 40px 20px 72px;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(255,255,255,0.7);
+    }
+    h1 {
+      font-size: clamp(2.2rem, 5vw, 4.5rem);
+      line-height: 1;
+      margin: 18px 0 14px;
+      max-width: 10ch;
+    }
+    .lead {
+      max-width: 64ch;
+      font-size: 1.05rem;
+      line-height: 1.65;
+      color: var(--muted);
+      margin: 0;
+    }
+    .grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: 1.55fr 0.95fr;
+      margin-top: 28px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(31, 42, 55, 0.06);
+    }
+    label {
+      display: block;
+      font-weight: 700;
+      margin: 18px 0 8px;
+    }
+    input, textarea, select {
+      width: 100%;
+      border: 1px solid #ccbca5;
+      border-radius: 14px;
+      padding: 14px 16px;
+      font: inherit;
+      background: #fff;
+      color: var(--ink);
+    }
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .btn {
+      display: inline-block;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 22px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      transition: transform 140ms ease, opacity 140ms ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: var(--ink);
+      color: #fff;
+    }
+    .actions {
+      margin-top: 22px;
+    }
+    .small {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .steps {
+      padding-left: 18px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .steps li + li { margin-top: 10px; }
+    .status {
+      margin-top: 18px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      display: none;
+      line-height: 1.5;
+    }
+    .status.ok {
+      display: block;
+      background: rgba(22, 101, 52, 0.08);
+      color: var(--ok);
+      border: 1px solid rgba(22, 101, 52, 0.18);
+    }
+    .status.error {
+      display: block;
+      background: rgba(185, 28, 28, 0.08);
+      color: var(--error);
+      border: 1px solid rgba(185, 28, 28, 0.18);
+    }
+    a { color: var(--accent-2); }
+    @media (max-width: 860px) {
+      .grid, .row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="eyebrow">Private Repo Friendly</div>
+    <h1>Submit a topic and text for video creation</h1>
+    <p class="lead">
+      This page sends your request to a secure backend on Vercel, which triggers the private GitHub workflow.
+      Use it to submit a topic, source text, and optional notes without exposing the repository publicly.
+    </p>
+
+    <div class="grid">
+      <section class="panel">
+        <form id="request-form">
+          <label for="topic">Topic</label>
+          <input id="topic" name="topic" placeholder="Example: OpenAI launches a new coding feature" required>
+
+          <label for="sourceText">Source Text</label>
+          <textarea id="sourceText" name="sourceText" placeholder="Paste the text, caption, notes, or summary you want converted into a video." required></textarea>
+
+          <label for="notes">Extra Notes</label>
+          <textarea id="notes" name="notes" placeholder="Optional: desired angle, audience, or what should be emphasized."></textarea>
+
+          <div class="row">
+            <div>
+              <label for="privacy">Upload Privacy</label>
+              <select id="privacy" name="privacy">
+                <option value="private">Private</option>
+                <option value="unlisted">Unlisted</option>
+                <option value="public">Public</option>
+              </select>
+            </div>
+            <div>
+              <label for="dryRun">Dry Run</label>
+              <select id="dryRun" name="dryRun">
+                <option value="false">No</option>
+                <option value="true">Yes</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="accessCode">Access Code</label>
+          <input id="accessCode" name="accessCode" placeholder="Optional if the portal is protected">
+
+          <div class="actions">
+            <button class="btn btn-primary" type="submit">Submit Video Request</button>
+          </div>
+
+          <div id="status" class="status"></div>
+        </form>
+      </section>
+
+      <aside class="panel">
+        <p class="small"><strong>What happens next</strong></p>
+        <ol class="steps">
+          <li>Your request is posted to a secure Vercel API endpoint.</li>
+          <li>The endpoint triggers the private GitHub Actions workflow.</li>
+          <li>The workflow generates a regular video and a Short from your topic and text.</li>
+          <li>You can monitor progress in the GitHub Actions workflow page.</li>
+        </ol>
+
+        <p class="small" style="margin-top: 18px;">
+          Keep the submitted text original or permitted for reuse. The system rewrites it into an educational video package.
+        </p>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("request-form");
+    const statusEl = document.getElementById("status");
+
+    function showStatus(type, message, link) {
+      statusEl.className = `status ${type}`;
+      statusEl.style.display = "block";
+      statusEl.innerHTML = link ? `${message} <a href="${link}" target="_blank" rel="noreferrer">Open workflow</a>` : message;
+    }
+
+    form.addEventListener("submit", async (event) => {
+      event.preventDefault();
+      statusEl.style.display = "none";
+
+      const payload = {
+        topic: document.getElementById("topic").value.trim(),
+        sourceText: document.getElementById("sourceText").value.trim(),
+        notes: document.getElementById("notes").value.trim(),
+        privacy: document.getElementById("privacy").value,
+        dryRun: document.getElementById("dryRun").value,
+        accessCode: document.getElementById("accessCode").value.trim()
+      };
+
+      try {
+        const response = await fetch("/api/video-request", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+        const data = await response.json();
+        if (!response.ok) throw new Error(data.error || "Request failed.");
+        form.reset();
+        showStatus("ok", data.message || "Video request submitted.", data.actionsUrl);
+      } catch (error) {
+        showStatus("error", error.message || "Something went wrong.");
+      }
+    });
+  </script>
+</body>
+</html>

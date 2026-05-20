@@ -10,6 +10,10 @@ on:
         description: 'Manual topic from Instagram or another source'
         required: false
         default: ''
+      source_text:
+        description: 'Main text, caption, or details to turn into a video'
+        required: false
+        default: ''
       source_notes:
         description: 'Optional notes, caption snippet, or angle to guide the video'
         required: false
@@ -68,12 +72,16 @@ jobs:
         id: latest
         run: |
           SOURCE_TOPIC_INPUT="${{ github.event.inputs.source_topic }}"
+          SOURCE_TEXT_INPUT="${{ github.event.inputs.source_text }}"
           SOURCE_NOTES_INPUT="${{ github.event.inputs.source_notes }}"
           SOURCE_URL_INPUT="${{ github.event.inputs.source_url }}"
           QUERY_INPUT="${{ github.event.inputs.query }}"
           CMD=(python latest_topic_pipeline.py)
           if [ -n "$SOURCE_TOPIC_INPUT" ]; then
             CMD+=(--source-topic "$SOURCE_TOPIC_INPUT")
+          fi
+          if [ -n "$SOURCE_TEXT_INPUT" ]; then
+            CMD+=(--source-text "$SOURCE_TEXT_INPUT")
           fi
           if [ -n "$SOURCE_NOTES_INPUT" ]; then
             CMD+=(--source-notes "$SOURCE_NOTES_INPUT")

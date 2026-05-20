@@ -47,6 +47,45 @@ def build_manual_items(source_topic: str, source_notes: str = "") -> list[dict]:
     ]
 
 
+def build_manual_topic_prompt(source_topic: str, source_text: str, source_notes: str, today_label: str) -> str:
+    return f"""You are preparing an original educational YouTube video package from a manually submitted topic.
+
+Today is {today_label}.
+
+Topic:
+{source_topic}
+
+User-provided source text:
+{source_text}
+
+Optional notes:
+{source_notes or "None"}
+
+Return ONLY valid JSON with this exact shape:
+{{
+  "category": "ai",
+  "headline": "Clean source headline based on the topic",
+  "source": "manual_input",
+  "published_at": "{datetime.now(LOCAL_TZ).isoformat()}",
+  "video_topic": "Short clean topic title for the video",
+  "video_summary": "2 to 3 sentence original educational summary based on the user text",
+  "short_text": "1 to 2 short spoken-friendly sentences for a vertical short",
+  "points": ["point 1", "point 2", "point 3", "point 4"],
+  "search_terms": "Pexels-friendly visual search terms",
+  "topic_tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
+}}
+
+Rules:
+- Keep the final package original and educational
+- Preserve the key idea from the user text, but rewrite it clearly
+- category must be one of: ai, llm, rag, database, mcp
+- video_topic must be under 70 characters
+- points must be short and easy to narrate
+- topic_tags must be lowercase
+- if the topic is general AI or product news, prefer category "ai"
+"""
+
+
 def slugify(text: str) -> str:
     text = (text or "").strip().lower().replace(" ", "_").replace("-", "_")
     return text or "latest_topic"
@@ -279,6 +318,26 @@ def choose_topic_with_gemini(headlines: list[dict]) -> dict:
     return data
 
 
+def choose_manual_topic_with_gemini(source_topic: str, source_text: str, source_notes: str) -> dict:
+    if not GEMINI_API_KEY:
+        raise RuntimeError("GEMINI_API_KEY is not set.")
+
+    client = genai.Client(api_key=GEMINI_API_KEY)
+    today_label = datetime.now(LOCAL_TZ).strftime("%B %d, %Y")
+    response = client.models.generate_content(
+        model=DEFAULT_MODEL,
+        contents=build_manual_topic_prompt(source_topic, source_text, source_notes, today_label),
+    )
+    raw = (response.text or "").strip()
+    if raw.startswith("```"):
+        parts = raw.split("```")
+        if len(parts) >= 3:
+            raw = parts[1]
+            if raw.startswith("json"):
+                raw = raw[4:]
+    return json.loads(raw.strip())
+
+
 def fallback_topic(headlines: list[dict]) -> dict:
     chosen = headlines[0]
     title = chosen["title"]
@@ -304,6 +363,27 @@ def fallback_topic(headlines: list[dict]) -> dict:
         ],
         "search_terms": "artificial intelligence technology innovation news",
         "topic_tags": ["ai", "tech news", "today", "artificial intelligence", "explainer"],
+    }
+
+
+def fallback_manual_topic(source_topic: str, source_text: str, source_notes: str) -> dict:
+    merged = normalize_sentence(" ".join(part for part in [source_text, source_notes] if part))
+    return {
+        "category": "ai",
+        "headline": source_topic,
+        "source": "manual_input",
+        "published_at": datetime.now(LOCAL_TZ).isoformat(),
+        "video_topic": source_topic[:68],
+        "video_summary": merged or normalize_sentence(f"{source_topic} is today's topic. In this video, we explain what it means and why it matters."),
+        "short_text": normalize_sentence(f"{source_topic}. Here's the quick version and why it matters."),
+        "points": [
+            "What the topic is about",
+            "Why people are paying attention",
+            "What the main takeaway is",
+            "What to watch next",
+        ],
+        "search_terms": "artificial intelligence technology software innovation",
+        "topic_tags": ["ai", "technology", "explainer", "news", "software"],
     }
 
 
@@ -379,6 +459,7 @@ def write_outputs(output_path: str, topic: dict):
 def main():
     parser = argparse.ArgumentParser(description="Generate today's latest-topic config package.")
     parser.add_argument("--source-topic", default="", help="Manual topic input for today's video")
+    parser.add_argument("--source-text", default="", help="Manual source text to convert into a video")
     parser.add_argument("--source-notes", default="", help="Optional extra notes/context for the manual topic")
     parser.add_argument("--query", default=DEFAULT_QUERY, help="Google News RSS search query")
     parser.add_argument("--source-url", default=DEFAULT_SOURCE_URL, help="Optional public source URL or feed to use as the primary topic source")
@@ -391,7 +472,8 @@ def main():
     args = parser.parse_args()
 
     headlines = []
-    if args.source_topic.strip():
+    manual_mode = bool(args.source_topic.strip())
+    if manual_mode:
         headlines = build_manual_items(args.source_topic, args.source_notes)
         print("✍️  Using manual topic input from workflow.")
     elif args.source_url:
@@ -414,12 +496,28 @@ def main():
         print("❌  No recent headlines found.")
         sys.exit(1)
     try:
-        raw_topic = choose_topic_with_gemini(headlines)
-        print("🤖  Gemini selected today's topic.")
+        if manual_mode:
+            raw_topic = choose_manual_topic_with_gemini(
+                args.source_topic.strip(),
+                args.source_text.strip(),
+                args.source_notes.strip(),
+            )
+            print("🤖  Gemini built the manual topic package.")
+        else:
+            raw_topic = choose_topic_with_gemini(headlines)
+            print("🤖  Gemini selected today's topic.")
     except Exception as e:
         print(f"⚠️   Gemini topic selection failed: {e}")
-        print("     Falling back to the top headline.")
-        raw_topic = fallback_topic(headlines)
+        if manual_mode:
+            print("     Falling back to a local manual package.")
+            raw_topic = fallback_manual_topic(
+                args.source_topic.strip(),
+                args.source_text.strip(),
+                args.source_notes.strip(),
+            )
+        else:
+            print("     Falling back to the top headline.")
+            raw_topic = fallback_topic(headlines)
 
     topic = normalize_topic_package(raw_topic)
     topic["origin_url"] = args.source_url or ""

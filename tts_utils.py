@@ -8,14 +8,14 @@ import re
 
 from gtts import gTTS
 
-KIDS_TTS_VOICE = "en-US-AnaNeural"
-KIDS_TTS_RATE = "+6%"
-KIDS_TTS_PITCH = "+2Hz"
-KIDS_TTS_VOLUME = "+4%"
+KIDS_TTS_VOICE = "en-US-JennyNeural"
+KIDS_TTS_RATE = "-4%"
+KIDS_TTS_PITCH = "-2Hz"
+KIDS_TTS_VOLUME = "+0%"
 _LANG_TO_VOICE = {
-    "en": "en-US-AnaNeural",
-    "en-GB": "en-GB-SoniaNeural",
-    "en-AU": "en-AU-NatashaNeural",
+    "en": "en-US-JennyNeural",
+    "en-GB": "en-GB-LibbyNeural",
+    "en-AU": "en-AU-AnnetteNeural",
 }
 
 
@@ -43,6 +43,18 @@ def join_spoken_lines(*parts: str) -> str:
     return " ".join(cleaned)
 
 
+def join_spoken_points(points: list[str]) -> str:
+    transitions = ["First", "Also", "Another key point", "On top of that", "Finally"]
+    spoken_parts = []
+    for i, point in enumerate(points):
+        point = _normalize_tts_text(point)
+        if not point:
+            continue
+        lead = transitions[min(i, len(transitions) - 1)]
+        spoken_parts.append(f"{lead}, {point}")
+    return " ".join(spoken_parts)
+
+
 async def _async_edge_tts(text: str, path: str, voice: str) -> None:
     import edge_tts
 
@@ -57,7 +69,7 @@ async def _async_edge_tts(text: str, path: str, voice: str) -> None:
 
 def create_kids_tts(text: str, out_path: str, lang: str = "en") -> None:
     """
-    Prefer Microsoft's neural child-like voice with upbeat but natural pacing,
+    Prefer a mature, confident neural female narrator with calm pacing,
     with gTTS as fallback.
     """
     text = _normalize_tts_text(text)

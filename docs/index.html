@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Video Request Portal</title>
+  <style>
+    :root {
+      --bg: #f5efe5;
+      --panel: #fffaf2;
+      --ink: #1f2a37;
+      --muted: #5f6b7a;
+      --line: #dfd2bf;
+      --accent: #b45309;
+      --accent-2: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(180, 83, 9, 0.12), transparent 32%),
+        radial-gradient(circle at bottom right, rgba(15, 118, 110, 0.12), transparent 28%),
+        var(--bg);
+    }
+    .wrap {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 40px 20px 72px;
+    }
+    .hero {
+      margin-bottom: 24px;
+    }
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(255,255,255,0.65);
+    }
+    h1 {
+      font-size: clamp(2.3rem, 5vw, 4.4rem);
+      line-height: 0.98;
+      margin: 18px 0 14px;
+      max-width: 10ch;
+    }
+    p.lead {
+      max-width: 62ch;
+      font-size: 1.08rem;
+      line-height: 1.65;
+      color: var(--muted);
+      margin: 0;
+    }
+    .grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: 1.5fr 0.9fr;
+      margin-top: 28px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 12px 30px rgba(31, 42, 55, 0.06);
+    }
+    label {
+      display: block;
+      font-weight: 700;
+      margin: 18px 0 8px;
+    }
+    input, textarea, select {
+      width: 100%;
+      border: 1px solid #ccbca5;
+      border-radius: 14px;
+      padding: 14px 16px;
+      font: inherit;
+      background: #fff;
+      color: var(--ink);
+    }
+    textarea {
+      min-height: 150px;
+      resize: vertical;
+      line-height: 1.5;
+    }
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .btn {
+      display: inline-block;
+      border: 0;
+      border-radius: 999px;
+      padding: 14px 22px;
+      font: inherit;
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 140ms ease, opacity 140ms ease;
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary {
+      background: var(--ink);
+      color: #fff;
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--accent-2);
+      border: 1px solid rgba(15, 118, 110, 0.35);
+    }
+    .actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 22px;
+    }
+    .small {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+    .steps {
+      padding-left: 18px;
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .steps li + li { margin-top: 10px; }
+    code {
+      background: rgba(31,42,55,0.06);
+      padding: 2px 6px;
+      border-radius: 6px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 0.92em;
+    }
+    .footer-link {
+      margin-top: 18px;
+      display: inline-block;
+      color: var(--accent-2);
+    }
+    @media (max-width: 840px) {
+      .grid, .row {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div class="eyebrow">GitHub Page Video Intake</div>
+      <h1>Turn a topic and text into a video request</h1>
+      <p class="lead">
+        Share this page with collaborators. They can submit a topic, paste source text or notes,
+        and GitHub Actions will turn the request into a video generation job through a structured GitHub issue.
+      </p>
+    </div>
+
+    <div class="grid">
+      <section class="panel">
+        <form id="request-form">
+          <label for="topic">Topic</label>
+          <input id="topic" name="topic" placeholder="Example: OpenAI launches a new coding feature" required>
+
+          <label for="text">Source Text</label>
+          <textarea id="text" name="text" placeholder="Paste the key text, caption, script idea, or summary here." required></textarea>
+
+          <label for="notes">Extra Notes</label>
+          <textarea id="notes" name="notes" placeholder="Optional: desired angle, audience, or what matters most."></textarea>
+
+          <div class="row">
+            <div>
+              <label for="privacy">Upload Privacy</label>
+              <select id="privacy" name="privacy">
+                <option value="private">Private</option>
+                <option value="unlisted">Unlisted</option>
+                <option value="public">Public</option>
+              </select>
+            </div>
+            <div>
+              <label for="dryrun">Dry Run</label>
+              <select id="dryrun" name="dryrun">
+                <option value="false">No</option>
+                <option value="true">Yes</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="actions">
+            <button class="btn btn-primary" type="submit">Create Video Request</button>
+            <button class="btn btn-secondary" type="button" id="copy-link">Copy Prefilled Link</button>
+          </div>
+        </form>
+      </section>
+
+      <aside class="panel">
+        <p class="small"><strong>How it works</strong></p>
+        <ol class="steps">
+          <li>Fill in the topic and the text you want converted into a video.</li>
+          <li>The button opens a prefilled GitHub issue labeled <code>video-request</code>.</li>
+          <li>Submit the issue on GitHub.</li>
+          <li>A workflow picks it up, generates the video and Short, and comments back on the issue.</li>
+        </ol>
+
+        <p class="small" style="margin-top:18px;">
+          The generated content should be original. Use this page to submit ideas or source material you have permission to use.
+        </p>
+
+        <a class="footer-link" href="https://github.com/BNTiyan/youtube_auto/issues" target="_blank" rel="noreferrer">
+          View submitted requests on GitHub
+        </a>
+      </aside>
+    </div>
+  </div>
+
+  <script>
+    const repoIssueBase = "https://github.com/BNTiyan/youtube_auto/issues/new";
+
+    function buildIssueBody(values) {
+      return [
+        "<!-- video-request -->",
+        "## Topic",
+        values.topic,
+        "",
+        "## Source Text",
+        values.text,
+        "",
+        "## Notes",
+        values.notes || "None",
+        "",
+        "## Privacy",
+        values.privacy,
+        "",
+        "## Dry Run",
+        values.dryrun
+      ].join("\n");
+    }
+
+    function readValues() {
+      return {
+        topic: document.getElementById("topic").value.trim(),
+        text: document.getElementById("text").value.trim(),
+        notes: document.getElementById("notes").value.trim(),
+        privacy: document.getElementById("privacy").value,
+        dryrun: document.getElementById("dryrun").value
+      };
+    }
+
+    function buildUrl() {
+      const values = readValues();
+      const title = `Video request: ${values.topic || "New topic"}`;
+      const body = buildIssueBody(values);
+      const params = new URLSearchParams({
+        title,
+        labels: "video-request",
+        body
+      });
+      return `${repoIssueBase}?${params.toString()}`;
+    }
+
+    document.getElementById("request-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      window.open(buildUrl(), "_blank", "noopener,noreferrer");
+    });
+
+    document.getElementById("copy-link").addEventListener("click", async () => {
+      const url = buildUrl();
+      try {
+        await navigator.clipboard.writeText(url);
+        alert("Prefilled request link copied.");
+      } catch (err) {
+        window.prompt("Copy this prefilled issue URL:", url);
+      }
+    });
+  </script>
+</body>
+</html>

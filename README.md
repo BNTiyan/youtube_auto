@@ -22,6 +22,7 @@ Two separate channels, two separate daily pipelines running on GitHub Actions.
 | Kids Learning — Daily Upload | **9:00 AM EST** every day | `.github/workflows/kids_pipeline.yml` |
 | Tech Learning — Daily Upload | **9:10 AM EST** every day | `.github/workflows/tech_pipeline.yml` |
 | Latest Tech Topic — Daily Upload | **9:40 AM EST** every day | `.github/workflows/latest_topic_pipeline.yml` |
+| GitHub Page Video Requests | Manual via GitHub Page + issue workflow | `.github/workflows/video_request_issue.yml` + `docs/index.html` |
 
 Each pipeline:
 1. Picks today's category via day-of-year rotation
@@ -122,6 +123,22 @@ export LATEST_TOPIC_SOURCE_URL="https://example.com/feed-or-profile"
 bash run_latest_pipeline.sh
 ```
 
+### Shareable request page
+After enabling GitHub Pages for this repo, share:
+
+```text
+https://bntiyan.github.io/youtube_auto/
+```
+
+People can submit:
+1. Topic
+2. Source text
+3. Optional notes
+4. Privacy and dry-run preference
+
+The page opens a structured GitHub issue, and the `video_request_issue.yml`
+workflow picks it up and generates the requested video.
+
 ### Upload manually
 ```bash
 # Upload a folder
@@ -162,6 +179,7 @@ youtube_auto/
 ├── tech_video_creator.py            ← Tech: dark professional animated slideshow generator
 ├── animation_utils.py               ← Shared slide zoom/pan/fade helpers
 ├── latest_topic_pipeline.py         ← Fetches today's headlines and builds a tech explainer package
+├── docs/index.html                  ← GitHub Pages form for video requests
 ├── scheduler.py                     ← Local: daily upload scheduler with state tracking
 │
 ├── content_config.json              ← Kids content: 6 categories × 10 items

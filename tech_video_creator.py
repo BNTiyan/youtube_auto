@@ -29,7 +29,7 @@ import numpy as np
 import requests
 from PIL import Image, ImageDraw, ImageFont
 from animation_utils import build_animated_clip, safe_clip_duration
-from tts_utils import create_kids_tts, join_spoken_lines
+from tts_utils import create_kids_tts, join_spoken_lines, join_spoken_points
 
 # ── moviepy v1 / v2 compat ────────────────────────────────────────────────────
 try:
@@ -717,7 +717,7 @@ def create_single_concept_video(
             points_mp3 = os.path.join(tmp, "points.mp3")
             # Build a natural-sounding TTS from the first 5 points
             pts_tts = [p for p in raw_points if p][:5]
-            pts_text = " ".join(f"First, {p}" if i == 0 else f"Next, {p}" for i, p in enumerate(pts_tts))
+            pts_text = join_spoken_points(pts_tts)
             create_tts(
                 join_spoken_lines(
                     f"Here are the key things to know about {name}",

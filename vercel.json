@@ -8,6 +8,6 @@
   "routes": [
     { "src": "/api/video-request", "dest": "api/video-request.js" },
     { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/public/index.html" }
+    { "src": "/.*", "dest": "/index.html" }
   ]
 }

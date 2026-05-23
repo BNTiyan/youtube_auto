@@ -100,11 +100,24 @@ jobs:
 
       - name: Build topic package
         id: package
+        env:
+          REQUEST_TOPIC: ${{ steps.request.outputs.topic }}
+          REQUEST_SOURCE_TEXT: ${{ steps.request.outputs.source_text }}
+          REQUEST_NOTES: ${{ steps.request.outputs.notes }}
         run: |
-          python latest_topic_pipeline.py \
-            --source-topic "${{ steps.request.outputs.topic }}" \
-            --source-text "${{ steps.request.outputs.source_text }}" \
-            --source-notes "${{ steps.request.outputs.notes }}"
+          python - <<'PY'
+          import os
+          import subprocess
+
+          cmd = [
+              "python",
+              "latest_topic_pipeline.py",
+              "--source-topic", os.environ["REQUEST_TOPIC"],
+              "--source-text", os.environ.get("REQUEST_SOURCE_TEXT", ""),
+              "--source-notes", os.environ.get("REQUEST_NOTES", ""),
+          ]
+          subprocess.run(cmd, check=True)
+          PY
 
       - name: Generate regular video
         env:

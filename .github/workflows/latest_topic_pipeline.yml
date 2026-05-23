@@ -10,6 +10,14 @@ on:
         description: 'Manual topic from Instagram or another source'
         required: false
         default: ''
+      channel:
+        description: 'Target channel'
+        required: false
+        type: choice
+        options:
+          - navadisha
+          - childishdreamer
+        default: navadisha
       source_text:
         description: 'Main text, caption, or details to turn into a video'
         required: false
@@ -27,6 +35,16 @@ on:
           - unlisted
           - public
         default: private
+      language:
+        description: 'Narration language'
+        required: false
+        type: choice
+        options:
+          - en
+          - hi
+          - en-GB
+          - en-AU
+        default: en
       source_url:
         description: 'Optional public source URL or feed to use as the primary topic source'
         required: false
@@ -73,54 +91,89 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Decode YouTube credentials (Tech account)
+        if: ${{ github.event.inputs.channel != 'childishdreamer' }}
         run: |
           echo '${{ secrets.YOUTUBE_CLIENT_SECRETS_TECH_B64 }}' | base64 -d > client_secrets.json
           echo '${{ secrets.YOUTUBE_TOKEN_TECH_B64 }}'           | base64 -d > youtube_token.json
 
+      - name: Decode YouTube credentials (Kids account)
+        if: ${{ github.event.inputs.channel == 'childishdreamer' }}
+        run: |
+          echo '${{ secrets.YOUTUBE_CLIENT_SECRETS_KIDS_B64 }}' | base64 -d > client_secrets.json
+          echo '${{ secrets.YOUTUBE_TOKEN_KIDS_B64 }}'           | base64 -d > youtube_token.json
+
       - name: Pick today's latest topic
         id: latest
+        env:
+          CHANNEL_INPUT: ${{ github.event.inputs.channel }}
+          SOURCE_TOPIC_INPUT: ${{ github.event.inputs.source_topic }}
+          SOURCE_TEXT_INPUT: ${{ github.event.inputs.source_text }}
+          SOURCE_NOTES_INPUT: ${{ github.event.inputs.source_notes }}
+          LANGUAGE_INPUT: ${{ github.event.inputs.language }}
+          SOURCE_URL_INPUT: ${{ github.event.inputs.source_url }}
+          QUERY_INPUT: ${{ github.event.inputs.query }}
         run: |
-          SOURCE_TOPIC_INPUT="${{ github.event.inputs.source_topic }}"
-          SOURCE_TEXT_INPUT="${{ github.event.inputs.source_text }}"
-          SOURCE_NOTES_INPUT="${{ github.event.inputs.source_notes }}"
-          SOURCE_URL_INPUT="${{ github.event.inputs.source_url }}"
-          QUERY_INPUT="${{ github.event.inputs.query }}"
-          CMD=(python latest_topic_pipeline.py)
-          if [ -n "$SOURCE_TOPIC_INPUT" ]; then
-            CMD+=(--source-topic "$SOURCE_TOPIC_INPUT")
-          fi
-          if [ -n "$SOURCE_TEXT_INPUT" ]; then
-            CMD+=(--source-text "$SOURCE_TEXT_INPUT")
-          fi
-          if [ -n "$SOURCE_NOTES_INPUT" ]; then
-            CMD+=(--source-notes "$SOURCE_NOTES_INPUT")
-          fi
-          if [ -n "$SOURCE_URL_INPUT" ]; then
-            CMD+=(--source-url "$SOURCE_URL_INPUT")
-          fi
-          if [ -n "$QUERY_INPUT" ]; then
-            CMD+=(--query "$QUERY_INPUT")
-          fi
-          "${CMD[@]}"
+          python - <<'PY'
+          import os
+          import subprocess
+
+          cmd = ["python", "latest_topic_pipeline.py"]
+          mappings = [
+              ("CHANNEL_INPUT", "--channel"),
+              ("SOURCE_TOPIC_INPUT", "--source-topic"),
+              ("SOURCE_TEXT_INPUT", "--source-text"),
+              ("SOURCE_NOTES_INPUT", "--source-notes"),
+              ("LANGUAGE_INPUT", "--lang"),
+              ("SOURCE_URL_INPUT", "--source-url"),
+              ("QUERY_INPUT", "--query"),
+          ]
+          for env_name, flag in mappings:
+              value = os.environ.get(env_name, "")
+              if value:
+                  cmd.extend([flag, value])
+
+          subprocess.run(cmd, check=True)
+          PY
 
       - name: Generate regular video — ${{ steps.latest.outputs.topic_name }}
+        if: ${{ github.event.inputs.channel != 'childishdreamer' }}
         env:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_CATEGORY: ${{ steps.latest.outputs.topic_category }}
           CONFIG_PATH: ${{ steps.latest.outputs.config_path }}
+          LANGUAGE: ${{ github.event.inputs.language || 'en' }}
         run: |
           mkdir -p latest_videos
           python tech_video_creator.py \
             --item "$TOPIC_NAME" \
             --cat "$TOPIC_CATEGORY" \
             --config "$CONFIG_PATH" \
-            --output-dir latest_videos
+            --output-dir latest_videos \
+            --lang "$LANGUAGE"
 
-      - name: Generate short — ${{ steps.latest.outputs.topic_name }}
+      - name: Generate regular video for ChildishDreamer — ${{ steps.latest.outputs.topic_name }}
+        if: ${{ github.event.inputs.channel == 'childishdreamer' }}
         env:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_CATEGORY: ${{ steps.latest.outputs.topic_category }}
           CONFIG_PATH: ${{ steps.latest.outputs.config_path }}
+          LANGUAGE: ${{ github.event.inputs.language || 'en' }}
+        run: |
+          mkdir -p latest_videos
+          python video_creator.py \
+            --item "$TOPIC_NAME" \
+            --cat "$TOPIC_CATEGORY" \
+            --config "$CONFIG_PATH" \
+            --output-dir latest_videos \
+            --lang "$LANGUAGE"
+
+      - name: Generate short — ${{ steps.latest.outputs.topic_name }}
+        if: ${{ github.event.inputs.channel != 'childishdreamer' }}
+        env:
+          TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
+          TOPIC_CATEGORY: ${{ steps.latest.outputs.topic_category }}
+          CONFIG_PATH: ${{ steps.latest.outputs.config_path }}
+          LANGUAGE: ${{ github.event.inputs.language || 'en' }}
         run: |
           mkdir -p latest_shorts
           python shorts_creator.py \
@@ -128,10 +181,72 @@ jobs:
             --cat "$TOPIC_CATEGORY" \
             --config "$CONFIG_PATH" \
             --style tech \
-            --output-dir latest_shorts
+            --output-dir latest_shorts \
+            --lang "$LANGUAGE"
 
-      - name: Upload regular video to YouTube
+      - name: Generate short for ChildishDreamer — ${{ steps.latest.outputs.topic_name }}
+        if: ${{ github.event.inputs.channel == 'childishdreamer' }}
+        env:
+          TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
+          TOPIC_CATEGORY: ${{ steps.latest.outputs.topic_category }}
+          CONFIG_PATH: ${{ steps.latest.outputs.config_path }}
+          LANGUAGE: ${{ github.event.inputs.language || 'en' }}
+        run: |
+          mkdir -p latest_shorts
+          python shorts_creator.py \
+            --item "$TOPIC_NAME" \
+            --cat "$TOPIC_CATEGORY" \
+            --config "$CONFIG_PATH" \
+            --style kids \
+            --output-dir latest_shorts \
+            --lang "$LANGUAGE"
+
+      - name: Upload short to YouTube
         if: ${{ github.event.inputs.dry_run != 'true' }}
+        env:
+          TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
+          TOPIC_SLUG: ${{ steps.latest.outputs.topic_slug }}
+          TOPIC_HEADLINE: ${{ steps.latest.outputs.topic_headline }}
+          PRIVACY: ${{ github.event.inputs.privacy || 'private' }}
+        run: |
+          if [ "${{ github.event.inputs.channel }}" = "childishdreamer" ]; then
+            VIDEO="latest_shorts/${TOPIC_SLUG}_short.mp4"
+            python youtube_auto.py "$VIDEO" \
+              --topic    "${TOPIC_NAME} #Shorts" \
+              --niche    "Kids Education Shorts" \
+              --tone     "fun, simple and educational for children. Short vertical video." \
+              --category 27 \
+              --made-for-kids \
+              --privacy  "$PRIVACY"
+          else
+            VIDEO="latest_shorts/${TOPIC_SLUG}_short.mp4"
+            python youtube_auto.py "$VIDEO" \
+              --topic    "${TOPIC_NAME} #Shorts" \
+              --niche    "Latest AI and Technology News Shorts" \
+              --tone     "timely, clear and educational for developers. Short vertical video." \
+              --category 28 \
+              --privacy  "$PRIVACY"
+          fi
+
+      - name: Upload regular video for ChildishDreamer
+        if: ${{ github.event.inputs.dry_run != 'true' && github.event.inputs.channel == 'childishdreamer' }}
+        env:
+          TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
+          TOPIC_SLUG: ${{ steps.latest.outputs.topic_slug }}
+          TOPIC_HEADLINE: ${{ steps.latest.outputs.topic_headline }}
+          PRIVACY: ${{ github.event.inputs.privacy || 'private' }}
+        run: |
+          VIDEO="latest_videos/${TOPIC_SLUG}_learning.mp4"
+          python youtube_auto.py "$VIDEO" \
+            --topic    "${TOPIC_NAME}" \
+            --niche    "Kids Education" \
+            --tone     "fun, simple and educational for children" \
+            --category 27 \
+            --made-for-kids \
+            --privacy  "$PRIVACY"
+
+      - name: Upload regular video to NavaDisha
+        if: ${{ github.event.inputs.dry_run != 'true' && github.event.inputs.channel != 'childishdreamer' }}
         env:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_SLUG: ${{ steps.latest.outputs.topic_slug }}
@@ -146,22 +261,6 @@ jobs:
             --category 28 \
             --privacy  "$PRIVACY"
 
-      - name: Upload short to YouTube
-        if: ${{ github.event.inputs.dry_run != 'true' }}
-        env:
-          TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
-          TOPIC_SLUG: ${{ steps.latest.outputs.topic_slug }}
-          TOPIC_HEADLINE: ${{ steps.latest.outputs.topic_headline }}
-          PRIVACY: ${{ github.event.inputs.privacy || 'private' }}
-        run: |
-          VIDEO="latest_shorts/${TOPIC_SLUG}_short.mp4"
-          python youtube_auto.py "$VIDEO" \
-            --topic    "${TOPIC_NAME} #Shorts" \
-            --niche    "Latest AI and Technology News Shorts" \
-            --tone     "timely, clear and educational for developers. Short vertical video." \
-            --category 28 \
-            --privacy  "$PRIVACY"
-
       - name: Dry run notice
         if: ${{ github.event.inputs.dry_run == 'true' }}
         run: |
@@ -172,6 +271,7 @@ jobs:
         env:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_SLUG: ${{ steps.latest.outputs.topic_slug }}
+          TOPIC_CHANNEL: ${{ github.event.inputs.channel || 'navadisha' }}
           TOPIC_CATEGORY: ${{ steps.latest.outputs.topic_category }}
           TOPIC_HEADLINE: ${{ steps.latest.outputs.topic_headline }}
           TOPIC_SOURCE: ${{ steps.latest.outputs.topic_source }}
@@ -182,6 +282,7 @@ jobs:
           echo "| Field | Value |" >> "$GITHUB_STEP_SUMMARY"
           echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
           echo "| Topic | **${TOPIC_NAME}** |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Channel | \`${TOPIC_CHANNEL}\` |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Category | \`${TOPIC_CATEGORY}\` |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Headline | ${TOPIC_HEADLINE} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Source | ${TOPIC_SOURCE} |" >> "$GITHUB_STEP_SUMMARY"
@@ -190,5 +291,6 @@ jobs:
           echo "| Regular video | \`${TOPIC_SLUG}_learning.mp4\` |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Short | \`${TOPIC_SLUG}_short.mp4\` |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Privacy | ${{ github.event.inputs.privacy || 'private' }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Language | ${{ github.event.inputs.language || 'en' }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Run date | $(date '+%Y-%m-%d %H:%M UTC') |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Dry run | ${{ github.event.inputs.dry_run }} |" >> "$GITHUB_STEP_SUMMARY"

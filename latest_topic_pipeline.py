@@ -31,6 +31,7 @@ DEFAULT_QUERY = (
 DEFAULT_MODEL = "gemini-2.5-flash"
 LOCAL_TZ = ZoneInfo("America/Detroit")
 DEFAULT_SOURCE_URL = os.environ.get("LATEST_TOPIC_SOURCE_URL", "")
+DEFAULT_CHANNEL = "navadisha"
 
 
 def build_manual_items(source_topic: str, source_notes: str = "") -> list[dict]:
@@ -387,9 +388,12 @@ def fallback_manual_topic(source_topic: str, source_text: str, source_notes: str
     }
 
 
-def normalize_topic_package(data: dict) -> dict:
+def normalize_topic_package(data: dict, channel: str = DEFAULT_CHANNEL) -> dict:
+    channel = (channel or DEFAULT_CHANNEL).lower()
     category = data.get("category", "ai").lower()
-    if category not in {"ai", "llm", "rag", "database", "mcp"}:
+    if channel == "childishdreamer":
+        category = "general"
+    elif category not in {"ai", "llm", "rag", "database", "mcp"}:
         category = "ai"
 
     video_topic = (data.get("video_topic") or "Latest AI Topic").strip()
@@ -405,6 +409,7 @@ def normalize_topic_package(data: dict) -> dict:
 
     topic_slug = slugify(video_topic)
     package = {
+        "channel": channel,
         "category": category,
         "video_topic": video_topic,
         "topic_slug": topic_slug,
@@ -444,6 +449,7 @@ def write_outputs(output_path: str, topic: dict):
         "config_path": output_path,
         "topic_name": topic["video_topic"],
         "topic_slug": topic["topic_slug"],
+        "topic_channel": topic.get("channel", DEFAULT_CHANNEL),
         "topic_category": topic["category"],
         "topic_headline": topic["headline"],
         "topic_source": topic["source"],
@@ -458,6 +464,8 @@ def write_outputs(output_path: str, topic: dict):
 
 def main():
     parser = argparse.ArgumentParser(description="Generate today's latest-topic config package.")
+    parser.add_argument("--channel", default=DEFAULT_CHANNEL, help="Target channel: navadisha or childishdreamer")
+    parser.add_argument("--lang", default="en", help="Narration language hint carried through the workflow")
     parser.add_argument("--source-topic", default="", help="Manual topic input for today's video")
     parser.add_argument("--source-text", default="", help="Manual source text to convert into a video")
     parser.add_argument("--source-notes", default="", help="Optional extra notes/context for the manual topic")
@@ -470,6 +478,10 @@ def main():
         help="Where to write the generated config package",
     )
     args = parser.parse_args()
+    channel = (args.channel or DEFAULT_CHANNEL).strip().lower()
+    if channel not in {"navadisha", "childishdreamer"}:
+        print(f"❌  Unsupported channel: {channel}")
+        sys.exit(1)
 
     headlines = []
     manual_mode = bool(args.source_topic.strip())
@@ -519,7 +531,7 @@ def main():
             print("     Falling back to the top headline.")
             raw_topic = fallback_topic(headlines)
 
-    topic = normalize_topic_package(raw_topic)
+    topic = normalize_topic_package(raw_topic, channel=channel)
     topic["origin_url"] = args.source_url or ""
     output_path = os.path.abspath(args.output)
     Path(output_path).parent.mkdir(parents=True, exist_ok=True)

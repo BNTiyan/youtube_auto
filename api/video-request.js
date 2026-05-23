@@ -28,7 +28,9 @@ module.exports = async (req, res) => {
   const topic = String(body.topic || "").trim();
   const sourceText = String(body.sourceText || "").trim();
   const notes = String(body.notes || "").trim();
+  const channel = String(body.channel || "navadisha").trim().toLowerCase();
   const privacy = String(body.privacy || "private").trim().toLowerCase();
+  const language = String(body.language || "en").trim();
   const dryRun = String(body.dryRun || "false").trim().toLowerCase();
   const accessCode = String(body.accessCode || "").trim();
 
@@ -40,6 +42,12 @@ module.exports = async (req, res) => {
   }
   if (!["private", "unlisted", "public"].includes(privacy)) {
     return res.status(400).json({ error: "Invalid privacy value." });
+  }
+  if (!["navadisha", "childishdreamer"].includes(channel)) {
+    return res.status(400).json({ error: "Invalid channel value." });
+  }
+  if (!["en", "hi", "en-GB", "en-AU"].includes(language)) {
+    return res.status(400).json({ error: "Invalid language value." });
   }
   if (VIDEO_REQUEST_ACCESS_CODE && accessCode !== VIDEO_REQUEST_ACCESS_CODE) {
     return res.status(403).json({ error: "Invalid access code." });
@@ -58,10 +66,12 @@ module.exports = async (req, res) => {
       body: JSON.stringify({
         ref: GITHUB_REF,
         inputs: {
+          channel,
           source_topic: topic,
           source_text: sourceText,
           source_notes: notes,
           privacy,
+          language,
           dry_run: dryRun === "true" ? "true" : "false",
         },
       }),

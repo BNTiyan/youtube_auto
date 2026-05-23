@@ -160,8 +160,10 @@ The Vercel form submits:
 1. Topic
 2. Source text
 3. Optional notes
-4. Privacy
-5. Dry run
+4. Channel (`navadisha` or `childishdreamer`)
+5. Privacy
+6. Language
+7. Dry run
 
 The backend triggers the existing `latest_topic_pipeline.yml` workflow in GitHub Actions.
 

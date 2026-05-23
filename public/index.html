@@ -174,6 +174,13 @@
 
           <div class="row">
             <div>
+              <label for="channel">Channel</label>
+              <select id="channel" name="channel">
+                <option value="navadisha">NavaDisha</option>
+                <option value="childishdreamer">ChildishDreamer</option>
+              </select>
+            </div>
+            <div>
               <label for="privacy">Upload Privacy</label>
               <select id="privacy" name="privacy">
                 <option value="private">Private</option>
@@ -181,6 +188,18 @@
                 <option value="public">Public</option>
               </select>
             </div>
+            <div>
+              <label for="language">Narration Language</label>
+              <select id="language" name="language">
+                <option value="en">English</option>
+                <option value="hi">Hindi</option>
+                <option value="en-GB">English (UK)</option>
+                <option value="en-AU">English (Australia)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
             <div>
               <label for="dryRun">Dry Run</label>
               <select id="dryRun" name="dryRun">
@@ -235,7 +254,9 @@
         topic: document.getElementById("topic").value.trim(),
         sourceText: document.getElementById("sourceText").value.trim(),
         notes: document.getElementById("notes").value.trim(),
+        channel: document.getElementById("channel").value,
         privacy: document.getElementById("privacy").value,
+        language: document.getElementById("language").value,
         dryRun: document.getElementById("dryRun").value,
         accessCode: document.getElementById("accessCode").value.trim()
       };

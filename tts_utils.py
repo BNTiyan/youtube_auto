@@ -8,14 +8,37 @@ import re
 
 from gtts import gTTS
 
-KIDS_TTS_VOICE = "en-IN-PrabhatIndicNeural"
+KIDS_TTS_VOICE = "en-IN-PrabhatNeural"
 KIDS_TTS_RATE = "-2%"
 KIDS_TTS_PITCH = "-1Hz"
 KIDS_TTS_VOLUME = "+0%"
-_LANG_TO_VOICE = {
-    "en": "en-IN-PrabhatIndicNeural",
-    "en-GB": "en-IN-PrabhatIndicNeural",
-    "en-AU": "en-IN-PrabhatIndicNeural",
+_LANG_TO_VOICES = {
+    "en": [
+        "en-IN-PrabhatNeural",
+        "en-IN-NeerjaNeural",
+        "en-US-GuyNeural",
+    ],
+    "hi": [
+        "hi-IN-MadhurNeural",
+        "hi-IN-SwaraNeural",
+        "en-IN-PrabhatNeural",
+    ],
+    "en-GB": [
+        "en-GB-RyanNeural",
+        "en-IN-PrabhatNeural",
+        "en-US-GuyNeural",
+    ],
+    "en-AU": [
+        "en-AU-WilliamNeural",
+        "en-IN-PrabhatNeural",
+        "en-US-GuyNeural",
+    ],
+}
+_GTTS_LANG = {
+    "en": "en",
+    "hi": "hi",
+    "en-GB": "en",
+    "en-AU": "en",
 }
 
 
@@ -67,16 +90,26 @@ async def _async_edge_tts(text: str, path: str, voice: str) -> None:
     ).save(path)
 
 
+def _candidate_voices(lang: str) -> list[str]:
+    voices = list(_LANG_TO_VOICES.get(lang, []))
+    if KIDS_TTS_VOICE not in voices:
+        voices.append(KIDS_TTS_VOICE)
+    return voices
+
+
 def create_kids_tts(text: str, out_path: str, lang: str = "en") -> None:
     """
-    Prefer a mature, confident neural female narrator with calm pacing,
-    with gTTS as fallback.
+    Prefer a mature Indian English neural narrator, with gTTS as fallback.
     """
     text = _normalize_tts_text(text)
-    voice = _LANG_TO_VOICE.get(lang, KIDS_TTS_VOICE)
-    try:
-        asyncio.run(_async_edge_tts(text, out_path, voice))
-        return
-    except Exception as e:
-        print(f"    ⚠️  edge-tts failed ({e}), falling back to gTTS")
-    gTTS(text=text, lang=lang, slow=False).save(out_path)
+    last_error = None
+    for voice in _candidate_voices(lang):
+        try:
+            asyncio.run(_async_edge_tts(text, out_path, voice))
+            return
+        except Exception as e:
+            last_error = e
+    if last_error is not None:
+        print(f"    ⚠️  edge-tts failed ({last_error}), falling back to gTTS")
+    gtts_lang = _GTTS_LANG.get(lang, "en")
+    gTTS(text=text, lang=gtts_lang, slow=False).save(out_path)

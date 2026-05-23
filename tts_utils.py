@@ -8,14 +8,14 @@ import re
 
 from gtts import gTTS
 
-KIDS_TTS_VOICE = "en-US-JennyNeural"
-KIDS_TTS_RATE = "-4%"
-KIDS_TTS_PITCH = "-2Hz"
+KIDS_TTS_VOICE = "en-IN-PrabhatIndicNeural"
+KIDS_TTS_RATE = "-2%"
+KIDS_TTS_PITCH = "-1Hz"
 KIDS_TTS_VOLUME = "+0%"
 _LANG_TO_VOICE = {
-    "en": "en-US-JennyNeural",
-    "en-GB": "en-GB-LibbyNeural",
-    "en-AU": "en-AU-AnnetteNeural",
+    "en": "en-IN-PrabhatIndicNeural",
+    "en-GB": "en-IN-PrabhatIndicNeural",
+    "en-AU": "en-IN-PrabhatIndicNeural",
 }
 
 

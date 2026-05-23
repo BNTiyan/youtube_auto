@@ -32,6 +32,8 @@ DEFAULT_MODEL = "gemini-2.5-flash"
 LOCAL_TZ = ZoneInfo("America/Detroit")
 DEFAULT_SOURCE_URL = os.environ.get("LATEST_TOPIC_SOURCE_URL", "")
 DEFAULT_CHANNEL = "navadisha"
+TELUGU_CHAR_RE = re.compile(r"[\u0C00-\u0C7F]")
+TIMESTAMP_RE = re.compile(r"^\s*\d{1,2}:\d{2}\s*[–-]\s*\d{1,2}:\d{2}\s*$")
 
 
 def build_manual_items(source_topic: str, source_notes: str = "") -> list[dict]:
@@ -84,6 +86,7 @@ Rules:
 - points must be short and easy to narrate
 - topic_tags must be lowercase
 - if the topic is general AI or product news, prefer category "ai"
+- preserve the language of the user-provided text
 """
 
 
@@ -98,6 +101,109 @@ def normalize_sentence(text: str) -> str:
     if text and text[-1] not in ".!?":
         text += "."
     return text
+
+
+def detect_language(source_text: str, requested_lang: str = "en") -> str:
+    requested_lang = (requested_lang or "en").strip()
+    if requested_lang != "en":
+        return requested_lang
+    if TELUGU_CHAR_RE.search(source_text or ""):
+        return "te"
+    return requested_lang
+
+
+def _clean_script_line(line: str) -> str:
+    line = (line or "").strip()
+    if not line:
+        return ""
+    if TIMESTAMP_RE.match(line):
+        return ""
+    if line.startswith("*") and line.endswith("*"):
+        return ""
+    line = re.sub(r"[✨🌟😨💔🙏📖]+", "", line).strip()
+    line = line.strip('"').strip("“”")
+    return line
+
+
+def _excerpt(text: str, limit: int = 180) -> str:
+    text = re.sub(r"\s+", " ", (text or "").strip())
+    if len(text) <= limit:
+        return text
+    clipped = text[:limit].rsplit(" ", 1)[0].strip()
+    return f"{clipped}..."
+
+
+def extract_manual_sections(source_text: str) -> list[dict]:
+    lines = source_text.splitlines()
+    sections = []
+    current = None
+
+    for raw_line in lines:
+        line = raw_line.rstrip()
+        if TIMESTAMP_RE.match(line.strip()):
+            if current and current.get("narration"):
+                sections.append(current)
+            current = {"timestamp": line.strip(), "heading": "", "narration_lines": []}
+            continue
+
+        if current is None:
+            continue
+
+        cleaned = _clean_script_line(line)
+        if not cleaned:
+            continue
+
+        if not current["heading"]:
+            current["heading"] = cleaned
+        else:
+            current["narration_lines"].append(cleaned)
+
+    if current and current.get("narration_lines"):
+        sections.append(current)
+
+    normalized = []
+    for idx, section in enumerate(sections, 1):
+        narration = "\n".join(section.get("narration_lines", [])).strip()
+        if not narration:
+            continue
+        heading = section.get("heading") or f"Section {idx}"
+        normalized.append(
+            {
+                "title": heading,
+                "timestamp": section.get("timestamp", ""),
+                "narration": narration,
+                "slide_text": _excerpt(narration, limit=150),
+            }
+        )
+    return normalized
+
+
+def build_manual_script_package(source_topic: str, source_text: str, source_notes: str, channel: str, lang: str) -> dict:
+    sections = extract_manual_sections(source_text)
+    merged_notes = normalize_sentence(source_notes) if source_notes else ""
+    summary_source = sections[0]["narration"] if sections else source_text
+    video_summary = _excerpt(re.sub(r"\s+", " ", summary_source), limit=220)
+    points = [section["title"] for section in sections[:5]] or [
+        "Main idea",
+        "Important moment",
+        "Key takeaway",
+    ]
+    category = "general" if channel == "childishdreamer" else "ai"
+    return {
+        "category": category,
+        "headline": source_topic,
+        "source": "manual_script",
+        "published_at": datetime.now(LOCAL_TZ).isoformat(),
+        "video_topic": source_topic[:68],
+        "video_summary": video_summary,
+        "short_text": video_summary,
+        "points": points,
+        "search_terms": source_topic,
+        "topic_tags": ["manual", "script", "explainer", "story"],
+        "sections": sections,
+        "language": lang,
+        "notes": merged_notes,
+    }
 
 
 def _looks_like_feed(content_type: str, text: str) -> bool:
@@ -400,6 +506,7 @@ def normalize_topic_package(data: dict, channel: str = DEFAULT_CHANNEL) -> dict:
     summary = normalize_sentence(data.get("video_summary") or "")
     short_text = normalize_sentence(data.get("short_text") or summary)
     points = [normalize_sentence(p) for p in data.get("points", []) if p]
+    sections = [section for section in data.get("sections", []) if section]
     if not points:
         points = [
             "What happened today.",
@@ -419,6 +526,8 @@ def normalize_topic_package(data: dict, channel: str = DEFAULT_CHANNEL) -> dict:
         "video_summary": summary,
         "short_text": short_text,
         "points": points[:5],
+        "sections": sections,
+        "language": (data.get("language") or "en").strip() or "en",
         "search_terms": (data.get("search_terms") or video_topic).strip(),
         "topic_tags": [str(t).strip().lower() for t in data.get("topic_tags", []) if str(t).strip()][:8],
     }
@@ -434,6 +543,8 @@ def normalize_topic_package(data: dict, channel: str = DEFAULT_CHANNEL) -> dict:
                     "headline": package["headline"],
                     "source": package["source"],
                     "published_at": package["published_at"],
+                    "sections": package["sections"],
+                    "language": package["language"],
                 }
             ]
         }
@@ -451,6 +562,7 @@ def write_outputs(output_path: str, topic: dict):
         "topic_slug": topic["topic_slug"],
         "topic_channel": topic.get("channel", DEFAULT_CHANNEL),
         "topic_category": topic["category"],
+        "topic_language": topic.get("language", "en"),
         "topic_headline": topic["headline"],
         "topic_source": topic["source"],
         "topic_summary": topic["video_summary"],
@@ -482,6 +594,7 @@ def main():
     if channel not in {"navadisha", "childishdreamer"}:
         print(f"❌  Unsupported channel: {channel}")
         sys.exit(1)
+    lang = detect_language(args.source_text.strip(), args.lang)
 
     headlines = []
     manual_mode = bool(args.source_topic.strip())
@@ -509,14 +622,27 @@ def main():
         sys.exit(1)
     try:
         if manual_mode:
-            raw_topic = choose_manual_topic_with_gemini(
-                args.source_topic.strip(),
-                args.source_text.strip(),
-                args.source_notes.strip(),
-            )
-            print("🤖  Gemini built the manual topic package.")
+            source_text = args.source_text.strip()
+            if len(source_text) >= 500 or extract_manual_sections(source_text):
+                raw_topic = build_manual_script_package(
+                    args.source_topic.strip(),
+                    source_text,
+                    args.source_notes.strip(),
+                    channel=channel,
+                    lang=lang,
+                )
+                print("🧾  Preserved the manual script as multi-section narration.")
+            else:
+                raw_topic = choose_manual_topic_with_gemini(
+                    args.source_topic.strip(),
+                    source_text,
+                    args.source_notes.strip(),
+                )
+                raw_topic["language"] = lang
+                print("🤖  Gemini built the manual topic package.")
         else:
             raw_topic = choose_topic_with_gemini(headlines)
+            raw_topic["language"] = lang
             print("🤖  Gemini selected today's topic.")
     except Exception as e:
         print(f"⚠️   Gemini topic selection failed: {e}")
@@ -527,9 +653,11 @@ def main():
                 args.source_text.strip(),
                 args.source_notes.strip(),
             )
+            raw_topic["language"] = lang
         else:
             print("     Falling back to the top headline.")
             raw_topic = fallback_topic(headlines)
+            raw_topic["language"] = lang
 
     topic = normalize_topic_package(raw_topic, channel=channel)
     topic["origin_url"] = args.source_url or ""

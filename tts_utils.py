@@ -23,6 +23,11 @@ _LANG_TO_VOICES = {
         "hi-IN-SwaraNeural",
         "en-IN-PrabhatNeural",
     ],
+    "te": [
+        "te-IN-ShrutiNeural",
+        "en-IN-PrabhatNeural",
+        "en-IN-NeerjaNeural",
+    ],
     "en-GB": [
         "en-GB-RyanNeural",
         "en-IN-PrabhatNeural",
@@ -37,6 +42,7 @@ _LANG_TO_VOICES = {
 _GTTS_LANG = {
     "en": "en",
     "hi": "hi",
+    "te": "te",
     "en-GB": "en",
     "en-AU": "en",
 }

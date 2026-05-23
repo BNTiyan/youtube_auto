@@ -46,7 +46,7 @@ module.exports = async (req, res) => {
   if (!["navadisha", "childishdreamer"].includes(channel)) {
     return res.status(400).json({ error: "Invalid channel value." });
   }
-  if (!["en", "hi", "en-GB", "en-AU"].includes(language)) {
+  if (!["en", "te", "hi", "en-GB", "en-AU"].includes(language)) {
     return res.status(400).json({ error: "Invalid language value." });
   }
   if (VIDEO_REQUEST_ACCESS_CODE && accessCode !== VIDEO_REQUEST_ACCESS_CODE) {

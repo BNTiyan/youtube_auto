@@ -638,6 +638,28 @@ def create_tech_outro(category: str, theme: dict) -> np.ndarray:
     )
 
 
+def _chunk_script_text(text: str, max_chars: int = 380) -> list[str]:
+    text = re.sub(r"\s+", " ", (text or "").strip())
+    if not text:
+        return []
+    sentences = re.split(r"(?<=[.!?।])\s+", text)
+    chunks = []
+    current = ""
+    for sentence in sentences:
+        sentence = sentence.strip()
+        if not sentence:
+            continue
+        candidate = f"{current} {sentence}".strip() if current else sentence
+        if current and len(candidate) > max_chars:
+            chunks.append(current.strip())
+            current = sentence
+        else:
+            current = candidate
+    if current:
+        chunks.append(current.strip())
+    return chunks or [text]
+
+
 # ── SINGLE-CONCEPT VIDEO ──────────────────────────────────────────────────────
 
 def create_single_concept_video(
@@ -655,6 +677,7 @@ def create_single_concept_video(
     name        = item["name"]
     explanation = item.get("explanation", f"{name} is a key concept in tech.")
     raw_points  = item.get("points", [])
+    sections    = [section for section in item.get("sections", []) if isinstance(section, dict)]
     clips       = []
 
     with tempfile.TemporaryDirectory() as tmp:
@@ -665,82 +688,112 @@ def create_single_concept_video(
             print(f"  🖼️  Fetching image for {name}...")
             item_img = get_tech_image(name)
 
-        # ── Slide 1: Intro ────────────────────────────────────────────────────
-        print("  Creating intro slide...")
-        intro_slide = create_tech_slide(
-            term=f"Today: {name}",
-            explanation=f"Leveling up your {category.upper()} knowledge — one concept at a time",
-            theme=theme,
-            image=item_img,
-        )
-        intro_mp3 = os.path.join(tmp, "intro.mp3")
-        create_tts(
-            join_spoken_lines(
-                f"Welcome to NavaDisha Tech Learning",
-                f"Today we're breaking down {name}",
-                f"It's an important idea in {category}",
-            ),
-            intro_mp3,
-            lang,
-        )
-        clips.append(make_clip(intro_slide, intro_mp3, animate=(item_img is not None)))
-
-        # ── Slide 2: Concept explanation ──────────────────────────────────────
-        print("  Creating concept slide...")
-        main_slide = create_tech_slide(
-            term=name,
-            explanation=explanation,
-            theme=theme,
-            image=item_img,
-        )
-        main_mp3 = os.path.join(tmp, "main.mp3")
-        create_tts(
-            join_spoken_lines(
-                f"So, what is {name}",
-                explanation,
-                f"It's one of the core ideas in {category}",
-            ),
-            main_mp3,
-            lang,
-        )
-        clips.append(make_clip(main_slide, main_mp3, animate=(item_img is not None)))
-
-        # ── Slide 3: Key points ───────────────────────────────────────────────
-        if raw_points:
-            print("  Creating key points slide...")
-            points_slide = create_points_slide(
+        if sections:
+            print("  Creating intro slide...")
+            intro_slide = create_tech_slide(
                 term=name,
-                points=raw_points,
+                explanation=sections[0].get("title", explanation),
                 theme=theme,
                 image=item_img,
             )
-            points_mp3 = os.path.join(tmp, "points.mp3")
-            # Build a natural-sounding TTS from the first 5 points
-            pts_tts = [p for p in raw_points if p][:5]
-            pts_text = join_spoken_points(pts_tts)
+            intro_mp3 = os.path.join(tmp, "intro.mp3")
             create_tts(
-                join_spoken_lines(
-                    f"Here are the key things to know about {name}",
-                    pts_text,
-                ),
-                points_mp3,
+                sections[0].get("title", name),
+                intro_mp3,
                 lang,
             )
-            clips.append(make_clip(points_slide, points_mp3, animate=(item_img is not None)))
+            clips.append(make_clip(intro_slide, intro_mp3, animate=(item_img is not None)))
 
-        # ── Slide 4: Outro ────────────────────────────────────────────────────
-        print("  Creating outro slide...")
-        outro_slide = create_tech_outro(category, theme)
-        outro_mp3   = os.path.join(tmp, "outro.mp3")
-        create_tts(
-            join_spoken_lines(
-                f"And that's {name} in simple terms",
-                f"Come back for another {category} concept tomorrow",
-            ),
-            outro_mp3,
-            lang,
-        )
-        clips.append(make_clip(outro_slide, outro_mp3, animate=False))
+            for section_idx, section in enumerate(sections, 1):
+                title = section.get("title") or f"Part {section_idx}"
+                narration_chunks = _chunk_script_text(section.get("narration", ""), max_chars=340)
+                for chunk_idx, chunk in enumerate(narration_chunks, 1):
+                    print(f"  Creating script slide {section_idx}.{chunk_idx}...")
+                    slide = create_tech_slide(
+                        term=title,
+                        explanation=section.get("slide_text") or chunk,
+                        theme=theme,
+                        image=item_img,
+                    )
+                    mp3_path = os.path.join(tmp, f"section_{section_idx}_{chunk_idx}.mp3")
+                    create_tts(chunk, mp3_path, lang)
+                    clips.append(make_clip(slide, mp3_path, animate=(item_img is not None)))
+        else:
+            # ── Slide 1: Intro ────────────────────────────────────────────────────
+            print("  Creating intro slide...")
+            intro_slide = create_tech_slide(
+                term=f"Today: {name}",
+                explanation=f"Leveling up your {category.upper()} knowledge — one concept at a time",
+                theme=theme,
+                image=item_img,
+            )
+            intro_mp3 = os.path.join(tmp, "intro.mp3")
+            create_tts(
+                join_spoken_lines(
+                    f"Welcome to NavaDisha Tech Learning",
+                    f"Today we're breaking down {name}",
+                    f"It's an important idea in {category}",
+                ),
+                intro_mp3,
+                lang,
+            )
+            clips.append(make_clip(intro_slide, intro_mp3, animate=(item_img is not None)))
+
+            # ── Slide 2: Concept explanation ──────────────────────────────────────
+            print("  Creating concept slide...")
+            main_slide = create_tech_slide(
+                term=name,
+                explanation=explanation,
+                theme=theme,
+                image=item_img,
+            )
+            main_mp3 = os.path.join(tmp, "main.mp3")
+            create_tts(
+                join_spoken_lines(
+                    f"So, what is {name}",
+                    explanation,
+                    f"It's one of the core ideas in {category}",
+                ),
+                main_mp3,
+                lang,
+            )
+            clips.append(make_clip(main_slide, main_mp3, animate=(item_img is not None)))
+
+            # ── Slide 3: Key points ───────────────────────────────────────────────
+            if raw_points:
+                print("  Creating key points slide...")
+                points_slide = create_points_slide(
+                    term=name,
+                    points=raw_points,
+                    theme=theme,
+                    image=item_img,
+                )
+                points_mp3 = os.path.join(tmp, "points.mp3")
+                pts_tts = [p for p in raw_points if p][:5]
+                pts_text = join_spoken_points(pts_tts)
+                create_tts(
+                    join_spoken_lines(
+                        f"Here are the key things to know about {name}",
+                        pts_text,
+                    ),
+                    points_mp3,
+                    lang,
+                )
+                clips.append(make_clip(points_slide, points_mp3, animate=(item_img is not None)))
+
+            # ── Slide 4: Outro ────────────────────────────────────────────────────
+            print("  Creating outro slide...")
+            outro_slide = create_tech_outro(category, theme)
+            outro_mp3   = os.path.join(tmp, "outro.mp3")
+            create_tts(
+                join_spoken_lines(
+                    f"And that's {name} in simple terms",
+                    f"Come back for another {category} concept tomorrow",
+                ),
+                outro_mp3,
+                lang,
+            )
+            clips.append(make_clip(outro_slide, outro_mp3, animate=False))
 
         # ── Render ────────────────────────────────────────────────────────────
         print(f"\n  Rendering → {output_path}")

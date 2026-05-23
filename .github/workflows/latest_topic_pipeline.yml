@@ -41,6 +41,7 @@ on:
         type: choice
         options:
           - en
+          - te
           - hi
           - en-GB
           - en-AU
@@ -141,7 +142,7 @@ jobs:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_CATEGORY: ${{ steps.latest.outputs.topic_category }}
           CONFIG_PATH: ${{ steps.latest.outputs.config_path }}
-          LANGUAGE: ${{ github.event.inputs.language || 'en' }}
+          LANGUAGE: ${{ steps.latest.outputs.topic_language || github.event.inputs.language || 'en' }}
         run: |
           mkdir -p latest_videos
           python tech_video_creator.py \
@@ -157,7 +158,7 @@ jobs:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_CATEGORY: ${{ steps.latest.outputs.topic_category }}
           CONFIG_PATH: ${{ steps.latest.outputs.config_path }}
-          LANGUAGE: ${{ github.event.inputs.language || 'en' }}
+          LANGUAGE: ${{ steps.latest.outputs.topic_language || github.event.inputs.language || 'en' }}
         run: |
           mkdir -p latest_videos
           python video_creator.py \
@@ -173,7 +174,7 @@ jobs:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_CATEGORY: ${{ steps.latest.outputs.topic_category }}
           CONFIG_PATH: ${{ steps.latest.outputs.config_path }}
-          LANGUAGE: ${{ github.event.inputs.language || 'en' }}
+          LANGUAGE: ${{ steps.latest.outputs.topic_language || github.event.inputs.language || 'en' }}
         run: |
           mkdir -p latest_shorts
           python shorts_creator.py \
@@ -190,7 +191,7 @@ jobs:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_CATEGORY: ${{ steps.latest.outputs.topic_category }}
           CONFIG_PATH: ${{ steps.latest.outputs.config_path }}
-          LANGUAGE: ${{ github.event.inputs.language || 'en' }}
+          LANGUAGE: ${{ steps.latest.outputs.topic_language || github.event.inputs.language || 'en' }}
         run: |
           mkdir -p latest_shorts
           python shorts_creator.py \
@@ -273,6 +274,7 @@ jobs:
           TOPIC_SLUG: ${{ steps.latest.outputs.topic_slug }}
           TOPIC_CHANNEL: ${{ github.event.inputs.channel || 'navadisha' }}
           TOPIC_CATEGORY: ${{ steps.latest.outputs.topic_category }}
+          TOPIC_LANGUAGE: ${{ steps.latest.outputs.topic_language || github.event.inputs.language || 'en' }}
           TOPIC_HEADLINE: ${{ steps.latest.outputs.topic_headline }}
           TOPIC_SOURCE: ${{ steps.latest.outputs.topic_source }}
           TOPIC_SUMMARY: ${{ steps.latest.outputs.topic_summary }}
@@ -291,6 +293,6 @@ jobs:
           echo "| Regular video | \`${TOPIC_SLUG}_learning.mp4\` |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Short | \`${TOPIC_SLUG}_short.mp4\` |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Privacy | ${{ github.event.inputs.privacy || 'private' }} |" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Language | ${{ github.event.inputs.language || 'en' }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Language | ${TOPIC_LANGUAGE} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Run date | $(date '+%Y-%m-%d %H:%M UTC') |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Dry run | ${{ github.event.inputs.dry_run }} |" >> "$GITHUB_STEP_SUMMARY"

@@ -92,6 +92,45 @@
       grid-template-columns: 1fr 1fr;
       gap: 14px;
     }
+    .row-3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 14px;
+    }
+    .choice-panel {
+      margin-top: 18px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.75), rgba(244, 236, 224, 0.85));
+    }
+    .choice-title {
+      margin: 0 0 6px;
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .helper {
+      margin: 6px 0 0;
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .mode-card {
+      margin-top: 18px;
+      padding: 18px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(180, 83, 9, 0.12), rgba(15, 118, 110, 0.12));
+      border: 1px solid rgba(31, 42, 55, 0.12);
+    }
+    .mode-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+    .mode-card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+    }
     .btn {
       display: inline-block;
       border: 0;
@@ -145,7 +184,7 @@
       color: var(--accent-2);
     }
     @media (max-width: 860px) {
-      .grid, .row {
+      .grid, .row, .row-3 {
         grid-template-columns: 1fr;
       }
     }
@@ -172,30 +211,44 @@
           <label for="notes">Extra Notes</label>
           <textarea id="notes" name="notes" placeholder="Optional: desired angle, audience, or what should be emphasized."></textarea>
 
-          <div class="row">
-            <div>
-              <label for="channel">Channel</label>
-              <select id="channel" name="channel">
-                <option value="navadisha">NavaDisha</option>
-                <option value="childishdreamer">ChildishDreamer</option>
-              </select>
+          <div class="choice-panel">
+            <p class="choice-title">Video Setup</p>
+            <p class="helper">Choose where the video should go and how the narration should sound.</p>
+
+            <div class="row-3">
+              <div>
+                <label for="channel">Channel</label>
+                <select id="channel" name="channel">
+                  <option value="navadisha">NavaDisha</option>
+                  <option value="childishdreamer">ChildishDreamer</option>
+                </select>
+                <p class="helper">`NavaDisha` is the tech/explainer channel. `ChildishDreamer` is the kids/story format.</p>
+              </div>
+              <div>
+                <label for="language">Narration Language</label>
+                <select id="language" name="language">
+                  <option value="en">English</option>
+                  <option value="te">Telugu</option>
+                  <option value="hi">Hindi</option>
+                  <option value="en-GB">English (UK)</option>
+                  <option value="en-AU">English (Australia)</option>
+                </select>
+                <p class="helper">Telugu scripts can stay in Telugu instead of being turned into English.</p>
+              </div>
+              <div>
+                <label for="privacy">Upload Privacy</label>
+                <select id="privacy" name="privacy">
+                  <option value="private">Private</option>
+                  <option value="unlisted">Unlisted</option>
+                  <option value="public">Public</option>
+                </select>
+                <p class="helper">Use `Private` for testing and `Unlisted` when you want to review before publishing.</p>
+              </div>
             </div>
-            <div>
-              <label for="privacy">Upload Privacy</label>
-              <select id="privacy" name="privacy">
-                <option value="private">Private</option>
-                <option value="unlisted">Unlisted</option>
-                <option value="public">Public</option>
-              </select>
-            </div>
-            <div>
-              <label for="language">Narration Language</label>
-              <select id="language" name="language">
-                <option value="en">English</option>
-                <option value="hi">Hindi</option>
-                <option value="en-GB">English (UK)</option>
-                <option value="en-AU">English (Australia)</option>
-              </select>
+
+            <div class="mode-card" id="modeCard">
+              <h3 id="modeTitle">NavaDisha selected</h3>
+              <p id="modeDescription">This mode creates a tech-style explainer video and short with a more professional presentation.</p>
             </div>
           </div>
 
@@ -239,12 +292,28 @@
   <script>
     const form = document.getElementById("request-form");
     const statusEl = document.getElementById("status");
+    const channelEl = document.getElementById("channel");
+    const modeTitleEl = document.getElementById("modeTitle");
+    const modeDescriptionEl = document.getElementById("modeDescription");
+
+    function updateModeCard() {
+      if (channelEl.value === "childishdreamer") {
+        modeTitleEl.textContent = "ChildishDreamer selected";
+        modeDescriptionEl.textContent = "This mode creates a kids-focused story or learning video with playful styling and a matching Short.";
+      } else {
+        modeTitleEl.textContent = "NavaDisha selected";
+        modeDescriptionEl.textContent = "This mode creates a tech-style explainer video and short with a more professional presentation.";
+      }
+    }
 
     function showStatus(type, message, link) {
       statusEl.className = `status ${type}`;
       statusEl.style.display = "block";
       statusEl.innerHTML = link ? `${message} <a href="${link}" target="_blank" rel="noreferrer">Open workflow</a>` : message;
     }
+
+    updateModeCard();
+    channelEl.addEventListener("change", updateModeCard);
 
     form.addEventListener("submit", async (event) => {
       event.preventDefault();

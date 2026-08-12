@@ -1,5 +1,5 @@
 {
-  "file_idx": 8,
+  "file_idx": 9,
   "file_item_idx": {
     "airplanes": 16,
     "animals": 16,
@@ -9,7 +9,7 @@
     "fruits": 16,
     "planets": 16,
     "shapes": 16,
-    "stars": 15,
+    "stars": 16,
     "vegetables": 15
   }
 }

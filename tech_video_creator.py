@@ -496,26 +496,6 @@ def create_single_concept_video(
                     create_tts(chunk, mp3_path, lang)
                     clips.append(make_clip(slide, mp3_path, animate=(item_img is not None)))
         else:
-            # ── Slide 1: Intro ────────────────────────────────────────────────────
-            print("  Creating intro slide...")
-            intro_slide = create_tech_slide(
-                term=f"Today: {name}",
-                explanation=f"Leveling up your {category.upper()} knowledge — one concept at a time",
-                theme=theme,
-                image=item_img,
-            )
-            intro_mp3 = os.path.join(tmp, "intro.mp3")
-            create_tts(
-                join_spoken_lines(
-                    f"Welcome to NavaDisha Tech Learning",
-                    f"Today we're breaking down {name}",
-                    f"It's an important idea in {category}",
-                ),
-                intro_mp3,
-                lang,
-            )
-            clips.append(make_clip(intro_slide, intro_mp3, animate=(item_img is not None)))
-
             # ── Slide 2: Concept explanation ──────────────────────────────────────
             print("  Creating concept slide...")
             main_slide = create_tech_slide(
@@ -529,7 +509,6 @@ def create_single_concept_video(
                 join_spoken_lines(
                     f"So, what is {name}",
                     explanation,
-                    f"It's one of the core ideas in {category}",
                 ),
                 main_mp3,
                 lang,
@@ -557,20 +536,6 @@ def create_single_concept_video(
                     lang,
                 )
                 clips.append(make_clip(points_slide, points_mp3, animate=(item_img is not None)))
-
-            # ── Slide 4: Outro ────────────────────────────────────────────────────
-            print("  Creating outro slide...")
-            outro_slide = create_tech_outro(category, theme)
-            outro_mp3   = os.path.join(tmp, "outro.mp3")
-            create_tts(
-                join_spoken_lines(
-                    f"And that's {name} in simple terms",
-                    f"Come back for another {category} concept tomorrow",
-                ),
-                outro_mp3,
-                lang,
-            )
-            clips.append(make_clip(outro_slide, outro_mp3, animate=False))
 
         # ── Render ────────────────────────────────────────────────────────────
         print(f"\n  Rendering → {output_path}")

@@ -78,7 +78,7 @@ class TechScene:
             for y in range(32, 720, 40):
                 d.ellipse((x, y, x+1, y+1), fill=(31, 40, 57))
         d.line((64, 96, 1216, 96), fill=(43, 53, 73), width=1)
-        d.text((64, 40), 'NAVADISHA  /  TECH EXPLAINED', font=self.font(19), fill=(165, 180, 204))
+        d.text((64, 40), 'TECH EXPLAINED', font=self.font(19), fill=(165, 180, 204))
         d.text((64, 675), 'IDEAS MADE SIMPLE', font=self.font(16), fill=(119, 137, 162))
         return image
 

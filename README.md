@@ -364,3 +364,12 @@ include common animals, fruits, vegetables, cars, and airplanes. Unsupported
 subjects get a labeled word card, never a guessed animal or logo. Landscape
 kids videos can opt into stock photos with `KIDS_STOCK_IMAGES=1`; kids Shorts
 use local illustrations.
+
+
+Shorts now use complete standalone explanations, with one complete sentence per
+scene and enough time for the full narration plus a reading pause. All captions
+are measured to fit the portrait text panel; oversized text raises an error
+instead of silently dropping lines. Long inputs are summarized by the configured
+LLM into a source-grounded script. Each Short saves a `_script.json` sidecar for
+review. The renderer does not trim the finished video mid-sentence. Tech videos
+use a neutral topic header and no NavaDisha spoken welcome.

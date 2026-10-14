@@ -54,3 +54,6 @@ generated/
 videos/*preview*.png
 videos/animated_contact_sheet.png
 videos/runner_online.png
+
+# Narrated local verification output
+videos/short_content_preview/

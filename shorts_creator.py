@@ -5,7 +5,7 @@ YouTube Shorts Creator — Vertical 1080×1920 portrait videos.
 Generates mobile-first educational Shorts for kids (animals/fruits/cars/…)
 and tech (AI/LLM/RAG/…) content.
 
-YouTube auto-detects vertical videos ≤ 60 sec as Shorts — no special flag needed.
+Narration and text are kept complete; videos are never trimmed mid-sentence.
 
 Usage:
     python shorts_creator.py --item Lion    --cat animals
@@ -18,6 +18,7 @@ import os
 import json
 import argparse
 import textwrap
+import re
 import tempfile
 import random
 import glob
@@ -296,32 +297,25 @@ def create_short_slide(
         draw.rounded_rectangle([px1, py1, px2, py2], radius=34, fill=theme["card"])
         draw.text((px1 + pad, py1 + pad // 2), top_label, font=lf, fill=theme["accent"])
 
-    # ── 3. Accent line above title ────────────────────────────────────────────
-    margin   = 70
-    title_y  = HEIGHT - 680
-    line_y   = title_y - 28
-    draw.line([(margin, line_y), (WIDTH - margin, line_y)],
-              fill=theme["accent"], width=5)
-
-    # ── 4. Title (auto-size to fit) ───────────────────────────────────────────
-    title_font = _auto_size_font(draw, title, max_w=WIDTH - margin * 2,
-                                 start_size=170, min_size=70)
-    _draw_centered(draw, title, title_font, title_y, theme["text"],
-                   stroke_fill=(0, 0, 0), stroke_width=7)
-
-    # ── 5. Subtitle / fact lines ──────────────────────────────────────────────
-    sub_font  = load_font(62)
-    # Narrower wrap for large titles to avoid crowding
-    title_px  = _text_w(draw, title, title_font)
-    max_chars = 22 if title_px > WIDTH * 0.7 else 28
-    wrapped   = textwrap.wrap(subtitle, width=max_chars)
-    sub_y     = title_y + title_font.size + 28 if hasattr(title_font, "size") else title_y + 180
-    for line in wrapped[:3]:
-        lw_px = _text_w(draw, line, sub_font)
-        x     = (WIDTH - lw_px) // 2
-        draw.text((x, sub_y), line, font=sub_font, fill=theme["accent"],
-                  stroke_width=5, stroke_fill=(0, 0, 0))
-        sub_y += 84
+    # Fit every line by pixel width and height instead of discarding wrapped text.
+    from motion_design import wrap_pixels
+    def draw_fitted(text, y, height, start_size, color):
+        for size in range(start_size, 27, -2):
+            font = load_font(size)
+            lines = wrap_pixels(draw, text, font, WIDTH - 160)
+            if len(lines) * (size + 16) <= height and all(draw.textlength(line, font=font) <= WIDTH-160 for line in lines):
+                break
+        else:
+            raise ValueError("Short text cannot fit legibly. Use shorter complete sentences.")
+        for line in lines:
+            x = (WIDTH - draw.textlength(line, font=font)) / 2
+            draw.text((x, y), line, font=font, fill=color, stroke_width=1, stroke_fill=theme["bg"])
+            y += size + 16
+    # Opaque text panel keeps illustrations and captions separate.
+    draw.rounded_rectangle((40, 1190, WIDTH-40, 1805), radius=32, fill=theme["card"])
+    draw_fitted(title, 1225, 200, 84, theme["text"])
+    draw.line((80, 1440, WIDTH-80, 1440), fill=theme["accent"], width=3)
+    draw_fitted(subtitle, 1470, 300, 54, theme["text"])
 
     return np.array(base)
 
@@ -348,6 +342,38 @@ def make_clip(slide: np.ndarray, audio_path: str, animate: bool = False):
 
 # ── SHORT VIDEO BUILDER ───────────────────────────────────────────────────────
 
+def build_short_script(name, text, points=None, source_text=""):
+    """Return a complete source-grounded explanation, with no stock intro/outro."""
+    from tts_utils import join_spoken_lines
+    parts = [str(text).strip()] + [str(p).strip() for p in (points or []) if p]
+    parts = list(dict.fromkeys(p for p in parts if p))
+    script = join_spoken_lines(*parts)
+    if not script:
+        raise ValueError("A Short needs a factual explanation, not just a topic name")
+    if len(script.split()) > 95 or any(p.endswith(('...', '…')) for p in parts):
+        from llm_client import generate_json
+        data = generate_json(
+            f"Write a complete standalone educational Short about {name}. "
+            "Use only the source below. Explain the idea, give a concrete detail or example, "
+            "and end with a useful takeaway. Write 45 to 85 words in 3 to 5 complete, short sentences. "
+            "Preserve the source language. No branding, greetings, subscribe requests, "
+            "unsupported facts, ellipses, or unfinished sentences. Return JSON with one string field: script.\n"
+            + (source_text or '\n'.join(parts))
+        )
+        script = data.get('script', '')
+        if not isinstance(script, str) or not script.strip():
+            raise ValueError("LLM did not return a complete Short script")
+        script = script.strip()
+    if script.endswith(('...', '…')) or script[-1] not in '.!?।':
+        raise ValueError("Short script ends unfinished; revise the source or generated script")
+    return script
+
+
+def short_script_pages(script):
+    """Sentence boundaries provide natural narration stops; no word slicing."""
+    return [s.strip() for s in re.split(r'(?<=[.!?।])\s+', script) if s.strip()]
+
+
 def create_short(
     name: str,
     text: str,
@@ -356,12 +382,13 @@ def create_short(
     style: str = "kids",
     lang: str = "en",
     use_images: bool = True,
-    points: list = [],
+    points: Optional[list] = None,
+    source_text: str = "",
 ) -> str:
     """
     Build a 3-slide portrait Short:  intro → main → outro.
-    Typical total: 30–55 seconds (within YouTube Shorts 60 sec limit).
-    Uses up to 2 bullet points for main slide if provided.
+    Uses a standalone explanation and one complete sentence per narrated scene.
+    Each scene lasts for the full audio plus a reading pause.
     """
     themes    = KIDS_THEMES if style == "kids" else TECH_THEMES
     theme     = themes.get(category.lower(), DEFAULT_THEME)
@@ -388,73 +415,22 @@ def create_short(
             img = get_item_image(name, category)
             print(f"       {'✅ got image' if img else '📝 no image — text-only mode'}")
 
-        # ── Slide 1: Hook / Intro ─────────────────────────────────────────────
-        print("  Building intro slide…")
-        if style == "kids":
-            intro_title    = "Did you know? 🤔"
-            intro_subtitle = f"Today: {name}!"
-            intro_tts      = join_spoken_lines(
-                "Hi friends. Did you know",
-                f"Today we're learning about {name}",
-            )
-        else:
-            intro_title    = "Today's Concept"
-            intro_subtitle = name
-            intro_tts      = join_spoken_lines(
-                f"Today's concept is {name}",
-                f"It's a key topic in {category}",
-                "Let's dive in",
-            )
-
-        intro_slide = create_short_slide(
-            title=intro_title, subtitle=intro_subtitle,
-            theme=theme, top_label=top_label, image=img,
-        )
-        intro_mp3 = os.path.join(tmp, "intro.mp3")
-        make_tts(intro_tts, intro_mp3, lang)
-        clips.append(make_clip(intro_slide, intro_mp3, animate=(img is not None)))
-
-        # ── Slide 2: Main content ─────────────────────────────────────────────
-        print("  Building main slide…")
-        use_pts = [p for p in points if p][:2]
-        if use_pts:
-            main_subtitle = "  •  ".join(use_pts)
-            main_tts_text = join_spoken_lines(name, ". ".join(use_pts))
-        else:
-            main_subtitle = text
-            main_tts_text = join_spoken_lines(name, text)
-        main_slide = create_short_slide(
-            title=name, subtitle=main_subtitle,
-            theme=theme, top_label=top_label, image=img,
-        )
-        main_mp3 = os.path.join(tmp, "main.mp3")
-        make_tts(main_tts_text, main_mp3, lang)
-        clips.append(make_clip(main_slide, main_mp3, animate=(img is not None)))
-
-        # ── Slide 3: Outro (solid colour — no photo distraction) ──────────────
-        print("  Building outro slide…")
-        if style == "kids":
-            outro_title    = "Great Job! ⭐"
-            outro_subtitle = "Come back tomorrow!"
-            outro_tts      = join_spoken_lines(
-                f"Amazing. Now you know about {name}",
-                "Come back tomorrow for more",
-            )
-        else:
-            outro_title    = "See You Tomorrow!"
-            outro_subtitle = f"One {category.upper()} concept every day"
-            outro_tts      = join_spoken_lines(
-                f"Great work. Now you understand {name}",
-                "See you tomorrow for another concept",
-            )
-
-        outro_slide = create_short_slide(
-            title=outro_title, subtitle=outro_subtitle,
-            theme=theme, top_label=top_label, image=None,   # solid bg for outro
-        )
-        outro_mp3 = os.path.join(tmp, "outro.mp3")
-        make_tts(outro_tts, outro_mp3, lang)
-        clips.append(make_clip(outro_slide, outro_mp3, animate=False))
+        script = build_short_script(name, text, points, source_text)
+        pages = short_script_pages(script)
+        # Validate every page layout before generating any narration.
+        slides = [create_short_slide(
+            title=name, subtitle=sentence, theme=theme,
+            top_label=f"{i+1} / {len(pages)}", image=img,
+        ) for i, sentence in enumerate(pages)]
+        for i, (slide, sentence) in enumerate(zip(slides, pages)):
+            print(f"  Narrating complete sentence {i+1}/{len(pages)}...")
+            audio_path = os.path.join(tmp, f"sentence_{i}.mp3")
+            spoken = join_spoken_lines(name, sentence) if i == 0 else sentence
+            make_tts(spoken, audio_path, lang)
+            clips.append(make_clip(slide, audio_path, animate=False))
+        os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
+        with open(os.path.splitext(output_path)[0] + "_script.json", "w", encoding="utf-8") as fh:
+            json.dump({"topic": name, "script": script, "sentences": pages}, fh, ensure_ascii=False, indent=2)
 
         # ── Render ────────────────────────────────────────────────────────────
         print(f"\n  Rendering {WIDTH}×{HEIGHT} Short → {output_path}")
@@ -516,11 +492,6 @@ Examples:
     args = parser.parse_args()
 
     use_images = not args.no_images
-    if use_images and not PEXELS_API_KEY:
-        print("⚠️   PEXELS_API_KEY not set — text-only mode.")
-        print("    Free key: https://www.pexels.com/api/\n")
-        use_images = False
-
     # ── Auto-select config ────────────────────────────────────────────────────
     if not args.config:
         args.config = ("tech_content_config"
@@ -529,6 +500,7 @@ Examples:
 
     # ── Look up text and points from config if not supplied ───────────────────
     text   = args.text
+    source_text = args.text
     points = []
     
     config_path = args.config
@@ -596,6 +568,7 @@ Examples:
                 if not text:
                     text = item_data.get(field, "")
                 points = item_data.get("points", [])
+                source_text = "\n".join(str(section.get("narration", "")) for section in item_data.get("sections", []) if isinstance(section, dict)) or item_data.get("explanation", "") or text
 
     if not text:
         text = f"{args.item} is amazing!"
@@ -608,7 +581,7 @@ Examples:
     print(f"  🎨  Style    : {args.style}")
     print(f"  📂  Category : {args.cat}")
     print(f"  🏷️   Item     : {args.item}")
-    print(f"  {'🖼️   Images  : Pexels API ✅' if use_images else '📝  Images  : solid colour (no Pexels)'}")
+    print("  Visuals : local subject illustration or concept diagram")
     print("=" * 60)
 
     os.makedirs(args.output_dir, exist_ok=True)
@@ -616,7 +589,7 @@ Examples:
         create_short(
             name=args.item, text=text, category=args.cat,
             output_path=output_path, style=args.style,
-            lang=args.lang, use_images=use_images, points=points,
+            lang=args.lang, use_images=use_images, points=points, source_text=source_text,
         )
         print(f"\n✅  Short ready: {output_path}")
         print("📏  1080×1920 portrait — YouTube auto-detects as a Short ✅")
@@ -624,6 +597,7 @@ Examples:
         import traceback
         print(f"❌  Failed: {e}")
         traceback.print_exc()
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

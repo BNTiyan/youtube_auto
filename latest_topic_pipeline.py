@@ -20,7 +20,7 @@ from urllib.parse import urljoin
 from zoneinfo import ZoneInfo
 
 import requests
-from google import genai
+from llm_client import generate_json
 
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
@@ -405,44 +405,13 @@ Rules:
 
 
 def choose_topic_with_gemini(headlines: list[dict]) -> dict:
-    if not GEMINI_API_KEY:
-        raise RuntimeError("GEMINI_API_KEY is not set.")
-
-    client = genai.Client(api_key=GEMINI_API_KEY)
     today_label = datetime.now(LOCAL_TZ).strftime("%B %d, %Y")
-    response = client.models.generate_content(
-        model=DEFAULT_MODEL,
-        contents=build_prompt(headlines, today_label),
-    )
-    raw = (response.text or "").strip()
-    if raw.startswith("```"):
-        parts = raw.split("```")
-        if len(parts) >= 3:
-            raw = parts[1]
-            if raw.startswith("json"):
-                raw = raw[4:]
-    data = json.loads(raw.strip())
-    return data
+    return generate_json(build_prompt(headlines, today_label))
 
 
 def choose_manual_topic_with_gemini(source_topic: str, source_text: str, source_notes: str) -> dict:
-    if not GEMINI_API_KEY:
-        raise RuntimeError("GEMINI_API_KEY is not set.")
-
-    client = genai.Client(api_key=GEMINI_API_KEY)
     today_label = datetime.now(LOCAL_TZ).strftime("%B %d, %Y")
-    response = client.models.generate_content(
-        model=DEFAULT_MODEL,
-        contents=build_manual_topic_prompt(source_topic, source_text, source_notes, today_label),
-    )
-    raw = (response.text or "").strip()
-    if raw.startswith("```"):
-        parts = raw.split("```")
-        if len(parts) >= 3:
-            raw = parts[1]
-            if raw.startswith("json"):
-                raw = raw[4:]
-    return json.loads(raw.strip())
+    return generate_json(build_manual_topic_prompt(source_topic, source_text, source_notes, today_label))
 
 
 def fallback_topic(headlines: list[dict]) -> dict:
@@ -639,13 +608,15 @@ def main():
                     args.source_notes.strip(),
                 )
                 raw_topic["language"] = lang
-                print("🤖  Gemini built the manual topic package.")
+                print("🤖  LLM built the manual topic package.")
         else:
             raw_topic = choose_topic_with_gemini(headlines)
             raw_topic["language"] = lang
-            print("🤖  Gemini selected today's topic.")
+            print("🤖  LLM selected today's topic.")
     except Exception as e:
-        print(f"⚠️   Gemini topic selection failed: {e}")
+        if os.getenv("LLM_PROVIDER", "").lower() == "ollama" or not os.getenv("GEMINI_API_KEY"):
+            raise RuntimeError("Local topic generation failed; no video package was created") from e
+        print(f"⚠️   LLM topic selection failed: {e}")
         if manual_mode:
             print("     Falling back to a local manual package.")
             raw_topic = fallback_manual_topic(

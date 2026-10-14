@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 YouTube Auto-Upload Script with AI-Generated Descriptions & Hashtags
-Uses Gemini API to generate compelling titles, descriptions, and hashtags.
+Uses local Ollama or optional Gemini for titles, descriptions, and hashtags.
 Uses YouTube Data API v3 to upload the video.
 
 Requirements:
@@ -21,7 +21,7 @@ import argparse
 import time
 import glob
 import re
-from google import genai
+from llm_client import generate_json, provider_name
 import requests
 import httplib2
 
@@ -96,15 +96,9 @@ def get_youtube_service():
 
 def generate_metadata_with_gemini(video_topic: str, niche: str, tone: str) -> dict:
     """
-    Use Gemini API to generate a YouTube title, description, and hashtags.
+    Generate metadata using the configured LLM (legacy name for scheduler compatibility).
     Returns a dict: { title, description, tags }
     """
-    if not GEMINI_API_KEY:
-        print("❌  GEMINI_API_KEY is not set. Export it or paste it in the script.")
-        sys.exit(1)
-
-    client = genai.Client(api_key=GEMINI_API_KEY)
-    
     prompt = f"""You are an expert YouTube SEO strategist. Generate metadata for a YouTube video.
 
 Video Topic: {video_topic}
@@ -123,58 +117,16 @@ Rules:
 - Description: Conversational yet professional, must include 5 hashtags at the end like #Tag
 - Tags: Mix of broad and niche keywords, all lowercase, no # symbol in tags array"""
 
-    print("\n🤖  Generating metadata with Gemini AI...")
-    
-    max_retries = 3
-    retry_delay = 10  # Initial delay in seconds
-    attempt = 0
-    raw = None
-
-    while attempt < max_retries:
-        try:
-            response = client.models.generate_content(
-                model='gemini-2.5-flash',
-                contents=prompt
-            )
-            raw = response.text.strip()
-            break  # Success!
-        except Exception as e:
-            err_msg = str(e)
-            if "429" in err_msg or "RESOURCE_EXHAUSTED" in err_msg:
-                # Don't count this as an attempt — just wait and retry
-                print(f"  ⚠️   Gemini Quota Exceeded (429). Waiting 65s for quota reset...")
-                time.sleep(65)
-                continue  # Retry same attempt
-            else:
-                attempt += 1
-                if attempt < max_retries:
-                    print(f"  ⚠️   Gemini API busy (attempt {attempt}/{max_retries}): {e}")
-                    print(f"      Retrying in {retry_delay}s...")
-                    time.sleep(retry_delay)
-                    retry_delay *= 2  # Exponential backoff
-                else:
-                    print(f"  ⚠️   Gemini API failed after {max_retries} attempts. Using local JSON fallback...")
-                    return None
-
-    if raw is None:
-        return None
-
-    # Strip markdown fences if present
-    if raw.startswith("```"):
-        # Split and handle cases where it might be ```json or just ```
-        parts = raw.split("```")
-        if len(parts) >= 3:
-            raw = parts[1]
-            if raw.startswith("json"):
-                raw = raw[4:]
-    raw = raw.strip()
-
-    try:
-        metadata = json.loads(raw)
-    except json.JSONDecodeError as e:
-        print(f"❌  Error parsing JSON from Gemini: {e}")
-        print(f"Raw response: {raw}")
-        return None
+    print(f"\n🤖  Generating metadata with {provider_name()}...")
+    metadata = generate_json(prompt)
+    for field in ("title", "description"):
+        if not isinstance(metadata.get(field), str) or not metadata[field].strip():
+            raise ValueError(f"LLM metadata requires a nonempty {field}")
+    tags = metadata.get("tags")
+    if not isinstance(tags, list) or not all(isinstance(tag, str) for tag in tags):
+        raise ValueError("LLM metadata tags must be a list of strings")
+    metadata["title"] = metadata["title"][:100]
+    metadata["description"] = metadata["description"][:5000]
 
     print(f"\n📝  Generated Title     : {metadata['title']}")
     print(f"🏷️   Generated Tags      : {', '.join(metadata['tags'][:5])}...")
@@ -361,7 +313,7 @@ def main():
     args = parse_args()
 
     print("=" * 60)
-    print("  🚀  YouTube Auto-Upload  |  Powered by Gemini AI")
+    print("  🚀  YouTube Auto-Upload  |  Local LLM / Gemini")
     print("=" * 60)
 
     # ── UPDATE MODE ──────────────────────────────────────────────────────────

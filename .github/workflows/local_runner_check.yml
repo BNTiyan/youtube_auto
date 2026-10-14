@@ -1,0 +1,34 @@
+name: Local Mac Runner Check
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: [self-hosted, macOS, ARM64, youtube-auto]
+    timeout-minutes: 30
+    env:
+      LLM_PROVIDER: ollama
+      OLLAMA_MODEL: qwen2.5:3b
+      OLLAMA_BASE_URL: http://127.0.0.1:11434
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare local video runtime
+        uses: ./.github/actions/local-video-runtime
+      - name: Test renderer and provider contracts
+        run: python -m unittest discover -s tests -v
+      - name: Generate a script with local Ollama
+        run: python latest_topic_pipeline.py --source-topic "How local AI works" --source-text "Explain running a language model on your own computer." --output generated/runner_check.json
+      - name: Render tech and kids previews
+        run: |
+          python preview_video.py --output videos/runner_tech_preview.mp4
+          python preview_video.py --style kids --output videos/runner_kids_preview.mp4
+      - name: Save previews for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: local-runner-previews
+          path: |
+            videos/runner_tech_preview.mp4
+            videos/runner_kids_preview.mp4
+            generated/runner_check.json
+          retention-days: 7

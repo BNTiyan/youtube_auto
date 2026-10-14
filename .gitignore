@@ -45,3 +45,12 @@ logs/upload_log_tech.json
 # ── macOS ─────────────────────────────────────────────────────────────────────
 .DS_Store
 **/.DS_Store
+
+# Local Actions runner (contains machine registration credentials)
+.local-runner/
+
+# Generated local previews and model test output
+generated/
+videos/*preview*.png
+videos/animated_contact_sheet.png
+videos/runner_online.png

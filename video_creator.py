@@ -18,6 +18,7 @@ import os
 import json
 import argparse
 import textwrap
+import re
 import tempfile
 import random
 import glob
@@ -208,93 +209,9 @@ def create_slide(
     counter: str = "",
     image: Optional[Image.Image] = None,
 ) -> np.ndarray:
-    """Return a 1280×720 numpy array slide."""
-
-    base = Image.new("RGB", (WIDTH, HEIGHT), theme["bg"])
-
-    if image is not None:
-        # ══ PHOTO + TEXT LAYOUT ══════════════════════════════════════════════
-        #   [  photo fills top IMAGE_H px, full width              ]
-        #   [ gradient blend to card colour at bottom of photo      ]
-        #   [  card-coloured text band (TEXT_H px)                  ]
-        #   [    large title + fact wrapped across 2 lines           ]
-
-        # 1. Smart crop: fill width, keep centre of height
-        img_w, img_h = image.size
-        scale = max(WIDTH / img_w, IMAGE_H / img_h)
-        new_w, new_h = int(img_w * scale), int(img_h * scale)
-        img_scaled = image.resize((new_w, new_h), Image.LANCZOS)
-        left = (new_w - WIDTH) // 2
-        top  = (new_h - IMAGE_H) // 2
-        img_cropped = img_scaled.crop((left, top, left + WIDTH, top + IMAGE_H))
-        base.paste(img_cropped, (0, 0))
-
-        # 2. Gradient from photo → card colour in bottom GRAD_H rows of photo
-        base = _gradient_blend(base,
-                               start_y=IMAGE_H - GRAD_H,
-                               end_y=IMAGE_H,
-                               target_rgb=theme["card"])
-
-        draw = ImageDraw.Draw(base)
-
-        # 3. Text area solid fill
-        draw.rectangle([0, IMAGE_H, WIDTH, HEIGHT], fill=theme["card"])
-
-        # 4. Accent separator line
-        draw.rectangle([0, IMAGE_H, WIDTH, IMAGE_H + 5], fill=theme["accent"])
-
-        # 5. Counter pill (top-right corner over the photo)
-        if counter:
-            cf = load_font(28)
-            bbox = draw.textbbox((0, 0), counter, font=cf)
-            tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
-            pad = 10
-            rx1, ry1 = WIDTH - tw - pad * 2 - 18, 14
-            rx2, ry2 = rx1 + tw + pad * 2, ry1 + th + pad * 2
-            draw.rounded_rectangle([rx1, ry1, rx2, ry2], radius=16, fill=(0, 0, 0))
-            draw.text((rx1 + pad, ry1 + pad), counter, font=cf, fill=theme["accent"])
-
-        # 6. Title
-        title_font = load_font(80)
-        _draw_text_centered(draw, title, title_font, IMAGE_H + 18, theme["text"])
-
-        # 7. Fact (max 2 wrapped lines)
-        fact_font = load_font(36)
-        wrapped = textwrap.wrap(fact, width=60)
-        y_pos = IMAGE_H + 118
-        for line in wrapped[:2]:
-            bbox = draw.textbbox((0, 0), line, font=fact_font)
-            draw.text(((WIDTH - (bbox[2] - bbox[0])) // 2, y_pos),
-                      line, font=fact_font, fill=theme["accent"])
-            y_pos += 54
-
-    else:
-        # ══ TEXT-ONLY FALLBACK ═══════════════════════════════════════════════
-        draw = ImageDraw.Draw(base)
-        _dot_pattern(draw, theme)
-        margin = 60
-        draw.rectangle([margin, margin, WIDTH - margin, HEIGHT - margin], fill=theme["card"])
-        draw.rectangle([margin, margin, WIDTH - margin, HEIGHT - margin],
-                       outline=theme["accent"], width=4)
-
-        if counter:
-            sf = load_font(30)
-            bbox = draw.textbbox((0, 0), counter, font=sf)
-            draw.text((WIDTH - margin - (bbox[2] - bbox[0]) - 20, margin + 18),
-                      counter, font=sf, fill=theme["accent"])
-
-        _draw_text_centered(draw, title, load_font(96), HEIGHT // 2 - 115, theme["text"])
-        draw.line([margin + 80, HEIGHT // 2 - 8, WIDTH - margin - 80, HEIGHT // 2 - 8],
-                  fill=theme["accent"], width=3)
-
-        y_pos = HEIGHT // 2 + 18
-        for line in textwrap.wrap(fact, width=58)[:3]:
-            bbox = draw.textbbox((0, 0), line, font=load_font(38))
-            draw.text(((WIDTH - (bbox[2] - bbox[0])) // 2, y_pos),
-                      line, font=load_font(38), fill=theme["accent"])
-            y_pos += 50
-
-    return np.array(base)
+    """Return a learning card with animated text and illustration layers."""
+    from motion_design import MotionSlide, KidsScene
+    return MotionSlide(KidsScene(title, fact, theme, load_font, image=image, counter=counter))
 
 
 def create_intro_slide(category: str, total: int, theme: dict,
@@ -659,8 +576,8 @@ def make_clip(slide: np.ndarray, audio_path: str, theme: dict, category: str, an
     """
     Build a single slide video clip.
 
-    animate=True  → Ken Burns slow-zoom + fade-in  (use for photo slides)
-    animate=False → static image + fade-in          (use for text-only slides)
+    Motion scenes animate text and illustrations independently.
+    Legacy bitmap slides retain optional zoom and decorative overlays.
     """
     audio    = AudioFileClip(audio_path)
     duration = safe_clip_duration(audio.duration, PAUSE_AFTER_AUDIO, MIN_SLIDE_DURATION)
@@ -672,7 +589,7 @@ def make_clip(slide: np.ndarray, audio_path: str, theme: dict, category: str, an
         pan_pixels=20,
         fadein_duration=0.30,
     )
-    if decorative:
+    if decorative and getattr(slide, "scene", None) is None:
         clip = _apply_kids_overlay(clip, theme, category)
     return _set_audio(clip, audio)
 

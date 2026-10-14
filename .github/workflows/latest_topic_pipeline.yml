@@ -66,10 +66,13 @@ permissions:
 jobs:
   daily:
     name: Generate & Upload (Latest Topic)
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, macOS, ARM64, youtube-auto]
     timeout-minutes: 90
 
     env:
+      LLM_PROVIDER: ollama
+      OLLAMA_MODEL: qwen2.5:3b
+      OLLAMA_BASE_URL: http://127.0.0.1:11434
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
 
@@ -77,19 +80,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: pip
-
-      - name: Install ffmpeg
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg
-
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
+      - name: Prepare local video runtime
+        uses: ./.github/actions/local-video-runtime
 
       - name: Decode YouTube credentials (Tech account)
         if: ${{ github.event.inputs.channel != 'childishdreamer' }}
@@ -296,3 +288,7 @@ jobs:
           echo "| Language | ${TOPIC_LANGUAGE} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Run date | $(date '+%Y-%m-%d %H:%M UTC') |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Dry run | ${{ github.event.inputs.dry_run }} |" >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Remove temporary YouTube credentials
+        if: always()
+        run: python -c "from pathlib import Path; [Path(p).unlink(missing_ok=True) for p in ('client_secrets.json', 'youtube_token.json')]"

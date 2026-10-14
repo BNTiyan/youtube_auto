@@ -102,6 +102,60 @@ pip install -r requirements.txt
 export GEMINI_API_KEY="your-key"
 ```
 
+### Quick local visual preview
+
+```bash
+python preview_video.py
+python preview_video.py --style kids --output videos/kids_animated_preview.mp4
+```
+
+This renders a silent 16-second sample to `videos/animated_visual_preview.mp4`
+using the tech slide renderer, without network access or publishing. Tech videos
+now include text entrances, staggered point cards, an animated circuit diagram,
+and a scene progress indicator, including when `--no-images` is used.
+
+Kids videos use bright rounded cards, animated text, gently moving photos or a
+friendly book illustration, and a progress indicator. These animations work
+without stock images and apply to both single-item and category videos.
+
+### Local LLM with Ollama
+
+Install and start [Ollama](https://ollama.com), then pull a model:
+
+```bash
+ollama pull llama3.2:3b
+export LLM_PROVIDER=ollama
+export OLLAMA_MODEL=llama3.2:3b
+# Optional: OLLAMA_BASE_URL=http://localhost:11434 and LLM_TIMEOUT=300
+```
+
+The shared client uses Ollama's [JSON generation API](https://github.com/ollama/ollama/blob/main/docs/api.md).
+Set these variables in the same terminal where you run the commands. Without
+`LLM_PROVIDER`, Gemini is selected when `GEMINI_API_KEY` exists; otherwise Ollama
+is selected. Explicit `LLM_PROVIDER=ollama` keeps LLM requests local even when a
+Gemini key exists. Set `LLM_PROVIDER=gemini` to use the original cloud provider.
+
+Generate a custom topic package, render it, and preview upload metadata:
+
+```bash
+python latest_topic_pipeline.py --source-topic "How local AI works" --source-text "Explain running language models on your own computer."
+python tech_video_creator.py --config generated/latest_topic_package.json --output-dir preview_videos --no-images
+python youtube_auto.py preview_videos/ --topic "How local AI works" --niche "Tech Education" --dry-run
+```
+
+After reviewing the video and metadata, publish it using your existing YouTube
+OAuth credentials:
+
+```bash
+python youtube_auto.py preview_videos/ --topic "How local AI works" --niche "Tech Education" --category 28 --privacy private
+```
+
+Local LLM generation changes scripts/topics and upload metadata. The existing
+Pillow/MoviePy renderer creates the visuals; narration still uses online
+edge-tts/gTTS. YouTube publishing requires internet and channel credentials.
+For scheduled use with your machine's Ollama, run the local scheduler on that
+machine. GitHub-hosted Actions cannot reach your computer's localhost endpoint.
+
 ### Generate kids' learning videos
 ```bash
 python video_creator.py all                  # all 6 categories
@@ -260,3 +314,39 @@ Each video upload costs **1,600 units** → safe limit is **6 uploads/day** acro
 The two pipelines upload **1 video/day each = 3,200 units/day**, well within the limit.
 
 To request higher quota: [Google Cloud Console → APIs → YouTube Data API v3 → Quotas](https://console.cloud.google.com)
+
+
+## Mac self-hosted runner
+
+The scheduled kids, tech, latest-topic, and manual uploader workflows target
+`[self-hosted, macOS, ARM64, youtube-auto]`. They explicitly use local Ollama
+with `qwen2.5:3b` at `http://127.0.0.1:11434`; Gemini keys do not override this.
+The issue-triggered request workflow remains on GitHub-hosted Linux with its
+existing Gemini configuration, so public issue events do not execute on the Mac.
+
+The shared local runtime action installs Python 3.11, creates an isolated virtual
+environment, supplies FFmpeg via imageio-ffmpeg, and checks that Ollama and the
+configured model are available. Existing YouTube credential secrets are still
+required for publishing and temporary credential files are removed after jobs.
+
+On this Mac, the registered runner is `youtube-auto-mac-arm64`, installed at
+`~/actions-runner-youtube-auto` with a per-user launchd service. It runs while
+the screen is locked. Keep the Mac awake, connected, and Ollama running. After
+restarting the Mac, sign in to your user account so its login services start.
+
+Manage the service from Terminal:
+
+```bash
+cd ~/actions-runner-youtube-auto
+./svc.sh status
+./svc.sh stop
+./svc.sh start
+```
+
+After pushing the repository changes, run **Actions → Local Mac Runner Check →
+Run workflow**. It tests local script generation and renders kids and tech
+previews as downloadable artifacts, without authenticating to or uploading to
+YouTube. Then use the daily pipelines' dry-run option before publishing.
+
+The repository is public: only trusted workflow code should target this personal
+Mac runner. Do not add pull-request triggers that execute untrusted fork code.

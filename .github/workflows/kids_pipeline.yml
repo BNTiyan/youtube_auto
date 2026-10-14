@@ -25,10 +25,13 @@ permissions:
 jobs:
   daily:
     name: Generate & Upload (Video + Short)
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, macOS, ARM64, youtube-auto]
     timeout-minutes: 90       # generating two videos per day; extra headroom
 
     env:
+      LLM_PROVIDER: ollama
+      OLLAMA_MODEL: qwen2.5:3b
+      OLLAMA_BASE_URL: http://127.0.0.1:11434
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
 
@@ -38,23 +41,9 @@ jobs:
         uses: actions/checkout@v4
 
       # ── 2. Python ──────────────────────────────────────────────────────────
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: pip
+      - name: Prepare local video runtime
+        uses: ./.github/actions/local-video-runtime
 
-      # ── 3. System dependencies ─────────────────────────────────────────────
-      - name: Install ffmpeg
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg
-
-      # ── 4. Python dependencies ─────────────────────────────────────────────
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
-
-      # ── 5. Decode YouTube credentials (Kids account) ───────────────────────
       - name: Decode YouTube credentials
         run: |
           echo '${{ secrets.YOUTUBE_CLIENT_SECRETS_KIDS_B64 }}' | base64 -d > client_secrets.json
@@ -113,7 +102,6 @@ jobs:
           ITEM_TAGS: ${{ steps.pick.outputs.tags }}
         run: |
           VIDEO="videos/${ITEM_SLUG}_learning.mp4"
-          CAT_TITLE="${ITEM_CAT^}"
           python youtube_auto.py "$VIDEO" \
             --topic    "${ITEM_TITLE}" \
             --niche    "Kids Education" \
@@ -135,7 +123,6 @@ jobs:
           ITEM_TAGS: ${{ steps.pick.outputs.tags }}
         run: |
           VIDEO="shorts/${ITEM_SLUG}_short.mp4"
-          CAT_TITLE="${ITEM_CAT^}"
           python youtube_auto.py "$VIDEO" \
             --topic    "${ITEM_TITLE} #Shorts" \
             --niche    "Kids Education Shorts" \
@@ -173,8 +160,12 @@ jobs:
       - name: Commit rotation state
         if: ${{ github.event.inputs.dry_run != 'true' }}
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
           git add content_config/.last_config_idx.txt content_config/.pick_state.json || true
           git diff --staged --quiet || git commit -m "chore: update kids pipeline rotation state [skip ci]" || true
           git push || true
+
+      - name: Remove temporary YouTube credentials
+        if: always()
+        run: python -c "from pathlib import Path; [Path(p).unlink(missing_ok=True) for p in ('client_secrets.json', 'youtube_token.json')]"

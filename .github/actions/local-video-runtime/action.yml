@@ -1,0 +1,25 @@
+name: Local video runtime
+description: Prepare an isolated Python environment and verify local Ollama
+runs:
+  using: composite
+  steps:
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.11'
+        cache: pip
+    - name: Install isolated video dependencies
+      shell: bash
+      run: |
+        python -m venv "$RUNNER_TEMP/youtube-auto-venv"
+        echo "$RUNNER_TEMP/youtube-auto-venv/bin" >> "$GITHUB_PATH"
+        "$RUNNER_TEMP/youtube-auto-venv/bin/python" -m pip install -r requirements.txt imageio-ffmpeg
+        FFMPEG=$("$RUNNER_TEMP/youtube-auto-venv/bin/python" -c 'import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())')
+        echo "IMAGEIO_FFMPEG_EXE=$FFMPEG" >> "$GITHUB_ENV"
+        mkdir -p "$RUNNER_TEMP/youtube-auto-bin"
+        ln -sf "$FFMPEG" "$RUNNER_TEMP/youtube-auto-bin/ffmpeg"
+        echo "$RUNNER_TEMP/youtube-auto-bin" >> "$GITHUB_PATH"
+    - name: Verify local model
+      shell: bash
+      run: |
+        python scripts/check_local_model.py

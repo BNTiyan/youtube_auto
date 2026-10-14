@@ -8,9 +8,9 @@ from PIL import Image
 
 # moviepy v1 / v2 compat
 try:
-    from moviepy.editor import ImageClip
+    from moviepy.editor import ImageClip, VideoClip
 except (ImportError, ModuleNotFoundError):
-    from moviepy import ImageClip
+    from moviepy import ImageClip, VideoClip
 
 
 def _apply_zoom_pan(clip, zoom_ratio: float = 0.06, pan_pixels: int = 24):
@@ -47,8 +47,9 @@ def _apply_zoom_pan(clip, zoom_ratio: float = 0.06, pan_pixels: int = 24):
 def _fadein(clip, duration: float = 0.30):
     try:
         return clip.fadein(duration)
-    except Exception:
-        return clip
+    except AttributeError:
+        from moviepy import vfx
+        return clip.with_effects([vfx.FadeIn(duration)])
 
 
 def safe_clip_duration(
@@ -71,6 +72,9 @@ def build_animated_clip(
     pan_pixels: int = 24,
     fadein_duration: float = 0.30,
 ):
+    scene = getattr(slide, "scene", None)
+    if scene is not None:
+        return VideoClip(lambda t: scene.frame(t, duration), duration=duration)
     clip = ImageClip(slide, duration=duration)
     if animate:
         clip = _apply_zoom_pan(clip, zoom_ratio=zoom_ratio, pan_pixels=pan_pixels)

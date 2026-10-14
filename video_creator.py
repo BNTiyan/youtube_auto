@@ -176,6 +176,9 @@ def fetch_pexels_image(query: str) -> Optional[Image.Image]:
 
 
 def get_item_image(name: str, category: str) -> Optional[Image.Image]:
+    if os.getenv("KIDS_STOCK_IMAGES", "0") != "1":
+        from kids_illustrations import subject_illustration
+        return subject_illustration(name)
     suffix = CATEGORY_SEARCH_SUFFIX.get(category, "")
     return fetch_pexels_image(f"{name} {suffix}".strip())
 
@@ -727,7 +730,7 @@ Examples:
     args = parser.parse_args()
 
     use_images = not args.no_images
-    if use_images and not PEXELS_API_KEY:
+    if use_images and os.getenv("KIDS_STOCK_IMAGES", "0") == "1" and not PEXELS_API_KEY:
         print("⚠️   PEXELS_API_KEY not set — using text-only slides.")
         print("    Free key: https://www.pexels.com/api/\n")
         use_images = False
@@ -822,7 +825,7 @@ Examples:
         print("  🎬  Kids' Learning Video Creator — Single Item")
         print(f"  📂  Category : {cat}")
         print(f"  🏷️   Item     : {item_data['name']}")
-        print(f"  {'🖼️   Images: Pexels API ✅' if use_images else '📝  Images: text-only mode'}")
+        print(f"  {'🖼️   Images: Pexels API ✅' if use_images else '📝  Visuals: local subject illustrations'}")
         print("=" * 60)
 
         os.makedirs(args.output_dir, exist_ok=True)
@@ -849,7 +852,7 @@ Examples:
 
     print("=" * 60)
     print("  🎬  Kids' Learning Video Creator")
-    print(f"  {'🖼️   Images: Pexels API ✅' if use_images else '📝  Images: text-only mode'}")
+    print(f"  {'🖼️   Images: Pexels API ✅' if use_images else '📝  Visuals: local subject illustrations'}")
     print("=" * 60)
 
     os.makedirs(args.output_dir, exist_ok=True)

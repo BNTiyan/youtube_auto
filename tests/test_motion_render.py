@@ -43,6 +43,27 @@ class ConceptVisualTests(unittest.TestCase):
             get.assert_not_called()
 
 
+class KidsSubjectTests(unittest.TestCase):
+    def test_exact_subjects_and_unknown_fallback(self):
+        from kids_illustrations import identify_subject, subject_illustration, SUBJECTS
+        self.assertEqual(identify_subject('Today: Lion!'), 'lion')
+        self.assertIsNone(identify_subject('Dandelion'))
+        self.assertIsNone(identify_subject('Sea lion'))
+        self.assertIsNone(subject_illustration('Unknown subject', fallback=False))
+        for name in SUBJECTS + ('Unknown subject',):
+            self.assertEqual(subject_illustration(name).size, (600, 600))
+        self.assertFalse(np.array_equal(subject_illustration('lion'), subject_illustration('elephant')))
+
+    def test_kids_image_lookup_does_not_call_stock_service(self):
+        import os
+        from unittest.mock import patch
+        import video_creator
+        with patch.dict(os.environ, {}, clear=True), patch.object(video_creator.requests, 'get') as get:
+            image = video_creator.get_item_image('Lion', 'animals')
+            self.assertEqual(image.size, (600, 600))
+            get.assert_not_called()
+
+
 class KidsMotionTests(unittest.TestCase):
     def test_kids_motion_with_and_without_photo(self):
         from video_creator import create_slide, THEMES

@@ -378,6 +378,11 @@ def create_short(
             diagram = Image.fromarray(create_tech_slide(name, text, LANDSCAPE_THEMES.get(category.lower(), DEFAULT_TECH_THEME))).crop((804, 161, 1216, 594))
             img = Image.new("RGB", (WIDTH, HEIGHT), theme["bg"])
             img.paste(diagram.resize((880, 925), Image.Resampling.LANCZOS), (100, 240))
+        elif style == "kids":
+            from kids_illustrations import subject_illustration
+            subject = subject_illustration(name)
+            img = Image.new("RGB", (WIDTH, HEIGHT), theme["bg"])
+            img.paste(subject.resize((900, 900), Image.Resampling.LANCZOS), (90, 250))
         elif use_images:
             print(f"  🖼️  Fetching portrait image for {name}…")
             img = get_item_image(name, category)

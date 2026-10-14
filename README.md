@@ -359,4 +359,8 @@ agents have distinct labeled flows. Unrecognized topics use a labeled overview;
 these diagrams are teaching templates, not diagrams inferred or verified by the
 LLM. Tech Shorts use the same concept selection. To explicitly opt into Pexels
 photos for landscape tech videos, set `TECH_STOCK_IMAGES=1`; review matches before
-publishing. Kids photo selection is unchanged.
+publishing. Kids videos also default to local subject illustrations. Recognized subjects
+include common animals, fruits, vegetables, cars, and airplanes. Unsupported
+subjects get a labeled word card, never a guessed animal or logo. Landscape
+kids videos can opt into stock photos with `KIDS_STOCK_IMAGES=1`; kids Shorts
+use local illustrations.

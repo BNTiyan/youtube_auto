@@ -158,6 +158,12 @@ class TechScene:
 
 class KidsScene(TechScene):
     """Bright learning cards with gentle movement and a protected text area."""
+    def __init__(self, title, body, theme, font, **kwargs):
+        from kids_illustrations import subject_illustration
+        if kwargs.get('image') is None:
+            kwargs['image'] = subject_illustration(title, fallback=False)
+        super().__init__(title, body, theme, font, **kwargs)
+
     def _background(self):
         image = Image.new('RGB', (1280, 720), (255, 249, 235))
         d = ImageDraw.Draw(image)

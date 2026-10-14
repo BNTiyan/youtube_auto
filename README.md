@@ -388,3 +388,17 @@ request. Trusted collaborators can also start a labeled request by editing it.
 The workflow uses the event's approved content snapshot, not later issue edits.
 Keep Ollama and the Mac runner online. Generated videos and the Short script are
 attached as workflow artifacts; dry runs skip YouTube authentication and uploads.
+
+
+Kids content targets **ages 8–12**. Single-item daily kids videos and ChildishDreamer
+topic requests use a dedicated local-LLM lesson prompt: four substantive sections,
+clear vocabulary, an explanation/example, a thinking question with an answer,
+and a takeaway. The generated Short is a separate complete explanation, not a
+truncated excerpt. All lesson text is requested in the selected narration language.
+Story and mythology prompts distinguish events within the story from factual claims.
+Generated lessons are validated for complete section structure and preserved in
+the creator configuration for review. Model output still needs editorial review.
+
+Kids lesson writing uses `qwen3.5:4b` (installed on this Mac), with a separate
+source-editing pass. Override it with `KIDS_LLM_MODEL` if needed. Other metadata
+and tech generation continue using their configured model.

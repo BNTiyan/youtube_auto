@@ -273,8 +273,14 @@ def create_single_item_video(
     """
     theme = THEMES.get(category.lower(), DEFAULT_THEME)
     name  = item["name"]
-    fact  = item.get("fact", f"{name} is really amazing!")
+    fact  = item.get("fact") or item.get("explanation", "")
     sections = [section for section in item.get("sections", []) if isinstance(section, dict)]
+    if not sections:
+        from kids_content import generate_kids_lesson
+        source = "\n".join([fact, item.get("explanation", ""), *item.get("points", [])])
+        lesson = generate_kids_lesson(name, source, lang)
+        sections = lesson["sections"]
+
     clips = []
 
     with tempfile.TemporaryDirectory() as tmp:
@@ -304,7 +310,7 @@ def create_single_item_video(
                     print(f"  Creating script slide {section_idx}.{chunk_idx}...")
                     slide = create_slide(
                         title=title,
-                        fact=section.get("slide_text") or chunk,
+                        fact=chunk if len(narration_chunks) > 1 else section.get("slide_text") or chunk,
                         theme=theme,
                         image=item_img,
                     )

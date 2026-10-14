@@ -514,6 +514,7 @@ def normalize_topic_package(data: dict, channel: str = DEFAULT_CHANNEL) -> dict:
                     "published_at": package["published_at"],
                     "sections": package["sections"],
                     "language": package["language"],
+                    "audience": data.get("audience", ""),
                 }
             ]
         }
@@ -590,7 +591,11 @@ def main():
         print("❌  No recent headlines found.")
         sys.exit(1)
     try:
-        if manual_mode:
+        if manual_mode and channel == "childishdreamer":
+            from kids_content import generate_kids_lesson
+            raw_topic = generate_kids_lesson(args.source_topic.strip(), "\n".join([args.source_text, args.source_notes]), lang)
+            print("Built a source-grounded lesson for ages 8–12.")
+        elif manual_mode:
             source_text = args.source_text.strip()
             if len(source_text) >= 500 or extract_manual_sections(source_text):
                 raw_topic = build_manual_script_package(
@@ -613,8 +618,11 @@ def main():
             raw_topic = choose_topic_with_gemini(headlines)
             raw_topic["language"] = lang
             print("🤖  LLM selected today's topic.")
+        if channel == "childishdreamer" and raw_topic.get("audience") != "8-12":
+            from kids_content import generate_kids_lesson
+            raw_topic = generate_kids_lesson(raw_topic["video_topic"], raw_topic.get("video_summary", "") + "\n" + "\n".join(raw_topic.get("points", [])), lang)
     except Exception as e:
-        if os.getenv("LLM_PROVIDER", "").lower() == "ollama" or not os.getenv("GEMINI_API_KEY"):
+        if channel == "childishdreamer" or os.getenv("LLM_PROVIDER", "").lower() == "ollama" or not os.getenv("GEMINI_API_KEY"):
             raise RuntimeError("Local topic generation failed; no video package was created") from e
         print(f"⚠️   LLM topic selection failed: {e}")
         if manual_mode:

@@ -385,6 +385,7 @@ def create_short(
     use_images: bool = True,
     points: Optional[list] = None,
     source_text: str = "",
+    prepared_for_kids: bool = False,
 ) -> str:
     """
     Build a 3-slide portrait Short:  intro → main → outro.
@@ -416,6 +417,12 @@ def create_short(
             img = get_item_image(name, category)
             print(f"       {'✅ got image' if img else '📝 no image — text-only mode'}")
 
+        if style == "kids":
+            if not prepared_for_kids:
+                from kids_content import generate_kids_lesson
+                lesson = generate_kids_lesson(name, "\n".join([source_text or text, *(points or [])]), lang)
+                text = lesson["short_text"]
+            points = []
         script = build_short_script(name, text, points, source_text)
         pages = short_script_pages(script)
         # Validate every page layout before generating any narration.
@@ -502,6 +509,7 @@ Examples:
     # ── Look up text and points from config if not supplied ───────────────────
     text   = args.text
     source_text = args.text
+    prepared_for_kids = False
     points = []
     
     config_path = args.config
@@ -569,6 +577,7 @@ Examples:
                 if not text:
                     text = item_data.get(field, "")
                 points = item_data.get("points", [])
+                prepared_for_kids = item_data.get("audience") == "8-12"
                 source_text = "\n".join(str(section.get("narration", "")) for section in item_data.get("sections", []) if isinstance(section, dict)) or item_data.get("explanation", "") or text
 
     if not text:
@@ -590,7 +599,7 @@ Examples:
         create_short(
             name=args.item, text=text, category=args.cat,
             output_path=output_path, style=args.style,
-            lang=args.lang, use_images=use_images, points=points, source_text=source_text,
+            lang=args.lang, use_images=use_images, points=points, source_text=source_text, prepared_for_kids=prepared_for_kids,
         )
         print(f"\n✅  Short ready: {output_path}")
         print("📏  1080×1920 portrait — YouTube auto-detects as a Short ✅")

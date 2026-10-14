@@ -321,8 +321,9 @@ To request higher quota: [Google Cloud Console → APIs → YouTube Data API v3 
 The scheduled kids, tech, latest-topic, and manual uploader workflows target
 `[self-hosted, macOS, ARM64, youtube-auto]`. They explicitly use local Ollama
 with `qwen2.5:3b` at `http://127.0.0.1:11434`; Gemini keys do not override this.
-The issue-triggered request workflow remains on GitHub-hosted Linux with its
-existing Gemini configuration, so public issue events do not execute on the Mac.
+The issue-request workflow checks the triggering actor on a GitHub-hosted job
+before dispatching generation to the Mac. Only an actor with repository write,
+maintain, or admin permission can run a labeled request; outside edits are skipped.
 
 The shared local runtime action uses uv to install Python 3.11 in a user-owned
 temporary directory (without `/Users/runner` or administrator access), creates an isolated virtual
@@ -378,3 +379,12 @@ use a neutral topic header and no NavaDisha spoken welcome.
 Future uploads default to **public** across workflow inputs, scheduled latest-topic
 runs, request forms, and the request API. Private and unlisted remain explicit
 options. Existing uploaded videos retain their current visibility.
+
+
+GitHub Pages requests also use local Ollama (`qwen2.5:3b`). Submit the form to
+create an issue. A repository collaborator with write access must add the
+`video-request` label (remove and re-add it if necessary) to approve an external
+request. Trusted collaborators can also start a labeled request by editing it.
+The workflow uses the event's approved content snapshot, not later issue edits.
+Keep Ollama and the Mac runner online. Generated videos and the Short script are
+attached as workflow artifacts; dry runs skip YouTube authentication and uploads.

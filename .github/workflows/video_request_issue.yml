@@ -9,37 +9,50 @@ permissions:
   issues: write
 
 jobs:
-  build:
+  authorize:
     if: contains(github.event.issue.labels.*.name, 'video-request')
     runs-on: ubuntu-latest
+    outputs:
+      allowed: ${{ steps.permission.outputs.result }}
+    steps:
+      - name: Check request approval
+        id: permission
+        uses: actions/github-script@v7
+        with:
+          result-encoding: string
+          script: |
+            // Check the actor who caused this event, not the issue author's association.
+            // A public user's edits must not re-run a previously approved request.
+            try {
+              const {data} = await github.rest.repos.getCollaboratorPermissionLevel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                username: context.actor
+              });
+              return ['admin', 'maintain', 'write'].includes(data.permission) ? 'true' : 'false';
+            } catch (error) {
+              if (error.status === 404) return 'false';
+              throw error;
+            }
+
+  build:
+    needs: authorize
+    if: needs.authorize.outputs.allowed == 'true'
+    runs-on: [self-hosted, macOS, ARM64, youtube-auto]
     timeout-minutes: 90
 
     env:
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      LLM_PROVIDER: ollama
+      OLLAMA_MODEL: qwen2.5:3b
+      OLLAMA_BASE_URL: http://127.0.0.1:11434
       PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python 3.11
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-          cache: pip
-
-      - name: Install ffmpeg
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg
-
-      - name: Install Python dependencies
-        run: pip install -r requirements.txt
-
-      - name: Decode YouTube credentials (Tech account)
-        run: |
-          echo '${{ secrets.YOUTUBE_CLIENT_SECRETS_TECH_B64 }}' | base64 -d > client_secrets.json
-          echo '${{ secrets.YOUTUBE_TOKEN_TECH_B64 }}'           | base64 -d > youtube_token.json
+      - name: Prepare local video runtime
+        uses: ./.github/actions/local-video-runtime
 
       - name: Parse request issue
         id: request
@@ -86,11 +99,17 @@ jobs:
                   fh.write(f"{key}={value}\n")
           PY
 
+      - name: Decode YouTube credentials (Tech account)
+        if: ${{ steps.request.outputs.dry_run != 'true' }}
+        run: |
+          echo '${{ secrets.YOUTUBE_CLIENT_SECRETS_TECH_B64 }}' | base64 -d > client_secrets.json
+          echo '${{ secrets.YOUTUBE_TOKEN_TECH_B64 }}'           | base64 -d > youtube_token.json
+
       - name: Acknowledge request
         uses: actions/github-script@v7
         with:
           script: |
-            const issue_number = Number("${{ steps.request.outputs.issue_number }}");
+            const issue_number = context.issue.number;
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -177,15 +196,30 @@ jobs:
             --category 28 \
             --privacy  "$PRIVACY"
 
+      - name: Save generated videos for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: request-${{ github.event.issue.number }}-${{ github.run_id }}
+          path: |
+            latest_videos/*.mp4
+            latest_shorts/*.mp4
+            latest_shorts/*_script.json
+            generated/latest_topic_package.json
+          retention-days: 7
+
       - name: Comment success
         if: success()
+        env:
+          REQUEST_DRY_RUN: ${{ steps.request.outputs.dry_run }}
+          REQUEST_PRIVACY: ${{ steps.request.outputs.privacy }}
+          REQUEST_TOPIC: ${{ steps.package.outputs.topic_name }}
         uses: actions/github-script@v7
         with:
           script: |
-            const issue_number = Number("${{ steps.request.outputs.issue_number }}");
-            const dryRun = "${{ steps.request.outputs.dry_run }}" === "true";
-            const privacy = "${{ steps.request.outputs.privacy }}";
-            const topic = "${{ steps.package.outputs.topic_name }}";
+            const issue_number = context.issue.number;
+            const dryRun = process.env.REQUEST_DRY_RUN === "true";
+            const privacy = process.env.REQUEST_PRIVACY;
+            const topic = process.env.REQUEST_TOPIC;
             const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
             const body = dryRun
               ? `Dry run finished for **${topic}**.\n\nFiles were generated but not uploaded.\n\nRun details: ${runUrl}`
@@ -202,7 +236,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const issue_number = Number("${{ steps.request.outputs.issue_number }}");
+            const issue_number = context.issue.number;
             const runUrl = `https://github.com/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
             await github.rest.issues.createComment({
               owner: context.repo.owner,
@@ -210,3 +244,8 @@ jobs:
               issue_number,
               body: `The request failed during processing.\n\nCheck the workflow run for details: ${runUrl}`
             });
+
+      - name: Remove temporary YouTube credentials
+        if: always()
+        shell: bash
+        run: rm -f client_secrets.json youtube_token.json

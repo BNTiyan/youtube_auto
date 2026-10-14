@@ -15,6 +15,7 @@ Usage:
 """
 
 from filename_utils import video_slug
+from visual_assets import relevant_image, save_visual_manifest
 import os
 import json
 import argparse
@@ -282,6 +283,7 @@ def create_single_item_video(
         sections = lesson["sections"]
 
     clips = []
+    visual_images = []
 
     with tempfile.TemporaryDirectory() as tmp:
 
@@ -289,8 +291,11 @@ def create_single_item_video(
         item_img = None
         if use_images:
             print(f"  🖼️  Fetching image for {name}...")
-            item_img = get_item_image(name, category)
+            item_img = relevant_image(name, fact)
+            if item_img is None:
+                item_img = get_item_image(name, category)
 
+        visual_images.append(item_img)
         if sections:
             print("  Creating intro slide...")
             intro_slide = create_slide(
@@ -308,11 +313,15 @@ def create_single_item_video(
                 narration_chunks = _chunk_script_text(section.get("narration", ""), max_chars=300)
                 for chunk_idx, chunk in enumerate(narration_chunks, 1):
                     print(f"  Creating script slide {section_idx}.{chunk_idx}...")
+                    scene_image = relevant_image(name, chunk) if use_images else None
+                    if scene_image is None:
+                        scene_image = item_img
+                    visual_images.append(scene_image)
                     slide = create_slide(
                         title=title,
                         fact=chunk if len(narration_chunks) > 1 else section.get("slide_text") or chunk,
                         theme=theme,
-                        image=item_img,
+                        image=scene_image,
                     )
                     mp3_path = os.path.join(tmp, f"section_{section_idx}_{chunk_idx}.mp3")
                     create_tts(chunk, mp3_path, lang)
@@ -396,6 +405,7 @@ def create_single_item_video(
         except Exception:
             pass
 
+    save_visual_manifest(output_path, visual_images)
     return output_path
 
 
@@ -616,6 +626,7 @@ def create_kids_video(
     theme = THEMES.get(category.lower(), DEFAULT_THEME)
     total = len(items)
     clips = []
+    visual_images = []
 
     with tempfile.TemporaryDirectory() as tmp:
 
@@ -623,8 +634,8 @@ def create_kids_video(
         print("  Creating intro...")
         intro_img = None
         if use_images:
-            suffix = CATEGORY_SEARCH_SUFFIX.get(category, "")
-            intro_img = fetch_pexels_image(f"{category} {suffix} collection")
+            intro_img = relevant_image(category, "An overview of " + category)
+        visual_images.append(intro_img)
         intro_slide = create_intro_slide(category, total, theme, image=intro_img)
         intro_mp3   = os.path.join(tmp, "intro.mp3")
         create_tts(
@@ -640,15 +651,18 @@ def create_kids_video(
         # ── Item slides ──
         for i, item in enumerate(items, 1):
             name    = item["name"]
-            fact    = item.get("fact", f"{name} is really amazing!")
+            fact    = item.get("fact") or item.get("explanation", "")
             counter = f"{i} of {total}"
 
             print(f"  [{i}/{total}] {name}", end="", flush=True)
             item_img = None
             if use_images:
-                item_img = get_item_image(name, category)
+                item_img = relevant_image(name, fact)
+                if item_img is None:
+                    item_img = get_item_image(name, category)
                 print(f"  {'🖼️ ' if item_img else '📝 '}", end="")
             print()
+            visual_images.append(item_img)
 
             slide    = create_slide(title=name, fact=fact, theme=theme,
                                     counter=counter, image=item_img)
@@ -697,6 +711,7 @@ def create_kids_video(
         except Exception:
             pass
 
+    save_visual_manifest(output_path, visual_images)
     return output_path
 
 
@@ -832,7 +847,7 @@ Examples:
         print("  🎬  Kids' Learning Video Creator — Single Item")
         print(f"  📂  Category : {cat}")
         print(f"  🏷️   Item     : {item_data['name']}")
-        print(f"  {'🖼️   Images: Pexels API ✅' if use_images else '📝  Visuals: local subject illustrations'}")
+        print(f"  {'🖼️   Visuals: source-checked images + local fallback' if use_images else '📝  Visuals: local subject illustrations'}")
         print("=" * 60)
 
         os.makedirs(args.output_dir, exist_ok=True)
@@ -860,7 +875,7 @@ Examples:
 
     print("=" * 60)
     print("  🎬  Kids' Learning Video Creator")
-    print(f"  {'🖼️   Images: Pexels API ✅' if use_images else '📝  Visuals: local subject illustrations'}")
+    print(f"  {'🖼️   Visuals: source-checked images + local fallback' if use_images else '📝  Visuals: local subject illustrations'}")
     print("=" * 60)
 
     os.makedirs(args.output_dir, exist_ok=True)

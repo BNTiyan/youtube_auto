@@ -15,6 +15,7 @@ Usage:
 """
 
 from filename_utils import video_slug
+from visual_assets import relevant_image, save_visual_manifest
 import os
 import json
 import argparse
@@ -457,6 +458,7 @@ def create_single_concept_video(
     raw_points  = item.get("points", [])
     sections    = [section for section in item.get("sections", []) if isinstance(section, dict)]
     clips       = []
+    visual_images = []
 
     with tempfile.TemporaryDirectory() as tmp:
 
@@ -464,8 +466,11 @@ def create_single_concept_video(
         item_img = None
         if use_images:
             print(f"  🖼️  Fetching image for {name}...")
-            item_img = get_tech_image(name)
+            item_img = relevant_image(name, explanation)
+            if item_img is None:
+                item_img = get_tech_image(name)
 
+        visual_images.append(item_img)
         if sections:
             print("  Creating intro slide...")
             intro_slide = create_tech_slide(
@@ -487,11 +492,15 @@ def create_single_concept_video(
                 narration_chunks = _chunk_script_text(section.get("narration", ""), max_chars=340)
                 for chunk_idx, chunk in enumerate(narration_chunks, 1):
                     print(f"  Creating script slide {section_idx}.{chunk_idx}...")
+                    scene_image = relevant_image(name, chunk) if use_images else None
+                    if scene_image is None:
+                        scene_image = item_img
+                    visual_images.append(scene_image)
                     slide = create_tech_slide(
                         term=title,
-                        explanation=section.get("slide_text") or chunk,
+                        explanation=chunk if len(narration_chunks) > 1 else section.get("slide_text") or chunk,
                         theme=theme,
-                        image=item_img,
+                        image=scene_image,
                     )
                     mp3_path = os.path.join(tmp, f"section_{section_idx}_{chunk_idx}.mp3")
                     create_tts(chunk, mp3_path, lang)
@@ -564,6 +573,7 @@ def create_single_concept_video(
         except Exception:
             pass
 
+    save_visual_manifest(output_path, visual_images)
     return output_path
 
 
@@ -601,6 +611,7 @@ def create_tech_video(
     theme = TECH_THEMES.get(category.lower(), DEFAULT_TECH_THEME)
     total = len(items)
     clips = []
+    visual_images = []
 
     with tempfile.TemporaryDirectory() as tmp:
 
@@ -608,7 +619,8 @@ def create_tech_video(
         print("  Creating intro...")
         intro_img = None
         if use_images:
-            intro_img = fetch_pexels_image(f"{category} technology concept")
+            intro_img = relevant_image(category, "An overview of " + category)
+        visual_images.append(intro_img)
         intro_slide = create_tech_intro(category, total, theme, image=intro_img)
         intro_mp3   = os.path.join(tmp, "intro.mp3")
         create_tts(
@@ -630,9 +642,12 @@ def create_tech_video(
             print(f"  [{i}/{total}] {name}", end="", flush=True)
             item_img = None
             if use_images:
-                item_img = get_tech_image(name)
+                item_img = relevant_image(name, explanation)
+                if item_img is None:
+                    item_img = get_tech_image(name)
                 print(f"  {'🖼️ ' if item_img else '📝 '}", end="")
             print()
+            visual_images.append(item_img)
 
             slide    = create_tech_slide(term=name, explanation=explanation,
                                          theme=theme, counter=counter, image=item_img)
@@ -687,6 +702,7 @@ def create_tech_video(
         except Exception:
             pass
 
+    save_visual_manifest(output_path, visual_images)
     return output_path
 
 
@@ -726,12 +742,7 @@ Examples:
                         help="Use local animated concept diagrams without stock photos")
     args = parser.parse_args()
 
-    use_images = not args.no_images and os.getenv("TECH_STOCK_IMAGES", "0") == "1"
-    if use_images and not PEXELS_API_KEY:
-        print("⚠️   PEXELS_API_KEY not set — using text-only slides.")
-        print("    Free key: https://www.pexels.com/api/\n")
-        use_images = False
-
+    use_images = not args.no_images
     config_path = args.config
     if os.path.isdir(args.config):
         if hasattr(args, 'cat') and args.cat and os.path.exists(os.path.join(args.config, f"{args.cat}.json")):
@@ -824,7 +835,7 @@ Examples:
         print("  💻  Tech Learning Video Creator — Single Concept")
         print(f"  📂  Category : {cat}")
         print(f"  🏷️   Concept  : {item_data['name']}")
-        print(f"  {'🖼️   Images: Pexels API ✅' if use_images else '📝  Visuals: animated concept diagrams'}")
+        print(f"  {'🖼️   Visuals: source-checked images + local fallback' if use_images else '📝  Visuals: animated concept diagrams'}")
         print("=" * 60)
 
         os.makedirs(args.output_dir, exist_ok=True)
@@ -852,7 +863,7 @@ Examples:
 
     print("=" * 60)
     print("  💻  Tech Learning Video Creator")
-    print(f"  {'🖼️   Images: Pexels API ✅' if use_images else '📝  Visuals: animated concept diagrams'}")
+    print(f"  {'🖼️   Visuals: source-checked images + local fallback' if use_images else '📝  Visuals: animated concept diagrams'}")
     print("=" * 60)
 
     os.makedirs(args.output_dir, exist_ok=True)

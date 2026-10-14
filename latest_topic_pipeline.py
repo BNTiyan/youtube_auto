@@ -82,10 +82,11 @@ Return ONLY valid JSON with this exact shape:
 Rules:
 - Keep the final package original and educational
 - Preserve the key idea from the user text, but rewrite it clearly
-- category must be one of: ai, llm, rag, database, mcp
+- category must be one of: ai, llm, rag, database, mcp, science, general
 - video_topic must be under 70 characters
 - points must be short and easy to narrate
 - topic_tags must be lowercase
+- Use science for astronomy and other science topics; use general for other subjects. Never force AI framing onto unrelated topics.
 - if the topic is general AI or product news, prefer category "ai"
 - preserve the language of the user-provided text
 """
@@ -394,7 +395,7 @@ Return ONLY valid JSON with this exact shape:
 }}
 
 Rules:
-- category must be one of: ai, llm, rag, database, mcp
+- category must be one of: ai, llm, rag, database, mcp, science, general
 - video_topic must be under 70 characters
 - video_summary should be concise, factual, and easy to narrate
 - points must be short spoken-friendly learning points
@@ -468,7 +469,7 @@ def normalize_topic_package(data: dict, channel: str = DEFAULT_CHANNEL) -> dict:
     category = data.get("category", "ai").lower()
     if channel == "childishdreamer":
         category = "general"
-    elif category not in {"ai", "llm", "rag", "database", "mcp"}:
+    elif category not in {"ai", "llm", "rag", "database", "mcp", "science", "general"}:
         category = "ai"
 
     video_topic = (data.get("video_topic") or "Latest AI Topic").strip()

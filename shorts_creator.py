@@ -15,6 +15,7 @@ Usage:
 """
 
 from filename_utils import video_slug
+from visual_assets import relevant_image, save_visual_manifest
 import os
 import json
 import argparse
@@ -343,6 +344,19 @@ def make_clip(slide: np.ndarray, audio_path: str, animate: bool = False):
 
 # ── SHORT VIDEO BUILDER ───────────────────────────────────────────────────────
 
+def portrait_source_image(source_image, theme):
+    from PIL import ImageOps
+    from visual_assets import image_credit
+    from motion_design import wrap_pixels
+    background = Image.new("RGB", (WIDTH, HEIGHT), theme["bg"])
+    photo = ImageOps.contain(source_image, (900, 850))
+    background.paste(photo, (90+(900-photo.width)//2, 240+(850-photo.height)//2))
+    draw = ImageDraw.Draw(background)
+    for i, line in enumerate(wrap_pixels(draw, image_credit(source_image), load_font(24), 900)[:2]):
+        draw.text((90, 1110+i*28), line, font=load_font(24), fill=theme["text"])
+    return background
+
+
 def build_short_script(name, text, points=None, source_text=""):
     """Return a complete source-grounded explanation, with no stock intro/outro."""
     from tts_utils import join_spoken_lines
@@ -423,13 +437,23 @@ def create_short(
                 lesson = generate_kids_lesson(name, "\n".join([source_text or text, *(points or [])]), lang)
                 text = lesson["short_text"]
             points = []
+        source_image = relevant_image(name, text) if use_images else None
+        visual_images = [source_image]
+        if source_image is not None:
+            img = portrait_source_image(source_image, theme)
+
         script = build_short_script(name, text, points, source_text)
         pages = short_script_pages(script)
         # Validate every page layout before generating any narration.
-        slides = [create_short_slide(
-            title=name, subtitle=sentence, theme=theme,
-            top_label=f"{i+1} / {len(pages)}", image=img,
-        ) for i, sentence in enumerate(pages)]
+        slides = []
+        for i, sentence in enumerate(pages):
+            scene_image = relevant_image(name, sentence) if use_images else None
+            visual_images.append(scene_image)
+            scene_background = portrait_source_image(scene_image, theme) if scene_image is not None else img
+            slides.append(create_short_slide(
+                title=name, subtitle=sentence, theme=theme,
+                top_label=f"{i+1} / {len(pages)}", image=scene_background,
+            ))
         for i, (slide, sentence) in enumerate(zip(slides, pages)):
             print(f"  Narrating complete sentence {i+1}/{len(pages)}...")
             audio_path = os.path.join(tmp, f"sentence_{i}.mp3")
@@ -466,6 +490,7 @@ def create_short(
         except Exception:
             pass
 
+    save_visual_manifest(output_path, visual_images)
     return output_path
 
 

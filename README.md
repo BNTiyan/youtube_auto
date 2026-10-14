@@ -402,3 +402,24 @@ the creator configuration for review. Model output still needs editorial review.
 Kids lesson writing uses `qwen3.5:4b` (installed on this Mac), with a separate
 source-editing pass. Override it with `KIDS_LLM_MODEL` if needed. Other metadata
 and tech generation continue using their configured model.
+
+
+## Script-relevant source images
+
+New kids and tech videos, topic requests, and Shorts search Wikimedia Commons
+using the subject and narration. Local Ollama plans a precise English query;
+source metadata must match the subject before `qwen3.5:4b` checks the image.
+The first search result is never accepted automatically. Similar-looking or
+similarly named objects are not enough: the carbon-star test rejects BW Sculptoris
+and uses a documented R Sculptoris observation. Astronomy is no longer forced
+into an AI category by the manual-topic prompt.
+
+Only supported CC BY, CC0, and public-domain sources are accepted. Credits appear
+in the video, in a `_visuals.json` manifest, and in uploaded descriptions. Review
+artifacts include videos and their source manifests. No image search or vision
+check can guarantee accuracy; review the images against their linked sources.
+If no candidate passes, a local teaching illustration/diagram is used. Set
+`VIDEO_VISUALS=local` (or `--no-images`) for offline visuals. Source search needs
+internet and local Ollama; the vision model defaults to `qwen3.5:4b`, overridable
+with `VISUAL_LLM_MODEL`. `VIDEO_VISUAL_CACHE` can point to a persistent cache;
+the default is `generated/visual_cache`.

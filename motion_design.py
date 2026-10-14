@@ -110,7 +110,15 @@ class TechScene:
         d.rounded_rectangle((804, 161, 1216, 594), radius=28, fill=(17, 27, 44), outline=(49, 65, 86), width=1)
         if self.image is not None:
             from PIL import ImageOps
-            canvas.paste(ImageOps.fit(self.image.convert('RGB'), (380, 220)), (820, 178))
+            photo = ImageOps.contain(self.image.convert('RGB'), (380, 310))
+            canvas.paste(photo, (820+(380-photo.width)//2, 178+(310-photo.height)//2))
+            asset = self.image.info.get('visual_asset', {})
+            caption = asset.get('caption', '')
+            for i, line in enumerate(wrap_pixels(d, caption, self.font(17), 365)[:2]):
+                d.text((828, 500+i*23), line, font=self.font(17), fill=(210,224,239))
+            from visual_assets import image_credit
+            for i, line in enumerate(wrap_pixels(d, image_credit(self.image), self.font(13), 365)[:2]):
+                d.text((828, 550+i*18), line, font=self.font(13), fill=(149,173,194))
             return
         heading, labels = concept_flow(self.title, self.body)
         d.text((830, 184), heading, font=self.font(18), fill=self.accent)
@@ -192,6 +200,9 @@ class KidsScene(TechScene):
             mask = Image.new('L', photo.size)
             ImageDraw.Draw(mask).rounded_rectangle((0, 0, 389, 389), radius=40, fill=255)
             canvas.paste(photo, (808, 182+bob), mask)
+            from visual_assets import image_credit
+            for i, line in enumerate(wrap_pixels(d, image_credit(self.image), self.font(13), 390)[:2]):
+                d.text((808, 612+i*18), line, font=self.font(13), fill=(78,99,104))
         else:
             # A friendly open book, drawn locally without downloaded assets.
             d.ellipse((835, 549, 1185, 577), fill=(211, 224, 211))

@@ -204,6 +204,8 @@ jobs:
             latest_videos/*.mp4
             latest_shorts/*.mp4
             latest_shorts/*_script.json
+            latest_videos/*_visuals.json
+            latest_shorts/*_visuals.json
             generated/latest_topic_package.json
           retention-days: 7
 

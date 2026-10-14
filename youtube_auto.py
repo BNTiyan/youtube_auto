@@ -412,6 +412,17 @@ def main():
                 tone=args.tone,
             )
 
+        credits_path = os.path.splitext(video_path)[0] + "_visuals.json"
+        if os.path.exists(credits_path):
+            with open(credits_path, encoding="utf-8") as fh:
+                assets = json.load(fh)
+            credits = [f"{a.get('title', '')} — {a.get('author', '')} ({a.get('license', '')})\n{a.get('source_url', '')}\n{a.get('license_url', '')}" for a in assets]
+            if credits:
+                credit_text = "\n\nImage sources and licenses (images resized for video):\n" + "\n\n".join(credits)
+                if len(credit_text) > 4500:
+                    raise ValueError("Too many image credits for one YouTube description; review the visual manifest")
+                metadata['description'] = metadata['description'][:5000-len(credit_text)] + credit_text
+
         meta_path = os.path.splitext(video_path)[0] + "_metadata.json"
         with open(meta_path, "w") as f:
             json.dump(metadata, f, indent=2)

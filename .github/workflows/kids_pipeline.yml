@@ -172,6 +172,19 @@ jobs:
           git diff --staged --quiet || git commit -m "chore: update kids pipeline rotation state [skip ci]" || true
           git push || true
 
+      - name: Save video previews and source credits
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kids_pipeline-${{ github.run_id }}
+          path: |
+            videos/*.mp4
+            videos/*_visuals.json
+            shorts/*.mp4
+            shorts/*_script.json
+            shorts/*_visuals.json
+          retention-days: 7
+
       - name: Remove temporary YouTube credentials
         if: always()
         shell: bash

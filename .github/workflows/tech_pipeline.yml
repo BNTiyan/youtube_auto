@@ -170,6 +170,19 @@ jobs:
           git diff --staged --quiet || git commit -m "chore: update tech pipeline rotation state [skip ci]" || true
           git push || true
 
+      - name: Save video previews and source credits
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: tech_pipeline-${{ github.run_id }}
+          path: |
+            tech_videos/*.mp4
+            tech_videos/*_visuals.json
+            tech_shorts/*.mp4
+            tech_shorts/*_script.json
+            tech_shorts/*_visuals.json
+          retention-days: 7
+
       - name: Remove temporary YouTube credentials
         if: always()
         shell: bash

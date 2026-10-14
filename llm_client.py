@@ -13,7 +13,7 @@ def provider_name():
     return provider
 
 
-def generate_json(prompt, schema=None, model=None):
+def generate_json(prompt, schema=None, model=None, images=None):
     provider = provider_name()
     if provider == "ollama":
         base = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434").rstrip("/")
@@ -21,7 +21,7 @@ def generate_json(prompt, schema=None, model=None):
         try:
             response = requests.post(
                 f"{base}/api/generate",
-                json={"model": model, "prompt": prompt, "format": schema or "json", "stream": False, **({"think": False} if model.startswith("qwen3") else {})},
+                json={"model": model, "prompt": prompt, "format": schema or "json", "stream": False, **({"images": images} if images else {}), **({"think": False} if model.startswith("qwen3") else {})},
                 timeout=(10, float(os.getenv("LLM_TIMEOUT", "300"))),
             )
             response.raise_for_status()

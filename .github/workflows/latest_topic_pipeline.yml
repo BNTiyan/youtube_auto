@@ -34,7 +34,7 @@ on:
           - private
           - unlisted
           - public
-        default: private
+        default: public
       language:
         description: 'Narration language'
         required: false
@@ -200,7 +200,7 @@ jobs:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_SLUG: ${{ steps.latest.outputs.topic_slug }}
           TOPIC_HEADLINE: ${{ steps.latest.outputs.topic_headline }}
-          PRIVACY: ${{ github.event.inputs.privacy || 'private' }}
+          PRIVACY: ${{ github.event.inputs.privacy || 'public' }}
         run: |
           if [ "${{ github.event.inputs.channel }}" = "childishdreamer" ]; then
             VIDEO="latest_shorts/${TOPIC_SLUG}_short.mp4"
@@ -227,7 +227,7 @@ jobs:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_SLUG: ${{ steps.latest.outputs.topic_slug }}
           TOPIC_HEADLINE: ${{ steps.latest.outputs.topic_headline }}
-          PRIVACY: ${{ github.event.inputs.privacy || 'private' }}
+          PRIVACY: ${{ github.event.inputs.privacy || 'public' }}
         run: |
           VIDEO="latest_videos/${TOPIC_SLUG}_learning.mp4"
           python youtube_auto.py "$VIDEO" \
@@ -244,7 +244,7 @@ jobs:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_SLUG: ${{ steps.latest.outputs.topic_slug }}
           TOPIC_HEADLINE: ${{ steps.latest.outputs.topic_headline }}
-          PRIVACY: ${{ github.event.inputs.privacy || 'private' }}
+          PRIVACY: ${{ github.event.inputs.privacy || 'public' }}
         run: |
           VIDEO="latest_videos/${TOPIC_SLUG}_learning.mp4"
           python youtube_auto.py "$VIDEO" \
@@ -284,7 +284,7 @@ jobs:
           echo "| Summary | ${TOPIC_SUMMARY} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Regular video | \`${TOPIC_SLUG}_learning.mp4\` |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Short | \`${TOPIC_SLUG}_short.mp4\` |" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Privacy | ${{ github.event.inputs.privacy || 'private' }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Privacy | ${{ github.event.inputs.privacy || 'public' }} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Language | ${TOPIC_LANGUAGE} |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Run date | $(date '+%Y-%m-%d %H:%M UTC') |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Dry run | ${{ github.event.inputs.dry_run }} |" >> "$GITHUB_STEP_SUMMARY"

@@ -31,7 +31,7 @@ on:
           - public
           - private
           - unlisted
-        default: 'private'
+        default: 'public'
 
 jobs:
   upload:

@@ -29,7 +29,7 @@ module.exports = async (req, res) => {
   const sourceText = String(body.sourceText || "").trim();
   const notes = String(body.notes || "").trim();
   const channel = String(body.channel || "navadisha").trim().toLowerCase();
-  const privacy = String(body.privacy || "private").trim().toLowerCase();
+  const privacy = String(body.privacy || "public").trim().toLowerCase();
   const language = String(body.language || "en").trim();
   const dryRun = String(body.dryRun || "false").trim().toLowerCase();
   const accessCode = String(body.accessCode || "").trim();

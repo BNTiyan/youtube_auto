@@ -373,3 +373,8 @@ instead of silently dropping lines. Long inputs are summarized by the configured
 LLM into a source-grounded script. Each Short saves a `_script.json` sidecar for
 review. The renderer does not trim the finished video mid-sentence. Tech videos
 use a neutral topic header and no NavaDisha spoken welcome.
+
+
+Future uploads default to **public** across workflow inputs, scheduled latest-topic
+runs, request forms, and the request API. Private and unlisted remain explicit
+options. Existing uploaded videos retain their current visibility.

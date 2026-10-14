@@ -62,12 +62,12 @@ jobs:
           topic = extract(body, "Topic")
           source_text = extract(body, "Source Text")
           notes = extract(body, "Notes")
-          privacy = extract(body, "Privacy").lower() or "private"
+          privacy = extract(body, "Privacy").lower() or "public"
           dry_run_raw = extract(body, "Dry Run").lower()
           dry_run = "true" if "true" in dry_run_raw or "yes" in dry_run_raw else "false"
 
           if privacy not in {"public", "private", "unlisted"}:
-              privacy = "private"
+              raise SystemExit("Privacy must be public, private, or unlisted.")
 
           if not topic:
               raise SystemExit("Topic is required in the issue body.")

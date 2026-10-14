@@ -1,7 +1,30 @@
 """Locally rendered editorial tech scenes with timed text and diagram motion."""
 import math
+import re
 import numpy as np
 from PIL import Image, ImageDraw
+
+
+def concept_flow(title, body=''):
+    """Choose a teaching diagram by explicit concept words, not stock-photo rank."""
+    rules = [
+        (r'\b(rag|retrieval|retrieval.augmented)\b', ('RETRIEVAL + GENERATION', ('Question', 'Retrieve documents', 'Generate answer'))),
+        (r'\b(vector|embedding|embeddings|semantic search)\b', ('SEMANTIC SEARCH', ('Encode text', 'Compare vectors', 'Find similar items'))),
+        (r'\b(mcp|model context protocol)\b', ('TOOL CONNECTION', ('AI application', 'MCP server', 'Tools and resources'))),
+        (r'\b(attention|transformer|transformers)\b', ('ATTENTION', ('Input tokens', 'Weight context', 'Contextual output'))),
+        (r'\b(index|indexing|indexes)\b', ('DATABASE INDEX', ('Search key', 'Look up index', 'Find matching rows'))),
+        (r'\b(database|sql|query|queries)\b', ('DATABASE QUERY', ('Query', 'Read stored data', 'Return results'))),
+        (r'\b(training|train|fine.tun(?:e|ing))\b', ('MODEL TRAINING', ('Training examples', 'Update weights', 'Evaluate model'))),
+        (r'\b(llm|language model|token|tokens)\b', ('LANGUAGE MODEL', ('Input tokens', 'Predict next token', 'Repeat to generate'))),
+        (r'\b(agent|agents)\b', ('AGENT LOOP', ('Plan a step', 'Use a tool', 'Observe and repeat'))),
+        (r'\b(local|ollama)\b', ('LOCAL GENERATION', ('Your prompt', 'Model on your device', 'Generated response'))),
+    ]
+    # Prefer the title so incidental words in a paragraph do not change its topic.
+    for text in (title, body):
+        for pattern, flow in rules:
+            if re.search(pattern, text, re.I):
+                return flow
+    return ('CONCEPT OVERVIEW', ('Main idea', 'How it works', 'Key takeaway'))
 
 
 class MotionSlide(np.ndarray):
@@ -83,30 +106,29 @@ class TechScene:
 
     def diagram(self, canvas, t):
         d = ImageDraw.Draw(canvas)
-        x, y = 1010, 350
+        x = 1010
         d.rounded_rectangle((804, 161, 1216, 594), radius=28, fill=(17, 27, 44), outline=(49, 65, 86), width=1)
         if self.image is not None:
             from PIL import ImageOps
-            photo = ImageOps.fit(self.image.convert('RGB'), (380, 220))
-            canvas.paste(photo, (820, 178))
-            y = 480
-        else:
-            # Orbiting signals and an animated circuit convey local processing.
-            for radius in (80, 126, 166):
-                d.ellipse((x-radius, y-radius, x+radius, y+radius), outline=(38, 55, 76), width=1)
-            for i in range(6):
-                angle = i*math.pi/3 + .12*math.sin(t*.5)
-                nx, ny = x + math.cos(angle)*145, y + math.sin(angle)*145
-                d.line((x, y, nx, ny), fill=(55, 79, 106), width=2)
-                travel = (t*.32 + i/6) % 1
-                px, py = x+(nx-x)*travel, y+(ny-y)*travel
-                d.ellipse((px-4, py-4, px+4, py+4), fill=self.accent)
-                d.ellipse((nx-8, ny-8, nx+8, ny+8), fill=(24, 39, 58), outline=self.accent, width=2)
-        pulse = int(3 * math.sin(t*2))
-        d.rounded_rectangle((x-50-pulse, y-40-pulse, x+50+pulse, y+40+pulse), radius=18, fill=(24, 47, 67), outline=self.accent, width=2)
-        d.text((x-26, y-20), 'AI', font=self.font(34), fill=(239, 246, 255))
-        if self.image is None:
-            d.text((850, 550), 'INPUT   /   PROCESS   /   CREATE', font=self.font(17), fill=(155, 183, 206))
+            canvas.paste(ImageOps.fit(self.image.convert('RGB'), (380, 220)), (820, 178))
+            return
+        heading, labels = concept_flow(self.title, self.body)
+        d.text((830, 184), heading, font=self.font(18), fill=self.accent)
+        for i, label in enumerate(labels):
+            y = 250 + i*125
+            if i < 2:
+                d.line((x, y+48, x, y+86), fill=(69, 96, 121), width=2)
+                d.polygon(((x-6, y+80), (x+6, y+80), (x, y+89)), fill=self.accent)
+                travel = (t*.65-i*.2) % 1
+                py = y+48+travel*38
+                d.ellipse((x-4, py-4, x+4, py+4), fill=self.accent)
+            active = int(t*.7)%3 == i
+            d.rounded_rectangle((828, y-15, 1192, y+48), radius=14,
+                                fill=(24, 47, 67) if active else (21, 34, 51),
+                                outline=self.accent if active else (50, 70, 91), width=2)
+            font = self.font(24)
+            tw = d.textlength(label, font=font)
+            d.text((x-tw/2, y+3), label, font=font, fill=(231, 240, 251))
 
     def frame(self, t, duration=10):
         canvas = self.background.copy()

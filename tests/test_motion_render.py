@@ -26,6 +26,23 @@ class MotionRenderTests(unittest.TestCase):
         self.assertEqual(scene.scene.frame(2).shape, (720, 1280, 3))
 
 
+class ConceptVisualTests(unittest.TestCase):
+    def test_title_selects_distinct_diagrams(self):
+        from motion_design import concept_flow
+        self.assertEqual(concept_flow('RAG', 'A language model uses documents')[1][1], 'Retrieve documents')
+        self.assertEqual(concept_flow('MCP', 'A language model uses tools')[1][1], 'MCP server')
+        self.assertEqual(concept_flow('Database indexing')[0], 'DATABASE INDEX')
+        self.assertNotEqual(concept_flow('RAG'), concept_flow('Transformer'))
+
+    def test_stock_requests_disabled_by_default(self):
+        import os
+        from unittest.mock import patch
+        import tech_video_creator
+        with patch.dict(os.environ, {}, clear=True), patch.object(tech_video_creator.requests, 'get') as get:
+            self.assertIsNone(tech_video_creator.get_tech_image('RAG'))
+            get.assert_not_called()
+
+
 class KidsMotionTests(unittest.TestCase):
     def test_kids_motion_with_and_without_photo(self):
         from video_creator import create_slide, THEMES

@@ -373,7 +373,12 @@ def create_short(
 
         # ── Fetch portrait image (reused across slides) ───────────────────────
         img = None
-        if use_images:
+        if style == "tech":
+            from tech_video_creator import create_tech_slide, TECH_THEMES as LANDSCAPE_THEMES, DEFAULT_TECH_THEME
+            diagram = Image.fromarray(create_tech_slide(name, text, LANDSCAPE_THEMES.get(category.lower(), DEFAULT_TECH_THEME))).crop((804, 161, 1216, 594))
+            img = Image.new("RGB", (WIDTH, HEIGHT), theme["bg"])
+            img.paste(diagram.resize((880, 925), Image.Resampling.LANCZOS), (100, 240))
+        elif use_images:
             print(f"  🖼️  Fetching portrait image for {name}…")
             img = get_item_image(name, category)
             print(f"       {'✅ got image' if img else '📝 no image — text-only mode'}")

@@ -351,3 +351,12 @@ YouTube. Then use the daily pipelines' dry-run option before publishing.
 
 The repository is public: only trusted workflow code should target this personal
 Mac runner. Do not add pull-request triggers that execute untrusted fork code.
+
+
+Tech visuals default to locally drawn concept diagrams instead of first-result
+stock photos. RAG, vector search, MCP, attention, databases, training, LLMs, and
+agents have distinct labeled flows. Unrecognized topics use a labeled overview;
+these diagrams are teaching templates, not diagrams inferred or verified by the
+LLM. Tech Shorts use the same concept selection. To explicitly opt into Pexels
+photos for landscape tech videos, set `TECH_STOCK_IMAGES=1`; review matches before
+publishing. Kids photo selection is unchanged.

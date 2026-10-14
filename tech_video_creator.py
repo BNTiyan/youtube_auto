@@ -306,7 +306,7 @@ _img_cache: dict = {}
 
 
 def fetch_pexels_image(query: str) -> Optional[Image.Image]:
-    if not PEXELS_API_KEY:
+    if os.getenv("TECH_STOCK_IMAGES", "0") != "1" or not PEXELS_API_KEY:
         return None
     if query in _img_cache:
         return _img_cache[query]
@@ -351,11 +351,7 @@ def get_tech_image(term: str) -> Optional[Image.Image]:
     query = TECH_IMAGE_QUERIES.get(term)
     if query:
         return fetch_pexels_image(query)
-    # For unmapped terms, try the term itself first, then fall back to "technology data science"
-    img = fetch_pexels_image(term)
-    if img:
-        return img
-    return fetch_pexels_image("technology data science code")
+    return fetch_pexels_image(term)
 
 
 
@@ -761,10 +757,10 @@ Examples:
     parser.add_argument("--items",      type=int, default=0,
                         help="Limit concepts per category (whole-category mode only)")
     parser.add_argument("--no-images",  action="store_true",
-                        help="Disable Pexels image fetching (text-only slides)")
+                        help="Use local animated concept diagrams without stock photos")
     args = parser.parse_args()
 
-    use_images = not args.no_images
+    use_images = not args.no_images and os.getenv("TECH_STOCK_IMAGES", "0") == "1"
     if use_images and not PEXELS_API_KEY:
         print("⚠️   PEXELS_API_KEY not set — using text-only slides.")
         print("    Free key: https://www.pexels.com/api/\n")
@@ -862,7 +858,7 @@ Examples:
         print("  💻  Tech Learning Video Creator — Single Concept")
         print(f"  📂  Category : {cat}")
         print(f"  🏷️   Concept  : {item_data['name']}")
-        print(f"  {'🖼️   Images: Pexels API ✅' if use_images else '📝  Images: text-only mode'}")
+        print(f"  {'🖼️   Images: Pexels API ✅' if use_images else '📝  Visuals: animated concept diagrams'}")
         print("=" * 60)
 
         os.makedirs(args.output_dir, exist_ok=True)
@@ -889,7 +885,7 @@ Examples:
 
     print("=" * 60)
     print("  💻  Tech Learning Video Creator")
-    print(f"  {'🖼️   Images: Pexels API ✅' if use_images else '📝  Images: text-only mode'}")
+    print(f"  {'🖼️   Images: Pexels API ✅' if use_images else '📝  Visuals: animated concept diagrams'}")
     print("=" * 60)
 
     os.makedirs(args.output_dir, exist_ok=True)

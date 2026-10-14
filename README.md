@@ -324,7 +324,8 @@ with `qwen2.5:3b` at `http://127.0.0.1:11434`; Gemini keys do not override this.
 The issue-triggered request workflow remains on GitHub-hosted Linux with its
 existing Gemini configuration, so public issue events do not execute on the Mac.
 
-The shared local runtime action installs Python 3.11, creates an isolated virtual
+The shared local runtime action uses uv to install Python 3.11 in a user-owned
+temporary directory (without `/Users/runner` or administrator access), creates an isolated virtual
 environment, supplies FFmpeg via imageio-ffmpeg, and checks that Ollama and the
 configured model are available. Existing YouTube credential secrets are still
 required for publishing and temporary credential files are removed after jobs.

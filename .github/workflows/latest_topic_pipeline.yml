@@ -291,4 +291,5 @@ jobs:
 
       - name: Remove temporary YouTube credentials
         if: always()
-        run: python -c "from pathlib import Path; [Path(p).unlink(missing_ok=True) for p in ('client_secrets.json', 'youtube_token.json')]"
+        shell: bash
+        run: rm -f client_secrets.json youtube_token.json

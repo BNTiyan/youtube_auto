@@ -92,6 +92,7 @@ jobs:
 
       # ── 9. Upload regular video ────────────────────────────────────────────
       - name: Upload regular video to YouTube
+        id: upload_video
         if: ${{ github.event.inputs.dry_run != 'true' }}
         env:
           ITEM_NAME: ${{ steps.pick.outputs.name }}
@@ -112,6 +113,7 @@ jobs:
       # ── 10. Upload short ───────────────────────────────────────────────────
       #   YouTube auto-detects 1080×1920 portrait videos under 60 sec as Shorts.
       - name: Upload short to YouTube
+        id: upload_short
         if: ${{ github.event.inputs.dry_run != 'true' }}
         env:
           ITEM_NAME: ${{ steps.pick.outputs.name }}
@@ -143,6 +145,10 @@ jobs:
           ITEM_CAT:  ${{ steps.pick.outputs.category }}
           ITEM_SLUG: ${{ steps.pick.outputs.slug }}
         run: |
+          if [ -z "$ITEM_SLUG" ]; then
+            echo "Pipeline stopped before a topic was selected. No videos were generated or uploaded." >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
           echo "## 💻 Tech Learning — Daily Pipeline" >> "$GITHUB_STEP_SUMMARY"
           echo "| Field         | Value |" >> "$GITHUB_STEP_SUMMARY"
           echo "|---|---|" >> "$GITHUB_STEP_SUMMARY"
@@ -150,8 +156,8 @@ jobs:
           echo "| Concept       | **${ITEM_NAME}** |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Regular video | \`${ITEM_SLUG}_learning.mp4\` (1280×720) |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Short         | \`${ITEM_SLUG}_short.mp4\` (1080×1920) |" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Uploads today | 2 (video + short) |" >> "$GITHUB_STEP_SUMMARY"
-          echo "| Run date      | $(date '+%Y-%m-%d %H:%M UTC') |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Upload steps | Video: ${{ steps.upload_video.outcome }}; Short: ${{ steps.upload_short.outcome }} |" >> "$GITHUB_STEP_SUMMARY"
+          echo "| Run date      | $(date -u '+%Y-%m-%d %H:%M UTC') |" >> "$GITHUB_STEP_SUMMARY"
           echo "| Dry run       | ${{ github.event.inputs.dry_run }} |" >> "$GITHUB_STEP_SUMMARY"
 
       # ── 13. Commit state ──────────────────────────────────────────────────
@@ -166,4 +172,5 @@ jobs:
 
       - name: Remove temporary YouTube credentials
         if: always()
-        run: python -c "from pathlib import Path; [Path(p).unlink(missing_ok=True) for p in ('client_secrets.json', 'youtube_token.json')]"
+        shell: bash
+        run: rm -f client_secrets.json youtube_token.json

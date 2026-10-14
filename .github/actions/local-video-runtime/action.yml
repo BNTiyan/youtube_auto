@@ -3,15 +3,17 @@ description: Prepare an isolated Python environment and verify local Ollama
 runs:
   using: composite
   steps:
-    - name: Set up Python 3.11
-      uses: actions/setup-python@v5
+    - name: Install uv for user-owned Python
+      uses: astral-sh/setup-uv@1c37ad07a6a961277cf70c0d37d6f313000f5884 # v10.3.0
       with:
-        python-version: '3.11'
-        cache: pip
+        enable-cache: false
     - name: Install isolated video dependencies
       shell: bash
+      env:
+        UV_PYTHON_INSTALL_DIR: ${{ runner.temp }}/youtube-auto-python
+        UV_CACHE_DIR: ${{ runner.temp }}/youtube-auto-uv-cache
       run: |
-        python -m venv "$RUNNER_TEMP/youtube-auto-venv"
+        uv venv --python 3.11 --managed-python --seed "$RUNNER_TEMP/youtube-auto-venv"
         echo "$RUNNER_TEMP/youtube-auto-venv/bin" >> "$GITHUB_PATH"
         "$RUNNER_TEMP/youtube-auto-venv/bin/python" -m pip install -r requirements.txt imageio-ffmpeg
         FFMPEG=$("$RUNNER_TEMP/youtube-auto-venv/bin/python" -c 'import imageio_ffmpeg; print(imageio_ffmpeg.get_ffmpeg_exe())')

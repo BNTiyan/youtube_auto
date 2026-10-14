@@ -11,6 +11,7 @@ In GitHub Actions the outputs are written to $GITHUB_OUTPUT automatically.
 Outputs: category, name, text, slug, index, total
 """
 
+from filename_utils import video_slug
 import os
 import json
 import argparse
@@ -127,7 +128,7 @@ def pick_today(config_dir: str, field: str = "fact", category_filter: str = "") 
     chosen.update(fallback)
 
     # Slug: lowercase name, spaces/hyphens → underscores
-    chosen["slug"]  = chosen["name"].lower().replace(" ", "_").replace("-", "_")
+    chosen["slug"]  = video_slug(chosen["name"])
     chosen["index"] = item_idx
     chosen["total"] = len(all_items)
     chosen["day"]   = datetime.now().timetuple().tm_yday

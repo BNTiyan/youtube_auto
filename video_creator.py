@@ -14,6 +14,7 @@ Usage:
     python video_creator.py all --no-images          # skip image fetching
 """
 
+from filename_utils import video_slug
 import os
 import json
 import argparse
@@ -375,9 +376,9 @@ def create_single_item_video(
             
         try:
             final.write_videofile(output_path, fps=FPS, codec="libx264",
-                                  audio_codec="aac", logger=None)
+                                  audio_codec="aac", temp_audiofile=os.path.join(tmp, "render_audio.m4a"), logger=None)
         except TypeError:
-            final.write_videofile(output_path, fps=FPS, codec="libx264", audio_codec="aac")
+            final.write_videofile(output_path, fps=FPS, codec="libx264", audio_codec="aac", temp_audiofile=os.path.join(tmp, "render_audio.m4a"))
 
         for c in clips:
             try:
@@ -676,9 +677,9 @@ def create_kids_video(
         os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
         try:
             final.write_videofile(output_path, fps=FPS, codec="libx264",
-                                  audio_codec="aac", logger=None)
+                                  audio_codec="aac", temp_audiofile=os.path.join(tmp, "render_audio.m4a"), logger=None)
         except TypeError:
-            final.write_videofile(output_path, fps=FPS, codec="libx264", audio_codec="aac")
+            final.write_videofile(output_path, fps=FPS, codec="libx264", audio_codec="aac", temp_audiofile=os.path.join(tmp, "render_audio.m4a"))
 
         for c in clips:
             try:
@@ -818,7 +819,7 @@ Examples:
             print(f"⚠️   Item {args.item!r} not found in '{cat}' config — using name only.")
             item_data = {"name": args.item, "fact": f"{args.item} is amazing!"}
 
-        slug        = item_data["name"].lower().replace(" ", "_").replace("-", "_")
+        slug        = video_slug(item_data["name"])
         output_path = os.path.join(args.output_dir, f"{slug}_learning.mp4")
 
         print("=" * 60)
@@ -839,6 +840,7 @@ Examples:
             import traceback
             print(f"❌  Failed: {e}")
             traceback.print_exc()
+            raise SystemExit(1)
         return
 
     # ── WHOLE-CATEGORY MODE (original behaviour) ──────────────────────────────
@@ -880,6 +882,7 @@ Examples:
             import traceback
             print(f"❌  Failed: {e}")
             traceback.print_exc()
+            raise SystemExit(1)
 
     print(f"\n🎉  Done! {len(created)}/{len(categories)} videos created.")
     print("=" * 60)

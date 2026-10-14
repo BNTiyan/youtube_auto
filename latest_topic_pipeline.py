@@ -8,6 +8,7 @@ directly into tech_video_creator.py and shorts_creator.py.
 
 import argparse
 import json
+from filename_utils import video_slug
 import os
 import re
 import sys
@@ -91,8 +92,7 @@ Rules:
 
 
 def slugify(text: str) -> str:
-    text = (text or "").strip().lower().replace(" ", "_").replace("-", "_")
-    return text or "latest_topic"
+    return video_slug(text)
 
 
 def normalize_sentence(text: str) -> str:

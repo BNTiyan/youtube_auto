@@ -14,6 +14,7 @@ Usage:
     python shorts_creator.py --item Ferrari --cat cars   --output-dir shorts
 """
 
+from filename_utils import video_slug
 import os
 import json
 import argparse
@@ -444,9 +445,9 @@ def create_short(
             
         try:
             final.write_videofile(output_path, fps=FPS, codec="libx264",
-                                  audio_codec="aac", logger=None)
+                                  audio_codec="aac", temp_audiofile=os.path.join(tmp, "render_audio.m4a"), logger=None)
         except TypeError:
-            final.write_videofile(output_path, fps=FPS, codec="libx264", audio_codec="aac")
+            final.write_videofile(output_path, fps=FPS, codec="libx264", audio_codec="aac", temp_audiofile=os.path.join(tmp, "render_audio.m4a"))
 
         for c in clips:
             try:
@@ -573,7 +574,7 @@ Examples:
     if not text:
         text = f"{args.item} is amazing!"
 
-    slug        = args.item.lower().replace(" ", "_").replace("-", "_")
+    slug        = video_slug(args.item)
     output_path = os.path.join(args.output_dir, f"{slug}_short.mp4")
 
     print("=" * 60)

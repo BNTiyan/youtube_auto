@@ -161,7 +161,7 @@ def relevant_image(topic, narration):
                     image.info['visual_asset'] = candidate
                     _MEMORY[key] = image
                     return image
-                print('  Generated illustration rejected by local relevance check; trying sourced images.')
+                print(f"  Generated illustration rejected by local relevance check: {verdict.get('reason')}; trying sourced images.")
             except (requests.RequestException, ValueError, OSError, RuntimeError, KeyError, TimeoutError) as exc:
                 _COMFY_UNAVAILABLE = True
                 print(f'  ComfyUI unavailable: {exc}; disabling retries for this video process and trying sourced images.')

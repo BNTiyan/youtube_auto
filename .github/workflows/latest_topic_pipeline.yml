@@ -233,7 +233,7 @@ jobs:
         run: |
           if [ "${{ github.event.inputs.channel }}" = "childishdreamer" ]; then
             VIDEO="latest_shorts/${TOPIC_SLUG}_short.mp4"
-            python youtube_auto.py "$VIDEO" \
+            python youtube_auto.py "$VIDEO" --publish-slot short \
               --topic    "${TOPIC_NAME} #Shorts" \
               --niche    "Kids Education Shorts" \
               --tone     "fun, simple and educational for children. Short vertical video." \
@@ -241,7 +241,7 @@ jobs:
               --privacy  "$PRIVACY"
           else
             VIDEO="latest_shorts/${TOPIC_SLUG}_short.mp4"
-            python youtube_auto.py "$VIDEO" \
+            python youtube_auto.py "$VIDEO" --publish-slot short \
               --topic    "${TOPIC_NAME} #Shorts" \
               --niche    "Latest AI and Technology News Shorts" \
               --tone     "timely, clear and educational for developers. Short vertical video." \
@@ -258,7 +258,7 @@ jobs:
           PRIVACY: ${{ github.event.inputs.privacy || 'public' }}
         run: |
           VIDEO="latest_videos/${TOPIC_SLUG}_learning.mp4"
-          python youtube_auto.py "$VIDEO" \
+          python youtube_auto.py "$VIDEO" --publish-slot video \
             --topic    "${TOPIC_NAME}" \
             --niche    "Kids Education" \
             --tone     "fun, simple and educational for children" \
@@ -274,7 +274,7 @@ jobs:
           PRIVACY: ${{ github.event.inputs.privacy || 'public' }}
         run: |
           VIDEO="latest_videos/${TOPIC_SLUG}_learning.mp4"
-          python youtube_auto.py "$VIDEO" \
+          python youtube_auto.py "$VIDEO" --publish-slot video \
             --topic    "${TOPIC_NAME} | ${TOPIC_HEADLINE}" \
             --niche    "Latest AI and Technology News Explained" \
             --tone     "timely, clear and educational for developers and tech enthusiasts" \

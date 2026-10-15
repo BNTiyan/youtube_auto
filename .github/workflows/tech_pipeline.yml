@@ -127,7 +127,7 @@ jobs:
           ITEM_TAGS: ${{ steps.pick.outputs.tags }}
         run: |
           VIDEO="tech_videos/${ITEM_SLUG}_learning.mp4"
-          python youtube_auto.py "$VIDEO" \
+          python youtube_auto.py "$VIDEO" --publish-slot video \
             --topic    "${ITEM_TITLE}" \
             --niche    "Technology and AI Education" \
             --tone     "clear, professional and educational for developers and tech enthusiasts" \
@@ -148,7 +148,7 @@ jobs:
           ITEM_TAGS: ${{ steps.pick.outputs.tags }}
         run: |
           VIDEO="tech_shorts/${ITEM_SLUG}_short.mp4"
-          python youtube_auto.py "$VIDEO" \
+          python youtube_auto.py "$VIDEO" --publish-slot short \
             --topic    "${ITEM_TITLE} #Shorts" \
             --niche    "Technology and AI Education Shorts" \
             --tone     "clear, professional and educational for developers. Short vertical video." \

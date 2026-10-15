@@ -22,6 +22,7 @@ import time
 import glob
 import re
 from llm_client import generate_json, provider_name
+from publishing_schedule import next_publish_time
 import requests
 import httplib2
 
@@ -257,7 +258,8 @@ def upload_thumbnail(youtube, video_id: str, thumbnail_path: str) -> bool:
 def upload_video(youtube, video_path: str, metadata: dict,
                  category_id: str = "22", privacy: str = "public",
                  made_for_kids: bool = False,
-                 thumbnail_path: str = None) -> str:
+                 thumbnail_path: str = None,
+                 publish_at: str = None) -> str:
     """
     Upload video to YouTube with the given metadata.
     category_id 22 = People & Blogs (common default)
@@ -279,6 +281,16 @@ def upload_video(youtube, video_path: str, metadata: dict,
             "selfDeclaredMadeForKids": made_for_kids,
         }
     }
+
+    if publish_at:
+        from datetime import datetime, timezone
+        scheduled = datetime.fromisoformat(publish_at.replace('Z', '+00:00'))
+        if scheduled.tzinfo is None or scheduled <= datetime.now(timezone.utc):
+            raise ValueError('Publication time must be timezone-aware and in the future')
+        if privacy != 'public':
+            raise ValueError('Scheduled publication requires public visibility intent')
+        body['status'].update(privacyStatus='private', publishAt=publish_at)
+        print(f"Scheduled publication: {publish_at} (UTC)")
 
     media = MediaFileUpload(
         video_path,
@@ -347,6 +359,8 @@ def parse_args():
                         help="YouTube category ID (22=People&Blogs, 27=Education)")
     parser.add_argument("--made-for-kids",  action="store_true",
                         help="Mark videos as Made for Kids (disables comments/personalization)")
+    parser.add_argument("--publish-slot", choices=["video", "short"],
+                        help="Schedule public uploads: video M/W/F 5 PM, short 7 PM Eastern")
     parser.add_argument("--thumbnail",      default=None,
                         help="Path to a custom thumbnail image (JPEG/PNG)")
     parser.add_argument("--update",         metavar="VIDEO_ID",
@@ -492,6 +506,8 @@ def main():
                 privacy=args.privacy,
                 made_for_kids=args.made_for_kids,
                 thumbnail_path=args.thumbnail,
+                publish_at=(next_publish_time(args.publish_slot)
+                            if args.publish_slot and args.privacy == 'public' else None),
             )
             # Ping Google Search Console after successful upload
             ping_google_sitemap()

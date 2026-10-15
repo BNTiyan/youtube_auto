@@ -482,3 +482,14 @@ video footage. The 60-minute job limit still applies.
 
 For a local run, prefix the existing creator command with `VIDEO_VISUALS=ai-scenes`.
 This setting does not delete published videos or reset upload/picking history.
+
+### Publication times
+
+Recurring workflows render in the morning and queue public uploads with YouTube's
+scheduled publishing: regular videos at **5 PM America/New_York on Monday,
+Wednesday and Friday**, Shorts at **7 PM America/New_York** on their existing
+scheduled days. Daylight saving time is handled automatically. Scheduled uploads
+remain private until release; explicitly private/unlisted runs retain that visibility.
+A missed slot rolls forward to the next eligible day, with a 15-minute minimum
+upload/processing buffer. The 60-minute limit applies to generation and upload,
+not the wait until publication. Manual issue-request workflows remain immediate.

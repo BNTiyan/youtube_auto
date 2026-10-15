@@ -108,7 +108,6 @@ jobs:
             --niche    "Kids Education" \
             --tone     "fun, friendly and educational for young children" \
             --category 27 \
-            --made-for-kids \
             --privacy  public
 
       # ── 10. Upload short ───────────────────────────────────────────────────
@@ -130,7 +129,6 @@ jobs:
             --niche    "Kids Education Shorts" \
             --tone     "fun, friendly and educational for young children. Short vertical video." \
             --category 27 \
-            --made-for-kids \
             --privacy  public
 
       # ── 11. Dry-run notice ────────────────────────────────────────────────

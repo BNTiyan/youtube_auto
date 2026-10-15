@@ -9,7 +9,7 @@
       "daily_limit":   5,
       "privacy":       "public",
       "category_id":   "27",
-      "made_for_kids": true,
+      "made_for_kids": false,
       "niche":         "Kids Education",
       "tone":          "fun, friendly and educational for young children",
       "topic_map": {

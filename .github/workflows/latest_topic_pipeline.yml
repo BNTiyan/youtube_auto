@@ -209,7 +209,6 @@ jobs:
               --niche    "Kids Education Shorts" \
               --tone     "fun, simple and educational for children. Short vertical video." \
               --category 27 \
-              --made-for-kids \
               --privacy  "$PRIVACY"
           else
             VIDEO="latest_shorts/${TOPIC_SLUG}_short.mp4"
@@ -235,7 +234,6 @@ jobs:
             --niche    "Kids Education" \
             --tone     "fun, simple and educational for children" \
             --category 27 \
-            --made-for-kids \
             --privacy  "$PRIVACY"
 
       - name: Upload regular video to NavaDisha

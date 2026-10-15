@@ -360,7 +360,7 @@ def parse_args():
     parser.add_argument("--made-for-kids",  action="store_true",
                         help="Mark videos as Made for Kids (disables comments/personalization)")
     parser.add_argument("--publish-slot", choices=["video", "short"],
-                        help="Schedule public uploads: video M/W/F 5 PM, short 7 PM Eastern")
+                        help="Schedule public uploads: video M/W/F 5 PM, short 7 PM IST")
     parser.add_argument("--thumbnail",      default=None,
                         help="Path to a custom thumbnail image (JPEG/PNG)")
     parser.add_argument("--update",         metavar="VIDEO_ID",

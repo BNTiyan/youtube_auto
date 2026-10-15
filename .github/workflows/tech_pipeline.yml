@@ -3,9 +3,8 @@ name: Tech Learning — Daily Video + Short
 # ─── Triggers ─────────────────────────────────────────────────────────────────
 on:
   schedule:
-    # 9:20 AM EST daily  (EST = UTC-5  →  14:20 UTC)
-    # Staggered 20 min after kids pipeline to avoid simultaneous API calls
-    - cron: '20 14 * * *'
+    # Generate at 11:30 AM IST; publish regular videos 5 PM IST, Shorts 7 PM IST.
+    - cron: '0 6 * * *'
   workflow_dispatch:
     inputs:
       category:
@@ -60,7 +59,7 @@ jobs:
       - name: Check schedule mode (Three Videos per Week vs Short)
         id: schedule_check
         run: |
-          DAY_OF_WEEK=$(date -u +%u) # 1=Mon ... 7=Sun
+          DAY_OF_WEEK=$(TZ=Asia/Kolkata date +%u) # 1=Mon ... 7=Sun
           FORCE_VIDEO="${{ github.event.inputs.generate_regular_video }}"
           # Regular videos run Monday (1), Wednesday (3), Friday (5), or by manual override
           if [ "$FORCE_VIDEO" = "true" ] || [[ "$DAY_OF_WEEK" =~ ^(1|3|5)$ ]]; then

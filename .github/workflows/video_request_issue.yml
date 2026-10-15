@@ -39,9 +39,10 @@ jobs:
     needs: authorize
     if: needs.authorize.outputs.allowed == 'true'
     runs-on: [self-hosted, macOS, ARM64, youtube-auto]
-    timeout-minutes: 90
+    timeout-minutes: 60
 
     env:
+      VIDEO_VISUALS: ai-scenes
       LLM_PROVIDER: ollama
       OLLAMA_MODEL: qwen2.5:3b
       OLLAMA_BASE_URL: http://127.0.0.1:11434

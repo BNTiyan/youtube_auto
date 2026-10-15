@@ -14,6 +14,7 @@ class ShortContentTests(unittest.TestCase):
         with patch('llm_client.generate_json', return_value={'script': 'A complete explanation. A useful example. A final takeaway.'}) as generate:
             script = build_short_script('Topic', 'word ' * 110, source_text='Original full source')
             self.assertIn('Original full source', generate.call_args.args[0])
+            self.assertIn('Hook the audience in the first sentence', generate.call_args.args[0])
             self.assertEqual(len(short_script_pages(script)), 3)
 
     def test_unfinished_generated_text_rejected(self):

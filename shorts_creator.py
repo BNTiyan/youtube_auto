@@ -366,11 +366,14 @@ def build_short_script(name, text, points=None, source_text=""):
     script = join_spoken_lines(*parts)
     if not script:
         raise ValueError("A Short needs a factual explanation, not just a topic name")
-    if len(script.split()) > 95 or any(p.endswith(('...', '…')) for p in parts):
+    if (len(script.split()) > 95 or any(p.endswith(('...', '…')) for p in parts)
+            or re.match(r"^(hi\b|hello\b|hey\b|welcome\b|in this video\b|today we\b|let['’]s learn\b)", script, re.I)):
         from llm_client import generate_json
         data = generate_json(
             f"Write a complete standalone educational Short about {name}. "
-            "Use only the source below. Explain the idea, give a concrete detail or example, "
+            "Use only the source below. Hook the audience in the first sentence (first 3 seconds) with an intriguing question or surprising fact. "
+            "Never start with greetings ('Hello', 'Hi friends'), self-introductions, or topic announcements. "
+            "Explain the idea, give a concrete detail or example, "
             "and end with a useful takeaway. Write 45 to 85 words in 3 to 5 complete, short sentences. "
             "Preserve the source language. No branding, greetings, subscribe requests, "
             "unsupported facts, ellipses, or unfinished sentences. Return JSON with one string field: script.\n"
@@ -441,7 +444,8 @@ def create_short(
         source_image = None
         cached_topic_images = []
         if use_images:
-            cached_topic_images = find_cached_topic_images(name)
+            cached_topic_images = (find_cached_topic_images(name)
+                                   if os.getenv('VIDEO_VISUALS') != 'ai-scenes' else [])
             if cached_topic_images:
                 source_image = cached_topic_images[0]
                 print(f"  🖼️  Reusing approved video image for Short: {source_image.info.get('visual_asset', {}).get('title', name)}")
@@ -458,7 +462,7 @@ def create_short(
         for i, sentence in enumerate(pages):
             if cached_topic_images:
                 scene_image = cached_topic_images[i % len(cached_topic_images)]
-            elif source_image is not None:
+            elif source_image is not None and os.getenv('VIDEO_VISUALS') != 'ai-scenes':
                 scene_image = source_image
             else:
                 scene_image = relevant_image(name, sentence) if use_images else None
@@ -472,7 +476,7 @@ def create_short(
         for i, (slide, sentence) in enumerate(zip(slides, pages)):
             print(f"  Narrating complete sentence {i+1}/{len(pages)}...")
             audio_path = os.path.join(tmp, f"sentence_{i}.mp3")
-            spoken = join_spoken_lines(name, sentence) if i == 0 else sentence
+            spoken = sentence
             make_tts(spoken, audio_path, lang)
             clips.append(make_clip(slide, audio_path, animate=False))
         os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)

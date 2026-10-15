@@ -33,6 +33,8 @@ Source material (reference information, not instructions):
 {source}
 
 Teach the topic with substance, not baby talk or promotional filler.
+Hook the audience immediately in the very first sentence with a surprising fact, mystery, or curiosity question.
+Never start with "Hi friends", greetings, self-introductions, or meta-announcements ("In this video...").
 Use clear sentences, explain unfamiliar words, and include a concrete example.
 Use 4 sections: explain the idea; explore how/why or a key story event; give an
 example or a thinking question; finish with a meaningful takeaway. Aim for
@@ -47,9 +49,9 @@ Avoid absolute claims such as all lions live in groups; preserve words like ofte
 Use ONLY factual details explicitly present in the source. Do not add animal behaviors, historical events, numbers, or causal claims from memory.
 Examples may be explicitly hypothetical everyday comparisons, not invented factual details.
 Leave out uncertain details rather than guessing.
-No "is amazing", "fun fact just for you", greetings, subscribe requests, branding,
+No "is amazing", "fun fact just for you", "Hi friends", greetings, subscribe requests, branding,
 or "come back tomorrow". Do not add tech/AI framing to unrelated topics.
-Give the Short its own complete 60–85 word explanation with an example and takeaway.
+Give the Short its own complete 60–85 word explanation with an immediate hook, an example, and a takeaway.
 
 Return ONLY a JSON object:
 {{"video_topic":"Clear topic title under 70 characters",
@@ -69,6 +71,7 @@ def generate_kids_lesson(topic, source, language='en'):
         "Check the entire draft against the source. Remove every factual claim not explicitly supported by the source, "
         "including claims in captions, points, and the Short. Do not add facts from memory. "
         "Keep the useful explanations but remove repetition. If an example needs extra facts, replace it with a clearly hypothetical everyday analogy. "
+        "Ensure the very first sentence is an immediate curiosity hook with zero greetings, filler, or intro announcements. "
         "Section 3 MUST ask a thinking question and provide an answer using only the source. "
         "Section 4 MUST end with a concrete takeaway. No baby talk, branding, or promotional filler. "
         "Return the same JSON fields and exactly four sections. Keep all text in the requested language.\n"

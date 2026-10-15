@@ -338,8 +338,8 @@ def create_single_item_video(
             intro_mp3 = os.path.join(tmp, "intro.mp3")
             create_tts(
                 join_spoken_lines(
-                    f"Hi friends. Today we're learning about {name}",
-                    "Let's get started",
+                    f"Have you ever wondered what makes {name} so special?",
+                    f"Let's explore {name}!",
                 ),
                 intro_mp3,
                 lang,
@@ -404,6 +404,11 @@ def create_single_item_video(
             final.close()
         except Exception:
             pass
+
+        # Compose a dedicated thumbnail from approved artwork, independent of animation frames.
+        from thumbnail_utils import create_thumbnail
+        thumb_path = create_thumbnail(output_path, name, visual_images, load_font)
+        print(f"  Thumbnail generated → {thumb_path}")
 
     save_visual_manifest(output_path, visual_images)
     return output_path
@@ -640,8 +645,8 @@ def create_kids_video(
         intro_mp3   = os.path.join(tmp, "intro.mp3")
         create_tts(
             join_spoken_lines(
-                f"Hi friends. Let's learn about {category}",
-                f"We have {total} fun things to explore today",
+                f"Get ready to explore the exciting world of {category}!",
+                f"Here are {total} incredible things you need to see.",
             ),
             intro_mp3,
             lang,
@@ -710,6 +715,11 @@ def create_kids_video(
             final.close()
         except Exception:
             pass
+
+        # Compose a dedicated thumbnail from approved artwork, independent of animation frames.
+        from thumbnail_utils import create_thumbnail
+        thumb_path = create_thumbnail(output_path, category, visual_images, load_font)
+        print(f"  Thumbnail generated → {thumb_path}")
 
     save_visual_manifest(output_path, visual_images)
     return output_path

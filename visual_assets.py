@@ -120,8 +120,56 @@ def check_relevance(topic, narration, plan, candidate, image):
     return verdict
 
 
+def generated_scene(topic, narration):
+    """Generate and verify a narration-specific scene; never substitute stock art."""
+    from comfyui_client import generate_image, workflow_path
+    workflow = workflow_path()
+    if not workflow.exists():
+        raise RuntimeError('AI scenes require a ComfyUI API workflow')
+    context = feedback_context(topic, 'visuals')
+    key = hashlib.sha256(('ai-scene-v1\n' + workflow.read_text() + topic + '\n' + narration + context).encode()).hexdigest()
+    if key in _MEMORY:
+        return _MEMORY[key]
+    CACHE.mkdir(parents=True, exist_ok=True)
+    meta_path, image_path = CACHE/(key+'.json'), CACHE/(key+'.jpg')
+    if meta_path.exists() and image_path.exists():
+        image = Image.open(image_path).convert('RGB')
+        image.info['visual_asset'] = json.loads(meta_path.read_text())
+        _MEMORY[key] = image
+        return image
+    plan = generate_json(
+        'Plan one educational illustration for the narration below. Return JSON with '
+        'subject (exact subject) and scene (a concrete visual composition with setting, '
+        'subject action, camera framing and lighting). Show the idea in this specific '
+        'narration, not a generic topic poster. Use a consistent clean cinematic educational '
+        'illustration style. Do not invent factual details. For abstract concepts use a '
+        'clear conceptual visual metaphor; for stories use a story illustration. '
+        'No text, letters, watermarks, branding or decorative robots.\n'
+        f'Topic: {topic}\nNarration: {narration}' + context)
+    if any(not isinstance(plan.get(k), str) or not plan[k].strip() for k in ('subject', 'scene')):
+        raise ValueError('AI scene plan needs a subject and scene')
+    prompt = (f"Educational illustration of {plan['subject']}. {plan['scene']}. "
+              f"Topic: {topic}. Narration context: {narration}. "
+              'Clean cinematic educational illustration, coherent composition, no text or logos.' + context)
+    image = generate_image(prompt)
+    asset = dict(title='AI-generated scene: '+plan['subject'], source_url='',
+                 author='Local ComfyUI', license='AI-generated illustration', kind='generated',
+                 topic=topic, asset_id=key, narration=narration, scene_prompt=prompt)
+    verdict = check_relevance(topic, narration, plan, asset, image)
+    if verdict.get('matches') is not True:
+        raise RuntimeError('AI scene failed relevance check: '+str(verdict.get('reason', 'no match')))
+    asset.update(caption=verdict.get('caption') or asset['title'], relevance_reason=verdict.get('reason', ''))
+    image.save(image_path, quality=92)
+    meta_path.write_text(json.dumps(asset, ensure_ascii=False, indent=2))
+    image.info['visual_asset'] = asset
+    _MEMORY[key] = image
+    return image
+
+
 def relevant_image(topic, narration):
     """Return an approved image or None. Never substitute a random search result."""
+    if os.getenv('VIDEO_VISUALS') == 'ai-scenes':
+        return generated_scene(topic, narration)
     if os.getenv('VIDEO_VISUALS', 'verified') == 'local' or provider_name() != 'ollama':
         return None
     global _COMFY_UNAVAILABLE

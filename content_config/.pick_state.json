@@ -1,15 +1,4 @@
 {
-  "file_idx": 9,
-  "file_item_idx": {
-    "airplanes": 22,
-    "animals": 22,
-    "brands": 22,
-    "cars": 22,
-    "colors": 22,
-    "fruits": 22,
-    "planets": 22,
-    "shapes": 22,
-    "stars": 22,
-    "vegetables": 21
-  }
+  "file_idx": 0,
+  "file_item_idx": {}
 }

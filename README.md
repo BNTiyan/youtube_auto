@@ -465,3 +465,20 @@ The checked-in workflow currently selects the user-installed Klein Base 9B FP8 m
 On this Mac, the AppleSilicon-FP8 custom node is required and has been installed in
 the ComfyUI instance. Image generation was verified locally. The visual checker may
 reject a visually attractive illustration if it does not support the narration.
+
+### AI-generated scenes
+
+The video generation workflows use `VIDEO_VISUALS=ai-scenes`. Each narrated scene
+gets an LLM visual plan and a local ComfyUI illustration, followed by a relevance
+check. Shorts request scenes for their own sentences rather than selecting loosely
+matched topic images. Exact approved scene requests are cached for retries.
+Scene prompts and narration are saved in the video's `_visuals.json` manifest.
+
+Run Ollama (including the configured vision model) and ComfyUI on the self-hosted
+runner with the models required by `comfyui_workflow.json`. A missing workflow,
+failed generation, or rejected scene stops generation instead of substituting stock
+images. These are still illustrations composed into narrated videos, not generated
+video footage. The 60-minute job limit still applies.
+
+For a local run, prefix the existing creator command with `VIDEO_VISUALS=ai-scenes`.
+This setting does not delete published videos or reset upload/picking history.

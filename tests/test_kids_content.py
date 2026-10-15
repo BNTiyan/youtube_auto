@@ -11,6 +11,8 @@ class KidsContentTests(unittest.TestCase):
         self.assertIn('language code: te', prompt)
         self.assertIn('in the story', prompt)
         self.assertIn('concrete example', prompt)
+        self.assertIn('Hook the audience immediately in the very first sentence', prompt)
+        self.assertIn('Hi friends', prompt)
 
     def test_lesson_sections_reach_creator_config(self):
         data = {'video_topic':'Lion families', 'video_summary':'Lions live in prides.', 'short_text':'Lions live in family groups.', 'points':['Cooperation'], 'sections':[{'title':'A pride','narration':'Lions live in groups called prides.', 'slide_text':'A pride is a group of lions.'} for _ in range(4)]}

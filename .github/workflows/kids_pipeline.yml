@@ -11,6 +11,11 @@ on:
         description: 'Limit to category (animals/fruits/vegetables/cars/airplanes/brands). Leave blank for auto rotation.'
         required: false
         default: ''
+      generate_regular_video:
+        description: 'Force regular video generation outside Monday, Wednesday, Friday'
+        type: boolean
+        required: false
+        default: false
       dry_run:
         description: 'Dry run — generate videos but skip YouTube upload'
         type: boolean
@@ -26,9 +31,10 @@ jobs:
   daily:
     name: Generate & Upload (Video + Short)
     runs-on: [self-hosted, macOS, ARM64, youtube-auto]
-    timeout-minutes: 90       # generating two videos per day; extra headroom
+    timeout-minutes: 60
 
     env:
+      VIDEO_VISUALS: ai-scenes
       LLM_PROVIDER: ollama
       OLLAMA_MODEL: qwen2.5:3b
       OLLAMA_BASE_URL: http://127.0.0.1:11434
@@ -49,6 +55,23 @@ jobs:
           echo '${{ secrets.YOUTUBE_CLIENT_SECRETS_KIDS_B64 }}' | base64 -d > client_secrets.json
           echo '${{ secrets.YOUTUBE_TOKEN_KIDS_B64 }}'           | base64 -d > youtube_token.json
 
+      # ── 5. Check schedule mode (Three Videos per Week vs Daily Short) ─────────
+      - name: Check schedule mode (Three Videos per Week vs Short)
+        id: schedule_check
+        run: |
+          DAY_OF_WEEK=$(date -u +%u) # 1=Mon ... 7=Sun
+          FORCE_VIDEO="${{ github.event.inputs.generate_regular_video }}"
+          # Regular videos run Monday (1), Wednesday (3), Friday (5), or by manual override
+          if [ "$FORCE_VIDEO" = "true" ] || [[ "$DAY_OF_WEEK" =~ ^(1|3|5)$ ]]; then
+            echo "run_regular_video=true" >> "$GITHUB_OUTPUT"
+            echo "run_regular_video=true"
+            echo "📅 Monday/Wednesday/Friday or manual override: generating regular video and short."
+          else
+            echo "run_regular_video=false" >> "$GITHUB_OUTPUT"
+            echo "run_regular_video=false"
+            echo "📅 Short only today; regular videos run Monday, Wednesday, Friday."
+          fi
+
       # ── 6. Pick today's item (shared by both video + short) ────────────────
       #   Rotates across all 60 kids items (6 categories × 10) by day-of-year.
       #   Running once means regular video and short always cover the same topic.
@@ -64,6 +87,7 @@ jobs:
 
       # ── 7. Generate regular landscape video (1280×720) ────────────────────
       - name: Generate regular video — ${{ steps.pick.outputs.name }}
+        if: ${{ steps.schedule_check.outputs.run_regular_video == 'true' }}
         env:
           ITEM_NAME: ${{ steps.pick.outputs.name }}
           ITEM_CAT:  ${{ steps.pick.outputs.category }}
@@ -93,7 +117,7 @@ jobs:
       # ── 9. Upload regular video ────────────────────────────────────────────
       - name: Upload regular video to YouTube
         id: upload_video
-        if: ${{ github.event.inputs.dry_run != 'true' }}
+        if: ${{ github.event.inputs.dry_run != 'true' && steps.schedule_check.outputs.run_regular_video == 'true' }}
         env:
           ITEM_NAME: ${{ steps.pick.outputs.name }}
           ITEM_CAT:  ${{ steps.pick.outputs.category }}
@@ -177,6 +201,7 @@ jobs:
           name: kids_pipeline-${{ github.run_id }}
           path: |
             videos/*.mp4
+            videos/*_thumb.jpg
             videos/*_visuals.json
             shorts/*.mp4
             shorts/*_script.json

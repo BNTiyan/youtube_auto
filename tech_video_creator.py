@@ -573,6 +573,11 @@ def create_single_concept_video(
         except Exception:
             pass
 
+        # Compose a dedicated thumbnail from approved artwork, independent of animation frames.
+        from thumbnail_utils import create_thumbnail
+        thumb_path = create_thumbnail(output_path, name, visual_images, load_font)
+        print(f"  Thumbnail generated → {thumb_path}")
+
     save_visual_manifest(output_path, visual_images)
     return output_path
 
@@ -625,8 +630,8 @@ def create_tech_video(
         intro_mp3   = os.path.join(tmp, "intro.mp3")
         create_tts(
             join_spoken_lines(
-                f"Welcome. In this video, you'll learn {total} key {category} concepts",
-                "Let's dive in",
+                f"Want to master {category}? Here are {total} essential concepts every developer needs to know.",
+                "Let's dive right in.",
             ),
             intro_mp3,
             lang,
@@ -701,6 +706,11 @@ def create_tech_video(
             final.close()
         except Exception:
             pass
+
+        # Compose a dedicated thumbnail from approved artwork, independent of animation frames.
+        from thumbnail_utils import create_thumbnail
+        thumb_path = create_thumbnail(output_path, category, visual_images, load_font)
+        print(f"  Thumbnail generated → {thumb_path}")
 
     save_visual_manifest(output_path, visual_images)
     return output_path

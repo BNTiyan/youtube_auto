@@ -102,3 +102,37 @@ class VisualAssetTests(unittest.TestCase):
                 single = v.find_cached_topic_image('carbon star')
                 self.assertIsNotNone(single)
                 self.assertEqual(single.info['visual_asset']['title'], 'Test star')
+
+class AISceneTests(unittest.TestCase):
+    def setUp(self):
+        v._MEMORY.clear()
+
+    def test_scene_prompt_is_grounded_and_cached_per_narration(self):
+        workflow = Mock()
+        workflow.exists.return_value = True
+        workflow.read_text.return_value = 'scene workflow'
+        with tempfile.TemporaryDirectory() as tmp, \
+             patch.dict('os.environ', {'VIDEO_VISUALS': 'ai-scenes'}), \
+             patch.object(v, 'CACHE', Path(tmp)), \
+             patch('comfyui_client.workflow_path', return_value=workflow), \
+             patch.object(v, 'generate_json', return_value={'subject': 'Lion', 'scene': 'Wide view of a lion resting.'}), \
+             patch('comfyui_client.generate_image', return_value=Image.new('RGB', (40,40))) as generate, \
+             patch.object(v, 'check_relevance', return_value={'matches': True, 'reason': 'Matches narration'}), \
+             patch.object(v, 'search_candidates') as search:
+            first = v.relevant_image('Lion', 'A lion rests.')
+            self.assertIs(v.relevant_image('Lion', 'A lion rests.'), first)
+            v.relevant_image('Lion', 'A lion walks.')
+            self.assertEqual(generate.call_count, 2)
+            self.assertIn('A lion walks.', generate.call_args.args[0])
+            self.assertIn('scene_prompt', first.info['visual_asset'])
+            search.assert_not_called()
+
+    def test_missing_workflow_stops_without_stock_fallback(self):
+        workflow = Mock()
+        workflow.exists.return_value = False
+        with patch.dict('os.environ', {'VIDEO_VISUALS': 'ai-scenes'}), \
+             patch('comfyui_client.workflow_path', return_value=workflow), \
+             patch.object(v, 'search_candidates') as search:
+            with self.assertRaisesRegex(RuntimeError, 'require a ComfyUI'):
+                v.relevant_image('Lion', 'A lion rests.')
+            search.assert_not_called()

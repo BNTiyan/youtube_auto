@@ -2,7 +2,7 @@ name: Latest Tech Topic — Daily Video + Short
 
 on:
   schedule:
-    # 9:40 AM America/Detroit during EST baseline shown in repo docs
+    # Daily check at 14:40 UTC; regular videos M/W/F, Shorts on odd calendar dates.
     - cron: '40 14 * * *'
   workflow_dispatch:
     inputs:
@@ -54,6 +54,11 @@ on:
         description: 'Optional news query override for topic discovery'
         required: false
         default: ''
+      generate_regular_video:
+        description: 'Force regular video generation outside Monday, Wednesday, Friday'
+        type: boolean
+        required: false
+        default: false
       dry_run:
         description: 'Dry run — generate videos but skip YouTube upload'
         type: boolean
@@ -67,9 +72,10 @@ jobs:
   daily:
     name: Generate & Upload (Latest Topic)
     runs-on: [self-hosted, macOS, ARM64, youtube-auto]
-    timeout-minutes: 90
+    timeout-minutes: 60
 
     env:
+      VIDEO_VISUALS: ai-scenes
       LLM_PROVIDER: ollama
       OLLAMA_MODEL: qwen2.5:3b
       OLLAMA_BASE_URL: http://127.0.0.1:11434
@@ -94,6 +100,29 @@ jobs:
         run: |
           echo '${{ secrets.YOUTUBE_CLIENT_SECRETS_KIDS_B64 }}' | base64 -d > client_secrets.json
           echo '${{ secrets.YOUTUBE_TOKEN_KIDS_B64 }}'           | base64 -d > youtube_token.json
+
+      # ── Check schedule mode (Three Videos per Week vs Shorts on Odd Dates) ────────────
+      - name: Check schedule mode (Three Videos per Week vs Short)
+        id: schedule_check
+        run: |
+          DAY_OF_MONTH=$(date -u +%-d)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || (( DAY_OF_MONTH % 2 == 1 )); then
+            echo "run_short=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run_short=false" >> "$GITHUB_OUTPUT"
+          fi
+          DAY_OF_WEEK=$(date -u +%u) # 1=Mon ... 7=Sun
+          FORCE_VIDEO="${{ github.event.inputs.generate_regular_video }}"
+          # Regular videos run Monday (1), Wednesday (3), Friday (5), or by manual override
+          if [ "$FORCE_VIDEO" = "true" ] || [[ "$DAY_OF_WEEK" =~ ^(1|3|5)$ ]]; then
+            echo "run_regular_video=true" >> "$GITHUB_OUTPUT"
+            echo "run_regular_video=true"
+            echo "📅 Monday/Wednesday/Friday or manual override: generating regular video and short."
+          else
+            echo "run_regular_video=false" >> "$GITHUB_OUTPUT"
+            echo "run_regular_video=false"
+            echo "📅 Short only today; regular videos run Monday, Wednesday, Friday."
+          fi
 
       - name: Pick today's latest topic
         id: latest
@@ -129,7 +158,7 @@ jobs:
           PY
 
       - name: Generate regular video — ${{ steps.latest.outputs.topic_name }}
-        if: ${{ github.event.inputs.channel != 'childishdreamer' }}
+        if: ${{ github.event.inputs.channel != 'childishdreamer' && steps.schedule_check.outputs.run_regular_video == 'true' }}
         env:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_CATEGORY: ${{ steps.latest.outputs.topic_category }}
@@ -145,7 +174,7 @@ jobs:
             --lang "$LANGUAGE"
 
       - name: Generate regular video for ChildishDreamer — ${{ steps.latest.outputs.topic_name }}
-        if: ${{ github.event.inputs.channel == 'childishdreamer' }}
+        if: ${{ github.event.inputs.channel == 'childishdreamer' && steps.schedule_check.outputs.run_regular_video == 'true' }}
         env:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_CATEGORY: ${{ steps.latest.outputs.topic_category }}
@@ -161,7 +190,7 @@ jobs:
             --lang "$LANGUAGE"
 
       - name: Generate short — ${{ steps.latest.outputs.topic_name }}
-        if: ${{ github.event.inputs.channel != 'childishdreamer' }}
+        if: ${{ steps.schedule_check.outputs.run_short == 'true' && github.event.inputs.channel != 'childishdreamer' }}
         env:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_CATEGORY: ${{ steps.latest.outputs.topic_category }}
@@ -178,7 +207,7 @@ jobs:
             --lang "$LANGUAGE"
 
       - name: Generate short for ChildishDreamer — ${{ steps.latest.outputs.topic_name }}
-        if: ${{ github.event.inputs.channel == 'childishdreamer' }}
+        if: ${{ steps.schedule_check.outputs.run_short == 'true' && github.event.inputs.channel == 'childishdreamer' }}
         env:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_CATEGORY: ${{ steps.latest.outputs.topic_category }}
@@ -195,7 +224,7 @@ jobs:
             --lang "$LANGUAGE"
 
       - name: Upload short to YouTube
-        if: ${{ github.event.inputs.dry_run != 'true' }}
+        if: ${{ steps.schedule_check.outputs.run_short == 'true' && github.event.inputs.dry_run != 'true' }}
         env:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_SLUG: ${{ steps.latest.outputs.topic_slug }}
@@ -221,7 +250,7 @@ jobs:
           fi
 
       - name: Upload regular video for ChildishDreamer
-        if: ${{ github.event.inputs.dry_run != 'true' && github.event.inputs.channel == 'childishdreamer' }}
+        if: ${{ github.event.inputs.dry_run != 'true' && github.event.inputs.channel == 'childishdreamer' && steps.schedule_check.outputs.run_regular_video == 'true' }}
         env:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_SLUG: ${{ steps.latest.outputs.topic_slug }}
@@ -237,7 +266,7 @@ jobs:
             --privacy  "$PRIVACY"
 
       - name: Upload regular video to NavaDisha
-        if: ${{ github.event.inputs.dry_run != 'true' && github.event.inputs.channel != 'childishdreamer' }}
+        if: ${{ github.event.inputs.dry_run != 'true' && github.event.inputs.channel != 'childishdreamer' && steps.schedule_check.outputs.run_regular_video == 'true' }}
         env:
           TOPIC_NAME: ${{ steps.latest.outputs.topic_name }}
           TOPIC_SLUG: ${{ steps.latest.outputs.topic_slug }}

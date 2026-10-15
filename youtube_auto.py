@@ -113,7 +113,9 @@ Return ONLY valid JSON (no markdown, no explanation) with this exact structure:
 }}
 
 Rules:
-- Title: No clickbait, accurate, keyword-rich
+- Title: Lead with a specific source-supported question, surprising detail, or practical benefit.
+- Avoid generic titles such as "All About X" and niche suffixes such as "| Kids Education".
+- Do not invent facts, numbers, outcomes, or promises. No clickbait; keep the topic keyword.
 - Description: Conversational yet professional, must include 5 hashtags at the end like #Tag
 - Tags: Mix of broad and niche keywords, all lowercase, no # symbol in tags array"""
 
@@ -184,14 +186,14 @@ def generate_metadata_fallback(video_topic: str, niche: str, tone: str) -> dict:
         description += f"\n#Youtube #Learning #Education #{clean_topic} #{niche.replace(' ', '')}"
         
         return {
-            "title": f"All About {clean_topic} | {niche} Learning",
+            "title": f"{clean_topic}: Key Facts Explained",
             "description": description,
             "tags": [clean_topic.lower(), niche.lower(), "learning", "education", "facts"]
         }
     
     print(f"  ⚠️   No local JSON found for '{clean_topic}'. Using basic metadata.")
     return {
-        "title": f"{clean_topic} - {niche} Education",
+        "title": f"{clean_topic} Explained",
         "description": f"Learn about {clean_topic} in this {tone} video.\n\n#Youtube #Education #{clean_topic}",
         "tags": [clean_topic.lower(), "education", "learning"]
     }
@@ -223,9 +225,39 @@ def update_video(youtube, video_id: str, metadata: dict, category_id: str = "27"
     return vid
 
 
+def upload_thumbnail(youtube, video_id: str, thumbnail_path: str) -> bool:
+    """
+    Upload a custom thumbnail for a YouTube video.
+    Returns True if successfully uploaded, False otherwise.
+    """
+    if not os.path.exists(thumbnail_path):
+        print(f"⚠️   Thumbnail image not found: {thumbnail_path}")
+        return False
+
+    print(f"\n🖼️   Uploading custom thumbnail: {os.path.basename(thumbnail_path)}...")
+    mimetype = "image/png" if thumbnail_path.lower().endswith(".png") else "image/jpeg"
+    try:
+        media = MediaFileUpload(thumbnail_path, mimetype=mimetype, resumable=False)
+        youtube.thumbnails().set(
+            videoId=video_id,
+            media_body=media
+        ).execute()
+        print(f"✅  Thumbnail successfully updated for video: {video_id}")
+        return True
+    except HttpError as e:
+        print(f"⚠️   Thumbnail upload failed (HTTP {e.resp.status}): {e}")
+        if e.resp.status == 403:
+            print("    Note: Custom thumbnails require phone-verified account permissions in YouTube Studio.")
+        return False
+    except Exception as e:
+        print(f"⚠️   Failed to upload thumbnail: {e}")
+        return False
+
+
 def upload_video(youtube, video_path: str, metadata: dict,
                  category_id: str = "22", privacy: str = "public",
-                 made_for_kids: bool = False) -> str:
+                 made_for_kids: bool = False,
+                 thumbnail_path: str = None) -> str:
     """
     Upload video to YouTube with the given metadata.
     category_id 22 = People & Blogs (common default)
@@ -276,6 +308,21 @@ def upload_video(youtube, video_path: str, metadata: dict,
     video_id = response.get("id")
     print(f"🎬  Video URL : https://www.youtube.com/watch?v={video_id}")
     print(f"🆔  Video ID  : {video_id}")
+
+    # Custom thumbnail check and upload
+    thumb_to_upload = thumbnail_path
+    if not thumb_to_upload:
+        # Check auto-generated thumbnail path next to video
+        base, _ = os.path.splitext(video_path)
+        for ext in ("_thumb.jpg", "_thumb.jpeg", "_thumb.png"):
+            candidate = base + ext
+            if os.path.exists(candidate):
+                thumb_to_upload = candidate
+                break
+
+    if thumb_to_upload and os.path.exists(thumb_to_upload):
+        upload_thumbnail(youtube, video_id, thumb_to_upload)
+
     return video_id
 
 
@@ -300,6 +347,8 @@ def parse_args():
                         help="YouTube category ID (22=People&Blogs, 27=Education)")
     parser.add_argument("--made-for-kids",  action="store_true",
                         help="Mark videos as Made for Kids (disables comments/personalization)")
+    parser.add_argument("--thumbnail",      default=None,
+                        help="Path to a custom thumbnail image (JPEG/PNG)")
     parser.add_argument("--update",         metavar="VIDEO_ID",
                         help="Update metadata of an existing video instead of uploading")
     parser.add_argument("--dry-run",        action="store_true",
@@ -442,6 +491,7 @@ def main():
                 category_id=args.category,
                 privacy=args.privacy,
                 made_for_kids=args.made_for_kids,
+                thumbnail_path=args.thumbnail,
             )
             # Ping Google Search Console after successful upload
             ping_google_sitemap()

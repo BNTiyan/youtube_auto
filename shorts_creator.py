@@ -16,7 +16,7 @@ Usage:
 
 from filename_utils import video_slug
 from feedback import feedback_context
-from visual_assets import relevant_image, save_visual_manifest
+from visual_assets import relevant_image, save_visual_manifest, find_cached_topic_images
 import os
 import json
 import argparse
@@ -438,8 +438,16 @@ def create_short(
                 lesson = generate_kids_lesson(name, "\n".join([source_text or text, *(points or [])]), lang)
                 text = lesson["short_text"]
             points = []
-        source_image = relevant_image(name, text) if use_images else None
-        visual_images = [source_image]
+        source_image = None
+        cached_topic_images = []
+        if use_images:
+            cached_topic_images = find_cached_topic_images(name)
+            if cached_topic_images:
+                source_image = cached_topic_images[0]
+                print(f"  🖼️  Reusing approved video image for Short: {source_image.info.get('visual_asset', {}).get('title', name)}")
+            else:
+                source_image = relevant_image(name, text)
+        visual_images = [source_image] if source_image is not None else []
         if source_image is not None:
             img = portrait_source_image(source_image, theme)
 
@@ -448,8 +456,14 @@ def create_short(
         # Validate every page layout before generating any narration.
         slides = []
         for i, sentence in enumerate(pages):
-            scene_image = relevant_image(name, sentence) if use_images else None
-            visual_images.append(scene_image)
+            if cached_topic_images:
+                scene_image = cached_topic_images[i % len(cached_topic_images)]
+            elif source_image is not None:
+                scene_image = source_image
+            else:
+                scene_image = relevant_image(name, sentence) if use_images else None
+            if scene_image is not None and scene_image not in visual_images:
+                visual_images.append(scene_image)
             scene_background = portrait_source_image(scene_image, theme) if scene_image is not None else img
             slides.append(create_short_slide(
                 title=name, subtitle=sentence, theme=theme,

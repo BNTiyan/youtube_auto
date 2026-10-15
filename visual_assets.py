@@ -205,3 +205,43 @@ def save_visual_manifest(output_path, images):
             assets[asset.get('asset_id') or asset['source_url']]=asset
     path=Path(output_path).with_suffix('')
     Path(str(path)+'_visuals.json').write_text(json.dumps(list(assets.values()),ensure_ascii=False,indent=2))
+
+
+def find_cached_topic_images(topic):
+    """Return all approved cached images for this topic, newest first."""
+    if not topic or not str(topic).strip():
+        return []
+    CACHE.mkdir(parents=True, exist_ok=True)
+    target = topic.strip().lower()
+    target_words = set(re.findall(r'\w+', target))
+    images = []
+    seen = set()
+    for meta_path in sorted(CACHE.glob('*.json'), key=lambda p: p.stat().st_mtime, reverse=True):
+        try:
+            meta = json.loads(meta_path.read_text())
+            cached_topic = meta.get('topic', '').strip().lower()
+            if not cached_topic:
+                continue
+            cached_words = set(re.findall(r'\w+', cached_topic))
+            matches = (
+                cached_topic == target
+                or target in cached_topic
+                or cached_topic in target
+                or (len(target_words & cached_words) >= max(1, min(len(target_words), 2)))
+            )
+            if matches and meta_path.stem not in seen:
+                img_path = meta_path.with_suffix('.jpg')
+                if img_path.exists():
+                    img = Image.open(img_path)
+                    img.info['visual_asset'] = meta
+                    images.append(img)
+                    seen.add(meta_path.stem)
+        except (json.JSONDecodeError, OSError):
+            continue
+    return images
+
+
+def find_cached_topic_image(topic):
+    """Return the most relevant approved cached image for this topic."""
+    images = find_cached_topic_images(topic)
+    return images[0] if images else None

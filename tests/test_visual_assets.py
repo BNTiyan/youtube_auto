@@ -85,3 +85,20 @@ class VisualAssetTests(unittest.TestCase):
             self.assertTrue(res['matches'])
             prompt = gen.call_args[0][0]
             self.assertIn('pixels alone cannot identify', prompt)
+
+    def test_find_cached_topic_images(self):
+        import json
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_cache = Path(tmp)
+            with patch.object(v, 'CACHE', tmp_cache):
+                meta = {'topic': 'Carbon star', 'title': 'Test star', 'kind': 'generated'}
+                (tmp_cache / 'test1.json').write_text(json.dumps(meta))
+                Image.new('RGB', (16, 16), 'red').save(tmp_cache / 'test1.jpg')
+
+                results = v.find_cached_topic_images('Carbon star')
+                self.assertEqual(len(results), 1)
+                self.assertEqual(results[0].info['visual_asset']['topic'], 'Carbon star')
+
+                single = v.find_cached_topic_image('carbon star')
+                self.assertIsNotNone(single)
+                self.assertEqual(single.info['visual_asset']['title'], 'Test star')

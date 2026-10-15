@@ -25,6 +25,32 @@ class ShortContentTests(unittest.TestCase):
         frame = create_short_slide('Retrieval Augmented Generation', 'The model retrieves relevant documents and uses their information to produce a more useful answer with source context.', TECH_THEMES['rag'])
         self.assertEqual(frame.shape, (1920,1080,3))
 
+    def test_short_reuses_cached_video_images(self):
+        from unittest.mock import Mock
+        from PIL import Image
+        import tempfile
+        from pathlib import Path
+        from shorts_creator import create_short
+
+        cached = Image.new('RGB', (100, 100), 'purple')
+        cached.info['visual_asset'] = {'title': 'Cached video illustration', 'topic': 'Star'}
+
+        with tempfile.TemporaryDirectory() as tmp:
+            out_file = Path(tmp) / 'star_short.mp4'
+            with patch('shorts_creator.find_cached_topic_images', return_value=[cached]) as find_mock, \
+                 patch('shorts_creator.relevant_image') as rel_mock, \
+                 patch('shorts_creator.make_tts'), \
+                 patch('shorts_creator.make_clip', return_value=Mock(duration=2)), \
+                 patch('shorts_creator.concatenate_videoclips') as concat_mock, \
+                 patch('shorts_creator.save_visual_manifest') as manifest_mock:
+                final_mock = Mock()
+                concat_mock.return_value = final_mock
+                create_short('Star', 'A star is glowing in space.', 'space', str(out_file), use_images=True, prepared_for_kids=True)
+                find_mock.assert_called_with('Star')
+                rel_mock.assert_not_called()
+                manifest_mock.assert_called_once()
+                self.assertIn(cached, manifest_mock.call_args[0][1])
+
 
 if __name__ == '__main__':
     unittest.main()

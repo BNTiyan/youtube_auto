@@ -25,3 +25,6 @@ runs:
       shell: bash
       run: |
         python scripts/check_local_model.py
+    - name: Check local image generation configuration
+      shell: bash
+      run: python scripts/check_comfyui.py

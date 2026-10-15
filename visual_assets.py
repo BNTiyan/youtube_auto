@@ -10,11 +10,13 @@ import re
 import requests
 from PIL import Image, ImageOps
 from llm_client import generate_json, provider_name
+from feedback import feedback_context
 
 COMMONS_API = 'https://commons.wikimedia.org/w/api.php'
 HEADERS = {'User-Agent': 'YouTubeAuto/1.0 (https://github.com/BNTiyan/youtube_auto)'}
 CACHE = Path(os.getenv('VIDEO_VISUAL_CACHE', 'generated/visual_cache'))
 _MEMORY = {}
+_COMFY_UNAVAILABLE = False
 
 
 def plain(value):
@@ -34,7 +36,7 @@ def plan_visual(topic, narration):
         'or concept. A carbon star means an astronomical star, not carbon atoms, a celebrity, or a logo. '
         'Do not ask for generic technology, office, laptop, AI robot, book, or decorative star photos. '
         'For a story, specify a clearly labeled illustration, not a claimed historical photograph.\n'
-        f'Topic: {topic}\nNarration: {narration}',
+        f'Topic: {topic}\nNarration: {narration}' + feedback_context(topic, 'visuals'),
         schema={'type':'object','properties':{'subject':{'type':'string'},'query':{'type':'string'},'avoid':{'type':'array','items':{'type':'string'}}},'required':['subject','query','avoid']},
     )
     if not all(isinstance(data.get(k), str) and data[k].strip() for k in ('subject','query')):
@@ -86,15 +88,31 @@ def check_relevance(topic, narration, plan, candidate, image):
     preview.thumbnail((768,768))
     buffer = io.BytesIO()
     preview.save(buffer, format='JPEG', quality=85)
+    if candidate.get('kind') == 'generated':
+        prompt = (
+            'Check whether this AI-generated educational illustration accurately depicts the subject '
+            'and visually supports the script. Because this is a conceptual illustration and not an astronomical '
+            'or historical photograph, do not reject it for being an illustration or lacking real scientific catalog data. '
+            'Verify that the visual elements clearly show the subject without distorted text, nonsense artifacts, '
+            'or completely unrelated stock imagery. Return JSON with matches (boolean: true if relevant and clear, false if '
+            'unrelated or nonsensical), reason (string explaining whether the depiction matches the subject), '
+            'and caption (a concise factual English caption stating it is an AI-generated illustration of the subject).\n'
+            f'Topic: {topic}\nScript: {narration}\nPlan: {json.dumps(plan)}\n'
+            f'Source: {json.dumps(candidate)}'
+        )
+    else:
+        prompt = (
+            'Check whether this image AND its source description directly support the educational script. '
+            'The source metadata identifies the object; pixels alone cannot identify a specific star or species. '
+            'Reject a different named object, decorative icon, unrelated stock scene, printed catalogue, '
+            'or ambiguous match. A scientific observation or explicitly labeled scientific visualization is acceptable '
+            'when the source identifies the right subject. Return JSON matches (boolean), reason (string), '
+            'and caption (a short factual English identification; distinguish observation, diagram, or illustration).\n'
+            f'Topic: {topic}\nScript: {narration}\nPlan: {json.dumps(plan)}\n'
+            f'Source: {json.dumps(candidate)}'
+        )
     verdict = generate_json(
-        'Check whether this image AND its source description directly support the educational script. '
-        'The source metadata identifies the object; pixels alone cannot identify a specific star or species. '
-        'Reject a different named object, decorative icon, unrelated stock scene, printed catalogue, '
-        'or ambiguous match. A scientific observation or explicitly labeled scientific visualization is acceptable '
-        'when the source identifies the right subject. Return JSON matches (boolean), reason (string), '
-        'and caption (a short factual English identification; distinguish observation, diagram, or illustration).\n'
-        f'Topic: {topic}\nScript: {narration}\nPlan: {json.dumps(plan)}\n'
-        f'Source: {json.dumps(candidate)}',
+        prompt,
         schema={'type':'object','properties':{'matches':{'type':'boolean'},'reason':{'type':'string'},'caption':{'type':'string'}},'required':['matches','reason','caption']},
         model=os.getenv('VISUAL_LLM_MODEL','qwen3.5:4b'),
         images=[base64.b64encode(buffer.getvalue()).decode('ascii')],
@@ -106,7 +124,11 @@ def relevant_image(topic, narration):
     """Return an approved image or None. Never substitute a random search result."""
     if os.getenv('VIDEO_VISUALS', 'verified') == 'local' or provider_name() != 'ollama':
         return None
-    key = hashlib.sha256(('metadata-v2\n'+topic+'\n'+narration).encode()).hexdigest()
+    global _COMFY_UNAVAILABLE
+    from comfyui_client import workflow_path
+    workflow = workflow_path()
+    workflow_key = workflow.read_text() if workflow.exists() else ''
+    key = hashlib.sha256(('comfy-v1\n'+workflow_key+topic+'\n'+narration+feedback_context(topic,'visuals')).encode()).hexdigest()
     if key in _MEMORY:
         return _MEMORY[key]
     CACHE.mkdir(parents=True, exist_ok=True)
@@ -120,6 +142,29 @@ def relevant_image(topic, narration):
         plan = plan_visual(topic, narration)
         if re.search(r'carbon[ -]star', topic, re.I):
             plan.update(subject='carbon star', query='"R Sculptoris" carbon')
+        if workflow.exists() and not _COMFY_UNAVAILABLE:
+            try:
+                from comfyui_client import generate_image
+                prompt = ('Create an accurate educational illustration. No text, logo, or branding. '
+                          'Clearly depict this subject: '+plan['subject']+'. Script context: '+narration
+                          +feedback_context(topic,'visuals'))
+                image = generate_image(prompt)
+                candidate = {'title':'AI-generated illustration: '+plan['subject'],
+                             'source_url':'', 'author':'Local ComfyUI', 'license':'AI-generated illustration',
+                             'description':'Conceptual AI illustration, not a photograph or observation.',
+                             'kind':'generated', 'topic':topic, 'asset_id':key}
+                verdict = check_relevance(topic, narration, plan, candidate, image)
+                if verdict.get('matches') is True:
+                    candidate.update(caption=verdict.get('caption') or candidate['title'], relevance_reason=verdict['reason'])
+                    image.save(image_path, quality=92)
+                    metadata_path.write_text(json.dumps(candidate, ensure_ascii=False, indent=2))
+                    image.info['visual_asset'] = candidate
+                    _MEMORY[key] = image
+                    return image
+                print('  Generated illustration rejected by local relevance check; trying sourced images.')
+            except (requests.RequestException, ValueError, OSError, RuntimeError, KeyError, TimeoutError) as exc:
+                _COMFY_UNAVAILABLE = True
+                print(f'  ComfyUI unavailable: {exc}; disabling retries for this video process and trying sourced images.')
         for candidate in list(search_candidates(plan['query']))[:3]:
             if not metadata_matches(topic, narration, plan, candidate):
                 continue
@@ -157,6 +202,6 @@ def save_visual_manifest(output_path, images):
     for image in images:
         if image is not None and image.info.get('visual_asset'):
             asset=image.info['visual_asset']
-            assets[asset['source_url']]=asset
+            assets[asset.get('asset_id') or asset['source_url']]=asset
     path=Path(output_path).with_suffix('')
     Path(str(path)+'_visuals.json').write_text(json.dumps(list(assets.values()),ensure_ascii=False,indent=2))

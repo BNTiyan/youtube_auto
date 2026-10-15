@@ -15,6 +15,7 @@ Usage:
 """
 
 from filename_utils import video_slug
+from feedback import feedback_context
 from visual_assets import relevant_image, save_visual_manifest
 import os
 import json
@@ -373,7 +374,7 @@ def build_short_script(name, text, points=None, source_text=""):
             "and end with a useful takeaway. Write 45 to 85 words in 3 to 5 complete, short sentences. "
             "Preserve the source language. No branding, greetings, subscribe requests, "
             "unsupported facts, ellipses, or unfinished sentences. Return JSON with one string field: script.\n"
-            + (source_text or '\n'.join(parts))
+            + (source_text or '\n'.join(parts)) + feedback_context(name, 'script')
         )
         script = data.get('script', '')
         if not isinstance(script, str) or not script.strip():

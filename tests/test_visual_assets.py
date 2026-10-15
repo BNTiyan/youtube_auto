@@ -9,6 +9,10 @@ import visual_assets as v
 class VisualAssetTests(unittest.TestCase):
     def setUp(self):
         v._MEMORY.clear()
+        v._COMFY_UNAVAILABLE = False
+        self.workflow_patch = patch('comfyui_client.workflow_path', return_value=Path('/tmp/youtube-auto-no-workflow.json'))
+        self.workflow_patch.start()
+        self.addCleanup(self.workflow_patch.stop)
 
     def test_only_known_reusable_licenses(self):
         self.assertTrue(v.permitted_license({'LicenseShortName':{'value':'CC BY 4.0'}}))
@@ -40,3 +44,44 @@ class VisualAssetTests(unittest.TestCase):
             assets=json.loads((Path(tmp)/'video_visuals.json').read_text())
             self.assertEqual(len(assets),1)
             self.assertEqual(assets[0]['author'],'ESO')
+
+    def test_generated_image_is_checked_and_cached_with_label(self):
+        image=Image.new('RGB',(32,32),'red')
+        workflow=Mock();workflow.exists.return_value=True;workflow.read_text.return_value='test workflow'
+        with tempfile.TemporaryDirectory() as tmp, patch.object(v,'CACHE',Path(tmp)), patch('comfyui_client.workflow_path',return_value=workflow), patch('comfyui_client.generate_image',return_value=image) as generate, patch.object(v,'provider_name',return_value='ollama'), patch.object(v,'plan_visual',return_value={'subject':'carbon star','query':'star'}), patch.object(v,'check_relevance',return_value={'matches':True,'reason':'An appropriate conceptual illustration'}), patch.object(v,'search_candidates') as search:
+            result=v.relevant_image('Carbon star','A red giant with carbon-rich gas.')
+            self.assertEqual(result.info['visual_asset']['kind'],'generated')
+            self.assertIn('AI-generated',result.info['visual_asset']['caption'])
+            self.assertIs(v.relevant_image('Carbon star','A red giant with carbon-rich gas.'),result)
+            generate.assert_called_once()
+            search.assert_not_called()
+
+    def test_unavailable_comfy_is_not_retried_for_every_scene(self):
+        workflow=Mock();workflow.exists.return_value=True;workflow.read_text.return_value='test workflow'
+        with tempfile.TemporaryDirectory() as tmp, patch.object(v,'CACHE',Path(tmp)), patch('comfyui_client.workflow_path',return_value=workflow), patch('comfyui_client.generate_image',side_effect=TimeoutError('slow')) as generate, patch.object(v,'provider_name',return_value='ollama'), patch.object(v,'plan_visual',return_value={'subject':'star','query':'star'}), patch.object(v,'search_candidates',return_value=[]):
+            self.assertIsNone(v.relevant_image('Star','Scene one'))
+            self.assertIsNone(v.relevant_image('Star','Scene two'))
+            generate.assert_called_once()
+
+    def test_check_relevance_uses_illustration_prompt_for_generated(self):
+        image = Image.new('RGB', (32, 32), 'blue')
+        candidate = {'kind': 'generated', 'title': 'AI-generated illustration: star'}
+        plan = {'subject': 'star', 'query': 'star'}
+        with patch.object(v, 'generate_json') as gen:
+            gen.return_value = {'matches': True, 'reason': 'Clear illustration', 'caption': 'AI-generated illustration of a star'}
+            res = v.check_relevance('Star', 'A hot star.', plan, candidate, image)
+            self.assertTrue(res['matches'])
+            prompt = gen.call_args[0][0]
+            self.assertIn('AI-generated educational illustration', prompt)
+            self.assertIn('conceptual illustration', prompt)
+
+    def test_check_relevance_uses_metadata_prompt_for_sourced(self):
+        image = Image.new('RGB', (32, 32), 'green')
+        candidate = {'title': 'File:Star.jpg', 'source_url': 'https://example.com'}
+        plan = {'subject': 'star', 'query': 'star'}
+        with patch.object(v, 'generate_json') as gen:
+            gen.return_value = {'matches': True, 'reason': 'Matches astronomical observation', 'caption': 'Observation of star'}
+            res = v.check_relevance('Star', 'A hot star.', plan, candidate, image)
+            self.assertTrue(res['matches'])
+            prompt = gen.call_args[0][0]
+            self.assertIn('pixels alone cannot identify', prompt)

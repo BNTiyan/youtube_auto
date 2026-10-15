@@ -9,6 +9,7 @@ directly into tech_video_creator.py and shorts_creator.py.
 import argparse
 import json
 from filename_utils import video_slug
+from feedback import feedback_context
 import os
 import re
 import sys
@@ -412,7 +413,7 @@ def choose_topic_with_gemini(headlines: list[dict]) -> dict:
 
 def choose_manual_topic_with_gemini(source_topic: str, source_text: str, source_notes: str) -> dict:
     today_label = datetime.now(LOCAL_TZ).strftime("%B %d, %Y")
-    return generate_json(build_manual_topic_prompt(source_topic, source_text, source_notes, today_label))
+    return generate_json(build_manual_topic_prompt(source_topic, source_text, source_notes, today_label) + feedback_context(source_topic, "script"))
 
 
 def fallback_topic(headlines: list[dict]) -> dict:

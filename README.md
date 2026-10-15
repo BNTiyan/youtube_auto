@@ -423,3 +423,45 @@ If no candidate passes, a local teaching illustration/diagram is used. Set
 internet and local Ollama; the vision model defaults to `qwen3.5:4b`, overridable
 with `VISUAL_LLM_MODEL`. `VIDEO_VISUAL_CACHE` can point to a persistent cache;
 the default is `generated/visual_cache`.
+
+### Local ComfyUI images (kids and tech)
+
+Run ComfyUI Desktop on the same Mac as the self-hosted Actions runner. The default
+API address is `http://127.0.0.1:8188` (`COMFYUI_BASE_URL` overrides it).
+Use a working **text-to-image** workflow, put `{{PROMPT}}` in its positive prompt,
+and export **API format** to `comfyui_workflow.json` in this repository. Canvas
+JSON and reference-image workflows are rejected. Keep model weights outside Git.
+For free commercial publishing, use Klein **4B** (Apache 2.0); Klein 9B uses the
+publisher's non-commercial license. The connector does not download models or
+change the model selected by the exported workflow.
+
+Test without uploading:
+
+```sh
+python comfyui_client.py --prompt "Educational illustration of a carbon-rich red giant star, no text" --output generated/comfyui_test.png
+```
+
+When that workflow file exists, the shared visual selector used by regular videos
+and Shorts tries ComfyUI, checks the illustration with the local vision model,
+and falls back to attributed source pictures if generation or evaluation fails.
+Generated images are labeled as AI illustrations in the visual manifest and credits.
+This is relevance filtering, not yet a side-by-side quality ranking. Cache keys
+include the workflow and relevant saved feedback. ComfyUI and Ollama must remain
+running while the Mac runner works. A workflow committed to the repository is
+available to Actions; a file saved only on the Mac is not automatically included
+in Actions checkouts. Optional `COMFYUI_TIMEOUT` defaults to 900 seconds per scene.
+
+Save editorial feedback for later scripts and visuals:
+
+```sh
+python feedback.py --topic "Carbon star" --rating 2 --scope visuals --comment "Show the red giant and its dust shell; avoid decorative stars."
+python feedback.py --show
+```
+
+Feedback is stored in `content_feedback.json`; commit it to reuse it in Actions.
+Matching preferences are added to generation prompts, not used to train weights.
+
+The checked-in workflow currently selects the user-installed Klein Base 9B FP8 model.
+On this Mac, the AppleSilicon-FP8 custom node is required and has been installed in
+the ComfyUI instance. Image generation was verified locally. The visual checker may
+reject a visually attractive illustration if it does not support the narration.

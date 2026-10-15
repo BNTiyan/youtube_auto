@@ -2,6 +2,7 @@
 import json
 import os
 from llm_client import generate_json, provider_name
+from feedback import feedback_context
 
 
 LESSON_SCHEMA = {
@@ -62,7 +63,7 @@ Use exactly four sections. Never end narration or short_text with an ellipsis.''
 
 def generate_kids_lesson(topic, source, language='en'):
     model = os.getenv('KIDS_LLM_MODEL', 'qwen3.5:4b') if provider_name() == 'ollama' else None
-    data = generate_json(build_kids_prompt(topic, source, language), schema=LESSON_SCHEMA, model=model)
+    data = generate_json(build_kids_prompt(topic, source, language) + feedback_context(topic, "script"), schema=LESSON_SCHEMA, model=model)
     data = generate_json(
         f"You are editing a children's lesson for ages 8–12 in language code {language}. "
         "Check the entire draft against the source. Remove every factual claim not explicitly supported by the source, "

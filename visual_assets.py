@@ -137,7 +137,7 @@ def generated_scene(topic, narration):
         image.info['visual_asset'] = json.loads(meta_path.read_text())
         _MEMORY[key] = image
         return image
-    plan = generate_json(
+    planning_prompt = (
         'Plan one educational illustration for the narration below. Return JSON with '
         'subject (exact subject) and scene (a concrete visual composition with setting, '
         'subject action, camera framing and lighting). Show the idea in this specific '
@@ -146,8 +146,31 @@ def generated_scene(topic, narration):
         'clear conceptual visual metaphor; for stories use a story illustration. '
         'No text, letters, watermarks, branding or decorative robots.\n'
         f'Topic: {topic}\nNarration: {narration}' + context)
-    if any(not isinstance(plan.get(k), str) or not plan[k].strip() for k in ('subject', 'scene')):
-        raise ValueError('AI scene plan needs a subject and scene')
+    schema = {
+        'type': 'object',
+        'properties': {k: {'type': 'string', 'minLength': 1} for k in ('subject', 'scene')},
+        'required': ['subject', 'scene'],
+        'additionalProperties': False,
+    }
+    for attempt in range(2):
+        try:
+            plan = generate_json(planning_prompt, schema=schema)
+            if all(isinstance(plan.get(k), str) and plan[k].strip() for k in ('subject', 'scene')):
+                break
+            raise ValueError('AI scene plan needs a subject and scene')
+        except ValueError as exc:
+            print(f'  AI scene planning attempt {attempt + 1} invalid: {exc}', flush=True)
+            planning_prompt += '\nReturn only an object with nonempty string fields "subject" and "scene".'
+    else:
+        # Keep generation grounded in the supplied script when the planner fails.
+        # The generated image must still pass the relevance check below.
+        plan = {
+            'subject': topic,
+            'scene': (f'Illustrate only this narration: {narration}. '
+                      'Use a clear view of the subject in a simple setting; '
+                      'do not add factual details beyond the narration.'),
+        }
+        print('  Using narration-grounded AI scene plan after invalid model responses.', flush=True)
     prompt = (f"Educational illustration of {plan['subject']}. {plan['scene']}. "
               f"Topic: {topic}. Narration context: {narration}. "
               'Clean cinematic educational illustration, coherent composition, no text or logos.' + context)

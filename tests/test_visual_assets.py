@@ -136,3 +136,30 @@ class AISceneTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, 'require a ComfyUI'):
                 v.relevant_image('Lion', 'A lion rests.')
             search.assert_not_called()
+
+    def test_invalid_scene_plans_recover_and_still_check_image(self):
+        cases = [
+            ([{'subject': 'ATR 72'}, {'subject': 'ATR 72', 'scene': 'An aircraft on a runway.'}], 'An aircraft on a runway.'),
+            ([{'subject': '', 'scene': ' '}, {'subject': 72, 'scene': None}], 'Illustrate only this narration:'),
+            ([ValueError('Invalid JSON'), ValueError('LLM must return a JSON object')], 'Illustrate only this narration:'),
+        ]
+        for responses, expected in cases:
+            with self.subTest(responses=responses), tempfile.TemporaryDirectory() as tmp:
+                v._MEMORY.clear()
+                workflow = Mock()
+                workflow.exists.return_value = True
+                workflow.read_text.return_value = 'scene workflow'
+                with patch.object(v, 'CACHE', Path(tmp)), \
+                     patch('comfyui_client.workflow_path', return_value=workflow), \
+                     patch.object(v, 'generate_json', side_effect=responses) as planner, \
+                     patch('comfyui_client.generate_image', return_value=Image.new('RGB', (40, 40))) as generate, \
+                     patch.object(v, 'check_relevance', return_value={'matches': False, 'reason': 'wrong aircraft'}) as check:
+                    with self.assertRaisesRegex(RuntimeError, 'wrong aircraft'):
+                        v.generated_scene('ATR 72', 'It can use short runways.')
+                    self.assertEqual(planner.call_count, 2)
+                    self.assertEqual(planner.call_args.kwargs['schema']['required'], ['subject', 'scene'])
+                    self.assertIn(expected, generate.call_args.args[0])
+                    self.assertIn('ATR 72', generate.call_args.args[0])
+                    self.assertIn('It can use short runways.', generate.call_args.args[0])
+                    check.assert_called_once()
+                    self.assertEqual(list(Path(tmp).glob('*.json')), [])

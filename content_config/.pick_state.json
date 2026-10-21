@@ -1,4 +1,6 @@
 {
-  "file_idx": 0,
-  "file_item_idx": {}
+  "file_idx": 1,
+  "file_item_idx": {
+    "airplanes": 1
+  }
 }

@@ -1,8 +1,9 @@
 {
-  "file_idx": 3,
+  "file_idx": 4,
   "file_item_idx": {
     "airplanes": 1,
     "animals": 1,
-    "brands": 1
+    "brands": 1,
+    "cars": 1
   }
 }

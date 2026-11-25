@@ -93,8 +93,9 @@ def check_relevance(topic, narration, plan, candidate, image):
             'Check whether this AI-generated educational illustration accurately depicts the subject '
             'and visually supports the script. Because this is a conceptual illustration and not an astronomical '
             'or historical photograph, do not reject it for being an illustration or lacking real scientific catalog data. '
-            'Verify that the visual elements clearly show the subject without distorted text, nonsense artifacts, '
-            'or completely unrelated stock imagery. Return JSON with matches (boolean: true if relevant and clear, false if '
+            'Verify that the visual elements clearly show the subject without nonsense artifacts '
+            'or completely unrelated stock imagery. Ignore minor incidental background lettering or pseudo-text '
+            'common in AI image generation unless the entire image is misleading. Return JSON with matches (boolean: true if relevant and clear, false if '
             'unrelated or nonsensical), reason (string explaining whether the depiction matches the subject), '
             'and caption (a concise factual English caption stating it is an AI-generated illustration of the subject).\n'
             f'Topic: {topic}\nScript: {narration}\nPlan: {json.dumps(plan)}\n'
@@ -173,7 +174,7 @@ def generated_scene(topic, narration):
         print('  Using narration-grounded AI scene plan after invalid model responses.', flush=True)
     prompt = (f"Educational illustration of {plan['subject']}. {plan['scene']}. "
               f"Topic: {topic}. Narration context: {narration}. "
-              'Clean cinematic educational illustration, coherent composition, no text or logos.' + context)
+              'Clean cinematic educational illustration, coherent composition. Pure visual imagery, no words, no text, no letters, no logos.' + context)
     image = generate_image(prompt)
     asset = dict(title='AI-generated scene: '+plan['subject'], source_url='',
                  author='Local ComfyUI', license='AI-generated illustration', kind='generated',
@@ -192,7 +193,15 @@ def generated_scene(topic, narration):
 def relevant_image(topic, narration):
     """Return an approved image or None. Never substitute a random search result."""
     if os.getenv('VIDEO_VISUALS') == 'ai-scenes':
-        return generated_scene(topic, narration)
+        from comfyui_client import workflow_path
+        workflow = workflow_path()
+        if not workflow.exists():
+            raise RuntimeError('AI scenes require a ComfyUI API workflow')
+        try:
+            return generated_scene(topic, narration)
+        except (RuntimeError, ValueError, OSError, TimeoutError, requests.RequestException) as exc:
+            print(f"  AI scene unavailable or unverified: {exc}; using clean visual.", flush=True)
+            return None
     if os.getenv('VIDEO_VISUALS', 'verified') == 'local' or provider_name() != 'ollama':
         return None
     global _COMFY_UNAVAILABLE

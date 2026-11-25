@@ -163,3 +163,13 @@ class AISceneTests(unittest.TestCase):
                     self.assertIn('It can use short runways.', generate.call_args.args[0])
                     check.assert_called_once()
                     self.assertEqual(list(Path(tmp).glob('*.json')), [])
+
+    def test_relevant_image_recovers_gracefully_when_ai_scene_rejected(self):
+        workflow = Mock()
+        workflow.exists.return_value = True
+        workflow.read_text.return_value = 'scene workflow'
+        with patch.dict('os.environ', {'VIDEO_VISUALS': 'ai-scenes'}), \
+             patch('comfyui_client.workflow_path', return_value=workflow), \
+             patch.object(v, 'generated_scene', side_effect=RuntimeError('wrong scene')):
+            img = v.relevant_image('Topic', 'Narration')
+            self.assertIsNone(img)

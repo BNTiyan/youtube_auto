@@ -444,8 +444,7 @@ def create_short(
         source_image = None
         cached_topic_images = []
         if use_images:
-            cached_topic_images = (find_cached_topic_images(name)
-                                   if os.getenv('VIDEO_VISUALS') != 'ai-scenes' else [])
+            cached_topic_images = find_cached_topic_images(name)
             if cached_topic_images:
                 source_image = cached_topic_images[0]
                 print(f"  🖼️  Reusing approved video image for Short: {source_image.info.get('visual_asset', {}).get('title', name)}")
@@ -462,7 +461,7 @@ def create_short(
         for i, sentence in enumerate(pages):
             if cached_topic_images:
                 scene_image = cached_topic_images[i % len(cached_topic_images)]
-            elif source_image is not None and os.getenv('VIDEO_VISUALS') != 'ai-scenes':
+            elif source_image is not None:
                 scene_image = source_image
             else:
                 scene_image = relevant_image(name, sentence) if use_images else None

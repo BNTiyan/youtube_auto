@@ -113,15 +113,15 @@ jobs:
           fi
           DAY_OF_WEEK=$(TZ=Asia/Kolkata date +%u) # 1=Mon ... 7=Sun
           FORCE_VIDEO="${{ github.event.inputs.generate_regular_video }}"
-          # Regular videos run Monday (1), Wednesday (3), Friday (5), or by manual override
-          if [ "$FORCE_VIDEO" = "true" ] || [[ "$DAY_OF_WEEK" =~ ^(1|3|5)$ ]]; then
+          # Regular videos run weekly on Sunday (7), or by manual override
+          if [ "$FORCE_VIDEO" = "true" ] || [ "$DAY_OF_WEEK" = "7" ]; then
             echo "run_regular_video=true" >> "$GITHUB_OUTPUT"
             echo "run_regular_video=true"
-            echo "📅 Monday/Wednesday/Friday or manual override: generating regular video and short."
+            echo "📅 Sunday or manual override: generating weekly regular learning video and short."
           else
             echo "run_regular_video=false" >> "$GITHUB_OUTPUT"
             echo "run_regular_video=false"
-            echo "📅 Short only today; regular videos run Monday, Wednesday, Friday."
+            echo "📅 Short only today; regular learning videos run weekly on Sunday."
           fi
 
       - name: Pick today's latest topic
@@ -243,8 +243,8 @@ jobs:
             VIDEO="latest_shorts/${TOPIC_SLUG}_short.mp4"
             python youtube_auto.py "$VIDEO" --publish-slot short \
               --topic    "${TOPIC_NAME} #Shorts" \
-              --niche    "Latest AI and Technology News Shorts" \
-              --tone     "timely, clear and educational for developers. Short vertical video." \
+              --niche    "Technology and AI Concept Learning Shorts" \
+              --tone     "clear, fast-paced and educational for developers and learners. Short vertical video." \
               --category 28 \
               --privacy  "$PRIVACY"
           fi
@@ -275,9 +275,9 @@ jobs:
         run: |
           VIDEO="latest_videos/${TOPIC_SLUG}_learning.mp4"
           python youtube_auto.py "$VIDEO" --publish-slot video \
-            --topic    "${TOPIC_NAME} | ${TOPIC_HEADLINE}" \
-            --niche    "Latest AI and Technology News Explained" \
-            --tone     "timely, clear and educational for developers and tech enthusiasts" \
+            --topic    "${TOPIC_NAME}" \
+            --niche    "Technology and AI Education Explained" \
+            --tone     "educational, in-depth, clear and engaging for developers and tech learners" \
             --category 28 \
             --privacy  "$PRIVACY"
 

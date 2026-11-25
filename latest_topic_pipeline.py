@@ -27,8 +27,16 @@ from llm_client import generate_json
 
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY", "")
 DEFAULT_QUERY = (
-    "artificial intelligence OR generative AI OR large language model OR OpenAI "
-    "OR Anthropic OR Google AI OR Microsoft AI OR NVIDIA"
+    '(LLM OR "AI model" OR "AI agent" OR "machine learning" OR "deep learning" '
+    'OR "system design" OR "open source AI" OR "vector database" OR "neural network" '
+    'OR "transformer" OR "RAG" OR "MCP" OR "generative AI" OR "software architecture") '
+    '(architecture OR breakthrough OR release OR benchmark OR algorithm OR "how it works" OR explained)'
+)
+NOISE_KEYWORDS = (
+    "shares", "stock", "stocks", "nasdaq", "dow jones", "investor", "revenue",
+    "quarterly earnings", "valuation", "fundraising", "partner with", "partners with",
+    "partnership", "sponsorship", "deal with", "signs agreement", "sues", "lawsuit",
+    "antitrust", "court", "subpoena", "copyright lawsuit", "divorce", "celebrity"
 )
 DEFAULT_MODEL = "gemini-2.5-flash"
 LOCAL_TZ = ZoneInfo("America/Detroit")
@@ -261,8 +269,9 @@ def fetch_recent_headlines(query: str, limit: int = 12) -> list[dict]:
     response.raise_for_status()
 
     root = ET.fromstring(response.content)
-    items = []
-    for item in root.findall("./channel/item")[:limit]:
+    raw_items = []
+    filtered_items = []
+    for item in root.findall("./channel/item"):
         title = (item.findtext("title") or "").strip()
         link = (item.findtext("link") or "").strip()
         pub_date_raw = (item.findtext("pubDate") or "").strip()
@@ -277,15 +286,20 @@ def fetch_recent_headlines(query: str, limit: int = 12) -> list[dict]:
                 pub_date = pub_date_raw
 
         if title:
-            items.append(
-                {
-                    "title": title,
-                    "link": link,
-                    "source": source,
-                    "published_at": pub_date,
-                }
-            )
-    return items
+            item_entry = {
+                "title": title,
+                "link": link,
+                "source": source,
+                "published_at": pub_date,
+            }
+            raw_items.append(item_entry)
+            title_lower = title.lower()
+            if not any(noise in title_lower for noise in NOISE_KEYWORDS):
+                filtered_items.append(item_entry)
+
+    # Prefer filtered technical items; fall back to raw items if filter is too aggressive
+    items = filtered_items if len(filtered_items) >= 3 else raw_items
+    return items[:limit]
 
 
 def fetch_items_from_feed_url(source_url: str, limit: int = 12) -> list[dict]:
@@ -368,41 +382,73 @@ def fetch_items_from_source_url(source_url: str, limit: int = 12) -> list[dict]:
 
 def build_prompt(headlines: list[dict], today_label: str) -> str:
     headlines_json = json.dumps(headlines, indent=2)
-    return f"""You are helping create a daily educational YouTube video about a current tech topic.
-
+    return f"""You are an elite Computer Science Educator and YouTube creator (in the style of 3Blue1Brown, Fireship, and ByteByteGo).
 Today is {today_label}.
 
-Below is a JSON array of recent headlines from the last day:
+Below is a JSON array of recent technical developments and trending headlines:
 {headlines_json}
 
-Choose ONE topic that is:
-- current and newsworthy today
-- understandable to a broad tech audience
-- suitable for an educational explainer video
-- not just stock-market chatter, gossip, or legal drama unless there is a strong product or AI angle
+Your goal: Select the single most technically interesting trend from today and transform it into a 100% PURE LEARNING / EDUCATIONAL EXPLAINER VIDEO.
+
+CRITICAL INSTRUCTIONS — ONLY LEARNING VIDEOS:
+1. NEVER FRAME THIS AS NEWS:
+   - Do NOT say "In today's news", "Company X announced Y", or report press releases.
+   - Do NOT make a video about corporate announcements or business deals.
+2. EXTRACT AND TEACH THE CORE TECHNICAL CONCEPT:
+   - Identify the underlying technology, architecture, algorithm, or engineering mechanism behind the headline.
+   - Teach HOW IT WORKS so any software engineer or tech enthusiast learns something profound.
+   Examples of transformation:
+   - Trend about a new model -> Teach the architecture: "How Mixture of Experts (MoE) Works", "What is Test-Time Compute in AI?".
+   - Trend about AI tools / agents -> Teach the protocol: "What is Model Context Protocol (MCP)?", "How AI Agents Call APIs".
+   - Trend about databases / data -> Teach the system design: "Why In-Memory Databases Beat Disk", "How Vector Search Works".
+   - Trend about efficiency / chips -> Teach the hardware concept: "How Quantization Compresses Massive Neural Networks".
+3. RETENTION HOOK:
+   - The first sentence must be a gripping question or curiosity gap (e.g. "Have you ever wondered why...", "Here is the exact architecture behind...").
+4. STRUCTURED SECTIONS:
+   - Provide 3-4 structured teaching sections with clear titles, concise slide text, and conversational spoken narration.
 
 Return ONLY valid JSON with this exact shape:
 {{
   "category": "ai",
-  "headline": "Original selected headline",
-  "source": "News source",
-  "published_at": "ISO datetime string from the input if available",
-  "video_topic": "Short clean topic title for the video",
-  "video_summary": "2 to 3 sentence explanation of what happened and why it matters",
-  "short_text": "1 to 2 short sentences for a vertical short",
-  "points": ["point 1", "point 2", "point 3", "point 4"],
-  "search_terms": "Pexels-friendly visual search terms",
+  "headline": "The inspiring headline",
+  "source": "Source name",
+  "published_at": "{today_label}",
+  "video_topic": "Compelling concept learning title under 65 chars (e.g. 'How Mixture of Experts Works in AI')",
+  "video_summary": "3 to 4 sentence educational masterclass explaining the problem, how the technology works, and why engineers should care.",
+  "short_text": "Engaging 40-50 second spoken breakdown for YouTube Shorts with an immediate 3-second curiosity hook and step-by-step concept walkthrough.",
+  "points": [
+    "Core Problem: The bottleneck or challenge old systems faced",
+    "Architecture: How the new mechanism or algorithm operates step-by-step",
+    "Comparison: Why this outperforms traditional methods",
+    "Production Design: How engineering systems implement this in practice",
+    "Key Takeaway: The fundamental mental model to remember"
+  ],
+  "sections": [
+    {{
+      "title": "The Engineering Challenge",
+      "narration": "Curiosity hook explaining the challenge developers or models face and why old methods hit a bottleneck.",
+      "slide_text": "The core engineering challenge and why old methods hit a limit."
+    }},
+    {{
+      "title": "How the Technology Works",
+      "narration": "Step-by-step explanation of the core technical mechanism, routing, or algorithm.",
+      "slide_text": "Step-by-step breakdown of the underlying mechanism."
+    }},
+    {{
+      "title": "Real-World Impact & Takeaways",
+      "narration": "How production systems use this today, efficiency gains, and what software engineers should know.",
+      "slide_text": "Production implementation and key developer takeaways."
+    }}
+  ],
+  "search_terms": "Visual terms for diagrams, system architecture, and tech illustrations",
   "topic_tags": ["tag1", "tag2", "tag3", "tag4", "tag5"]
 }}
 
 Rules:
-- category must be one of: ai, llm, rag, database, mcp, science, general
-- video_topic must be under 70 characters
-- video_summary should be concise, factual, and easy to narrate
-- points must be short spoken-friendly learning points
-- short_text should be punchy but not clickbait
-- topic_tags must be lowercase
-- if the topic is general AI news, prefer category "ai"
+- category must be one of: ai, llm, rag, database, devops, mcp, security, science
+- video_topic must be an educational concept title, NEVER a news headline
+- points and sections must teach computer science, AI, and software engineering principles
+- Keep topic_tags lowercase
 """
 
 
@@ -419,28 +465,47 @@ def choose_manual_topic_with_gemini(source_topic: str, source_text: str, source_
 def fallback_topic(headlines: list[dict]) -> dict:
     chosen = headlines[0]
     title = chosen["title"]
-    clean_topic = re.sub(r"\s*\|\s*.*$", "", title).strip()
+    clean_topic = re.sub(r"\s*[-|–]\s*.*$", "", title).strip()
+    clean_topic = re.sub(r"\s*\|\s*.*$", "", clean_topic).strip()
+    concept_title = f"{clean_topic} Explained" if not clean_topic.lower().startswith("how") else clean_topic
     return {
         "category": "ai",
         "headline": title,
         "source": chosen.get("source", ""),
         "published_at": chosen.get("published_at", ""),
-        "video_topic": clean_topic[:68],
+        "video_topic": concept_title[:68],
         "video_summary": normalize_sentence(
-            f"{clean_topic} is one of today's major AI stories. "
-            "In this video, we break down what happened and why it matters."
+            f"In this technical deep dive, we break down the architecture and core engineering principles behind {clean_topic}. "
+            "Learn how it works under the hood and why this technical approach delivers breakthrough efficiency for software developers."
         ),
         "short_text": normalize_sentence(
-            f"Big AI update today: {clean_topic}. Here's why people are talking about it."
+            f"Ever wondered how {clean_topic} actually works? Here is the underlying architecture and why it matters."
         ),
         "points": [
-            "What happened in the story",
-            "Why the update matters now",
-            "Who is affected by the change",
-            "What to watch next",
+            "The engineering problem: Traditional approaches face scaling bottlenecks",
+            "Core mechanism: How the architecture routes and processes data efficiently",
+            "Performance gains: Drastic improvements in speed and memory footprint",
+            "Production takeaway: How engineers can build and apply this concept",
         ],
-        "search_terms": "artificial intelligence technology innovation news",
-        "topic_tags": ["ai", "tech news", "today", "artificial intelligence", "explainer"],
+        "sections": [
+            {
+                "title": f"The Problem {clean_topic} Solves",
+                "narration": f"Have you ever wondered why {clean_topic} is getting so much attention? Traditional systems struggled with efficiency and scale.",
+                "slide_text": f"Why traditional architectures hit a bottleneck and how {clean_topic} changes the paradigm.",
+            },
+            {
+                "title": "How the Architecture Works",
+                "narration": "Under the hood, the system uses streamlined data routing to achieve high throughput without redundant compute.",
+                "slide_text": "A step-by-step breakdown of the underlying mechanism and data flow.",
+            },
+            {
+                "title": "Key Engineering Takeaways",
+                "narration": "For developers and engineers, this represents a major architectural shift towards modular, efficient systems.",
+                "slide_text": "Production implementation insights and the key mental model to remember.",
+            },
+        ],
+        "search_terms": "artificial intelligence architecture neural network diagram",
+        "topic_tags": ["ai", "engineering", "architecture", "coding", "software"],
     }
 
 

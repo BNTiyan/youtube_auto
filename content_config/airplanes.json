@@ -1,14 +1,4 @@
 {
-  "AWS": {
-    "explanation": "Amazon Web Services is the world's largest cloud platform with over 200 services",
-    "points": [
-      "Core concept of AWS used widely in modern software and AI systems",
-      "Important for understanding: Amazon Web Services is the world's largest cloud platform with over 200 services",
-      "Commonly applied in real-world applications and production systems",
-      "Often combined with related technologies to build scalable solutions",
-      "Key knowledge area for developers, engineers, and AI practitioners"
-    ]
-  },
   "Boeing 747": {
     "explanation": "The Boeing 747 is called the Queen of the Skies and carries hundreds of passengers",
     "points": [

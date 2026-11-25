@@ -18,27 +18,29 @@ import argparse
 from datetime import datetime
 
 
-def generate_fallback_metadata(name: str, category: str, text: str, points: list) -> dict:
+def generate_fallback_metadata(name: str, category: str, text: str, points: list, is_tech: bool = False) -> dict:
     """
     Generate high-quality metadata from local JSON data.
     """
     clean_name = name.strip()
     clean_cat = category.strip().capitalize()
-    
-    title = f"All About {clean_name} | {clean_cat} Learning"
-    
+
+    if is_tech:
+        title = f"{clean_name} Explained | How It Works & Why It Matters"
+        tags = [clean_name.lower(), clean_cat.lower(), "software engineering", "tech", "coding", "computer science", "developer"]
+    else:
+        title = f"{clean_name} Fun Facts! 🌟 Learn About {clean_name}"
+        tags = [clean_name.lower(), clean_cat.lower(), "learning", "kids", "education", "facts", "fun facts"]
+
     description = f"{text}\n\n"
     if points:
-        description += "Key learning points:\n"
+        description += "Key concepts covered:\n"
         for p in points:
             description += f"• {p}\n"
-    
-    # Generic but relevant tags
-    tags = [clean_name.lower(), clean_cat.lower(), "learning", "education", "facts", "youtube"]
-    
+
     # Add hashtags to description
-    description += f"\n#Youtube #Learning #Education #{clean_name.replace(' ', '')} #{clean_cat.replace(' ', '')}"
-    
+    description += f"\n#Learning #Education #{clean_name.replace(' ', '')} #{clean_cat.replace(' ', '')}"
+
     return {
         "title": title,
         "description": description,
@@ -104,9 +106,7 @@ def pick_today(config_dir: str, field: str = "fact", category_filter: str = "") 
     if not all_items:
         raise ValueError(f"No items found in {selected_file}")
 
-    # Sort items alphabetically by name
-    all_items.sort(key=lambda x: x["name"])
-
+    # Retain the file's natural curated order so top concepts are featured first
     # Pick item sequentially from this file
     item_idx = state["file_item_idx"].get(cat, 0) % len(all_items)
     state["file_item_idx"][cat] = (item_idx + 1) % len(all_items)
@@ -124,7 +124,8 @@ def pick_today(config_dir: str, field: str = "fact", category_filter: str = "") 
     chosen = {"category": cat, "name": raw_item["name"], "text": text}
     
     # Generate fallback metadata fields
-    fallback = generate_fallback_metadata(chosen["name"], chosen["category"], chosen["text"], points)
+    is_tech = (field == "explanation" or "tech" in config_dir)
+    fallback = generate_fallback_metadata(chosen["name"], chosen["category"], chosen["text"], points, is_tech=is_tech)
     chosen.update(fallback)
 
     # Slug: lowercase name, spaces/hyphens → underscores

@@ -1,6 +1,5 @@
 {
-    "ml_and_cv": {
-        "Logistic Regression": {
+    "Logistic Regression": {
             "explanation": "Simple linear model used for binary classification with probabilistic output",
             "points": [
                 "Uses sigmoid function to map linear combination to probability between 0 and 1",
@@ -320,5 +319,4 @@
                 "Widely used in 2025 for vision foundation models"
             ]
         }
-    }
 }

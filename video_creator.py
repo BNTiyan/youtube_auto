@@ -306,8 +306,9 @@ def create_single_item_video(
             )
             intro_mp3 = os.path.join(tmp, "intro.mp3")
             create_tts(sections[0].get("title", name), intro_mp3, lang)
-            clips.append(make_clip(intro_slide, intro_mp3, theme=theme, category=category, animate=(item_img is not None)))
+            clips.append(make_clip(intro_slide, intro_mp3, theme=theme, category=category, animate=True, index=0))
 
+            clip_idx = 1
             for section_idx, section in enumerate(sections, 1):
                 title = section.get("title") or f"Part {section_idx}"
                 narration_chunks = _chunk_script_text(section.get("narration", ""), max_chars=300)
@@ -325,7 +326,8 @@ def create_single_item_video(
                     )
                     mp3_path = os.path.join(tmp, f"section_{section_idx}_{chunk_idx}.mp3")
                     create_tts(chunk, mp3_path, lang)
-                    clips.append(make_clip(slide, mp3_path, theme=theme, category=category, animate=(item_img is not None)))
+                    clips.append(make_clip(slide, mp3_path, theme=theme, category=category, animate=True, index=clip_idx))
+                    clip_idx += 1
         else:
             # ── Intro slide ──────────────────────────────────────────────────────
             print("  Creating intro slide...")
@@ -344,7 +346,7 @@ def create_single_item_video(
                 intro_mp3,
                 lang,
             )
-            clips.append(make_clip(intro_slide, intro_mp3, theme=theme, category=category, animate=(item_img is not None)))
+            clips.append(make_clip(intro_slide, intro_mp3, theme=theme, category=category, animate=True, index=0))
 
             # ── Main content slide ────────────────────────────────────────────────
             print("  Creating main slide...")
@@ -363,7 +365,7 @@ def create_single_item_video(
                 main_mp3,
                 lang,
             )
-            clips.append(make_clip(main_slide, main_mp3, theme=theme, category=category, animate=(item_img is not None)))
+            clips.append(make_clip(main_slide, main_mp3, theme=theme, category=category, animate=True, index=1))
 
             # ── Outro slide ───────────────────────────────────────────────────────
             print("  Creating outro slide...")
@@ -377,7 +379,7 @@ def create_single_item_video(
                 outro_mp3,
                 lang,
             )
-            clips.append(make_clip(outro_slide, outro_mp3, theme=theme, category=category, animate=False, decorative=True))
+            clips.append(make_clip(outro_slide, outro_mp3, theme=theme, category=category, animate=True, decorative=True, index=2))
 
         # ── Render ────────────────────────────────────────────────────────────
         print(f"\n  Rendering → {output_path}")
@@ -597,7 +599,15 @@ def _apply_kids_overlay(clip, theme: dict, category: str):
 
 # ── CLIP ASSEMBLY ─────────────────────────────────────────────────────────────
 
-def make_clip(slide: np.ndarray, audio_path: str, theme: dict, category: str, animate: bool = False, decorative: bool = True):
+def make_clip(
+    slide: np.ndarray,
+    audio_path: str,
+    theme: dict,
+    category: str,
+    animate: bool = True,
+    decorative: bool = True,
+    index: int = 0,
+):
     """
     Build a single slide video clip.
 
@@ -606,6 +616,7 @@ def make_clip(slide: np.ndarray, audio_path: str, theme: dict, category: str, an
     """
     audio    = AudioFileClip(audio_path)
     duration = safe_clip_duration(audio.duration, PAUSE_AFTER_AUDIO, MIN_SLIDE_DURATION)
+    direction = 1 if (index % 2 == 0) else -1
     clip = build_animated_clip(
         slide,
         duration=duration,
@@ -613,6 +624,7 @@ def make_clip(slide: np.ndarray, audio_path: str, theme: dict, category: str, an
         zoom_ratio=0.06,
         pan_pixels=20,
         fadein_duration=0.30,
+        direction=direction,
     )
     if decorative and getattr(slide, "scene", None) is None:
         clip = _apply_kids_overlay(clip, theme, category)
@@ -651,7 +663,7 @@ def create_kids_video(
             intro_mp3,
             lang,
         )
-        clips.append(make_clip(intro_slide, intro_mp3, theme=theme, category=category, animate=(intro_img is not None)))
+        clips.append(make_clip(intro_slide, intro_mp3, theme=theme, category=category, animate=True, index=0))
 
         # ── Item slides ──
         for i, item in enumerate(items, 1):
@@ -680,7 +692,7 @@ def create_kids_video(
                 mp3_path,
                 lang,
             )
-            clips.append(make_clip(slide, mp3_path, theme=theme, category=category, animate=(item_img is not None)))
+            clips.append(make_clip(slide, mp3_path, theme=theme, category=category, animate=True, index=i))
 
         # ── Outro ──
         print("  Creating outro...")
@@ -694,7 +706,7 @@ def create_kids_video(
             outro_mp3,
             lang,
         )
-        clips.append(make_clip(outro_slide, outro_mp3, theme=theme, category=category, animate=False, decorative=True))
+        clips.append(make_clip(outro_slide, outro_mp3, theme=theme, category=category, animate=True, decorative=True, index=total + 1))
 
         # ── Render ──
         print(f"\n  Rendering → {output_path}")

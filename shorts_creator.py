@@ -329,16 +329,27 @@ def make_tts(text: str, path: str, lang: str = "en") -> None:
     create_kids_tts(text, path, lang)
 
 
-def make_clip(slide: np.ndarray, audio_path: str, animate: bool = False):
+def make_clip(
+    slide: np.ndarray,
+    audio_path: str,
+    animate: bool = True,
+    index: int = 0,
+    accent_color: tuple = (100, 220, 165),
+):
     audio    = AudioFileClip(audio_path)
     duration = safe_clip_duration(audio.duration, PAUSE_AFTER_AUDIO, MIN_SLIDE_SEC)
+    direction = 1 if (index % 2 == 0) else -1
     clip = build_animated_clip(
         slide,
         duration=duration,
         animate=animate,
-        zoom_ratio=0.08,
-        pan_pixels=28,
-        fadein_duration=0.25,
+        zoom_ratio=0.07,
+        pan_pixels=24,
+        fadein_duration=0.20,
+        direction=direction,
+        show_progress=True,
+        accent_color=accent_color,
+        bar_height=14,
     )
     return _set_audio(clip, audio)
 
@@ -472,12 +483,13 @@ def create_short(
                 title=name, subtitle=sentence, theme=theme,
                 top_label=f"{i+1} / {len(pages)}", image=scene_background,
             ))
+        accent = tuple(theme.get("accent", (100, 220, 165)))
         for i, (slide, sentence) in enumerate(zip(slides, pages)):
             print(f"  Narrating complete sentence {i+1}/{len(pages)}...")
             audio_path = os.path.join(tmp, f"sentence_{i}.mp3")
             spoken = sentence
             make_tts(spoken, audio_path, lang)
-            clips.append(make_clip(slide, audio_path, animate=False))
+            clips.append(make_clip(slide, audio_path, animate=True, index=i, accent_color=accent))
         os.makedirs(os.path.dirname(os.path.abspath(output_path)), exist_ok=True)
         with open(os.path.splitext(output_path)[0] + "_script.json", "w", encoding="utf-8") as fh:
             json.dump({"topic": name, "script": script, "sentences": pages}, fh, ensure_ascii=False, indent=2)

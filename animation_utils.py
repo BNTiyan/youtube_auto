@@ -13,9 +13,18 @@ except (ImportError, ModuleNotFoundError):
     from moviepy import ImageClip, VideoClip
 
 
-def _apply_zoom_pan(clip, zoom_ratio: float = 0.06, pan_pixels: int = 24):
+def _apply_zoom_pan(
+    clip,
+    zoom_ratio: float = 0.06,
+    pan_pixels: int = 24,
+    direction: int = 1,
+    show_progress: bool = False,
+    accent_color: tuple = (100, 200, 255),
+    bar_height: int = 8,
+):
     """
-    Apply a subtle Ken Burns style zoom with a light diagonal pan.
+    Apply a cinematic Ken Burns style zoom with pan and optional animated progress line.
+    direction: 1 (zoom-in), -1 (zoom-out)
     """
     duration = max(float(clip.duration or 0), 0.001)
     width, height = clip.size
@@ -24,7 +33,10 @@ def _apply_zoom_pan(clip, zoom_ratio: float = 0.06, pan_pixels: int = 24):
         frame = get_frame(t)
         progress = min(max(t / duration, 0.0), 1.0)
         eased = 1.0 - ((1.0 - progress) ** 2)
-        zoom = 1.0 + zoom_ratio * eased
+        if direction == -1:
+            zoom = 1.0 + zoom_ratio * (1.0 - eased)
+        else:
+            zoom = 1.0 + zoom_ratio * eased
 
         crop_w = max(1, int(width / zoom))
         crop_h = max(1, int(height / zoom))
@@ -37,7 +49,14 @@ def _apply_zoom_pan(clip, zoom_ratio: float = 0.06, pan_pixels: int = 24):
         y1 = min(max_y // 2 + y_shift - (max_y // 4), max_y)
 
         cropped = frame[y1:y1 + crop_h, x1:x1 + crop_w]
-        return np.array(Image.fromarray(cropped).resize((width, height), Image.LANCZOS))
+        out = np.array(Image.fromarray(cropped).resize((width, height), Image.BILINEAR))
+
+        if show_progress:
+            bar_w = int(width * progress)
+            if bar_w > 0:
+                out[-bar_height:, :bar_w] = accent_color[:3]
+
+        return out
 
     if hasattr(clip, "fl"):
         return clip.fl(_zoom)
@@ -71,11 +90,24 @@ def build_animated_clip(
     zoom_ratio: float = 0.06,
     pan_pixels: int = 24,
     fadein_duration: float = 0.30,
+    direction: int = 1,
+    show_progress: bool = False,
+    accent_color: tuple = (100, 200, 255),
+    bar_height: int = 8,
 ):
     scene = getattr(slide, "scene", None)
     if scene is not None:
-        return VideoClip(lambda t: scene.frame(t, duration), duration=duration)
+        clip = VideoClip(lambda t: scene.frame(t, duration), duration=duration)
+        return _fadein(clip, fadein_duration)
     clip = ImageClip(slide, duration=duration)
     if animate:
-        clip = _apply_zoom_pan(clip, zoom_ratio=zoom_ratio, pan_pixels=pan_pixels)
+        clip = _apply_zoom_pan(
+            clip,
+            zoom_ratio=zoom_ratio,
+            pan_pixels=pan_pixels,
+            direction=direction,
+            show_progress=show_progress,
+            accent_color=accent_color,
+            bar_height=bar_height,
+        )
     return _fadein(clip, fadein_duration)

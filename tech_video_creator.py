@@ -485,8 +485,9 @@ def create_single_concept_video(
                 intro_mp3,
                 lang,
             )
-            clips.append(make_clip(intro_slide, intro_mp3, animate=(item_img is not None)))
+            clips.append(make_clip(intro_slide, intro_mp3, animate=True, index=0))
 
+            clip_idx = 1
             for section_idx, section in enumerate(sections, 1):
                 title = section.get("title") or f"Part {section_idx}"
                 narration_chunks = _chunk_script_text(section.get("narration", ""), max_chars=340)
@@ -504,7 +505,8 @@ def create_single_concept_video(
                     )
                     mp3_path = os.path.join(tmp, f"section_{section_idx}_{chunk_idx}.mp3")
                     create_tts(chunk, mp3_path, lang)
-                    clips.append(make_clip(slide, mp3_path, animate=(item_img is not None)))
+                    clips.append(make_clip(slide, mp3_path, animate=True, index=clip_idx))
+                    clip_idx += 1
         else:
             # ── Slide 2: Concept explanation ──────────────────────────────────────
             print("  Creating concept slide...")
@@ -523,7 +525,7 @@ def create_single_concept_video(
                 main_mp3,
                 lang,
             )
-            clips.append(make_clip(main_slide, main_mp3, animate=(item_img is not None)))
+            clips.append(make_clip(main_slide, main_mp3, animate=True, index=1))
 
             # ── Slide 3: Key points ───────────────────────────────────────────────
             if raw_points:
@@ -545,7 +547,7 @@ def create_single_concept_video(
                     points_mp3,
                     lang,
                 )
-                clips.append(make_clip(points_slide, points_mp3, animate=(item_img is not None)))
+                clips.append(make_clip(points_slide, points_mp3, animate=True, index=2))
 
         # ── Render ────────────────────────────────────────────────────────────
         print(f"\n  Rendering → {output_path}")
@@ -590,9 +592,10 @@ def create_tts(text: str, out_path: str, lang: str = "en") -> None:
 
 # ── CLIP ASSEMBLY ─────────────────────────────────────────────────────────────
 
-def make_clip(slide: np.ndarray, audio_path: str, animate: bool = False):
+def make_clip(slide: np.ndarray, audio_path: str, animate: bool = True, index: int = 0):
     audio = AudioFileClip(audio_path)
     duration = safe_clip_duration(audio.duration, PAUSE_AFTER_AUDIO, MIN_SLIDE_DURATION)
+    direction = 1 if (index % 2 == 0) else -1
     clip = build_animated_clip(
         slide,
         duration=duration,
@@ -600,6 +603,7 @@ def make_clip(slide: np.ndarray, audio_path: str, animate: bool = False):
         zoom_ratio=0.05,
         pan_pixels=16,
         fadein_duration=0.35,
+        direction=direction,
     )
     return _set_audio(clip, audio)
 
@@ -636,7 +640,7 @@ def create_tech_video(
             intro_mp3,
             lang,
         )
-        clips.append(make_clip(intro_slide, intro_mp3, animate=(intro_img is not None)))
+        clips.append(make_clip(intro_slide, intro_mp3, animate=True, index=0))
 
         # ── Concept slides ──
         for i, item in enumerate(items, 1):
@@ -665,7 +669,7 @@ def create_tech_video(
                 mp3_path,
                 lang,
             )
-            clips.append(make_clip(slide, mp3_path, animate=(item_img is not None)))
+            clips.append(make_clip(slide, mp3_path, animate=True, index=i))
 
         # ── Outro ──
         print("  Creating outro...")
@@ -679,7 +683,7 @@ def create_tech_video(
             outro_mp3,
             lang,
         )
-        clips.append(make_clip(outro_slide, outro_mp3, animate=False))
+        clips.append(make_clip(outro_slide, outro_mp3, animate=True, index=total + 1))
 
         # ── Render ──
         print(f"\n  Rendering → {output_path}")

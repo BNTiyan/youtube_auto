@@ -80,5 +80,53 @@ class KidsMotionTests(unittest.TestCase):
                 clip.close()
 
 
+class AnimationEnhancementTests(unittest.TestCase):
+    def test_ken_burns_zoom_in_and_out(self):
+        # Create a simple test frame with gradients so zoom changes frame pixels
+        base = np.zeros((720, 1280, 3), dtype=np.uint8)
+        for y in range(720):
+            base[y, :, 0] = (y % 256)
+        for x in range(1280):
+            base[:, x, 1] = (x % 256)
+
+        clip_in = build_animated_clip(base, 4, animate=True, direction=1)
+        clip_out = build_animated_clip(base, 4, animate=True, direction=-1)
+        try:
+            f0_in, f2_in = clip_in.get_frame(0.5), clip_in.get_frame(3.5)
+            f0_out, f2_out = clip_out.get_frame(0.5), clip_out.get_frame(3.5)
+            self.assertEqual(f0_in.shape, (720, 1280, 3))
+            self.assertEqual(f0_out.shape, (720, 1280, 3))
+            # There should be movement across time
+            self.assertGreater(np.count_nonzero(f0_in != f2_in), 1000)
+            self.assertGreater(np.count_nonzero(f0_out != f2_out), 1000)
+            # Zoom-in and zoom-out at the same later timestamp should differ
+            self.assertGreater(np.count_nonzero(f2_in != f2_out), 1000)
+        finally:
+            clip_in.close()
+            clip_out.close()
+
+    def test_animated_progress_bar(self):
+        base = np.full((1920, 1080, 3), 20, dtype=np.uint8)
+        accent = (50, 150, 250)
+        clip = build_animated_clip(
+            base,
+            duration=4,
+            animate=True,
+            show_progress=True,
+            accent_color=accent,
+            bar_height=14,
+        )
+        try:
+            f_early = clip.get_frame(1.0)
+            f_late = clip.get_frame(3.5)
+            # In the bottom 14 rows, progress bar grows from left to right
+            early_accent_pixels = np.count_nonzero((f_early[-14:, :, :3] == accent).all(axis=2))
+            late_accent_pixels = np.count_nonzero((f_late[-14:, :, :3] == accent).all(axis=2))
+            self.assertGreater(early_accent_pixels, 0)
+            self.assertGreater(late_accent_pixels, early_accent_pixels)
+        finally:
+            clip.close()
+
+
 if __name__ == '__main__':
     unittest.main()
